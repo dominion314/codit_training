@@ -1,9 +1,0 @@
----
-vpcs:
-  cpe1-nx-lle:
-
-    routingMode: GLOBAL
-    autoCreateSubnets: false
-    psaNetwork:
-      cpe1-xpn-lle-psa1:
-        network: 192.168.100.0/23

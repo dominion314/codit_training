@@ -1,7 +1,0 @@
----
-NAT_DEFAULTS:
-  minPortsPerVm: 64
-  tcpEstablishedIdleTimeoutSec: 1200
-  tcpTransitoryIdleTimeoutSec: 30
-  udpIdleTimeoutSec: 30
-  icmpIdleTimeoutSec: 30

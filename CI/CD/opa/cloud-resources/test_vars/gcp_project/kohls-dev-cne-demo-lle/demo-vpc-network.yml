@@ -1,5 +1,0 @@
----
-vpcs:
-  demo-vpc:
-
-    routingMode: GLOBAL

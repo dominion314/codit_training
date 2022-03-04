@@ -1,4 +1,0 @@
----
-kccTemplates: ['../../../templates/gcp-project/pub-sub-subscriptions.yml.j2']
-inspecControls: ['../../../inspec/controls/PubSubSubscriptions.rb']
-validationDelaySecs: 60

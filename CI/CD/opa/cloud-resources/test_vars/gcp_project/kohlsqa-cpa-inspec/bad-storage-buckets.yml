@@ -1,7 +1,0 @@
----
-storageBuckets:
-  storage-bucket-failure-test-01:
-    versioningEnabled: sure
-    location: US
-  storage-bucket-failure-test-02:
-    location: US-EAST2

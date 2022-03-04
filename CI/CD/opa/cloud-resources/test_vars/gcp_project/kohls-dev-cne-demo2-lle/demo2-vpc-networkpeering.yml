@@ -1,8 +1,0 @@
----
-vpcs:
-  demo2-vpc:
-    vpcPeering:
-
-      demo2-vpc-to-xpn-transit:
-        remoteProject: kohls-dev-cne-demo-lle
-        remoteVPC: xpn-transit

@@ -1,4 +1,0 @@
----
-defaultLabels:
-  unit-test-label-1: should-be-overwritten
-  unit-test-label: default-unit-test-label

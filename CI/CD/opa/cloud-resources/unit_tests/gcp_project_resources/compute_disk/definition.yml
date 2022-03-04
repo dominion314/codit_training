@@ -1,4 +1,0 @@
----
-kccTemplates: ['../../../templates/gcp-project/compute-disk.yml.j2']
-inspecControls: ['../../../inspec/controls/ComputeDisks.rb']
-validationDelaySecs: 60

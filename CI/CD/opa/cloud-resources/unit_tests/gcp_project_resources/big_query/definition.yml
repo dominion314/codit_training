@@ -1,4 +1,0 @@
----
-kccTemplates: ['../../../templates/gcp-project/big-query-dataset.yml.j2']
-inspecControls: ['../../../inspec/controls/BigQueryDataset.rb']
-validationDelaySecs: 60

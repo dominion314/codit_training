@@ -1,6 +1,0 @@
----
-vpcs:
-  gcpdemo-nx-lle:
-
-    routingMode: GLOBAL
-    autoCreateSubnets: false
