@@ -6,7 +6,9 @@
 |__) /~~\ .__/ | \__, .__/ 
                            
 
-PART 2: Hands On Engineering
+PART 1a: Hands On Engineering - Basic Command Line
+
+
 
 ►  What is minikube?
 
