@@ -1,0 +1,3044 @@
+---
+vpcs:
+  infra-nx-lle:
+    firewallRules:
+      kohls-networks-ingress-splunk:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16518
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-mysql-mgmt
+          - ads-pmm-client
+          - aiops-mysql
+          - aiops-splunk-base
+          - aiops-splunk-syslog
+          - aiops-splunk-fluentd
+          - aiops-ssh
+          - global-pmm-client-prd
+          - iaas-mysql
+          - iaas-network-proxy-central1
+          - paas-consul
+          - paas-openshift-app
+          - paas-vault
+          sourceRanges:
+          - "10.0.0.0/8"
+          - "172.26.0.0/15"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+            - "1514"
+            - "2514"
+            - "3514"
+            - "4443"
+            - "4514"
+            - "5514"
+            - "6379"
+            - "8000"
+            - "8005"
+            - "8080-8081"
+            - "8088-8089"
+            - "8091-8092"
+            - "8095"
+            - "8200-8201"
+            - "9100"
+            - "9997-9999"
+            - "27020"
+          - protocol: "udp"
+            ports:
+            - "1514"
+            - "2514"
+            - "3514"
+            - "4514"
+            - "5514"
+      kohls-aws-workspace-corpsubnets-mongo-to-aiops-lle:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK1038187
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - iaas-mongo
+          - paas-consul
+          - aiops-ssh
+          - aiops-mongo
+          sourceRanges:
+          - "10.195.128.0/18"
+          - "10.195.64.0/24"
+          - "10.195.192.0/24"
+          - "10.195.0.0/18"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "27020"
+          - protocol: "udp"
+            ports:
+            - "27020"
+      kohls-onprem-jarvis-to-aiops-lle:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0594512
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - aiops-mysql
+          - aiops-ssh
+          sourceRanges:
+          - "172.26.0.0/15"
+          - "10.0.0.0/8"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+            - "3306"
+      kohls-onprem-mongo-to-aiops-lle-02:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0697568
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - iaas-mongo
+          - paas-consul
+          - aiops-ssh
+          sourceRanges:
+          - "10.57.0.0/16"
+          - "172.26.0.0/15"
+          - "10.101.0.0/16"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "27020"
+      kohls-onprem-mysql-to-aiops-lle:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0591635
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - aiops-mysql
+          sourceRanges:
+          - "172.26.0.0/15"
+          - "10.0.0.0/8"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "3306"
+      kohls-onprem-rundeck-to-aiops-lle:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0624680
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - aiops-rundeck
+          sourceRanges:
+          - "10.0.0.0/8"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "80"
+            - "443"
+            - "4443"
+      kohls-onprem-rundeck-to-aiops-lle-ssh:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0679346
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - aiops-rundeck
+          sourceRanges:
+          - "10.5.80.51/32"
+          - "10.5.96.203/32"
+          - "10.1.40.42/32"
+          - "10.6.81.157/32"
+          - "10.7.32.22/32"
+          - "10.6.81.158/32"
+          - "10.6.81.148/32"
+          - "10.6.81.161/32"
+          - "10.5.96.205/32"
+          - "10.5.96.128/32"
+          - "10.5.96.210/32"
+          - "10.5.80.54/32"
+          - "10.5.96.206/32"
+          - "10.6.81.146/32"
+          - "10.5.48.66/32"
+          - "10.6.81.153/32"
+          - "10.5.96.126/32"
+          - "10.6.81.145/32"
+          - "10.5.96.130/32"
+          - "10.5.96.208/32"
+          - "10.5.80.53/32"
+          - "10.6.81.150/32"
+          - "10.6.81.155/32"
+          - "10.6.81.156/32"
+          - "10.5.96.207/32"
+          - "10.5.96.129/32"
+          - "10.6.81.154/32"
+          - "10.6.81.149/32"
+          - "10.6.48.72/32"
+          - "10.6.81.160/32"
+          - "10.5.96.204/32"
+          - "10.5.96.148/32"
+          - "10.6.81.159/32"
+          - "10.1.40.15/32"
+          - "10.5.96.202/32"
+          - "10.6.81.151/32"
+          - "10.5.96.131/32"
+          - "10.5.96.209/32"
+          - "10.5.80.52/32"
+          - "10.6.81.152/32"
+          - "10.5.96.127/32"
+          - "10.1.31.81/32"
+          - "10.6.81.147/32"
+          - "10.5.96.132/32"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      kohls-onprem-ssh-to-aiops-lle:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0591635
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - aiops-ssh
+          sourceRanges:
+          - "172.26.0.0/15"
+          - "10.0.0.0/8"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      kohls-onpremise-host-kohls-infra-xpn-aiops-lle-ssh:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0676081
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - aiops-rundeck
+          sourceRanges:
+          - "10.7.231.188/32"
+          - "10.6.48.131/32"
+          - "10.6.81.185/32"
+          - "10.5.96.229/32"
+          - "10.1.231.144/32"
+          - "10.6.81.180/32"
+          - "10.7.231.187/32"
+          - "10.5.96.239/32"
+          - "10.6.81.177/32"
+          - "10.7.250.3/32"
+          - "10.6.81.75/32"
+          - "10.7.231.189/32"
+          - "10.5.96.234/32"
+          - "10.5.96.125/32"
+          - "10.5.96.226/32"
+          - "10.6.81.179/32"
+          - "10.1.231.175/32"
+          - "10.5.96.224/32"
+          - "10.5.96.231/32"
+          - "10.5.96.227/32"
+          - "10.5.96.232/32"
+          - "10.6.81.176/32"
+          - "10.1.40.112/32"
+          - "10.6.81.79/32"
+          - "10.1.231.140/32"
+          - "10.6.81.175/32"
+          - "10.6.81.181/32"
+          - "10.1.231.145/32"
+          - "10.5.96.230/32"
+          - "10.5.96.228/32"
+          - "10.5.96.225/32"
+          - "10.5.96.235/32"
+          - "10.5.96.124/32"
+          - "10.6.81.178/32"
+          - "10.5.96.233/32"
+          - "10.5.96.236/32"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      kohls-percona-monitoring-to-aiops-lle:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - pmm-client-lle
+          sourceRanges:
+          - "10.187.7.224/27"
+          - "10.185.0.192/27"
+          - "10.189.0.128/27"
+          - "10.191.0.32/27"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "5666"
+            - "7777"
+            - "42000-51999"
+      proship-ingress-dynatrace:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16787,SNOW-17209
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          sourceRanges:
+          - "10.212.82.32/29"
+          - "10.212.82.39/32"
+          - "10.212.82.40/32"
+          - "10.212.82.40/30"
+          - "10.216.81.224/29"
+          - "10.216.81.231/32"
+          - "10.216.81.232/32"
+          - "10.216.81.233/32"
+          - "10.59.196.1/32"
+          - "10.12.196.1/32"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: tcp
+            ports:
+            - "9999"
+      aws-ingress-to-kdx-hle:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-15959
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - rt-db-replication
+          - fw-ssh
+          - fw-mysql-hle
+          - fw-allow-all
+          - fw-kdx-venafi-hle
+          - fw-kdx-puppet-hle
+          - mysql
+          - blue
+          - fw-mysql
+          - fw-ssh-hle
+          - fw-netdiagnostics
+          - fw-bastion-agent-lle
+          - fw-kdx-mysql-hle
+          - fw-netdiagnostics-hle
+          - puppet
+          - fw-emysql-hle
+          - fw-essh-hle
+          - fw-enetdiagnostics-hle
+          sourceRanges:
+          - "10.195.0.0/18"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      aws-workspaces-ingress-kdx-release-origin-server:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16419
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - kdxrel
+          sourceRanges:
+          - "10.195.0.0/19"
+          - "10.195.32.0/19"
+          - "10.195.128.0/19"
+          - "10.195.160.0/19"
+          - "10.198.0.0/22"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "80"
+            - "443"
+      cavission-prd-ingress-to-kdx-hle-central-mdx-app:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0721850
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-kdx-ecavission-hle
+          - fw-kdx-ccavission-hle
+          sourceRanges:
+          - "10.187.95.0/24"
+          - "10.187.131.0/25"
+          - "10.187.94.128/25"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "80"
+            - "443"
+            - "8080"
+            - "7891-7899"
+      cavisson-b2b-ingress-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0815823
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-kdx-ssh-hle
+          sourceRanges:
+          - "10.4.64.164/32"
+          - "10.9.65.11/32"
+          - "10.4.64.163/32"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      cavisson-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-cavisson
+          sourceRanges:
+          - "10.187.95.0/24"
+          - "10.187.131.0/25"
+          - "10.187.94.128/25"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "7890-7899"
+      dflt-akamai-dev-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-akamai-dev
+          sourceRanges:
+          - "88.221.213.4/32"
+          - "209.249.98.36/31"
+          - "104.90.204.144/29"
+          - "72.247.151.10/32"
+          - "63.148.207.60/31"
+          - "209.8.112.96/30"
+          - "125.56.219.52/31"
+          - "69.31.138.100/31"
+          - "2.22.10.12/31"
+          - "72.247.10.0/24"
+          - "209.8.112.100/30"
+          - "195.27.249.106/31"
+          - "72.246.2.10/32"
+          - "8.18.43.240/32"
+          - "23.63.227.0/24"
+          - "8.18.43.199/32"
+          - "67.220.142.22/32"
+          - "72.246.52.144/28"
+          - "23.50.48.0/20"
+          - "66.198.26.69/32"
+          - "124.40.42.228/31"
+          - "80.67.65.10/32"
+          - "209.8.118.44/32"
+          - "201.6.6.214/31"
+          - "69.31.59.86/32"
+          - "23.215.130.0/24"
+          - "63.217.211.116/31"
+          - "67.220.142.21/32"
+          - "23.15.7.0/24"
+          - "2.16.157.170/31"
+          - "63.151.118.0/24"
+          - "184.25.157.0/24"
+          - "23.35.150.0/24"
+          - "23.45.182.0/24"
+          - "72.246.150.0/24"
+          - "80.67.76.169/32"
+          - "184.28.17.0/24"
+          - "23.58.82.133/32"
+          - "220.90.198.178/31"
+          - "140.239.2.162/32"
+          - "173.205.7.116/31"
+          - "165.254.1.100/31"
+          - "204.2.166.176/30"
+          - "65.120.61.100/31"
+          - "92.123.244.140/30"
+          - "72.247.237.135/32"
+          - "66.198.8.143/32"
+          - "209.170.113.98/31"
+          - "23.220.148.0/24"
+          - "69.31.59.202/32"
+          - "23.219.36.0/24"
+          - "80.67.76.178/31"
+          - "69.31.59.196/32"
+          - "204.2.159.68/31"
+          - "2.18.25.47/32"
+          - "104.112.226.200/30"
+          - "23.35.219.28/31"
+          - "63.217.211.110/31"
+          - "23.79.242.198/32"
+          - "122.103.238.70/32"
+          - "184.25.56.10/31"
+          - "184.50.84.196/32"
+          - "124.40.41.200/29"
+          - "69.192.3.140/32"
+          - "96.17.73.220/31"
+          - "80.67.76.172/32"
+          - "66.198.8.167/32"
+          - "184.84.242.22/31"
+          - "72.246.43.0/24"
+          - "193.108.155.208/32"
+          - "23.48.168.0/22"
+          - "96.17.173.47/32"
+          - "63.239.233.161/32"
+          - "23.35.151.34/31"
+          - "65.46.75.254/32"
+          - "209.107.208.188/31"
+          - "208.49.157.52/31"
+          - "209.170.113.108/32"
+          - "184.51.151.0/24"
+          - "23.215.131.0/24"
+          - "23.205.121.153/32"
+          - "23.210.209.63/32"
+          - "23.79.242.196/32"
+          - "193.108.43.160/30"
+          - "96.17.145.0/24"
+          - "104.71.131.0/24"
+          - "80.67.76.185/32"
+          - "184.84.242.21/32"
+          - "72.247.150.10/32"
+          - "77.67.85.52/31"
+          - "72.247.151.131/32"
+          - "60.254.150.10/32"
+          - "92.122.127.108/31"
+          - "72.246.216.0/24"
+          - "74.251.154.122/32"
+          - "74.9.65.103/32"
+          - "23.58.83.133/32"
+          - "204.251.204.200/32"
+          - "193.108.43.150/31"
+          - "80.67.76.180/32"
+          - "104.107.116.14/31"
+          - "23.62.98.172/31"
+          - "2.18.240.0/24"
+          - "23.210.209.74/31"
+          - "23.3.104.186/31"
+          - "80.67.76.170/31"
+          - "204.2.166.174/31"
+          - "2.19.193.116/31"
+          - "80.67.76.177/32"
+          - "104.125.80.12/32"
+          - "204.1.136.238/31"
+          - "204.2.166.173/32"
+          - "64.145.89.236/31"
+          - "184.84.239.0/24"
+          - "23.3.11.140/32"
+          - "60.254.174.10/32"
+          - "209.8.112.104/31"
+          - "184.51.199.0/24"
+          - "184.27.120.0/24"
+          - "92.122.191.66/32"
+          - "66.198.26.70/32"
+          - "63.235.29.198/32"
+          - "184.50.228.238/31"
+          - "80.67.70.10/32"
+          - "81.252.230.22/32"
+          - "66.198.8.142/32"
+          - "90.84.52.180/32"
+          - "184.27.45.0/24"
+          - "23.61.1.150/31"
+          - "184.84.242.32/30"
+          - "209.170.113.100/31"
+          - "184.27.198.224/31"
+          - "23.57.74.70/31"
+          - "204.2.160.182/31"
+          - "72.246.194.165/32"
+          - "88.2.244.77/32"
+          - "119.73.252.250/32"
+          - "23.57.69.52/30"
+          - "23.58.83.196/32"
+          - "61.111.58.82/31"
+          - "66.198.8.141/32"
+          - "80.239.206.152/31"
+          - "66.198.8.168/32"
+          - "23.58.82.196/32"
+          - "23.62.2.210/31"
+          - "23.35.219.36/30"
+          - "184.84.243.0/24"
+          - "67.220.142.19/32"
+          - "69.31.121.20/31"
+          - "72.246.0.10/32"
+          - "104.116.241.196/30"
+          - "208.49.157.49/32"
+          - "204.201.160.246/31"
+          - "63.235.21.192/31"
+          - "192.204.11.4/31"
+          - "92.122.191.60/32"
+          - "23.79.240.0/24"
+          - "23.200.75.14/31"
+          - "23.200.84.166/31"
+          - "104.97.78.0/24"
+          - "71.19.254.140/32"
+          - "67.220.142.20/32"
+          - "23.79.255.0/24"
+          - "209.170.113.106/31"
+          - "72.246.52.0/24"
+          - "81.145.36.61/32"
+          - "66.198.8.144/32"
+          - "203.69.138.122/32"
+          - "184.50.84.198/32"
+          - "66.239.162.121/32"
+          - "23.216.10.0/24"
+          - "96.17.173.71/32"
+          - "23.63.234.0/27"
+          - "65.158.180.206/31"
+          - "96.17.73.212/30"
+          - "65.124.174.194/31"
+          - "72.247.124.172/31"
+          - "72.247.39.94/32"
+          - "81.20.66.77/32"
+          - "104.116.243.214/31"
+          - "207.126.104.118/31"
+          - "209.8.118.39/32"
+          - "69.192.3.135/32"
+          - "23.58.83.204/32"
+          - "88.221.53.86/31"
+          - "80.67.68.172/31"
+          - "65.44.75.140/32"
+          - "203.69.138.121/32"
+          - "80.67.64.10/32"
+          - "80.239.206.148/30"
+          - "23.44.172.230/31"
+          - "96.7.55.0/24"
+          - "63.239.233.162/32"
+          - "2.16.106.0/24"
+          - "60.254.151.10/32"
+          - "205.185.205.132/31"
+          - "72.247.190.0/24"
+          - "67.220.143.216/31"
+          - "204.2.166.180/32"
+          - "23.205.127.0/24"
+          - "72.246.57.84/31"
+          - "104.96.91.132/31"
+          - "23.63.234.13/32"
+          - "184.24.98.0/24"
+          - "80.67.83.10/32"
+          - "208.49.157.54/32"
+          - "217.109.58.124/32"
+          - "125.252.224.36/31"
+          - "193.108.155.118/32"
+          - "69.31.59.188/31"
+          - "65.152.116.70/31"
+          - "60.254.173.30/31"
+          - "104.107.61.132/31"
+          - "23.58.82.204/32"
+          - "23.210.209.66/31"
+          - "208.49.157.50/31"
+          - "23.65.182.244/31"
+          - "203.134.166.141/32"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "80"
+            - "443"
+      dflt-akamai-stage-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-akamai-stage
+          sourceRanges:
+          - "88.221.213.4/32"
+          - "209.249.98.36/31"
+          - "104.90.204.144/29"
+          - "72.247.151.10/32"
+          - "63.148.207.60/31"
+          - "209.8.112.96/30"
+          - "125.56.219.52/31"
+          - "69.31.138.100/31"
+          - "2.22.10.12/31"
+          - "72.247.10.0/24"
+          - "209.8.112.100/30"
+          - "195.27.249.106/31"
+          - "72.246.2.10/32"
+          - "8.18.43.240/32"
+          - "23.63.227.0/24"
+          - "8.18.43.199/32"
+          - "67.220.142.22/32"
+          - "72.246.52.144/28"
+          - "23.50.48.0/20"
+          - "66.198.26.69/32"
+          - "124.40.42.228/31"
+          - "80.67.65.10/32"
+          - "209.8.118.44/32"
+          - "201.6.6.214/31"
+          - "69.31.59.86/32"
+          - "23.215.130.0/24"
+          - "63.217.211.116/31"
+          - "67.220.142.21/32"
+          - "23.15.7.0/24"
+          - "2.16.157.170/31"
+          - "63.151.118.0/24"
+          - "184.25.157.0/24"
+          - "23.35.150.0/24"
+          - "23.45.182.0/24"
+          - "72.246.150.0/24"
+          - "80.67.76.169/32"
+          - "184.28.17.0/24"
+          - "23.58.82.133/32"
+          - "220.90.198.178/31"
+          - "140.239.2.162/32"
+          - "173.205.7.116/31"
+          - "165.254.1.100/31"
+          - "204.2.166.176/30"
+          - "65.120.61.100/31"
+          - "92.123.244.140/30"
+          - "72.247.237.135/32"
+          - "66.198.8.143/32"
+          - "209.170.113.98/31"
+          - "23.220.148.0/24"
+          - "69.31.59.202/32"
+          - "23.219.36.0/24"
+          - "80.67.76.178/31"
+          - "69.31.59.196/32"
+          - "204.2.159.68/31"
+          - "2.18.25.47/32"
+          - "104.112.226.200/30"
+          - "23.35.219.28/31"
+          - "63.217.211.110/31"
+          - "23.79.242.198/32"
+          - "122.103.238.70/32"
+          - "184.25.56.10/31"
+          - "184.50.84.196/32"
+          - "124.40.41.200/29"
+          - "69.192.3.140/32"
+          - "96.17.73.220/31"
+          - "80.67.76.172/32"
+          - "66.198.8.167/32"
+          - "184.84.242.22/31"
+          - "72.246.43.0/24"
+          - "193.108.155.208/32"
+          - "23.48.168.0/22"
+          - "96.17.173.47/32"
+          - "63.239.233.161/32"
+          - "23.35.151.34/31"
+          - "65.46.75.254/32"
+          - "209.107.208.188/31"
+          - "208.49.157.52/31"
+          - "209.170.113.108/32"
+          - "184.51.151.0/24"
+          - "23.215.131.0/24"
+          - "23.205.121.153/32"
+          - "23.210.209.63/32"
+          - "23.79.242.196/32"
+          - "193.108.43.160/30"
+          - "96.17.145.0/24"
+          - "104.71.131.0/24"
+          - "80.67.76.185/32"
+          - "184.84.242.21/32"
+          - "72.247.150.10/32"
+          - "77.67.85.52/31"
+          - "72.247.151.131/32"
+          - "60.254.150.10/32"
+          - "92.122.127.108/31"
+          - "72.246.216.0/24"
+          - "74.251.154.122/32"
+          - "74.9.65.103/32"
+          - "23.58.83.133/32"
+          - "204.251.204.200/32"
+          - "193.108.43.150/31"
+          - "80.67.76.180/32"
+          - "104.107.116.14/31"
+          - "23.62.98.172/31"
+          - "2.18.240.0/24"
+          - "23.210.209.74/31"
+          - "23.3.104.186/31"
+          - "80.67.76.170/31"
+          - "204.2.166.174/31"
+          - "2.19.193.116/31"
+          - "80.67.76.177/32"
+          - "104.125.80.12/32"
+          - "204.1.136.238/31"
+          - "204.2.166.173/32"
+          - "64.145.89.236/31"
+          - "184.84.239.0/24"
+          - "23.3.11.140/32"
+          - "60.254.174.10/32"
+          - "209.8.112.104/31"
+          - "184.51.199.0/24"
+          - "184.27.120.0/24"
+          - "92.122.191.66/32"
+          - "66.198.26.70/32"
+          - "63.235.29.198/32"
+          - "184.50.228.238/31"
+          - "80.67.70.10/32"
+          - "81.252.230.22/32"
+          - "66.198.8.142/32"
+          - "90.84.52.180/32"
+          - "184.27.45.0/24"
+          - "23.61.1.150/31"
+          - "184.84.242.32/30"
+          - "209.170.113.100/31"
+          - "184.27.198.224/31"
+          - "23.57.74.70/31"
+          - "204.2.160.182/31"
+          - "72.246.194.165/32"
+          - "88.2.244.77/32"
+          - "119.73.252.250/32"
+          - "23.57.69.52/30"
+          - "23.58.83.196/32"
+          - "61.111.58.82/31"
+          - "66.198.8.141/32"
+          - "80.239.206.152/31"
+          - "66.198.8.168/32"
+          - "23.58.82.196/32"
+          - "23.62.2.210/31"
+          - "23.35.219.36/30"
+          - "184.84.243.0/24"
+          - "67.220.142.19/32"
+          - "69.31.121.20/31"
+          - "72.246.0.10/32"
+          - "104.116.241.196/30"
+          - "208.49.157.49/32"
+          - "204.201.160.246/31"
+          - "63.235.21.192/31"
+          - "192.204.11.4/31"
+          - "92.122.191.60/32"
+          - "23.79.240.0/24"
+          - "23.200.75.14/31"
+          - "23.200.84.166/31"
+          - "104.97.78.0/24"
+          - "71.19.254.140/32"
+          - "67.220.142.20/32"
+          - "23.79.255.0/24"
+          - "209.170.113.106/31"
+          - "72.246.52.0/24"
+          - "81.145.36.61/32"
+          - "66.198.8.144/32"
+          - "203.69.138.122/32"
+          - "184.50.84.198/32"
+          - "66.239.162.121/32"
+          - "23.216.10.0/24"
+          - "96.17.173.71/32"
+          - "23.63.234.0/27"
+          - "65.158.180.206/31"
+          - "96.17.73.212/30"
+          - "65.124.174.194/31"
+          - "72.247.124.172/31"
+          - "72.247.39.94/32"
+          - "81.20.66.77/32"
+          - "104.116.243.214/31"
+          - "207.126.104.118/31"
+          - "209.8.118.39/32"
+          - "69.192.3.135/32"
+          - "23.58.83.204/32"
+          - "88.221.53.86/31"
+          - "80.67.68.172/31"
+          - "65.44.75.140/32"
+          - "203.69.138.121/32"
+          - "80.67.64.10/32"
+          - "80.239.206.148/30"
+          - "23.44.172.230/31"
+          - "96.7.55.0/24"
+          - "63.239.233.162/32"
+          - "2.16.106.0/24"
+          - "60.254.151.10/32"
+          - "205.185.205.132/31"
+          - "72.247.190.0/24"
+          - "67.220.143.216/31"
+          - "204.2.166.180/32"
+          - "23.205.127.0/24"
+          - "72.246.57.84/31"
+          - "104.96.91.132/31"
+          - "23.63.234.13/32"
+          - "184.24.98.0/24"
+          - "80.67.83.10/32"
+          - "208.49.157.54/32"
+          - "217.109.58.124/32"
+          - "125.252.224.36/31"
+          - "193.108.155.118/32"
+          - "69.31.59.188/31"
+          - "65.152.116.70/31"
+          - "60.254.173.30/31"
+          - "104.107.61.132/31"
+          - "23.58.82.204/32"
+          - "23.210.209.66/31"
+          - "208.49.157.50/31"
+          - "23.65.182.244/31"
+          - "203.134.166.141/32"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "80"
+            - "443"
+      dflt-apigee-dev-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-apigee-dev
+          sourceRanges:
+          - "54.236.178.141/32"
+          - "54.148.126.39/32"
+          - "35.239.23.200/32"
+          - "35.226.75.103/32"
+          - "35.226.129.133/32"
+          - "54.148.126.40/32"
+          - "35.188.190.62/32"
+          - "54.236.164.121/32"
+          - "35.239.125.214/32"
+          - "35.229.54.23/32"
+          - "35.227.59.86/32"
+          - "35.227.92.68/32"
+          - "107.178.208.45/32"
+          - "54.210.253.48/32"
+          - "35.239.1.190/32"
+          - "50.112.155.179/32"
+          - "35.227.90.145/32"
+          - "35.224.169.217/32"
+          - "54.236.192.38/32"
+          - "35.184.187.51/32"
+          - "54.210.253.235/32"
+          - "54.210.253.156/32"
+          - "50.112.157.134/32"
+          - "35.237.95.162/32"
+          - "54.148.126.38/32"
+          - "35.193.95.106/32"
+          - "54.236.192.168/32"
+          - "54.210.253.238/32"
+          - "54.148.126.36/32"
+          - "104.196.130.195/32"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "80"
+            - "443"
+      dflt-apigee-prod-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-apigee-prod
+          sourceRanges:
+          - "18.210.146.24/32"
+          - "54.244.7.90/32"
+          - "54.244.10.33/32"
+          - "104.154.205.252/32"
+          - "35.184.205.14/32"
+          - "35.238.91.76/32"
+          - "18.210.146.249/32"
+          - "54.210.253.107/32"
+          - "54.210.253.93/32"
+          - "54.209.253.251/32"
+          - "54.209.253.252/32"
+          - "35.188.134.216/32"
+          - "104.196.188.11/32"
+          - "18.235.138.76/32"
+          - "54.236.161.33/32"
+          - "54.236.151.37/32"
+          - "35.190.161.142/32"
+          - "34.193.111.18/32"
+          - "35.225.15.181/32"
+          - "35.226.23.121/32"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "80"
+            - "443"
+      dflt-bastion-client-lle-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-bastion-agent-lle
+          sourceRanges:
+          - "10.187.95.0/24"
+          - "10.187.131.0/25"
+          - "10.187.94.128/25"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+            - "4421"
+      dflt-consul-join-ingress-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-consul
+          sourceRanges:
+          - "10.187.95.0/24"
+          - "10.187.131.0/25"
+          - "10.187.94.128/25"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "udp"
+            ports:
+            - "8302"
+          - protocol: "tcp"
+            ports:
+            - "8500"
+      dflt-gcp-alert-manager-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-pmm-server
+          sourceRanges:
+          - "10.57.0.0/17"
+          - "10.109.0.0/16"
+          - "172.26.0.0/15"
+          - "10.90.81.0/24"
+          - "10.110.0.0/16"
+          - "10.64.0.0/17"
+          - "10.195.128.0/18"
+          - "10.90.80.0/24"
+          - "10.195.0.0/18"
+          - "10.101.0.0/16"
+          - "10.100.0.0/16"
+          - "10.64.100.0/23"
+          - "10.90.100.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "9093"
+      dflt-gcp-alert-mng-sec-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-pmm-server-sec
+          sourceRanges:
+          - "10.57.0.0/17"
+          - "10.109.0.0/16"
+          - "172.26.0.0/15"
+          - "10.90.81.0/24"
+          - "10.110.0.0/16"
+          - "10.64.0.0/17"
+          - "10.195.128.0/18"
+          - "10.90.80.0/24"
+          - "10.195.0.0/18"
+          - "10.101.0.0/16"
+          - "10.100.0.0/16"
+          - "10.64.100.0/23"
+          - "10.90.100.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "9093"
+      dflt-gcp-app-server-proxysql-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-proxysql
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          - ads-proxysql-client
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "6033"
+      dflt-gcp-filebeat-kibana-sec-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-msp-cns-sec
+          sourceRanges:
+          - "10.187.95.0/24"
+          - "10.187.131.0/25"
+          - "10.187.94.128/25"
+          sourceServiceAccounts:
+          sourceTags:
+          - ads-msp-mon-sec
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "9200"
+      dflt-gcp-filebeat-upload-kibana-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-msp-cns
+          sourceRanges:
+          - "10.187.95.0/24"
+          - "10.187.131.0/25"
+          - "10.187.94.128/25"
+          sourceServiceAccounts:
+          sourceTags:
+          - ads-msp-mon
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "9200"
+      dflt-gcp-for-percona-monitoring-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - global-pmm-client-lle
+          - global-pmm-client-prd
+          sourceRanges:
+          - "10.187.7.224/27"
+          - "10.185.0.192/27"
+          - "10.189.0.128/27"
+          - "10.191.0.32/27"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "5666"
+            - "7777"
+            - "42000-51999"
+      dflt-gcp-github-webhook-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - cicd-ent-tools
+          sourceRanges:
+          - "10.7.33.1/32"
+          - "10.1.43.26/32"
+          - "10.7.33.2/32"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "443"
+            - "8443"
+      dflt-gcp-grafanam-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-pmm-grafana
+          sourceRanges:
+          - "172.26.0.0/15"
+          - "10.0.0.0/8"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "443"
+      dflt-gcp-inventory-sync-sec-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-msp-cns-sec
+          sourceRanges:
+          - "10.187.95.0/24"
+          - "10.187.131.0/25"
+          - "10.187.94.128/25"
+          sourceServiceAccounts:
+          sourceTags:
+          - ads-msp-mon-sec
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "8443"
+      dflt-gcp-inventory-sync-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-msp-cns
+          sourceRanges:
+          - "10.187.95.0/24"
+          - "10.187.131.0/25"
+          - "10.187.94.128/25"
+          sourceServiceAccounts:
+          sourceTags:
+          - ads-msp-mon
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "8443"
+      dflt-gcp-metric-uploader-sec-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-pmm-server-sec
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          - ads-pmm-client-sec
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "443"
+            - "5667"
+            - "8443"
+            - "9093"
+      dflt-gcp-mongodb-srvr-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-mongodb-mgmt
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          - ads-mongodb-mgmt
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "27017"
+            - "27020"
+            - "22"
+      dflt-gcp-mysql-connectivity-lle-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - cloudsql-migrate-lle
+          sourceRanges:
+          - "10.124.0.0/20"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "3306"
+      dflt-gcp-mysql-connectivity-prd-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - cloudsql-migrate-prd
+          sourceRanges:
+          - "10.124.16.0/20"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "3306"
+      dflt-gcp-mysql-srvr-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-mysql-mgmt
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          - ads-mysql-mgmt
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "3306"
+            - "33061"
+            - "4444"
+            - "4567-4568"
+            - "22"
+      dflt-gcp-nagios-metric-sec-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-pmm-client-sec
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          - ads-pmm-server-sec
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "5666"
+            - "42000-42004"
+      dflt-gcp-orc-portal-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-msp-mon-sec
+          sourceRanges:
+          - "10.57.0.0/17"
+          - "10.109.0.0/16"
+          - "172.26.0.0/15"
+          - "10.90.81.0/24"
+          - "10.110.0.0/16"
+          - "10.64.0.0/17"
+          - "10.195.128.0/18"
+          - "10.90.80.0/24"
+          - "10.195.0.0/18"
+          - "10.101.0.0/16"
+          - "10.100.0.0/16"
+          - "10.64.100.0/23"
+          - "10.90.100.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "3000"
+      dflt-gcp-paas-consul-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-consul
+          sourceRanges:
+          - "172.26.0.0/15"
+          - "10.0.0.0/8"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "8300-8302"
+            - "8500"
+            - "8600"
+          - protocol: "udp"
+            ports:
+            - "8301-8302"
+            - "8600"
+      dflt-gcp-paas-kafka-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-kafka
+          sourceRanges:
+          - "172.26.0.0/15"
+          - "10.0.0.0/8"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "9092"
+            - "9094"
+      dflt-gcp-paas-solr-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-solr
+          sourceRanges:
+          - "172.26.0.0/15"
+          - "10.0.0.0/8"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "8983"
+      dflt-gcp-paas-zookeeper-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-zookeeper
+          sourceRanges:
+          - "172.26.0.0/15"
+          - "10.0.0.0/8"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "2181"
+            - "2888"
+            - "3888"
+      dflt-gcp-pmm-client-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-pmm-server
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          - ads-pmm-client
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "443"
+            - "8443"
+            - "5667"
+            - "9093"
+      dflt-gcp-pmm-server-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-pmm-client
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          - ads-pmm-server
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "5666"
+            - "42000-42004"
+      dflt-gcp-prometheus-metric-sec-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-proxysql-sec
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          - ads-msp-mon-sec
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "6032-6033"
+            - "42000-42004"
+      dflt-gcp-prometheus-metric-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-proxysql
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          - ads-msp-mon
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "6032-6033"
+            - "42000-42004"
+      dflt-gcp-proxysql-mysql-sec-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-mysql-sec
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          - ads-proxysql-sec
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "3306"
+      dflt-gcp-proxysql-query-sec-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-proxysql-sec
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          - ads-proxysql-client-sec
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "6033"
+      dflt-gcp-proxysql-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-mysql
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          - ads-proxysql
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "3306"
+      dflt-gcp-ssh-deployment-db-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-pmm-client
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          - ads-msp-mon
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      dflt-gcp-ssh-deployment-sec-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-pmm-client-sec
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          - ads-msp-mon-sec
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      dflt-gcp-ssh-orchest-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-msp-mon
+          sourceRanges:
+          - "10.57.0.0/17"
+          - "10.109.0.0/16"
+          - "172.26.0.0/15"
+          - "10.90.81.0/24"
+          - "10.110.0.0/16"
+          - "10.64.0.0/17"
+          - "10.195.128.0/18"
+          - "10.90.80.0/24"
+          - "10.195.0.0/18"
+          - "10.101.0.0/16"
+          - "10.100.0.0/16"
+          - "10.64.100.0/23"
+          - "10.90.100.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+            - "3000"
+      dflt-gcp-theia-access-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-theia-lle
+          - fw-theia
+          sourceRanges:
+          - "172.26.0.0/15"
+          - "10.0.0.0/8"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "udp"
+            ports:
+            - "5201"
+          - protocol: "tcp"
+            ports:
+            - "80"
+            - "443"
+            - "8080-8081"
+            - "5201"
+            - "9115"
+            - "9100"
+      dflt-gcp-windows-rdp-ps-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-win-rdp-ps
+          sourceRanges:
+          - "10.57.0.0/17"
+          - "10.141.0.0/24"
+          - "10.90.64.0/18"
+          - "10.3.171.0/24"
+          - "10.15.0.0/16"
+          - "10.109.0.0/16"
+          - "10.12.0.0/16"
+          - "10.22.200.0/24"
+          - "10.90.0.0/24"
+          - "172.26.0.0/15"
+          - "10.192.34.0/23"
+          - "10.25.0.0/16"
+          - "10.110.0.0/16"
+          - "10.90.24.0/22"
+          - "10.1.170.0/24"
+          - "10.64.0.0/17"
+          - "10.13.0.0/16"
+          - "10.22.64.0/18"
+          - "10.195.128.0/18"
+          - "10.1.173.0/24"
+          - "10.14.0.0/16"
+          - "10.24.0.0/16"
+          - "10.2.100.0/24"
+          - "10.212.188.170/32"
+          - "10.23.0.0/16"
+          - "10.19.0.0/16"
+          - "10.93.5.0/28"
+          - "10.90.4.0/22"
+          - "10.90.6.0/25"
+          - "10.17.0.0/16"
+          - "10.18.0.0/16"
+          - "10.16.0.0/16"
+          - "10.195.0.0/18"
+          - "10.101.0.0/16"
+          - "10.100.0.0/16"
+          - "10.8.110.0/24"
+          - "10.90.20.0/22"
+          - "10.26.0.0/16"
+          - "10.58.0.0/17"
+          - "10.21.0.0/16"
+          - "10.56.0.0/17"
+          - "10.2.174.0/24"
+          - "10.31.0.0/16"
+          - "10.10.0.0/16"
+          - "10.212.188.171/32"
+          - "10.20.0.0/16"
+          - "10.27.0.0/16"
+          - "10.1.160.0/24"
+          - "10.30.0.0/16"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "3389"
+            - "135"
+            - "5985-5988"
+      dflt-gcp-wndws-rdp-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-win-rdp-ps
+          sourceRanges:
+          - "10.212.188.170/32"
+          - "10.212.188.171/32"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "5000-5255"
+      dflt-iaas-squid-proxy-ingress-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - iaas-network-proxy-central1
+          - iaas-network-proxy-east1
+          sourceRanges:
+          - "172.26.0.0/15"
+          - "10.0.0.0/8"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "8080"
+            - "3128"
+      dflt-kibana-orch-cns-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-msp
+          sourceRanges:
+          - "10.57.0.0/17"
+          - "10.141.0.0/24"
+          - "10.90.64.0/18"
+          - "10.3.171.0/24"
+          - "10.15.0.0/16"
+          - "10.109.0.0/16"
+          - "10.12.0.0/16"
+          - "10.22.200.0/24"
+          - "10.90.0.0/24"
+          - "172.26.0.0/15"
+          - "10.192.34.0/23"
+          - "10.25.0.0/16"
+          - "10.110.0.0/16"
+          - "10.90.24.0/22"
+          - "10.1.170.0/24"
+          - "10.64.0.0/17"
+          - "10.13.0.0/16"
+          - "10.22.64.0/18"
+          - "10.195.128.0/18"
+          - "10.1.173.0/24"
+          - "10.14.0.0/16"
+          - "10.24.0.0/16"
+          - "10.2.100.0/24"
+          - "10.212.188.170/32"
+          - "10.23.0.0/16"
+          - "10.19.0.0/16"
+          - "10.93.5.0/28"
+          - "10.90.4.0/22"
+          - "10.90.6.0/25"
+          - "10.17.0.0/16"
+          - "10.18.0.0/16"
+          - "10.16.0.0/16"
+          - "10.195.0.0/18"
+          - "10.101.0.0/16"
+          - "10.100.0.0/16"
+          - "10.8.110.0/24"
+          - "10.90.20.0/22"
+          - "10.26.0.0/16"
+          - "10.58.0.0/17"
+          - "10.21.0.0/16"
+          - "10.56.0.0/17"
+          - "10.2.174.0/24"
+          - "10.31.0.0/16"
+          - "10.10.0.0/16"
+          - "10.212.188.171/32"
+          - "10.20.0.0/16"
+          - "10.27.0.0/16"
+          - "10.1.160.0/24"
+          - "10.30.0.0/16"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "3000"
+            - "5601"
+            - "8443"
+      dflt-kibana-ui-lle-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-pmm-kibana
+          sourceRanges:
+          - "10.57.0.0/17"
+          - "10.141.0.0/24"
+          - "10.90.64.0/18"
+          - "10.3.171.0/24"
+          - "10.15.0.0/16"
+          - "10.109.0.0/16"
+          - "10.12.0.0/16"
+          - "10.22.200.0/24"
+          - "10.90.0.0/24"
+          - "172.26.0.0/15"
+          - "10.192.34.0/23"
+          - "10.25.0.0/16"
+          - "10.110.0.0/16"
+          - "10.90.24.0/22"
+          - "10.1.170.0/24"
+          - "10.64.0.0/17"
+          - "10.13.0.0/16"
+          - "10.22.64.0/18"
+          - "10.195.128.0/18"
+          - "10.1.173.0/24"
+          - "10.14.0.0/16"
+          - "10.24.0.0/16"
+          - "10.2.100.0/24"
+          - "10.212.188.170/32"
+          - "10.23.0.0/16"
+          - "10.19.0.0/16"
+          - "10.93.5.0/28"
+          - "10.90.4.0/22"
+          - "10.90.6.0/25"
+          - "10.17.0.0/16"
+          - "10.18.0.0/16"
+          - "10.16.0.0/16"
+          - "10.195.0.0/18"
+          - "10.101.0.0/16"
+          - "10.100.0.0/16"
+          - "10.8.110.0/24"
+          - "10.90.20.0/22"
+          - "10.26.0.0/16"
+          - "10.58.0.0/17"
+          - "10.21.0.0/16"
+          - "10.56.0.0/17"
+          - "10.2.174.0/24"
+          - "10.31.0.0/16"
+          - "10.10.0.0/16"
+          - "10.212.188.171/32"
+          - "10.20.0.0/16"
+          - "10.27.0.0/16"
+          - "10.1.160.0/24"
+          - "10.30.0.0/16"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "5601"
+      dflt-orchestrator-ui-lle-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-pmm-orchestrator
+          sourceRanges:
+          - "10.57.0.0/17"
+          - "10.141.0.0/24"
+          - "10.90.64.0/18"
+          - "10.3.171.0/24"
+          - "10.15.0.0/16"
+          - "10.109.0.0/16"
+          - "10.12.0.0/16"
+          - "10.22.200.0/24"
+          - "10.90.0.0/24"
+          - "172.26.0.0/15"
+          - "10.192.34.0/23"
+          - "10.25.0.0/16"
+          - "10.110.0.0/16"
+          - "10.90.24.0/22"
+          - "10.1.170.0/24"
+          - "10.64.0.0/17"
+          - "10.13.0.0/16"
+          - "10.22.64.0/18"
+          - "10.195.128.0/18"
+          - "10.1.173.0/24"
+          - "10.14.0.0/16"
+          - "10.24.0.0/16"
+          - "10.2.100.0/24"
+          - "10.212.188.170/32"
+          - "10.23.0.0/16"
+          - "10.19.0.0/16"
+          - "10.93.5.0/28"
+          - "10.90.4.0/22"
+          - "10.90.6.0/25"
+          - "10.17.0.0/16"
+          - "10.18.0.0/16"
+          - "10.16.0.0/16"
+          - "10.195.0.0/18"
+          - "10.101.0.0/16"
+          - "10.100.0.0/16"
+          - "10.8.110.0/24"
+          - "10.90.20.0/22"
+          - "10.26.0.0/16"
+          - "10.58.0.0/17"
+          - "10.21.0.0/16"
+          - "10.56.0.0/17"
+          - "10.2.174.0/24"
+          - "10.31.0.0/16"
+          - "10.10.0.0/16"
+          - "10.212.188.171/32"
+          - "10.20.0.0/16"
+          - "10.27.0.0/16"
+          - "10.1.160.0/24"
+          - "10.30.0.0/16"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "3000"
+      ecom-tonomi-lle-ing-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0846723
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-ssh
+          sourceRanges:
+          - "10.187.95.0/24"
+          - "10.187.131.0/25"
+          - "10.187.94.128/25"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      ecom-tvs-corp-lle-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0977835
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - kdxservices
+          sourceRanges:
+          - "10.187.95.0/24"
+          - "10.187.131.0/25"
+          - "10.187.94.128/25"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "80"
+            - "443"
+      ext-partn-workday-ing-to-kohls-kdx-hle-cent-sftp:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0773175,SCTASK0906072
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - sftp
+          sourceRanges:
+          - "209.177.166.0/24"
+          - "209.177.173.0/24"
+          - "209.177.167.0/24"
+          - "65.115.88.106/32"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      ext-partner-adobe-to-ingr-kdx-hle-central-01:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0965844,SCTASK0966151,SCTASK0981830
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - kdxsftp
+          - sftp
+          sourceRanges:
+          - "40.70.191.60/32"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      ext-partner-workday-to-kdx-hle-central-tcp-02:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0774087
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - sftp
+          sourceRanges:
+          - "167.88.151.198/32"
+          - "167.88.151.202/32"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      gspann-b2b-and-onprem-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0962558,SCTASK0961026,SCTASK0988867,SCTASK0988868,SCTASK0988865
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - blue
+          sourceRanges:
+          - "10.110.116.0/22"
+          - "10.9.65.4/32"
+          - "10.110.108.0/22"
+          - "10.109.112.0/22"
+          - "10.4.64.161/32"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "80"
+            - "443"
+            - "8443"
+            - "22"
+            - "8088"
+            - "4443"
+            - "8983"
+            - "8984"
+            - "2181"
+            - "9092"
+            - "27017"
+            - "8080"
+      kdp-ingress-kdx-hle-central-promoteiq:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16552
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - sftp
+          sourceRanges:
+          - "52.70.87.237"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      kdx-hle-central-igr-to-kdx-hle-central-tcp-02:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0859513
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-vault
+          - vault
+          sourceRanges:
+          - "10.187.95.0/24"
+          - "10.187.131.0/25"
+          - "10.187.94.128/25"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "8200-8201"
+            - "8210"
+            - "8243"
+            - "8253"
+            - "8300-8302"
+            - "8500-8502"
+            - "8600"
+      kdx-hle-central-igr-to-kdx-hle-central-tcp-03:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0859513
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - consul
+          - fw-consul
+          sourceRanges:
+          - "10.187.95.0/24"
+          - "10.187.131.0/25"
+          - "10.187.94.128/25"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "8300-8301"
+      kdx-lle-central-ingress-to-kdx-hle-sas-tcp-01:
+        priority: 900
+        direction: INGRESS
+        description: Connect from kdx-lle VMs to SAS like VM in kdx-hle(SCTASK0559136)
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - qa-sas-like-vm
+          - kdxrel
+          sourceRanges:
+          - "10.187.95.0/24"
+          - "10.187.131.0/25"
+          - "10.187.94.128/25"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "80"
+            - "443"
+            - "22"
+      kohls-cavisson-prd-ing-kdx-hle-01:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0901046
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-kdx-cavisson-hle
+          sourceRanges:
+          - "10.187.95.0/24"
+          - "10.187.131.0/25"
+          - "10.187.94.128/25"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "7891-7899"
+      kohls-cavisson-prd-ing-kdx-hle-kdxrel1:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0916442
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - kdxrel
+          sourceRanges:
+          - "10.187.95.0/24"
+          - "10.187.131.0/25"
+          - "10.187.94.128/25"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "7891-7892"
+      kohls-kdx-hle-cent-egr-to-stress-env-01:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0761024
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-zookeeper
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          - fw-zkui
+          - fw-zookeeper
+          - fw-kdx-sftp
+          - fw-kdx-services
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "2181"
+            - "2888"
+            - "3888"
+      kohls-kdx-hle-ing-to-kdx-hle-consul:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0701142
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-consul
+          sourceRanges:
+          - "10.187.95.0/24"
+          - "10.187.131.0/25"
+          - "10.187.94.128/25"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "8300-8302"
+            - "8500-8502"
+            - "8600"
+            - "21000"
+            - "21255"
+          - protocol: "udp"
+            ports:
+            - "8301-8302"
+      kohls-kdx-hle-ing-to-kdx-hle-kdx-services:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0701142
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-kdx-services
+          sourceRanges:
+          - "10.187.95.0/24"
+          - "10.187.131.0/25"
+          - "10.187.94.128/25"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "8080"
+      kohls-kdx-hle-ing-to-kdx-hle-kdx-sftp:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0701142
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-kdx-sftp-server
+          sourceRanges:
+          - "10.187.95.0/24"
+          - "10.187.131.0/25"
+          - "10.187.94.128/25"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      kohls-kdx-hle-ing-to-kdx-hle-kdx-sftp-01:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0701142
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-kdx-sftp
+          sourceRanges:
+          - "10.187.95.0/24"
+          - "10.187.131.0/25"
+          - "10.187.94.128/25"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "8080"
+      kohls-kdx-hle-ing-to-kdx-hle-mysql:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0701142,SCTASK0907126,SCTASK0990423
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-mysql
+          sourceRanges:
+          - "10.187.95.0/24"
+          - "10.187.131.0/25"
+          - "10.187.94.128/25"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "3306"
+            - "33061"
+            - "6446-6447"
+            - "42000-42004"
+            - "64460"
+            - "64470"
+      kohls-kdx-hle-ing-to-kdx-hle-ssh:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0701142
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-ssh
+          sourceRanges:
+          - "10.187.95.0/24"
+          - "10.187.131.0/25"
+          - "10.187.94.128/25"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      kohls-kdx-hle-ing-to-kdx-hle-vault:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0701142
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-vault
+          sourceRanges:
+          - "10.187.95.0/24"
+          - "10.187.131.0/25"
+          - "10.187.94.128/25"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "8200-8201"
+            - "8243"
+            - "8210"
+            - "8253"
+      kohls-kdx-hle-ing-to-kdx-hle-zookeeper:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0701142
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-zookeeper
+          sourceRanges:
+          - "10.187.95.0/24"
+          - "10.187.131.0/25"
+          - "10.187.94.128/25"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "2181"
+      kohls-kos-cicd-ing-to-kdx-hle-tonomi:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0701142
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-kdx-tonomi-runner-hle
+          sourceRanges:
+          - "10.208.22.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      kohls-kos-xpn-hle-to-kdx-hle-tonomi:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK1038035
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - tonomirunner
+          - rundeck
+          sourceRanges:
+          - "10.208.39.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      kohls-on-premise-inet-services-ra-vpn-kdx-hle-cent:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0546237
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - kdxqa-vault
+          - kdxstress-blue-kdxsftp-prod
+          - kdxstress
+          - kdxqa-consul
+          - kdxstress-blue-kdxservices-prod
+          - blue
+          - akamai-whitelist
+          - kdxstress-blue-sftp-server
+          - consul
+          - kdxstress-blue-kdxservices-ha-prod
+          - zookeeper-ui
+          - zookeeper
+          sourceRanges:
+          - "172.26.0.0/15"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "443"
+            - "8080"
+            - "8200-8201"
+            - "8210"
+            - "8243"
+            - "8253"
+            - "8300-8302"
+            - "8400"
+            - "8500"
+            - "8600"
+            - "9090"
+            - "28080"
+      kohlsonprem-ingress-to-kdx-hle-mysql-tcp-01:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0559136
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - internal
+          - mysql
+          - blue
+          sourceRanges:
+          - "10.57.0.0/17"
+          - "10.109.0.0/16"
+          - "10.101.70.0/24"
+          - "172.26.0.0/15"
+          - "10.90.81.0/24"
+          - "10.90.100.0/23"
+          - "10.110.0.0/16"
+          - "10.64.0.0/17"
+          - "10.90.80.0/24"
+          - "10.101.0.0/16"
+          - "10.100.0.0/16"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "3306"
+      kolhs-on-premises-ravpn-user-network-kdx-hle-cent:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0546237
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - kdxqa-vault
+          - kdxstress-blue-kdxsftp-prod
+          - kdxstress
+          - kdxqa-consul
+          - kdxstress-blue-kdxservices-prod
+          - blue
+          - akamai-whitelist
+          - kdxstress-blue-sftp-server
+          - consul
+          - kdxstress-blue-kdxservices-ha-prod
+          - zookeeper-ui
+          - zookeeper
+          sourceRanges:
+          - "172.26.0.0/15"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "443"
+            - "8080"
+            - "8200-8201"
+            - "8210"
+            - "8243"
+            - "8253"
+            - "8300-8302"
+            - "8400"
+            - "8600"
+            - "9090"
+            - "28080"
+      kos-cicd-01-central1-jenkins-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0922089,SCTASK0930062
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - sftp
+          sourceRanges:
+          - "10.208.23.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      kss-guest-ing-kdx-hle-elb-sftp01:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0867101,SCTASK0966151,SCTASK0965807
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - sftp
+          sourceRanges:
+          - "65.115.88.106/32"
+          - "40.70.191.60/32"
+          - "147.75.243.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      on-prem-ingress-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0975144
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - kdxservices
+          sourceRanges:
+          - "10.7.28.215/32"
+          - "10.1.33.14/32"
+          - "10.7.35.27/32"
+          - "10.1.33.15/32"
+          - "10.7.35.23/32"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      oracle-vendorip-whitelist-ing-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0812746
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - sftp
+          - kdxstress2-blue-sftp-server
+          sourceRanges:
+          - "130.35.227.10"
+          - "130.35.178.103"
+          - "147.154.13.142"
+          - "130.35.210.81"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      public-vendor-ip-ing-to-kdx-hle-central-ssh:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0822697,SCTASK0822698,SCTASK0813276,SCTASK0825587
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - sftp
+          sourceRanges:
+          - "89.22.6.3/32"
+          - "115.110.245.67/32"
+          - "4.28.11.34/32"
+          - "50.236.152.96/32"
+          - "89.22.2.3/32"
+          - "182.76.105.35/32"
+          - "182.75.136.107/32"
+          - "83.142.185.126/32"
+          - "87.245.249.103/32"
+          - "182.71.119.213/32"
+          - "89.22.0.0/21"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      vendor-fieldglass-ingress-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16378
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - sftp
+          sourceRanges:
+          - "157.133.40.211/32"
+          - "157.133.40.212/32"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      vendor-pega-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16228
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - sftp
+          sourceRanges:
+          - "18.222.38.96/32"
+          - "18.217.7.234/32"
+          - "171.74.151.36/32"
+          - "3.135.110.37/32"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      vendor-sephora-to-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16262
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-ssh
+          sourceRanges:
+          - "198.154.182.0/26"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      zoot-ingress-kdx-hle-central:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16056
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - sftp
+          sourceRanges:
+          - "12.7.177.128/25"
+          - "47.44.116.72/29"
+          - "216.161.194.0/25"
+          - "47.44.116.168/29"
+          - "65.127.2.0/23"
+          - "12.160.253.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      kohls-onprem-vpn-to-kdx-lle:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-ssh
+          sourceRanges:
+          - "172.26.0.0/15"
+          - "10.0.0.0/8"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      kdx-gcp-sftp-lle:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - kdxservices
+          - kdxsftp
+          - sftp
+          sourceRanges:
+          - "10.187.95.0/24"
+          - "10.187.131.0/25"
+          - "10.187.94.128/25"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      ravpn-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-17020
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - lemur-app
+          - lemur-db
+          sourceRanges:
+          - "172.26.0.0/15"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "8443"
+            - "443"
+      jenkins-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-17152
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - lemur-app
+          - lemur-db
+          sourceRanges:
+          - "10.206.0.0/23"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "443"

@@ -1,0 +1,5 @@
+---
+vpcs:
+  ecom-nx-prd:
+    routingMode: GLOBAL
+    autoCreateSubnets: false

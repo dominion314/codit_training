@@ -1,0 +1,42 @@
+---
+vpcs:
+  ecom-nx-hle:
+    routerDef:
+      ecom-nx-hle-c1-gcp-rtr01:
+        region: us-central1
+        description:
+        routerASN:
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+        ha_vpn_gateways_to_transit:
+          ecom-nx-hle-c1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.1.176/30
+              bluecat-id: 1589903
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.1.180/30
+              bluecat-id: 1589905
+              status: PROVISIONED
+      ecom-nx-hle-e1-gcp-rtr01:
+        region: us-east1
+        description:
+        routerASN:
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+        ha_vpn_gateways_to_transit:
+          ecom-nx-hle-e1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.1.184/30
+              bluecat-id: 1589907
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.1.188/30
+              bluecat-id: 1589909
+              status: PROVISIONED

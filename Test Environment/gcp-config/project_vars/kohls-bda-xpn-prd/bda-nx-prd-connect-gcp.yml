@@ -1,0 +1,56 @@
+---
+vpcs:
+  bda-nx-prd:
+    routerDef:
+      bda-nx-prd-c1-gcp-rtr01:
+        region: us-central1
+        description:
+        routerASN:
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+        ha_vpn_gateways_to_transit:
+          bda-nx-prd-c1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.1.128/30
+              bluecat-id: 1588418
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.1.132/30
+              bluecat-id: 1588420
+              status: PROVISIONED
+        cloudNat:
+          name: bda-nx-prd-c1-nat-gateway
+          logConfig:
+            enable: true
+            filter: ERRORS_ONLY
+          manualAddresses: 4
+          min_ports_per_vm: 1024
+      bda-nx-prd-e1-gcp-rtr01:
+        region: us-east1
+        description:
+        routerASN:
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+        ha_vpn_gateways_to_transit:
+          bda-nx-prd-e1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.1.136/30
+              bluecat-id: 1588422
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.1.140/30
+              bluecat-id: 1588424
+              status: PROVISIONED
+        cloudNat:
+          name: bda-nx-prd-e1-nat-gateway
+          logConfig:
+            enable: true
+            filter: ERRORS_ONLY
+          manualAddresses: 4
+          min_ports_per_vm: 1024

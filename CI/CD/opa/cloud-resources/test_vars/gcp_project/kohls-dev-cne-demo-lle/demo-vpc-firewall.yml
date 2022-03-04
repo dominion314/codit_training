@@ -1,0 +1,28 @@
+---
+vpcs:
+  demo-vpc:
+
+    firewallRules:
+      demo-vpc-rule-1:
+        priority: 900
+        direction: INGRESS
+        description: dummy-rule-template
+        disabled: true
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - "demo-tag"
+          sourceRanges:
+          - "10.120.1.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          deny:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "80"
+            - "443"
+      global-qa-rule-1:
+        disabled: true

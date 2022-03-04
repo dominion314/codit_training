@@ -1,0 +1,209 @@
+---
+vpcs:
+  cx-nx-lle:
+    firewallRules:
+      user-segments-ingress-bda-dse-lle:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16207
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-allow-all
+          - fw-bd-azkaban-lle
+          - fw-bd-azkaban
+          - fw-dataproc
+          - fw-dadq
+          - fw-kafka
+          - fw-kafka-zk
+          - fw-airflow
+          - fw-mysql
+          - rt-db-replication
+          - mysql
+          - vault
+          - fw-vault
+          - fw-consul
+          - consul
+          - tonomirunner
+          - fw-zeppelin
+          sourceRanges:
+          - "10.57.0.0/17"
+          - "10.64.0.0/17"
+          - "10.90.80.0/23"
+          - "10.90.100.0/23"
+          - "10.100.0.0/16"
+          - "10.101.0.0/16"
+          - "10.109.0.0/16"
+          - "10.110.0.0/16"
+          - "10.186.212.0/24"
+          - "172.26.0.0/15"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+            - "25"
+            - "80"
+            - "443"
+            - "3306"
+            - "4040"
+            - "6066"
+            - "6446"
+            - "6443"
+            - "7077"
+            - "7891"
+            - "8000-8999"
+            - "9092"
+            - "10020"
+            - "10033"
+            - "18080-18081"
+            - "18443"
+            - "16379"
+            - "19888"
+      inter-subnets-connectivity-tcp:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16231
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-allow-all
+          - fw-bd-azkaban-lle
+          - fw-bd-azkaban
+          - fw-dataproc
+          - fw-dadq
+          - fw-kafka
+          - fw-kafka-zk
+          - fw-airflow
+          - fw-mysql
+          - mysql
+          - rt-db-replication
+          - vault
+          - fw-vault
+          - fw-consul
+          - consul
+          - tonomirunner
+          - fw-zeppelin
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          - fw-allow-all
+          - fw-bd-azkaban-lle
+          - fw-bd-azkaban
+          - fw-dataproc
+          - fw-dadq
+          - fw-kafka
+          - fw-kafka-zk
+          - fw-airflow
+          - fw-mysql
+          - rt-db-replication
+          - mysql
+          - vault
+          - fw-vault
+          - fw-consul
+          - consul
+          - tonomirunner
+          - fw-zeppelin
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+            - "25"
+            - "443"
+            - "3306"
+            - "4040"
+            - "6066"
+            - "6446"
+            - "6443"
+            - "7077"
+            - "7891"
+            - "8000-8999"
+            - "9092"
+            - "10020"
+            - "10033"
+            - "18080-18081"
+            - "18443"
+            - "16379"
+            - "19888"
+      dataproc-clusters:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16284,SNOW-16329
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-dataproc
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          - fw-bd-azkaban-lle
+          - fw-bd-azkaban
+          - fw-dadq
+          - fw-kafka
+          - fw-kafka-zk
+          - fw-airflow
+          - rt-db-replication
+          - fw-consul
+          - tonomirunner
+          - fw-zeppelin
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "9864-9871"
+            - "50070"
+            - "9083"
+      dataproc-clusters-02:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16283
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-dataproc
+          sourceServiceAccounts:
+          sourceTags:
+          - fw-dataproc
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "1025"
+            - "2049"
+            - "7892-7899"
+            - "10500-10520"
+            - "11111-11119"
+          - protocol: "udp"
+            ports:
+            - "2049"
+      sre-influx-ingress-lle:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-1395684
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - sre-influxdb
+          sourceRanges:
+          - "10.127.128.0/17"
+          - "10.126.128.0/17"
+          - "10.126.0.0/17"
+          - "10.127.0.0/17"
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "8086"

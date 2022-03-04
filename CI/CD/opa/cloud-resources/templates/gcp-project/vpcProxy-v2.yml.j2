@@ -1,0 +1,537 @@
+{%- if vpcs is defined %}
+{%-   for vpc_name, vpc_def in vpcs.items() %}
+{%-     if vpc_def.proxyDeployV2 is defined and vpc_def.proxyDeployV2|length %}
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeProjectMetadata
+metadata:
+  name: "{{ project.name }}-projectmetadata-proxy"
+  labels:
+    billing-dept-id: "{{ billingDeptId }}"
+  namespace: "gcp-{{ project.name }}"
+spec:
+  metadata:
+{%-       if vpc_def.proxySettings is defined and vpc_def.proxySettings|length %}
+{#- ############### Section for proxy Permit URL #}
+{%-       if vpc_def.proxySettings.proxyPermitURL is defined and vpc_def.proxySettings.proxyPermitURL|length %}
+    whitelist: |
+{%-         for i in globalProxy.proxyPermitURL|list + vpc_def.proxySettings.proxyPermitURL|list %}
+      - {{ i | string }}
+{%-         endfor %}
+{%-       else %}
+    whitelist: |
+{%-         for i in globalProxy.proxyPermitURL %}
+      - {{ i | string }}
+{%-         endfor %}
+{%-       endif %}
+{#- ############### Section for proxy Deny URL #}
+{%-       if vpc_def.proxySettings.proxyDenyURL is defined and vpc_def.proxySettings.proxyDenyURL|length %}
+    blacklist: |
+{%-         for i in globalProxy.proxyDenyURL|list + vpc_def.proxySettings.proxyDenyURL|list %}
+      - {{ i | string }}
+{%-         endfor %}
+{%-       else %}
+    blacklist: |
+{%-         for i in globalProxy.proxyDenyURL %}
+      - {{ i | string }}
+{%-         endfor %}
+{%-       endif %}
+{#- ############### Section for ACL #}
+{%-       if vpc_def.proxySettings.acl is defined and vpc_def.proxySettings.acl|length %}
+    acl: |
+{%-         for i in vpc_def.proxySettings.acl|list %}
+      - {{ i | string }}
+{%-         endfor %}
+{%-       else %}
+    acl: |
+{%-         for i in globalProxy.acl %}
+      - {{ i | string }}
+{%-         endfor %}
+{%-       endif %}
+{#- ############### Section for HTTP_ACCESS #}
+{%-       if vpc_def.proxySettings.http_access is defined and vpc_def.proxySettings.http_access|length %}
+    http_access: |
+{%-         for i in vpc_def.proxySettings.http_access|list %}
+      - {{ i | string }}
+{%-         endfor %}
+{%-       else %}
+    http_access: |
+{%-         for i in globalProxy.http_access %}
+      - {{ i | string }}
+{%-         endfor %}
+{%-       endif %}
+{#- ############### Section for default_mode #}
+    default_mode: {{ vpc_def.proxySettings.default_mode | default(globalProxy.default_mode, true) }}
+{%-       endif %}
+
+---
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMServiceAccount
+metadata:
+  name: "proxy-service"
+  namespace: "gcp-{{ project.name }}"
+spec:
+  displayName: WebProxy Service Account
+---
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  labels:
+    managed-by-cnrm: "true"
+  name: auto.proxy-service.{{ project.name }}.iam.gserviceaccount.com-compute.instanceadmin.v1
+  namespace: gcp-{{ project.name }}
+spec:
+  resourceRef:
+    kind: Project
+  role: roles/compute.instanceAdmin.v1
+  member: "serviceAccount:proxy-service@{{ project.name }}.iam.gserviceaccount.com"
+---
+{# Update This section to grant permissions to image storage #}
+{# apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  labels:
+    managed-by-cnrm: "true"
+  name: auto.proxy-service.{{ project.name }}.iam.gserviceaccount.com-compute.imageuser
+  namespace: gcp-{{ project.name }}
+spec:
+  resourceRef:
+    kind: Project
+    external: project/kohlsqa-cpe2-xpn-lle
+  role: roles/compute.imageuser
+  member: "serviceAccount:proxy-service@{{ project.name }}.iam.gserviceaccount.com"
+--- #}
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  labels:
+    managed-by-cnrm: "true"
+  name: auto.proxy-service.{{ project.name }}.iam.gserviceaccount.com-compute.networkuser
+  namespace: gcp-{{ project.name }}
+spec:
+  resourceRef:
+    kind: Project
+  role: roles/compute.networkUser
+  member: "serviceAccount:proxy-service@{{ project.name }}.iam.gserviceaccount.com"
+---
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  labels:
+    managed-by-cnrm: "true"
+  name: auto.proxy-service.{{ project.name }}.iam.gserviceaccount.com-compute.storageadmin
+  namespace: gcp-{{ project.name }}
+spec:
+  resourceRef:
+    kind: Project
+  role: roles/compute.storageAdmin
+  member: "serviceAccount:proxy-service@{{ project.name }}.iam.gserviceaccount.com"
+---
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  labels:
+    managed-by-cnrm: "true"
+  name: auto.proxy-service.{{ project.name }}.iam.gserviceaccount.com-monitoring.metricwriter
+  namespace: gcp-{{ project.name }}
+spec:
+  resourceRef:
+    kind: Project
+  role: roles/monitoring.metricWriter
+  member: "serviceAccount:proxy-service@{{ project.name }}.iam.gserviceaccount.com"
+---
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeHealthCheck
+metadata:
+  name: webproxy-mig-healthcheck-tcp8080
+  namespace: "gcp-{{ project.name }}"
+spec:
+  tcpHealthCheck:
+    port: 8080
+  unhealthyThreshold: 3
+  location: global
+---
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeFirewall
+metadata:
+  name: auto-{{ vpc_name }}-webproxy-egress
+  namespace: gcp-{{ project.name }}
+spec:
+  description: AutoGen FW Rule for WebProxy
+  direction: EGRESS
+  priority: 1001
+  allow:
+    - protocol: tcp
+      ports:
+        - "80"
+        - "443"
+  targetServiceAccounts:
+  - name: proxy-service
+    namespace: "gcp-{{ project.name }}"
+  networkRef:
+    name: "{{ vpc_name }}"
+    namespace: "gcp-{{ project.name }}"
+---
+{%- if vpc_def.proxySettings.vpcOnlyProxy|default(false,true) %}
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeFirewall
+metadata:
+  name: auto-{{ vpc_name }}-webproxy-ingress
+  namespace: gcp-{{ project.name }}
+spec:
+  description: AutoGen FW Rule for WebProxy
+  direction: INGRESS
+  priority: 900
+  allow:
+    - protocol: tcp
+      ports:
+        - "3128"
+        - "8080"
+    - protocol: icmp
+  sourceTags:
+  - {{ vpc_def.proxySettings.vpcOnlyProxyTag | default('permit-proxy',true) }}
+  targetTags:
+  - target-proxy
+  networkRef:
+    name: "{{ vpc_name }}"
+    namespace: "gcp-{{ project.name }}"
+---
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeFirewall
+metadata:
+  name: auto-{{ vpc_name }}-webproxy-mgmt
+  namespace: gcp-{{ project.name }}
+spec:
+  description: AutoGen FW Rule for WebProxy
+  direction: INGRESS
+  priority: 900
+  allow:
+    - protocol: tcp
+      ports:
+        - "22"
+    - protocol: icmp
+  sourceRanges:
+  - "172.26.0.0/15"
+  - "10.0.0.0/8"
+  targetServiceAccounts:
+  - name: proxy-service
+    namespace: "gcp-{{ project.name }}"
+  networkRef:
+    name: "{{ vpc_name }}"
+    namespace: "gcp-{{ project.name }}"
+---
+{%- else %}
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeFirewall
+metadata:
+  name: auto-{{ vpc_name }}-webproxy-ingress
+  namespace: gcp-{{ project.name }}
+spec:
+  description: AutoGen FW Rule for WebProxy
+  direction: INGRESS
+  priority: 900
+  sourceRanges:
+  - "172.26.0.0/15"
+  - "10.0.0.0/8"
+  allow:
+    - protocol: tcp
+      ports:
+        - "22"
+        - "3128"
+        - "8080"
+    - protocol: icmp
+  targetServiceAccounts:
+  - name: proxy-service
+    namespace: "gcp-{{ project.name }}"
+  networkRef:
+    name: "{{ vpc_name }}"
+    namespace: "gcp-{{ project.name }}"
+---
+{%- endif %}
+{%-       for region, proxy_data in vpc_def.proxyDeployV2.items() %}
+{%-         if 'central' in region %}
+{%-           set regionCode = 'c1' %}
+{%-           set gcpRegion = 'us-central1'%}
+{%-           set gcpZone = 'us-central1-a'%}
+  {%-         if proxy_data.imageVersion is defined %}
+  {%-           set version = proxy_data.imageVersion %}
+  {%-         else%}
+  {%-           set version = globalProxy.imageVersion %}
+  {%-         endif%}
+{%-         elif 'east' in region %}
+{%-           set regionCode = 'e1' %}
+{%-           set gcpRegion = 'us-east1'%}
+{%-           set gcpZone = 'us-east1-b'%}
+  {%-         if proxy_data.imageVersion is defined %}
+  {%-           set version = proxy_data.imageVersion %}
+  {%-         else%}
+  {%-           set version = globalProxy.imageVersion %}
+  {%-         endif%}
+{%-         endif %}
+
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeInstanceTemplate
+metadata:
+  name: 'webproxy-mig-v{{ version | replace(".","-") }}-{{ region }}-template'
+  namespace: gcp-{{ project.name }}
+spec:
+  description: WebProxy Template Ver. {{ version }}
+  instanceDescription: WebProxy v{{ version }}
+  machineType: n2-standard-8
+  region: {{ gcpRegion }}
+  disk:
+    - sourceImageRef:
+        external: projects/kohls-xpn-project/global/images/k-rhel7-gcp-squid-metad-{{ version | replace(".","-") }}
+      autoDelete: true
+      boot: true
+      deviceName: 'webproxy-v{{ version | replace(".","-") }}-{{ region }}-template'
+      diskType: pd-standard
+      diskSizeGb: 40
+      type: PERSISTENT
+  networkInterface:
+    - networkRef:
+        name: "{{ vpc_name }}"
+        namespace: "gcp-{{ project.name }}"
+      subnetworkRef:
+        name: "{{ vpc_name }}-webproxy-mig-{{ regionCode }}-auto01"
+        namespace: "gcp-{{ project.name }}"
+  canIpForward: false
+  scheduling:
+    automaticRestart: true
+    onHostMaintenance: "MIGRATE"
+    preemptible: false
+  metadataStartupScript: "echo hi > /test.txt"
+  serviceAccount:
+    serviceAccountRef:
+      name: "proxy-service"
+      namespace: "gcp-{{ project.name }}"
+    scopes:
+      - https://www.googleapis.com/auth/cloud-platform
+{%- if vpc_def.proxySettings.vpcOnlyProxy|default(false,true) %}
+  tags:
+  - target-proxy
+{%- endif %}
+---
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeSubnetwork
+metadata:
+  name: "{{ vpc_name }}-webproxy-mig-{{ regionCode }}-auto01"
+  namespace: "gcp-{{ project.name }}"
+spec:
+  ipCidrRange: {{ proxy_data.network.ip }}
+  region: {{ gcpRegion }}
+  description: WebProxy Subnet Build by GitOps
+  privateIpGoogleAccess: true
+  networkRef:
+    name: "{{ vpc_name }}"
+    namespace: "gcp-{{ project.name }}"
+# TODO: Parameterize flow logging for proxy subnet
+---
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeAddress
+metadata:
+  name: webproxy-mig-{{ region }}-frontend-addr
+  namespace: gcp-{{ project.name }}
+spec:
+  addressType: INTERNAL
+  location: {{ gcpRegion }}
+  ipVersion: IPV4
+  subnetworkRef:
+    name: "{{ vpc_name }}-webproxy-mig-{{ regionCode }}-auto01"
+    namespace: "gcp-{{ project.name }}"
+---
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeForwardingRule
+metadata:
+  name: webproxy-mig-{{ region }}-forwardingrule
+  namespace: gcp-{{ project.name }}
+spec:
+  description: "WebProxy forwarding rule for {{region}}"
+  backendServiceRef:
+    name: "webproxy-mig-{{ region }}-backendservice"
+    namespace: gcp-{{ project.name }}
+  ports:
+  - '8080'
+  - '3128'
+  allowGlobalAccess: True
+  ipProtocol: "TCP"
+  ipVersion: "IPV4"
+  ipAddress:
+    addressRef:
+      name: webproxy-mig-{{ region }}-frontend-addr
+      namespace: gcp-{{ project.name }}
+  location: {{ gcpRegion }}
+  loadBalancingScheme: INTERNAL
+  networkRef:
+    name: '{{ vpc_name }}'
+    namespace: gcp-{{ project.name }}
+  subnetworkRef:
+    name: "{{ vpc_name }}-webproxy-mig-{{ regionCode }}-auto01"
+    namespace: gcp-{{ project.name }}
+  networkTier: "PREMIUM"
+---
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeBackendService
+metadata:
+  name: 'webproxy-mig-{{ region }}-backendservice'
+  namespace: "gcp-{{ project.name }}"
+spec:
+  description: "Managed by KCC. {{ region }} Region Backend Service for Proxy"
+  timeoutSec: 30
+  location: {{ gcpRegion }}
+  healthChecks:
+  - healthCheckRef:
+      name: webproxy-mig-healthcheck-tcp8080
+      namespace: "gcp-{{ project.name }}"
+  loadBalancingScheme: INTERNAL
+  protocol: TCP
+  connectionDrainingTimeoutSec: 300
+  sessionAffinity: CLIENT_IP
+  backend:
+  - balancingMode: CONNECTION
+    description: An instance group serving this backend with 90% of its capacity, as calculated by requests per second.
+    group:
+      instanceGroupRef:
+        external: https://www.googleapis.com/compute/beta/projects/{{ project.name }}/regions/us-{{ region }}1/instanceGroups/webproxy-{{ region }}-mig
+---
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeInstanceGroupManager
+metadata:
+  name: webproxy-{{ region }}-mig
+  namespace: "gcp-{{ project.name }}"
+spec:
+  autoHealingPolicies:
+  - healthCheckRef:
+      name: webproxy-mig-healthcheck-tcp8080
+      namespace: "gcp-{{ project.name }}"
+    initialDelaySec: 300
+  baseInstanceName: 'webproxy-{{ project.name }}-{{ region }}'
+  description: "Platform Proxy Managed Instance Group"
+  distributionPolicy:
+{%- if region == 'central' %}
+    zones:
+    - zone: "projects/{{ project.name }}/zones/us-central1-b"
+    - zone: "projects/{{ project.name }}/zones/us-central1-c"
+    - zone: "projects/{{ project.name }}/zones/us-central1-f"
+    - zone: "projects/{{ project.name }}/zones/us-central1-a"
+{%- else %}
+    zones:
+    - zone: "projects/{{ project.name }}/zones/us-east1-b"
+    - zone: "projects/{{ project.name }}/zones/us-east1-c"
+    - zone: "projects/{{ project.name }}/zones/us-east1-d"
+{%- endif %}
+  instanceTemplateRef:
+    name: webproxy-mig-v{{ version | replace(".","-") }}-{{ region }}-template
+    namespace: gcp-{{ project.name }}
+  location: {{ gcpRegion }}
+  namedPorts:
+  - name: 'proxy-3128'
+    port: 3128
+  - name: 'proxy-8080'
+    port: 8080
+  projectRef:
+    name: {{ project.name }}
+    namespace: "gcp-{{ project.name }}"
+  targetSize: 1
+---
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeRouter
+metadata:
+  labels:
+    billing-dept-id: "{{ billingDeptId }}"
+  name: webproxy-router-mig-{{ region }}
+  namespace: "gcp-{{ project.name }}"
+spec:
+  networkRef:
+    name: "{{ vpc_name }}"
+    namespace: "gcp-{{ project.name }}"
+  description: "WebProxy Cloud NAT Router"
+  region: {{ gcpRegion }}
+---
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeRouterNAT
+metadata:
+  labels:
+    billing-dept-id: "{{ billingDeptId }}"
+  name: webproxy-router-mig-{{ region }}-nat
+  namespace: "gcp-{{ project.name }}"
+spec:
+  region: {{ gcpRegion }}
+{%-           if proxy_data.eimEnabled is defined %}
+  enableEndpointIndependentMapping: {{ proxy_data.eimEnabled }}
+{%-           else %}
+  enableEndpointIndependentMapping: {{ PROXY_NAT_DEFAULTS.eimEnabled }}
+{%-           endif %}
+  logConfig:
+{%-           if logConfig is defined %}
+    enable: {{ proxy_data.natLogConfig.enable | default(false, true) }}
+    filter: {{ proxy_data.natLogConfig.filter | default(PROXY_NAT_DEFAULTS.filter, true) }}
+{%-           else %}
+    enable: false
+    filter: {{ PROXY_NAT_DEFAULTS.filter }}
+{%-           endif %}
+{%-           if proxy_data.natManualAddresses is defined %}
+  natIpAllocateOption: MANUAL_ONLY
+  natIps:
+{%-             for n in range(proxy_data.natManualAddresses) %}
+  - name: "{{ vpc_name }}-{{ regionCode }}-webproxy-mig-cloud-nat-{{ n+1 }}"
+    namespace: gcp-{{project.name}}
+{%-             endfor %}
+{%-           else %}
+  natIpAllocateOption: AUTO_ONLY
+{%-           endif %}
+  routerRef:
+    name: "webproxy-router-mig-{{ region }}"
+    namespace: "gcp-{{ project.name }}"
+  sourceSubnetworkIpRangesToNat: LIST_OF_SUBNETWORKS
+  subnetwork:
+  - sourceIpRangesToNat: ['ALL_IP_RANGES']
+    subnetworkRef:
+      name: "{{ vpc_name }}-webproxy-mig-{{ regionCode }}-auto01"
+      namespace: "gcp-{{ project.name }}"
+{%-           if proxy_data.advancedNatSettings.min_ports_per_vm is defined %}
+  minPortsPerVm: {{ proxy_data.advancedNatSettings.min_ports_per_vm }}
+{%-           else %}
+  minPortsPerVm: {{ min_ports_per_vm | default(PROXY_NAT_DEFAULTS.minPortsPerVm,true) }}
+{%-           endif %}
+{%-           if proxy_data.advancedNatSettings.tcp_est_timeout is defined %}
+  tcpEstablishedIdleTimeoutSec: {{ proxy_data.advancedNatSettings.tcp_est_timeout }}
+{%-           else %}
+  tcpEstablishedIdleTimeoutSec: {{ tcp_est_timeout | default(PROXY_NAT_DEFAULTS.tcpEstablishedIdleTimeoutSec,true) }}
+{%-           endif %}
+{%-           if proxy_data.advancedNatSettings.tcp_trans_timeout is defined %}
+  tcpTransitoryIdleTimeoutSec: {{ proxy_data.advancedNatSettings.tcp_trans_timeout }}
+{%-           else %}
+  tcpTransitoryIdleTimeoutSec: {{ tcp_trans_timeout | default(PROXY_NAT_DEFAULTS.tcpTransitoryIdleTimeoutSec,true) }}
+{%-           endif %}
+{%-           if proxy_data.advancedNatSettings.udp_timeout is defined %}
+  udpIdleTimeoutSec: {{ proxy_data.advancedNatSettings.udp_timeout }}
+{%-           else %}
+  udpIdleTimeoutSec: {{ udp_timeout | default(PROXY_NAT_DEFAULTS.udpIdleTimeoutSec,true) }}
+{%-           endif %}
+{%-           if proxy_data.advancedNatSettings.icmp_timeout is defined %}
+  icmpIdleTimeoutSec: {{ proxy_data.advancedNatSettings.icmp_timeout }}
+{%-           else %}
+  icmpIdleTimeoutSec: {{ icmp_timeout | default(PROXY_NAT_DEFAULTS.icmpIdleTimeoutSec,true) }}
+{%-           endif %}
+---
+{%-           if proxy_data.natManualAddresses is defined %}
+{%-             for n in range(proxy_data.natManualAddresses) %}
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeAddress
+metadata:
+  name: "{{ vpc_name }}-{{ regionCode }}-webproxy-mig-cloud-nat-{{ n+1 }}"
+  labels:
+    billing-dept-id: "{{ billingDeptId }}"
+  namespace: "gcp-{{ project.name }}"
+spec:
+  addressType: EXTERNAL
+  description: WebProxy External Address {{ n+1 }}
+  location: {{ gcpRegion }}
+  ipVersion: IPV4
+---
+{%            endfor %}
+{%          endif %}
+{%-       endfor %}
+{%-     endif %}
+{%-   endfor %}
+{%- endif %}

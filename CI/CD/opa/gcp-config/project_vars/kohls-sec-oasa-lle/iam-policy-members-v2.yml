@@ -1,0 +1,47 @@
+---
+iamPolicyMembersV2:
+  serviceAccountsByEmail:
+    consul-paas@kohls-sec-oasa-lle.iam.gserviceaccount.com:
+    - role: CustomRole130
+      OrgId: 1035901152068
+    - role: CustomRole150
+      OrgId: 1035901152068
+    - role: CustomRole703
+      OrgId: 1035901152068
+    - role: compute.networkUser
+    mongo-dba@kohls-sec-oasa-lle.iam.gserviceaccount.com:
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: iam.serviceAccountUser
+    mysql-dba@kohls-sec-oasa-lle.iam.gserviceaccount.com:
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: iam.serviceAccountUser
+    terraform-devops@kohls-sec-oasa-lle.iam.gserviceaccount.com:
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.storageAdmin
+    - role: iam.serviceAccountUser
+    - role: storage.admin
+  groupsByEmail:
+    gcp-iam-architect@kohls.com:
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    GCP-IAM-L3@kohls.com:
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.storageAdmin
+    - role: iam.serviceAccountKeyAdmin
+    - role: iam.serviceAccountUser
+    - role: storage.admin
+    gcp-securitytech-devops-admin@kohls.com:
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.storageAdmin
+    - role: iam.serviceAccountKeyAdmin
+    - role: iam.serviceAccountUser
+    - role: storage.admin
+    - role: CustomRole900  # Committed use discounts user
+      OrgId: 1035901152068
+    - role: CustomRole359 # Compute reservations admin
+      OrgId: 1035901152068

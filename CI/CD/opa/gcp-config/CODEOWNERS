@@ -1,0 +1,71 @@
+[platform teams - directory match]
+/project_vars/*-openshift-*/ @sean.malloy@kohls.com @nicholas.sanborn@kohls.com @vincent.sabatini@kohls.com @greg.markham@kohls.com @kevin.brunow@kohls.com
+
+[Security Project]
+/project_vars/kohls-infosec-*/ @rich.holcombe@kohls.com @christopher.proulx@kohls.com @thomas.wesolowski@kohls.com @Christopher.Olinger@kohls.com @james.banach@kohls.com @michael.leykin@kohls.com @richard.ghattas@kohls.com @robert.gorichanaz@kohls.com @kelly.neumann@kohls.com
+/project_vars/kohls-sec-bastion-*/ @rich.holcombe@kohls.com @christopher.proulx@kohls.com @thomas.wesolowski@kohls.com @Christopher.Olinger@kohls.com @james.banach@kohls.com @michael.leykin@kohls.com @richard.ghattas@kohls.com @robert.gorichanaz@kohls.com @kelly.neumann@kohls.com
+/project_vars/kohls-sec-engineering-*/ @rich.holcombe@kohls.com @christopher.proulx@kohls.com @thomas.wesolowski@kohls.com @Christopher.Olinger@kohls.com @james.banach@kohls.com @michael.leykin@kohls.com @richard.ghattas@kohls.com @robert.gorichanaz@kohls.com @kelly.neumann@kohls.com
+/project_vars/kohls-sec-oasa-*/ @rich.holcombe@kohls.com @christopher.proulx@kohls.com @thomas.wesolowski@kohls.com @Christopher.Olinger@kohls.com @james.banach@kohls.com @michael.leykin@kohls.com @richard.ghattas@kohls.com @robert.gorichanaz@kohls.com @kelly.neumann@kohls.com
+/project_vars/kohls-sec-okta-*/ @rich.holcombe@kohls.com @christopher.proulx@kohls.com @thomas.wesolowski@kohls.com @Christopher.Olinger@kohls.com @james.banach@kohls.com @michael.leykin@kohls.com @richard.ghattas@kohls.com @robert.gorichanaz@kohls.com @kelly.neumann@kohls.com
+/project_vars/kohls-sec-vault-*/ @rich.holcombe@kohls.com @christopher.proulx@kohls.com @thomas.wesolowski@kohls.com @Christopher.Olinger@kohls.com @james.banach@kohls.com @michael.leykin@kohls.com @richard.ghattas@kohls.com @robert.gorichanaz@kohls.com @kelly.neumann@kohls.com
+/project_vars/kohls-sec-cspm-*/ @rich.holcombe@kohls.com @christopher.proulx@kohls.com @thomas.wesolowski@kohls.com @Christopher.Olinger@kohls.com @james.banach@kohls.com @michael.leykin@kohls.com @richard.ghattas@kohls.com @robert.gorichanaz@kohls.com @kelly.neumann@kohls.com
+/project_vars/kohls-sec-logging-*/ @rich.holcombe@kohls.com @christopher.proulx@kohls.com @thomas.wesolowski@kohls.com @Christopher.Olinger@kohls.com @james.banach@kohls.com @michael.leykin@kohls.com @richard.ghattas@kohls.com @robert.gorichanaz@kohls.com @kelly.neumann@kohls.com
+
+[ETA]
+/project_vars/kohls-eta-credit-*/ @michael.osiecki@kohls.com @Austin.Paul@kohls.com
+
+[ETA Finance]
+/project_vars/kohls-eta-finance-*/ @Austin.Paul@kohls.com @John.Traudt@kohls.com @Kyle.Windsor@kohls.com
+
+[bda-lle/hle/prd]
+/project_vars/kohls-bda-lle/ @ananth.bilakanti@kohls.com @Jasvinder.Singh@kohls.com
+/project_vars/kohls-bda-hle/ @ananth.bilakanti@kohls.com @Jasvinder.Singh@kohls.com
+/project_vars/kohls-bda-prd/ @ananth.bilakanti@kohls.com @Jasvinder.Singh@kohls.com
+
+[merch-in-lle]
+/project_vars/kohls-merch-in-lle/ @dominick.anggara@kohls.com @ben.klink@kohls.com @tarak.chadaram@kohls.com @Nicholas.Petersson@kohls.com
+
+[merch-in-prd]
+/project_vars/kohls-merch-in-prd/ @dominick.anggara@kohls.com @ben.klink@kohls.com @tarak.chadaram@kohls.com @Nicholas.Petersson@kohls.com
+
+[merch-ps-lle]
+/project_vars/kohls-merch-ps-lle/ @dominick.anggara@kohls.com @ben.klink@kohls.com @Raktim.Sarkar@kohls.com @Nicholas.Petersson@kohls.com @Ravichandran.Rajendran@kohls.com @Aaron.Wolmutt@kohls.com @Darshan.Hasthantra@kohls.com @Rafael.Lobato@kohls.com @FlavioEmilio.Borges@kohls.com @Victor.Moraes@kohls.com
+
+[merch-ps-prd]
+/project_vars/kohls-merch-in-prd/ @dominick.anggara@kohls.com @ben.klink@kohls.com @Raktim.Sarkar@kohls.com @Nicholas.Petersson@kohls.com @Ravichandran.Rajendran@kohls.com @Aaron.Wolmutt@kohls.com @Darshan.Hasthantra@kohls.com @Rafael.Lobato@kohls.com @FlavioEmilio.Borges@kohls.com @Victor.Moraes@kohls.com
+
+[merch-pl]
+/project_vars/kohls-merch-pl-*/ @Joel.Schrock@kohls.com @kerry.davis@kohls.com @Griffin.Strain@kohls.com
+/project_vars/kohls-merch-item-*/ @Joel.Schrock@kohls.com @kerry.davis@kohls.com @Griffin.Strain@kohls.com
+
+[ecom-tvs-corp]
+/project_vars/kohls-ecom-tvs-corp-*/ @Thrinath.Kathula@kohls.com @Matt.Scholtka@kohls.com @kiran.mothekani@kohls.com @riteshkumar.ketireddi@kohls.com @adrian.davoli@kohls.com @mike.bohn@kohls.com
+
+[CPE DBAAS]
+/project_vars/kohls-platform-dbaas-*/ @casey.carlsen@kohls.com @kurt.troyer@kohls.com @kyle.zimmermann@kohls.com @andy.beimel@kohls.com @steven.zydek@kohls.com @Carissa.Roberts@kohls.com @ramesh.venkitaswaran@kohls.com @Marsha.Siatczynski@kohls.com @Nikita.Belonogov@kohls.com
+
+[CPE MAAS]
+/project_vars/kohls-platform-maas-*/ @kurt.troyer@kohls.com @kyle.zimmermann@kohls.com @steven.zydek@kohls.com @Carissa.Roberts@kohls.com @Deepthi.Gadi@kohls.com @Michael.Rye@kohls.com @ramesh.venkitaswaran@kohls.com
+
+[BDA (BDA team needs to be onboarded.)]
+/project_vars/kohls-bda-scripts-ops/ @bryce.mcmurtry@kohls.com
+
+#[CPE IMAGE]
+#/project_vars/kohls-cpe-image-mgmt-*/ @wade.sweet@kohls.com
+
+[ETCC]
+/project_vars/kohls-etcc-uc-lle/ @michael.osiecki@kohls.com @Mark.Schultz@kohls.com @Austin.Paul@kohls.com
+
+[infra-monitoring]
+/project_vars/kohls-infra-monitoring*/ @william.mitchell@kohls.com @Michael.Rye@kohls.com @Larry.McCann@kohls.com @Purna.Venkatesh@kohls.com
+
+[infra-aiops]
+/project_vars/kohls-infra-aiops-lle/ @adam.kozuch@kohls.com @michael.simpson@kohls.com @william.mitchell@kohls.com @Benjamin.Buckley@kohls.com @owen.vey@kohls.com @Brett.Wood@kohls.com
+/project_vars/kohls-infra-aiops-prd/ @adam.kozuch@kohls.com @michael.simpson@kohls.com @william.mitchell@kohls.com @Benjamin.Buckley@kohls.com @owen.vey@kohls.com @Brett.Wood@kohls.com
+
+[cce netx mosaic]
+/project_vars/kohls-cx-loyalty-retailsrv-*/ @james.ryan@kohls.com @manish.parmar@kohls.com @dave.wallraff@kohls.com
+
+[Security Approval]
+/project_vars/*-xpn-*/*-firewall.yml @rich.holcombe@kohls.com @christopher.proulx@kohls.com @thomas.wesolowski@kohls.com @Christopher.Olinger@kohls.com @james.banach@kohls.com @michael.leykin@kohls.com @richard.ghattas@kohls.com @robert.gorichanaz@kohls.com @kelly.neumann@kohls.com
+/default_vars/elec-*.yml @rich.holcombe@kohls.com @christopher.proulx@kohls.com @thomas.wesolowski@kohls.com @Christopher.Olinger@kohls.com @james.banach@kohls.com @michael.leykin@kohls.com @richard.ghattas@kohls.com @robert.gorichanaz@kohls.com @kelly.neumann@kohls.com

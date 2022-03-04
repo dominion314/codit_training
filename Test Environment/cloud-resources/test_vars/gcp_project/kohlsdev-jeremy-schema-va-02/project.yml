@@ -1,0 +1,32 @@
+---
+billingDeptId: "90586"
+project:
+  name: kohlsdev-jeremy-schema-va-02
+  managed: true
+  folderId: "4553252134"
+  billingAccount: "00C36A-CD0BDB-E543D0"
+  # Only hyphens (-), underscores (_), lowercase characters,
+  # and numbers are allowed as characters in labels
+  labels:
+    billing-dept-id: "90586"
+    project-manager: michael-halbach
+    devops-lead: michael-halbach
+    environment-type: dev
+    line-of-business: michael-halbach
+    project-requestor: michael-halbach
+serviceAPIs:
+  actions.googleapis.com:                   # Valid api but not required
+  bigquery-json.googleapis.com:             # Invalid api
+  cloudbuild.googleapis.com:                # Valid api but not required
+    test: hello                             # Invalid option
+    deletionPolicy: abandon                 # Valid Option
+  cloudresourcemanager.googleapis.com:      # Required api
+  compute.googleapis.com:                   # Required api
+    deletionPolicy: abandon                 # Optional deletion policy
+    anothertest: shouldbeback               # Bad Option
+  stackdriver.googleapis.com:               # Required api
+    disableDependentServices: false         # Optional disable dependent services policy
+  storage-api.googleapis.com:               # Required api
+  storage-component.googleapis.com:         # Required api
+    deletionPolicy: abandon                 # Optional but can not be set with disableDependent Services
+    disableDependentServices: false         # Optional but can not be set with deletion policy

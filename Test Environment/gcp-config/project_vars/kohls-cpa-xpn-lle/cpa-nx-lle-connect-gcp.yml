@@ -1,0 +1,45 @@
+---
+vpcs:
+  cpa-nx-lle:
+    routerDef:
+      cpa-nx-lle-c1-gcp-rtr01:
+        region: us-central1
+        description:
+        routerASN:  # Custom ASN, if blank will pull from GLOBAL-ASN.YML
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+
+        ha_vpn_gateways_to_transit:
+          cpa-nx-lle-c1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.0.144/30
+              bluecat-id: 1561843
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.0.148/30
+              bluecat-id: 1561845
+              status: PROVISIONED
+
+      cpa-nx-lle-e1-gcp-rtr01:
+        region: us-east1
+        description:
+        routerASN:  # Custom ASN, if blank will pull from GLOBAL-ASN.YML
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+
+        ha_vpn_gateways_to_transit:
+          cpa-nx-lle-e1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.0.152/30
+              bluecat-id: 1561847
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.0.156/30
+              bluecat-id: 1561849
+              status: PROVISIONED

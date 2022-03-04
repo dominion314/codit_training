@@ -1,0 +1,62 @@
+---
+vpcs:
+  sec-nx-prd:
+
+    interconnectRouterDef:
+      sec-nx-prd-c1-pi-rtr01:
+        region: us-central1
+        description: ""
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+
+        partnerInterconnect:
+          abandonOnDelete: true
+          description:
+          availabilityDomain: 1
+          connectionSpeed: 50MB
+
+      sec-nx-prd-c1-pi-rtr02:
+        region: us-central1
+        description: ""
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+
+        partnerInterconnect:
+          abandonOnDelete: true
+          description:
+          availabilityDomain: 2
+          connectionSpeed: 50MB
+
+      sec-nx-prd-e1-pi-rtr01:
+        region: us-east1
+        description: ""
+        advertiseMode: DEFAULT
+        custom_route_priority:
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+
+        partnerInterconnect:
+          abandonOnDelete: true
+          description:
+          availabilityDomain: 1
+          connectionSpeed: 50MB
+
+      sec-nx-prd-e1-pi-rtr02:
+        region: us-east1
+        description: ""
+        advertiseMode: DEFAULT
+        custom_route_priority:
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+
+        partnerInterconnect:
+          abandonOnDelete: true
+          description:
+          availabilityDomain: 2
+          connectionSpeed: 50MB

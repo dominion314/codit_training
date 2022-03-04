@@ -1,0 +1,55 @@
+{%- if computeDisks is defined %}
+{%-   for name, disk_parameters in computeDisks.items() %}
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeDisk
+metadata:
+  name: {{ name }}
+  namespace: gcp-{{ project.name }}
+  labels:
+    managed-by-cnrm: "true"
+{%-     if defaultLabels is defined %}
+{%-       for key, value in defaultLabels.items() %}
+{%-         if disk_parameters.labels is defined %}
+{%-           if not key in disk_parameters.labels %}
+    {{ key }}: "{{ value }}"
+{%-           endif %}
+{%-         else %}
+    {{ key }}: "{{ value }}"
+{%-         endif %}
+{%-       endfor %}
+{%-     endif %}
+{%-     if disk_parameters.labels is defined %}
+{%-       for key, value in disk_parameters.labels.items() %}
+    {{ key }}: "{{ value }}"
+{%-       endfor %}
+{%-     endif %}
+spec:
+{%-     if disk_parameters.description is defined %}
+  description: {{ disk_parameters.description }}
+{%-     endif %}
+{%-     if disk_parameters.replicaZone is defined %}
+  location: {{ disk_parameters.zone | regex_search('us-(central|east|west)\d') }}
+  replicaZones:
+    - {{ disk_parameters.zone }}
+    - {{ disk_parameters.replicaZone }}
+{%-     else %}
+  location: {{ disk_parameters.zone }}
+{%-     endif %}
+{%-     if disk_parameters.size is defined %}
+  size: {{ disk_parameters.size }}
+{%-     endif %}
+{%-     if disk_parameters.physicalBlockSizeBytes is defined %}
+  physicalBlockSizeBytes: {{ disk_parameters.physicalBlockSizeBytes }}
+{%-     endif %}
+{%-     if disk_parameters.type is defined %}
+  type: {{ disk_parameters.type }}
+{%-     endif %}
+{%-     if disk_parameters.image is defined %}
+{%-     if disk_parameters.image.external is defined %}
+  imageRef:
+    external: {{ disk_parameters.image.external }}
+{%-     endif %}
+{%-     endif %}
+---
+{%-   endfor %}
+{%- endif %}

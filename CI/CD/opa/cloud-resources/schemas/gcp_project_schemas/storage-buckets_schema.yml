@@ -1,0 +1,89 @@
+---
+storageBuckets:
+  type: 'dict'
+  required: false
+  keysrules:
+    type: 'string'
+    required: true
+    regex: '[-a-zA-Z0-9\._]+' # TODO: might need some refining
+  valuesrules:
+    type: 'dict'
+    required: false
+    schema:
+      forceDestroy:
+        type: 'boolean'
+        required: false
+      location:
+        type: 'string'
+        required: false
+        allowed: ['US', 'us', 'NAM4', 'nam4', 'US-CENTRAL1', 'us-central1', 'US-EAST1',
+          'us-east1', 'US-EAST4', 'us-east4', 'US-WEST1', 'us-west1', 'US-WEST2',
+          'us-west2', 'US-WEST3', 'us-west3', 'US-WEST4', 'us-west4']
+      storageClass:
+        type: 'string'
+        required: false
+        allowed: ['STANDARD', 'NEARLINE', 'COLDLINE', 'ARCHIVE', 'MULTI_REGIONAL',
+                    'REGIONAL', 'DURABLE_REDUCED_AVAILABILITY']
+      versioningEnabled:
+        type: 'boolean'
+        required: false
+        default: false
+      labels:
+        type: 'dict'
+        required: false
+        keysrules:
+          type: 'string'
+          regex: '^[0-9a-z-_]+'
+        valuesrules:
+          type: 'string'
+          regex: '^[0-9a-z-_]+'
+      bucketPolicyOnly:
+        type: 'boolean'
+        required: false
+        default: false
+      lifecycleRule:
+        type: 'list'
+        required: false
+        schema:
+          type: 'dict'
+          schema:
+            action:
+              type: 'dict'
+              schema:
+                type:
+                  type: 'string'
+                  allowed: ['Delete', 'SetStorageClass']
+                setStorageClass:
+                  type: 'string'
+                  allowed: [NEARLINE', 'COLDLINE', 'ARCHIVE']
+            condition:
+              type: 'dict'
+              schema:
+                age:
+                  type: integer
+                  min: 1
+                createdBefore:
+                  type: 'string'
+                  regex: '^(19|20|21)\d\d-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])'
+                matchesStorageClass:
+                  type: 'list'
+                  allowed: ['STANDARD', 'NEARLINE', 'COLDLINE', 'ARCHIVE', 'MULTI_REGIONAL',
+                    'REGIONAL', 'DURABLE_REDUCED_AVAILABILITY']
+                withState:
+                  type: 'string'
+                  allowed: ['LIVE', 'ARCHIVED', 'ANY']
+                numNewerVersions:
+                  type: 'integer'
+                  min: 1
+      retentionPolicy:
+        type: 'dict'
+        required: false
+        schema:
+          isLocked:
+            required: false
+            type: 'boolean'
+          retentionPeriod:
+            required: true
+            type: 'integer'
+            min: 1
+            max: 3155760000

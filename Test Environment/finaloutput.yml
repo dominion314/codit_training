@@ -1,0 +1,25 @@
+```yaml
+vpcs:
+  {{ VPC_NAME }}:
+
+    firewallRules:
+      {{ FW_RULE_NAME }}:
+        priority: 900                 #1-2000
+        direction: (INGRESS|EGRESS)
+        description: {{ RULE_DESC }}  # Often SCTASK ID
+        disabled: (true | false)      # Will Disable Rule
+        logging: (true | false)       # Keep as False
+        rule:
+          destinationRanges:          # List of IP Ranges
+          targetServiceAccounts:      # List of Service Accts.
+          targetTags:                 # List of Tags
+          sourceRanges:               # List of IP Ranges
+          sourceServiceAccounts:      # List of Service Accts.
+          sourceTags:                 # List of Tags
+          deny:
+            - protocol:               # String: TCP|UDP|ICMP
+              ports:                  # List of Port Numbers
+          allow:
+            - protocol:               # String: TCP|UDP|ICMP
+              ports:                  # List of Port Numbers
+```

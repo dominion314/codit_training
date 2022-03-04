@@ -1,0 +1,42 @@
+---
+vpcs:
+  eta-nx-prd:
+    routerDef:
+      eta-nx-prd-c1-gcp-rtr01:
+        region: us-central1
+        description:
+        routerASN:
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+        ha_vpn_gateways_to_transit:
+          eta-nx-prd-c1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.1.24/30
+              bluecat-id: 1586186
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.1.28/30
+              bluecat-id: 1586188
+              status: PROVISIONED
+      eta-nx-prd-e1-gcp-rtr01:
+        region: us-east1
+        description:
+        routerASN:
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+        ha_vpn_gateways_to_transit:
+          eta-nx-prd-e1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.1.32/30
+              bluecat-id: 1586190
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.1.36/30
+              bluecat-id: 1586192
+              status: PROVISIONED

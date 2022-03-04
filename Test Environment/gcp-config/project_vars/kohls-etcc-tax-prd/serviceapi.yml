@@ -1,0 +1,13 @@
+---
+serviceAPIs:
+  bigquery.googleapis.com:
+  bigquerystorage.googleapis.com:
+  compute.googleapis.com:
+  cloudresourcemanager.googleapis.com:
+  storage-component.googleapis.com:
+  storage-api.googleapis.com:
+  stackdriver.googleapis.com:
+  logging.googleapis.com:
+  monitoring.googleapis.com:
+  cloudasset.googleapis.com:
+  networkmanagement.googleapis.com:

@@ -1,0 +1,4 @@
+---
+defaultLabels:            # default labels will be applied to every resource configuratio
+  default-label: default-iron-maiden
+  default-no-overwrite: always-here

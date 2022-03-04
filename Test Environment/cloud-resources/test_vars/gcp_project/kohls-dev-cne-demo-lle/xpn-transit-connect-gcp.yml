@@ -1,0 +1,10 @@
+---
+vpcs:
+  xpn-transit:
+
+    routerDef:
+      xpn-transit-c1-gcp-rtr01:
+        region: us-central1
+        advertiseMode: DEFAULT
+        description:
+        routerASN:  # Custom ASN, if blank will pull from GLOBAL-ASN.YML

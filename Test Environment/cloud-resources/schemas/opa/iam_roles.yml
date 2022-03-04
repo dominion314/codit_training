@@ -1,0 +1,37 @@
+---
+iam:
+  required: true
+  schema:
+    allowedRoles:
+      required: true
+      type: dict
+      keysrules:
+        type: string
+        allowed: ['sbx', 'ops', 'lle', 'hle', 'nonprd', 'prd']
+      valuesrules:
+        required: true
+        type: dict
+        keysrules:
+          type: string
+          allowed:
+          - roles
+        valuesrules:
+          required: true
+          type: list
+          schema:
+            keysrules:
+              type: string
+            required: true
+            type: dict
+            valuesrules:
+              required: true
+              type: dict
+              keysrules:
+                allowed:
+                - allowedForGroups
+                - allowedForServiceAccounts
+                - allowedForUsers
+                type: string
+              valuesrules:
+                type: boolean
+

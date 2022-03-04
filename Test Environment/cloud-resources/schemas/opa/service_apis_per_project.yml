@@ -1,0 +1,15 @@
+---
+service:
+  required: true
+  schema:
+    allowedAPIsPerProject:
+      required: true
+      type: dict
+      keysrules:
+        type: string
+        # first lower alpha, after that alphanums plus hyphens, 6 to 30 total lengh
+        regex: '^[a-z][a-zA-Z0-9-]{5,29}$'
+      valuesrules:
+        type: list
+        schema:
+          type: string

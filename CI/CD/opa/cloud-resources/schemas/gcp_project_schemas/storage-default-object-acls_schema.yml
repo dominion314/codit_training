@@ -1,0 +1,58 @@
+---
+storageBuckets:
+  required: false
+  type: 'dict'
+  keysrules:
+    type: 'string'
+    regex: '[-a-z0-9\._]+' # TODO: bucket name, might need some refining
+  valuesrules:
+    type: 'dict'
+    schema:
+      default_object_acls:
+        required: false
+        type: 'dict'
+        schema:
+          usersByEmail:
+            type: 'dict'
+            required: false
+            keysrules:
+              type: 'string'
+              regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com|.*\.gserviceaccount\.com'
+            valuesrules:
+              type: 'string'
+              allowed: ['READER', 'OWNER']
+          groupsByEmail:
+            required: false
+            type: 'dict'
+            keysrules:
+              type: 'string'
+              regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+            valuesrules:
+              type: 'string'
+              allowed: ['READER', 'OWNER']
+          primitiveRoles:
+            type: 'dict'
+            required: false
+            keysrules: # Project Number
+              type: 'integer'
+              regex: '\d+'
+            valuesrules:
+              type: 'dict'
+              keysrules:
+                type: 'string'
+                allowed: ['viewers', 'editors', 'owners']
+              valuesrules:
+                type: 'string'
+                allowed: ['READER', 'OWNER']
+          #kaka:
+          #  type: string
+          #  required: true
+          builtinGroups:
+            type: 'dict'
+            required: false
+            keysrules:
+              type: 'string'
+              allowed: ['allUsers', 'allAuthenticatedUsers']
+            valuesrules:
+              type: 'string'
+              allowed: ['READER', 'OWNER']

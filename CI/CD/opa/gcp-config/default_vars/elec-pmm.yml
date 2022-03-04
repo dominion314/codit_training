@@ -1,0 +1,47 @@
+---
+#ingress rules for platform projects; Migration of VM instances to Cloud based MySQL Instances
+electiveRules:
+  PMMRules:
+    elec-pmm-fw-01:
+      priority: 900
+      direction: INGRESS
+      description: REQ1418578 #Ingress to MySQL instances from Prod Central PMM servers
+      disabled: false
+      logging: false
+      rule:
+        destinationRanges:
+        targetServiceAccounts:
+        targetTags:
+        - global-pmm-client-prd
+        sourceRanges:
+        - 10.185.0.192/27
+        - 10.189.0.128/27
+        sourceServiceAccounts:
+        sourceTags:
+        allow:
+        - protocol: tcp
+          ports:
+          - "5666"
+          - "42000-42004"
+
+    elec-pmm-fw-02:
+      priority: 900
+      direction: INGRESS
+      description: REQ1418578 #Ingress to MySQL instances from LLE Central PMM servers
+      disabled: false
+      logging: false
+      rule:
+        destinationRanges:
+        targetServiceAccounts:
+        targetTags:
+        - global-pmm-client-lle
+        sourceRanges:
+        - 10.187.7.224/27
+        - 10.191.0.32/27
+        sourceServiceAccounts:
+        sourceTags:
+        allow:
+        - protocol: tcp
+          ports:
+          - "5666"
+          - "42000-42004"

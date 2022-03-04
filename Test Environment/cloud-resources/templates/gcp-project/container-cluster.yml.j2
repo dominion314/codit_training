@@ -1,0 +1,132 @@
+---
+{% if clusters is defined %}
+{% for cluster in clusters %}
+apiVersion: container.cnrm.cloud.google.com/v1beta1
+kind: ContainerCluster
+metadata:
+  labels:
+    billing-dept-id: "{{ billingDeptId }}"
+  name: {{ cluster.name }}
+  namespace: gcp-{{ project.name }}
+  annotations:
+      cnrm.cloud.google.com/remove-default-node-pool: "true"
+spec:
+  addonsConfig:
+    cloudrunConfig:
+      disabled: {{ cluster.cloudrunConfig.disabled | default(true) }}
+{%- if cluster.configConnectorConfig.enabled is defined %}
+    configConnectorConfig:
+      enabled: {{ cluster.configConnectorConfig.enabled }}
+{%- endif %}
+    horizontalPodAutoscaling:
+      disabled: {{ cluster.horizontalPodAutoscaling.disabled | default(false) }}
+    httpLoadBalancing:
+      disabled: {{ cluster.httpLoadBalancing.disabled | default(false) }}
+    istioConfig:
+      disabled: {{ cluster.istioConfig.disabled | default(true) }}
+    networkPolicyConfig:
+      disabled: {{ cluster.networkPolicyConfig.disabled | default(false) }}
+  defaultMaxPodsPerNode: {{ cluster.defaultMaxPodsPerNode | default(110) }}
+  enableKubernetesAlpha: {{ cluster.enableKubernetesAlpha | default(false) }}
+  enableLegacyAbac: false
+  initialNodeCount: {{ cluster.initialNodeCount | default("1", true) }}
+  ipAllocationPolicy:
+    clusterSecondaryRangeName: {{ cluster.podSubnetwork }}
+    servicesSecondaryRangeName: {{ cluster.serviceSubnetwork }}
+  location: {{ cluster.location }}
+  loggingService: {{ cluster.loggingService | default("logging.googleapis.com/kubernetes", true) }}
+  masterAuth:
+    clientCertificateConfig:
+      issueClientCertificate: false
+  masterAuthorizedNetworksConfig:
+    cidrBlocks:
+    - displayName: "Kohl's Network"
+      cidrBlock: "10.0.0.0/8"
+    - displayName: "Remote Access VPN Range"
+      cidrBlock: "172.26.0.0/15"
+  minMasterVersion: "{{ cluster.minMasterVersion | default("", true) }}"
+  monitoringService: {{ cluster.monitoringService | default("monitoring.googleapis.com/kubernetes", true) }}
+{%    if cluster.network is defined %}
+  networkRef:
+{%      if cluster.externalNetwork | default(false) %}
+    external: {{ cluster.network }}
+{%      else %}
+    namespace: gcp-{{ cluster.xpnProjectName }}
+    name: {{ cluster.network }}
+{%      endif %}
+{%    endif %}
+  networkPolicy:
+    enabled: true
+{%    if cluster.nodeVersion is defined %}
+  nodeVersion: {{ cluster.nodeVersion }}
+{%    endif %}
+{%    if cluster.nodeLocations is defined %}
+  nodeLocations:
+{%      for nodeLocation in cluster.nodeLocations %}
+    - {{ nodeLocation }}
+{%      endfor %}
+{%    endif %}
+{%    if cluster.subnetwork is defined %}
+  subnetworkRef:
+{%      if cluster.externalSubnetwork | default(false) %}
+    external: {{ cluster.subnetwork }}
+{%      else %}
+    namespace: gcp-{{ cluster.xpnProjectName }}
+    name: {{ cluster.subnetwork }}
+{%      endif %}
+{%    endif %}
+  podSecurityPolicyConfig:
+    enabled: {{ cluster.podSecurityPolicyConfig.enabled | default(true)}}
+  privateClusterConfig:
+    enablePrivateNodes: true
+    enablePrivateEndpoint: true
+    masterIpv4CidrBlock: {{ cluster.masterIpv4CidrBlock }}
+  releaseChannel:
+    channel: {{ cluster.releaseChannel | default("REGULAR", true) }}
+  workloadIdentityConfig:
+    identityNamespace: {{ project.name }}.svc.id.goog
+---
+{%    if cluster.nodePools is defined %}
+{%    for nodepool in cluster.nodePools %}
+apiVersion: container.cnrm.cloud.google.com/v1beta1
+kind: ContainerNodePool
+metadata:
+  labels:
+    billing-dept-id: "{{ billingDeptId }}"
+  name: {{ nodepool.name }}
+  namespace: gcp-{{ project.name }}
+spec:
+  autoscaling:
+    maxNodeCount: {{ nodepool.maxNodeCount }}
+    minNodeCount: {{ nodepool.minNodeCount }}
+  clusterRef:
+    name: {{ cluster.name }}
+    namespace: gcp-{{ project.name }}
+  initialNodeCount: {{ nodepool.initialNodeCount | default(1) }}
+  location: {{ nodepool.location }}
+  management:
+    autoRepair: {{ nodepool.autoRepair | default(true) }}
+    autoUpgrade: {{ nodepool.autoUpgrade | default(true) }}
+  maxPodsPerNode: {{ nodepool.maxPodsPerNode | default(110) }}
+  nodeConfig:
+    diskSizeGb: {{ nodepool.diskSizeGb | default(100) }}
+    diskType: {{ nodepool.diskType | default("pd-standard") }}
+    machineType: {{ nodepool.machineType | default("g1-small") }}
+    imageType: {{ nodepool.imageType | default("cos") }}
+{%      if nodepool.oauthScopes is defined %}
+    oauthScopes:
+{%        for scope in nodepool.oauthScopes %}
+      - {{ scope }}
+{%        endfor %}
+{%      endif %}
+{%      if cluster.nodeLocations is defined %}
+  nodeLocations:
+{%        for nodeLocation in cluster.nodeLocations %}
+    - {{ nodeLocation }}
+{%        endfor %}
+{%      endif %}
+---
+{%    endfor %}
+{%    endif %}
+{% endfor %}
+{% endif %}

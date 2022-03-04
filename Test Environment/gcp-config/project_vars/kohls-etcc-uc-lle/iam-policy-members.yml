@@ -1,0 +1,40 @@
+---
+iamPolicyMembers:
+  groupsByEmail:
+    gcp-eta-devops-admin@kohls.com:
+      roles:
+      - compute.imageUser
+      - compute.instanceAdmin.v1
+      - compute.loadBalancerAdmin
+      - compute.networkUser
+      - compute.networkViewer
+      - compute.storageAdmin
+      - iam.serviceAccountKeyAdmin
+      - iam.serviceAccountTokenCreator
+      - iam.serviceAccountUser
+      - logging.admin
+      - logging.configWriter
+      - logging.privateLogViewer
+      - logging.viewer
+      - monitoring.admin
+      - pubsub.admin
+      - storage.admin
+      - storage.objectViewer
+  serviceAccountsByEmail:
+    mysql-dba@kohls-etcc-uc-lle.iam.gserviceaccount.com:
+      roles:
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - iam.serviceAccountUser
+    mongo-dba@kohls-etcc-uc-lle.iam.gserviceaccount.com:
+      roles:
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - iam.serviceAccountUser
+    terraform-devops@kohls-etcc-uc-lle.iam.gserviceaccount.com:
+      roles:
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - iam.serviceAccountUser
+      - compute.storageAdmin
+      - storage.admin

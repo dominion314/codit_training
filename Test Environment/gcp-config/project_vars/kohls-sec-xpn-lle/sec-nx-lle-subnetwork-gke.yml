@@ -1,0 +1,35 @@
+---
+vpcs:
+  sec-nx-lle:
+    subnets:
+      sec-nx-lle-twistlock-c1-gke01:
+        advertiseRoutes: false
+        region: us-central1
+        network:
+          ip: 10.187.7.128/26
+          bluecat-id: 1550415
+        gke:
+        - podNetwork:
+            name: sec-nx-lle-twistlock-c1-pod01
+            ip: 10.120.80.0/23
+            bluecat-id: 1540419
+          serviceNetwork:
+            name: sec-nx-lle-twistlock-c1-svc01
+            ip: 10.120.66.128/27
+            bluecat-id: 1550421
+          masterNetwork:
+            ip: 10.120.255.96/28
+            bluecat-id: 1550424
+        permissions:
+          serviceAccountsByEmail:
+          - terraform-sec@kohls-sec-engineering-lle.iam.gserviceaccount.com
+          - service-938246310506@container-engine-robot.iam.gserviceaccount.com
+          - 938246310506-compute@developer.gserviceaccount.com
+          - 938246310506@cloudservices.gserviceaccount.com
+          groupsByEmail:
+          - gcp-securitymonitoring-devops-l3@kohls.com
+          - gcp-securityplanning-devops-admin@kohls.com
+          - gcp-securityplanning-devops-l2@kohls.com
+          - gcp-securityplanning-devops-l3@kohls.com
+          - gcp-securitytech-devops-admin@kohls.com
+          - gcp-securitytech-devops-manager@kohls.com

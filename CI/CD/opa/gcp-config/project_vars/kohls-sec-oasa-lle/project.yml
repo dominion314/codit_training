@@ -1,0 +1,17 @@
+---
+billingDeptId: "90576"
+project:
+  name: kohls-sec-oasa-lle
+  deleteProtect: true
+  managed: true
+  folderId: "882166644980"
+  billingAccount: "00C36A-CD0BDB-E543D0"
+  # Only hyphens (-), underscores (_), lowercase characters,
+  # and numbers are allowed as characters in labels
+  labels:
+    billing-dept-id: "90576"
+    project-manager: manasa-ramayanam
+    devops-lead: joe-vanhorn
+    environment-type: lle
+    line-of-business: sec
+    project-requestor: thomas-wesolowski

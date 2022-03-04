@@ -1,0 +1,23 @@
+---
+vpcs:
+  platformops-nx-lle:
+    interconnectRouterDef:
+      platformops-nx-lle-c1-pi-rtr01:
+        region: us-central1
+        description:
+        advertiseMode: DEFAULT
+        partnerInterconnect:
+          abandonOnDelete: true
+          description:
+          availabilityDomain: 1
+          connectionSpeed: 50MB
+
+      platformops-nx-lle-e1-pi-rtr01:
+        region: us-east1
+        description:
+        advertiseMode: DEFAULT
+        partnerInterconnect:
+          abandonOnDelete: true
+          description:
+          availabilityDomain: 1
+          connectionSpeed: 50MB

@@ -1,0 +1,32 @@
+---
+storageBuckets:
+  kohls-bda-finance-biz:
+    acls:
+      groupsByEmail:
+        gcp-bda-gcp-labs-user@kohls.com: READER
+        gcp-bda-gcp-labs-superuser@kohls.com: READER
+        gcp-bda-softwareengineer-l3@kohls.com: READER
+        gcp-bda-devops-admin@kohls.com: OWNER
+        gcp-mkt-gcp-labs-user@kohls.com: READER
+        gcp-mkt-gcp-labs-superuser@kohls.com: READER
+        gcp-mkt-gcp-labs-analytics-user@kohls.com: READER
+        gcp-credit-gcp-labs-user@kohls.com: READER
+        gcp-credit-gcp-labs-superuser@kohls.com: READER
+        gcp-ecom-gcp-labs-user@kohls.com: READER
+        gcp-ecom-gcp-labs-superuser@kohls.com: READER
+        gcp-finance-gcp-labs-user@kohls.com: WRITER
+        gcp-finance-gcp-labs-superuser@kohls.com: WRITER
+        gcp-hr-gcp-labs-user@kohls.com: READER
+        gcp-hr-gcp-labs-superuser@kohls.com: READER
+        gcp-lp-gcp-labs-user@kohls.com: READER
+        gcp-lp-gcp-labs-superuser@kohls.com: READER
+        gcp-log-gcp-labs-user@kohls.com: READER
+        gcp-log-gcp-labs-superuser@kohls.com: READER
+        gcp-stores-gcp-labs-user@kohls.com: READER
+        gcp-stores-gcp-labs-superuser@kohls.com: READER
+        gcp-ers-gcp-labs-user@kohls.com: READER
+        gcp-ers-gcp-labs-superuser@kohls.com: READER
+        gcp-pd-gcp-labs-user@kohls.com: READER
+        gcp-pd-gcp-labs-superuser@kohls.com: READER
+        gcp-merch-gcp-labs-user@kohls.com: READER
+        gcp-merch-gcp-labs-superuser@kohls.com: READER

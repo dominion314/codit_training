@@ -1,0 +1,24 @@
+{%- if projectSharing is defined %}
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeSharedVPCHostProject
+metadata:
+  name: {{ project.name }}
+  namespace: gcp-{{ project.name }}
+---
+{%-   for remote_project in projectSharing %}
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeSharedVPCServiceProject
+metadata:
+  name: {{ project.name }}-to-{{ remote_project }}
+  namespace: gcp-{{ project.name }}
+{%- if project.deletionProtect | default(true, true) %}
+  annotations:
+    cnrm.cloud.google.com/deletion-policy: abandon
+{%- endif %}
+spec:
+  projectRef:
+    name: {{ remote_project }}
+    namespace: gcp-{{ remote_project }}
+---
+{%-   endfor %}
+{%- endif %}

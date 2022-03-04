@@ -1,0 +1,130 @@
+---
+iamPolicyMembers:
+  groupsByEmail:
+    gcp-cx-fulfillmentandpickup@kohls.com:
+      roles:
+      - cloudsql.viewer
+      - redis.viewer
+    gcp-et-devops-admin@kohls.com:
+      roles:
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.storageAdmin
+      - iam.serviceAccountKeyAdmin
+      - iam.serviceAccountUser
+      - logging.admin
+      - monitoring.editor
+      - storage.admin
+    gcp-et-devops-l3@kohls.com:
+      roles:
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - logging.admin
+      - monitoring.editor
+      - storage.admin
+    gcp-infra-dataservices-systemsengineer-l3@kohls.com:
+      roles:
+      - bigquery.admin
+      - cloudfunctions.admin
+      - cloudsql.admin
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.storageAdmin
+      - datamigration.admin
+      - iam.serviceAccountUser
+      - logging.admin
+      - monitoring.editor
+      - pubsub.editor
+      - redis.admin
+      - storage.admin
+    gcp-infra-dataservices-systemsengineer-l2@kohls.com:
+      roles:
+      - cloudsql.admin
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.storageAdmin
+      - datamigration.admin
+      - iam.serviceAccountUser
+      - logging.admin
+      - monitoring.editor
+      - redis.admin
+      - storage.admin
+    gcp-infra-dataservices-qualityengineer-l3@kohls.com:
+      roles:
+      - bigquery.admin
+      - cloudfunctions.admin
+      - cloudsql.admin
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.storageAdmin
+      - datamigration.admin
+      - iam.serviceAccountUser
+      - logging.admin
+      - monitoring.editor
+      - pubsub.editor
+      - redis.admin
+      - storage.admin
+    gcp-infra-dataservices-systemsengineer-admin@kohls.com:
+      roles:
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.storageAdmin
+      - iam.serviceAccountKeyAdmin
+      - iam.serviceAccountUser
+      - storage.admin
+    gcp-kt-engineering@kohls.com:
+      roles:
+      - cloudsql.viewer
+      - redis.viewer
+  serviceAccountsByEmail:
+    pmm-dba@kohls-cce-dbaas-lle.iam.gserviceaccount.com:
+      roles:
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - storage.hmacKeyAdmin
+      - storage.objectAdmin
+    mysql-dba@kohls-cce-dbaas-lle.iam.gserviceaccount.com:
+      roles:
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - storage.objectAdmin
+    mongo-dba@kohls-cce-dbaas-lle.iam.gserviceaccount.com:
+      roles:
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - storage.objectAdmin
+    paas-consul@kohls-cce-dbaas-lle.iam.gserviceaccount.com:
+      roles:
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - storage.objectAdmin
+    platform-devops@kohls-cce-dbaas-lle.iam.gserviceaccount.com:
+      roles:
+      - bigquery.admin
+      - cloudsql.admin
+      - compute.instanceAdmin.v1
+      - compute.loadBalancerAdmin
+      - compute.networkUser
+      - compute.storageAdmin
+      - datamigration.admin
+      - dataproc.editor
+      - dataproc.worker
+      - iam.serviceAccountUser
+      - logging.admin
+      - monitoring.editor
+      - pubsub.editor
+      - redis.admin
+      - storage.admin
+    cloudsql-client@kohls-cce-dbaas-lle.iam.gserviceaccount.com:
+      roles:
+      - cloudsql.client

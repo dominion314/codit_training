@@ -1,0 +1,26 @@
+---
+vpcs:
+  rapidpaas-nx-sbx:
+    subnets:
+      rapidpaas-nx-sbx-openshift-c1-prv01:
+        advertiseRoutes: false
+        natRouter: rapidpaas-nx-sbx-c1-gcp-rtr01
+        region: us-central1
+        network:
+          ip: 192.168.1.0/24
+
+      rapidpaas-nx-sbx-rapidpaas-c1-gke01:
+        advertiseRoutes: false
+        natRouter: rapidpaas-nx-sbx-c1-gcp-rtr01
+        region: us-central1
+        network:
+          ip: 192.168.2.0/25
+        secondary:
+          gke-sbx-pods-ba411750:
+            ip: 10.120.0.0/14
+          gke-sbx-services-ba411750:
+            ip: 10.124.0.0/20
+          rapidpaas-nx-sbx-rapidpaas-c1-pod01:
+            ip: 192.168.4.0/23
+          rapidpaas-nx-sbx-rapidpaas-c1-svc01:
+            ip: 192.168.6.0/27

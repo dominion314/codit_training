@@ -1,0 +1,15 @@
+---
+storageBuckets:
+  kohls-bda-prd-prod-dp-qlik:
+    acls:
+      serviceAccountsByEmail:
+        dp-qlik@kohls-bda-prd.iam.gserviceaccount.com: WRITER
+  kohls-bda-prd-prod-dp-marketing:
+    acls:
+      serviceAccountsByEmail:
+        kdx-svc@kohls-kdx-prd.iam.gserviceaccount.com: WRITER
+  kohls-bda-prd-prod-ext-movableink:
+    acls:
+      serviceAccountsByEmail:
+        dp-marketing@kohls-bda-prd.iam.gserviceaccount.com: WRITER
+        dp-movableink@kohls-bda-prd.iam.gserviceaccount.com: WRITER

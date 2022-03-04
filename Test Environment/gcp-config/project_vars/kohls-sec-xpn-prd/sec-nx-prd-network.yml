@@ -1,0 +1,6 @@
+---
+vpcs:
+  sec-nx-prd:
+
+    routingMode: GLOBAL
+    autoCreateSubnets: false

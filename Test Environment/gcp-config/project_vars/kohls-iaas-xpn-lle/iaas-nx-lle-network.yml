@@ -1,0 +1,5 @@
+---
+vpcs:
+  iaas-nx-lle:
+    routingMode: GLOBAL
+    autoCreateSubnets: false

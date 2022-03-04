@@ -1,0 +1,69 @@
+---
+iamPolicyMembers:
+  groupsByEmail:
+    gcp-securitytech-devops-admin@kohls.com:
+      roles:
+      - compute.loadBalancerAdmin
+      - cloudkms.admin
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.networkViewer
+      - iam.securityReviewer
+      - iam.serviceAccountKeyAdmin
+      - logging.configWriter
+      - logging.logWriter
+      - monitoring.admin
+      - storage.admin
+      - viewer
+    gcp-securitypam-sd-l3@kohls.com:
+      roles:
+      - compute.loadBalancerAdmin
+      - cloudkms.admin
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.networkViewer
+      - iam.securityReviewer
+      - iam.serviceAccountKeyAdmin
+      - logging.configWriter
+      - logging.logWriter
+      - monitoring.admin
+      - privateca.admin
+      - storage.admin
+      - viewer
+  serviceAccountsByEmail:
+    consul-sec@kohls-sec-vault-prd.iam.gserviceaccount.com:
+      roles:
+      - compute.networkUser
+      - compute.viewer
+      - iam.serviceAccountUser
+    jenkins-patching-sec@kohls-sec-vault-prd.iam.gserviceaccount.com:
+      roles:
+      - compute.networkViewer
+      - iam.serviceAccountUser
+    terraform-vault-prd-sec@kohls-sec-vault-prd.iam.gserviceaccount.com:
+      roles:
+      - cloudkms.admin
+      - compute.loadBalancerAdmin
+      - compute.imageUser
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.storageAdmin
+      - iam.serviceAccountTokenCreator
+      - iam.serviceAccountUser
+      - logging.configWriter
+      - logging.logWriter
+      - storage.admin
+    vault-sec@kohls-sec-vault-prd.iam.gserviceaccount.com:
+      roles:
+      - cloudkms.admin
+      - cloudkms.cryptoKeyEncrypterDecrypter
+      - compute.networkUser
+      - compute.viewer
+      - iam.serviceAccountKeyAdmin
+      - iam.serviceAccountUser
+    vaultutility-sec@kohls-sec-vault-prd.iam.gserviceaccount.com:
+      roles:
+      - compute.viewer
+    terraform-sec@kohls-sec-engineering-prd.iam.gserviceaccount.com:
+      roles:
+      - compute.instanceAdmin.v1

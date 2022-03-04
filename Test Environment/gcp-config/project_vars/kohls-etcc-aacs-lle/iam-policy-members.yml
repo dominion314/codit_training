@@ -1,0 +1,17 @@
+---
+iamPolicyMembers:
+  groupsByEmail:
+    gcp-ccom-aacs-productionengineer-admin@kohls.com:
+      roles:
+      - compute.instanceAdmin.v1
+      - compute.loadBalancerAdmin
+      - iam.serviceAccountUser
+      - bigquery.admin
+      - logging.admin
+      - monitoring.admin
+      - storage.admin
+      - iam.serviceAccountKeyAdmin
+  serviceAccountsByEmail:
+    carrier-aacs@kohls-etcc-aacs-lle.iam.gserviceaccount.com:
+      roles:
+      - bigquery.jobUser

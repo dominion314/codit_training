@@ -1,0 +1,158 @@
+---
+vpcs:
+  cpesample-nx-lle: # vpc name
+    electiveRules:
+    - akamaiRules
+    - MySQLRules
+    firewallRules: # dictionary of firewall rules belonging to this VPC
+      # list of firewall rule names and their underlying properties
+      openshift-onprem-to-mongodb-aiops-prd:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0597921, SCTASK0712685, SCTASK0712685
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - iaas-mongo
+          - paas-consul
+          - aiops-ssh
+          - aiops-mongo
+          sourceRanges:
+          - 10.184.0.0/23
+          - 10.188.0.0/23
+          - 10.57.0.0/17
+          - 172.26.0.0/15
+          - 10.101.0.0/16
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: tcp
+            ports:
+            - "27020"
+
+      onprem-to-aiops-prd-tcp-01:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0689764
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - aiops-splunk-base
+          - aiops-splunk-ssh
+          - aiops-splunk-syslog
+          sourceRanges:
+          - 10.0.0.0/8
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: tcp
+            ports:
+            - "8000"
+            - "8088-8089"
+            - "9997-9998"
+          - protocol: udp
+            ports:
+            - "4514"
+
+      onprem-to-aiops-prd-rundeck:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0645134,SCTASK0689792
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - aiops-rundeck
+          sourceRanges:
+          - 10.0.0.0/8
+          - 172.26.0.0/15
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: tcp
+            ports:
+            - "443"
+            - "4443"
+
+      onprem-jarvis-aiops-prd:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0591635
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - aiops-ssh
+          - aiops-mysql
+          sourceRanges:
+          - 10.0.0.0/8
+          - 172.26.0.0/15
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: tcp
+            ports:
+            - "22"
+            - "3306"
+
+      aws-workspace-corpsubnets-mongo-to-aiops-prd:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK1038187
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - iaas-mongo
+          - ads-mongodb-mgmt
+          - paas-consul
+          - aiops-ssh
+          - aiops-mongo
+          sourceRanges:
+          - 10.195.128.0/18
+          - 10.195.64.0/24
+          - 10.195.192.0/24
+          - 10.195.0.0/18
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: tcp
+            ports:
+            - "27020"
+          - protocol: udp
+            ports:
+            - "27020"
+      platform-pmm-prd:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16055
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - global-pmm-client-prd
+          sourceRanges:
+          - 10.185.0.192/27
+          - 10.189.0.128/27
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: tcp
+            ports:
+            - "7777"
+            - "5666"
+            - "42000-51999"

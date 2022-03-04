@@ -1,0 +1,38 @@
+---
+iam:
+  required: true
+  type: dict
+  schema:
+    allowedRolesPerProject:
+      type: dict
+      keysrules:
+        type: string
+        required: false
+        # first lower alpha, after that alphanums plus hyphens, 6 to 30 total lengh
+        regex: '^[a-z][a-zA-Z0-9-]{5,29}$'
+      valuesrules:
+        required: true
+        type: dict
+        keysrules:
+          allowed:
+          - roles
+          type: string
+        valuesrules:
+          type: list
+          required: true
+          schema:
+            keysrules:
+              type: string
+            required: true
+            type: dict
+            valuesrules:
+              required: true
+              type: dict
+              keysrules:
+                allowed:
+                - allowedForGroups
+                - allowedForServiceAccounts
+                - allowedForUsers
+                type: string
+              valuesrules:
+                type: boolean

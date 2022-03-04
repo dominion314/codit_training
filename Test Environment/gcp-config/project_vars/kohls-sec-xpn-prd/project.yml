@@ -1,0 +1,36 @@
+---
+billingDeptId: "90513"
+project:
+  name: kohls-sec-xpn-prd
+  deletionProtect: true
+  managed: true
+  folderId: "970875009337"
+  billingAccount: "00C36A-CD0BDB-E543D0"
+  # Only hyphens (-), underscores (_), lowercase characters,
+  # and numbers are allowed as characters in labels
+  labels:
+    billing-dept-id: "90513"
+    project-manager: kelly-neumann
+    devops-lead: richard-holcombe
+    environment-type: prd
+    line-of-business: cpe
+    project-requestor: thomas-wesolowski
+serviceAPIs:
+  compute.googleapis.com:
+  cloudasset.googleapis.com:
+  container.googleapis.com:
+  cloudresourcemanager.googleapis.com:
+  logging.googleapis.com:
+  monitoring.googleapis.com:
+  networkmanagement.googleapis.com:
+  oslogin.googleapis.com:
+  storage-component.googleapis.com:
+  storage-api.googleapis.com:
+  stackdriver.googleapis.com:
+  networktopology.googleapis.com:
+
+projectSharing:
+- kohls-sec-engineering-prd
+#- kohls-sec-bastion-prd
+- kohls-sec-vault-prd
+- kohls-sec-okta-prd

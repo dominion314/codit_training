@@ -1,0 +1,23 @@
+pubSubSubscriptions:
+  ocf.sku.sync.subscription:
+    labels:
+      app-name: "ocf-sku-sync"
+    topicName: ocf.sku.sync.topic
+    ackDeadlineSeconds: 15
+  asn.integration.testing.subscription:
+    labels:
+      app-name: "asn-integration-testing"
+    topicName: asn.integration.testing.topic
+    ackDeadlineSeconds: 15
+
+  forced-replen-automator-review-sub:
+    labels:
+      app-name: "forced-replen-automator"
+    topicName: forced-replen-automator-review
+    ackDeadlineSeconds: 15
+
+  forced-replen-automator-staging-sub:
+    labels:
+      app-name: "forced-replen-automator"
+    topicName: forced-replen-automator-staging
+    ackDeadlineSeconds: 15

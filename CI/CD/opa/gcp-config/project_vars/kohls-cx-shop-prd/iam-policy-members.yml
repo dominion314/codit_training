@@ -1,0 +1,644 @@
+iamPolicyMembersV2:
+  groupsByEmail:
+    GCP-DevOps-ECom-Admin@kohls.com:
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.loadBalancerAdmin
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.storageAdmin
+    - role: compute.viewer
+    - role: logging.configWriter
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: monitoring.admin
+    - role: pubsub.admin
+    - role: servicemanagement.quotaAdmin
+    - role: spanner.viewer
+    - role: storage.admin
+    - role: iam.serviceAccountUser
+    - role: iam.serviceAccountKeyAdmin
+    GCP-DevOps-ECom@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomRole0
+    - OrgId: 1035901152068
+      role: lbadmin
+    - role: browser
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: dataproc.editor
+    - role: dataproc.viewer
+    - role: logging.configWriter
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: spanner.databaseReader
+    - role: spanner.viewer
+    - role: storage.admin
+    - role: iam.serviceAccountUser
+    GCP-PerfEng-Ecom@kohls.com:
+    - role: compute.networkViewer
+    - role: logging.viewer
+    - role: storage.objectViewer
+    GCP-Platform-eCom@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: bigquery.dataEditor
+    - role: bigquery.dataViewer
+    - role: bigquery.user
+    - role: compute.networkViewer
+    - role: logging.viewer
+    - role: storage.objectViewer
+    GCP-Prod-Engineering-ECom@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - OrgId: 1035901152068
+      role: lbadmin
+    - role: browser
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: storage.objectViewer
+    GCP-ProductionEngineering-ECom-Admin@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - OrgId: 1035901152068
+      role: lbadmin
+    - role: browser
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: logging.configWriter
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: storage.admin
+    - role: storage.objectAdmin
+    - role: storage.objectCreator
+    - role: storage.objectViewer
+    - role: monitoring.admin
+    GCP-ProductionEngineering-Ecom@kohls.com:
+    - OrgId: 1035901152068
+      role: lbadmin
+    - role: browser
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: storage.objectViewer
+    - role: monitoring.admin
+    GCP-QCOE-eCom@kohls.com:
+    - role: compute.networkViewer
+    - role: logging.viewer
+    - role: storage.objectViewer
+    gcp-bda-devops-admin@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole542
+    - OrgId: 1035901152068
+      role: CustomRole593
+    - OrgId: 1035901152068
+      role: CustomRole664
+    - OrgId: 1035901152068
+      role: CustomRole779
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - OrgId: 1035901152068
+      role: lbadmin
+    - role: bigquery.admin
+    - role: bigtable.admin
+    - role: cloudfunctions.admin
+    - role: cloudtrace.admin
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.loadBalancerAdmin
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.storageAdmin
+    - role: dataflow.admin
+    - role: dataproc.editor
+    - role: datastore.importExportAdmin
+    - role: datastore.owner
+    - role: iam.serviceAccountKeyAdmin
+    - role: iam.serviceAccountTokenCreator
+    - role: iam.serviceAccountUser
+    - role: logging.admin
+    - role: logging.configWriter
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: monitoring.admin
+    - role: storage.admin
+    gcp-ecom-tvs-devops-admin@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - OrgId: 1035901152068
+      role: lbadmin
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.storageAdmin
+    - role: iam.serviceAccountKeyAdmin
+    - role: iam.serviceAccountTokenCreator
+    - role: iam.serviceAccountUser
+    - role: logging.admin
+    - role: logging.configWriter
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: monitoring.admin
+    - role: storage.admin
+    gcp-ecom-tvs-devops-l3@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - OrgId: 1035901152068
+      role: lbadmin
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.storageAdmin
+    - role: iam.serviceAccountTokenCreator
+    - role: iam.serviceAccountUser
+    - role: logging.admin
+    - role: logging.configWriter
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: monitoring.admin
+    - role: storage.admin
+    gcp-ecom-tvs-softwareengineer-admin@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: storage.objectViewer
+    gcp-ecom-tvs-softwareengineer-l3@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: storage.objectViewer
+    gcp-kos-softwareengineer-l2@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: pubsub.editor
+    - role: storage.objectViewer
+    gcp-infra-dataservices-systemsengineer-l3@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: storage.admin
+    gcp-infra-dataservices-systemsengineer-l2@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: storage.admin
+  serviceAccountsByEmail:
+    activity-reporter@kohls-kos-cicd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole593
+    - role: compute.viewer
+    - role: monitoring.metricWriter
+    - role: monitoring.viewer
+    aem-kos@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    infra-qa@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: deploymentmanager.editor
+    - role: logging.logWriter
+    - role: storage.admin
+    - role: storage.objectCreator
+    - role: storage.objectViewer
+    jenkins-ecom-devops@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole542
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: iam.serviceAccountUser
+    - role: logging.viewer
+    - role: storage.admin
+    kem-mosaic@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: logging.viewer
+    - role: storage.objectViewer
+    kohls-cx-shop-prd-mongo@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    kohls-cx-shop-prd-oracle@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    kos-acc-batch@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: storage.objectAdmin
+    - role: storage.objectViewer
+    kos-accsvc@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-accui@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: logging.viewer
+    - role: storage.objectViewer
+    kos-batch@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole542
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: pubsub.viewer
+    - role: storage.objectAdmin
+    - role: storage.objectViewer
+    kos-cnc-batch@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: storage.objectAdmin
+    - role: storage.objectViewer
+    kos-cncsvc@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: spanner.admin
+    - role: storage.objectViewer
+    kos-cncui@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.viewer
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-cscsvc@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-cscui@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-icinga@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - role: compute.viewer
+    - role: logging.logWriter
+    - role: logging.viewer
+    - role: monitoring.metricWriter
+    - role: monitoring.viewer
+    kos-ingress-proxy-api@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: logging.viewer
+    - role: storage.objectViewer
+    kos-ingress-proxy-backend@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: logging.viewer
+    - role: storage.objectViewer
+    kos-ingress-proxy-ui@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: logging.viewer
+    - role: storage.objectViewer
+    kos-kafka@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-kast@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole542
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-kiosk@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-mongodb-dl@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-mongodb@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-mysql-acc@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.viewer
+    - role: iam.serviceAccountUser
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-mysql-all@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.viewer
+    - role: iam.serviceAccountUser
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-mysql-batch@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.viewer
+    - role: iam.serviceAccountUser
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-mysql-cnc@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.viewer
+    - role: iam.serviceAccountUser
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-mysql-kast@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: compute.viewer
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-mysql-sl@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: compute.viewer
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-mysql-tvs@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.viewer
+    - role: iam.serviceAccountUser
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-mysql-audit@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.viewer
+    - role: iam.serviceAccountUser
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kohls-cx-shop-prd-mysql@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.viewer
+    - role: iam.serviceAccountUser
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-redis-acc@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-redis-cnc@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-redis-snb@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-redis-tvs@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-rundeck@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomBigQueryUser
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: compute.viewer
+    - role: dataproc.editor
+    - role: iam.serviceAccountUser
+    - role: logging.logWriter
+    kos-servicereg@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole430
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: compute.networkViewer
+    - role: logging.logWriter
+    - role: storage.objectCreator
+    - role: storage.objectViewer
+    kos-snbsvc@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole542
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-snbui@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: logging.viewer
+    - role: storage.objectViewer
+    kos-softlaunch@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-solr-dataproc-worker@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomDataprocWorker
+    - role: logging.logWriter
+    - role: monitoring.metricWriter
+    - role: monitoring.viewer
+    kos-taxware@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-turbine@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole542
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: compute.networkViewer
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-tvsecom@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: storage.objectAdmin
+    - role: storage.objectViewer
+    kos-webstoreui@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-zkui@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-zookeeper@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    search-solr@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomBigQueryUser
+    - OrgId: 1035901152068
+      role: CustomRole101
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole570
+    - OrgId: 1035901152068
+      role: CustomRole675
+    - OrgId: 1035901152068
+      role: CustomRole723
+    - OrgId: 1035901152068
+      role: CustomRole960
+    - role: bigquery.dataEditor
+    - role: bigquery.user
+    - role: dataproc.editor
+    - role: logging.logWriter
+    - role: storage.objectAdmin
+    - role: storage.objectViewer
+    splunk-monitoring-ecom@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - role: pubsub.subscriber
+    - role: pubsub.viewer
+    terraform-devops-ecom@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - role: bigquery.admin
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.loadBalancerAdmin
+    - role: compute.networkUser
+    - role: compute.storageAdmin
+    - role: dataproc.editor
+    - role: logging.logWriter
+    - role: iam.serviceAccountUser
+    - role: storage.admin
+    - role: storage.objectViewer
+    terraform-iaas-network-creator@kohls-iaas-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: gceSetInstanceMetaData
+    compute-instance-read-only@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: ComputeInstanceReadOnly
+    - role: monitoring.viewer

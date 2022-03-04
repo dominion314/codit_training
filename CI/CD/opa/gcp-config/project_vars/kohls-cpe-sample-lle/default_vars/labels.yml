@@ -1,0 +1,7 @@
+---
+defaultLabels:
+  billing-dept-id: "90546"
+  line-of-business: "cpe"
+  lob: "cpe"
+  environment-name: "nonprod"
+  environment-type: "nonprod"

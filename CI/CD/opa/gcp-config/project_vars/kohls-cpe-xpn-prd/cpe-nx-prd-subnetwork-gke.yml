@@ -1,0 +1,62 @@
+---
+vpcs:
+  cpe-nx-prd:
+    subnets:
+      cpe-nx-prd-gitops-c1-gke01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.185.0.64/26
+          bluecat-id: 1491913
+        gke:
+          - podNetwork:
+              name: cpe-nx-prd-gitops-c1-pod01
+              ip: 10.121.16.0/20
+              bluecat-id: 3341859
+              status: MANUAL
+            serviceNetwork:
+              name: cpe-nx-prd-gitops-c1-svc01
+              ip: 10.121.32.0/21
+              bluecat-id: 3341870
+              status: MANUAL
+            masterNetwork:
+              ip: 10.121.254.48/28
+              bluecat-id: 1492030
+
+      cpe-nx-prd-gitops-e1-gke01:
+        advertiseRoutes: true
+        region: us-east1
+        network:
+          ip: 10.189.0.64/26
+          bluecat-id: 1492042
+        gke:
+          - podNetwork:
+              name: cpe-nx-prd-gitops-e1-pod01
+              ip: 10.122.16.0/22
+              bluecat-id: 1492036
+            serviceNetwork:
+              name: cpe-nx-prd-gitops-e1-svc01
+              ip: 10.122.8.128/27
+              bluecat-id: 1492038
+            masterNetwork:
+              ip: 10.122.254.64/28
+              bluecat-id: 1492040
+
+      cpe-nx-prd-gitops-c1-gke02:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.185.14.192/26
+          bluecat-id: 1605145
+        gke:
+          - podNetwork:
+              name: cpe-nx-prd-gitops-c1-pod02
+              ip: 10.121.12.0/22
+              bluecat-id: 1605150
+            serviceNetwork:
+              name: cpe-nx-prd-gitops-c1-svc02
+              ip: 10.121.4.128/27
+              bluecat-id: 1605157
+            masterNetwork:
+              ip: 10.121.254.112/28
+              bluecat-id: 1605159

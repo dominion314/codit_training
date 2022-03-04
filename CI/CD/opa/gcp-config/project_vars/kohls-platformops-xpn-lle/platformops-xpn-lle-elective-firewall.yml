@@ -1,0 +1,12 @@
+---
+vpcs:
+  platformops-nx-lle:
+    # This section, while small, is for elective firewall rules that will apply
+    # to the project. The idea here is that it is defined under default_vars/
+    # and can be appled to any project in GCP. Examples of this would be
+    # Akamai SiteShield or Splunk firewalls. This is new-ish so it's
+    # implementation may change. But the upside is not having to manage
+    # a hundred plus list of CIDR ranges.
+    electiveFWrules:
+    - akamaiRules
+    - mongoAtlasRules

@@ -1,0 +1,5 @@
+#! /usr/bin/env groovy
+//Jenkinsfile to call Go format tests
+
+//calls groovy script in githook-yaml-lint repo
+goFmt(1.12)

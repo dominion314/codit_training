@@ -1,0 +1,41 @@
+---
+vpcs:
+  xpn-transit:
+
+    routerDef:
+      transit-hub-central1-router:
+        region: us-central1
+        description:
+        routerASN:  # Custom ASN, if blank will pull from GLOBAL-ASN.YML
+        advertiseMode: CUSTOM
+        custom_route_priority:
+        custom_advertised_ip_ranges:
+          includeSubnetDef: false
+          customIPList:
+          - 10.120.0.0/15  # central specific route
+          - 10.184.0.0/14  # central specific route
+          - 10.206.0.0/17  # central specific route
+          - 10.207.0.0/17  # central specific route
+          - 10.208.0.0/17  # central specific route
+          - 10.120.0.0/14  # gcp supernet
+          - 10.184.0.0/13  # gcp supernet
+          - 10.206.0.0/15  # gcp supernet
+          - 10.208.0.0/16  # gcp supernet
+
+      transit-hub-east1-router:
+        region: us-east1
+        description:
+        routerASN:  # Custom ASN, if blank will pull from GLOBAL-ASN.YML
+        advertiseMode: CUSTOM
+        custom_route_priority:
+        custom_advertised_ip_ranges:
+          includeSubnetDef: false
+          customIPList:
+          - 10.122.0.0/15    # east specific route
+          - 10.206.128.0/17  # east specific route
+          - 10.188.0.0/14    # east specific route
+          - 10.208.128.0/17  # east specific route
+          - 10.120.0.0/14    # gcp supernet
+          - 10.184.0.0/13    # gcp supernet
+          - 10.206.0.0/15    # gcp supernet
+          - 10.208.0.0/16    # gcp supernet

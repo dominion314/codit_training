@@ -1,0 +1,12 @@
+---
+cloudDNSPeering:
+  required: false
+  type: 'dict'
+  keysrules:
+    type: 'string'
+  valuesrules:
+    type: 'boolean'
+  schema:
+    enable:
+      required: True
+      type: 'boolean'

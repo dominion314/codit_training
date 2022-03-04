@@ -1,0 +1,31 @@
+---
+billingDeptId: "90514"
+project:
+  name: kohls-merch-item-prd
+  managed: true
+  folderId: "217021366087"
+  billingAccount: "00C36A-CD0BDB-E543D0"
+  # Only hyphens (-), underscores (_), lowercase characters,
+  # and numbers are allowed as characters in labels
+  labels:
+    billing-dept-id: "90514"
+    project-manager: mark-joyce
+    devops-lead: joel-schrock
+    environment-type: prd
+    line-of-business: item
+    project-requestor: joel-schrock
+serviceAPIs:
+  cloudapis.googleapis.com:
+  pubsub.googleapis.com:
+  cloudfunctions.googleapis.com:
+  cloudresourcemanager.googleapis.com:
+  compute.googleapis.com:
+  dns.googleapis.com:
+  iam.googleapis.com:
+  iamcredentials.googleapis.com:
+  networkmanagement.googleapis.com:
+  networktopology.googleapis.com:
+  servicemanagement.googleapis.com:
+  serviceusage.googleapis.com:
+  storage-api.googleapis.com:
+  storage-component.googleapis.com:

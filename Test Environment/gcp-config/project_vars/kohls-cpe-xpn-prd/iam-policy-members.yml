@@ -1,0 +1,10 @@
+---
+iamPolicyMembers:
+  serviceAccountsByEmail:
+    terraform-devops@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com:
+      roles:
+      - compute.networkUser
+  groupsByEmail:
+    gcp-cpe-developerexperience-softwareengineer-admin@kohls.com:
+      roles:
+      - compute.networkViewer

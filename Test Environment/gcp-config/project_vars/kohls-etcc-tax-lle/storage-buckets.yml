@@ -1,0 +1,47 @@
+---
+storageBuckets:
+  kohls-etcc-tax-third-party-bad-debt-report-lle:
+    location: US
+    storageClass: STANDARD
+    versioningEnabled: false
+    deletionProtect: true
+  kohls-etcc-tax-lle-us-central1-primary-consul-backup:
+    location: US-CENTRAL1
+    storageClass: NEARLINE
+    versioningEnabled: false
+    deletionProtect: false
+    lifecycleRule:
+    - action:
+        type: Delete
+      condition:
+        age: 14
+  kohls-etcc-tax-lle-terraform-states:
+    location: US
+    storageClass: MULTI_REGIONAL
+    versioningEnabled: false
+    deletionProtect: true
+  kohls-etcc-tax-lle-config-db-deploy:
+    location: US
+    storageClass: STANDARD
+    versioningEnabled: false
+    deletionProtect: true
+  kohls-etcc-tax-lle-geotax-deploy:
+    location: US
+    storageClass: STANDARD
+    versioningEnabled: false
+    deletionProtect: true
+  kohls-etcc-tax-lle-db-updates:
+    location: US
+    storageClass: STANDARD
+    versioningEnabled: false
+    deletionProtect: true
+  kohls-etcc-tax-lle-geotax-patches:
+    location: US
+    storageClass: STANDARD
+    versioningEnabled: false
+    deletionProtect: true
+  kohls-etcc-tax-lle-haproxy:
+    location: US
+    storageClass: STANDARD
+    versioningEnabled: false
+    deletionProtect: true

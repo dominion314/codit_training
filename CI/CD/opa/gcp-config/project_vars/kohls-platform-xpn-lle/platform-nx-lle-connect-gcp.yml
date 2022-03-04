@@ -1,0 +1,80 @@
+---
+vpcs:
+  platform-nx-lle:
+    routerDef:
+      platform-nx-lle-c1-gcp-rtr01:
+        region: us-central1
+        description:
+        routerASN:  # Custom ASN, if blank will pull from GLOBAL-ASN.YML
+        advertiseMode: CUSTOM
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+          - "10.187.20.0/22"
+          - "10.124.0.0/20"  # platform lle psa supernet
+          - "10.124.0.0/24"  # central mysql psa
+          - "10.124.1.8/29"  # central redis psa
+          - "10.124.3.0/24"  # central postgress psa
+          - "10.187.33.48/29"  # central proxy
+        ha_vpn_gateways_to_transit:
+          platform-nx-lle-c1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.0.64/30
+              bluecat-id: 1587750
+            if1_peer_cidr:
+              cidr: 169.254.0.68/30
+              bluecat-id: 1587752
+          platform-nx-lle-c1-totransit-02:
+            description: second vpn to infra-xpn-transit
+            if0_peer_cidr:
+              cidr: 169.254.2.144/30
+              bluecat-id: 3448064
+            if1_peer_cidr:
+              cidr: 169.254.2.148/30
+              bluecat-id: 3448400
+        outbound_nat_gateway:
+          name: platform-nx-lle-c1-nat-gateway
+          logConfig:
+            enable: true
+            filter: ERRORS_ONLY
+          manualAddresses: 4
+          min_ports_per_vm: 300
+
+      platform-nx-lle-e1-gcp-rtr01:
+        region: us-east1
+        description:
+        routerASN:  # Custom ASN, if blank will pull from GLOBAL-ASN.YML
+        advertiseMode: CUSTOM
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+          - "10.124.0.0/20"  # platform lle psa supernet
+          - "10.124.1.0/29"  # east redis psa
+          - "10.124.2.0/24"  # east mysql psa
+          - "10.124.4.0/24"  # east postgress psa
+          - "10.191.27.32/28"  # east proxy
+        ha_vpn_gateways_to_transit:
+          platform-nx-lle-e1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.0.72/30
+              bluecat-id: 1587754
+            if1_peer_cidr:
+              cidr: 169.254.0.76/30
+              bluecat-id: 1587756
+          platform-nx-lle-e1-totransit-02:
+            description: second vpn to infra-xpn-transit
+            if0_peer_cidr:
+              cidr: 169.254.2.152/30
+              bluecat-id: 3448427
+            if1_peer_cidr:
+              cidr: 169.254.2.156/30
+              bluecat-id: 3448431
+        outbound_nat_gateway:
+          name: platform-nx-lle-e1-nat-gateway
+          logConfig:
+            enable: true
+            filter: ERRORS_ONLY
+          manualAddresses: 4
+          min_ports_per_vm: 300

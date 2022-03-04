@@ -1,0 +1,14 @@
+---
+storageBuckets:
+  kohlsdev-cpa-inspec-test-bucket-01:
+    acls:
+      usersByEmail:
+        pavel.leonovitch@kohls.com: READER
+        hamilton.hoover@kohls.com: WRITER
+      groupsByEmail:
+        kt-cpa@kohls.com: READER
+
+  kohlsdev-cpa-inspec-test-bucket-02:
+    acls:
+      usersByEmail:
+        pavel.leonovitch@kohls.com: WRITER

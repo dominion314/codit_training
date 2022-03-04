@@ -1,0 +1,3 @@
+# Adding missing libraries for Pylinting current repo scripts
+requests
+urllib3

@@ -1,0 +1,18 @@
+---
+iamPolicyMembers:
+  groupsByEmail:
+    bt-callcenterproductivity@kohls.com:
+      roles:
+      - compute.instanceAdmin.v1
+      - compute.loadBalancerAdmin
+      - iam.serviceAccountUser
+      - bigquery.admin
+      - logging.admin
+      - monitoring.admin
+      - storage.admin
+      - iam.serviceAccountKeyAdmin
+  serviceAccountsByEmail:
+    ccproductivity@kohls-etcc-ccproductivity-lle.iam.gserviceaccount.com:
+      roles:
+      - iam.serviceAccountUser
+      - storage.admin

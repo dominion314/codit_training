@@ -1,0 +1,68 @@
+---
+vpcs:
+  demo-vpc:
+
+    routerDef:
+      demo-vpc-c1-gcp-rtr01:
+        region: us-central1
+        description:
+        routerASN:  # Custom ASN, if blank will pull from GLOBAL-ASN.YML
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+
+        ha_vpn_gateways_to_transit:
+          demo-vpc-c1-tohub:
+            description:
+            # j2cli doesn't support ipaddr, so IP calculations not possible
+            if0_peer_cidr:
+              cidr: 169.254.0.0/30
+            if1_peer_cidr:
+              cidr: 169.254.0.4/30
+
+        outbound_nat_gateway:
+          name: demo-vpc-c1-nat-gateway
+          icmp_timeout:        # Blank for default 30s
+          tcp_est_timeout:     # Blank for default 1200s
+          tcp_trans_timeout:   # Blank for default 30s
+          udp_timeout:         # Blank for default 30s
+          min_ports_per_vm:    # Blank for default 64
+          logConfig:
+            enable: false
+            # requred when enable==true Options are ALL,
+            # ERRORS_ONLY, and TRANSLATIONS_ONLY
+            filter:
+
+      demo-vpc-e1-gcp-rtr01:
+        region: us-east1
+        description:
+        # Custom ASN, if blank will pull from GLOBAL-ASN.YML
+        routerASN:
+        advertiseMode: DEFAULT
+        custom_route_priority:
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+        ha_vpn_gateways_to_transit:
+          demo-vpc-e1-tohub:
+            description: oh man rick!
+            # macOS/Linux doesn't support ipaddr
+            # so IP calculations not possible
+            if0_peer_cidr:
+              cidr: 169.254.0.8/30
+            if1_peer_cidr:
+              cidr: 169.254.0.12/30
+
+        outbound_nat_gateway:
+          name: demo-vpc-e1-nat-gateway
+          icmp_timeout:        # Blank for default 30s
+          tcp_est_timeout:     # Blank for default 1200s
+          tcp_trans_timeout:   # Blank for default 30s
+          udp_timeout:         # Blank for default 30s
+          min_ports_per_vm:    # Blank for default 64
+          logConfig:
+            enable: false
+            # requred when enable==true Options are ALL,
+            # ERRORS_ONLY, and TRANSLATIONS_ONLY
+            filter:

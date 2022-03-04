@@ -1,0 +1,5 @@
+#! /usr/bin/env groovy
+//Jenkinsfile to call Declarative Pipeline inter
+
+//calls groovy script in githook-yaml-lint repo
+declarativePipelineLinter()

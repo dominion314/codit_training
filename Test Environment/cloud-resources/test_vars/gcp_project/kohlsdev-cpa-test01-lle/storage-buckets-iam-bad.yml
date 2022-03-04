@@ -1,0 +1,52 @@
+---
+storageBuckets:
+  kohlsdev-cpa-test01-lle-bucket-05:
+    permissions:
+      UsersByEmail:
+        mark.doll:
+          deletionProtect: sure
+          roles:
+          - storage.admin
+        hamilton.hoover@kohls.com:
+          roles:
+          - cool.role
+          - storage.objectViewer
+      GroupsByEmail:
+        gcp-et-gitops-l3:
+          deletionProtect: sure
+          roles:
+          - storage.admin
+      ServiceAccountsByEmail:
+        someServiceAccountName:
+          deletionProtect: sure
+          roles:
+          - storage.admin
+        hamilton.hoover@kohls.com:
+          roles:
+          - cool.role
+          - storage.objectViewer
+  kohlsdev-cpa-test01-lle-bucket-06:
+    permissions:
+      usersByEmail:
+        mark.doll:
+          deletionProtect: sure
+          roles:
+          - storage.admin
+        hamilton.hoover@kohls.com:
+          roles:
+          - cool.role
+          - storage.objectViewer
+      groupsByEmail:
+        gcp-et-gitops-l3:
+          deletionProtect: sure
+          roles:
+          - storage.admin
+      serviceAccountsByEmail:
+        someServiceAccountName:
+          deletionProtect: sure
+          roles:
+          - storage.admin
+        hamilton.hoover@kohls.com:
+          roles:
+          - cool.role
+          - storage.objectViewer

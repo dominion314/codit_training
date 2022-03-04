@@ -1,0 +1,4 @@
+---
+kccTemplates: ['../../../templates/gcp-project/project.yml.j2', ../../../templates/gcp-project/service-usage.yml.j2]
+inspecControls: ['../../../inspec/controls/Project.rb']
+validationDelaySecs: 60

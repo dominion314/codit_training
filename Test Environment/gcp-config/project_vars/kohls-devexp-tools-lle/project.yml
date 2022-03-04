@@ -1,0 +1,23 @@
+---
+project:
+  name: kohls-devexp-tools-lle
+  managed: true
+  folderId: "345254712059"
+  billingAccount: "00C36A-CD0BDB-E543D0"
+  # Only hyphens (-), underscores (_), lowercase characters,
+  # and numbers are allowed as characters in labels
+  labels:
+    billing-dept-id: "90586"
+    project-manager: will_white
+    devops-lead: christian_madrigal
+    environment-type: lle
+    line-of-business: cpe
+    project-requestor: russell_nell
+serviceAPIs:
+  bigquery.googleapis.com:
+  bigqueryconnection.googleapis.com:
+  bigquerydatatransfer.googleapis.com:
+  bigquerystorage.googleapis.com:
+  cloudtasks.googleapis.com:
+  compute.googleapis.com:
+  pubsub.googleapis.com:

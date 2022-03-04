@@ -1,0 +1,44 @@
+{%- if vpcs is defined %}
+{%-   for vpc_name, vpc_def in vpcs.items() %}
+{#- Begin Block for PSA #}
+{%-     if vpc_def.psaNetwork is defined and vpc_def.psaNetwork is not none %}
+{%-       for psa_name, psa_def in vpc_def.psaNetwork.items() %}
+---
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeAddress
+metadata:
+  name: {{ psa_name }}
+  namespace: gcp-{{ project.name }}
+spec:
+  addressType: INTERNAL
+{%- set ipaddress = psa_def.network.split('/')  %}
+  address: {{ ipaddress[0] }}
+  ipVersion: IPV4
+  location: global
+  purpose: VPC_PEERING
+  prefixLength: {{ ipaddress[1] }}
+  networkRef:
+    name: {{ vpc_name }}
+    namespace: gcp-{{ project.name }}
+---
+apiVersion: servicenetworking.cnrm.cloud.google.com/v1beta1
+kind: ServiceNetworkingConnection
+metadata:
+  name: {{ psa_name }}-connection
+  namespace: gcp-{{ project.name }}
+spec:
+  networkRef:
+    name: {{ vpc_name }}
+    namespace: gcp-{{ project.name }}
+  reservedPeeringRanges:
+    - name: {{ psa_name }}
+      namespace: gcp-{{ project.name }}
+  service: "servicenetworking.googleapis.com"
+---
+{%-       endfor %}
+{%-     else %}
+{%-       set psaNetwork = {} %}
+{%-     endif %}
+{%-   endfor %}
+{%- endif %}
+{#- End Block for psa network #}

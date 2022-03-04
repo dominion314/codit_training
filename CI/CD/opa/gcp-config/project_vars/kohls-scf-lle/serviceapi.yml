@@ -1,0 +1,4 @@
+---
+serviceAPIs:
+  bigquery.googleapis.com:
+  dataflow.googleapis.com:

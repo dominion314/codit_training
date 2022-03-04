@@ -1,0 +1,17 @@
+---
+vpcs:
+  mt-nx-lle:
+    subnets:
+      mt-nx-lle-devtesting-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.187.1.16/28
+          bluecat-id: 1523908
+
+      mt-nx-lle-devtesting-e1-prv01:
+        advertiseRoutes: true
+        region: us-east1
+        network:
+          ip: 10.191.0.16/28
+          bluecat-id: 1523910

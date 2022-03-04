@@ -1,0 +1,103 @@
+{%- if vpcs is defined %}
+{%-   for vpc_name, vpc_def in vpcs.items() %}
+{%-     if vpc_def.routerDef is defined %}
+{%-       for router_name, router_def in vpc_def.routerDef.items() %}
+{%-         if router_def.ha_vpn_gateways_to_transit is defined %}
+{%-           for transit_ha_vpn_name, transit_ha_vpn_def in router_def.ha_vpn_gateways_to_transit.items() %}
+{%-             set gw_name_local = [transit_ha_vpn_name, "-gw-a"] | join %}
+{%-             set gw_name_remote = [transit_ha_vpn_name, "-gw-b"] | join %}
+{%-             set tunnel0_name = [transit_ha_vpn_name, "-tu0-b"] | join %}
+{%-             set tunnel1_name = [transit_ha_vpn_name, "-tu1-b"] | join %}
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeVPNGateway
+metadata:
+  name: {{ gw_name_remote }}
+  namespace: {{ transit_hub.namespace }}
+{%- if project.deletionProtect | default(true, true) %}
+{%-   if transit_ha_vpn_def.deletionProtect | default(false, true) %}
+  annotations:
+    cnrm.cloud.google.com/deletion-policy: abandon
+{%-   endif %}
+{%- endif %}
+spec:
+  description: "{{ transit_ha_vpn_def.description | default('',true)}} --- Gateway Resource"
+  region: {{ router_def.region }}
+  networkRef:
+    name: {{ transit_hub.vpc }}
+---
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeVPNTunnel
+metadata:
+  name: {{ tunnel0_name }}
+  namespace: {{ transit_hub.namespace }}
+{%- if project.deletionProtect | default(true, true) %}
+{%-   if transit_ha_vpn_def.deletionProtect | default(false, true) %}
+  annotations:
+    cnrm.cloud.google.com/deletion-policy: abandon
+{%-   endif %}
+{%- endif %}
+spec:
+  description: "{{ transit_ha_vpn_def.description | default('',true)}} --- Tunnel0 Resource"
+  ikeVersion: 2
+{%-             if global_vpn_enc_secret is defined %}
+  sharedSecret: {{ global_vpn_enc_secret }}
+{%-             else %}
+  sharedSecret:
+    valueFrom:
+      secretKeyRef:
+        name: {{ globalVPNSecretRef.secretObjectName }}
+        key: {{ globalVPNSecretRef.secretObjectKey }}
+{%-             endif %}
+  region: {{ router_def.region }}
+  routerRef:
+    name: {{ transit_hub['centralRouterName'] if router_def.region == "us-central1" else transit_hub['eastRouterName']}}
+    namespace: {{ transit_hub.namespace }}
+  vpnGatewayRef:
+    name: {{ gw_name_remote }}
+    namespace: {{ transit_hub.namespace }}
+  vpnGatewayInterface: 0
+  peerGCPGatewayRef:
+    name: {{ gw_name_local }}
+    namespace: gcp-{{ project.name }}
+---
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeVPNTunnel
+metadata:
+  name: {{ tunnel1_name }}
+  namespace: {{ transit_hub.namespace }}
+{%- if project.deletionProtect | default(true, true) %}
+{%-   if transit_ha_vpn_def.deletionProtect | default(false, true) %}
+  annotations:
+    cnrm.cloud.google.com/deletion-policy: abandon
+{%-   endif %}
+{%- endif %}
+spec:
+  description: "{{ transit_ha_vpn_def.description | default('',true)}} --- Tunnel1 Resource"
+  ikeVersion: 2
+{%-             if global_vpn_enc_secret is defined %}
+  sharedSecret: {{ global_vpn_enc_secret }}
+{%-             else %}
+  sharedSecret:
+    valueFrom:
+      secretKeyRef:
+        name: {{ globalVPNSecretRef.secretObjectName }}
+        key: {{ globalVPNSecretRef.secretObjectKey }}
+{%-             endif %}
+  region: {{ router_def.region }}
+  routerRef:
+    name: {{ transit_hub['centralRouterName'] if router_def.region == "us-central1" else transit_hub['eastRouterName']}}
+    namespace: {{ transit_hub.namespace }}
+  vpnGatewayRef:
+    name: {{ gw_name_remote }}
+    namespace: {{ transit_hub.namespace }}
+  vpnGatewayInterface: 1
+  peerGCPGatewayRef:
+    name: {{ gw_name_local }}
+    namespace: gcp-{{ project.name }}
+---
+{%-           endfor %}
+{%-         endif %}
+{%-       endfor %}
+{%-     endif %}
+{%-   endfor %}
+{%- endif %}

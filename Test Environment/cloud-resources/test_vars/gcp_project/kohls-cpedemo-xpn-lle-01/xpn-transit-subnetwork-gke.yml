@@ -1,0 +1,23 @@
+---
+vpcs:
+  xpn-transit:
+    subnets:
+
+      xpn-transit-sample-subnet-east1-gke01:
+        advertiseRoutes: true
+        region: us-east1
+        network:
+          ip: 1.1.1.1/32
+          bluecat-id: 123456
+        gke:
+        - podNetwork:
+            name: xpn-transit-sample-subnet-east1-gke01-pod01
+            ip: 1.1.1.126/25
+            bluecat-id: 1123445
+          serviceNetwork:
+            name: xpn-transit-sample-subnet-east1-gke01-svc01
+            ip: 1.1.2.0/25
+            bluecat-id: 3423412
+          masterNetwork:
+            ip: 5.5.5.5/28
+            bluecat-id: 2323232

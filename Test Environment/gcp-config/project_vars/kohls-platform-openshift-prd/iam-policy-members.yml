@@ -1,0 +1,65 @@
+---
+iamPolicyMembers:
+  serviceAccountsByEmail:
+    ocp-app-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com:
+      roles:
+      - compute.viewer
+      - storage.admin
+    ocp-infra-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com:
+      roles:
+      - compute.viewer
+      - storage.admin
+    ocp-kcc-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com:
+      roles:
+      - compute.viewer
+      - storage.admin
+    ocp-installer-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com:
+      # TODO: Determine if we want to use "Service Account Key Admin" role to allow operators to use short term credentials
+      # Ref: https://github.com/openshift/installer/blob/master/docs/user/gcp/iam.md#step-2-assign-project-roles-to-your-service-account
+      # TODO: Update permissions based on recommendations from Google role recommender
+      # Ref: https://docs.openshift.com/container-platform/4.4/installing/installing_gcp/installing-gcp-account.html#installation-gcp-permissions_installing-gcp-account
+      roles:
+      - compute.admin
+      - compute.networkUser
+      - dns.admin
+      - iam.securityAdmin
+      - iam.serviceAccountAdmin
+      - iam.serviceAccountUser
+      - storage.admin
+    ocp-master-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com:
+      roles:
+      - compute.instanceAdmin.v1
+      - compute.networkAdmin
+      - compute.securityAdmin
+      - iam.serviceAccountUser
+      - storage.admin
+    ocp-pci-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com:
+      roles:
+      - compute.viewer
+      - storage.admin
+    ocp-pii-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com:
+      roles:
+      - compute.viewer
+      - storage.admin
+    ocp-router-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com:
+      roles:
+      - compute.viewer
+      - storage.admin
+    ocp-router-kcc-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com:
+      roles:
+      - compute.viewer
+      - storage.admin
+    ocp-router-pci-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com:
+      roles:
+      - compute.viewer
+      - storage.admin
+    ocp-router-pii-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com:
+      roles:
+      - compute.viewer
+      - storage.admin
+    stackdriver-exporter@kohls-platform-openshift-prd.iam.gserviceaccount.com:
+      roles:
+      - monitoring.viewer
+    thanos-store@kohls-platform-openshift-prd.iam.gserviceaccount.com:
+      roles:
+      - storage.admin

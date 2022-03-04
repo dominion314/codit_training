@@ -1,0 +1,90 @@
+---
+iamPolicyMembersV2:
+  serviceAccountsByEmail:
+    cce-dse-rec@kohls-bda-dse-lle.iam.gserviceaccount.com:
+    - role: CustomBigQueryUser
+      OrgId: 1035901152068
+    - role: CustomBucketViewer
+      OrgId: 1035901152068
+    - role: CustomRole774
+      OrgId: 1035901152068
+    - role: CustomDataprocWorker
+      OrgId: 1035901152068
+    cce-dse-lot@kohls-bda-dse-lle.iam.gserviceaccount.com:
+    - role: CustomBigQueryUser
+      OrgId: 1035901152068
+    - role: CustomRole774
+      OrgId: 1035901152068
+    - role: CustomDataprocWorker
+      OrgId: 1035901152068
+    cce-dse-src@kohls-bda-dse-lle.iam.gserviceaccount.com:
+    - role: CustomBigQueryUser
+      OrgId: 1035901152068
+    - role: CustomRole774
+      OrgId: 1035901152068
+    - role: CustomDataprocWorker
+      OrgId: 1035901152068
+    cce-dse-cmn@kohls-bda-dse-lle.iam.gserviceaccount.com:
+    - role: CustomBigQueryUser
+      OrgId: 1035901152068
+    - role: CustomRole774
+      OrgId: 1035901152068
+    - role: CustomDataprocWorker
+      OrgId: 1035901152068
+    cce-dse-mkt@kohls-bda-dse-lle.iam.gserviceaccount.com:
+    - role: CustomBigQueryUser
+      OrgId: 1035901152068
+    - role: CustomRole774
+      OrgId: 1035901152068
+    - role: CustomDataprocWorker
+      OrgId: 1035901152068
+    cce-dse-ifo@kohls-bda-dse-lle.iam.gserviceaccount.com:
+    - role: CustomBigQueryUser
+      OrgId: 1035901152068
+    - role: CustomRole774
+      OrgId: 1035901152068
+    - role: CustomDataprocWorker
+      OrgId: 1035901152068
+    bda-azkaban@kohls-bda-dse-lle.iam.gserviceaccount.com:
+    - role: CustomBigQueryUser
+      OrgId: 1035901152068
+    - role: CustomRole774
+      OrgId: 1035901152068
+    - role: CustomDataprocWorker
+      OrgId: 1035901152068
+    bda-airflow@kohls-bda-dse-lle.iam.gserviceaccount.com:
+    - role: CustomBigQueryUser
+      OrgId: 1035901152068
+    - role: CustomRole774
+      OrgId: 1035901152068
+    - role: CustomDataprocWorker
+      OrgId: 1035901152068
+    bda-dataproc@kohls-bda-dse-lle.iam.gserviceaccount.com:
+    - role: CustomBigQueryUser
+      OrgId: 1035901152068
+    - role: CustomRole774
+      OrgId: 1035901152068
+    - role: CustomDataprocWorker
+      OrgId: 1035901152068
+    - role: CustomRole351
+      OrgId: 1035901152068
+    bda-redis@kohls-bda-dse-lle.iam.gserviceaccount.com:
+    - role: CustomBigQueryUser
+      OrgId: 1035901152068
+    - role: CustomRole774
+      OrgId: 1035901152068
+    - role: CustomDataprocWorker
+      OrgId: 1035901152068
+    - role: CustomRole351
+      OrgId: 1035901152068
+    bda-servicereg@kohls-bda-dse-lle.iam.gserviceaccount.com:
+    - role: CustomBigQueryUser
+      OrgId: 1035901152068
+    - role: CustomRole774
+      OrgId: 1035901152068
+    - role: CustomDataprocWorker
+      OrgId: 1035901152068
+    - role: CustomRole351
+      OrgId: 1035901152068
+    - role: CustomRole430
+      OrgId: 1035901152068

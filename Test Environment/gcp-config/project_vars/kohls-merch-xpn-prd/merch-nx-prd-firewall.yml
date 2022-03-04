@@ -1,0 +1,71 @@
+---
+vpcs:
+  merch-nx-prd:
+    firewallRules:
+      openshift-prd-merch-ps-gcp-ingress-ssh:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16668
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ssh
+          - fw-ssh
+          sourceRanges:
+          - "10.184.0.0/23"
+          - "10.188.0.0/23"
+          - "10.126.0.0/17"
+          - "10.127.0.0/17"
+          - "10.185.47.0/24"
+          - "10.189.36.0/24"
+          - "172.26.0.0/15"
+          - "10.186.0.0/23"
+          - "10.190.0.0/23"
+          - "10.126.128.0/17"
+          - "10.127.128.0/17"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      managed-svcs-to-ingress-merch-prd-ansible-ssh:
+        direction: INGRESS
+        description: SNOW-16668
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - ports:
+                - "22"
+              protocol: "tcp"
+          sourceRanges:
+            - "10.206.0.0/23"
+      openshift-prd-ingress-merch-nx-ps-apps:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16668
+        disabled: false
+        logging: false
+        rule:
+          sourceRanges:
+          - "10.185.47.0/24"
+          - "10.189.36.0/24"
+          - "10.184.0.0/23"
+          - "10.188.0.0/23"
+          - "10.126.0.0/17"
+          - "10.127.0.0/17"
+          - "172.26.0.0/15"
+          targetTags:
+          - "merch-ps-mig"
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "27017"
+            - "80"
+            - "5000"
+            - "8080"

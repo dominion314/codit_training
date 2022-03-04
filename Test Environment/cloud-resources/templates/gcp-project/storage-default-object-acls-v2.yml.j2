@@ -1,0 +1,65 @@
+{%- if storageBuckets is defined %}
+{%-   for bucket_name, bucket_def in storageBuckets.items() %}
+{%-     if bucket_def.defaultObjectACLs is defined %}
+{%-       for entity_type, entity_def in bucket_def.defaultObjectACLs.items() %}
+{%-         if entity_type == 'primitiveRoles' %}
+{%-           for projectNumber, primitive_def in entity_def.items() %}
+{%-             for primitive_name, primitive_role in primitive_def.items() %}
+{%-               for attr in primitive_role.roles %}
+apiVersion: storage.cnrm.cloud.google.com/v1beta1
+kind: StorageDefaultObjectAccessControl
+metadata:
+  name: {{ bucket_name | lower }}-{{ primitive_name | replace("@", ".") | lower }}-{{ attr | lower }}
+  namespace: gcp-{{ project.name }}
+  labels:
+    managed-by-cnrm: "true"
+{%-               if defaultLabels is defined %}
+{%-                 for key, value in defaultLabels.items() %}
+    {{ key }}: "{{ value }}"
+{%-                 endfor %}
+{%-               endif %}
+spec:
+  bucketRef:
+    name: {{ bucket_name }}
+  entity: "project-{{ primitive_name }}-{{ projectNumber }}"
+  role: {{ attr }}
+---
+{%-               endfor %}
+{%-             endfor %}
+{%-           endfor %}
+{%-         else %}
+{%-           for member_name, member_role in entity_def.items() %}
+{%-             for attr in member_role.roles %}
+apiVersion: storage.cnrm.cloud.google.com/v1beta1
+kind: StorageDefaultObjectAccessControl
+metadata:
+  name: {{ bucket_name | lower }}-{{ member_name | replace("@", ".") | lower }}-{{ attr | lower }}
+  namespace: gcp-{{ project.name }}
+  labels:
+    managed-by-cnrm: "true"
+{%-             if defaultLabels is defined %}
+{%-               for key, value in defaultLabels.items() %}
+    {{ key }}: "{{ value }}"
+{%-               endfor %}
+{%-             endif %}
+spec:
+  bucketRef:
+    name: {{ bucket_name }}
+{%-             if entity_type == 'builtinGroups' %}
+  entity: {{ member_name }}
+{%-             elif entity_type == 'usersByEmail' %} 
+  entity: user-{{ member_name }}
+{%-             elif entity_type == 'groupsByEmail' %}
+  entity: group-{{ member_name }}
+{%-             elif entity_type == 'serviceAccountsByEmail' %}
+  entity: user-{{ member_name }}
+{%-             endif %}  
+  role: {{ attr }}
+---
+{%-             endfor %}
+{%-           endfor %}
+{%-         endif %}
+{%-       endfor %}
+{%-     endif %}
+{%-   endfor %}
+{%- endif %}

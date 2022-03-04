@@ -1,0 +1,6 @@
+---
+enabled: true
+projectVarFolder: project_vars
+validateAllProjects: false #if set to to true, validateProjects is ignored and all projects are validated
+validateProjects:
+- kohls-cpe-xpn-lle

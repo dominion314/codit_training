@@ -1,0 +1,143 @@
+---
+vpcs:
+  cpe-nx-prd:
+    subnets:
+
+      cpe-nx-prd-generic-subnet-c1-prv01:
+        advertiseRoutes: false
+        natRouter: cpe-nx-prd-c1-gcp-rtr01
+        region: us-central1
+        network:
+          ip: 10.185.0.0/28
+          bluecat-id: 1491147
+
+      cpe-nx-prd-generic-subnet-e1-prv01:
+        advertiseRoutes: false
+        natRouter: cpe-nx-prd-e1-gcp-rtr01
+        region: us-east1
+        network:
+          ip: 10.189.0.0/28
+          bluecat-id: 1491156
+
+      cpe-nx-prd-cie-image-mgmt-subnet-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.185.3.128/25
+          bluecat-id: 1591543
+          status: PROVISIONED
+        permissions:
+          groupsByEmail:
+          - gcp-iaas-softwareengineer-l3@kohls.com
+          serviceAccountsByEmail:
+          - image-build@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com
+          - terraform-devops@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com
+          - yum-repo@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com
+
+      cpe-nx-prd-cie-image-mgmt-subnet-e1-prv01:
+        advertiseRoutes: true
+        natRouter: cpe-nx-prd-e1-gcp-rtr01
+        region: us-east1
+        network:
+          ip: 10.189.0.224/27
+          bluecat-id: 1591545
+          status: PROVISIONED
+        permissions:
+          groupsByEmail:
+          - gcp-iaas-softwareengineer-l3@kohls.com
+          serviceAccountsByEmail:
+          - image-build@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com
+          - terraform-devops@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com
+          - yum-repo@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com
+
+      cpe-nx-prd-devexp-tools-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.185.13.0/24
+          bluecat-id: 1595974
+          status: PROVISIONED
+        permissions:
+          groupsByEmail:
+          - gcp-cpe-developerexperience-softwareengineer-admin@kohls.com
+          serviceAccountsByEmail:
+          - devexp-automation@kohls-devexp-tools-prd.iam.gserviceaccount.com
+          - gitlab-runner@kohls-devexp-tools-prd.iam.gserviceaccount.com
+          - 391966622341@cloudservices.gserviceaccount.com
+
+      cpe-nx-prd-devexp-tools-e1-prv01:
+        advertiseRoutes: true
+        region: us-east1
+        network:
+          ip: 10.189.8.0/24
+          bluecat-id: 1595976
+          status: PROVISIONED
+        permissions:
+          groupsByEmail:
+          - gcp-cpe-developerexperience-softwareengineer-admin@kohls.com
+          serviceAccountsByEmail:
+          - devexp-automation@kohls-devexp-tools-prd.iam.gserviceaccount.com
+          - gitlab-runner@kohls-devexp-tools-prd.iam.gserviceaccount.com
+          - 391966622341@cloudservices.gserviceaccount.com
+
+      cpe-nx-prd-devexp-tools-c1-sec01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.185.46.128/26
+          bluecat-id: 2887635
+          status: PROVISIONED
+        permissions:
+          groupsByEmail:
+          - gcp-cpe-developerexperience-softwareengineer-admin@kohls.com
+          serviceAccountsByEmail:
+          - devexp-automation@kohls-devexp-tools-prd.iam.gserviceaccount.com
+          - gitlab-runner@kohls-devexp-tools-prd.iam.gserviceaccount.com
+          - 391966622341@cloudservices.gserviceaccount.com
+
+      cpe-nx-prd-devexp-tools-e1-sec01:
+        advertiseRoutes: true
+        region: us-east1
+        network:
+          ip: 10.189.35.128/26
+          bluecat-id: 2887638
+          status: PROVISIONED
+        permissions:
+          groupsByEmail:
+          - gcp-cpe-developerexperience-softwareengineer-admin@kohls.com
+          serviceAccountsByEmail:
+          - devexp-automation@kohls-devexp-tools-prd.iam.gserviceaccount.com
+          - gitlab-runner@kohls-devexp-tools-prd.iam.gserviceaccount.com
+          - 391966622341@cloudservices.gserviceaccount.com
+
+      cpe-nx-prd-sre-subnet-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.185.10.128/25
+          bluecat-id: 1597520
+          status: PROVISIONED
+
+      cpe-nx-prd-sre-subnet-e1-prv01:
+        advertiseRoutes: true
+        region: us-east1
+        network:
+          ip: 10.189.3.128/25
+          bluecat-id: 1597522
+          status: PROVISIONED
+
+      cpe-nx-prd-sre-theia-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.185.10.96/28
+          bluecat-id: 1599988
+          status: PROVISIONED
+
+      cpe-nx-prd-sre-theia-e1-prv01:
+        advertiseRoutes: true
+        region: us-east1
+        network:
+          ip: 10.189.9.64/28
+          bluecat-id: 1599990
+          status: PROVISIONED

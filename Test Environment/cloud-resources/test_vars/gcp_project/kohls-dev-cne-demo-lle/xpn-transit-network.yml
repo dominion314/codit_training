@@ -1,0 +1,5 @@
+---
+vpcs:
+  xpn-transit:
+
+    routingMode: GLOBAL

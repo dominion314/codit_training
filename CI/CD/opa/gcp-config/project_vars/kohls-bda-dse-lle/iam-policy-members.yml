@@ -1,0 +1,201 @@
+---
+iamPolicyMembers:
+  serviceAccountsByEmail:
+    bda-devops@kohls-bda-dse-lle.iam.gserviceaccount.com:
+      roles:
+      - compute.storageAdmin
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.loadBalancerAdmin
+      - dataproc.editor
+      - iam.serviceAccountUser
+      - pubsub.editor
+      - bigquery.admin
+      - bigtable.admin
+      - cloudfunctions.admin
+      - cloudscheduler.admin
+      - compute.imageUser
+      - compute.networkViewer
+      - dataflow.admin
+      - dataflow.worker
+      - datastore.owner
+      - logging.admin
+      - monitoring.admin
+      - pubsub.admin
+      - spanner.admin
+      - storage.admin
+      - storage.objectAdmin
+      - container.admin
+      - cloudbuild.builds.editor
+    bda-terraform@kohls-bda-dse-lle.iam.gserviceaccount.com:
+      roles:
+      - compute.storageAdmin
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.loadBalancerAdmin
+      - dataproc.editor
+      - iam.serviceAccountUser
+      - pubsub.editor
+      - bigquery.admin
+      - bigtable.admin
+      - cloudfunctions.admin
+      - cloudscheduler.admin
+      - compute.imageUser
+      - compute.networkViewer
+      - dataflow.admin
+      - dataflow.worker
+      - datastore.owner
+      - logging.admin
+      - monitoring.admin
+      - pubsub.admin
+      - spanner.admin
+      - storage.admin
+      - storage.objectAdmin
+      - container.admin
+      - cloudbuild.builds.editor
+    604987113172-compute@developer.gserviceaccount.com:
+      roles:
+      - dataproc.editor
+      - dataflow.worker
+      - bigtable.admin
+    bda-azkaban@kohls-bda-dse-lle.iam.gserviceaccount.com:
+      roles:
+      - bigtable.user
+      - bigtable.reader
+      - bigquery.jobUser
+      - storage.objectViewer
+      - bigquery.readSessionUser
+      - dataproc.viewer
+      - logging.logWriter
+      - monitoring.metricWriter
+      - compute.networkViewer
+    bda-ansible@kohls-bda-dse-lle.iam.gserviceaccount.com:
+      roles:
+      - storage.objectViewer
+      - logging.logWriter
+      - monitoring.metricWriter
+      - compute.networkViewer
+    bda-airflow@kohls-bda-dse-lle.iam.gserviceaccount.com:
+      roles:
+      - bigtable.user
+      - bigtable.reader
+      - bigquery.jobUser
+      - storage.objectViewer
+      - bigquery.readSessionUser
+      - dataproc.viewer
+      - logging.logWriter
+      - monitoring.metricWriter
+      - compute.networkViewer
+    bda-dataproc@kohls-bda-dse-lle.iam.gserviceaccount.com:
+      roles:
+      - bigtable.user
+      - bigtable.reader
+      - bigquery.jobUser
+      - storage.objectViewer
+      - bigquery.readSessionUser
+      - dataproc.viewer
+      - logging.logWriter
+      - monitoring.metricWriter
+      - compute.networkViewer
+    mysql-dba@kohls-bda-dse-lle.iam.gserviceaccount.com:
+      roles:
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - storage.objectAdmin
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.networkViewer
+    mongo-dba@kohls-bda-dse-lle.iam.gserviceaccount.com:
+      roles:
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - storage.objectAdmin
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.networkViewer
+    bda-consul@kohls-bda-dse-lle.iam.gserviceaccount.com:
+      roles:
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - storage.objectAdmin
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.networkViewer
+    bda-servicereg@kohls-bda-dse-lle.iam.gserviceaccount.com:
+      roles:
+      - bigtable.user
+      - bigtable.reader
+      - bigquery.jobUser
+      - storage.objectViewer
+      - bigquery.readSessionUser
+      - dataproc.viewer
+      - logging.logWriter
+      - monitoring.metricWriter
+      - compute.networkViewer
+    bda-redis@kohls-bda-dse-lle.iam.gserviceaccount.com:
+      roles:
+      - bigtable.user
+      - bigtable.reader
+      - bigquery.jobUser
+      - storage.objectViewer
+      - bigquery.readSessionUser
+      - dataproc.viewer
+      - logging.logWriter
+      - monitoring.metricWriter
+      - compute.networkViewer
+    cce-dse-rec@kohls-bda-dse-lle.iam.gserviceaccount.com:
+      roles:
+      - bigtable.admin
+      - bigquery.jobUser
+      - storage.objectViewer
+      - bigquery.readSessionUser
+      - dataflow.worker
+    cce-dse-lot@kohls-bda-dse-lle.iam.gserviceaccount.com:
+      roles:
+      - bigtable.user
+      - bigtable.reader
+      - bigquery.jobUser
+      - storage.objectViewer
+      - bigquery.readSessionUser
+      - dataflow.worker
+    cce-dse-src@kohls-bda-dse-lle.iam.gserviceaccount.com:
+      roles:
+      - bigtable.user
+      - bigtable.reader
+      - bigquery.jobUser
+      - storage.objectViewer
+      - bigquery.readSessionUser
+      - dataflow.worker
+      - dataflow.admin
+    cce-dse-cmn@kohls-bda-dse-lle.iam.gserviceaccount.com:
+      roles:
+      - bigtable.user
+      - bigtable.reader
+      - bigquery.jobUser
+      - storage.objectViewer
+      - bigquery.readSessionUser
+      - dataflow.worker
+    cce-dse-mkt@kohls-bda-dse-lle.iam.gserviceaccount.com:
+      roles:
+      - bigtable.user
+      - bigtable.reader
+      - bigquery.jobUser
+      - storage.objectViewer
+      - bigquery.readSessionUser
+      - dataflow.worker
+    cce-dse-ifo@kohls-bda-dse-lle.iam.gserviceaccount.com:
+      roles:
+      - bigtable.user
+      - bigtable.reader
+      - bigquery.jobUser
+      - storage.objectAdmin
+      - bigquery.readSessionUser
+      - dataflow.worker
+    search-solr@kohls-cx-shop-lle.iam.gserviceaccount.com:
+      roles:
+      - bigtable.reader
+      - storage.objectViewer
+    ccnet-dataproc@kohls-merch-in-lle.iam.gserviceaccount.com:
+      roles:
+      - storage.objectViewer
+      - storage.objectCreator

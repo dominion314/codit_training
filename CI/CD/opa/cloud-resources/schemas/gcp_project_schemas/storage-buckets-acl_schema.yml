@@ -1,0 +1,62 @@
+---
+storageBuckets:
+  required: false
+  type: 'dict'
+  keysrules:
+    type: 'string'
+    regex: '[-a-z0-9\._]+' # TODO: might need some refining
+  valuesrules:
+    type: 'dict'
+    schema:
+      acls:
+        type: 'dict'
+        required: false
+        schema:
+          usersByEmail:
+            required: false
+            type: 'dict'
+            keysrules:
+              type: 'string'
+              #TODO: better tune
+              regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com|.*\.gserviceaccount\.com'
+            valuesrules:
+              type: 'string'
+              allowed: ['READER', 'WRITER', 'OWNER']
+          groupsByEmail:
+            required: false
+            type: 'dict'
+            keysrules:
+              type: 'string'
+              #TODO: better tune
+              regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+            valuesrules:
+              type: 'string'
+              allowed: ['READER', 'WRITER', 'OWNER']
+          primitiveRoles:
+            required: false
+            type: 'dict'
+            schema:
+              viewers:
+                required: true
+                type: 'string'
+                allowed: ['READER', 'WRITER', 'OWNER']
+              editors:
+                required: true
+                type: 'string'
+                allowed: ['READER', 'WRITER', 'OWNER']
+              owners:
+                required: true
+                type: 'string'
+                allowed: ['READER', 'WRITER', 'OWNER']
+          builtinGroups:
+            required: false
+            type: 'dict'
+            schema:
+              allUsers:
+                required: true
+                type: 'string'
+                allowed: ['READER', 'WRITER', 'OWNER']
+              allAuthenticatedUsers:
+                required: true
+                type: 'string'
+                allowed: ['READER', 'WRITER', 'OWNER']

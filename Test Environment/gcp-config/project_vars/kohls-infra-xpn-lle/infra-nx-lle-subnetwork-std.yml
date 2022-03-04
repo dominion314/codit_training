@@ -1,0 +1,239 @@
+---
+vpcs:
+  infra-nx-lle:
+    subnets:
+      infra-nx-lle-aiops-c1-prv01:
+        advertiseRoutes: false
+        region: us-central1
+        network:
+          ip: 10.187.12.0/25
+          bluecat-id: 1600711
+          status: PROVISIONED
+        permissions:
+          serviceAccountsByEmail:
+          - rpa-aiops@kohls-infra-aiops-lle.iam.gserviceaccount.com
+          - automl-aiops@kohls-infra-aiops-lle.iam.gserviceaccount.com
+          - consul-paas@kohls-infra-aiops-lle.iam.gserviceaccount.com
+          - kohls-infra-aiops-lle-mongo@kohls-infra-aiops-lle.iam.gserviceaccount.com
+          - kohls-infra-aiops-lle-mysql@kohls-infra-aiops-lle.iam.gserviceaccount.com
+          - mongo-dba@kohls-infra-aiops-lle.iam.gserviceaccount.com
+          - mysql-dba@kohls-infra-aiops-lle.iam.gserviceaccount.com
+          - returnreversal-aiops@kohls-infra-aiops-lle.iam.gserviceaccount.com
+          - terraform-devops@kohls-infra-aiops-lle.iam.gserviceaccount.com
+          - 61503532832-compute@developer.gserviceaccount.com
+          - 61503532832@cloudservices.gserviceaccount.com
+          groupsByEmail:
+          - gcp-aiops-devops-admin@kohls.com
+          - gcp-aiops-devops-l2@kohls.com
+          - gcp-aiops-devops-l3@kohls.com
+          - gcp-aiops-devops-manager@kohls.com
+          - gcp-cloudsolutionsteam-devops-admin@kohls.com
+
+      infra-nx-lle-aiops-e1-prv01:
+        advertiseRoutes: false
+        region: us-east1
+        network:
+          ip: 10.191.6.128/25
+          bluecat-id: 1600713
+          status: PROVISIONED
+        permissions:
+          serviceAccountsByEmail:
+          - rpa-aiops@kohls-infra-aiops-lle.iam.gserviceaccount.com
+          - automl-aiops@kohls-infra-aiops-lle.iam.gserviceaccount.com
+          - consul-paas@kohls-infra-aiops-lle.iam.gserviceaccount.com
+          - kohls-infra-aiops-lle-mongo@kohls-infra-aiops-lle.iam.gserviceaccount.com
+          - kohls-infra-aiops-lle-mysql@kohls-infra-aiops-lle.iam.gserviceaccount.com
+          - mongo-dba@kohls-infra-aiops-lle.iam.gserviceaccount.com
+          - mysql-dba@kohls-infra-aiops-lle.iam.gserviceaccount.com
+          - returnreversal-aiops@kohls-infra-aiops-lle.iam.gserviceaccount.com
+          - terraform-devops@kohls-infra-aiops-lle.iam.gserviceaccount.com
+          - 61503532832-compute@developer.gserviceaccount.com
+          - 61503532832@cloudservices.gserviceaccount.com
+          groupsByEmail:
+          - gcp-aiops-devops-admin@kohls.com
+          - gcp-aiops-devops-l2@kohls.com
+          - gcp-aiops-devops-l3@kohls.com
+          - gcp-aiops-devops-manager@kohls.com
+          - gcp-cloudsolutionsteam-devops-admin@kohls.com
+
+      infra-nx-lle-pie-c1-prv01:
+        advertiseRoutes: false
+        region: us-central1
+        network:
+          ip: 10.187.131.128/25
+          bluecat-id: 3099564
+          status: PROVISIONED
+        permissions:
+          serviceAccountsByEmail:
+          - lemur-cpe@kohls-infra-pie-lle.iam.gserviceaccount.com
+          - lemur-cpe@kohls-infra-pie-prd.iam.gserviceaccount.com
+          - terraform-devops@kohls-infra-pie-lle.iam.gserviceaccount.com
+          - postgres-cpe@kohls-infra-pie-lle.iam.gserviceaccount.com
+          - 919911916074@cloudservices.gserviceaccount.com
+          - 919911916074-compute@developer.gserviceaccount.com
+          groupsByEmail:
+          - kt-casey@kohls.com
+
+      infra-nx-lle-pie-e1-prv01:
+        advertiseRoutes: false
+        region: us-east1
+        network:
+          ip: 10.191.29.0/25
+          bluecat-id: 3099633
+          status: PROVISIONED
+        permissions:
+          serviceAccountsByEmail:
+          - lemur-cpe@kohls-infra-pie-lle.iam.gserviceaccount.com
+          - lemur-cpe@kohls-infra-pie-prd.iam.gserviceaccount.com
+          - terraform-devops@kohls-infra-pie-lle.iam.gserviceaccount.com
+          - postgres-cpe@kohls-infra-pie-lle.iam.gserviceaccount.com
+          - 919911916074@cloudservices.gserviceaccount.com
+          - 919911916074-compute@developer.gserviceaccount.com
+          groupsByEmail:
+          - kt-casey@kohls.com
+
+      infra-nx-lle-monitoring-c1-prv01:
+        advertiseRoutes: false
+        region: us-central1
+        network:
+          ip: 10.187.21.128/25
+          bluecat-id: 1600715
+          status: PROVISIONED
+        permissions:
+          serviceAccountsByEmail:
+          - consul-paas@kohls-infra-aiops-lle.iam.gserviceaccount.com
+          - mongo-dba@kohls-infra-aiops-lle.iam.gserviceaccount.com
+          - mysql-dba@kohls-infra-aiops-lle.iam.gserviceaccount.com
+          - terraform-devops@kohls-infra-monitoring-lle.iam.gserviceaccount.com
+          - 83937706307-compute@developer.gserviceaccount.com
+          - 83937706307@cloudservices.gserviceaccount.com
+          groupsByEmail:
+          - gcp-aiops-devops-admin@kohls.com
+          - gcp-aiops-devops-l2@kohls.com
+          - gcp-aiops-devops-l3@kohls.com
+          - gcp-aiops-devops-manager@kohls.com
+          - gcp-infra-unix-sd-l3@kohls.com
+
+      infra-nx-lle-monitoring-e1-prv01:
+        advertiseRoutes: false
+        region: us-east1
+        network:
+          ip: 10.191.11.128/25
+          bluecat-id: 1600717
+          status: PROVISIONED
+        permissions:
+          serviceAccountsByEmail:
+          - consul-paas@kohls-infra-aiops-lle.iam.gserviceaccount.com
+          - mongo-dba@kohls-infra-aiops-lle.iam.gserviceaccount.com
+          - mysql-dba@kohls-infra-aiops-lle.iam.gserviceaccount.com
+          - terraform-devops@kohls-infra-monitoring-lle.iam.gserviceaccount.com
+          - 83937706307-compute@developer.gserviceaccount.com
+          - 83937706307@cloudservices.gserviceaccount.com
+          groupsByEmail:
+          - gcp-aiops-devops-admin@kohls.com
+          - gcp-aiops-devops-l2@kohls.com
+          - gcp-aiops-devops-l3@kohls.com
+          - gcp-aiops-devops-manager@kohls.com
+          - gcp-infra-unix-sd-l3@kohls.com
+
+      infra-nx-lle-kdx-c1-prv01:
+        advertiseRoutes: false
+        region: us-central1
+        network:
+          ip: 10.187.95.0/24
+          bluecat-id: 1999813
+          status: PROVISIONED
+        permissions:
+          serviceAccountsByEmail:
+          - 292311851837@cloudservices.gserviceaccount.com
+          - consul-paas@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - kohls-infra-kdx-lle-mysql@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - llesftp-kohls@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - mysql-kdx@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - servicereg-kdx@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - sftp-kdx@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - svc-kdx@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - terraform-kdx-devops@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - terraform-mdx-devops@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - terraform@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - ui-kdx@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - zkui-kdx@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - zookeeper-kdx@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          groupsByEmail:
+          - gcp-aiops-devops-admin@kohls.com
+          - gcp-aiops-devops-l2@kohls.com
+          - gcp-aiops-devops-l3@kohls.com
+          - gcp-aiops-devops-manager@kohls.com
+          - gcp-dataanalytics-ei-productionengineer-admin@kohls.com
+          - gcp-devops-mdx@kohls.com
+          - gcp-enterpriseinformation-servicedelivery@kohls.com
+          - gcp-mdx-viewers@kohls.com
+          - gcp-securityplanning-devops-l2@kohls.com
+
+      infra-nx-lle-kdx-c1-sec01:
+        advertiseRoutes: false
+        region: us-central1
+        network:
+          ip: 10.187.94.128/25
+          bluecat-id: 2979377
+          status: PROVISIONED
+        permissions:
+          serviceAccountsByEmail:
+          - 292311851837@cloudservices.gserviceaccount.com
+          - consul-paas@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - kohls-infra-kdx-lle-mysql@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - llesftp-kohls@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - mysql-kdx@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - servicereg-kdx@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - sftp-kdx@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - svc-kdx@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - terraform-kdx-devops@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - terraform-mdx-devops@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - terraform@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - ui-kdx@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - zkui-kdx@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - zookeeper-kdx@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          groupsByEmail:
+          - gcp-aiops-devops-admin@kohls.com
+          - gcp-aiops-devops-l2@kohls.com
+          - gcp-aiops-devops-l3@kohls.com
+          - gcp-aiops-devops-manager@kohls.com
+          - gcp-dataanalytics-ei-productionengineer-admin@kohls.com
+          - gcp-devops-mdx@kohls.com
+          - gcp-enterpriseinformation-servicedelivery@kohls.com
+          - gcp-mdx-viewers@kohls.com
+          - gcp-securityplanning-devops-l2@kohls.com
+
+      infra-nx-lle-kdx-c1-pub01:
+        advertiseRoutes: false
+        region: us-central1
+        network:
+          ip: 10.187.131.0/25
+          bluecat-id: 2979381
+          status: PROVISIONED
+        permissions:
+          serviceAccountsByEmail:
+          - 292311851837@cloudservices.gserviceaccount.com
+          - consul-paas@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - kohls-infra-kdx-lle-mysql@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - llesftp-kohls@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - mysql-kdx@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - servicereg-kdx@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - sftp-kdx@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - svc-kdx@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - terraform-kdx-devops@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - terraform-mdx-devops@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - terraform@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - ui-kdx@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - zkui-kdx@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          - zookeeper-kdx@kohls-infra-kdx-lle.iam.gserviceaccount.com
+          groupsByEmail:
+          - gcp-aiops-devops-admin@kohls.com
+          - gcp-aiops-devops-l2@kohls.com
+          - gcp-aiops-devops-l3@kohls.com
+          - gcp-aiops-devops-manager@kohls.com
+          - gcp-dataanalytics-ei-productionengineer-admin@kohls.com
+          - gcp-devops-mdx@kohls.com
+          - gcp-enterpriseinformation-servicedelivery@kohls.com
+          - gcp-mdx-viewers@kohls.com
+          - gcp-securityplanning-devops-l2@kohls.com

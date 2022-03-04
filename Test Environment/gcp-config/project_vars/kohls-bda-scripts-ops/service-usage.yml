@@ -1,0 +1,9 @@
+---
+serviceAPIs:
+  compute.googleapis.com:
+  storagetransfer.googleapis.com:
+  storage-component.googleapis.com:
+  storage-api.googleapis.com:
+  stackdriver.googleapis.com:
+  logging.googleapis.com:
+  monitoring.googleapis.com:

@@ -1,0 +1,8 @@
+---
+pubSubTopics:
+  vgc-inbound:
+    deletionProtect: false
+  pro143-logs:
+    deletionProtect: false
+  aodocs-push-notification-topic:
+    deletionProtect: false

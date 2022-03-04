@@ -1,0 +1,610 @@
+vpcs:
+  cx-nx-prd:
+    firewallRules:
+      aws-workspaces-ingress-pnf-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "22"
+            - "443"
+            - "8500"
+          sourceRanges:
+          - "10.195.0.0/19"
+          - "10.195.32.0/19"
+        description: SNOW-16297
+        direction: INGRESS
+        disabled: false
+        priority: 890
+        logging: false
+      cavisson-prd-ingress-consul-pnf-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "8300-8302"
+            - "8500-8501"
+            - "8600"
+          - protocol: udp
+            ports:
+            - "8301-8302"
+          sourceRanges:
+          - "10.206.96.0/25"
+          - "10.206.224.0/25"
+          targetTags:
+          - fw-consul
+        description: SCTASK0663248, SCTASK0684806
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cavisson-prd-ingress-https-pnf-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "443"
+          sourceRanges:
+          - "10.206.96.0/25"
+          - "10.206.224.0/25"
+          targetTags:
+          - fw-https
+        description: SCTASK0663248
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cavisson-prd-ingress-netdiag-pnf-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "7891-7899"
+          sourceRanges:
+          - "10.206.96.0/25"
+          - "10.206.224.0/25"
+          targetTags:
+          - fw-haproxy
+          - fw-allow-all
+          - fw-zookeeper
+          - fw-consul
+          - fw-vault
+          - fw-netdiagnostics
+          - pnfservice
+        description: SCTASK0663248,SCTASK0694118
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cavisson-prd-ingress-vault-pnf-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "8200-8201"
+            - "8210"
+            - "8243"
+            - "8253"
+          sourceRanges:
+          - "10.206.96.0/25"
+          - "10.206.224.0/25"
+          targetTags:
+          - fw-vault
+        description: SCTASK0663248
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cavisson-prd-ingress-zkui-pnf-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "9012"
+          sourceRanges:
+          - "10.206.96.0/25"
+          - "10.206.224.0/25"
+          targetTags:
+          - fw-zkui
+        description: SCTASK0663248
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cavisson-prd-ingress-zookeeper-pnf-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "35883"
+            - "44589"
+            - "9999"
+            - "2181"
+          sourceRanges:
+          - 10.206.96.0/25
+          - 10.206.224.0/25
+          targetTags:
+          - fw-zookeeper
+        description: SCTASK0663248
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cavisson-to-pnf-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "7890-7899"
+          sourceRanges:
+          - 10.206.96.0/25
+          - 10.188.103.0/25
+          - 10.186.219.128/25
+          - 10.188.70.0/23
+          - 10.184.104.0/25
+          - 10.184.70.0/23
+          - 10.188.102.0/25
+          - 10.184.105.0/25
+          - 10.184.68.0/23
+          - 10.184.104.128/25
+          - 10.190.127.0/25
+          - 10.206.224.0/25
+          - 10.188.102.128/25
+          - 10.188.68.0/23
+          targetTags:
+          - fw-cavisson
+        description: ""
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cicd-ingress-ssh-pnf-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "22"
+          sourceRanges:
+          - 10.208.22.0/24
+          targetTags:
+          - fw-ssh
+        description: SCTASK0663248
+        direction: INGRESS
+        disabled: false
+        priority: 890
+        logging: false
+      ecom-xpn-pnf-prd-ing-to-ecom-xpn-pnf-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "9090"
+            - "9443"
+          sourceTags:
+          - tonomirunner
+          targetTags:
+          - fw-zkui
+          - zookeeper-ui
+        description: SCTASK0841509
+        direction: INGRESS
+        disabled: false
+        priority: 890
+        logging: false
+      ecom-xpn-pnf-prd-ing-to-ecom-xpn-tonomi-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "443"
+          sourceRanges:
+          - 10.185.50.0/24
+          - 10.189.39.0/24
+          targetTags:
+          - tonomi-pnf-prod
+        description: SCTASK0850621
+        direction: INGRESS
+        disabled: false
+        priority: 890
+        logging: false
+      ecom-xpn-tonomi-prd-ing-to-ecom-xpn-pnf-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "22"
+          sourceRanges:
+          - 10.184.72.0/24
+          - 10.188.72.0/24
+          targetTags:
+          - tonomirunner
+        description: SCTASK0850621
+        direction: INGRESS
+        disabled: false
+        priority: 890
+        logging: false
+      gspann-b2b-ing-to-kohls-ecom-pnf-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "80"
+            - "443"
+            - "8443"
+            - "22"
+            - "8088"
+            - "4443"
+            - "2181"
+            - "9092"
+            - "8080"
+            - "19010"
+            - "8001"
+          sourceRanges:
+          - 10.9.65.4/32
+          - 10.4.64.161/32
+          targetTags:
+          - fw-ssh
+        description: SCTAsk0961029
+        direction: INGRESS
+        disabled: false
+        priority: 890
+        logging: false
+      jump-servers-ingress-to-pnf-prd:
+        rule:
+          allow:
+          - protocol: udp
+            ports:
+            - "8301-8302"
+            - "8600"
+          - protocol: tcp
+            ports:
+            - "22"
+            - "443"
+            - "2181"
+            - "8200-8201"
+            - "8243"
+            - "28080"
+            - "8301"
+            - "8500-8501"
+            - "8600"
+            - "9012"
+            - "9999"
+            - "35883"
+            - "44589"
+          sourceRanges:
+          - 10.216.72.146/32
+          - 10.212.72.146/32
+          - 10.7.28.247/32
+          targetTags:
+          - fw-haproxy
+          - fw-ssh
+          - fw-zkui
+          - fw-zookeeper
+          - fw-consul
+          - fw-vault
+          - fw-https
+        description: SCTASK0619022
+        direction: INGRESS
+        disabled: false
+        priority: 890
+        logging: false
+      kohls-ecom-pe-prd-ing-to-ecom-xpn-prd-pnf-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "22"
+          sourceRanges:
+          - 10.188.74.0/25
+          - 10.184.74.0/25
+          targetTags:
+          - tonomirunner
+          - rundeck
+        description: SCTASK0810540
+        direction: INGRESS
+        disabled: false
+        priority: 890
+        logging: false
+      kohls-kos-xpn-prd-ingress-pnf-prd-ha-proxy:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "443"
+          sourceRanges:
+          - 10.185.56.0/21
+          - 10.189.48.0/21
+          - 10.185.52.128/28
+          - 10.189.10.32/28
+          targetTags:
+          - fw-haproxy
+        description: SCTASK0686991
+        direction: INGRESS
+        disabled: false
+        priority: 890
+        logging: false
+      kohls-kos-xpn-prd-ingress-pnf-prd-tcp-01:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "2888"
+            - "3888"
+          sourceRanges:
+          - 10.185.50.0/24
+          - 10.189.39.0/24
+          targetTags:
+          - fw-zookeeper
+        description: SCTASK0686989
+        direction: INGRESS
+        disabled: false
+        priority: 890
+        logging: false
+      kohls-kosxpn-prd-ing-kohls-pnf-prd-01:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "443"
+          sourceRanges:
+          - 10.185.56.0/21
+          - 10.189.48.0/21
+          targetTags:
+          - fw-haproxy
+        description: SCTASK0717288
+        direction: INGRESS
+        disabled: false
+        priority: 890
+        logging: false
+      kohls-openshift-prd-kohls-pnf-prd-https:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "443"
+          sourceRanges:
+          - 10.184.0.0/23
+          - 10.216.7.0/24
+          - 10.188.0.0/23
+          targetTags:
+          - fw-https
+        description: SCTASK0710752
+        direction: INGRESS
+        disabled: false
+        priority: 890
+        logging: false
+      kos-prd-ingress-https-pnf-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "443"
+          sourceRanges:
+          - 10.185.56.0/21
+          - 10.189.48.0/21
+          targetTags:
+          - fw-https
+        description: SCTASK0663248
+        direction: INGRESS
+        disabled: false
+        priority: 890
+        logging: false
+      on-prem-subnets-ingress-pnf-prd-for-gdc-clustering:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "443"
+          sourceRanges:
+          - 10.2.44.0/24
+          - 10.6.48.0/24
+          targetTags:
+          - fw-https
+        description: SCTASK0926456
+        direction: INGRESS
+        disabled: false
+        priority: 890
+        logging: false
+      openshift-prod-cdc-ing-kohls-ecom-xpn-pnf-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "443"
+          sourceRanges:
+          - 10.1.13.0/24
+          - 10.216.7.0/24
+          targetTags:
+          - fw-https
+        description: SCTASK0823442
+        direction: INGRESS
+        disabled: false
+        priority: 890
+        logging: false
+      pnf-prd-to-cavisson:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "80"
+            - "443"
+            - "7890-7899"
+          destinationRanges:
+          - 10.206.96.0/25
+          - 10.188.103.0/25
+          - 10.186.219.128/25
+          - 10.188.70.0/23
+          - 10.184.104.0/25
+          - 10.184.70.0/23
+          - 10.188.102.0/25
+          - 10.184.105.0/25
+          - 10.184.68.0/23
+          - 10.184.104.128/25
+          - 10.190.127.0/25
+          - 10.206.224.0/25
+          - 10.188.102.128/25
+          - 10.188.68.0/23
+          targetTags:
+          - fw-cavisson
+        description: ""
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      same-subnet-access-ingress-to-pnf-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "443"
+            - "2181"
+            - "8200-8201"
+            - "8210"
+            - "8243"
+            - "8253"
+            - "8300-8302"
+            - "8500-8501"
+            - "8600"
+            - "9999"
+            - "35883"
+            - "44589"
+          - protocol: udp
+            ports:
+            - 8301-8302
+            - "8600"
+          sourceRanges:
+          - 10.185.50.0/24
+          - 10.185.51.0/24
+          - 10.189.39.0/24
+          - 10.189.40.0/24
+          targetTags:
+          - fw-zookeeper
+          - fw-consul
+          - fw-vault
+          - fw-https
+        description: SCTASK0663248, SCTASK0684806
+        direction: INGRESS
+        disabled: false
+        priority: 890
+        logging: false
+      sps-application-ing-to-kohls-ecom-xpn-pnf-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "443"
+          sourceRanges:
+          - 10.7.232.144/32
+          - 10.8.227.62/32
+          - 10.8.232.224/32
+          - 10.212.98.25/32
+          - 10.8.227.54/32
+          - 10.8.227.52/32
+          - 10.214.98.52/32
+          - 10.212.98.16/32
+          - 10.214.98.2/32
+          - 10.7.232.134/32
+          - 10.7.232.150/32
+          - 10.214.98.103/32
+          - 10.7.232.59/32
+          - 10.8.227.65/32
+          - 10.214.98.14/32
+          - 10.214.98.113/32
+          - 10.214.98.7/32
+          - 10.7.232.140/32
+          - 10.212.98.17/32
+          - 10.7.232.66/32
+          - 10.8.227.53/32
+          - 10.8.227.37/32
+          - 10.212.98.46/32
+          - 10.8.227.4/32
+          - 10.7.232.149/32
+          - 10.214.98.50/32
+          - 10.214.98.45/32
+          - 10.8.232.223/32
+          - 10.7.232.69/32
+          - 10.7.232.117/32
+          - 10.212.98.55/32
+          - 10.212.98.18/32
+          - 10.7.232.159/32
+          - 10.212.98.56/32
+          - 10.8.232.225/32
+          - 10.214.98.5/32
+          - 10.8.227.64/32
+          - 10.212.98.15/32
+          - 10.214.98.114/32
+          - 10.214.98.13/32
+          targetTags:
+          - fw-haproxy
+        description: SCTASK0837531,SCTASK0852225
+        direction: INGRESS
+        disabled: false
+        priority: 890
+        logging: false
+      oms-reauth-prd-in-cx-pci-pnf:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceRanges:
+          - 10.216.7.0/24
+          - 10.6.48.0/24
+          - 10.1.13.0/24
+          - 10.2.44.0/24
+          targetTags:
+          - pnf-dprodn-pnfservice-prod-proxy
+          - pnf-cprodn-pnfservice-prod-proxy
+        description: SNOW-17160-1
+        direction: INGRESS
+        disabled: false
+        priority: 890
+        logging: false
+      mosaic-apps-dr-ingress-https-pnf-prd-pci:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "443"
+          sourceRanges:
+          - 10.189.48.0/21
+          targetTags:
+          - pnfservice
+          - pnf-dprodn-pnfservice-prod-proxy
+          - pnf-cprodn-pnfservice-prod-proxy
+        description: SNOW-17310
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      pnf-deny-all-ingress:
+        priority: 895
+        direction: INGRESS
+        description: deny all ingress
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          - external: app-pnf@kohls-cx-pci-prd.iam.gserviceaccount.com
+          - external: zkui-pnf@kohls-cx-pci-prd.iam.gserviceaccount.com
+          - external: servicereg-pnf@kohls-cx-pci-prd.iam.gserviceaccount.com
+          - external: monitoring-tool-pe@kohls-cx-pci-prd.iam.gserviceaccount.com
+          - external: pnf-batch-pnf@kohls-cx-pci-prd.iam.gserviceaccount.com
+          - external: zookeeper-pnf@kohls-cx-pci-prd.iam.gserviceaccount.com
+          - external: pnf-kdp-pnf@kohls-cx-pci-prd.iam.gserviceaccount.com
+          - external: zkwd-pnf@kohls-cx-pci-prd.iam.gserviceaccount.com
+          - external: ingress-proxy-pnf@kohls-cx-pci-prd.iam.gserviceaccount.com
+          - external: app-pnf-batch@kohls-cx-pci-prd.iam.gserviceaccount.com
+          targetTags:
+          sourceRanges:
+          - 10.0.0.0/8
+          - 172.26.0.0/15
+          - 202.44.56.32/32
+          - 202.44.58.32/32
+          sourceServiceAccounts:
+          sourceTags:
+          deny:
+          - protocol: "tcp"
+          - protocol: "udp"
+          - protocol: "icmp"
+# Deny

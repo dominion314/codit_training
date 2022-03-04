@@ -1,0 +1,43 @@
+---
+vpcs:
+  platformops-nx-lle:
+    routerDef:
+      platformops-nx-lle-c1-gcp-rtr01:
+        region: us-central1
+        description:
+        routerASN:
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+        ha_vpn_gateways_to_transit:
+          platformops-nx-lle-c1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.2.128/30
+              bluecat-id: 3446436
+              status: MANUAL
+            if1_peer_cidr:
+              cidr: 169.254.2.132/30
+              bluecat-id: 3446455
+              status: MANUAL
+
+      platformops-nx-lle-e1-gcp-rtr01:
+        region: us-east1
+        description:
+        routerASN:
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+        ha_vpn_gateways_to_transit:
+          platformops-nx-lle-e1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.2.136/30
+              bluecat-id: 3446463
+              status: MANUAL
+            if1_peer_cidr:
+              cidr: 169.254.2.140/30
+              bluecat-id: 3446471
+              status: MANUAL

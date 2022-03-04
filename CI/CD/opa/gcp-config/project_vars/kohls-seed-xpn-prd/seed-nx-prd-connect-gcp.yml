@@ -1,0 +1,62 @@
+---
+vpcs:
+  seed-nx-prd:
+    routerDef:
+      seed-nx-prd-c1-gcp-rtr01:
+        region: us-central1
+        description:
+        routerASN:
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+        ha_vpn_gateways_to_transit:
+          seed-nx-prd-c1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.1.160/30
+              bluecat-id: 1589859
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.1.164/30
+              bluecat-id: 1589861
+              status: PROVISIONED
+          seed-nx-prd-c1-totransit-02:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.3.8/30
+              bluecat-id: 3621318
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.3.12/30
+              bluecat-id: 3621323
+              status: PROVISIONED
+      seed-nx-prd-e1-gcp-rtr01:
+        region: us-east1
+        description:
+        routerASN:
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+        ha_vpn_gateways_to_transit:
+          seed-nx-prd-e1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.1.168/30
+              bluecat-id: 1589863
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.1.172/30
+              bluecat-id: 1589865
+              status: PROVISIONED
+          seed-nx-prd-e1-totransit-02:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.3.0/30
+              bluecat-id: 3621295
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.3.4/30
+              bluecat-id: 3621307
+              status: PROVISIONED

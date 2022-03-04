@@ -1,0 +1,26 @@
+---
+# ASNs between 4,200,000,000 - 4,294,967,294
+ha_vpn_to_global_transit_asn:
+  kohls-dev-cne-transit-lle:
+    gbltransit-cr-central1-01: 4200000000
+    transit-hub-central1-router: 4200000008
+    transit-hub-east1-router: 4200000010
+    gbltransit-to-jamesdemo1-xpn-tunnel0: 4200000003
+    gbltransit-to-jamesdemo1-xpn-tunnel1: 4200000005
+  kohls-jamesdemo1-xpn-ops:
+    jamesdemo1-xpn-cr-central1-01: 4200000001
+    jamesdemo1-xpn-to-gbltransit-tunnel0: 4200000002
+    jamesdemo1-xpn-to-gbltransit-tunnel1: 4200000004
+  kohls-dev-cne-demo-lle:
+    demo-vpc-c1-gcp-rtr01: 4200000006
+    demo-vpc-e1-gcp-rtr01: 4200000007
+    demo-vpc-havpn-central1-router01: 4200000009
+    demo-vpc-havpn-east1-router01: 4200000011
+
+# interconnect-to-eqx:
+
+# classic-vpn-to-custom:
+
+# interconnect-to-eqx:
+
+# classic-vpn-to-custom:

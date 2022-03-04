@@ -1,0 +1,76 @@
+{%- if storageBuckets is defined %}
+{%-   for bucket_name, bucket_def in storageBuckets.items() %}
+apiVersion: storage.cnrm.cloud.google.com/v1beta1
+kind: StorageBucket
+metadata:
+  name: "{{ bucket_name }}"
+  namespace: gcp-{{ project.name }}
+  annotations:
+{%-     if bucket_def.deletionProtect | default(false) %}
+    cnrm.cloud.google.com/deletion-policy: abandon
+{%-     endif %}
+{%-     if bucket_def.forceDestroy | default(false) %}
+    cnrm.cloud.google.com/force-destroy: "true"
+{%-     endif %}
+  labels:
+    managed-by-cnrm: "true"
+{%-     if defaultLabels is defined %} 
+{%-       for key, value in defaultLabels.items() %}
+{%-         if bucket_def.labels is defined %}
+{%-           if not key in bucket_def.labels %}
+    {{ key }}: "{{ value }}"
+{%-           endif %}
+{%-         else %}
+    {{ key }}: "{{ value }}"
+{%-         endif %}
+{%-       endfor %}
+{%-     endif %}
+{%-     if bucket_def.labels is defined %}
+{%-       for key, value in bucket_def.labels.items() %}
+    {{ key }}: "{{ value }}"
+{%-       endfor %}
+{%-     endif %}
+spec:
+{%-     if bucket_def.location is defined %}
+  location: {{ bucket_def.location|upper }}
+{%-     endif %}
+{%-     if bucket_def.versioningEnabled is defined %}
+  versioning:
+   enabled: {{ bucket_def.versioningEnabled }}
+{%-     endif %}
+{%-     if bucket_def.storageClass is defined %}
+  storageClass: {{ bucket_def.storageClass }}
+{%-     endif %}
+{%-     if bucket_def.bucketPolicyOnly is defined %}
+  bucketPolicyOnly: {{ bucket_def.bucketPolicyOnly }}
+{%-     endif %}
+{%-     if bucket_def.lifecycleRule is defined %}
+  lifecycleRule: 
+{%-       for params in bucket_def.lifecycleRule %}
+    - action: 
+{%-         for action_element, action_value in params.action.items() %}
+        {{ action_element }}: {{ action_value }}
+{%-         endfor %}
+      condition: 
+{%-         for condition_type, condition_value in params.condition.items() %}
+{%-           if condition_type == 'matchesStorageClass' %}
+        {{ condition_type }}:
+{%-             for matchedStorageClass in condition_value %}
+          - {{ matchedStorageClass }}
+{%-             endfor %}
+{%-           else %}
+        {{ condition_type }}: {{ condition_value }}
+{%-           endif %}
+{%-         endfor %}
+{%-       endfor %}
+{%-     endif %}
+{%-     if bucket_def.retentionPolicy is defined %}
+  retentionPolicy:
+{%-       if bucket_def.retentionPolicy.isLocked is defined %}
+    isLocked: {{ bucket_def.retentionPolicy.isLocked }}
+{%-       endif %}
+    retentionPeriod: {{ bucket_def.retentionPolicy.retentionPeriod }}
+{%-     endif %}
+---
+{%-   endfor %}
+{%- endif %}

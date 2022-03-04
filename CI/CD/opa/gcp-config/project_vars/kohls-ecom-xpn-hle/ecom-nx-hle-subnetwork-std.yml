@@ -1,0 +1,68 @@
+---
+vpcs:
+  ecom-nx-hle:
+    subnets:
+      ecom-nx-hle-ecmdm-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.187.33.128/25
+          bluecat-id: 1610146
+          status: PROVISIONED
+        permissions:
+          groupsByEmail:
+          - gcp-devops-ecom-admin@kohls.com
+          - gcp-devops-ecom@kohls.com
+          - gcp-ecom-cmdm-productionengineer-admin@kohls.com
+          serviceAccountsByEmail:
+          - terraform-provisioning-ecmdm@kohls-ecom-ecmdm-hle.iam.gserviceaccount.com
+          - 111725418279-compute@developer.gserviceaccount.com
+          - 111725418279@cloudservices.gserviceaccount.com
+      ecom-nx-hle-ecmdm-c1-sec01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.187.35.0/24
+          bluecat-id: 1610148
+          status: PROVISIONED
+        permissions:
+          groupsByEmail:
+          - gcp-devops-ecom-admin@kohls.com
+          - gcp-devops-ecom@kohls.com
+          - gcp-ecom-cmdm-productionengineer-admin@kohls.com
+          serviceAccountsByEmail:
+          - terraform-provisioning-ecmdm@kohls-ecom-ecmdm-hle.iam.gserviceaccount.com
+          - 111725418279-compute@developer.gserviceaccount.com
+          - 111725418279@cloudservices.gserviceaccount.com
+      ecom-nx-hle-ecmdm-e1-prv01:
+        advertiseRoutes: true
+        region: us-east1
+        network:
+          ip: 10.191.15.0/25
+          bluecat-id: 1610150
+          status: PROVISIONED
+        permissions:
+          groupsByEmail:
+          - gcp-devops-ecom-admin@kohls.com
+          - gcp-devops-ecom@kohls.com
+          - gcp-ecom-cmdm-productionengineer-admin@kohls.com
+          serviceAccountsByEmail:
+          - terraform-provisioning-ecmdm@kohls-ecom-ecmdm-hle.iam.gserviceaccount.com
+          - 111725418279-compute@developer.gserviceaccount.com
+          - 111725418279@cloudservices.gserviceaccount.com
+      ecom-nx-hle-ecmdm-e1-sec01:
+        advertiseRoutes: true
+        region: us-east1
+        network:
+          ip: 10.191.16.0/24
+          bluecat-id: 1610152
+          status: PROVISIONED
+        permissions:
+          groupsByEmail:
+          - gcp-devops-ecom-admin@kohls.com
+          - gcp-devops-ecom@kohls.com
+          - gcp-ecom-cmdm-productionengineer-admin@kohls.com
+          serviceAccountsByEmail:
+          - terraform-provisioning-ecmdm@kohls-ecom-ecmdm-hle.iam.gserviceaccount.com
+          - 111725418279-compute@developer.gserviceaccount.com
+          - 111725418279@cloudservices.gserviceaccount.com

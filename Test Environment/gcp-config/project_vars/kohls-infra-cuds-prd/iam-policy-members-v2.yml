@@ -1,0 +1,11 @@
+# IAM policy members v2 file created using automation v 1.1
+iamPolicyMembersV2:
+  groupsByEmail:
+    kt-cpa@kohls.com:
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.privateLogViewer
+    - role: monitoring.metricWriter
+    - role: monitoring.viewer
+    - role: pubsub.viewer
+    - role: storage.objectViewer

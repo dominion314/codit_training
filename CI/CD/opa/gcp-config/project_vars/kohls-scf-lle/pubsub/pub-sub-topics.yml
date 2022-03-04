@@ -1,0 +1,40 @@
+pubSubTopics:
+  ocf.sku.sync.topic:
+    deletionProtect: true
+    labels:
+      app-name: "ocf-sku-sync"
+    permissions:
+      serviceAccountsByEmail:
+        scf-sku-sync@kohls-scf-lle.iam.gserviceaccount.com:
+          roles:
+            - pubsub.admin
+            - pubsub.publisher
+  asn.integration.testing.topic:
+    deletionProtect: true
+    labels:
+      app-name: "asn-integration-testing"
+    permissions:
+      serviceAccountsByEmail:
+        scf-rdcwms-nonprod@kohls-scf-lle.iam.gserviceaccount.com:
+          roles:
+            - pubsub.admin
+
+  forced-replen-automator-review:
+    deletionProtect: true
+    labels:
+      app-name: "forced-replen-automator"
+    permissions:
+      serviceAccountsByEmail:
+        customer-fulfillment-lle@kohls-scf-lle.iam.gserviceaccount.com:
+          roles:
+            - pubsub.editor
+
+  forced-replen-automator-staging:
+    deletionProtect: true
+    labels:
+      app-name: "forced-replen-automator"
+    permissions:
+      serviceAccountsByEmail:
+        customer-fulfillment-lle@kohls-scf-lle.iam.gserviceaccount.com:
+          roles:
+            - pubsub.editor

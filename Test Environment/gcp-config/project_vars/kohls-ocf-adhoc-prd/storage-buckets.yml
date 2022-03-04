@@ -1,0 +1,14 @@
+---
+storageBuckets:
+  kohls-ocf-adhoc-prd-mongo:
+    storageClass: MULTI_REGIONAL
+    location: US
+    bucketPolicyOnly: false
+  kohls-ocf-adhoc-prd-mysql:
+    storageClass: MULTI_REGIONAL
+    location: US
+    bucketPolicyOnly: false
+  kohls-ocf-adhoc-prd-terraform-states:
+    storageClass: MULTI_REGIONAL
+    location: US
+    bucketPolicyOnly: false

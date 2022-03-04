@@ -1,0 +1,96 @@
+---
+iamPolicyMembers:
+  serviceAccountsByEmail:
+    ocp-installer@kohls-rapidpaas-sbx.iam.gserviceaccount.com:
+      roles:
+      - compute.admin
+      - dns.admin
+      - iam.securityAdmin
+      - iam.serviceAccountAdmin
+      - iam.serviceAccountUser
+      - storage.admin
+
+  usersByEmail:
+    adam.doman@kohls.com:
+      roles:
+      - compute.instanceAdmin.v1
+      - compute.networkAdmin
+      - container.clusterAdmin
+      - container.admin
+      - dns.admin
+      - storage.admin
+      - source.admin
+      - iam.serviceAccountAdmin
+      - iam.serviceAccountKeyAdmin
+      - iam.serviceAccountUser
+    ford.donald@kohls.com:
+      roles:
+      - compute.instanceAdmin.v1
+      - compute.networkAdmin
+      - container.clusterAdmin
+      - container.admin
+      - dns.admin
+      - storage.admin
+      - source.admin
+      - iam.serviceAccountAdmin
+      - iam.serviceAccountKeyAdmin
+      - iam.serviceAccountUser
+    nolan.hansen@kohls.com:
+      roles:
+      - compute.instanceAdmin.v1
+      - compute.networkAdmin
+      - container.clusterAdmin
+      - container.admin
+      - dns.admin
+      - storage.admin
+      - source.admin
+      - iam.serviceAccountAdmin
+      - iam.serviceAccountKeyAdmin
+      - iam.serviceAccountUser
+    ramesh.venkitaswaran@kohls.com:
+      roles:
+      - compute.instanceAdmin.v1
+      - compute.networkAdmin
+      - container.clusterAdmin
+      - container.admin
+      - dns.admin
+      - storage.admin
+      - source.admin
+      - iam.serviceAccountAdmin
+      - iam.serviceAccountKeyAdmin
+      - iam.serviceAccountUser
+    thad.craft@kohls.com:
+      roles:
+      - appengine.appAdmin
+      - compute.instanceAdmin.v1
+      - compute.networkAdmin
+      - container.clusterAdmin
+      - container.admin
+      - firebase.admin
+      - dns.admin
+      - storage.admin
+      - source.admin
+      - iam.serviceAccountAdmin
+      - iam.serviceAccountKeyAdmin
+      - iam.serviceAccountUser
+    vincent.sabatini@kohls.com:
+      roles:
+      - compute.instanceAdmin.v1
+      - compute.networkAdmin
+      - container.clusterAdmin
+      - container.admin
+      - dns.admin
+      - storage.admin
+      - source.admin
+      - iam.serviceAccountAdmin
+      - iam.serviceAccountKeyAdmin
+      - iam.serviceAccountUser
+
+
+  groupsByEmail:
+    gcp-securitytech-devops-admin@kohls.com:
+      roles:
+      - compute.securityAdmin
+      - logging.admin
+      - monitoring.admin
+

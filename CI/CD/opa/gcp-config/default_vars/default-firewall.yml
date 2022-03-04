@@ -1,0 +1,2151 @@
+---
+DefaultFirewall:
+  dflt-global-egress-deny-01:
+    priority: 2000
+    direction: EGRESS
+    description: Imported dflt rule
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      - 0.0.0.0/0
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      sourceServiceAccounts:
+      sourceTags:
+      deny:
+      - protocol: tcp
+      - protocol: udp
+
+  dflt-onprem-egress-allow-01:
+    priority: 1001
+    direction: EGRESS
+    description: Imported dflt rule
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      - 10.0.0.0/8
+      - 172.26.0.0/15
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+      - protocol: udp
+
+  dflt-proxy-02:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.4.7.0/27
+      - 10.9.7.0/27
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "80"
+        - "443"
+
+  dflt-icmp-egress:
+    priority: 900
+    direction: EGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      - 10.0.0.0/8
+      - 66.232.224.0/20
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: icmp
+
+  dflt-icmp-ingress:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.0.0.0/8
+      - 66.232.224.0/20
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: icmp
+
+  dflt-mft-ingress:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.0.0.0/8
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "46464"
+
+  dflt-addm-ingress:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.7.224.69/32
+      - 10.7.224.70/32
+      - 10.7.224.71/32
+      - 10.7.224.72/32
+      - 10.7.224.73/32
+      - 10.7.224.74/32
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "21"
+        - "22"
+        - "80"
+        - "443"
+        - "135"
+        - "513"
+        - "902"
+        - "5988-5989"
+      - protocol: udp
+        ports:
+        - "161-162"
+
+  dflt-github-ingress:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.1.43.26/32
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "443"
+        - "22"
+
+  dflt-jenkins-ingress:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.4.24.40/32
+      - 10.1.24.76/32
+      - 10.1.24.77/32
+      - 10.1.24.78/32
+      - 10.1.24.79/32
+      - 10.5.80.128/25
+      - 10.6.80.0/24
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "22"
+
+  dflt-cloudcentermgr-ingress:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.8.131.13/32
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "8443"
+
+  dflt-haproxy-ingress:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.3.29.54/32
+      - 10.3.29.57/32
+      - 10.3.29.58/32
+      - 10.1.77.39/32
+      - 10.8.228.146/32
+      - 10.8.228.147/32
+      - 10.8.228.148/32
+      - 10.1.82.123/32
+      - 10.1.82.124/32
+      - 10.1.82.128/32
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "1936"
+
+  dflt-informatica-ingress:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.1.232.1/32
+      - 10.1.232.3/32
+      - 10.3.16.222/32
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "9042"
+
+  dflt-kms-license-ingress:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.1.9.136/32
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "1688"
+
+  dflt-netcool-ingress:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.8.45.16/32
+      - 10.1.27.12/32
+      - 10.7.10.34/32
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: udp
+        ports:
+        - "161-162"
+
+  dflt-powershell-ingress:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.6.0.60/32
+      - 10.6.0.61/32
+      - 10.6.0.62/32
+      - 10.6.0.63/32
+      - 10.6.0.64/32
+      - 10.6.0.65/32
+      - 10.1.32.204/32
+      - 10.1.9.245/32
+      - 10.7.10.36/32
+      - 10.1.32.175/32
+      - 10.1.10.66/32
+      - 10.1.9.245/32
+      - 10.7.10.36/32
+      - 10.1.32.175/32
+      - 10.1.10.66/32
+      - 10.1.9.115/32
+      - 10.5.0.159/32
+      - 10.7.31.74/32
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "5985-5988"
+
+  dflt-trendmicro-ingress:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.1.31.44/32
+      - 10.7.31.44/32
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "4118"
+
+  dflt-adservers-ingress:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.1.32.43/32
+      - 10.1.35.221/32
+      - 10.1.35.222/32
+      - 10.1.35.224/32
+      - 10.1.35.225/32
+      - 10.1.35.226/32
+      - 10.1.9.1/32
+      - 10.1.9.2/32
+      - 10.1.9.34/32
+      - 10.1.9.35/32
+      - 10.1.9.60/32
+      - 10.1.9.61/32
+      - 10.1.9.63/32
+      - 10.1.9.76/32
+      - 10.212.188.1/32
+      - 10.212.188.2/32
+      - 10.212.188.3/32
+      - 10.212.188.4/32
+      - 10.24.8.14/32
+      - 10.27.8.227/32
+      - 10.31.8.222/32
+      - 10.7.10.1/32
+      - 10.7.10.30/32
+      - 10.7.10.51/32
+      - 10.7.10.6/32
+      - 10.7.10.7/32
+      - 10.7.10.8/32
+      - 10.7.31.20/32
+      - 10.7.35.10/32
+      - 10.8.35.5/32
+      - 10.8.35.7/32
+      - 10.1.10.13/32
+      - 10.1.10.14/32
+      - 10.1.10.20/32
+      - 10.1.10.21/32
+      - 10.1.10.214/32
+      - 10.1.31.131/32
+      - 10.1.31.132/32
+      - 10.1.31.30/32
+      - 10.1.31.31/32
+      - 10.1.31.32/32
+      - 10.1.31.79/32
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "636"
+        - "88"
+        - "135"
+        - "445"
+        - "3268-3269"
+        - "5000-5255"
+        - "9389"
+        - "53"
+        - "139"
+        - "389"
+      - protocol: udp
+        ports:
+        - "389"
+        - "88"
+        - "5000-5255"
+        - "53"
+        - "123"
+        - "137-138"
+
+  dflt-sccmcorphost-ingress:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.1.10.101/32
+      - 10.1.10.112/32
+      - 10.1.10.34/32
+      - 10.1.10.43/32
+      - 10.1.11.160/32
+      - 10.1.11.161/32
+      - 10.1.32.110/32
+      - 10.1.71.159/32
+      - 10.1.9.50/32
+      - 10.5.0.72/32
+      - 10.5.0.74/32
+      - 10.5.0.75/32
+      - 10.5.0.76/32
+      - 10.5.0.77/32
+      - 10.5.0.78/32
+      - 10.5.0.79/32
+      - 10.5.0.80/32
+      - 10.5.0.89/32
+      - 10.5.0.90/32
+      - 10.5.0.91/32
+      - 10.7.10.5/32
+      - 10.7.31.176/32
+      - 10.7.31.178/32
+      - 10.7.31.179/32
+      - 10.1.39.151/32
+      - 10.1.39.153/32
+      - 10.15.8.56/32
+      - 10.16.8.56/32
+      - 10.18.8.56/32
+      - 10.20.8.14/32
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "8530-8531"
+        - "636"
+        - "16992-16993"
+        - "80"
+        - "443"
+        - "5000-5255"
+        - "1433"
+        - "5985"
+        - "3268-3269"
+        - "9971"
+        - "389"
+        - "16995"
+        - "10123"
+        - "135"
+        - "2701-2702"
+        - "445"
+      - protocol: udp
+        ports:
+        - "2701-2702"
+        - "9"
+        - "135"
+        - "137-138"
+      - protocol: icmp
+
+  dflt-scomserver-ingress:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.1.10.140/32
+      - 10.1.10.141/32
+      - 10.1.10.142/32
+      - 10.1.10.143/32
+      - 10.1.10.40/32
+      - 10.1.10.43/32
+      - 10.1.71.160/32
+      - 10.1.9.211/32
+      - 10.1.9.212/32
+      - 10.1.9.219/32
+      - 10.1.9.220/32
+      - 10.1.9.221/32
+      - 10.1.9.222/32
+      - 10.1.9.242/32
+      - 10.1.9.54/32
+      - 10.1.9.68/32
+      - 10.1.9.86/32
+      - 10.1.9.99/32
+      - 10.7.10.34/32
+      - 10.8.33.126/32
+      - 10.1.72.146/32
+      - 10.1.72.147/32
+      - 10.1.72.148/32
+      - 10.1.72.149/32
+      - 10.1.72.150/32
+      - 10.6.80.146/32
+      - 10.6.80.147/32
+      - 10.6.80.148/32
+      - 10.6.80.149/32
+      - 10.6.80.150/32
+      - 10.6.80.151/32
+      - 10.6.80.154/32
+      - 10.6.80.155/32
+      - 10.6.80.156/32
+      - 10.6.80.1/32
+      - 10.6.80.2/32
+      - 10.6.80.3/32
+      - 10.6.80.5/32
+      - 10.6.80.6/32
+      - 10.6.80.7/32
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "16992-16993"
+        - "80"
+        - "443"
+        - "1793"
+        - "5000-5255"
+        - "139"
+        - "137"
+        - "1270-1271"
+        - "389"
+        - "16995"
+        - "8530-8531"
+        - "1024-5000"
+        - "51906-51909"
+        - "445"
+        - "1433"
+        - "3268-3269"
+        - "5723-5724"
+        - "135"
+        - "2701-2702"
+      - protocol: udp
+        ports:
+        - "445"
+        - "137-139"
+        - "2701-2702"
+        - "135"
+        - "49152-65535"
+        - "1270-1271"
+        - "636"
+        - "1024-5000"
+        - "51906-51909"
+      - protocol: icmp
+
+  dflt-addomainrep-ingress:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.1.10.193/32
+      - 10.1.10.194/32
+      - 10.1.75.1/32
+      - 10.1.75.2/32
+      - 10.1.75.3/32
+      - 10.1.75.4/32
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "389"
+        - "636"
+        - "3269"
+        - "139"
+        - "135"
+        - "445"
+        - "3268"
+        - "137"
+        - "88"
+        - "53"
+        - "25"
+        - "5722"
+        - "464"
+        - "9389"
+      - protocol: udp
+        ports:
+        - "445"
+        - "137-139"
+        - "135"
+        - "636"
+        - "389"
+        - "88"
+        - "53"
+        - "464"
+        - "123"
+
+  dflt-microsoftcert-ingress:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.1.25.215/32
+      - 10.1.34.16/32
+      - 10.1.34.17/32
+      - 10.1.34.22/32
+      - 10.7.31.34/32
+      - 10.7.31.36/32
+      - 10.7.35.56/32
+      - 10.7.35.57/32
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "445"
+
+  dflt-lbselfips-ingress:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.7.28.245/32
+      - 10.7.28.246/32
+      - 10.7.28.247/32
+      - 10.7.28.248/32
+      - 10.7.28.249/32
+      - 10.7.28.250/32
+      - 10.7.28.251/32
+      - 10.7.28.235/32
+      - 10.7.28.236/32
+      - 10.7.28.237/32
+      - 10.7.28.238/32
+      - 10.7.28.239/32
+      - 10.7.28.240/32
+      - 66.232.239.195/32
+      - 66.232.239.196/32
+      - 66.232.239.197/32
+      - 66.232.239.198/32
+      - 66.232.239.199/32
+      - 66.232.239.200/32
+      - 66.232.239.201/32
+      - 66.232.239.202/32
+      - 66.232.239.203/32
+      - 66.232.239.204/32
+      - 66.232.239.205/32
+      - 10.9.60.246/32
+      - 10.9.60.247/32
+      - 10.9.60.248/32
+      - 10.9.60.249/32
+      - 10.9.60.250/32
+      - 10.8.27.243/32
+      - 10.8.27.244/32
+      - 10.8.27.245/32
+      - 10.8.27.246/32
+      - 10.1.28.243/32
+      - 10.1.28.244/32
+      - 10.1.28.245/32
+      - 10.7.28.232/32
+      - 10.7.28.233/32
+      - 10.7.28.234/32
+      - 10.220.0.232/32
+      - 10.220.0.233/32
+      - 10.220.0.234/32
+      - 66.232.235.228/32
+      - 66.232.235.229/32
+      - 66.232.235.230/32
+      - 66.232.235.231/32
+      - 66.232.235.232/32
+      - 66.232.235.195/32
+      - 66.232.235.196/32
+      - 66.232.235.197/32
+      - 66.232.235.198/32
+      - 66.232.235.199/32
+      - 66.232.235.200/32
+      - 10.1.11.238/32
+      - 10.1.11.239/32
+      - 10.1.11.240/32
+      - 10.1.11.241/32
+      - 10.1.11.242/32
+      - 10.1.11.243/32
+      - 10.2.28.245/32
+      - 10.2.28.246/32
+      - 10.2.28.247/32
+      - 10.2.28.248/32
+      - 10.2.28.251/32
+      - 10.1.171.113/32
+      - 10.1.171.114/32
+      - 10.1.171.115/32
+      - 10.1.171.116/32
+      - 10.1.171.117/32
+      - 10.1.171.118/32
+      - 10.1.171.125/32
+      - 10.1.171.123/32
+      - 10.206.125.0/25
+      - 10.206.253.0/25
+      - 10.185.10.0/28
+      - 10.189.10.0/28
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+      - protocol: udp
+      - protocol: icmp
+
+  dflt-consul-webui-ingress:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.0.0.0/8
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "8500"
+
+  dflt-google-dns-egress:
+    priority: 900
+    direction: EGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      - 8.8.4.0/24
+      - 8.8.8.0/24
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "443"
+
+  dflt-google-api-egress:
+    priority: 900
+    direction: EGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      - 8.8.4.0/24
+      - 8.8.8.0/24
+      - 8.35.200.0/21
+      - 34.64.0.0/18
+      - 34.96.0.0/18
+      - 34.98.0.0/18
+      - 34.98.136.0/21
+      - 34.98.144.0/20
+      - 34.98.160.0/19
+      - 34.98.192.0/18
+      - 34.99.0.0/16
+      - 34.100.0.0/17
+      - 34.101.0.0/20
+      - 34.101.16.0/22
+      - 34.101.28.0/22
+      - 34.101.32.0/19
+      - 34.103.0.0/16
+      - 34.104.0.0/18
+      - 34.104.114.0/23
+      - 34.104.116.0/22
+      - 34.104.120.0/21
+      - 34.108.0.0/14
+      - 34.112.0.0/14
+      - 34.116.8.0/21
+      - 34.116.16.0/20
+      - 34.116.32.0/19
+      - 34.116.128.0/17
+      - 34.118.0.0/15
+      - 34.124.50.0/23
+      - 34.124.52.0/22
+      - 34.124.56.0/21
+      - 34.124.64.0/18
+      - 34.126.0.0/18
+      - 34.126.192.0/18
+      - 34.127.128.0/17
+      - 35.187.128.0/20
+      - 35.190.96.0/20
+      - 35.190.240.0/20
+      - 35.191.0.0/16
+      - 35.199.128.0/20
+      - 35.201.32.0/21
+      - 35.201.40.0/24
+      - 35.201.42.0/23
+      - 35.201.44.0/22
+      - 35.201.48.0/20
+      - 35.203.192.0/20
+      - 35.203.208.0/23
+      - 35.203.220.0/22
+      - 35.203.224.0/21
+      - 35.203.240.0/20
+      - 35.206.0.0/19
+      - 35.218.0.0/16
+      - 35.219.192.0/18
+      - 35.220.28.0/23
+      - 35.220.30.0/24
+      - 35.229.0.0/20
+      - 35.230.192.0/19
+      - 35.230.224.0/20
+      - 35.235.128.0/18
+      - 35.235.192.0/20
+      - 35.235.208.0/21
+      - 35.235.224.0/19
+      - 35.242.28.0/23
+      - 35.242.30.0/24
+      - 35.243.16.0/20
+      - 35.243.48.0/21
+      - 64.15.112.0/20
+      - 64.233.160.0/19
+      - 66.102.0.0/20
+      - 66.249.64.0/19
+      - 70.32.128.0/19
+      - 72.14.192.0/18
+      - 74.114.24.0/21
+      - 74.125.0.0/16
+      - 104.154.0.0/20
+      - 104.154.112.0/24
+      - 104.154.122.0/23
+      - 104.154.124.0/22
+      - 104.155.240.0/20
+      - 104.196.64.0/24
+      - 104.196.72.0/21
+      - 104.196.80.0/20
+      - 104.199.64.0/23
+      - 104.199.240.0/23
+      - 104.237.160.0/19
+      - 107.178.192.0/20
+      - 107.178.224.0/20
+      - 108.170.192.0/18
+      - 108.177.0.0/17
+      - 130.211.0.0/22
+      - 136.112.0.0/12
+      - 142.250.0.0/15
+      - 146.148.0.0/23
+      - 172.110.32.0/21
+      - 172.217.0.0/16
+      - 172.253.0.0/16
+      - 173.194.0.0/16
+      - 192.178.0.0/15
+      - 193.186.4.0/24
+      - 199.36.154.0/23
+      - 199.36.156.0/24
+      - 199.192.112.0/23
+      - 199.192.114.0/24
+      - 199.223.237.0/24
+      - 199.223.238.0/23
+      - 207.223.160.0/20
+      - 208.65.152.0/22
+      - 208.68.108.0/22
+      - 208.81.188.0/22
+      - 208.117.224.0/19
+      - 209.85.128.0/17
+      - 216.58.192.0/19
+      - 216.73.80.0/20
+      - 216.239.32.0/19
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "443"
+
+  dflt-consul-join-ingress:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - paas-consul
+      sourceRanges:
+      - 10.206.0.0/15
+      - 10.208.0.0/16
+      - 10.184.0.0/13
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "8500"
+      - protocol: udp
+        ports:
+        - "8302"
+
+  dflt-gcp-ilb-health-check-ingress:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 209.85.204.0/22
+      - 209.85.152.0/22
+      - 130.211.0.0/22
+      - 35.191.0.0/16
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+
+  dflt-gcp-paas-consul:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - paas-consul
+      sourceRanges:
+      - 10.0.0.0/8
+      - 172.26.0.0/15
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "8300-8302"
+        - "8500"
+        - "8600"
+      - protocol: udp
+        ports:
+        - "8301-8302"
+        - "8600"
+
+  dflt-gcp-paas-zookeeper:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - paas-zookeeper
+      sourceRanges:
+      - 10.0.0.0/8
+      - 172.26.0.0/15
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "2181"
+        - "2888"
+        - "3888"
+
+  dflt-gcp-paas-kafka:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - paas-kafka
+      sourceRanges:
+      - 10.0.0.0/8
+      - 172.26.0.0/15
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "9092"
+        - "9094"
+        - "9091"
+
+  dflt-tanium-gcp-ingress:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.7.226.35/32
+      - 10.1.224.35/32
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "17472"
+
+  dflt-dseries-gcp-ingress:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.214.188.18/32
+      - 10.214.188.19/32
+      - 10.1.111.244/32
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "4201"
+
+  dflt-gcp-paas-solr:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - paas-solr
+      sourceRanges:
+      - 10.0.0.0/8
+      - 172.26.0.0/15
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "8983"
+
+  dflt-gcp-grafanam:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-pmm-grafana
+      sourceRanges:
+      - 10.0.0.0/8
+      - 172.26.0.0/15
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "443"
+
+  dflt-gcp-pmm-client:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-pmm-server
+      sourceRanges:
+      sourceServiceAccounts:
+      sourceTags:
+      - ads-pmm-client
+      allow:
+      - protocol: tcp
+        ports:
+        - "443"
+        - "8443"
+        - "5667"
+        - "9093"
+
+  dflt-gcp-pmm-server:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-pmm-client
+      sourceRanges:
+      sourceServiceAccounts:
+      sourceTags:
+      - ads-pmm-server
+      allow:
+      - protocol: tcp
+        ports:
+        - "5666"
+        - "42000-42004"
+
+  dflt-iaas-squid-proxy-ingress:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - iaas-network-proxy-central1
+      - iaas-network-proxy-east1
+      sourceRanges:
+      - 10.0.0.0/8
+      - 172.26.0.0/15
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "8080"
+        - "3128"
+
+  dflt-gcp-mysql-srvr:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-mysql-mgmt
+      sourceRanges:
+      sourceServiceAccounts:
+      sourceTags:
+      - ads-mysql-mgmt
+      allow:
+      - protocol: tcp
+        ports:
+        - "3306"
+        - "33061"
+        - "4444"
+        - "4567-4568"
+        - "22"
+
+  dflt-gcp-mongodb-srvr:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-mongodb-mgmt
+      sourceRanges:
+      sourceServiceAccounts:
+      sourceTags:
+      - ads-mongodb-mgmt
+      allow:
+      - protocol: tcp
+        ports:
+        - "27017"
+        - "27020"
+        - "22"
+
+  dflt-gcp-windows-rdp-ps:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - fw-win-rdp-ps
+      sourceRanges:
+      - 10.1.160.0/24
+      - 10.1.170.0/24
+      - 10.1.173.0/24
+      - 10.10.0.0/16
+      - 10.100.0.0/16
+      - 10.101.0.0/16
+      - 10.109.0.0/16
+      - 10.110.0.0/16
+      - 10.12.0.0/16
+      - 10.13.0.0/16
+      - 10.14.0.0/16
+      - 10.141.0.0/24
+      - 10.15.0.0/16
+      - 10.16.0.0/16
+      - 10.17.0.0/16
+      - 10.18.0.0/16
+      - 10.19.0.0/16
+      - 10.192.34.0/23
+      - 10.2.100.0/24
+      - 10.2.174.0/24
+      - 10.20.0.0/16
+      - 10.21.0.0/16
+      - 10.22.200.0/24
+      - 10.22.64.0/18
+      - 10.23.0.0/16
+      - 10.24.0.0/16
+      - 10.25.0.0/16
+      - 10.26.0.0/16
+      - 10.27.0.0/16
+      - 10.3.171.0/24
+      - 10.30.0.0/16
+      - 10.31.0.0/16
+      - 10.56.0.0/17
+      - 10.57.0.0/17
+      - 10.58.0.0/17
+      - 10.64.0.0/17
+      - 10.8.110.0/24
+      - 10.90.0.0/24
+      - 10.90.20.0/22
+      - 10.90.24.0/22
+      - 10.90.4.0/22
+      - 10.90.6.0/25
+      - 10.90.64.0/18
+      - 10.93.5.0/28
+      - 10.212.188.170/32
+      - 10.212.188.171/32
+      - 172.26.0.0/15
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "3389"
+        - "135"
+        - "5985-5988"
+
+  dflt-gcp-wndws-rdp:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - fw-win-rdp-ps
+      sourceRanges:
+      - 10.212.188.170/32
+      - 10.212.188.171/32
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "5000-5255"
+
+  dflt-gcp-pbps-unix:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.8.238.25/32
+      - 10.8.238.26/32
+      - 10.8.238.60/32
+      - 10.8.238.59/32
+      - 10.1.246.1/32
+      - 10.1.246.2/32
+      - 10.1.246.3/32
+      - 10.1.246.4/32
+      - 10.1.246.6/32
+      - 10.1.246.7/32
+      - 10.7.212.1/32
+      - 10.7.212.2/32
+      - 10.7.212.3/32
+      - 10.7.212.4/32
+      - 10.7.212.5/32
+      - 10.7.212.6/32
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "22"
+        - "445"
+
+  dflt-gcp-pbps-windows:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.1.246.1/32
+      - 10.1.246.2/32
+      - 10.1.246.3/32
+      - 10.1.246.4/32
+      - 10.1.246.6/32
+      - 10.1.246.7/32
+      - 10.7.212.1/32
+      - 10.7.212.2/32
+      - 10.7.212.3/32
+      - 10.7.212.4/32
+      - 10.7.212.5/32
+      - 10.7.212.6/32
+      - 10.7.212.7/32
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "5000-5255"
+        - "49152-65535"
+        - "135"
+        - "21-23"
+        - "25"
+        - "80"
+        - "110"
+        - "139"
+        - "389"
+        - "443"
+        - "445"
+        - "554"
+        - "1433"
+        - "3389"
+
+  dflt-bastion-client-prd:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.184.74.128/25
+      - 10.188.74.128/25
+      - 10.185.3.64/27
+      - 10.189.3.0/27
+      - 10.184.76.0/25
+      - 10.188.76.0/25
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "22"
+        - "4421"
+
+  dflt-bastion-client-lle:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - fw-bastion-agent-lle
+      sourceRanges:
+      - 10.186.140.128/25
+      - 10.190.134.0/25
+      - 10.186.141.0/25
+      - 10.190.134.128/25
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "22"
+        - "4421"
+
+  dflt-orchestrator-ui-lle:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-pmm-orchestrator
+      sourceRanges:
+      - 10.1.160.0/24
+      - 10.1.170.0/24
+      - 10.1.173.0/24
+      - 10.10.0.0/16
+      - 10.100.0.0/16
+      - 10.101.0.0/16
+      - 10.109.0.0/16
+      - 10.110.0.0/16
+      - 10.12.0.0/16
+      - 10.13.0.0/16
+      - 10.14.0.0/16
+      - 10.141.0.0/24
+      - 10.15.0.0/16
+      - 10.16.0.0/16
+      - 10.17.0.0/16
+      - 10.18.0.0/16
+      - 10.19.0.0/16
+      - 10.192.34.0/23
+      - 10.2.100.0/24
+      - 10.2.174.0/24
+      - 10.20.0.0/16
+      - 10.21.0.0/16
+      - 10.22.200.0/24
+      - 10.22.64.0/18
+      - 10.23.0.0/16
+      - 10.24.0.0/16
+      - 10.25.0.0/16
+      - 10.26.0.0/16
+      - 10.27.0.0/16
+      - 10.3.171.0/24
+      - 10.30.0.0/16
+      - 10.31.0.0/16
+      - 10.56.0.0/17
+      - 10.57.0.0/17
+      - 10.58.0.0/17
+      - 10.64.0.0/17
+      - 10.8.110.0/24
+      - 10.90.0.0/24
+      - 10.90.20.0/22
+      - 10.90.24.0/22
+      - 10.90.4.0/22
+      - 10.90.6.0/25
+      - 10.90.64.0/18
+      - 10.93.5.0/28
+      - 10.212.188.170/32
+      - 10.212.188.171/32
+      - 172.26.0.0/15
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "3000"
+
+  dflt-kibana-ui-lle:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-pmm-kibana
+      sourceRanges:
+      - 10.1.160.0/24
+      - 10.1.170.0/24
+      - 10.1.173.0/24
+      - 10.10.0.0/16
+      - 10.100.0.0/16
+      - 10.101.0.0/16
+      - 10.109.0.0/16
+      - 10.110.0.0/16
+      - 10.12.0.0/16
+      - 10.13.0.0/16
+      - 10.14.0.0/16
+      - 10.141.0.0/24
+      - 10.15.0.0/16
+      - 10.16.0.0/16
+      - 10.17.0.0/16
+      - 10.18.0.0/16
+      - 10.19.0.0/16
+      - 10.192.34.0/23
+      - 10.2.100.0/24
+      - 10.2.174.0/24
+      - 10.20.0.0/16
+      - 10.21.0.0/16
+      - 10.22.200.0/24
+      - 10.22.64.0/18
+      - 10.23.0.0/16
+      - 10.24.0.0/16
+      - 10.25.0.0/16
+      - 10.26.0.0/16
+      - 10.27.0.0/16
+      - 10.3.171.0/24
+      - 10.30.0.0/16
+      - 10.31.0.0/16
+      - 10.56.0.0/17
+      - 10.57.0.0/17
+      - 10.58.0.0/17
+      - 10.64.0.0/17
+      - 10.8.110.0/24
+      - 10.90.0.0/24
+      - 10.90.20.0/22
+      - 10.90.24.0/22
+      - 10.90.4.0/22
+      - 10.90.6.0/25
+      - 10.90.64.0/18
+      - 10.93.5.0/28
+      - 10.212.188.170/32
+      - 10.212.188.171/32
+      - 172.26.0.0/15
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "5601"
+
+  dflt-kibana-orch-cns:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-msp
+      sourceRanges:
+      - 10.1.160.0/24
+      - 10.1.170.0/24
+      - 10.1.173.0/24
+      - 10.10.0.0/16
+      - 10.100.0.0/16
+      - 10.101.0.0/16
+      - 10.109.0.0/16
+      - 10.110.0.0/16
+      - 10.12.0.0/16
+      - 10.13.0.0/16
+      - 10.14.0.0/16
+      - 10.141.0.0/24
+      - 10.15.0.0/16
+      - 10.16.0.0/16
+      - 10.17.0.0/16
+      - 10.18.0.0/16
+      - 10.19.0.0/16
+      - 10.192.34.0/23
+      - 10.2.100.0/24
+      - 10.2.174.0/24
+      - 10.20.0.0/16
+      - 10.21.0.0/16
+      - 10.22.200.0/24
+      - 10.22.64.0/18
+      - 10.23.0.0/16
+      - 10.24.0.0/16
+      - 10.25.0.0/16
+      - 10.26.0.0/16
+      - 10.27.0.0/16
+      - 10.3.171.0/24
+      - 10.30.0.0/16
+      - 10.31.0.0/16
+      - 10.56.0.0/17
+      - 10.57.0.0/17
+      - 10.58.0.0/17
+      - 10.64.0.0/17
+      - 10.8.110.0/24
+      - 10.90.0.0/24
+      - 10.90.20.0/22
+      - 10.90.24.0/22
+      - 10.90.4.0/22
+      - 10.90.6.0/25
+      - 10.90.64.0/18
+      - 10.93.5.0/28
+      - 10.212.188.170/32
+      - 10.212.188.171/32
+      - 172.26.0.0/15
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "3000"
+        - "5601"
+        - "8443"
+
+  dflt-gcp-ssh-orchest:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-msp-mon
+      sourceRanges:
+      - 172.26.0.0/15
+      - 10.64.100.0/23
+      - 10.57.0.0/17
+      - 10.101.0.0/16
+      - 10.90.80.0/24
+      - 10.90.81.0/24
+      - 10.90.100.0/24
+      - 10.64.0.0/17
+      - 10.109.0.0/16
+      - 10.110.0.0/16
+      - 10.100.0.0/16
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "22"
+        - "3000"
+
+  dflt-gcp-alert-manager:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-pmm-server
+      sourceRanges:
+      - 172.26.0.0/15
+      - 10.64.100.0/23
+      - 10.57.0.0/17
+      - 10.101.0.0/16
+      - 10.90.80.0/24
+      - 10.90.81.0/24
+      - 10.90.100.0/24
+      - 10.64.0.0/17
+      - 10.109.0.0/16
+      - 10.110.0.0/16
+      - 10.100.0.0/16
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "9093"
+
+  dflt-gcp-orc-portal:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-msp-mon-sec
+      sourceRanges:
+      - 172.26.0.0/15
+      - 10.64.100.0/23
+      - 10.57.0.0/17
+      - 10.101.0.0/16
+      - 10.90.80.0/24
+      - 10.90.81.0/24
+      - 10.90.100.0/24
+      - 10.64.0.0/17
+      - 10.109.0.0/16
+      - 10.110.0.0/16
+      - 10.100.0.0/16
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "3000"
+
+  dflt-gcp-alert-mng-sec:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-pmm-server-sec
+      sourceRanges:
+      - 172.26.0.0/15
+      - 10.64.100.0/23
+      - 10.57.0.0/17
+      - 10.101.0.0/16
+      - 10.90.80.0/24
+      - 10.90.81.0/24
+      - 10.90.100.0/24
+      - 10.64.0.0/17
+      - 10.109.0.0/16
+      - 10.110.0.0/16
+      - 10.100.0.0/16
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "9093"
+
+  dflt-gcp-theia-access:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - fw-theia-lle
+      - fw-theia
+      sourceRanges:
+      - 10.0.0.0/8
+      - 172.26.0.0/15
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "80"
+        - "443"
+        - "5201"
+        - "8080-8081"
+        - "9115"
+        - "9100"
+      - protocol: icmp
+      - protocol: udp
+        ports:
+        - "5201"
+
+  dflt-gcp-filebeat-upload-kibana:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-msp-cns
+      sourceRanges:
+      - 10.184.0.0/13
+      - 10.206.0.0/15
+      - 10.208.0.0/16
+      sourceServiceAccounts:
+      sourceTags:
+      - ads-msp-mon
+      allow:
+      - protocol: tcp
+        ports:
+        - "9200"
+
+  dflt-gcp-inventory-sync:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-msp-cns
+      sourceRanges:
+      - 10.184.0.0/13
+      - 10.206.0.0/15
+      - 10.208.0.0/16
+      sourceServiceAccounts:
+      sourceTags:
+      - ads-msp-mon
+      allow:
+      - protocol: tcp
+        ports:
+        - "8443"
+
+  dflt-gcp-ssh-deployment-db:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-pmm-client
+      sourceRanges:
+      sourceServiceAccounts:
+      sourceTags:
+      - ads-msp-mon
+      allow:
+      - protocol: tcp
+        ports:
+        - "22"
+
+  dflt-gcp-prometheus-metric:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-proxysql
+      sourceRanges:
+      sourceServiceAccounts:
+      sourceTags:
+      - ads-msp-mon
+      allow:
+      - protocol: tcp
+        ports:
+        - "6032-6033"
+        - "42000-42004"
+
+  dflt-gcp-proxysql:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-mysql
+      sourceRanges:
+      sourceServiceAccounts:
+      sourceTags:
+      - ads-proxysql
+      allow:
+      - protocol: tcp
+        ports:
+        - "3306"
+
+  dflt-gcp-app-server-proxysql:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-proxysql
+      sourceRanges:
+      sourceServiceAccounts:
+      sourceTags:
+      - ads-proxysql-client
+      allow:
+      - protocol: tcp
+        ports:
+        - "6033"
+
+  dflt-gcp-filebeat-kibana-sec:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-msp-cns-sec
+      sourceRanges:
+      - 10.184.0.0/13
+      - 10.206.0.0/15
+      - 10.208.0.0/16
+      sourceServiceAccounts:
+      sourceTags:
+      - ads-msp-mon-sec
+      allow:
+      - protocol: tcp
+        ports:
+        - "9200"
+
+  dflt-gcp-inventory-sync-sec:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-msp-cns-sec
+      sourceRanges:
+      - 10.184.0.0/13
+      - 10.206.0.0/15
+      - 10.208.0.0/16
+      sourceServiceAccounts:
+      sourceTags:
+      - ads-msp-mon-sec
+      allow:
+      - protocol: tcp
+        ports:
+        - "8443"
+
+  dflt-gcp-ssh-deployment-sec:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-pmm-client-sec
+      sourceRanges:
+      sourceServiceAccounts:
+      sourceTags:
+      - ads-msp-mon-sec
+      allow:
+      - protocol: tcp
+        ports:
+        - "22"
+  dflt-gcp-prometheus-metric-sec:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-proxysql-sec
+      sourceRanges:
+      sourceServiceAccounts:
+      sourceTags:
+      - ads-msp-mon-sec
+      allow:
+      - protocol: tcp
+        ports:
+        - "6032-6033"
+        - "42000-42004"
+  dflt-gcp-proxysql-mysql-sec:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-mysql-sec
+      sourceRanges:
+      sourceServiceAccounts:
+      sourceTags:
+      - ads-proxysql-sec
+      allow:
+      - protocol: tcp
+        ports:
+        - "3306"
+  dflt-gcp-proxysql-query-sec:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-proxysql-sec
+      sourceRanges:
+      sourceServiceAccounts:
+      sourceTags:
+      - ads-proxysql-client-sec
+      allow:
+      - protocol: tcp
+        ports:
+        - "6033"
+  dflt-gcp-nagios-metric-sec:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-pmm-client-sec
+      sourceRanges:
+      sourceServiceAccounts:
+      sourceTags:
+      - ads-pmm-server-sec
+      allow:
+      - protocol: tcp
+        ports:
+        - "5666"
+        - "42000-42004"
+  dflt-gcp-metric-uploader-sec:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - ads-pmm-server-sec
+      sourceRanges:
+      sourceServiceAccounts:
+      sourceTags:
+      - ads-pmm-client-sec
+      allow:
+      - protocol: tcp
+        ports:
+        - "443"
+        - "5667"
+        - "8443"
+        - "9093"
+  dflt-gcp-eunomia-netx-cluster:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      sourceRanges:
+      - 10.1.43.26/32
+      - 10.7.33.1/32
+      - 10.7.33.2/32
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "22"
+        - "80"
+        - "443"
+  dflt-gcp-github-webhook:
+    priority: 900
+    direction: INGRESS
+    description:
+    disabled: false
+    logging: false
+    rule:
+      destinationRanges:
+      targetServiceAccounts:
+      targetTags:
+      - cicd-ent-tools
+      sourceRanges:
+      - 10.1.43.26/32
+      - 10.7.33.1/32
+      - 10.7.33.2/32
+      sourceServiceAccounts:
+      sourceTags:
+      allow:
+      - protocol: tcp
+        ports:
+        - "443"
+        - "8443"

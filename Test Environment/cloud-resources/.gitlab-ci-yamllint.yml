@@ -1,0 +1,14 @@
+yamllint:
+  stage: data-validation
+  image: registry.gitlab.com/pipeline-components/yamllint:latest
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  needs: []
+  script:
+    - yamllint --version
+    - >
+      if [[ -f ".yamllint" ]] && [[ -f ".yamllint.yaml" ]] && [[ -f ".yamllint.yml" ]]; then
+        yamllint . --no-warnings
+      else
+        yamllint -d relaxed . --no-warnings
+      fi

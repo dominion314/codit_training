@@ -1,0 +1,2 @@
+PyYAML==5.3.1
+HiYaPyCo==0.4.16

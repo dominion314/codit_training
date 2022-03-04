@@ -1,0 +1,10 @@
+---
+iamPolicyMembers:
+  groupsByEmail:
+    gcp-eta-devops-admin@kohls.com:
+      roles:
+      - iam.serviceAccountKeyAdmin
+  serviceAccountsByEmail:
+    exterro-prd@kohls-etcc-exterro-prd.iam.gserviceaccount.com:
+      roles:
+      - iam.serviceAccountUser

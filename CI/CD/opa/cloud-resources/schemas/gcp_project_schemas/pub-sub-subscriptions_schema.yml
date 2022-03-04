@@ -1,0 +1,39 @@
+---
+pubSubSubscriptions:
+  type: 'dict'
+  required: false
+  keysrules:
+    type: 'string' #TODO: define regex for pub sub name
+  valuesrules:
+    type: dict
+    schema:
+      labels:
+        type: 'dict'
+        required: false
+        keysrules:
+          type: 'string'
+          regex: '^[0-9a-z-]+'
+        valuesrules:
+          type: 'string'
+          regex: '^[0-9a-z-]+'
+      topicName:
+        type: 'string' #TODO: define regex for topic name
+        required: true
+      ackDeadlineSeconds:
+        type: 'integer'
+        required: false
+      messageRetentionDuration:
+        type: 'string'
+        required: false
+        regex: '^\d+s$'
+      retainAckedMessages:
+        type: 'boolean'
+        required: false
+      expirationPolicy:
+        type: 'dict'
+        required: false
+        schema:
+          ttl:
+            required: true
+            type: 'string'
+            regex: '^\d+(.?\d?\d?)s$'

@@ -1,0 +1,83 @@
+{# This template is a duplicate of another, however it includes #}
+{# fixes for computeAddress naming.  Both templates can be used #}
+{# but only this one can scale beyond 1 cloud nat per region. #}
+
+{%- if vpcs is defined %}
+{%-   for vpc_name, vpc_def in vpcs.items() %}
+{%-     if vpc_def.routerDef is defined %}
+{%-       for router_name, router_def in vpc_def.routerDef.items() %}
+{%-         if router_def.cloudNat is defined %}
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeRouterNAT
+metadata:
+  labels:
+    billing-dept-id: "{{ billingDeptId }}"
+  name: "{{ router_def.cloudNat.name }}"
+  namespace: "gcp-{{ project.name }}"
+{%- if project.deletionProtect | default(true, true) %}
+{%-   if router_def.cloudNat.deletionProtect | default(true, true) %}
+  annotations:
+    cnrm.cloud.google.com/deletion-policy: abandon
+{%-   endif %}
+{%- endif %}
+spec:
+  region: "{{ router_def.region }}"
+  logConfig:
+    enable: {{ router_def.cloudNat.logConfig.enable | default(false, true) }}
+    filter: {{ router_def.cloudNat.logConfig.filter | default(NAT_DEFAULTS.filter, true) }} 
+{%-           if router_def.cloudNat.manualAddresses is defined %}
+  natIpAllocateOption: MANUAL_ONLY
+  natIps:
+{%-             for n in range(router_def.cloudNat.manualAddresses) %}
+  - name: "{{ router_def.cloudNat.name }}-addr-{{ n+1 }}"
+    namespace: gcp-{{project.name}}
+{%-             endfor %}
+{%-           else %}
+  natIpAllocateOption: AUTO_ONLY
+{%-           endif %}
+  routerRef:
+    name: "{{ router_name }}"
+    namespace: "gcp-{{ project.name }}"
+  sourceSubnetworkIpRangesToNat: LIST_OF_SUBNETWORKS
+  subnetwork:
+{%-           if vpc_def.subnets is defined %}
+{%-             for subnet_name,subnet_def in vpc_def.subnets.items() %}
+{%-               if subnet_def.natRouter is defined %}
+{%-                 if subnet_def.natRouter == router_name %}
+    - sourceIpRangesToNat: ['ALL_IP_RANGES']
+      subnetworkRef:
+        name: "{{ subnet_name }}"
+        namespace: "gcp-{{ project.name }}"
+{%-                 endif %}
+{%-               endif %}
+{%-             endfor %}
+{%-           endif %}
+  minPortsPerVm: {{ router_def.cloudNat.min_ports_per_vm | default(NAT_DEFAULTS.minPortsPerVm,true) }}
+  tcpEstablishedIdleTimeoutSec: {{ router_def.cloudNat.tcp_est_timeout | default(NAT_DEFAULTS.tcpEstablishedIdleTimeoutSec,true) }}
+  tcpTransitoryIdleTimeoutSec: {{ router_def.cloudNat.tcp_trans_timeout | default(NAT_DEFAULTS.tcpTransitoryIdleTimeoutSec,true) }}
+  udpIdleTimeoutSec: {{ router_def.cloudNat.udp_timeout | default(NAT_DEFAULTS.udpIdleTimeoutSec,true) }}
+  icmpIdleTimeoutSec: {{ router_def.cloudNat.icmp_timeout | default(NAT_DEFAULTS.icmpIdleTimeoutSec,true) }}
+  enableEndpointIndependentMapping: {{ router_def.cloudNat.enableEndpointIndependentMapping | default(false, true) }}
+---
+{%-           if router_def.cloudNat.manualAddresses is defined %}
+{%-             for n in range(router_def.cloudNat.manualAddresses) %}
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeAddress
+metadata:
+  name: "{{ router_def.cloudNat.name }}-addr-{{ n+1 }}"
+  labels:
+    billing-dept-id: "{{ billingDeptId }}"
+  namespace: "gcp-{{ project.name }}"
+spec:
+  addressType: EXTERNAL
+  description: CLOUD-NAT EXT IP {{ n+1 }}
+  location: "{{ router_def.region }}"
+  ipVersion: IPV4
+---
+{%-             endfor %}
+{%-           endif %}
+{%-         endif %}
+{%-       endfor %}
+{%-     endif %}
+{%-   endfor %}
+{%- endif %}

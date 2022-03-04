@@ -1,0 +1,33 @@
+---
+project:
+  name: kohlsdev-cpa-inspec
+  managed: true
+  folderId: "922938220950"
+  billingAccount: "00C36A-CD0BDB-E543D0"
+  labels: # Only hyphens (-), underscores (_), lowercase characters, and numbers are allowed as characters in labels
+    billing-dept-id: "90586"
+    project-manager: wizard-of-oz
+    devops-lead: hello-kitty
+    environment-type: lle
+    env: inspec-test
+    just-another-label: power-puff-girls
+
+serviceAPIs:
+  cloudresourcemanager.googleapis.com:
+    deletionPolicy: abandon
+    disableDependentServices: false
+  storage-api.googleapis.com:
+    deletionPolicy: abandon
+    disableDependentServices: false
+  storage-component.googleapis.com:
+    deletionPolicy: abandon
+    disableDependentServices: false
+  stackdriver.googleapis.com:
+    deletionPolicy: abandon
+    disableDependentServices: false
+  compute.googleapis.com:
+    deletionPolicy: abandon
+    disableDependentServices: false
+  bigquery-json.googleapis.com:
+    deletionPolicy: abandon
+    disableDependentServices: false

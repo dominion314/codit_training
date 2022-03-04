@@ -1,0 +1,5 @@
+---
+vpcs:
+  seed-nx-lle:
+    routingMode: GLOBAL
+    autoCreateSubnets: false

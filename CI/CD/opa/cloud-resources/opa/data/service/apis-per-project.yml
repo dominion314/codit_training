@@ -1,0 +1,323 @@
+---
+service:
+  allowedAPIsPerProject:
+    kohls-cce-dbaas-lle:
+    - cloudtrace.googleapis.com
+    - container.googleapis.com
+    - datamigration.googleapis.com
+    - oslogin.googleapis.com
+    - redis.googleapis.com
+    - sqladmin.googleapis.com
+    - sql-component.googleapis.com
+    kohls-cce-dbaas-prd:
+    - cloudresourcemanager.googleapis.com
+    - container.googleapis.com
+    - datamigration.googleapis.com
+    - oslogin.googleapis.com
+    - redis.googleapis.com
+    - sqladmin.googleapis.com
+    - sql-component.googleapis.com
+    kohls-cce-openshift-lle:
+    - computescanning.googleapis.com
+    - file.googleapis.com
+    - iap.googleapis.com
+    - oslogin.googleapis.com
+    - containeranalysis.googleapis.com
+    kohls-cce-openshift-prd:
+    - computescanning.googleapis.com
+    - file.googleapis.com
+    - iap.googleapis.com
+    - osconfig.googleapis.com
+    - oslogin.googleapis.com
+    - containeranalysis.googleapis.com
+    kohls-devexp-tools-lle:
+    - cloudtasks.googleapis.com
+    - bigqueryconnection.googleapis.com
+    kohls-eta-hr-lle:
+    - calendar-json.googleapis.com
+    kohls-eta-hr-prd:
+    - calendar-json.googleapis.com
+    kohls-cx-sremgmt-prd:
+    - cloudresourcemanager.googleapis.com
+    kohls-cx-xpn-lle:
+    - oslogin.googleapis.com
+    - container.googleapis.com
+    kohls-cx-xpn-prd:
+    - oslogin.googleapis.com
+    - cloudresourcemanager.googleapis.com
+    - container.googleapis.com
+    kohls-infra-xpn-lle:
+    - oslogin.googleapis.com
+    - container.googleapis.com
+    kohls-infra-xpn-prd:
+    - oslogin.googleapis.com
+    - cloudresourcemanager.googleapis.com
+    - container.googleapis.com
+    kohls-platform-maas-prd:
+    - oslogin.googleapis.com
+    - cloudresourcemanager.googleapis.com
+    kohls-platform-netservices-lle:
+    - oslogin.googleapis.com
+    kohls-platform-netservices-prd:
+    - oslogin.googleapis.com
+    - cloudresourcemanager.googleapis.com
+    kohls-cpa-xpn-lle:
+    - networkmanagement.googleapis.com
+    - firewallinsights.googleapis.com
+    kohls-cpe-cne-lle:
+    - oslogin.googleapis.com
+    - container.googleapis.com
+    - networkmanagement.googleapis.com
+    - firewallinsights.googleapis.com
+    kohls-cpe-image-mgmt-lle:
+    - appengine.googleapis.com
+    kohls-cpe-image-mgmt-prd:
+    - appengine.googleapis.com
+    kohls-cpe-e2edemo-lle:
+    - oslogin.googleapis.com
+    kohls-cpe-e2edemoxpn-lle:
+    - oslogin.googleapis.com
+    kohls-cpe-xpn-lle:
+    - networkmanagement.googleapis.com
+    - firewallinsights.googleapis.com
+    kohls-credit-ia-lle:
+    - oslogin.googleapis.com
+    kohls-eta-xpn-lle:
+    - networkmanagement.googleapis.com
+    kohls-kre-xpn-lle:
+    - networkmanagement.googleapis.com
+    kohls-iaas-xpn-prd:
+    - runtimeconfig.googleapis.com
+    kohls-platform-dbaas-ops:
+    - cloudtrace.googleapis.com
+    - container.googleapis.com
+    - datamigration.googleapis.com
+    - oslogin.googleapis.com
+    - redis.googleapis.com
+    - sqladmin.googleapis.com
+    - sql-component.googleapis.com
+    - secretmanager.googleapis.com
+    - appengine.googleapis.com
+    kohls-platform-dbaas-lle:
+    - cloudtrace.googleapis.com
+    - container.googleapis.com
+    - datamigration.googleapis.com
+    - oslogin.googleapis.com
+    - redis.googleapis.com
+    - sqladmin.googleapis.com
+    - sql-component.googleapis.com
+    kohls-platform-dbaas-prd:
+    - cloudresourcemanager.googleapis.com
+    - container.googleapis.com
+    - datamigration.googleapis.com
+    - oslogin.googleapis.com
+    - redis.googleapis.com
+    - sqladmin.googleapis.com
+    - sql-component.googleapis.com
+    kohls-platform-maas-lle:
+    - oslogin.googleapis.com
+    kohls-platform-manishdemo-lle:
+    - oslogin.googleapis.com
+    kohls-platform-openshift-lle:
+    - oslogin.googleapis.com
+    - cloudprofiler.googleapis.com
+    - container.googleapis.com
+    - source.googleapis.com
+    - networkmanagement.googleapis.com
+    - computescanning.googleapis.com
+    - iap.googleapis.com
+    - file.googleapis.com
+    - cloudtrace.googleapis.com
+    - containeranalysis.googleapis.com
+    kohls-platform-openshift-ops:
+    - oslogin.googleapis.com
+    - cloudkms.googleapis.com
+    - networkmanagement.googleapis.com
+    - cloudbuild.googleapis.com
+    - iap.googleapis.com
+    - computescanning.googleapis.com
+    - container.googleapis.com
+    - containeranalysis.googleapis.com
+    - file.googleapis.com
+    - firebaserules.googleapis.com
+    - dns.googleapis.com
+    - bigquerydatatransfer.googleapis.com
+    - source.googleapis.com
+    - cloudtrace.googleapis.com
+    kohls-platform-openshift-prd:
+    - oslogin.googleapis.com
+    - cloudprofiler.googleapis.com
+    - container.googleapis.com
+    - source.googleapis.com
+    - networkmanagement.googleapis.com
+    - computescanning.googleapis.com
+    - iap.googleapis.com
+    - file.googleapis.com
+    - cloudtrace.googleapis.com
+    - containeranalysis.googleapis.com
+    - osconfig.googleapis.com
+    kohls-platform-xpn-lle:
+    - oslogin.googleapis.com
+    - servicenetworking.googleapis.com
+    - firewallinsights.googleapis.com
+    kohls-platform-xpn-prd:
+    - oslogin.googleapis.com
+    - cloudresourcemanager.googleapis.com
+    - firewallinsights.googleapis.com
+    kohls-platformops-xpn-lle:
+    - oslogin.googleapis.com
+    - servicenetworking.googleapis.com
+    kohls-sec-engineering-lle:
+    - oslogin.googleapis.com
+    - iap.googleapis.com
+    - container.googleapis.com
+    kohls-sec-engineering-prd:
+    - oslogin.googleapis.com
+    - container.googleapis.com
+    - cloudresourcemanager.googleapis.com
+    - iap.googleapis.com
+    kohls-sec-xpn-lle:
+    - oslogin.googleapis.com
+    - container.googleapis.com
+    kohls-sec-xpn-prd:
+    - oslogin.googleapis.com
+    - cloudresourcemanager.googleapis.com
+    - container.googleapis.com
+    kohls-rapidpaas-sbx:
+    - container.googleapis.com
+    kohls-iaas-lle:
+    - bigqueryconnection.googleapis.com
+    - run.googleapis.com
+    - recommender.googleapis.com
+    kohls-sec-vault-lle:
+    - cloudkms.googleapis.com
+    - privateca.googleapis.com
+    - iap.googleapis.com
+    kohls-sec-vault-prd:
+    - cloudkms.googleapis.com
+    - privateca.googleapis.com
+    kohls-bda-dse-lle:
+    - clouderrorreporting.googleapis.com
+    - appengineflex.googleapis.com
+    - appengine.googleapis.com
+    - pubsublite.googleapis.com
+    - run.googleapis.com
+    - datafusion.googleapis.com
+    - datamigration.googleapis.com
+    - container.googleapis.com
+    - metastore.googleapis.com
+    kohls-bda-dse-prd:
+    - appengineflex.googleapis.com
+    - datamigration.googleapis.com
+    - pubsublite.googleapis.com
+    - clouderrorreporting.googleapis.com
+    - datafusion.googleapis.com
+    - appengine.googleapis.com
+    - container.googleapis.com
+    - metastore.googleapis.com
+    - run.googleapis.com
+    kohls-etcc-poppulo-prd:
+    - admin.googleapis.com
+    kohls-etcc-exterro-lle:
+    - vault.googleapis.com
+    - admin.googleapis.com
+    - gmail.googleapis.com
+    - tasks.googleapis.com
+    - contacts.googleapis.com
+    kohls-etcc-exterro-prd:
+    - vault.googleapis.com
+    - admin.googleapis.com
+    - gmail.googleapis.com
+    - tasks.googleapis.com
+    - contacts.googleapis.com
+    kohls-merch-in-lle:
+    - automl.googleapis.com
+    - redis.googleapis.com
+    - iap.googleapis.com
+    - translate.googleapis.com
+    - bigqueryconnection.googleapis.com
+    - oslogin.googleapis.com
+    - sqladmin.googleapis.com
+    - language.googleapis.com
+    - notebooks.googleapis.com
+    - run.googleapis.com
+    - vision.googleapis.com
+    - aiplatform.googleapis.com
+    - container.googleapis.com
+    - sourcerepo.googleapis.com
+    - cloudtasks.googleapis.com
+    - firebaserules.googleapis.com
+    - ml.googleapis.com
+    - replicapoolupdater.googleapis.com
+    kohls-merch-in-prd:
+    - automl.googleapis.com
+    - container.googleapis.com
+    - dataproc-control.googleapis.com
+    - drive.googleapis.com
+    - language.googleapis.com
+    - ml.googleapis.com
+    - oslogin.googleapis.com
+    - replicapoolupdater.googleapis.com
+    - source.googleapis.com
+    - stackdriverprovisioning.googleapis.com
+    - translate.googleapis.com
+    - vision.googleapis.com
+    kohls-bda-lle:
+    - automl.googleapis.com
+    - language.googleapis.com
+    kohls-eta-finance-lle:
+    - calendar-json.googleapis.com
+    - container.googleapis.com
+    - drive.googleapis.com
+    - gmail.googleapis.com
+    - oslogin.googleapis.com
+    - replicapoolupdater.googleapis.com
+    - source.googleapis.com
+    kohls-eta-finance-prd:
+    - calendar-json.googleapis.com
+    - container.googleapis.com
+    - drive.googleapis.com
+    - gmail.googleapis.com
+    - oslogin.googleapis.com
+    - replicapoolupdater.googleapis.com
+    - source.googleapis.com
+    kohls-infra-aiops-prd:
+    - aiplatform.googleapis.com
+    kohls-ocf-lle:
+    - cloudfunctions.googleapis.com
+    - cloudapis.googleapis.com
+    - cloudscheduler.googleapis.com
+    - monitoring.googleapis.com
+    - pubsub.googleapis.com
+    - cloudbuild.googleapis.com
+    - cloudresourcemanager.googleapis.com
+    - secretmanager.googleapis.com
+    kohls-scf-lle:
+    - cloudfunctions.googleapis.com
+    - cloudapis.googleapis.com
+    - cloudscheduler.googleapis.com
+    - monitoring.googleapis.com
+    - pubsub.googleapis.com
+    - cloudbuild.googleapis.com
+    - cloudresourcemanager.googleapis.com
+    - secretmanager.googleapis.com
+    kohls-ocf-prd:
+    - cloudfunctions.googleapis.com
+    - cloudapis.googleapis.com
+    - cloudscheduler.googleapis.com
+    - monitoring.googleapis.com
+    - pubsub.googleapis.com
+    - cloudbuild.googleapis.com
+    - cloudresourcemanager.googleapis.com
+    - secretmanager.googleapis.com
+    kohls-scf-prd:
+    - cloudfunctions.googleapis.com
+    - cloudapis.googleapis.com
+    - cloudscheduler.googleapis.com
+    - monitoring.googleapis.com
+    - pubsub.googleapis.com
+    - cloudbuild.googleapis.com
+    - cloudresourcemanager.googleapis.com
+    - secretmanager.googleapis.com
+    kohls-bda-prd:
+    - googleads.googleapis.com

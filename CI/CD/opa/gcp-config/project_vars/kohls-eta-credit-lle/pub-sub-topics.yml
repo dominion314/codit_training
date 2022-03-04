@@ -1,0 +1,8 @@
+---
+pubSubTopics:
+  kohls-eta-mft-lle-lle-topic:
+    deletionProtect: false
+  stop-instance-event:
+    deletionProtect: false
+  start-instance-event:
+    deletionProtect: false

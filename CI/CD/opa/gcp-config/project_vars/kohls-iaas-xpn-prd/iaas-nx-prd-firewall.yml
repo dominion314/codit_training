@@ -1,0 +1,4 @@
+---
+vpcs:
+  iaas-nx-prd:
+    firewallRules:

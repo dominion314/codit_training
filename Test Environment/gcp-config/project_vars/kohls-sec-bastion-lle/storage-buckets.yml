@@ -1,0 +1,10 @@
+---
+storageBuckets:
+  kohls-sec-bastion-lle-terraform-states:
+    storageClass: MULTI_REGIONAL
+    location: US
+    bucketPolicyOnly: false
+  okta-asa-reports-lle:
+    storageClass: MULTI_REGIONAL
+    location: US
+    bucketPolicyOnly: false

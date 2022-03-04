@@ -1,0 +1,6 @@
+---
+vpcs:
+  demo2-vpc:
+
+    vpcName: demo2-vpc
+    routingMode: GLOBAL

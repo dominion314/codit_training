@@ -1,0 +1,67 @@
+---
+pubSubTopics:
+  required: false
+  type: 'dict'
+  keysrules:
+    type: 'string'
+  valuesrules:
+    type: 'dict'
+    schema:
+      labels:
+        required: false
+        type: 'dict'
+        keysrules:
+          type: 'string'
+          regex: '^[0-9a-z-]+'
+        valuesrules:
+          type: 'string'
+          regex: '^[0-9a-z-]+'
+      permissions:
+        required: false
+        type: 'dict'
+        schema:
+          usersByEmail:
+            type: 'dict'
+            required: false
+            keysrules:
+              type: 'string'
+              regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+            valuesrules:
+              type: 'dict'
+              schema:
+                roles:
+                  required: true
+                  type: 'list'
+                  schema:
+                    type: 'string'
+                    #allowed: [] # TODO: define proper list of roles
+          groupsByEmail:
+            type: 'dict'
+            required: false
+            keysrules:
+              type: 'string'
+              regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+            valuesrules:
+              type: 'dict'
+              schema:
+                roles:
+                  required: false
+                  type: 'list'
+                  schema:
+                    type: 'string'
+                    #allowed: [] #TODO: define proper list of roles
+          serviceAccountsByEmail:
+            type: 'dict'
+            required: false
+            keysrules:
+              type: 'string'
+              regex: '.*iam\.gserviceaccount\.com'
+            valuesrules:
+              type: 'dict'
+              schema:
+                roles:
+                  required: false
+                  type: 'list'
+                  schema:
+                    type: 'string'
+                    #allowed: [] #TODO: define proper list of roles

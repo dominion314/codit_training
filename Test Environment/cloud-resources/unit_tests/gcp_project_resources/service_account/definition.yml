@@ -1,0 +1,4 @@
+---
+kccTemplates: ['../../../templates/gcp-project/iam-service-accounts.yml.j2']
+inspecControls: ['../../../inspec/controls/IAMServiceAccounts.rb']
+validationDelaySecs: 60

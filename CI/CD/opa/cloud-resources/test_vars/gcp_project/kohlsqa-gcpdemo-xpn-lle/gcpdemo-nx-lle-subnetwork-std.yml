@@ -1,0 +1,16 @@
+---
+vpcs:
+  gcpdemo-nx-lle:
+    subnets:
+
+      gcpdemo-nx-lle-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 192.168.13.128/27
+
+      gcpdemo-nx-lle-test-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 192.168.16.128/27

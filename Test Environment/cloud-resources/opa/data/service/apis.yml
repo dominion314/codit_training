@@ -1,0 +1,342 @@
+---
+service:
+  allowedAPIs:
+    nonprd:
+    # Service Networking
+    - servicenetworking.googleapis.com
+    # Storage Component
+    - storage-component.googleapis.com
+    # BigQuery Data Transfer API
+    - bigquerydatatransfer.googleapis.com
+    # BigQuery API
+    - bigquery.googleapis.com
+    # BigQuery Reservation API
+    - bigqueryreservation.googleapis.com
+    # Analytics API
+    - analytics.googleapis.com
+    # Firebase Services API
+    - firebase.googleapis.com
+    # Cloud Bigtable API
+    - bigtable.googleapis.com
+    # Cloud Firestore API
+    - firestore.googleapis.com
+    # Cloud Bigtable Admin API
+    - bigtableadmin.googleapis.com
+    # Firebase In-App Messaging API
+    - firebaseinappmessaging.googleapis.com
+    # Google Cloud Messaging
+    - googlecloudmessaging.googleapis.com
+    # BigQuery API
+    - bigquery-json.googleapis.com
+    # Cloud Bigtable Table Admin API
+    - bigtabletableadmin.googleapis.com
+    # Cloud Asset
+    - cloudasset.googleapis.com
+    # Cloud Billing API
+    - cloudbilling.googleapis.com
+    # Cloud Functions API
+    - cloudfunctions.googleapis.com
+    # Cloud Monitoring API
+    - cloudmonitoring.googleapis.com
+    # Dataflow API
+    - dataflow.googleapis.com
+    # Firebase Cloud Messaging API
+    - fcm.googleapis.com
+    # Cloud Build API
+    - cloudbuild.googleapis.com
+    # Container Registry API
+    - containerregistry.googleapis.com
+    # Cloud Dataproc API
+    - dataproc.googleapis.com
+    # Dialogflow API
+    - dialogflow.googleapis.com
+    # Datastore API
+    - datastore.googleapis.com
+    # Google Cloud DNS API
+    - dns.googleapis.com
+    # Cloud Network Performance Monitoring AP
+    - cloudlatencytest.googleapis.com
+    # Cloud Pub/Sub API
+    - pubsub.googleapis.com
+    # Storage Transfer API
+    - storagetransfer.googleapis.com
+    # Google Sheets API
+    - sheets.googleapis.com
+    # Google Cloud Storage JSON API
+    - storage-api.googleapis.com
+    # Places API
+    - places-backend.googleapis.com
+    # Cloud Spanner API
+    - spanner.googleapis.com
+    # Cloud Logging API
+    - logging.googleapis.com
+    # Compute Engine API
+    - compute.googleapis.com
+    # Stackdriver API
+    - stackdriver.googleapis.com
+    # Cloud Storage API
+    - storage-component.googleapis
+    # Cloud Monitoring API
+    - monitoring.googleapis.com
+    # Cloud Resource Manager API
+    - cloudresourcemanager.googleapis.com
+    # Compute Engine Instance Groups API
+    - resourceviews.googleapis.com
+    # Service Managment API
+    - servicemanagement.googleapis.com
+    # Service useage API
+    - serviceusage.googleapis.com
+    # Cloud API
+    - cloudapis.googleapis.com
+    # IAM Service Account Credentials API
+    - iamcredentials.googleapis.com
+    # Deployment Manager APIs
+    - deploymentmanager.googleapis.com
+    # Cloud Trace API
+    - cloudtrace.googleapis.cloudresourcemanager
+    # Cloud Scheduler API
+    - cloudscheduler.googleapis.com
+    # Identity and Access Management (IAM) API
+    - iam.googleapis.com
+    # Compute Engine Instance Group Manager API
+    - replicapool.googleapis.com
+    # BigQuery API
+    - bigquerystorage.googleapis.com
+    # OS Config API
+    - osconfig.googleapis.com
+    # Firewall Insights API
+    - firewallinsights.googleapis.com
+    # Network Management API
+    - networkmanagement.googleapis.com
+    # Network Topology API
+    - networktopology.googleapis.com
+    # Google Network Security Services
+    - networksecurity.googleapis.com
+    # VM Migration API
+    - vmmigration.googleapis.com
+    # Cloudtrace Google API
+    - cloudtrace.googleapis.com
+    prd:
+    # Service Networking
+    - servicenetworking.googleapis.com
+    # Google Network Security Services
+    - networksecurity.googleapis.com
+    # Storage Component
+    - storage-component.googleapis.com
+    # BigQuery Data Transfer API
+    - bigquerydatatransfer.googleapis.com
+    # BigQuery API
+    - bigquery.googleapis.com
+    # BigQuery Reservation API
+    - bigqueryreservation.googleapis.com
+    # Analytics API
+    - analytics.googleapis.com
+    # Firebase Services API
+    - firebase.googleapis.com
+    # Cloud Bigtable API
+    - bigtable.googleapis.com
+    # Cloud Firestore API
+    - firestore.googleapis.com
+    # Cloud Bigtable Admin API
+    - bigtableadmin.googleapis.com
+    # Firebase In-App Messaging API
+    - firebaseinappmessaging.googleapis.com
+    # Google Cloud Messaging
+    - googlecloudmessaging.googleapis.com
+    # BigQuery API
+    - bigquery-json.googleapis.com
+    # Cloud Bigtable Table Admin API
+    - bigtabletableadmin.googleapis.com
+    # Cloud Asset
+    - cloudasset.googleapis.com
+    # Cloud Billing API
+    - cloudbilling.googleapis.com
+    # Cloud Functions API
+    - cloudfunctions.googleapis.com
+    # Cloud Monitoring API
+    - cloudmonitoring.googleapis.com
+    # Dataflow API
+    - dataflow.googleapis.com
+    # Firebase Cloud Messaging API
+    - fcm.googleapis.com
+    # Cloud Build API
+    - cloudbuild.googleapis.com
+    # Container Registry API
+    - containerregistry.googleapis.com
+    # Cloud Dataproc API
+    - dataproc.googleapis.com
+    # Dialogflow API
+    - dialogflow.googleapis.com
+    # Compute Engine API
+    - compute.googleapis.com
+    # Cloud Datastore API
+    - datastore.googleapis.com
+    # Google Cloud DNS API
+    - dns.googleapis.com
+    # Cloud Network Performance Monitoring AP
+    - cloudlatencytest.googleapis.com
+    # Cloud Pub/Sub API
+    - pubsub.googleapis.com
+    # Storage Transfer API
+    - storagetransfer.googleapis.com
+    # Google Sheets API
+    - sheets.googleapis.com
+    # Google Cloud Storage JSON API
+    - storage-api.googleapis.com
+    # Places API
+    - places-backend.googleapis.com
+    # Cloud Spanner API
+    - spanner.googleapis.com
+    # Cloud Logging API
+    - logging.googleapis.com
+    # Stackdriver API
+    - stackdriver.googleapis.com
+    # Cloud Storage API
+    - storage-component.googleapis
+    # Cloud Monitoring API
+    - monitoring.googleapis.com
+    # Cloud Resource Manager API
+    - cloudresourcemanager.googleapis.com
+    # Compute Engine Instance Groups API
+    - resourceviews.googleapis.com
+    # Service Managment API
+    - servicemanagement.googleapis.com
+    # Service useage API
+    - serviceusage.googleapis.com
+    # Cloud API
+    - cloudapis.googleapis.com
+    # IAM Service Account Credentials API
+    - iamcredentials.googleapis.com
+    # Deployment Manager APIs
+    - deploymentmanager.googleapis.com
+    # Cloud Trace API
+    - cloudtrace.googleapis.com
+    # Cloud Scheduler API
+    - cloudscheduler.googleapis.com
+    # Identity and Access Management (IAM) API
+    - iam.googleapis.com
+    # Compute Engine Instance Group Manager API
+    - replicapool.googleapis.com
+    # BigQuery API
+    - bigquerystorage.googleapis.com
+    # Firewall Insights API
+    - firewallinsights.googleapis.com
+    # Network Management API
+    - networkmanagement.googleapis.com
+    # Network Topology API
+    - networktopology.googleapis.com
+    sbx:
+    # Service Networking
+    - servicenetworking.googleapis.com
+    # Google Network Security Services
+    - networksecurity.googleapis.com
+    # Storage Component
+    - storage-component.googleapis.com
+    # BigQuery Data Transfer API
+    - bigquerydatatransfer.googleapis.com
+    # BigQuery API
+    - bigquery.googleapis.com
+    # BigQuery Reservation API
+    - bigqueryreservation.googleapis.com
+    # Analytics API
+    - analytics.googleapis.com
+    # Firebase Services API
+    - firebase.googleapis.com
+    # Cloud Bigtable API
+    - bigtable.googleapis.com
+    # Cloud Firestore API
+    - firestore.googleapis.com
+    # Cloud Bigtable Admin API
+    - bigtableadmin.googleapis.com
+    # Firebase In-App Messaging API
+    - firebaseinappmessaging.googleapis.com
+    # Google Cloud Messaging
+    - googlecloudmessaging.googleapis.com
+    # BigQuery API
+    - bigquery-json.googleapis.com
+    # Cloud Bigtable Table Admin API
+    - bigtabletableadmin.googleapis.com
+    # Cloud Asset
+    - cloudasset.googleapis.com
+    # Cloud Billing API
+    - cloudbilling.googleapis.com
+    # Cloud Functions API
+    - cloudfunctions.googleapis.com
+    # Cloud Monitoring API
+    - cloudmonitoring.googleapis.com
+    # Dataflow API
+    - dataflow.googleapis.com
+    # Firebase Cloud Messaging API
+    - fcm.googleapis.com
+    # Cloud Build API
+    - cloudbuild.googleapis.com
+    # Container Registry API
+    - containerregistry.googleapis.com
+    # Cloud Dataproc API
+    - dataproc.googleapis.com
+    # Dialogflow API
+    - dialogflow.googleapis.com
+    # Datastore API
+    - datastore.googleapis.com
+    # Google Cloud DNS API
+    - dns.googleapis.com
+    # Cloud Network Performance Monitoring AP
+    - cloudlatencytest.googleapis.com
+    # Cloud Pub/Sub API
+    - pubsub.googleapis.com
+    # Storage Transfer API
+    - storagetransfer.googleapis.com
+    # Google Sheets API
+    - sheets.googleapis.com
+    # Google Cloud Storage JSON API
+    - storage-api.googleapis.com
+    # Places API
+    - places-backend.googleapis.com
+    # Cloud Spanner API
+    - spanner.googleapis.com
+    # Cloud Logging API
+    - logging.googleapis.com
+    # Compute Engine API
+    - compute.googleapis.com
+    # Stackdriver API
+    - stackdriver.googleapis.com
+    # Cloud Storage API
+    - storage-component.googleapis
+    # Cloud Monitoring API
+    - monitoring.googleapis.com
+    # Cloud Resource Manager API
+    - cloudresourcemanager.googleapis.com
+    # Compute Engine Instance Groups API
+    - resourceviews.googleapis.com
+    # Service Managment API
+    - servicemanagement.googleapis.com
+    # Service useage API
+    - serviceusage.googleapis.com
+    # Cloud API
+    - cloudapis.googleapis.com
+    # IAM Service Account Credentials API
+    - iamcredentials.googleapis.com
+    # Deployment Manager APIs
+    - deploymentmanager.googleapis.com
+    # Cloud Trace API
+    - cloudtrace.googleapis.cloudresourcemanager
+    # Cloud Scheduler API
+    - cloudscheduler.googleapis.com
+    # Identity and Access Management (IAM) API
+    - iam.googleapis.com
+    # Compute Engine Instance Group Manager API
+    - replicapool.googleapis.com
+    # BigQuery API
+    - bigquerystorage.googleapis.com
+    # OS Config API
+    - osconfig.googleapis.com
+    # Firewall Insights API
+    - firewallinsights.googleapis.com
+    # Network Management API
+    - networkmanagement.googleapis.com
+    # Network Topology API
+    - networktopology.googleapis.com
+    # VM Migration API
+    - vmmigration.googleapis.com
+    # Cloudtrace Google API
+    - cloudtrace.googleapis.com

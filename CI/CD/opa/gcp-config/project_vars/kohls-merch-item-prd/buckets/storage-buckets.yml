@@ -1,0 +1,48 @@
+---
+storageBuckets:
+  kohls-sephora-bucket-prd:
+    versioningEnabled: false
+    deletionProtect: true
+    storageClass: STANDARD
+    location: US
+    labels:
+      app-name: "item-creation"
+    permissions:
+      serviceAccountsByEmail:
+        kdx-svc@kohls-kdx-prd.iam.gserviceaccount.com:
+          roles:
+          - storage.objectCreator
+          - storage.objectViewer
+        item-apps@kohls-merch-item-prd.iam.gserviceaccount.com:
+          roles:
+          - storage.admin
+      groupsByEmail:
+        gcp-merch-pdpl-softwareengineer-admin@kohls.com:
+          roles:
+          - storage.admin
+        gcp-merch-pdpl-softwareengineer-l3@kohls.com:
+          roles:
+          - storage.admin
+  kohls-item-production-integration:
+    versioningEnabled: false
+    deletionProtect: true
+    storageClass: STANDARD
+    location: US
+    labels:
+      app-name: "klink"
+    permissions:
+      serviceAccountsByEmail:
+        mkt-marketplace-prd@kohls-vendor-portal-prd.iam.gserviceaccount.com:
+          roles:
+          - storage.objectCreator
+          - storage.objectViewer
+        item-apps@kohls-merch-item-prd.iam.gserviceaccount.com:
+          roles:
+          - storage.admin
+      groupsByEmail:
+        gcp-merch-pdpl-softwareengineer-admin@kohls.com:
+          roles:
+          - storage.admin
+        gcp-merch-pdpl-softwareengineer-l3@kohls.com:
+          roles:
+          - storage.admin

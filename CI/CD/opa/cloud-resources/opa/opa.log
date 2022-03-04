@@ -1,0 +1,54 @@
+2021-12-11 16:26:27,651  INFO: Loaded OPA validation config
+2021-12-11 16:26:27,652  INFO: All policy checks were OK 
+2021-12-11 16:27:49,728  INFO: Loaded OPA validation config
+2021-12-11 16:27:49,729  INFO: All policy checks were OK 
+2021-12-11 16:28:01,624  INFO: Loaded OPA validation config
+2021-12-11 16:28:01,624  INFO: Processing project data for kohls-cpe-xpn-lle
+2021-12-11 16:28:01,624  INFO: Processing input data for /home/dominion314/Desktop/K_workspace/gcp-config/project_vars/kohls-cpe-xpn-lle
+2021-12-11 16:28:02,036  INFO: Processing policy 'Limit interconnect bandwidth'
+2021-12-11 16:28:02,063  ERROR: Exited with code 1
+2021-12-11 16:28:02,064  INFO: Some of policy checks were not OK
+2021-12-11 16:29:39,555  INFO: Loaded OPA validation config
+2021-12-11 16:29:39,556  INFO: Processing project data for kohls-cpe-xpn-lle
+2021-12-11 16:29:39,556  INFO: Processing input data for /home/dominion314/Desktop/K_workspace/gcp-config/project_vars/kohls-cpe-xpn-lle
+2021-12-11 16:29:39,757  INFO: Processing policy 'Limit interconnect bandwidth'
+2021-12-11 16:29:39,773  ERROR: Exited with code 1
+2021-12-11 16:29:39,774  INFO: Some of policy checks were not OK
+2021-12-11 16:30:39,778  INFO: Loaded OPA validation config
+2021-12-11 16:30:39,778  INFO: All policy checks were OK 
+2021-12-11 16:31:44,282  INFO: Loaded OPA validation config
+2021-12-11 16:31:44,283  INFO: Processing project data for kohls-cpe-xpn-lle
+2021-12-11 16:31:44,283  INFO: Processing input data for /home/dominion314/Desktop/K_workspace/gcp-config/project_vars/kohls-cpe-xpn-lle
+2021-12-11 16:31:44,526  INFO: Processing policy 'Limit interconnect bandwidth'
+2021-12-11 16:31:44,543  ERROR: Exited with code 1
+2021-12-11 16:31:44,543  INFO: Some of policy checks were not OK
+2021-12-11 16:35:32,831  INFO: Loaded OPA validation config
+2021-12-11 16:35:32,831  INFO: Processing project data for kohls-cpe-xpn-lle
+2021-12-11 16:35:32,831  INFO: Processing input data for /home/dominion314/Desktop/K_workspace/gcp-config/project_vars/kohls-cpe-xpn-lle
+2021-12-11 16:35:33,040  INFO: Processing policy 'Limit interconnect bandwidth'
+2021-12-11 16:35:33,057  ERROR: Exited with code 1
+2021-12-11 16:35:33,057  INFO: Some of policy checks were not OK
+2021-12-11 16:35:37,745  INFO: Loaded OPA validation config
+2021-12-11 16:35:37,746  INFO: Processing project data for kohls-cpe-xpn-lle
+2021-12-11 16:35:37,746  INFO: Processing input data for /home/dominion314/Desktop/K_workspace/gcp-config/project_vars/kohls-cpe-xpn-lle
+2021-12-11 16:35:37,968  INFO: Processing policy 'Limit interconnect bandwidth'
+2021-12-11 16:35:37,985  ERROR: Exited with code 1
+2021-12-11 16:35:37,985  INFO: Some of policy checks were not OK
+2021-12-11 16:41:14,242  INFO: Loaded OPA validation config
+2021-12-11 16:41:14,243  INFO: Processing project data for kohls-cpe-xpn-lle
+2021-12-11 16:41:14,243  INFO: Processing input data for /home/dominion314/Desktop/K_workspace/gcp-config/project_vars/kohls-cpe-xpn-lle
+2021-12-11 16:41:14,453  INFO: Processing policy 'Limit interconnect bandwidth'
+2021-12-11 16:41:14,470  ERROR: Exited with code 1
+2021-12-11 16:41:14,470  INFO: Some of policy checks were not OK
+2021-12-11 16:42:08,550  INFO: Loaded OPA validation config
+2021-12-11 16:42:08,550  INFO: Processing project data for kohls-cpe-xpn-lle
+2021-12-11 16:42:08,550  INFO: Processing input data for /home/dominion314/Desktop/K_workspace/gcp-config/project_vars/kohls-cpe-xpn-lle
+2021-12-11 16:42:08,780  INFO: Processing policy 'Limit interconnect bandwidth'
+2021-12-11 16:42:08,808  ERROR: Exited with code 1
+2021-12-11 16:42:08,808  INFO: Some of policy checks were not OK
+2021-12-11 16:43:43,184  INFO: Loaded OPA validation config
+2021-12-11 16:43:43,185  INFO: Processing project data for kohls-cpe-xpn-lle
+2021-12-11 16:43:43,185  INFO: Processing input data for /home/dominion314/Desktop/K_workspace/gcp-config/project_vars/kohls-cpe-xpn-lle
+2021-12-11 16:43:43,370  INFO: Processing policy 'Limit interconnect bandwidth'
+2021-12-11 16:43:43,387  ERROR: Exited with code 1
+2021-12-11 16:43:43,388  INFO: Some of policy checks were not OK

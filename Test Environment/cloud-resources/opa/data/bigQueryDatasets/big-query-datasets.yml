@@ -1,0 +1,4 @@
+---
+bigQueryDatasets:
+  requiredRoles:
+  - bigquery.dataOwner

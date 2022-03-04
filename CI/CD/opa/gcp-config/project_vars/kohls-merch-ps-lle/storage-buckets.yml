@@ -1,0 +1,175 @@
+---
+storageBuckets:
+  consul-apushnov-petro2-consul-backup:
+    storageClass: NEARLINE
+    location: US
+    lifecycleRule:
+    - action:
+        type: Delete
+      condition:
+        age: 14
+    bucketPolicyOnly: false
+  consul-apushnov-test-88-consul-backup:
+    storageClass: NEARLINE
+    location: US
+    lifecycleRule:
+    - action:
+        type: Delete
+      condition:
+        age: 14
+    bucketPolicyOnly: false
+  dataflow-staging-us-central1-80000348469:
+    storageClass: STANDARD
+    location: US-CENTRAL1
+    bucketPolicyOnly: false
+  dataproc-256ffa1c-32bf-4688-aedc-4d1cb4607da5-us-central1:
+    storageClass: STANDARD
+    location: US-CENTRAL1
+    bucketPolicyOnly: false
+  dataproc-9d347f56-cbbe-4147-9e5a-052f3fc9f283-us:
+    storageClass: STANDARD
+    location: US
+    bucketPolicyOnly: false
+  dataproc-temp-us-central1-80000348469-ntvyy3qq:
+    storageClass: STANDARD
+    location: US-CENTRAL1
+    lifecycleRule:
+    - action:
+        type: Delete
+      condition:
+        age: 90
+    bucketPolicyOnly: false
+  gcf-sources-80000348469-us-central1:
+    storageClass: STANDARD
+    location: US-CENTRAL1
+    bucketPolicyOnly: false
+  kohls-merch-airflow-logs-lle:
+    storageClass: MULTI_REGIONAL
+    location: US
+    bucketPolicyOnly: false
+  kohls-merch-airflow-logs-lle-dbg:
+    storageClass: STANDARD
+    location: US
+    bucketPolicyOnly: false
+  kohls-merch-fieldglass-inbound:
+    storageClass: STANDARD
+    location: US
+    bucketPolicyOnly: false
+  kohls-merch-mft-dev-ci-bucket:
+    storageClass: MULTI_REGIONAL
+    location: US
+    bucketPolicyOnly: false
+  kohls-merch-mft-dev-stage1-bucket:
+    storageClass: STANDARD
+    location: US
+    bucketPolicyOnly: false
+  kohls-merch-mft-stress-bucket:
+    storageClass: STANDARD
+    location: US
+    bucketPolicyOnly: false
+  kohls-merch-pq-bigquery-lle:
+    storageClass: STANDARD
+    location: US
+    bucketPolicyOnly: false
+  kohls-merch-ps-dataproc-lle:
+    storageClass: MULTI_REGIONAL
+    location: US
+    bucketPolicyOnly: false
+  kohls-merch-ps-dps-ppe-submit-extract:
+    storageClass: STANDARD
+    location: US
+    bucketPolicyOnly: false
+  kohls-merch-ps-lle-dataflow-templates:
+    storageClass: STANDARD
+    location: US-CENTRAL1
+    bucketPolicyOnly: true
+  kohls-merch-ps-lle-helix:
+    storageClass: STANDARD
+    location: US
+    bucketPolicyOnly: true
+  kohls-merch-ps-lle-mft:
+    storageClass: MULTI_REGIONAL
+    location: US
+    bucketPolicyOnly: false
+  kohls-merch-ps-lle-mongo:
+    storageClass: NEARLINE
+    location: US
+    bucketPolicyOnly: false
+  kohls-merch-ps-lle-mysql:
+    storageClass: NEARLINE
+    location: US-CENTRAL1
+    bucketPolicyOnly: false
+  kohls-merch-ps-lle-signs-outbound:
+    storageClass: REGIONAL
+    location: US-CENTRAL1
+    bucketPolicyOnly: true
+  kohls-merch-ps-lle-signs-tvs-mock:
+    storageClass: STANDARD
+    location: US
+    bucketPolicyOnly: false
+  kohls-merch-ps-lle-terraform-states:
+    storageClass: REGIONAL
+    location: US-CENTRAL1
+    versioningEnabled: true
+    bucketPolicyOnly: false
+  kohls-merch-ps-lle-test-bucket:
+    storageClass: REGIONAL
+    location: US-CENTRAL1
+    bucketPolicyOnly: false
+  kohls-merch-ps-lle-us-central1-primary-consul-backup:
+    storageClass: NEARLINE
+    location: US
+    lifecycleRule:
+    - action:
+        type: Delete
+      condition:
+        age: 14
+    bucketPolicyOnly: false
+  kohls-merch-ps-lle-us-east1-primary-consul-backup:
+    storageClass: NEARLINE
+    location: US-EAST1
+    bucketPolicyOnly: false
+  kohls-merch-ps-mft-dev-stage1-bucket:
+    storageClass: STANDARD
+    location: US
+    bucketPolicyOnly: false
+  kohls-merch-ps-mft-stress-stress1-bucket:
+    storageClass: STANDARD
+    location: US
+    bucketPolicyOnly: false
+  kohls-merch-ps-signs-localization:
+    storageClass: REGIONAL
+    location: US-CENTRAL1
+    bucketPolicyOnly: true
+  kohls-merch-ps-spanner-backup-lle:
+    storageClass: COLDLINE
+    location: US-CENTRAL1
+    bucketPolicyOnly: false
+  kohls-merch-tdd-reports:
+    storageClass: STANDARD
+    location: US
+    bucketPolicyOnly: false
+  merch-airflow-dags-ps-lle:
+    storageClass: STANDARD
+    location: US-CENTRAL1
+    bucketPolicyOnly: false
+  merch-fuse-dataproc:
+    storageClass: REGIONAL
+    location: US-CENTRAL1
+    bucketPolicyOnly: false
+  mmp-backups:
+    storageClass: NEARLINE
+    location: US-CENTRAL1
+    bucketPolicyOnly: false
+  us-central1-test-dps-airflo-0a09afa6-bucket:
+    storageClass: STANDARD
+    location: US
+    bucketPolicyOnly: false
+    labels:
+      goog-composer-environment: test-dps-airflow
+      goog-composer-location: us-central1
+      goog-composer-version: composer-0-5-3-airflow-1-9-0
+  us.artifacts.kohls-merch-ps-lle.appspot.com:
+    storageClass: STANDARD
+    location: US
+    bucketPolicyOnly: false

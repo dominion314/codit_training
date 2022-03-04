@@ -1,0 +1,47 @@
+---
+storageBuckets:
+  kohls-cce-dbaas-prd-mysql:
+    acls:
+      usersByEmail:
+        mysql-dba@kohls-cce-dbaas-prd.iam.gserviceaccount.com: OWNER
+      groupsByEmail:
+        gcp-infra-dataservices-systemsengineer-l3@kohls.com: OWNER
+        gcp-infra-dataservices-systemsengineer-l2@kohls.com: OWNER
+        gcp-infra-dataservices-qualityengineer-l3@kohls.com: OWNER
+  kohls-cce-dbaas-prd-mongo:
+    acls:
+      usersByEmail:
+        mongo-dba@kohls-cce-dbaas-prd.iam.gserviceaccount.com: OWNER
+      groupsByEmail:
+        gcp-infra-dataservices-systemsengineer-l3@kohls.com: OWNER
+        gcp-infra-dataservices-systemsengineer-l2@kohls.com: OWNER
+        gcp-infra-dataservices-qualityengineer-l3@kohls.com: OWNER
+  kohls-cce-dbaas-prd-pmm:
+    acls:
+      usersByEmail:
+        pmm-dba@kohls-cce-dbaas-prd.iam.gserviceaccount.com: OWNER
+      groupsByEmail:
+        gcp-infra-dataservices-systemsengineer-l3@kohls.com: OWNER
+        gcp-infra-dataservices-systemsengineer-l2@kohls.com: OWNER
+        gcp-infra-dataservices-qualityengineer-l3@kohls.com: OWNER
+  kohls-cce-dbaas-prd-longterm:
+    acls:
+      usersByEmail:
+        pmm-dba@kohls-cce-dbaas-prd.iam.gserviceaccount.com: OWNER
+        mysql-dba@kohls-cce-dbaas-prd.iam.gserviceaccount.com: OWNER
+        mongo-dba@kohls-cce-dbaas-prd.iam.gserviceaccount.com: OWNER
+      groupsByEmail:
+        gcp-infra-dataservices-systemsengineer-l3@kohls.com: OWNER
+        gcp-infra-dataservices-systemsengineer-l2@kohls.com: OWNER
+        gcp-infra-dataservices-qualityengineer-l3@kohls.com: OWNER
+  kohls-cce-dbaas-prd-terraform-states:
+    acls:
+      usersByEmail:
+        pmm-dba@kohls-cce-dbaas-prd.iam.gserviceaccount.com: OWNER
+        mysql-dba@kohls-cce-dbaas-prd.iam.gserviceaccount.com: OWNER
+        mongo-dba@kohls-cce-dbaas-prd.iam.gserviceaccount.com: OWNER
+        platform-devops@kohls-cce-dbaas-prd.iam.gserviceaccount.com: OWNER
+      groupsByEmail:
+        gcp-infra-dataservices-systemsengineer-l3@kohls.com: OWNER
+        gcp-infra-dataservices-systemsengineer-l2@kohls.com: OWNER
+        gcp-infra-dataservices-qualityengineer-l3@kohls.com: OWNER

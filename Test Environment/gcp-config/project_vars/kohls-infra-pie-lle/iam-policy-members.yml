@@ -1,0 +1,91 @@
+---
+iamPolicyMembersV2:
+  serviceAccountsByEmail:
+    lemur-cpe@kohls-infra-pie-lle.iam.gserviceaccount.com:
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.viewer
+    - role: iam.serviceAccountUser
+    - role: storage.admin
+    lemur-cpe@kohls-infra-pie-prd.iam.gserviceaccount.com:
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    terraform-devops@kohls-infra-pie-lle.iam.gserviceaccount.com:
+    - role: lbadmin
+      OrgId: 1035901152068
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.storageAdmin
+    - role: iam.serviceAccountUser
+    - role: storage.admin
+    postgres-cpe@kohls-infra-pie-lle.iam.gserviceaccount.com:
+    - role: storage.objectAdmin
+    - role: storage.objectCreator
+    - role: storage.objectViewer
+  groupsByEmail:
+    kt-casey@kohls.com:
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.storageAdmin
+    - role: iam.serviceAccountKeyAdmin
+    - role: iam.serviceAccountTokenCreator
+    - role: iam.serviceAccountUser
+    - role: logging.admin
+    - role: logging.configWriter
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: monitoring.admin
+    - role: storage.admin
+    gcp-et-devops-admin@kohls.com:
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    - role: lbadmin
+      OrgId: 1035901152068
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.storageAdmin
+    - role: iam.serviceAccountKeyAdmin
+    - role: iam.serviceAccountTokenCreator
+    - role: iam.serviceAccountUser
+    - role: logging.admin
+    - role: logging.configWriter
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: monitoring.admin
+    - role: storage.admin
+    gcp-et-devops-l2@kohls.com:
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    - role: lbadmin
+      OrgId: 1035901152068
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.storageAdmin
+    - role: logging.viewer
+    - role: monitoring.viewer
+    - role: storage.objectViewer
+    gcp-et-devops-l3@kohls.com:
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    - role: lbadmin
+      OrgId: 1035901152068
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.storageAdmin
+    - role: iam.serviceAccountTokenCreator
+    - role: iam.serviceAccountUser
+    - role: logging.admin
+    - role: logging.configWriter
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: monitoring.admin
+    - role: storage.admin

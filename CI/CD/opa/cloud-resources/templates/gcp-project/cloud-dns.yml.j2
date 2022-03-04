@@ -1,0 +1,79 @@
+{%- if cloudDNSPeering is defined %}
+{%-   if cloudDNSPeering.enable is defined %}
+{%-     if cloudDNSPeering.enable == true %}
+apiVersion: dns.cnrm.cloud.google.com/v1beta1
+kind: DNSManagedZone
+metadata:
+  labels:
+{%-         for key, value in project.labels.items() %}
+    "{{ key }}": "{{ value }}"
+{%-         endfor %}
+  name: "cloud-dns-{{ project.name }}"
+  namespace: "gcp-{{ project.name }}"
+{%- if project.deletionProtect | default(true, true) %}
+{%-   if cloudDNSPeering.deletionProtect | default(false, true) %}
+  annotations:
+    cnrm.cloud.google.com/deletion-policy: abandon
+{%-   endif %}
+{%- endif %}
+spec:
+  dnsName: {{cloudDNSDefaults.peeringTarget.dnsName}}
+  visibility: private
+  peeringConfig:
+      targetNetwork:
+          networkRef:
+            external: "https://www.googleapis.com/compute/v1/projects/{{cloudDNSDefaults.peeringTarget.project}}/global/networks/{{cloudDNSDefaults.peeringTarget.vpc}}"
+  privateVisibilityConfig:
+      networks:
+{%-       for item in vpcs %}
+      - networkRef:
+          name: {{item}}
+          namespace: "gcp-{{project.name}}"
+{%-       endfor %}
+---
+apiVersion: serviceusage.cnrm.cloud.google.com/v1beta1
+kind: Service
+metadata:
+  name: dns.googleapis.com
+  namespace: gcp-{{ project.name }}
+  labels:
+    managed-by-cnrm: "true"
+{%-     if defaultLabels is defined %}
+{%-       for key, value in defaultLabels.items() %}
+{%-         if api_name.labels is defined %}
+{%-           if not key in api_name.labels %}
+    {{ key }}: "{{ value }}"
+{%-           endif %}
+{%-         else %}
+    {{ key }}: "{{ value }}"
+{%-         endif %}
+{%-       endfor %}
+{%-     endif %}
+---
+apiVersion: dns.cnrm.cloud.google.com/v1beta1
+kind: DNSPolicy
+metadata:
+  labels:
+{%-         for key, value in project.labels.items() %}
+    "{{ key }}": "{{ value }}"
+{%-         endfor %}
+  name: "cloud-dns-{{ project.name }}"
+  namespace: "gcp-{{ project.name }}"
+{%- if project.deletionProtect | default(true, true) %}
+{%-   if cloudDNSPeering.deletionProtect | default(false, true) %}
+  annotations:
+    cnrm.cloud.google.com/deletion-policy: abandon
+{%-   endif %}
+{%- endif %}
+spec:
+  enableLogging: {{ cloudDNSDefaults.dnsPolicy.enableLogging }}
+  networks:
+{%-       for item in vpcs %}
+  - networkRef:
+      name: {{item}}
+      namespace: "gcp-{{project.name}}"
+{%-       endfor %}
+---
+{%-     endif %}
+{%-   endif %}
+{%- endif %}

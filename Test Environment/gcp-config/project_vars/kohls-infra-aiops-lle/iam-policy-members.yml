@@ -1,0 +1,133 @@
+---
+iamPolicyMembers:
+  groupsByEmail:
+    gcp-aiops-devops-admin@kohls.com:
+      roles:
+      - bigquery.admin
+      - cloudfunctions.admin
+      - compute.imageUser
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.networkViewer
+      - compute.storageAdmin
+      - datastore.owner
+      - iam.serviceAccountKeyAdmin
+      - iam.serviceAccountUser
+      - logging.admin
+      - logging.configWriter
+      - logging.privateLogViewer
+      - logging.viewer
+      - monitoring.admin
+      - pubsub.admin
+      - pubsub.editor
+      - pubsub.publisher
+      - pubsub.subscriber
+      - pubsub.viewer
+      - storage.admin
+    gcp-aiops-devops-l2@kohls.com:
+      roles:
+      - compute.imageUser
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.storageAdmin
+      - logging.viewer
+      - monitoring.viewer
+      - storage.objectViewer
+    gcp-aiops-devops-l3@kohls.com:
+      roles:
+      - bigquery.user
+      - compute.imageUser
+      - compute.instanceAdmin.v1
+      - compute.loadBalancerAdmin
+      - compute.networkUser
+      - compute.networkViewer
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - logging.admin
+      - logging.configWriter
+      - logging.privateLogViewer
+      - logging.viewer
+      - monitoring.admin
+      - storage.admin
+      - viewer
+    gcp-aiops-devops-manager@kohls.com:
+      roles:
+      - bigquery.jobUser
+      - bigquery.metadataViewer
+      - bigquery.readSessionUser
+      - bigquery.user
+      - compute.imageUser
+      - compute.instanceAdmin.v1
+      - compute.loadBalancerAdmin
+      - compute.networkUser
+      - compute.networkViewer
+      - compute.storageAdmin
+      - iam.serviceAccountKeyAdmin
+      - iam.serviceAccountUser
+      - logging.admin
+      - logging.configWriter
+      - logging.privateLogViewer
+      - logging.viewer
+      - monitoring.admin
+      - storage.admin
+    gcp-cloudsolutionsteam-devops-admin@kohls.com:
+      roles:
+      - iam.serviceAccountKeyAdmin
+  serviceAccountsByEmail:
+    rpa-aiops@kohls-infra-aiops-lle.iam.gserviceaccount.com:
+      roles:
+      - bigquery.user
+      - storage.objectCreator
+    automl-aiops@kohls-infra-aiops-lle.iam.gserviceaccount.com:
+      roles:
+      - bigquery.dataEditor
+      - bigquery.dataOwner
+      - bigquery.dataViewer
+      - bigquery.jobUser
+      - bigquery.metadataViewer
+      - bigquery.user
+      - ml.developer
+      - ml.viewer
+      - storage.objectAdmin
+      - storage.objectCreator
+      - storage.objectViewer
+    consul-paas@kohls-infra-aiops-lle.iam.gserviceaccount.com:
+      roles:
+      - compute.networkUser
+      - compute.viewer
+      - iam.serviceAccountUser
+    kohls-infra-aiops-lle-mongo@kohls-infra-aiops-lle.iam.gserviceaccount.com:
+      roles:
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+    kohls-infra-aiops-lle-mysql@kohls-infra-aiops-lle.iam.gserviceaccount.com:
+      roles:
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - iam.serviceAccountUser
+    mongo-dba@kohls-infra-aiops-lle.iam.gserviceaccount.com:
+      roles:
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+    mysql-dba@kohls-infra-aiops-lle.iam.gserviceaccount.com:
+      roles:
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - iam.serviceAccountUser
+    returnreversal-aiops@kohls-infra-aiops-lle.iam.gserviceaccount.com:
+      roles:
+      - bigquery.jobUser
+      - bigquery.metadataViewer
+      - bigquery.readSessionUser
+    terraform-devops@kohls-infra-aiops-lle.iam.gserviceaccount.com:
+      roles:
+      - compute.imageUser
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - logging.logWriter
+      - storage.admin
+    jarvis-sec-eng-app-tracker@kohls-infra-aiops-lle.iam.gserviceaccount.com:
+      roles:
+      - bigquery.jobUser

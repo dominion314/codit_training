@@ -1,0 +1,113 @@
+---
+vpcs:
+  platform-nx-prd:
+    routerDef:
+      platform-nx-prd-c1-gcp-rtr01:
+        region: us-central1
+        description:
+        routerASN:  # Custom ASN, if blank will pull from GLOBAL-ASN.YML
+        advertiseMode: CUSTOM
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+          - 10.124.16.0/20
+          - 10.124.16.0/24
+          - 10.124.18.0/24
+          - 10.124.20.0/29
+
+        ha_vpn_gateways_to_transit:
+          platform-nx-prd-c1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.0.96/30
+              bluecat-id: 1555689
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.0.100/30
+              bluecat-id: 1555690
+              status: PROVISIONED
+          platform-nx-prd-c1-totransit-02:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.2.224/30
+              bluecat-id: 3615857
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.2.228/30
+              bluecat-id: 3615868
+              status: PROVISIONED
+        outbound_nat_gateway:
+          name: platform-nx-prd-c1-nat-gateway
+          logConfig:
+            enable: true
+            filter: ERRORS_ONLY
+          manualAddresses: 2
+          min_ports_per_vm: 300
+
+      platform-nx-prd-e1-gcp-rtr01:
+        region: us-east1
+        description:
+        routerASN:  # Custom ASN, if blank will pull from GLOBAL-ASN.YML
+        advertiseMode: CUSTOM
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+          - 10.124.16.0/20
+          - 10.124.17.0/24
+          - 10.124.19.0/24
+          - 10.124.20.8/29
+
+        ha_vpn_gateways_to_transit:
+          platform-nx-prd-e1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.0.104/30
+              bluecat-id: 1555691
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.0.108/30
+              bluecat-id: 1555692
+              status: PROVISIONED
+          platform-nx-prd-e1-totransit-02:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.2.216/30
+              bluecat-id: 3615851
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.2.220/30
+              bluecat-id: 3615855
+              status: PROVISIONED
+        outbound_nat_gateway:
+          name: platform-nx-prd-e1-nat-gateway
+          logConfig:
+            enable: false
+          manualAddresses: 2
+          min_ports_per_vm: 300
+
+      platform-nx-prd-c1-gcp-rtr02:
+        region: us-central1
+        description: Bluecat Cloud NAT
+        routerASN:  # Custom ASN, if blank will pull from GLOBAL-ASN.YML
+        advertiseMode: DEFAULT
+        cloudNat:
+          name: platform-nx-prd-bdds-c1-nat-gateway
+          logConfig:
+            enable: true
+            filter: ERRORS_ONLY
+          manualAddresses: 6
+          min_ports_per_vm: 30000
+
+      platform-nx-prd-e1-gcp-rtr02:
+        region: us-east1
+        description: Bluecat Cloud NAT
+        routerASN:  # Custom ASN, if blank will pull from GLOBAL-ASN.YML
+        advertiseMode: DEFAULT
+        cloudNat:
+          name: platform-nx-prd-bdds-e1-nat-gateway
+          logConfig:
+            enable: true
+            filter: ERRORS_ONLY
+          manualAddresses: 6
+          min_ports_per_vm: 30000
+

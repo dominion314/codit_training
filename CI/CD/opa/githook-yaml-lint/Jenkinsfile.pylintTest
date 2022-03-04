@@ -1,0 +1,7 @@
+#! /usr/bin/env groovy
+//Jenkinsfile to call Pylint tests
+
+//calls groovy script in githook-yaml-lint repo
+
+//config file can be overwritten by including a "pylintrc" file
+PylintTest("3.6")

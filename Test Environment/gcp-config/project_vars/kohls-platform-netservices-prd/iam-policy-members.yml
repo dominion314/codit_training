@@ -1,0 +1,31 @@
+---
+iamPolicyMembers:
+  groupsByEmail:
+    gcp-infra-network-devops-L3@kohls.com:
+      roles:
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - storage.admin
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - iam.serviceAccountKeyAdmin
+      - container.admin
+      - deploymentmanager.editor
+    gcp-cpe-CNE-DevOps-L3@kohls.com:
+      roles:
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - storage.admin
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - deploymentmanager.editor
+    gcp-cpe-CNE-DevOps-admin@kohls.com:
+      roles:
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - storage.admin
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - iam.serviceAccountKeyAdmin
+      - container.admin
+      - deploymentmanager.editor

@@ -1,0 +1,18 @@
+---
+bigQueryDatasets:
+  gitopsbigquerydatasetexample:
+    friendlyName: gitops-bigquery-dataset-example
+    description: "GitOps Big Query Dataset Example"
+    defaultTableExpirationMs: 3600000
+    labels:
+      app-name: "loyaly"
+    permissions:
+      usersByEmail:
+        hamilton.hoover@kohls.com:
+          roles:
+          - bigquery.admin
+      groupsByEmail:
+        gcp-et-devops-l3@kohls.com:
+          roles:
+          - bigquery.admin
+          - bigquery.dataOwner

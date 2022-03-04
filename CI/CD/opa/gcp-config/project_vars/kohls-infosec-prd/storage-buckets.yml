@@ -1,0 +1,43 @@
+---
+storageBuckets:
+  darktrace-backup-prod:
+    storageClass: NEARLINE
+    location: US-CENTRAL1
+    versioningEnabled: false
+    lifecycleRule:
+    - action:
+        type: Delete
+      condition:
+        age: 30
+    bucketPolicyOnly: false
+    labels:
+      app-name: darktrace
+      lob: sec
+  infosec-startup:
+    storageClass: REGIONAL
+    location: US-CENTRAL1
+    bucketPolicyOnly: false
+  kohls-infosec-prd-daisy-bkt-us-east1:
+    storageClass: STANDARD
+    location: US-EAST1
+    bucketPolicyOnly: false
+  kohls-infosec-prd-ovas:
+    storageClass: STANDARD
+    location: US-EAST1
+    bucketPolicyOnly: false
+  kohls-infosec-prd-ovf-import-bkt-us-central1:
+    storageClass: STANDARD
+    location: US-CENTRAL1
+    bucketPolicyOnly: false
+  kohls-infosec-prd-terraform-states:
+    storageClass: MULTI_REGIONAL
+    location: US
+    bucketPolicyOnly: false
+  kss-qradar-backup:
+    storageClass: ARCHIVE
+    location: US
+    lifecycleRule:
+    - action:
+        type: Delete
+      condition:
+        age: 400

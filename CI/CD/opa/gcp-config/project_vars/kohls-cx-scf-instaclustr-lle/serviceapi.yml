@@ -1,0 +1,5 @@
+---
+serviceAPIs:
+  cloudresourcemanager.googleapis.com:
+  compute.googleapis.com:
+  storage-api.googleapis.com:

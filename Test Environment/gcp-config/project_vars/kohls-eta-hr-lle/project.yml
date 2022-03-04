@@ -1,0 +1,15 @@
+---
+billingDeptId: "90527"
+project:
+  name: kohls-eta-hr-lle
+  deletionProtect: true
+  managed: true
+  folderId: "499986558306"
+  billingAccount: "00C36A-CD0BDB-E543D0"
+  labels:
+    billing-dept-id: "90527"
+    project-manager: kevin-catlin
+    devops-lead: ramkumar-sivanandam
+    environment-type: lle
+    line-of-business: hcm
+    project-requestor: krysten-leroy

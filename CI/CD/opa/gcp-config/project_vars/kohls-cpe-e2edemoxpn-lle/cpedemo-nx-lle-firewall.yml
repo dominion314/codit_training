@@ -1,0 +1,28 @@
+---
+vpcs:
+  cpedemo-nx-lle:
+
+    firewallRules:
+      ghwebhooks-01:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0991124 Demo purposes only
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          sourceRanges:
+          - "10.1.43.26"
+          - "10.7.33.1"
+          - "10.7.33.2"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "80"
+            - "443"
+            - "8443"
+            - "8080"

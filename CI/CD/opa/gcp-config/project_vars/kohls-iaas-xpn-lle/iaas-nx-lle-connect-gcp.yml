@@ -1,0 +1,42 @@
+---
+vpcs:
+  iaas-nx-lle:
+    routerDef:
+      iaas-nx-lle-c1-gcp-rtr01:
+        region: us-central1
+        description:
+        routerASN:
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+        ha_vpn_gateways_to_transit:
+          iaas-nx-lle-c1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.2.0/30
+              bluecat-id: 1592495
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.2.4/30
+              bluecat-id: 1592497
+              status: PROVISIONED
+      iaas-nx-lle-e1-gcp-rtr01:
+        region: us-east1
+        description:
+        routerASN:
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+        ha_vpn_gateways_to_transit:
+          iaas-nx-lle-e1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.2.8/30
+              bluecat-id: 1592499
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.2.12/30
+              bluecat-id: 1592501
+              status: PROVISIONED

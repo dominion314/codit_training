@@ -1,0 +1,16 @@
+---
+iamPolicyMembersV2:
+  groupsByEmail:
+    gcp-iaas-softwareengineer-l3@kohls.com:
+      - role: CustomViewer486       # Custom Viewer
+        OrgId: 1035901152068
+      - role: CustomBucketViewer   # Custom Bucket Viewer
+        OrgId: 1035901152068
+    GCP-IAM-L3@kohls.com:
+      - role: bigquery.jobUser
+    gcp-infra-productmgmt-manager@kohls.com:
+      - role: CustomBigQueryUser       # Custom Viewer
+        OrgId: 1035901152068
+    gcp-infra-dataservices-qualityengineer-l3@kohls.com:
+      - role: CustomBigQueryUser       # Custom Viewer
+        OrgId: 1035901152068

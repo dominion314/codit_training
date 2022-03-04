@@ -1,0 +1,19 @@
+---
+vpcs:
+  iaas-nx-lle:
+    subnets:
+      # Legacy kohls-iaas-lle migrated to NetX
+      iaas-nx-lle-iaas-legacy-e1-prv01:
+        advertiseRoutes: true
+        region: us-east1
+        network:
+          ip: 10.191.11.0/27
+          bluecat-id: 1595828
+          status: PROVISIONED
+      iaas-nx-lle-iaas-legacy-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.187.20.96/27
+          bluecat-id: 1595830
+          status: PROVISIONED

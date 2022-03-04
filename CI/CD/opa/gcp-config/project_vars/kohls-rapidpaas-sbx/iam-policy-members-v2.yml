@@ -1,0 +1,6 @@
+---
+iamPolicyMembersV2:
+  usersByEmail:
+    thad.craft@kohls.com:
+    - role: CustomRole664
+      OrgId: 1035901152068

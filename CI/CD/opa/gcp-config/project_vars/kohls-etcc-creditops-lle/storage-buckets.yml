@@ -1,0 +1,14 @@
+---
+storageBuckets:
+  kohls-etcc-mft-dev-lle-bucket:
+    versioningEnabled: true
+    deletionProtect: true
+    storageClass: MULTI_REGIONAL
+    location: US
+    bucketPolicyOnly: true
+    permissions:
+      serviceAccountsByEmail:
+        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+          roles:
+          - storage.objectAdmin
+          - storage.admin

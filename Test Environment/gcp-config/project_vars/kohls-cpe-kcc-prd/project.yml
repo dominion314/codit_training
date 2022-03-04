@@ -1,0 +1,19 @@
+---
+billingDeptId: "90586"
+project:
+  name: kohls-cpe-kcc-prd
+  managed: true
+  deletionProtect: true
+  folderId: 106220115873
+  billingAccount: 00C36A-CD0BDB-E543D0
+  labels:
+    billing-dept-id: "90586"
+    project-manager: charles-anthony
+    devops-lead: mark-doll
+    environment-type: prd
+    line-of-business: cpe
+    project-requestor: mark-doll
+
+serviceAPIs:
+  networkmanagement.googleapis.com:
+  networktopology.googleapis.com:

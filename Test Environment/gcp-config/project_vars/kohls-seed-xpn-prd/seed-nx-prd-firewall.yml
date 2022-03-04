@@ -1,0 +1,367 @@
+---
+vpcs:
+  seed-nx-prd:
+    firewallRules:
+      kohls-scf-prd-consul-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16250
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-consul
+          sourceRanges:
+          - "172.26.0.0/15"
+          - "10.101.0.0/16"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "8500"
+      kohls-scf-prd-consul-ssh:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16343
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-consul
+          sourceRanges:
+          - "172.26.0.0/15"
+          - "10.101.0.0/16"
+          - "10.206.0.0/23"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      inter-communication-between-cassandra-nodes:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16458
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-cassandra
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          - paas-cassandra
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "7000-7001"
+            - "7199"
+            - "9042"
+            - "9160"
+      kohls-ocf-jenkins-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16470
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - seed-nx-prd
+          sourceRanges:
+          - "10.126.0.0/17"
+          - "10.127.0.0/17"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+            - "2181"
+            - "8080"
+            - "8082"
+            - "9042"
+            - "9094"
+      kohls-platform-openshift-consul-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16670,SNOW-17254
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-consul
+          - paas-cassandra
+          - paas-solr
+          - paas-zookeeper
+          - seed-nx-prd
+          sourceRanges:
+          - "10.126.0.0/17"
+          - "10.127.0.0/17"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+            - "9042"
+            - "7199"
+            - "7169"
+      platform-openshift-prd-ingress-kafka:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16851,SNOW-17097
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-cassandra
+          - paas-hazelcast
+          - paas-kafka
+          - paas-mancenter
+          - paas-zookeeper
+          sourceRanges:
+          - "10.126.0.0/17"
+          - "10.127.0.0/17"
+          - "10.185.8.0/23"
+          - "10.185.12.224/28"
+          - "10.189.6.0/23"
+          - "10.189.9.192/28"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "5701"
+            - "9042"
+            - "7000-7001"
+            - "8080"
+            - "2181"
+            - "443"
+            - "9092"
+            - "9094"
+      intra-vpc-connectivity-for-dataproc:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16853
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-kafka
+          - paas-consul
+          - paas-zookeeper
+          - fw-dataproc-prd
+          - fw-dataprocpii-prd
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          - paas-kafka
+          - paas-consul
+          - paas-zookeeper
+          - fw-dataproc-prd
+          - fw-dataprocpii-prd
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "1-65535"
+          - protocol: "udp"
+            ports:
+            - "1-65535"
+      production-east-oic-seed-nx-prd-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-17092,SNOW-17110
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-cassandra
+          - paas-hazelcast
+          - paas-kafka
+          - paas-zookeeper
+          - paas-mancenter
+          sourceRanges:
+          - "10.206.24.0/21"
+          - "10.206.16.0/23"
+          - "10.206.36.0/22"
+          - "10.206.32.0/24"
+          - "10.206.152.0/21"
+          - "10.206.144.0/23"
+          - "10.206.164.0/22"
+          - "10.206.160.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "9042"
+            - "7000-7001"
+            - "8080"
+            - "2181"
+            - "443"
+            - "7199"
+            - "9160"
+      kohls-user-segments-seed-nx-prd-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-17108,SNOW17114
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-cassandra
+          - paas-hazelcast
+          - paas-kafka
+          - paas-zookeeper
+          - paas-mancenter
+          sourceRanges:
+          - "10.57.0.0/17"
+          - "10.101.70.0/24"
+          - "172.26.0.0/15"
+          - "10.195.0.0/18"
+          - "10.195.64.0/24"
+          - "10.195.128.0/18"
+          - "10.195.192.0/24"
+          - "10.198.0.0/22"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "8080"
+            - "9042"
+            - "7000-7001"
+            - "7169"
+            - "22"
+      onprem-stress-servers-seed-nx-prd-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-17116
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-cassandra
+          - paas-hazelcast
+          - paas-kafka
+          - paas-zookeeper
+          - paas-mancenter
+          sourceRanges:
+          - "10.5.48.67/32"
+          - "10.5.48.68/32"
+          - "10.5.48.69/32"
+          - "10.5.48.70/32"
+          - "10.5.48.71/32"
+          - "10.5.48.75/32"
+          - "10.7.45.27/32"
+          - "10.7.45.28/32"
+          - "10.7.45.29/32"
+          - "10.7.45.31/32"
+          - "10.7.45.32/32"
+          - "10.7.45.42/32"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "9042"
+            - "7000-7001"
+            - "7169"
+            - "8080"
+      onprem-sis-feedproducer-seed-nx-prd-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-17166
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-consul
+          - fw-dataproc-prd
+          sourceRanges:
+          - "10.57.0.0/17"
+          - "10.101.70.0/24"
+          - "172.26.0.0/15"
+          - "10.195.0.0/18"
+          - "10.195.64.0/24"
+          - "10.195.128.0/18"
+          - "10.195.192.0/24"
+          - "10.198.0.0/22"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "8080"
+            - "8088"
+      onprem-sis-seed-nx-prd-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-17292
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-cassandra
+          - paas-consul
+          sourceRanges:
+          - "10.1.40.15/32"
+          - "10.6.81.115/32"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "9042"
+            - "7000"
+            - "7001"
+      netx-seed-nx-prd-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-17123
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-cassandra
+          - paas-consul
+          - paas-solr
+          - paas-zookeeper
+          - seed-nx-lle
+          sourceRanges:
+          - "10.126.0.0/17"
+          - "10.127.0.0/17"
+          sourceServiceAccounts:
+          sourceTags:
+          - platform-nx-prd
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "8983"

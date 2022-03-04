@@ -1,0 +1,6 @@
+---
+storageBuckets:
+  kohls-cce-credit-prequal:
+    location: US
+    versioningEnabled: false
+    storageClass: STANDARD

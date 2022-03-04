@@ -1,0 +1,116 @@
+---
+iamPolicyMembersV2:
+  groupsByEmail:
+    gcp-xpaas-vault-admin@kohls.com:
+    - role: CustomRole106
+      OrgId: 1035901152068
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    - role: compute.engine.power.state.adm
+      OrgId: 1035901152068
+    - role: lbadmin
+      OrgId: 1035901152068
+    - role: iam.serviceAccountKeyAdmin
+    gcp-xpaas-vault-l2@kohls.com:
+    - role: CustomRole106
+      OrgId: 1035901152068
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    gcp-xpaas-vault-l3@kohls.com:
+    - role: CustomRole106
+      OrgId: 1035901152068
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    - role: compute.engine.power.state.adm
+      OrgId: 1035901152068
+    gcp-securityiam-sd-admin@kohls.com:
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    - role: compute.engine.power.state.adm
+      OrgId: 1035901152068
+    - role: iam.serviceAccountUser
+    gcp-securityiam-sd-ba@kohls.com:
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    gcp-securitypam-sd-admin@kohls.com:
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    - role: iam.serviceAccountKeyAdmin
+    gcp-securitypam-sd-l3@kohls.com:
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    gcp-securitytech-devops-admin@kohls.com:
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    - role: compute.networkViewer
+    - role: iam.serviceAccountKeyAdmin
+    - role: iam.serviceAccountTokenCreator
+    - role: iam.serviceAccountUser
+    - role: logging.admin
+    - role: logging.configWriter
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: monitoring.admin
+    - role: CustomRole900  # Committed use discounts user
+      OrgId: 1035901152068
+    - role: CustomRole359 # Compute reservations admin
+      OrgId: 1035901152068
+    gcp-securitytech-devops-manager@kohls.com:
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: iam.serviceAccountTokenCreator
+    - role: logging.admin
+    - role: logging.configWriter
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: monitoring.admin
+  serviceAccountsByEmail:
+    consul-paas@kohls-sec-bastion-prd.iam.gserviceaccount.com:
+    - role: CustomRole130
+      OrgId: 1035901152068
+    - role: CustomRole150
+      OrgId: 1035901152068
+    - role: CustomRole703
+      OrgId: 1035901152068
+    - role: compute.networkUser
+    terraform-devops@kohls-sec-bastion-prd.iam.gserviceaccount.com:
+    - role: lbadmin
+      OrgId: 1035901152068
+    - role: bigquery.admin
+    - role: cloudfunctions.developer
+    - role: cloudscheduler.admin
+    - role: cloudtrace.admin
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.storageAdmin
+    - role: container.admin
+    - role: dataflow.admin
+    - role: iam.serviceAccountUser
+    - role: logging.configWriter
+    - role: logging.logWriter
+    - role: monitoring.admin
+    - role: pubsub.admin
+    - role: storage.admin
+    asa-agent-automation-sec@kohls-sec-bastion-prd.iam.gserviceaccount.com:
+    - role: cloudfunctions.viewer
+    - role: pubsub.subscriber
+    - role: pubsub.viewer
+    mongo-dba@kohls-sec-bastion-prd.iam.gserviceaccount.com:
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: iam.serviceAccountUser
+    mysql-dba@kohls-sec-bastion-prd.iam.gserviceaccount.com:
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: iam.serviceAccountUser
+    scaleft-paas@kohls-sec-bastion-prd.iam.gserviceaccount.com:
+    - role: compute.networkUser
+    - role: compute.viewer
+    - role: iam.serviceAccountUser
+    terraform-sec@kohls-sec-engineering-prd.iam.gserviceaccount.com:
+    - role: CustomRole359 # Compute reservations admin
+      OrgId: 1035901152068
+    - role: compute.instanceAdmin.v1

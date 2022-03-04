@@ -1,0 +1,5 @@
+#! /usr/bin/env groovy
+//Jenkinsfile to call Shell Check tests
+
+//calls groovy script in githook-yaml-lint repo
+shellTest()

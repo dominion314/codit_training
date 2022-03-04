@@ -1,0 +1,25 @@
+---
+iamPolicyMembersV2:
+  groupsByEmail:
+    GCP-Data-Scientist-Enterprise@kohls.com:
+    - role: CustomBigQueryUser
+      OrgId: 1035901152068
+    - role: CustomBucketViewer
+      OrgId: 1035901152068
+    - role: CustomRole634
+      OrgId: 1035901152068
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    - role: CustomRole774
+      OrgId: 1035901152068
+    gcp-bda-enterprisedatascience-softwareengineer-l3@kohls.com:
+    - role: CustomBigQueryUser
+      OrgId: 1035901152068
+    - role: CustomBucketViewer
+      OrgId: 1035901152068
+    - role: CustomRole634
+      OrgId: 1035901152068
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    - role: CustomRole774
+      OrgId: 1035901152068

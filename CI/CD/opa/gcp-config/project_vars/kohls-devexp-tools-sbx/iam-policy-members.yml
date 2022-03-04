@@ -1,0 +1,53 @@
+---
+iamPolicyMembers:
+  groupsByEmail:
+    gcp-cpe-developerexperience-softwareengineer-admin@kohls.com:
+      roles:
+      - bigquery.admin
+      - bigtable.admin
+      - browser
+      - datastore.owner
+      - cloudfunctions.admin
+      - redis.admin
+      - cloudscheduler.admin
+      - spanner.admin
+      - cloudsql.admin
+      - cloudtrace.admin
+      - compute.loadBalancerAdmin
+      - compute.imageUser
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.storageAdmin
+      - dataflow.admin
+      - dataproc.editor
+      - deploymentmanager.editor
+      - dialogflow.admin
+      - errorreporting.admin
+      - firebase.admin
+      - container.admin
+      - logging.admin
+      - ml.admin
+      - monitoring.admin
+      - pubsub.admin
+      - servicemanagement.quotaAdmin
+      - iam.serviceAccountKeyAdmin
+      - iam.serviceAccountTokenCreator
+      - iam.serviceAccountUser
+      - storage.admin
+      - storagetransfer.user
+      - viewer
+  serviceAccountsByEmail:
+    devexp-automation@kohls-devexp-tools-sbx.iam.gserviceaccount.com:
+      roles:
+      - compute.loadBalancerAdmin
+      - compute.imageUser
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - storage.admin
+    gitlab-runner@kohls-devexp-tools-sbx.iam.gserviceaccount.com:
+      roles:
+      - compute.imageUser
+      - compute.instanceAdmin.v1
+      - compute.networkUser

@@ -1,0 +1,19 @@
+---
+billingDeptId: 90528
+project:
+  name: kohls-iaas-xpn-prd
+  managed: true
+  deletionProtect: true
+  folderId: 970875009337
+  billingAccount: 00C36A-CD0BDB-E543D0
+  labels:
+    billing-dept-id: 90528
+    project-manager: keith-halverson
+    devops-lead: russ-nell
+    environment-type: prd
+    line-of-business: iaas
+    project-requestor: byron-matthews
+serviceAPIs:
+  cloudresourcemanager.googleapis.com:
+  cloudasset.googleapis.com:
+  deploymentmanager.googleapis.com:

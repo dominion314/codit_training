@@ -1,0 +1,16 @@
+---
+
+# default file:
+# https://github.com/adrienverge/yamllint/blob/master/yamllint/conf/default.yaml
+extends: default
+
+rules:
+  comments: disable
+  document-start:
+    level: error
+  empty-lines:
+    level: warning
+  indentation:
+    level: warning
+    indent-sequences: false
+  line-length: disable

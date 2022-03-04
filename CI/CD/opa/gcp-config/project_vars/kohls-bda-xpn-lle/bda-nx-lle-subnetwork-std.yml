@@ -1,0 +1,125 @@
+---
+vpcs:
+  bda-nx-lle:
+    subnets:
+      bda-nx-lle-ddh-bigdata-c1-pub01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.187.42.0/23
+          bluecat-id: 1596838
+          status: PROVISIONED
+        permissions:
+          groupsByEmail:
+          - gcp-bda-devops-admin@kohls.com
+          - gcp-bda-softwareengineer-l3@kohls.com
+          serviceAccountsByEmail:
+          - terraform-devops@kohls-bda-lle.iam.gserviceaccount.com
+          - service-831336470763@dataproc-accounts.iam.gserviceaccount.com
+          - 831336470763-compute@developer.gserviceaccount.com
+          - nzdians-infra-ansible-bigdata@kohls-bda-lle.iam.gserviceaccount.com
+
+      bda-nx-lle-ddh-bigdata-c1-sec01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.187.44.0/23
+          bluecat-id: 1596840
+          status: PROVISIONED
+        permissions:
+          groupsByEmail:
+          - gcp-bda-devops-admin@kohls.com
+          - gcp-bda-softwareengineer-l3@kohls.com
+          serviceAccountsByEmail:
+          - terraform-devops@kohls-bda-lle.iam.gserviceaccount.com
+          - service-831336470763@dataproc-accounts.iam.gserviceaccount.com
+          - 831336470763-compute@developer.gserviceaccount.com
+          - nzdians-infra-ansible-bigdata@kohls-bda-lle.iam.gserviceaccount.com
+          - service-831336470763@dataflow-service-producer-prod.iam.gserviceaccount.com
+
+      bda-nx-lle-micro-services-c1-pub01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.187.46.0/23
+          bluecat-id: 1596842
+          status: PROVISIONED
+        permissions:
+          groupsByEmail:
+          - gcp-bda-devops-admin@kohls.com
+          - gcp-bda-softwareengineer-l3@kohls.com
+          serviceAccountsByEmail:
+          - terraform-devops@kohls-bda-lle.iam.gserviceaccount.com
+          - service-831336470763@dataproc-accounts.iam.gserviceaccount.com
+          - 831336470763-compute@developer.gserviceaccount.com
+          - nzdians-infra-ansible-bigdata@kohls-bda-lle.iam.gserviceaccount.com
+
+      bda-nx-lle-micro-services-c1-prv01:
+        advertiseRoutes: true
+        natRouter: bda-nx-lle-c1-gcp-rtr01
+        region: us-central1
+        network:
+          ip: 10.187.48.0/23
+          bluecat-id: 1596844
+          status: PROVISIONED
+        permissions:
+          groupsByEmail:
+          - gcp-bda-devops-admin@kohls.com
+          - gcp-bda-softwareengineer-l3@kohls.com
+          - gcp-infra-windows-devops-l3@kohls.com
+          serviceAccountsByEmail:
+          - terraform-devops@kohls-bda-lle.iam.gserviceaccount.com
+          - service-831336470763@dataproc-accounts.iam.gserviceaccount.com
+          - 831336470763-compute@developer.gserviceaccount.com
+          - nzdians-infra-ansible-bigdata@kohls-bda-lle.iam.gserviceaccount.com
+          - terraform-win@kohls-bda-lle.iam.gserviceaccount.com
+
+      bda-nx-lle-sre-theia-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.187.20.0/28
+          bluecat-id: 1599709
+          status: PROVISIONED
+
+      bda-nx-lle-sre-theia-e1-prv01:
+        advertiseRoutes: true
+        region: us-east1
+        network:
+          ip: 10.191.14.128/28
+          bluecat-id: 1599711
+          status: PROVISIONED
+
+      bda-nx-lle-mkt-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.187.70.0/23
+          bluecat-id: 1611784
+          status: PROVISIONED
+        permissions:
+          groupsByEmail:
+          - gcp-bda-devops-admin@kohls.com
+          - gcp-bda-softwareengineer-l3@kohls.com
+          - gcp-mktg-credit-analytics@kohls.com
+          serviceAccountsByEmail:
+          - terraform-devops@kohls-bda-mkt-lle.iam.gserviceaccount.com
+          - 860981923484-compute@developer.gserviceaccount.com
+          - 860981923484@cloudservices.gserviceaccount.com
+
+      bda-nx-lle-mkt-c1-pub01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.187.72.0/23
+          bluecat-id: 1611786
+          status: PROVISIONED
+        permissions:
+          groupsByEmail:
+          - gcp-bda-devops-admin@kohls.com
+          - gcp-bda-softwareengineer-l3@kohls.com
+          - gcp-mktg-credit-analytics@kohls.com
+          serviceAccountsByEmail:
+          - terraform-devops@kohls-bda-mkt-lle.iam.gserviceaccount.com
+          - 860981923484-compute@developer.gserviceaccount.com
+          - 860981923484@cloudservices.gserviceaccount.com

@@ -1,0 +1,59 @@
+{%- if vpcs is defined %}
+{%-   for vpc_name, vpc_def in vpcs.items() %}
+{%-     if vpc_def.subnets is defined  %}
+{%-       if vpc_def.subnets != none %}
+{%-         for subnet_name, subnet_def in vpc_def.subnets.items() %}
+{%-           if subnet_def.permissions is defined %}
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicy
+metadata:
+  name: {{ subnet_name }}-iam
+  namespace: gcp-{{ project.name }}
+  annotations:
+{%-     if subnet_def.deletionProtect | default(false) %}
+    cnrm.cloud.google.com/deletion-policy: abandon
+{%-     endif %}
+  labels:
+    managed-by-cnrm: "true"
+{%-       if defaultLabels is defined %}
+{%-         for key, value in defaultLabels.items() %}
+{%-           if subnet_name.labels is defined %}
+{%-             if not key in subnet_name.labels %}
+    {{ key }}: "{{ value }}"
+{%-             endif %}
+{%-           else %}
+    {{ key }}: "{{ value }}"
+{%-           endif %}
+{%-         endfor %}
+{%-       endif %}
+{%-       if subnet_name.labels is defined %}
+{%-         for key, value in subnet_name.labels.items() %}
+    {{ key }}: {{ value }}
+{%-         endfor %}
+{%-       endif %}
+spec:
+  resourceRef:
+    apiVersion: compute.cnrm.cloud.google.com/v1beta1
+    kind: ComputeSubnetwork
+    name: {{ subnet_name }}
+  bindings:
+    - members:
+{%-       for iam_type, emailList in subnet_def.permissions.items() %}
+{%-         for email in emailList %}
+{%-           if iam_type == "usersByEmail" %}
+        - user:{{ email }}
+{%-           elif iam_type == "serviceAccountsByEmail" %}
+        - serviceAccount:{{ email }}
+{%-           elif iam_type == "groupsByEmail" %}
+        - group:{{ email }}
+{%-           endif %}
+{%-         endfor %}
+{%-       endfor %}
+      role: roles/compute.networkUser
+---
+{%-         endif %}
+{%-       endfor %}
+{%-       endif %}
+{%-     endif %}
+{%-   endfor %}
+{%- endif %}

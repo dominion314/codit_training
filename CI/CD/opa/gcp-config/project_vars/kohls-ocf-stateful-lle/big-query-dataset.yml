@@ -1,0 +1,10 @@
+---
+bigQueryDatasets:
+  ocf_lle_prometheus:
+    defaultTableExpirationMs: 3600000                       # optional - minimum value 3600000
+    deletionProtect: true
+    permissions:
+      serviceAccountsByEmail:
+        prometheus-ocf@kohls-ocf-stateful-lle.iam.gserviceaccount.com:
+          roles:
+          - bigquery.dataOwner

@@ -1,0 +1,65 @@
+{%- if iamPolicyMembersV2 is defined %}
+{%-   for iamType, typeData in iamPolicyMembersV2.items() %}
+{%-     for email, rolesData in typeData.items() %}
+{%-       for roleDetail in rolesData %}
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  annotations:
+{%-     if roleDetail.deletionProtect | default(false) %}
+    cnrm.cloud.google.com/deletion-policy: abandon
+{%-     endif %}
+  labels:
+    managed-by-cnrm: "true"
+{%-         if defaultLabels is defined %}
+{%-           for key, value in defaultLabels.items() %}
+{%-             if roleDetail.labels is defined %}
+{%-               if not key in roleDetail.labels %}
+    {{ key }}: "{{ value }}"
+{%-               endif %}
+{%-             else %}
+    {{ key }}: "{{ value }}"
+{%-             endif %}
+{%-           endfor %}
+{%-         endif %}
+{%-         if roleDetail.labels is defined %}
+{%-           for key, value in roleDetail.labels.items() %}
+    {{ key }}: {{ value }}
+{%-           endfor %}
+{%-         endif %}
+{%-         if iamType == "usersByEmail" %}
+  name: user.{{ email | replace("@", ".") | replace(":", ".") | replace("_", ".") | lower }}-{{ roleDetail.role | replace("_", ".") | lower }}
+{%-         elif iamType == "serviceAccountsByEmail" %}
+  name: serviceaccount.{{ email | replace("@", ".") | replace(":", ".") | replace("_", ".") | lower }}-{{ roleDetail.role | replace("_", ".") | lower }}
+{%-         elif iamType == "groupsByEmail" %}
+  name: group.{{ email | replace("@", ".") | replace(":", ".") | replace("_", ".") | lower }}-{{ roleDetail.role | replace("_", ".") | lower }}
+{%-         endif %}
+  namespace: gcp-{{ project.name }}
+spec:
+  resourceRef:
+    kind: Project
+{%-         if roleDetail.OrgId is defined %}
+  role: organizations/{{ roleDetail.OrgId }}/roles/{{ roleDetail.role }}
+{%-         else %}
+  role: roles/{{ roleDetail.role }}
+{%-         endif %}
+{%-         if iamType == "usersByEmail" %}
+  member: "user:{{ email }}"
+{%-         elif iamType == "serviceAccountsByEmail" %}
+  member: "serviceAccount:{{ email }}"
+{%-         elif iamType == "groupsByEmail" %}
+  member: "group:{{ email }}"
+{%-         endif %}
+{%-         if roleDetail.condition is defined %}
+  condition:
+    title: {{ roleDetail.condition.title }}
+{%-           if roleDetail.condition.description is defined %}
+    description: {{ roleDetail.condition.description }}
+{%-           endif %}
+    expression: {{ roleDetail.condition.expression }}
+{%-         endif %}
+---
+{%-       endfor %}
+{%-     endfor %}
+{%-   endfor %}
+{%- endif %}

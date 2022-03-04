@@ -1,0 +1,8 @@
+{
+    "items": [
+        {
+            "input_yml_file": "storage-buckets.yml",
+            "schema_file": "gcp_project_schemas/storage-buckets_schema.yml"
+        }
+    ]
+}

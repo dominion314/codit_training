@@ -1,0 +1,30 @@
+---
+apiVersion: eunomia.kohls.io/v1alpha1
+kind: GitOpsConfig
+metadata:
+  name: gitops-kcc-seed-cr
+  namespace: kcc-seed
+spec:
+  templateSource:
+    uri: https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources.git
+    ref: master
+    contextDir: eunomia-cr/templates
+    httpProxy: proxy-gcp-central.kohls.com:8080
+    httpsProxy: proxy-gcp-central.kohls.com:8080
+    secretRef: gitlab-resources-project
+  parameterSource:
+    uri: https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources.git
+    ref: master
+    contextDir: eunomia-cr/clusters/kohls-cpe-kcc-lle-01/vars
+    httpProxy: proxy-gcp-central.kohls.com:8080
+    httpsProxy: proxy-gcp-central.kohls.com:8080
+    secretRef: gitlab-resources-project
+  triggers:
+  - type: Change
+  - type: Webhook
+  - type: Periodic
+    cron: "0 0 * * *"
+  serviceAccountRef: eunomia-runner-cluster-admin
+  templateProcessorImage: us.gcr.io/kohls-cpe-kcc-lle/eunomia-jinja-ansible:v0.0.8
+  resourceHandlingMode: Apply
+  resourceDeletionMode: Delete

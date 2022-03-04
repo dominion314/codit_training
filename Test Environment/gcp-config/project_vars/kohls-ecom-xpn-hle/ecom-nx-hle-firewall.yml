@@ -1,0 +1,1408 @@
+---
+vpcs:
+  ecom-nx-hle:
+    electiveFWrules:
+    - PMMRules
+    firewallRules:
+      aie-remote-hosts-ingress-ecom-ecmdm-hle-https:
+        description: SCTASK0922414
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "443"
+                - "8443"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.9.65.33/32"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-https
+      aws-ingress-ecom-ecmdm-hle:
+        description: SNOW-15672
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "22"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.195.0.0/18"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - rt-db-replication
+            - fw-ssh
+            - fw-mysql-hle
+            - fw-allow-all
+            - mysql
+            - blue
+            - fw-mysql
+            - fw-ssh-hle
+            - fw-netdiagnostics
+            - fw-netdiagnostics-hle
+            - fw-emysql-hle
+            - fw-essh-hle
+            - fw-enetdiagnostics-hle
+      cavisson-b2b-ing-to-kohls-ecom-ecmdm-hle-ssh:
+        description: SCTASK0761033
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "udp"
+              ports:
+                - "53"
+            - protocol: "tcp"
+              ports:
+                - "22"
+                - "53"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.4.64.164/32"
+            - "10.9.65.11/32"
+            - "10.4.64.163/32"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-ssh
+            - fw-kohls-cavisson-vm
+      cavisson-prd-to-ecom-ecmdm-hle-netdiagnostics:
+        description: SCTASK0720338,REQ0967128
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "7891-7899"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.206.96.0/25"
+            - "10.206.224.0/25"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-kohls-cavisson-vm
+            - fw-netdiagnostics
+      cavisson-prd-to-ecom-ecmdm-hle-tcp-02:
+        description: SCTASK0969564
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "7891-7892"
+                - "8500"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.206.96.0/25"
+            - "10.206.224.0/25"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+      cavisson-to-ecom-ecmdm-hle:
+        description:
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "7890-7899"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.206.96.0/25"
+            - "10.188.103.0/25"
+            - "10.186.219.128/25"
+            - "10.188.70.0/23"
+            - "10.184.104.0/25"
+            - "10.184.70.0/23"
+            - "10.188.102.0/25"
+            - "10.184.105.0/25"
+            - "10.184.68.0/23"
+            - "10.184.104.128/25"
+            - "10.190.127.0/25"
+            - "10.206.224.0/25"
+            - "10.188.102.128/25"
+            - "10.188.68.0/23"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-cavisson
+      ecom-ecmdm-hle-egr-to-cavisson-prd-ecmdm:
+        description: REQ0967128
+        direction: EGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "7891-7899"
+          destinationRanges:
+            - "10.206.96.0/25"
+            - "10.206.224.0/25"
+          destinationTags:
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-kohls-cavisson-vm
+      ecom-ecmdm-hle-ing-to-ecom-ecmdm-hle-consul:
+        description: SCTASK0799348
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "443"
+                - "8501"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+            - fw-https
+          targetServiceAccounts:
+          targetTags:
+            - fw-consul
+            - fw-https
+      ecom-ecmdm-hle-ing-to-ecom-ecmdm-hle-http:
+        description: SCTASK0795209
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "80"
+                - "8080"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+            - tonomirunner
+            - fw-http
+          targetServiceAccounts:
+          targetTags:
+            - fw-http
+      ecom-ecmdm-hle-ing-to-ecom-ecmdm-hle-https:
+        description: SCTASK0795209
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "443"
+                - "8443"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+            - tonomirunner
+            - fw-https
+          targetServiceAccounts:
+          targetTags:
+            - fw-https
+      ecom-ecmdm-hle-ingress-to-ecmdm-hle-migrate:
+        description: SCTASK0786990
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "udp"
+              ports:
+                - "50000"
+            - protocol: "tcp"
+              ports:
+                - "50000"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.191.16.0/24"
+            - "10.187.35.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - migrate-ui
+      ecom-ecmdm-hle-ingress-to-oracle-and-mysql:
+        description: SCTASK0782949
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "1521"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.8.228.139/32"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-mysql
+      ecom-ecmdm-hle-inter-intra-subnet-access-http:
+        description: SCTASK0785536
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "80"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.191.16.0/24"
+            - "10.187.35.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-http
+      ecom-ecmdm-hle-inter-intra-subnet-access-https:
+        description: SCTASK0785536,SCTASK0881844,SCTASK0917884
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "443"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.191.16.0/24"
+            - "10.208.18.0/23"
+            - "10.190.0.0/23"
+            - "10.208.96.0/24"
+            - "10.187.35.0/24"
+            - "10.186.0.0/23"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-https
+      ecom-ecmdm-hle-internal-tcp-01:
+        description: SCTASK0720338
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "9094"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.191.16.0/24"
+            - "10.187.35.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-kafka
+      ecom-ecmdm-hle-internal-tcp-02:
+        description: SCTASK0776776
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "13306"
+                - "33061"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.191.16.0/24"
+            - "10.187.35.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - rt-db-replication
+            - fw-mysql-hle
+            - mysql
+            - fw-mysql
+            - fw-emysql-hle
+      ecom-ecmdm-hle-to-cavisson:
+        description:
+        direction: EGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "80"
+                - "443"
+                - "7890-7899"
+          destinationRanges:
+            - "10.206.96.0/25"
+            - "10.188.103.0/25"
+            - "10.186.219.128/25"
+            - "10.188.70.0/23"
+            - "10.184.104.0/25"
+            - "10.184.70.0/23"
+            - "10.188.102.0/25"
+            - "10.184.105.0/25"
+            - "10.184.68.0/23"
+            - "10.184.104.128/25"
+            - "10.190.127.0/25"
+            - "10.206.224.0/25"
+            - "10.188.102.128/25"
+            - "10.188.68.0/23"
+          destinationTags:
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-cavisson
+      ecom-ecmdm-hle-to-ecom-ecmdm-hle-fw-ssh-01:
+        description: SNOW-15882
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "22"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.187.33.128/25"
+            - "10.191.16.0/24"
+            - "10.191.15.0/25"
+            - "10.187.35.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-ssh
+      ecom-xpn-tonomi-lle-ing-to-ecom-xpn-ecmdm-hle:
+        description: SCTASK0854489
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "22"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.186.213.0/24"
+            - "10.190.126.0/24"
+            - "10.186.212.0/24"
+            - "10.190.125.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-ssh
+            - fw-ssh-hle
+      gspann-b2b-and-gcp-to-ecom-ecmdm-hle:
+        description: SCTASK0962558,SCTASK0961026,SCTASk0975033,SCTASK0988867,SCTASK0988868,SCTASK0988865
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "80"
+                - "443"
+                - "8443"
+                - "22"
+                - "8080"
+                - "8088"
+                - "4443"
+                - "8983"
+                - "8984"
+                - "2181"
+                - "9092"
+                - "27017"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.110.116.0/22"
+            - "10.9.65.4/32"
+            - "10.110.108.0/22"
+            - "10.109.112.0/22"
+            - "10.4.64.161/32"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-ssh
+      ing-ecom-ecmdm-hle-to-ecom-ecmdm-hle-fw-http:
+        description: SCTASK0755788
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "8080"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.191.16.0/24"
+            - "10.187.35.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-http
+      ing-ecom-ecmdm-hle-to-ecom-ecmdm-hle-fw-kafka:
+        description: SCTASK0755764
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "9092-9094"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.191.16.0/24"
+            - "10.187.35.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-kafka
+      ing-ecom-ecmdm-hle-to-ecom-ecmdm-hle-fw-zk:
+        description: SCTASK0755790
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "2888"
+                - "3888"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.191.16.0/24"
+            - "10.187.35.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-zk
+      kohls-cavisson-prd-egress-to-kohls-ecom-ecmdm-hle:
+        description: SCTASK0759637
+        direction: EGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "7891-7899"
+                - "8001"
+                - "4431"
+                - "7991"
+                - "9012"
+                - "9999"
+          destinationRanges:
+            - "10.206.96.75/32"
+          destinationTags:
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-kohls-cavisson-vm
+            - fw-cavisson
+      kohls-cavisson-prd-ing-to-kohls-ecom-ecmdm-hle:
+        description: SCTASK0756445
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "7891-7899"
+                - "8001"
+                - "4431"
+                - "7991"
+                - "9012"
+                - "9999"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.206.96.75/32"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-kohls-cavisson-vm
+            - fw-cavisson
+      cavisson-prd-ing-to-kohls-ecom-ecmdm-hle-tcp9999:
+        description: SCTASK0803586
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "7891-7899"
+                - "8001"
+                - "4431"
+                - "7991"
+                - "9012"
+                - "9999"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.206.96.0/25"
+            - "10.206.224.0/25"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-cavisson
+      kohls-onperm-network-kohls-ecom-ecmdm-hle:
+        description: SCTASK0976269
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "22"
+                - "3306"
+                - "33061"
+                - "18443"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.57.0.0/17"
+            - "10.141.0.0/24"
+            - "10.90.64.0/18"
+            - "10.3.171.0/24"
+            - "10.15.0.0/16"
+            - "10.109.0.0/16"
+            - "10.12.0.0/16"
+            - "10.101.70.0/24"
+            - "10.22.200.0/24"
+            - "10.90.0.0/24"
+            - "172.26.0.0/15"
+            - "10.90.81.0/24"
+            - "10.192.34.0/23"
+            - "10.90.100.0/23"
+            - "10.25.0.0/16"
+            - "10.110.0.0/16"
+            - "10.90.24.0/22"
+            - "10.55.0.0/17"
+            - "10.1.170.0/24"
+            - "10.64.0.0/17"
+            - "10.90.60.0/25"
+            - "10.13.0.0/16"
+            - "10.22.64.0/18"
+            - "10.1.173.0/24"
+            - "10.14.0.0/16"
+            - "10.24.0.0/16"
+            - "10.2.100.0/24"
+            - "10.23.0.0/16"
+            - "10.19.0.0/16"
+            - "10.90.80.0/24"
+            - "10.93.5.0/28"
+            - "10.90.4.0/22"
+            - "10.17.0.0/16"
+            - "10.18.0.0/16"
+            - "10.16.0.0/16"
+            - "10.101.0.0/16"
+            - "10.100.0.0/16"
+            - "10.8.110.0/24"
+            - "10.90.20.0/22"
+            - "10.26.0.0/16"
+            - "10.58.0.0/17"
+            - "10.21.0.0/16"
+            - "10.2.174.0/24"
+            - "10.31.0.0/16"
+            - "10.10.0.0/16"
+            - "10.20.0.0/16"
+            - "10.27.0.0/16"
+            - "10.1.160.0/24"
+            - "10.30.0.0/16"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - mysql
+      kos-xpn-hle-igr-to-ecom-ecmdm-hle-http:
+        description: SCTASK0792823
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "80"
+                - "443"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.208.180.0/24"
+            - "10.208.165.0/24"
+            - "10.208.116.0/24"
+            - "10.208.167.0/24"
+            - "10.208.200.0/22"
+            - "10.208.45.0/24"
+            - "10.208.169.0/24"
+            - "10.208.184.0/22"
+            - "10.208.37.0/24"
+            - "10.208.41.0/24"
+            - "10.208.88.0/22"
+            - "10.208.39.0/24"
+            - "10.208.56.0/22"
+            - "10.208.72.0/22"
+            - "10.208.216.0/22"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-http
+            - fw-https
+      kos-xpn-hle-igr-to-ecom-ecmdm-hle-https:
+        description: SCTASK0922574
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "443"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.208.20.0/23"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-https
+      kos-xpn-lle-to-ecom-ecmdm-hle-tcp-01:
+        description: SCTASK0978870
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "80"
+                - "443"
+                - "8443"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.208.8.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-ssh
+      nonprd-prequal-server-to-ecom-ecmdm-hle:
+        description: SCTASK0794199,SCTASK0800128
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "443"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.1.83.16/32"
+            - "10.1.83.29/32"
+            - "10.1.98.45/32"
+            - "10.8.232.15/32"
+            - "10.8.232.16/32"
+            - "10.1.83.17/32"
+            - "10.1.83.30/32"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-https
+      on-prem-to-ecom-ecmdm-hle-mysql:
+        description: SCTASK0745477
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "3306"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.57.0.0/17"
+            - "10.109.0.0/16"
+            - "10.101.70.0/24"
+            - "172.26.0.0/15"
+            - "10.90.81.0/24"
+            - "10.90.100.0/23"
+            - "10.110.0.0/16"
+            - "10.64.0.0/17"
+            - "10.90.80.0/24"
+            - "10.101.0.0/16"
+            - "10.100.0.0/16"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-mysql
+      onprem-corp-and-gcp-to-ecom-ecmdm-hle-tcp-01:
+        description: SCTASK0720338
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "udp"
+              ports:
+                - "8301-8302"
+                - "8600"
+            - protocol: "tcp"
+              ports:
+                - "8300-8302"
+                - "8500-8501"
+                - "8600"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.57.0.0/17"
+            - "10.187.33.128/25"
+            - "10.191.16.0/24"
+            - "172.26.0.0/15"
+            - "10.90.81.0/24"
+            - "10.90.100.0/23"
+            - "10.64.0.0/17"
+            - "10.191.15.0/25"
+            - "10.90.80.0/24"
+            - "10.101.0.0/16"
+            - "10.100.0.0/16"
+            - "10.187.35.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-consul
+      onprem-corp-and-gcp-to-ecom-ecmdm-hle-tcp-02:
+        description: SCTASK0720338
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "3306"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.57.0.0/17"
+            - "10.191.16.0/24"
+            - "172.26.0.0/15"
+            - "10.90.81.0/24"
+            - "10.90.100.0/23"
+            - "10.64.0.0/17"
+            - "10.90.80.0/24"
+            - "10.101.0.0/16"
+            - "10.100.0.0/16"
+            - "10.187.35.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-mysql
+      onprem-corp-and-gcp-to-ecom-ecmdm-hle-tcp-03:
+        description: SCTASK0720338
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "22"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.57.0.0/17"
+            - "172.26.0.0/15"
+            - "10.90.81.0/24"
+            - "10.90.100.0/23"
+            - "10.208.22.0/24"
+            - "10.64.0.0/17"
+            - "10.90.80.0/24"
+            - "10.101.0.0/16"
+            - "10.100.0.0/16"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-ssh
+      onprem-corp-and-gcp-to-ecom-ecmdm-hle-tcp-04:
+        description: SCTASK0720338
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "8200-8201"
+                - "8210"
+                - "8243"
+                - "8253"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.57.0.0/17"
+            - "10.187.33.128/25"
+            - "10.191.16.0/24"
+            - "172.26.0.0/15"
+            - "10.90.81.0/24"
+            - "10.90.100.0/23"
+            - "10.64.0.0/17"
+            - "10.191.15.0/25"
+            - "10.90.80.0/24"
+            - "10.101.0.0/16"
+            - "10.100.0.0/16"
+            - "10.187.35.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-vault
+      onprem-corp-and-gcp-to-ecom-ecmdm-hle-tcp-05:
+        description: SCTASK0720338
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "80"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.57.0.0/17"
+            - "10.187.33.128/25"
+            - "10.208.79.0/24"
+            - "10.208.15.0/24"
+            - "172.26.0.0/15"
+            - "10.90.81.0/24"
+            - "10.208.95.0/24"
+            - "10.90.100.0/23"
+            - "10.208.3.0/24"
+            - "10.64.0.0/17"
+            - "10.208.13.0/24"
+            - "10.191.15.0/25"
+            - "10.90.80.0/24"
+            - "10.208.103.0/24"
+            - "10.208.5.0/24"
+            - "10.208.11.0/24"
+            - "10.208.9.0/24"
+            - "10.101.0.0/16"
+            - "10.100.0.0/16"
+            - "10.208.17.0/24"
+            - "10.208.21.0/24"
+            - "10.208.7.0/24"
+            - "10.208.101.0/24"
+            - "10.208.99.0/24"
+            - "10.208.1.0/24"
+            - "10.208.97.0/24"
+            - "10.208.19.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-http
+      onprem-corp-and-gcp-to-ecom-ecmdm-hle-tcp-06:
+        description: SCTASK0720338
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "443"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.57.0.0/17"
+            - "10.187.33.128/25"
+            - "10.208.79.0/24"
+            - "10.206.96.0/25"
+            - "10.208.15.0/24"
+            - "172.26.0.0/15"
+            - "10.90.81.0/24"
+            - "10.208.95.0/24"
+            - "10.90.100.0/23"
+            - "10.208.3.0/24"
+            - "10.64.0.0/17"
+            - "10.208.13.0/24"
+            - "10.191.15.0/25"
+            - "10.90.80.0/24"
+            - "10.208.103.0/24"
+            - "10.208.5.0/24"
+            - "10.208.11.0/24"
+            - "10.208.9.0/24"
+            - "10.101.0.0/16"
+            - "10.100.0.0/16"
+            - "10.206.224.0/25"
+            - "10.208.17.0/24"
+            - "10.208.21.0/24"
+            - "10.208.7.0/24"
+            - "10.208.101.0/24"
+            - "10.208.99.0/24"
+            - "10.208.1.0/24"
+            - "10.208.97.0/24"
+            - "10.208.19.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-https
+      onprem-corp-and-gcp-to-ecom-ecmdm-hle-tcp-07:
+        description: SCTASK0720338
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "2181"
+                - "9999"
+                - "35883"
+                - "44589"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.57.0.0/17"
+            - "10.187.33.128/25"
+            - "10.191.16.0/24"
+            - "172.26.0.0/15"
+            - "10.90.81.0/24"
+            - "10.90.100.0/23"
+            - "10.64.0.0/17"
+            - "10.191.15.0/25"
+            - "10.90.80.0/24"
+            - "10.101.0.0/16"
+            - "10.100.0.0/16"
+            - "10.187.35.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-zookeeper
+      onprem-corp-to-ecom-ecmdm-hle-tcp-01:
+        description: SCTASK0720338
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "9012"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.57.0.0/17"
+            - "172.26.0.0/15"
+            - "10.90.81.0/24"
+            - "10.90.100.0/23"
+            - "10.64.0.0/17"
+            - "10.90.80.0/24"
+            - "10.101.0.0/16"
+            - "10.100.0.0/16"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-zkui
+      onprem-corp-to-ecom-ecmdm-hle-tcp-02:
+        description: SCTASK0720338
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "28080"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.57.0.0/17"
+            - "172.26.0.0/15"
+            - "10.90.81.0/24"
+            - "10.90.100.0/23"
+            - "10.64.0.0/17"
+            - "10.90.80.0/24"
+            - "10.101.0.0/16"
+            - "10.100.0.0/16"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-haproxy
+      onprem-mash-ing-to-ecom-ecmdm-hle:
+        description: SCTASK0878508
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "443"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.1.82.156"
+            - "10.1.82.32"
+            - "10.1.82.146"
+            - "10.8.231.182"
+            - "10.8.228.54"
+            - "10.8.231.167"
+            - "10.3.18.101"
+            - "10.8.231.184"
+            - "10.8.228.251"
+            - "10.8.229.8"
+            - "10.8.228.249"
+            - "10.1.82.55"
+            - "10.8.231.206"
+            - "10.1.82.150"
+            - "10.8.231.168"
+            - "10.1.82.148"
+            - "10.1.82.119"
+            - "10.1.82.56"
+            - "10.1.82.149"
+            - "10.1.82.155"
+            - "10.8.231.207"
+            - "10.8.228.248"
+            - "10.1.82.54"
+            - "10.8.228.250"
+            - "10.8.231.183"
+            - "10.8.229.9"
+            - "10.8.229.7"
+            - "10.8.229.3"
+            - "10.1.82.147"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-https
+      onprem-mash-ing-to-kohls-ecom-ecmdm-hle-01:
+        description: SCTASK0841017
+        direction: INGRESS
+        disabled: false
+        logging: false
+        priority: 900
+        rule:
+          allow:
+            - protocol: "tcp"
+              ports:
+                - "443"
+          destinationRanges:
+          destinationTags:
+          sourceRanges:
+            - "10.8.27.243"
+            - "10.8.231.167"
+            - "10.3.18.101"
+            - "10.8.231.206"
+            - "10.8.231.168"
+            - "10.8.27.245"
+            - "10.8.27.244"
+            - "10.8.231.207"
+            - "10.8.27.246"
+          sourceServiceAccounts:
+          sourceTags:
+          targetServiceAccounts:
+          targetTags:
+            - fw-https
+      gd-ui-ingress:
+        priority: 900
+        direction: INGRESS
+        description: http/https traffic
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-http
+          - fw-https
+          - fw-haproxy
+          - fw-consul
+          sourceRanges:
+          - "10.9.65.7/32"
+          - "10.9.65.10/32"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "80"
+            - "443"
+            - "8080"
+            - "8443"
+            - "8500"
+      gd-ssh-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SSH thaffic
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - tonomirunner
+          - rundeck
+          - fw-allow-all
+          - fw-ssh
+          sourceRanges:
+          - "10.9.65.7/32"
+          - "10.9.65.10/32"
+          - "10.212.188.128/32"
+          - "10.216.188.8/32"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      temp-netx-icmp-ingress:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          sourceRanges:
+          - "10.186.22.0/25"
+          - "10.186.23.0/24"
+          - "10.190.12.128/25"
+          - "10.190.13.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "icmp"
+      temp-netx-sd-ingress:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - consul
+          - vault
+          sourceRanges:
+          - "10.186.22.0/25"
+          - "10.186.23.0/24"
+          - "10.190.12.128/25"
+          - "10.190.13.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "8200-8700"
+          - protocol: "udp"
+            ports:
+            - "8301"
+            - "8302"
+            - "8600"
+      temp-netx-mysql-ingress:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - mysql
+          - fw-mysql
+          sourceRanges:
+          - "10.186.22.0/25"
+          - "10.186.23.0/24"
+          - "10.190.12.128/25"
+          - "10.190.13.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+            - "3306"
+            - "33061"
+            - "4444"
+            - "4567-4568"
+      temp-netx-zk-ingress:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - zookeeper
+          sourceRanges:
+          - "10.186.22.0/25"
+          - "10.186.23.0/24"
+          - "10.190.12.128/25"
+          - "10.190.13.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "2181"
+            - "2888"
+            - "3888"
+      temp-netx-kafka-ingress:
+        priority: 900
+        direction: INGRESS
+        description:
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - kafka
+          sourceRanges:
+          - "10.186.22.0/25"
+          - "10.186.23.0/24"
+          - "10.190.12.128/25"
+          - "10.190.13.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "9092"
+            - "9093"

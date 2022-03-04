@@ -1,0 +1,109 @@
+{%- if vpcs is defined %}
+{%-   for vpc_name, vpc_def in vpcs.items() %}
+{%-     if vpc_def.routerDef is defined %}
+{%-       for router_name, router_def in vpc_def.routerDef.items() %}
+{%-         if router_def.ha_vpn_gateways_to_transit is defined %}
+{%-           for transit_ha_vpn_name, transit_ha_vpn_def in router_def.ha_vpn_gateways_to_transit.items() %}
+{%-             set transit_hub_project = transit_hub.namespace | replace('gcp-','') %}
+{%-             set rtr_int_0 = [transit_ha_vpn_name, "-if0-b"] | join %}
+{%-             set rtr_int_1 = [transit_ha_vpn_name, "-if1-b"] | join %}
+{%-             set tunnel0_name = [transit_ha_vpn_name, "-tu0-b"] | join %}
+{%-             set tunnel1_name = [transit_ha_vpn_name, "-tu1-b"] | join %}
+{%-             set peer0_name = [transit_ha_vpn_name, "-peer0-b"] | join %}
+{%-             set peer1_name = [transit_ha_vpn_name, "-peer1-b"] | join %}
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeRouterInterface
+metadata:
+  name: {{ rtr_int_0 }}
+  namespace: {{ transit_hub.namespace }}
+{%- if project.deletionProtect | default(true, true) %}
+{%-   if transit_ha_vpn_def.deletionProtect | default(false, true) %}
+  annotations:
+    cnrm.cloud.google.com/deletion-policy: abandon
+{%-   endif %}
+{%- endif %}
+spec:
+  routerRef:
+    name: {{ transit_hub.centralRouterName if router_def.region == "us-central1" else transit_hub.eastRouterName }}
+    namespace: {{ transit_hub.namespace }}
+  region: {{ router_def.region }}
+  ipRange: "{{ transit_ha_vpn_def.if0_peer_cidr.cidr | ipaddr('last_usable') }}/30"
+  vpnTunnelRef:
+    name: {{ tunnel0_name }}
+    namespace: {{ transit_hub.namespace }}
+---
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeRouterInterface
+metadata:
+  name: {{ rtr_int_1 }}
+  namespace: {{ transit_hub.namespace }}
+{%- if project.deletionProtect | default(true, true) %}
+{%-   if transit_ha_vpn_def.deletionProtect | default(false, true) %}
+  annotations:
+    cnrm.cloud.google.com/deletion-policy: abandon
+{%-   endif %}
+{%- endif %}
+spec:
+  routerRef:
+    name: {{ transit_hub.centralRouterName if router_def.region == "us-central1" else transit_hub.eastRouterName }}
+    namespace: {{ transit_hub.namespace }}
+  region: {{ router_def.region }}
+  ipRange: "{{ transit_ha_vpn_def.if1_peer_cidr.cidr | ipaddr('last_usable') }}/30"
+  vpnTunnelRef:
+    name: {{ tunnel1_name }}
+    namespace: {{ transit_hub.namespace }}
+---
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeRouterPeer
+metadata:
+  name: {{ peer0_name }}
+  namespace: {{ transit_hub.namespace }}
+{%- if project.deletionProtect | default(true, true) %}
+{%-   if transit_ha_vpn_def.deletionProtect | default(false, true) %}
+  annotations:
+    cnrm.cloud.google.com/deletion-policy: abandon
+{%-   endif %}
+{%- endif %}
+spec:
+  region: {{ router_def.region }}
+  advertiseMode: DEFAULT
+  peerIpAddress: {{ transit_ha_vpn_def.if0_peer_cidr.cidr | ipaddr('next_usable') }}
+  peerAsn: {{ ha_vpn_to_global_transit_asn[project.name][router_name] }}
+  {%- if transit_ha_vpn_def.custom_route_priority is defined and transit_ha_vpn_def.custom_route_priority is not none %}advertisedRoutePriority: {{ transit_ha_vpn_def.custom_route_priority }}{% endif %}
+  routerRef:
+    name: {{ transit_hub.centralRouterName if router_def.region == "us-central1" else transit_hub.eastRouterName }}
+    namespace: {{ transit_hub.namespace }}
+  routerInterfaceRef:
+    name: {{ rtr_int_0 }}
+    namespace: {{ transit_hub.namespace }}
+---
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeRouterPeer
+metadata:
+  name: {{ peer1_name }}
+  namespace: {{ transit_hub.namespace }}
+{%- if project.deletionProtect | default(true, true) %}
+{%-   if transit_ha_vpn_def.deletionProtect | default(false, true) %}
+  annotations:
+    cnrm.cloud.google.com/deletion-policy: abandon
+{%-   endif %}
+{%- endif %}
+spec:
+  region: {{ router_def.region }}
+  advertiseMode: DEFAULT
+  peerIpAddress: {{ transit_ha_vpn_def.if1_peer_cidr.cidr | ipaddr('next_usable') }}
+  peerAsn: {{ ha_vpn_to_global_transit_asn[project.name][router_name] }}
+  {%- if transit_ha_vpn_def.custom_route_priority is defined and transit_ha_vpn_def.custom_route_priority is not none %}advertisedRoutePriority: {{ transit_ha_vpn_def.custom_route_priority }}{% endif %}
+  routerRef:
+    name: {{ transit_hub.centralRouterName if router_def.region == "us-central1" else transit_hub.eastRouterName }}
+    namespace: {{ transit_hub.namespace }}
+  routerInterfaceRef:
+    name: {{ rtr_int_1 }}
+    namespace: {{ transit_hub.namespace }}
+---
+{%-           endfor %}
+{%-         endif %}
+{%-       endfor %}
+{%-     endif %}
+{%-   endfor %}
+{%- endif %}

@@ -1,0 +1,364 @@
+---
+vpcs:
+  platform-nx-lle:
+    firewallRules:
+      # Rules For All OpenShift Environments
+      openshift-lle-prv01-allow-bootstrap-ssh:
+        priority: 900
+        direction: INGRESS
+        description: Allow ssh connectivity to bootstrap instance
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          - external: "ocp-bootstrap-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+          - "10.126.128.0/17" # central lle supernet
+          - "10.127.128.0/17" # east lle supernet
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      openshift-lle-prv01-allow-api:
+        priority: 900
+        direction: INGRESS
+        description: Allow access to OCP API
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          - external: "ocp-bootstrap-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-master-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+          - "10.126.128.0/17" # central lle supernet
+          - "10.127.128.0/17" # east lle supernet
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "6443"
+      openshift-lle-prv01-allow-health-checks:
+        priority: 900
+        direction: INGRESS
+        description: Allow GCP ILB health checks
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          - external: "ocp-bootstrap-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-router-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-master-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+          - "35.191.0.0/16"
+          - "130.211.0.0/22"
+          - "209.85.152.0/22"
+          - "209.85.204.0/22"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "6080"
+            - "6443"
+            - "22624"
+      openshift-lle-prv01-allow-etcd:
+        priority: 900
+        direction: INGRESS
+        description: Allow etcd connectivity between master nodes
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          - external: "ocp-bootstrap-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-master-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+          sourceServiceAccounts:
+          - external: "ocp-bootstrap-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-master-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "2379-2380"
+      openshift-lle-prv01-allow-control-plane:
+        priority: 900
+        direction: INGRESS
+        description: Allow OCP nodes to talk across control plane
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          - external: "ocp-bootstrap-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-master-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+          sourceServiceAccounts:
+          - external: "ocp-app-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-bootstrap-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-infra-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-master-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-pci-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-pii-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-router-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "10257"
+            - "10259"
+            - "22623"
+      openshift-lle-prv01-allow-internal-network:
+        priority: 900
+        direction: INGRESS
+        description: Allow SSH and ICMP connectivity to OCP nodes
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          - external: "ocp-app-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-bootstrap-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-infra-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-master-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-pci-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-pii-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-router-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+          - "10.126.128.0/17" # central lle supernet
+          - "10.127.128.0/17" # east lle supernet
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+          - protocol: "icmp"
+      openshift-lle-prv01-allow-internal-cluster:
+        priority: 900
+        direction: INGRESS
+        description: Allow node communication within OCP cluster
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          - external: "ocp-app-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-bootstrap-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-infra-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-master-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-pci-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-pii-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-router-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+          sourceServiceAccounts:
+          - external: "ocp-app-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-bootstrap-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-infra-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-master-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-pci-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-pii-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-router-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          sourceTags:
+          allow:
+          - protocol: "udp"
+            ports:
+            - "4789"
+            - "6081"
+            - "9000-9999"
+            - "30000-32767"
+          - protocol: "tcp"
+            ports:
+            - "9000-9999"
+            - "10250"
+            - "30000-32767"
+      openshift-lle-prv01-allow-kohls-network:
+        priority: 900
+        direction: INGRESS
+        description: Allow
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          - external: "ocp-bootstrap-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-master-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-router-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+          - "10.0.0.0/8"
+          - "172.26.0.0/15"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "80"
+            - "443"
+            - "6443"
+      openshift-lle-prv01-allow-kohls-asn-network:
+        priority: 900
+        direction: INGRESS
+        description: Allow
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          - external: "ocp-router-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+            - "66.232.224.0/24"
+            - "66.232.225.0/24"
+            - "66.232.226.0/23"
+            - "66.232.226.0/24"
+            - "66.232.227.0/24"
+            - "66.232.228.0/23"
+            - "66.232.228.0/24"
+            - "66.232.229.0/24"
+            - "66.232.231.0/24"
+            - "66.232.232.0/21"
+            - "66.232.232.0/22"
+            - "66.232.236.0/22"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "443"
+      openshift-lle-prv01-allow-ssh:
+        priority: 900
+        direction: INGRESS
+        description: Allow
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          - external: "ocp-app-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-bootstrap-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-infra-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-master-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-router-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+          - "10.57.0.0/16"  # KIC User Segment
+          - "10.100.0.0/16" # Corp User Segment
+          - "10.101.0.0/16" # Wireless User Segment
+          - "172.26.0.0/15" # VPN
+          - "10.126.128.0/17" # central lle supernet (xPaaS Jenkins)
+          - "10.127.128.0/17" # east lle supernet (xPaaS Jenkins)
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+
+      confluent-cloud-kafka-clusters:
+        priority: 900
+        direction: EGRESS
+        description: SNOW-16522
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          - "35.239.43.200/32"
+          - "35.226.138.210/32"
+          - "34.69.126.144/32"
+          - "104.197.235.120/32"
+          - "35.222.231.161/32"
+          - "104.197.184.153/32"
+          - "35.223.204.47/32"
+          - "35.232.242.141/32"
+          - "35.223.186.236/32"
+          - "35.193.113.160/32"
+          - "35.224.215.168/32"
+          - "35.202.33.164/32"
+          - "34.68.241.146/32"
+          - "34.67.145.241/32"
+          - "34.68.102.38/32"
+          - "34.70.159.56/32"
+          - "35.194.33.66/32"
+          - "35.192.208.190/32"
+          - "35.224.243.7/32"
+          - "35.224.216.199/32"
+          - "34.66.51.232/32"
+          - "34.68.252.254/32"
+          - "34.67.92.77/32"
+          - "104.197.202.31/32"
+          - "35.184.215.56/32"
+          - "34.66.26.30/32"
+          - "35.238.117.49/32"
+          - "34.72.187.170/32"
+          - "34.68.91.177/32"
+          - "34.68.32.148/32"
+          - "35.222.75.254/32"
+          targetServiceAccounts:
+          targetTags:
+          - ocp-app-node-paas
+          - ocp-pci-node-paas
+          - ocp-pii-node-paas
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "9092"
+            - "9094"
+      cx-nx-lle-kafka-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-17137
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-kafka
+          sourceRanges:
+          - "10.187.56.0/23"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "9092"
+      seed-nx-lle-sis-cassandra-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-17254
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - platform-nx-lle
+          sourceRanges:
+          - "10.187.30.0/23"
+          - "10.187.94.0/25"
+          - "10.191.12.0/23"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "9042"
+            - "7199"
+            - "7169"

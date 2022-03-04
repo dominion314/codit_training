@@ -1,0 +1,8 @@
+---
+storageBuckets:
+  kohls-etcc-ccproductivity-lle-bucket:
+    versioningEnabled: true
+    deletionProtect: true
+    storageClass: STANDARD
+    location: US
+    bucketPolicyOnly: true

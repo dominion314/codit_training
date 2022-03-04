@@ -1,0 +1,78 @@
+---
+storageBuckets:
+  required: false
+  type: 'dict'
+  keysrules:
+    type: 'string'
+    regex: '[-a-z0-9\._]+' # TODO: bucket name, might need some refining
+  valuesrules:
+    type: 'dict'
+    schema:
+      permissions:
+        required: false
+        type: 'dict'
+        allow_unknown: false
+        schema:
+          usersByEmail:
+            type: 'dict'
+            required: false
+            keysrules:
+              type: 'string'
+              regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+            valuesrules:
+              type: 'dict'
+              schema:
+                deletionProtect:
+                  type: 'boolean'
+                  required: false
+                roles:
+                  required: true
+                  type: 'list'
+                  schema:
+                    type: 'string'
+                    allowed: ['storage.objectCreator', 'storage.objectViewer', 'storage.objectAdmin',
+                      'storage.admin', 'storage.legacyObjectReader', 'storage.legacyObjectOwner',
+                      'storage.legacyBucketReader', 'storage.legacyBucketWriter',
+                      'storage.legacyBucketOwner']
+          groupsByEmail:
+            type: 'dict'
+            required: false
+            keysrules:
+              type: 'string'
+              regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+            valuesrules:
+              type: 'dict'
+              schema:
+                deletionProtect:
+                  type: 'boolean'
+                  required: false
+                roles:
+                  required: false
+                  type: 'list'
+                  schema:
+                    type: 'string'
+                    allowed: ['storage.objectCreator', 'storage.objectViewer', 'storage.objectAdmin',
+                      'storage.admin', 'storage.legacyObjectReader', 'storage.legacyObjectOwner',
+                      'storage.legacyBucketReader', 'storage.legacyBucketWriter',
+                      'storage.legacyBucketOwner']
+          serviceAccountsByEmail:
+            type: 'dict'
+            required: false
+            keysrules:
+              type: 'string'
+              regex: '.*\.gserviceaccount\.com'
+            valuesrules:
+              type: 'dict'
+              schema:
+                deletionProtect:
+                  type: 'boolean'
+                  required: false
+                roles:
+                  required: false
+                  type: 'list'
+                  schema:
+                    type: 'string'
+                    allowed: ['storage.objectCreator', 'storage.objectViewer', 'storage.objectAdmin',
+                      'storage.admin', 'storage.legacyObjectReader', 'storage.legacyObjectOwner',
+                      'storage.legacyBucketReader', 'storage.legacyBucketWriter',
+                      'storage.legacyBucketOwner']

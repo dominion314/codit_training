@@ -1,0 +1,55 @@
+---
+computeDisks:
+  type: 'dict'
+  required: false
+  keysrules:
+    type: 'string'
+    required: true
+    regex: '[a-z]([-a-z0-9]*[a-z0-9])?' # Name of disk
+  valuesrules:
+    type: 'dict'
+    required: true
+    schema:
+      description:
+        type: 'string'
+        required: false
+      labels:
+        type: 'dict'
+        required: false
+        keysrules:
+          type: 'string'
+          regex: '^[0-9a-z-]+'
+        valuesrules:
+          type: 'string'
+          regex: '^[0-9a-z-]+'
+      zone:
+        type: 'string'
+        required: true
+        allowed: ['us-east1-b', 'us-east1-c', 'us-east1-d', 'us-east4-a', 'us-east4-b',
+          'us-east4-c', 'us-central1-a', 'us-central1-b', 'us-central1-c', 'us-central1-f',
+          'us-west1-a', 'us-west1-b', 'us-west1-c', 'us-west2-a', 'us-west2-b', 'us-west2-c',
+          'us-west3-a', 'us-west3-b', 'us-west3-c', 'us-west4-a', 'us-west4-b', 'us-west4-c']
+      replicaZone:
+        type: 'string'
+        required: false
+        allowed: ['us-east1-b', 'us-east1-c', 'us-east1-d', 'us-east4-a', 'us-east4-b',
+          'us-east4-c', 'us-central1-a', 'us-central1-b', 'us-central1-c', 'us-central1-f',
+          'us-west1-a', 'us-west1-b', 'us-west1-c', 'us-west2-a', 'us-west2-b', 'us-west2-c',
+          'us-west3-a', 'us-west3-b', 'us-west3-c', 'us-west4-a', 'us-west4-b', 'us-west4-c']
+      size:
+        type: 'integer'
+        required: false
+      type:
+        type: 'string'
+        required: false
+        allowed: ['pd-standard', 'pd-ssd']
+      physicalBlockSizeBytes:
+        type: 'integer'
+        required: false
+        allowed: [4096, 16384]
+      image:
+        type: 'dict'
+        required: false
+        schema:
+          external:
+            type: 'string'

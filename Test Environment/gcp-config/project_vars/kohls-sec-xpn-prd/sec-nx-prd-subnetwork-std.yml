@@ -1,0 +1,221 @@
+---
+vpcs:
+  sec-nx-prd:
+    subnets:
+
+      sec-nx-prd-tenable-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.185.0.16/28
+          bluecat-id: 1555572
+          status: PROVISIONED
+        permissions:
+          serviceAccountsByEmail:
+          - terraform-sec@kohls-sec-engineering-prd.iam.gserviceaccount.com
+          - 622655287475@cloudservices.gserviceaccount.com
+          - 622655287475-compute@developer.gserviceaccount.com
+          groupsByEmail:
+          - gcp-securitytech-devops-admin@kohls.com
+          - gcp-securitytech-devops-manager@kohls.com
+
+      sec-nx-prd-tenable-e1-prv01:
+        advertiseRoutes: true
+        region: us-east1
+        network:
+          ip: 10.189.0.16/28
+          bluecat-id: 1555574
+          status: PROVISIONED
+        permissions:
+          serviceAccountsByEmail:
+          - terraform-sec@kohls-sec-engineering-prd.iam.gserviceaccount.com
+          - 622655287475@cloudservices.gserviceaccount.com
+          - 622655287475-compute@developer.gserviceaccount.com
+          groupsByEmail:
+          - gcp-securitytech-devops-admin@kohls.com
+          - gcp-securitytech-devops-manager@kohls.com
+
+      sec-nx-prd-atomic-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.185.0.32/28
+          bluecat-id: 1555576
+          status: PROVISIONED
+        permissions:
+          serviceAccountsByEmail:
+          - terraform-sec@kohls-sec-engineering-prd.iam.gserviceaccount.com
+          - 622655287475@cloudservices.gserviceaccount.com
+          - 622655287475-compute@developer.gserviceaccount.com
+          groupsByEmail:
+          - gcp-securitytech-devops-admin@kohls.com
+          - gcp-securitytech-devops-manager@kohls.com
+
+      sec-nx-prd-atomic-e1-prv01:
+        advertiseRoutes: true
+        region: us-east1
+        network:
+          ip: 10.189.0.32/28
+          bluecat-id: 1555578
+          status: PROVISIONED
+        permissions:
+          serviceAccountsByEmail:
+          - terraform-sec@kohls-sec-engineering-prd.iam.gserviceaccount.com
+          - 622655287475@cloudservices.gserviceaccount.com
+          - 622655287475-compute@developer.gserviceaccount.com
+          groupsByEmail:
+          - gcp-securitytech-devops-admin@kohls.com
+          - gcp-securitytech-devops-manager@kohls.com
+
+      sec-nx-prd-utilities-c1-prv01:
+        advertiseRoutes: true
+        natRouter: sec-nx-prd-c1-gcp-rtr01
+        region: us-central1
+        network:
+          ip: 10.185.0.48/28
+          bluecat-id: 1555580
+          status: PROVISIONED
+        permissions:
+          serviceAccountsByEmail:
+          - terraform-sec@kohls-sec-engineering-prd.iam.gserviceaccount.com
+          - 622655287475@cloudservices.gserviceaccount.com
+          - 622655287475-compute@developer.gserviceaccount.com
+          groupsByEmail:
+          - gcp-securitytech-devops-admin@kohls.com
+          - gcp-securitytech-devops-manager@kohls.com
+
+      sec-nx-prd-utilities-e1-prv01:
+        advertiseRoutes: true
+        region: us-east1
+        network:
+          ip: 10.189.0.48/28
+          bluecat-id: 1555582
+          status: PROVISIONED
+        permissions:
+          serviceAccountsByEmail:
+          - terraform-sec@kohls-sec-engineering-prd.iam.gserviceaccount.com
+          - 622655287475@cloudservices.gserviceaccount.com
+          - 622655287475-compute@developer.gserviceaccount.com
+          groupsByEmail:
+          - gcp-securitytech-devops-admin@kohls.com
+          - gcp-securitytech-devops-manager@kohls.com
+
+      sec-nx-prd-bastion-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.185.3.64/27
+          bluecat-id: 1568798
+          status: PROVISIONED
+        permissions:
+          serviceAccountsByEmail:
+          - terraform-devops@kohls-sec-bastion-prd.iam.gserviceaccount.com
+          - 779556528532-compute@developer.gserviceaccount.com
+          - 779556528532@cloudservices.gserviceaccount.com
+          groupsByEmail:
+          - gcp-securitytech-devops-admin@kohls.com
+          - GCP-IAM-L3@kohls.com
+
+      sec-nx-prd-bastion-e1-prv01:
+        advertiseRoutes: true
+        region: us-east1
+        network:
+          ip: 10.189.3.0/27
+          bluecat-id: 1568800
+          status: PROVISIONED
+        permissions:
+          serviceAccountsByEmail:
+          - terraform-devops@kohls-sec-bastion-prd.iam.gserviceaccount.com
+          - 779556528532-compute@developer.gserviceaccount.com
+          - 779556528532@cloudservices.gserviceaccount.com
+          groupsByEmail:
+          - gcp-securitytech-devops-admin@kohls.com
+          - GCP-IAM-L3@kohls.com
+
+      sec-nx-prd-sre-theia-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.185.12.208/28
+          bluecat-id: 1600017
+          status: PROVISIONED
+
+      sec-nx-prd-sre-theia-e1-prv01:
+        advertiseRoutes: true
+        region: us-east1
+        network:
+          ip: 10.189.9.176/28
+          bluecat-id: 1600019
+          status: PROVISIONED
+
+      sec-nx-prd-vault-c1-prv01:
+        advertiseRoutes: true
+        natRouter: sec-nx-prd-c1-gcp-rtr01
+        region: us-central1
+        network:
+          ip: 10.185.14.0/25
+          bluecat-id: 1600049
+          status: PROVISIONED
+        permissions:
+          serviceAccountsByEmail:
+          - consul-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
+          - terraform-sec@kohls-sec-engineering-prd.iam.gserviceaccount.com
+          - vault-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
+          - terraform-vault-prd-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
+          - 194433087674@cloudservices.gserviceaccount.com
+          groupsByEmail:
+          - gcp-securitytech-devops-admin@kohls.com
+          - gcp-securitypam-sd-l3@kohls.com
+
+      sec-nx-prd-vault-e1-prv01:
+        advertiseRoutes: true
+        natRouter: sec-nx-prd-e1-gcp-rtr01
+        region: us-east1
+        network:
+          ip: 10.189.10.128/25
+          bluecat-id: 1600051
+          status: PROVISIONED
+        permissions:
+          serviceAccountsByEmail:
+          - consul-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
+          - terraform-sec@kohls-sec-engineering-prd.iam.gserviceaccount.com
+          - vault-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
+          - terraform-vault-prd-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
+          - 194433087674@cloudservices.gserviceaccount.com
+          groupsByEmail:
+          - gcp-securitytech-devops-admin@kohls.com
+          - gcp-securitypam-sd-l3@kohls.com
+
+      sec-nx-prd-okta-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.185.52.160/27
+          bluecat-id: 3204227
+          status: PROVISIONED
+        permissions:
+          serviceAccountsByEmail:
+          - terraform-sec@kohls-sec-okta-prd.iam.gserviceaccount.com
+          - okta-prd@kohls-sec-okta-prd.iam.gserviceaccount.com
+          groupsByEmail:
+          - gcp-securitypam-sd-l3@kohls.com
+          - gcp-iam-l3@kohls.com
+          - gcp-infra-windows-devops-l3@kohls.com
+          - gcp-securitypam-sd-l3@kohls.com
+
+      sec-nx-prd-okta-e1-prv01:
+        advertiseRoutes: true
+        region: us-east1
+        network:
+          ip: 10.189.41.128/27
+          bluecat-id: 3204229
+          status: PROVISIONED
+        permissions:
+          serviceAccountsByEmail:
+          - terraform-sec@kohls-sec-okta-prd.iam.gserviceaccount.com
+          - okta-prd@kohls-sec-okta-prd.iam.gserviceaccount.com
+          groupsByEmail:
+          - gcp-securitypam-sd-l3@kohls.com
+          - gcp-iam-l3@kohls.com
+          - gcp-infra-windows-devops-l3@kohls.com
+          - gcp-securitypam-sd-l3@kohls.com

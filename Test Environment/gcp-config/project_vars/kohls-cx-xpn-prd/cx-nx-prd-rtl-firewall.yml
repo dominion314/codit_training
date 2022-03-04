@@ -1,0 +1,832 @@
+vpcs:
+  cx-nx-prd:
+    firewallRules:
+      aws-to-ecom-tvs-corp-prd-ssh:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '22'
+          sourceRanges:
+          - 10.195.0.0/18
+          targetTags:
+          - rt-db-replication
+          - fw-ssh
+          - fw-mysql-hle
+          - fw-allow-all
+          - mem
+          - blue
+          - fw-mysql
+          - fw-ssh-hle
+          - fw-netdiagnostics
+          - fw-netdiagnostics-hle
+          - fw-emysql-hle
+          - fw-essh-hle
+          - fw-evault-hle
+          - fw-enetdiagnostics-hle
+        description: SNOW-15672
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      aws-wrkspc-ingr-ecom-tvs-crp-prd-mem-grph-dashbrds:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '18443'
+          sourceRanges:
+          - 10.198.0.0/22
+        description: SNOW-16236
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      bda-bigdata-prd-ing-to-ecom-tvs-corp-prd-kafka:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '9092'
+          sourceRanges:
+          - 10.184.20.0/23
+          - 10.185.20.0/23
+          - 10.189.18.0/23
+          targetTags:
+          - kafka
+          - fw-allow-all
+          - fw-kafka
+        description: SCTASK0894813
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cavisson-prd-to-ecom-tvs-corp-prd-02:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - 7891-7899
+            - '80'
+            - '443'
+            - '9443'
+          sourceRanges:
+          - 10.206.96.0/25
+          - 10.206.224.0/25
+          targetTags:
+          - fw-cavisson-tvs
+        description: SCTASK0766386
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cavisson-prd-to-ecom-tvs-corp-prd-netdiagnostics:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - 7891-7899
+          sourceRanges:
+          - 10.206.96.0/25
+          - 10.206.224.0/25
+          targetTags:
+          - fw-netdiagnostics
+        description: SCTASK0720380
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cavisson-to-ecom-tvs-corp-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - 7890-7899
+          sourceRanges:
+          - 10.206.96.0/25
+          - 10.188.103.0/25
+          - 10.186.219.128/25
+          - 10.188.70.0/23
+          - 10.184.104.0/25
+          - 10.184.70.0/23
+          - 10.188.102.0/25
+          - 10.184.105.0/25
+          - 10.184.68.0/23
+          - 10.184.104.128/25
+          - 10.190.127.0/25
+          - 10.206.224.0/25
+          - 10.188.102.128/25
+          - 10.188.68.0/23
+          targetTags:
+          - fw-cavisson
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      ecom-tvs-corp-prd-internal-kafka:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - 9092-9093
+          sourceRanges:
+          - 10.184.51.0/24
+          - 10.188.56.0/24
+          targetTags:
+          - fw-kafka
+        description: SCTASK0720380
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      ecom-tvs-corp-prd-internal-redis:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - 3333-3339
+            - '8080'
+            - '8443'
+            - '9443'
+            - 16379-16390
+            - 36379-36380
+            - 20000-29999
+          sourceRanges:
+          - 10.184.51.0/24
+          - 10.188.56.0/24
+          targetTags:
+          - fw-redis
+        description: SCTASK0720380
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      ecom-tvs-corp-prd-to-cavisson:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+            - 7890-7899
+          destinationRanges:
+          - 10.206.96.0/25
+          - 10.188.103.0/25
+          - 10.186.219.128/25
+          - 10.188.70.0/23
+          - 10.184.104.0/25
+          - 10.184.70.0/23
+          - 10.188.102.0/25
+          - 10.184.105.0/25
+          - 10.184.68.0/23
+          - 10.184.104.128/25
+          - 10.190.127.0/25
+          - 10.206.224.0/25
+          - 10.188.102.128/25
+          - 10.188.68.0/23
+          targetTags:
+          - fw-cavisson
+        description: ''
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      intra-subnet-access-within-ecom-tvs-corp-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '22'
+            - '18443'
+          sourceRanges:
+          - 10.184.51.0/24
+          - 10.188.56.0/24
+          sourceTags:
+          - fw-mysql
+          targetTags:
+          - fw-mysql
+        description: SCTASK0795806
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kohls-ecom-pe-prd-ing-to-ecom-tvs-corp-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '22'
+          sourceRanges:
+          - 10.188.74.0/25
+          - 10.184.74.0/25
+          targetTags:
+          - tonomirunner
+          - rundeck
+        description: SCTASK0810540
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      k-ecom-tvs-crp-prd-ingr-to-ecom-tvs-crp-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '8088'
+          sourceTags:
+          - fw-http
+          targetTags:
+          - fw-http
+        description: SCTASK0785738
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      k-ecom-tvs-crp-prd-ingr-to-ecom-tvs-crp-prd-http:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+          sourceTags:
+          - fw-http
+          targetTags:
+          - fw-http
+        description: SCTASK0785738
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kohls-kos-xpn-prd-ing-to-ecom-tvs-corp-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '22'
+          sourceRanges:
+          - 10.208.248.0/22
+          - 10.208.120.0/22
+          targetTags:
+          - tonomirunner
+          - rundeck
+        description: SCTASK0786988
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kohls-nutanix-vdi-ing-ecom-tvs-corp-prd-ssh:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '22'
+          sourceRanges:
+          - 10.110.116.0/22
+          targetTags:
+          - fw-ssh
+        description: SCTASK1013062
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      k-openshift-prd-ingr-ecom-tvs-crp-prd-webservices:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 10.184.0.0/23
+          - 10.188.0.0/23
+          targetTags:
+          - paas-openshift-app
+        description: SCTASK0776082
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kos-xpn-prd-ing-to-ecom-tvs-corp-prd-tcp-02:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 10.208.132.0/22
+          - 10.208.240.0/22
+          - 10.208.12.0/22
+          - 10.208.112.0/22
+          targetTags:
+          - fw-https
+        description: SCTASK0801557
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kos-xpn-prd-ing-to-ecom-tvs-corp-prd-tcp-03:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '9092'
+          sourceRanges:
+          - 10.208.248.0/22
+          - 10.208.120.0/22
+          targetTags:
+          - fw-kafka
+        description: SCTASK0829851
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kos-xpn-prd-ing-to-ecom-tvs-corp-prd-tcp-04:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+          sourceRanges:
+          - 10.208.248.0/22
+          - 10.208.120.0/22
+          - 10.109.0.0/16
+          - 10.110.0.0/16
+          targetTags:
+          - fw-http
+        description: SCTASK0856255,SCTASK0923266
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kos-xpn-prd-ing-to-ecom-tvs-corp-prd-tcp-05:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceRanges:
+          - 10.208.248.0/22
+          - 10.208.120.0/22
+          targetTags:
+          - fw-https
+        description: SCTASK0856875
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      on-prem-tvs-ing-to-ecom-tvs-corp-prd-kafka:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - 9092-9093
+          sourceRanges:
+          - 10.5.48.62
+          - 10.6.81.189
+          targetTags:
+          - fw-kafka
+        description: SCTASK0863663
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      onprem-corp-and-gcp-to-ecom-tvs-corp-prd-tcp-01:
+        rule:
+          allow:
+          - protocol: udp
+            ports:
+            - 8301-8302
+            - '8600'
+          - protocol: tcp
+            ports:
+            - 8300-8302
+            - 8500-8501
+            - '8600'
+          sourceRanges:
+          - 10.57.0.0/17
+          - 10.184.51.0/24
+          - 172.26.0.0/15
+          - 10.90.81.0/24
+          - 10.90.100.0/23
+          - 10.64.0.0/17
+          - 10.188.58.0/24
+          - 10.188.56.0/24
+          - 10.90.80.0/24
+          - 10.184.55.0/24
+          - 10.101.0.0/16
+          - 10.100.0.0/16
+          targetTags:
+          - fw-consul
+        description: SCTASK0720380
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      onprem-corp-and-gcp-to-ecom-tvs-corp-prd-tcp-02:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '3306'
+          sourceRanges:
+          - 10.57.0.0/17
+          - 10.184.51.0/24
+          - 172.26.0.0/15
+          - 10.90.81.0/24
+          - 10.90.100.0/23
+          - 10.64.0.0/17
+          - 10.188.56.0/24
+          - 10.90.80.0/24
+          - 10.101.0.0/16
+          - 10.100.0.0/16
+          targetTags:
+          - fw-mysql
+        description: SCTASK0720380
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      onprem-corp-and-gcp-to-ecom-tvs-corp-prd-tcp-03:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '22'
+          sourceRanges:
+          - 10.57.0.0/17
+          - 172.26.0.0/15
+          - 10.90.81.0/24
+          - 10.90.100.0/23
+          - 10.208.22.0/24
+          - 10.64.0.0/17
+          - 10.90.80.0/24
+          - 10.101.0.0/16
+          - 10.100.0.0/16
+          targetTags:
+          - fw-ssh
+        description: SCTASK0720380
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      onprem-corp-and-gcp-to-ecom-tvs-corp-prd-tcp-04:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - 8200-8201
+            - '8210'
+            - '8243'
+            - '8253'
+          sourceRanges:
+          - 10.57.0.0/17
+          - 10.184.51.0/24
+          - 172.26.0.0/15
+          - 10.90.81.0/24
+          - 10.90.100.0/23
+          - 10.64.0.0/17
+          - 10.188.58.0/24
+          - 10.188.56.0/24
+          - 10.90.80.0/24
+          - 10.184.55.0/24
+          - 10.101.0.0/16
+          - 10.100.0.0/16
+          targetTags:
+          - fw-vault
+        description: SCTASK0720380
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      onprem-corp-and-gcp-to-ecom-tvs-corp-prd-tcp-05:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '2181'
+            - '2888'
+            - '3888'
+            - '9999'
+            - '35883'
+            - '44589'
+          sourceRanges:
+          - 10.57.0.0/17
+          - 10.184.51.0/24
+          - 172.26.0.0/15
+          - 10.90.81.0/24
+          - 10.90.100.0/23
+          - 10.64.0.0/17
+          - 10.188.56.0/24
+          - 10.90.80.0/24
+          - 10.101.0.0/16
+          - 10.100.0.0/16
+          targetTags:
+          - fw-zookeeper
+        description: SCTASK0720380
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      onprem-corp-and-gcp-to-ecom-tvs-corp-prd-tcp-07:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+          sourceRanges:
+          - 10.57.0.0/17
+          - 10.44.0.0/15
+          - 10.1.28.210/32
+          - 10.206.96.0/25
+          - 10.184.51.0/24
+          - 10.6.80.176/32
+          - 172.26.0.0/15
+          - 10.90.81.0/24
+          - 10.90.100.0/23
+          - 10.247.204.0/22
+          - 10.64.0.0/17
+          - 10.5.48.62/32
+          - 10.46.0.0/16
+          - 10.188.58.0/24
+          - 10.188.56.0/24
+          - 10.90.80.0/24
+          - 10.5.48.63/32
+          - 10.40.0.0/14
+          - 10.184.55.0/24
+          - 10.101.0.0/16
+          - 10.100.0.0/16
+          - 10.206.224.0/25
+          - 10.6.81.189/32
+          - 10.7.28.50/32
+          targetTags:
+          - fw-http
+        description: SCTASK0720380,SCTASK0724397
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      onprem-corp-and-gcp-to-ecom-tvs-corp-prd-tcp-08:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceRanges:
+          - 10.57.0.0/17
+          - 10.44.0.0/15
+          - 10.1.28.210/32
+          - 10.206.96.0/25
+          - 10.184.51.0/24
+          - 10.6.80.176/32
+          - 172.26.0.0/15
+          - 10.90.81.0/24
+          - 10.90.100.0/23
+          - 10.247.204.0/22
+          - 10.64.0.0/17
+          - 10.5.48.62/32
+          - 10.46.0.0/16
+          - 10.188.58.0/24
+          - 10.188.56.0/24
+          - 10.90.80.0/24
+          - 10.5.48.63/32
+          - 10.40.0.0/14
+          - 10.184.55.0/24
+          - 10.101.0.0/16
+          - 10.100.0.0/16
+          - 10.206.224.0/25
+          - 10.6.81.189/32
+          - 10.7.28.50/32
+          targetTags:
+          - fw-https
+        description: SCTASK0720380,SCTASK0724397
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      onprem-corp-and-gcp-to-ecom-tvs-corp-prd-tcp-09:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '8088'
+          sourceRanges:
+          - 10.57.0.0/17
+          - 10.206.96.0/25
+          - 10.184.51.0/24
+          - 172.26.0.0/15
+          - 10.90.81.0/24
+          - 10.90.100.0/23
+          - 10.64.0.0/17
+          - 10.188.58.0/24
+          - 10.188.56.0/24
+          - 10.90.80.0/24
+          - 10.184.55.0/24
+          - 10.101.0.0/16
+          - 10.100.0.0/16
+          - 10.206.224.0/25
+          targetTags:
+          - fw-taxware
+        description: SCTASK0720380
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      onprem-corp-and-gcp-to-ecom-tvs-corp-prd-tcp-10:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '7080'
+          sourceRanges:
+          - 10.57.0.0/17
+          - 10.206.96.0/25
+          - 10.184.51.0/24
+          - 172.26.0.0/15
+          - 10.90.81.0/24
+          - 10.90.100.0/23
+          - 10.64.0.0/17
+          - 10.188.58.0/24
+          - 10.188.56.0/24
+          - 10.90.80.0/24
+          - 10.184.55.0/24
+          - 10.101.0.0/16
+          - 10.100.0.0/16
+          - 10.206.224.0/25
+          targetTags:
+          - fw-oma
+        description: SCTASK0720380
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      onprem-corp-segments-to-ecom-tvs-corp-prd-tcp-06:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '28080'
+          sourceRanges:
+          - 10.57.0.0/17
+          - 172.26.0.0/15
+          - 10.90.81.0/24
+          - 10.90.100.0/23
+          - 10.64.0.0/17
+          - 10.90.80.0/24
+          - 10.101.0.0/16
+          - 10.100.0.0/16
+          targetTags:
+          - fw-haproxy
+        description: SCTASK0720380
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      onprem-hosts-ing-to-ecom-tvs-corp-prd-mysql:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '18443'
+          sourceRanges:
+          - 10.57.0.0/17
+          - 10.109.0.0/16
+          - 10.101.70.0/24
+          - 172.26.0.0/15
+          - 10.90.81.0/24
+          - 10.90.100.0/23
+          - 10.110.0.0/16
+          - 10.64.0.0/17
+          - 10.90.80.0/24
+          - 10.101.0.0/16
+          - 10.100.0.0/16
+          targetTags:
+          - fw-mysql
+        description: SCTASK0791517,SCTASK0795806 [De-commissioning tcp/18433]
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      onprem-mysql-ent-manager-to-ecom-tvs-corp-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '18443'
+            - '3306'
+          sourceRanges:
+          - 10.6.81.42
+          targetTags:
+          - fw-ssh
+        description: SCTASK0769980
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      onprem-vdi-to-ecom-tvs-corp-prd-ssh-https:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '22'
+            - '443'
+          sourceRanges:
+          - 10.109.108.0/22
+          - 10.109.120.0/22
+          targetTags:
+          - fw-ssh
+        description: SCTASK1021920,SCTASK1021636
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      tvs-ecom-publisher-to-corp-cloud-kafka:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '9091-9093'
+          sourceRanges:
+          - 10.189.48.0/21
+          - 10.185.56.0/21
+          targetTags:
+          - fw-allow-all
+        description: SNOW-17047
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-central1-to-api-server:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '8088'
+            - '8080'
+          sourceRanges:
+          - 10.208.120.0/22
+          targetTags:
+          - fw-allow-all
+        description: SNOW-17103
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      tvs-pmdm-server-to-corp-cloud-kafka:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - "80"
+            - "8080"
+            - "8088"
+          sourceRanges:
+          - 10.5.48.203/32
+          - 10.6.80.176/32
+          - 10.6.80.26/32
+          - 10.6.80.240/32
+          targetTags:
+          - fw-http
+          - fw-https
+        description: SNOW-17084
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      oma-marketing-to-tvs-corp-cloud-kafka:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '9091-9093'
+            - '3306'
+          sourceRanges:
+          - 10.126.0.0/17
+          - 10.127.0.0/17
+          targetTags:
+          - kafka
+          - fw-allow-all
+        description: SNOW-17132,SNOW-17130
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      ecom-tvs-corp-prd-in-cx-rtr-mysql:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '3306'
+            - '22'
+          sourceRanges:
+          - 10.184.51.0/24
+          - 10.188.57.0/24
+          targetTags:
+          - mysql
+        description: SNOW-17129
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false

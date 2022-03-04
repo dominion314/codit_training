@@ -1,0 +1,14 @@
+---
+storageBuckets:
+  kohls-bda-analytics-prd-01:
+    location: US
+    versioningEnabled: false
+    labels:
+      versioning: "false"
+      line-of-business: analytics
+    storageClass: MULTI_REGIONAL
+    lifecycleRule:
+    - action:
+        type: Delete
+      condition:
+        age: 90

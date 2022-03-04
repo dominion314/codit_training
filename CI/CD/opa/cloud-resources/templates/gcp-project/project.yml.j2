@@ -1,0 +1,48 @@
+{%- if project is defined %}
+{%-   if project.managed %}
+apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+kind: Project
+metadata:
+  annotations:
+{%-     if project.orgId is defined %}
+    cnrm.cloud.google.com/organization-id: "{{ project.orgId }}"
+{%-     endif %}
+{%-     if project.deletionProtect | default(true) %}
+    cnrm.cloud.google.com/deletion-policy: abandon
+{%-     endif %}
+{%-     if project.defaultNetwork | default(false) %}
+    cnrm.cloud.google.com/auto-create-network: "true"
+{%-     else %}
+    cnrm.cloud.google.com/auto-create-network: "false"
+{%-     endif %}
+  labels:
+    managed-by-cnrm: "true"
+{%-     if defaultLabels is defined %}
+{%-       for key, value in defaultLabels.items() %}
+{%-         if project.labels is defined %}
+{%-           if not key in project.labels %}
+    {{ key }}: "{{ value }}"
+{%-           endif %}
+{%-         else %}
+    {{ key }}: "{{ value }}"
+{%-         endif %}
+{%-       endfor %}
+{%-     endif %}
+{%-     if project.labels is defined %}
+{%-       for key, value in project.labels.items() %}
+    {{ key }}: "{{ value }}"
+{%-       endfor %}
+{%-     endif %}
+  name: {{ project.name }}
+  namespace: gcp-{{ project.name }}
+spec:
+  name: {{ project.name }}
+  billingAccountRef:
+    external: "{{ project.billingAccount }}"
+  {%-     if project.folderId is defined %}
+  folderRef:
+    external: "{{ project.folderId }}"
+  {%-   endif %}
+---
+{%-   endif %}
+{%- endif %}

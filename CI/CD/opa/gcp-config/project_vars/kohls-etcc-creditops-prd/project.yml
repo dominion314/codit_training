@@ -1,0 +1,25 @@
+---
+billingDeptId: "90522"
+project:
+  name: kohls-etcc-creditops-prd
+  deletionProtect: true
+  managed: true
+  folderId: "155882274299"
+  billingAccount: "00C36A-CD0BDB-E543D0"
+  labels:
+    billing-dept-id: "90522"
+    project-manager: derek-schanz
+    devops-lead: trevor-johnson
+    environment-type: prd
+    line-of-business: etcc
+    project-requestor: akhil-thuthika
+serviceAPIs:
+  compute.googleapis.com:
+  cloudresourcemanager.googleapis.com:
+  storage-component.googleapis.com:
+  storage-api.googleapis.com:
+  stackdriver.googleapis.com:
+  logging.googleapis.com:
+  monitoring.googleapis.com:
+  cloudasset.googleapis.com:
+  servicenetworking.googleapis.com:

@@ -1,0 +1,15 @@
+---
+name: gitops
+title: GCP InSpec Profile
+maintainer: The Authors
+copyright: The Authors
+copyright_email: you@example.com
+license: Apache-2.0
+summary: An InSpec Compliance Profile For GCP
+version: 0.1.0
+inspec_version: '>= 4.7.3'
+depends:
+- name: inspec-gcp
+  url: https://github.com/inspec/inspec-gcp/archive/v1.7.0.tar.gz
+supports:
+- platform: gcp

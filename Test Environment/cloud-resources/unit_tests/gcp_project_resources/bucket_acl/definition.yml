@@ -1,0 +1,4 @@
+---
+kccTemplates: ['../../../templates/gcp-project/storage-buckets-acl.yml.j2']
+inspecControls: ['../../../inspec/controls/StorageBucketsACL.rb']
+validationDelaySecs: 60

@@ -1,0 +1,176 @@
+---
+bigQueryDatasets:
+  required: false
+  type: 'dict'
+  keysrules:
+    type: 'string'
+    regex: '[a-zA-Z0-9_]{5,1024}' # Name of BQ dataset
+  valuesrules:
+    type: 'dict'
+    schema:
+      friendlyName:
+        required: false
+        type: 'string'
+      resourceID:
+        required: false
+        type: 'string'
+      description:
+        required: false
+        type: 'string'
+      defaultTableExpirationMs: # allows either 0 or integer above 3600000
+        required: false
+        type: 'number'
+        oneof:
+        - min: 3600000
+        - allowed: [0]
+      labels:
+        required: false
+        type: 'dict'
+        keysrules:
+          type: 'string'
+          regex: '^[0-9a-z-]+'
+        valuesrules:
+          type: 'string'
+          regex: '^[0-9a-z-]+'
+      permissions:
+        required: false
+        type: 'dict'
+        anyof:
+        - schema:
+            usersByEmail:
+              type: 'dict'
+              required: true
+              keysrules:
+                type: 'string'
+                regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+              valuesrules:
+                type: 'dict'
+                schema:
+                  roles:
+                    required: true
+                    type: 'list'
+                    schema:
+                      type: 'string'
+                      allowed: ['bigquery.admin', 'bigquery.dataEditor', 'bigquery.dataOwner', 'bigquery.dataViewer', 'bigquery.metadataViewer', 'bigquery.user', 'bigquery.jobUser', 'iam.securityReviewer']
+            groupsByEmail:
+              type: 'dict'
+              required: false
+              keysrules:
+                type: 'string'
+                regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+              valuesrules:
+                type: 'dict'
+                schema:
+                  roles:
+                    required: true
+                    type: 'list'
+                    schema:
+                      type: 'string'
+                      allowed: ['bigquery.admin', 'bigquery.dataEditor', 'bigquery.dataOwner', 'bigquery.dataViewer', 'bigquery.metadataViewer', 'bigquery.user', 'bigquery.jobUser', 'iam.securityReviewer']
+            serviceAccountsByEmail:
+              type: 'dict'
+              required: false
+              keysrules:
+                type: 'string'
+                regex: '.*@.*\.gserviceaccount\.com'
+              valuesrules:
+                type: 'dict'
+                schema:
+                  roles:
+                    required: true
+                    type: 'list'
+                    schema:
+                      type: 'string'
+                      allowed: ['bigquery.admin', 'bigquery.dataEditor', 'bigquery.dataOwner', 'bigquery.dataViewer', 'bigquery.metadataViewer', 'bigquery.user', 'bigquery.jobUser', 'iam.securityReviewer']
+        - schema:
+            usersByEmail:
+              type: 'dict'
+              required: false
+              keysrules:
+                type: 'string'
+                regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+              valuesrules:
+                type: 'dict'
+                schema:
+                  roles:
+                    required: true
+                    type: 'list'
+                    schema:
+                      type: 'string'
+                      allowed: ['bigquery.admin', 'bigquery.dataEditor', 'bigquery.dataOwner', 'bigquery.dataViewer', 'bigquery.metadataViewer', 'bigquery.user', 'bigquery.jobUser', 'iam.securityReviewer']
+            groupsByEmail:
+              type: 'dict'
+              required: true
+              keysrules:
+                type: 'string'
+                regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+              valuesrules:
+                type: 'dict'
+                schema:
+                  roles:
+                    required: true
+                    type: 'list'
+                    schema:
+                      type: 'string'
+                      allowed: ['bigquery.admin', 'bigquery.dataEditor', 'bigquery.dataOwner', 'bigquery.dataViewer', 'bigquery.metadataViewer', 'bigquery.user', 'bigquery.jobUser', 'iam.securityReviewer']
+            serviceAccountsByEmail:
+              type: 'dict'
+              required: false
+              keysrules:
+                type: 'string'
+                regex: '.*@.*\.gserviceaccount\.com'
+              valuesrules:
+                type: 'dict'
+                schema:
+                  roles:
+                    required: true
+                    type: 'list'
+                    schema:
+                      type: 'string'
+                      allowed: ['bigquery.admin', 'bigquery.dataEditor', 'bigquery.dataOwner', 'bigquery.dataViewer', 'bigquery.metadataViewer', 'bigquery.user', 'bigquery.jobUser', 'iam.securityReviewer']
+        - schema:
+            usersByEmail:
+              type: 'dict'
+              required: false
+              keysrules:
+                type: 'string'
+                regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+              valuesrules:
+                type: 'dict'
+                schema:
+                  roles:
+                    required: true
+                    type: 'list'
+                    schema:
+                      type: 'string'
+                      allowed: ['bigquery.admin', 'bigquery.dataEditor', 'bigquery.dataOwner', 'bigquery.dataViewer', 'bigquery.metadataViewer', 'bigquery.user', 'bigquery.jobUser', 'iam.securityReviewer']
+            groupsByEmail:
+              type: 'dict'
+              required: false
+              keysrules:
+                type: 'string'
+                regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+              valuesrules:
+                type: 'dict'
+                schema:
+                  roles:
+                    required: true
+                    type: 'list'
+                    schema:
+                      type: 'string'
+                      allowed: ['bigquery.admin', 'bigquery.dataEditor', 'bigquery.dataOwner', 'bigquery.dataViewer', 'bigquery.metadataViewer', 'bigquery.user', 'bigquery.jobUser', 'iam.securityReviewer']
+            serviceAccountsByEmail:
+              type: 'dict'
+              required: true
+              keysrules:
+                type: 'string'
+                regex: '.*@.*\.gserviceaccount\.com'
+              valuesrules:
+                type: 'dict'
+                schema:
+                  roles:
+                    required: true
+                    type: 'list'
+                    schema:
+                      type: 'string'
+                      allowed: ['bigquery.admin', 'bigquery.dataEditor', 'bigquery.dataOwner', 'bigquery.dataViewer', 'bigquery.metadataViewer', 'bigquery.user', 'bigquery.jobUser', 'iam.securityReviewer']

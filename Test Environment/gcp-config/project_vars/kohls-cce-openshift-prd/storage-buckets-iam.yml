@@ -1,0 +1,16 @@
+---
+storageBuckets:
+  kohls-cce-openshift-prd-oadp-gcpusc1-prd-cce:
+    permissions:
+      serviceAccountsByEmail:
+        oadp-operator@kohls-cce-openshift-prd.iam.gserviceaccount.com:
+          deletionProtect: false
+          roles:
+          - storage.objectAdmin
+  kohls-cce-openshift-prd-oadp-gcpuse1-prd-cce:
+    permissions:
+      serviceAccountsByEmail:
+        oadp-operator@kohls-cce-openshift-prd.iam.gserviceaccount.com:
+          deletionProtect: false
+          roles:
+          - storage.objectAdmin

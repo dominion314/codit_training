@@ -1,0 +1,65 @@
+---
+vpcs:
+  sec-nx-lle:
+    routerDef:
+      sec-nx-lle-c1-gcp-rtr01:
+        region: us-central1
+        description:
+        routerASN:  # Custom ASN, if blank will pull from GLOBAL-ASN.YML
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+
+        ha_vpn_gateways_to_transit:
+          sec-nx-lle-c1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.0.80/30
+              bluecat-id: 1548538
+            if1_peer_cidr:
+              cidr: 169.254.0.84/30
+              bluecat-id: 1548539
+
+        outbound_nat_gateway:
+          name: sec-nx-prd-c1-nat-gateway
+          icmp_timeout:
+          tcp_est_timeout:
+          tcp_trans_timeout:
+          udp_timeout:
+          min_ports_per_vm:
+          logConfig:
+            enable: false
+            filter:
+          manualAddresses: 2
+      sec-nx-lle-e1-gcp-rtr01:
+        region: us-east1
+        description:
+        routerASN:  # Custom ASN, if blank will pull from GLOBAL-ASN.YML
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+
+        ha_vpn_gateways_to_transit:
+          sec-nx-lle-e1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.0.88/30
+              bluecat-id: 1548540
+            if1_peer_cidr:
+              cidr: 169.254.0.92/30
+              bluecat-id: 1548541
+
+        outbound_nat_gateway:
+          name: sec-nx-prd-e1-nat-gateway
+          icmp_timeout:
+          tcp_est_timeout:
+          tcp_trans_timeout:
+          udp_timeout:
+          min_ports_per_vm:
+          logConfig:
+            enable: false
+            filter:
+          manualAddresses: 2
+

@@ -1,0 +1,25 @@
+---
+iamPolicyMembersV2:
+  usersByEmail:
+    pavel.leonovitch@kohls.com:
+    - role: viewer
+      deletionProtect: true
+    - role: editor
+    - role: bigquery.jobUser
+      condition:
+        title: one-week
+        description: this-is-optional
+        expression: 'request.time < timestamp("2021-01-01T06:00:00.000Z")'
+    - role: CustomRole
+      OrgId: 202079959255
+    - role: marksTest_Role
+      OrgId: 202079959255
+  groupsByEmail:
+    gcp-et-devops-l2@kohls.com:
+    - role: viewer
+    AWS_MasterPayer@kohls.com:
+    - role: CustomRole
+      OrgId: 202079959255
+  serviceAccountsByEmail:
+    gitops-example-1@kohlsdev-cpa-inspec.iam.gserviceaccount.com:
+    - role: viewer

@@ -1,0 +1,120 @@
+vpcs:
+  cx-nx-prd:
+    routerDef:
+      cx-nx-prd-c1-gcp-rtr01:
+        region: us-central1
+        description:
+        routerASN:
+        advertiseMode: CUSTOM
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+          - 10.124.40.0/21
+
+        ha_vpn_gateways_to_transit:
+          cx-nx-prd-c1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.0.224/30
+              bluecat-id: 1580210
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.0.228/30
+              bluecat-id: 1580212
+              status: PROVISIONED
+          cx-nx-prd-c1-totransit-02:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.2.96/30
+              bluecat-id: 3391995
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.2.100/30
+              bluecat-id: 3392004
+              status: PROVISIONED
+          cx-nx-prd-c1-totransit-03:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.2.168/30
+              bluecat-id: 3483547
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.2.172/30
+              bluecat-id: 3483554
+              status: PROVISIONED
+          cx-nx-prd-c1-totransit-04:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.2.204/30
+              bluecat-id: 3615802
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.2.208/30
+              bluecat-id: 3615810
+              status: PROVISIONED
+        cloudNat:
+          name: cx-nx-prd-c1-nat-gateway
+          logConfig:
+            enable: true
+            filter: ERRORS_ONLY
+          manualAddresses: 10
+          min_ports_per_vm: 64
+
+      cx-nx-prd-e1-gcp-rtr01:
+        region: us-east1
+        description:
+        routerASN:
+        advertiseMode: CUSTOM
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+          - 10.124.40.0/21
+
+        ha_vpn_gateways_to_transit:
+          cx-nx-prd-e1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.0.232/30
+              bluecat-id: 1580214
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.0.236/30
+              bluecat-id: 1580216
+              status: PROVISIONED
+          cx-nx-prd-e1-totransit-02:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.2.104/30
+              bluecat-id: 3392012
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.2.108/30
+              bluecat-id: 3392019
+              status: PROVISIONED
+          cx-nx-prd-e1-totransit-03:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.2.160/30
+              bluecat-id: 3483537
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.2.164/30
+              bluecat-id: 3483545
+              status: PROVISIONED
+          cx-nx-prd-e1-totransit-04:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.2.200/30
+              bluecat-id: 3615800
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.2.212/30
+              bluecat-id: 3615837
+              status: PROVISIONED
+        cloudNat:
+          name: cx-nx-prd-e1-nat-gateway
+          logConfig:
+            enable: true
+            filter: ERRORS_ONLY
+          manualAddresses: 10
+          min_ports_per_vm: 250

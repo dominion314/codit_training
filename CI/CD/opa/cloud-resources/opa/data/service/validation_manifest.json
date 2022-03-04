@@ -1,0 +1,13 @@
+{
+  "items": [
+    {
+      "input_yml_file": "apis.yml",
+      "schema_file": "opa/service_apis.yml"
+    },
+    {
+      "input_yml_file": "apis-per-project.yml",
+      "schema_file": "opa/service_apis_per_project.yml"
+    }
+
+  ]
+}

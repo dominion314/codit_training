@@ -1,0 +1,53 @@
+---
+vpcs:
+  platform-nx-lle:
+    firewallRules:
+      dbaas-ops-mysql-allow-openshift-ops-prv01:
+        priority: 900
+        direction: INGRESS
+        description: Allow openshift ops to dbaas mysql servers
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          - external: "mysql-dba@kohls-platform-dbaas-ops.iam.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+          sourceServiceAccounts:
+          - external: "ocp-app-node-paas@kohls-platform-openshift-ops.iam.gserviceaccount.com"
+          - external: "ocp-app-node-paas-open@kohls-platform-openshift-ops.iam.gserviceaccount.com"
+          - external: "ocp-pci-node-paas@kohls-platform-openshift-ops.iam.gserviceaccount.com"
+          - external: "ocp-pci-node-paas-open@kohls-platform-openshift-ops.iam.gserviceaccount.com"
+          - external: "ocp-pii-node-paas@kohls-platform-openshift-ops.iam.gserviceaccount.com"
+          - external: "ocp-pii-node-paas-open@kohls-platform-openshift-ops.iam.gserviceaccount.com"
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "3306"
+      dbaas-ops-pmm-allow-openshift-ops-prv01:
+        priority: 900
+        direction: INGRESS
+        description: Allow openshift ops to dbaas MSP PMM servers
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          - external: "pmm-dba@kohls-platform-dbaas-ops.iam.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+          sourceServiceAccounts:
+          - external: "ocp-app-node-paas@kohls-platform-openshift-ops.iam.gserviceaccount.com"
+          - external: "ocp-app-node-paas-open@kohls-platform-openshift-ops.iam.gserviceaccount.com"
+          - external: "ocp-pci-node-paas@kohls-platform-openshift-ops.iam.gserviceaccount.com"
+          - external: "ocp-pci-node-paas-open@kohls-platform-openshift-ops.iam.gserviceaccount.com"
+          - external: "ocp-pii-node-paas@kohls-platform-openshift-ops.iam.gserviceaccount.com"
+          - external: "ocp-pii-node-paas-open@kohls-platform-openshift-ops.iam.gserviceaccount.com"
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "8446"
+            - "8443"

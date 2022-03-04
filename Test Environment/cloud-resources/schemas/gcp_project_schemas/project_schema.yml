@@ -1,0 +1,63 @@
+---
+project:
+  required: false
+  type: 'dict'
+  allow_unknown: true
+  schema:
+    name:
+      type: 'string'
+      required: true
+            # first lower alpha, after that alphanums plus hyphens, 6 to 30 total lengh
+      regex: '^[a-z][a-zA-Z0-9-]{5,29}$'
+    managed:
+      type: 'boolean'
+      required: true
+    deletionProtect:
+      type: 'boolean'
+      required: false
+        #either folderId or orgId must be present, not both
+    folderId:
+      type: ['string', 'integer']
+      regex: '\d+'
+      excludes: 'orgId'
+    orgId:
+      type: 'string'
+      allowed: ['1035901152068', '212666867691', '202079959255']
+      excludes: 'folderId'
+    defaultNetwork:
+      type: 'boolean'
+      required: false
+    billingAccount:
+      type: 'string'
+      allowed: ['00C36A-CD0BDB-E543D0']
+    labels:
+            # enforce mandatory keys and specify general regex for keys and values
+      type: 'dict'
+      keysrules:
+        type: 'string'
+        regex: '^[0-9a-z-]+'
+      valuesrules:
+        type: ['string', 'integer']
+        regex: '^[0-9a-z-_]+'
+      schema:
+        billing-dept-id:
+          required: true
+        project-requestor:
+          type: string
+          required: true
+        project-manager:
+          type: string
+          required: true
+        devops-lead:
+          type: string
+          required: true
+        line-of-business:
+          type: string
+          required: true
+        environment-type:
+          type: string
+          required: true
+          allowed: ['prd','nonprd','sbx', 'lle', 'hle', 'ops']
+        product-domain:
+          type: string
+          required: false

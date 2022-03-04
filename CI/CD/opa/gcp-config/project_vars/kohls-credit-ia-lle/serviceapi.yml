@@ -1,0 +1,11 @@
+---
+serviceAPIs:
+  compute.googleapis.com:
+  oslogin.googleapis.com:
+  cloudresourcemanager.googleapis.com:
+  storage-component.googleapis.com:
+  storage-api.googleapis.com:
+  stackdriver.googleapis.com:
+  logging.googleapis.com:
+  monitoring.googleapis.com:
+  cloudasset.googleapis.com:

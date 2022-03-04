@@ -1,0 +1,16 @@
+---
+project:
+  name: kohls-bda-mkt-lle
+  managed: true
+  folderId: "963520663007" # merch-mkt-analytics
+  billingAccount: 00C36A-CD0BDB-E543D0
+  # Only hyphens (-), underscores (_), lowercase characters,
+  # and numbers are allowed as characters in labels
+  labels:
+    billing-dept-id: "90585"
+    project-manager: "paul-tunicliff"
+    devops-lead: "nutan-gandi"
+    environment-type: lle
+    line-of-business: dp
+    lob: mkt
+    project-requestor: "nutan-gandi"

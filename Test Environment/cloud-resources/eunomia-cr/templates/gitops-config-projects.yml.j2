@@ -1,0 +1,51 @@
+{%- if projects is defined -%}
+{%-  for project in projects %}
+---
+apiVersion: eunomia.kohls.io/v1alpha1
+kind: GitOpsConfig
+metadata:
+  name: {{ project.name }}
+  namespace: "gcp-{{ project.name }}"
+spec:
+  templateSource:
+    uri: "{{ templateRepo }}"
+    ref: "{{ project.gitRef }}"
+    contextDir: "{{ templatePath }}"
+    httpProxy: "{{ templateHttpProxy }}"
+    httpsProxy: "{{ templateHttpsProxy }}"
+    secretRef: "{{ templateSecretRef }}"
+  parameterSource:
+    uri: "{{ configRepo }}"
+    ref: "{{ project.gitRef }}"
+    contextDir: "{{ configPath }}/{{ project.name }}"
+    httpProxy: "{{ configHttpProxy }}"
+    httpsProxy: "{{ configHttpsProxy }}"
+    secretRef: "{{ configSecretRef }}"
+  triggers:
+{%-    if project.triggers is not defined -%}
+{%-      for trigger in defaultTriggers -%}
+{%-        for key,value in trigger.items() -%}
+{%-          if loop.first  %}
+  - {{ key }}: "{{ value }}"
+{%-          else %}
+    {{ key }}: "{{ value }}"
+{%-          endif %}
+{%-        endfor %}
+{%-     endfor %}
+{%-    else %}
+{%-      for trigger in project.triggers  %}
+{%        for key,value in trigger.items() %}
+{%          if loop.first %}
+  - {{ key }}: "{{ value }}"
+{%          else %}
+    {{ key }}: "{{ value }}"
+{%-         endif %}
+{%-       endfor %}
+{%-     endfor %}
+{%-    endif  %}
+  serviceAccountRef: eunomia-runner
+  templateProcessorImage: "{{ templateProcessorImage }}"
+  resourceHandlingMode: "{{ resourceHandlingMode }}"
+  resourceDeletionMode: "{{ resourceDeletionMode }}"
+{%-   endfor %}
+{%  endif %}

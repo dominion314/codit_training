@@ -1,0 +1,27 @@
+---
+vpcs:
+  bda-nx-lle:
+    interconnectRouterDef:
+      bda-nx-lle-c1-pi-rtr01:
+        region: us-central1
+        description:
+        advertiseMode: CUSTOM
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+          - 10.120.255.112/28
+        partnerInterconnect:
+          description:
+          availabilityDomain: 1
+          connectionSpeed: 200MB
+      bda-nx-lle-e1-pi-rtr01:
+        region: us-east1
+        description:
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+        partnerInterconnect:
+          description:
+          availabilityDomain: 1
+          connectionSpeed: 200MB

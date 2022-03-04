@@ -1,0 +1,93 @@
+---
+iamPolicyMembersV2:
+  groupsByEmail:
+    gcp-ocf-sd-l2@kohls.com:
+    - role: CustomRole101 # Custom Bigquery Create Views
+      OrgId: 1035901152068
+    - role: CustomViewer486 # Custom Viewer
+      OrgId: 1035901152068
+    - role: bigquery.dataViewer
+    - role: bigquery.jobUser
+    - role: browser
+    gcp-ocf-sd-l3@kohls.com:
+    - role: CustomRole101 # Custom Bigquery Create Views
+      OrgId: 1035901152068
+    - role: CustomViewer486 # Custom Viewer
+      OrgId: 1035901152068
+    - role: bigquery.dataViewer
+    - role: bigquery.jobUser
+    - role: browser
+    gcp-ocf-softwareengineer-admin@kohls.com:
+    - role: CustomRole101 # Custom Bigquery Create Views
+      OrgId: 1035901152068
+    - role: CustomRole570 # Custom BigQuery Data Owner
+      OrgId: 1035901152068
+    - role: CustomViewer486 # Custom Viewer
+      OrgId: 1035901152068
+    - role: bigquery.dataViewer
+    - role: bigquery.jobUser
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    gcp-ocf-softwareengineer-l3@kohls.com:
+    - role: CustomRole101 # Custom Bigquery Create Views
+      OrgId: 1035901152068
+    - role: CustomViewer486 # Custom Viewer
+      OrgId: 1035901152068
+    - role: bigquery.dataViewer
+    - role: bigquery.jobUser
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    GCP-Dev-OCF@kohls.com:
+    - role: CustomViewer486 # Custom Viewer
+      OrgId: 1035901152068
+    gcp-ocf-devops-admin@kohls.com:
+    - role: CustomViewer486 # Custom Viewer
+      OrgId: 1035901152068
+    - role: compute.networkViewer
+    - role: iam.serviceAccountKeyAdmin
+    - role: iam.serviceAccountTokenCreator
+    - role: iam.serviceAccountUser
+    - role: logging.admin
+    - role: logging.configWriter
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: monitoring.admin
+    gcp-ocf-softwareengineer-l2@kohls.com:
+    - role: CustomViewer486 # Custom Viewer
+      OrgId: 1035901152068
+    - role: bigquery.dataViewer
+    - role: bigquery.jobUser
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    gcp-ocf-softwareengineer-manager@kohls.com:
+    - role: CustomViewer486 # Custom Viewer
+      OrgId: 1035901152068
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+  serviceAccountsByEmail:
+    consul-paas@kohls-ocf-ext-prd.iam.gserviceaccount.com:
+    - role: CustomRole130
+      OrgId: 1035901152068
+    - role: CustomRole150
+      OrgId: 1035901152068
+    - role: CustomRole703
+      OrgId: 1035901152068
+    - role: compute.networkUser
+    mongo-dba@kohls-ocf-ext-prd.iam.gserviceaccount.com:
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: iam.serviceAccountUser
+    mysql-dba@kohls-ocf-ext-prd.iam.gserviceaccount.com:
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: iam.serviceAccountUser
+    terraform-devops@kohls-ocf-ext-prd.iam.gserviceaccount.com:
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.storageAdmin
+    - role: iam.serviceAccountUser
+    - role: storage.admin

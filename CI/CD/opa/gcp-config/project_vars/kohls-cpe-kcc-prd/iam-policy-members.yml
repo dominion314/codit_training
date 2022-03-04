@@ -1,0 +1,30 @@
+---
+iamPolicyMembers:
+  groupsByEmail:
+    gcp-xpaas-openshift-l2@kohls.com:
+      roles:
+      - container.developer
+      - container.clusterViewer
+      - storage.admin
+    gcp-xpaas-openshift-l3@kohls.com:
+      roles:
+      - compute.instanceAdmin.v1
+      - compute.viewer
+      - container.admin
+      - container.clusterAdmin
+    gcp-cpe-cne-devops-admin@kohls.com:
+      roles:
+      - container.admin
+      - container.clusterAdmin
+      - storage.admin
+      - iam.serviceAccountUser
+    gcp-cpe-cne-devops-l3@kohls.com:
+      roles:
+      - container.admin
+      - container.clusterAdmin
+      - storage.admin
+    gcp-iaas-cpa-devops-l3@kohls.com:
+      roles:
+      - container.clusterViewer
+      - container.viewer
+

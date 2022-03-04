@@ -1,0 +1,13 @@
+---
+storageBuckets:
+  kohls-cpe-sample-lle-sample-data-1:
+    acls:
+      groupsByEmail:
+        gcp-cpe-cloud-architect@kohls.com: WRITER
+        gcp-iaas-cpa-devops-admin@kohls.com: READER
+      serviceAccountsByEmail:
+        cpe-sample-sa1@kohls-cpe-sample-lle.iam.gserviceaccount.com: WRITER
+  kohls-cpe-sample-lle-sample-data-2:
+    acls:
+      serviceAccountsByEmail:
+        cpe-sample-sa2@kohls-cpe-sample-lle.iam.gserviceaccount.com: WRITER

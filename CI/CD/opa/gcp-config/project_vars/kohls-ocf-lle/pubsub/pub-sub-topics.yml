@@ -1,0 +1,121 @@
+pubSubTopics:
+  ocf-carrier-status-airterra-dev:
+    deletionProtect: true
+    labels:
+      app-name: "ocf-carrier-status-update"
+    permissions:
+      serviceAccountsByEmail:
+        carrierstatus-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+          roles:
+            - pubsub.editor
+
+  ocf-carrier-status-airterra-stage:
+    deletionProtect: true
+    labels:
+      app-name: "ocf-carrier-status-update"
+    permissions:
+      serviceAccountsByEmail:
+        carrierstatus-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+          roles:
+            - pubsub.editor
+
+  ocf-carrier-status-airterra-stress:
+    deletionProtect: true
+    labels:
+      app-name: "ocf-carrier-status-update"
+    permissions:
+      serviceAccountsByEmail:
+        carrierstatus-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+          roles:
+            - pubsub.editor
+
+  ocf-carrier-status-lso-dev:
+    deletionProtect: true
+    labels:
+      app-name: "ocf-carrier-status-update"
+    permissions:
+      serviceAccountsByEmail:
+        carrierstatus-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+          roles:
+            - pubsub.editor
+
+  ocf-carrier-status-lso-stage:
+    deletionProtect: true
+    labels:
+      app-name: "ocf-carrier-status-update"
+    permissions:
+      serviceAccountsByEmail:
+        carrierstatus-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+          roles:
+            - pubsub.editor
+
+  ocf-carrier-status-lso-stress:
+    deletionProtect: true
+    labels:
+      app-name: "ocf-carrier-status-update"
+    permissions:
+      serviceAccountsByEmail:
+        carrierstatus-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+          roles:
+            - pubsub.editor
+
+  ocf-carrier-status-dhl-dev:
+    deletionProtect: true
+    labels:
+      app-name: "ocf-carrier-status-update"
+    permissions:
+      serviceAccountsByEmail:
+        carrierstatus-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+          roles:
+            - pubsub.editor
+
+  ocf-carrier-status-dhl-stage:
+    deletionProtect: true
+    labels:
+      app-name: "ocf-carrier-status-update"
+    permissions:
+      serviceAccountsByEmail:
+        carrierstatus-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+          roles:
+            - pubsub.editor
+
+  ocf-carrier-status-dhl-stress:
+    deletionProtect: true
+    labels:
+      app-name: "ocf-carrier-status-update"
+    permissions:
+      serviceAccountsByEmail:
+        carrierstatus-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+          roles:
+            - pubsub.editor
+
+  ocf-carrier-status-pandion-dev:
+    deletionProtect: true
+    labels:
+      app-name: "ocf-carrier-status-update"
+    permissions:
+      serviceAccountsByEmail:
+        carrierstatus-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+          roles:
+            - pubsub.editor
+
+  ocf-carrier-status-pandion-stage:
+    deletionProtect: true
+    labels:
+      app-name: "ocf-carrier-status-update"
+    permissions:
+      serviceAccountsByEmail:
+        carrierstatus-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+          roles:
+            - pubsub.editor
+
+  ocf-ots-item-pmdm-consumer-stage:
+    deletionProtect: true
+    labels:
+      app-name: "ocf-ots-item"
+    permissions:
+      serviceAccountsByEmail:
+        ots-item-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+          roles:
+            - pubsub.editor
+

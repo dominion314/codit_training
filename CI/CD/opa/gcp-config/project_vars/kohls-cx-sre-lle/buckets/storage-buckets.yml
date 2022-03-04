@@ -1,0 +1,10 @@
+---
+storageBuckets:
+  kohls-ecom-sre-lle-data-1:
+    location: US
+    versioningEnabled: false
+    labels:
+      business: ecom
+      sub-business: sre
+    storageClass: MULTI_REGIONAL
+

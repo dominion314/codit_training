@@ -1,0 +1,5 @@
+---
+defaultLabels:            # default labels will be applied to every resource configuration
+  default-label: default-label-overwritten
+  default-label-lob: default-label-lob-overwritten
+  default-label-env: default-label-env-overwritten

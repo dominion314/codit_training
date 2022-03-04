@@ -1,0 +1,24 @@
+---
+billingDeptId: "90522"
+projectSharing:
+- kohls-etcc-uc-lle
+- kohls-etcc-tax-lle
+- kohls-eta-credit-lle
+- kohls-etcc-payments-lle
+- kohls-etcc-creditops-lle
+project:
+  name: kohls-eta-xpn-lle
+  managed: true
+  folderId: "778811484176"
+  billingAccount: "00C36A-CD0BDB-E543D0"
+  # Only hyphens (-), underscores (_), lowercase characters,
+  # and numbers are allowed as characters in labels
+  labels:
+    billing-dept-id: "90522"
+    project-manager: ron-minue
+    devops-lead: placeholder
+    environment-type: lle
+    line-of-business: eta
+    project-requestor: ron-minue
+serviceAPIs:
+  networkmanagement.googleapis.com:

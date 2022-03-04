@@ -1,0 +1,81 @@
+---
+iamPolicyMembersV2:
+  groupsByEmail:
+    gcp-cx-stores-sd-admin@kohls.com:
+    - role: compute.viewer
+    gcp-cx-stores-sd-l2@kohls.com:
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: CustomRole301         # Custom CX GKE Platform L2
+      OrgId: 1035901152068
+    - role: CustomRole329         # Custom CX GKE Application L2
+      OrgId: 1035901152068
+    - role: CustomRole589         # Custom CX GKE Configuration L2
+      OrgId: 1035901152068
+    - role: CustomRole945         # Custom CX GKE Security L2
+      OrgId: 1035901152068
+    - role: CustomViewer486       # Custom Viewer
+      OrgId: 1035901152068
+    gcp-productionengineering-ecom@kohls.com:
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: CustomViewer486       # Custom Viewer
+      OrgId: 1035901152068
+    gcp-cce-sre-admin@kohls.com:
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: CustomViewer486       # Custom Viewer
+      OrgId: 1035901152068
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.storageAdmin
+    - role: logging.configWriter
+    - role: logging.viewer
+    - role: logging.privateLogViewer
+    - role: storage.admin
+    - role: monitoring.editor
+    - role: serviceusage.serviceUsageConsumer
+    gcp-cce-sre-manager@kohls.com:
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: CustomViewer486       # Custom Viewer
+      OrgId: 1035901152068
+    - role: monitoring.editor
+    - role: iam.serviceAccountKeyAdmin
+    - role: serviceusage.serviceUsageConsumer
+  serviceAccountsByEmail:
+    servicereg-sre@kohls-cx-sremgmt-prd.iam.gserviceaccount.com:
+    - role: CustomRole430        # Custom Vault Authenticator
+      OrgId: 1035901152068
+    - role: compute.networkViewer
+    - role: logging.logWriter
+    - role: monitoring.metricWriter
+    - role: compute.networkUser
+    - role: storage.objectCreator
+    terraform-provisioning-sre@kohls-cx-sremgmt-prd.iam.gserviceaccount.com:
+    - role: compute.loadBalancerAdmin
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.storageAdmin
+    - role: iam.serviceAccountUser
+    - role: logging.logWriter
+    - role: storage.admin
+    - role: monitoring.editor
+    - role: serviceusage.serviceUsageConsumer
+    mysql-sre@kohls-cx-sremgmt-prd.iam.gserviceaccount.com:
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: iam.serviceAccountUser
+    - role: logging.logWriter
+    grafana-sre@kohls-cx-sremgmt-prd.iam.gserviceaccount.com:
+    - role: logging.logWriter
+    - role: monitoring.metricWriter
+    - role: monitoring.viewer
+    influxdb-sre@kohls-cx-sremgmt-prd.iam.gserviceaccount.com:
+    - role: logging.logWriter
+    - role: monitoring.metricWriter
+    creportal-sre@kohls-cx-sremgmt-prd.iam.gserviceaccount.com:
+    - role: logging.logWriter
+    - role: monitoring.metricWriter

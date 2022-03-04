@@ -1,0 +1,12 @@
+---
+project:
+  deletionProtect: true
+  managed: true
+  folderId: "749510905054"
+  labels:
+    billing-dept-id: "90546"
+    project-requestor: mark-doll
+    project-manager: josh-doll
+    devops-lead: mark-doll
+    line-of-business: cpe
+    environment-type: lle

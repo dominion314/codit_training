@@ -1,0 +1,13 @@
+{
+  "items": [
+    {
+      "input_yml_file": "iam-roles.yml",
+      "schema_file": "opa/iam_roles.yml"
+    },
+    {
+      "input_yml_file": "iam-roles-per-project.yml",
+      "schema_file": "opa/iam_roles_per_project.yml"
+    }
+
+  ]
+}

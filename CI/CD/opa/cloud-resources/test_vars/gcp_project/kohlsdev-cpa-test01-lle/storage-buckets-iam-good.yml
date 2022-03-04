@@ -1,0 +1,18 @@
+---
+storageBuckets:
+  kohlsdev-cpa-test01-lle-bucket-04:
+    permissions:
+      usersByEmail:
+        mark.doll@kohls.com:
+          deletionProtect: true
+          roles:
+          - storage.admin
+      groupsByEmail:
+        AWS_MasterPayer@kohls.com:
+          roles:
+          - storage.objectViewer
+      serviceAccountsByEmail:
+        245856417771@cloudservices.gserviceaccount.com:
+          roles:
+          - storage.legacyBucketOwner
+          - storage.objectViewer

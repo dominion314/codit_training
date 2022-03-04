@@ -1,0 +1,138 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+  labels:
+    app: eunomia-jinja-ansible
+  name: eunomia-jinja-ansible
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: eunomia-jinja-ansible
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+      creationTimestamp: null
+      labels:
+        app: eunomia-jinja-ansible
+    spec:
+      containers:
+        - env:
+            - name: HOME
+              value: /tmp
+            - name: NAMESPACE
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.namespace
+            - name: GITOPSCONFIG_NAME
+              value: {{ GITOPSCONFIG_NAME }}
+            - name: TEMPLATE_GIT_URI
+              value: {{ TEMPLATE_GIT_URI }}
+            - name: TEMPLATE_GIT_REF
+              value: main
+            - name: TEMPLATE_GIT_HTTP_PROXY
+              value: proxy-gcp-central.kohls.com:8080
+            - name: TEMPLATE_GIT_HTTPS_PROXY
+              value: proxy-gcp-central.kohls.com:8080
+            - name: TEMPLATE_GIT_DIR
+              value: /git/templates
+            - name: PARAMETER_GIT_URI
+              value: {{ PARAMETER_GIT_URI }}
+            - name: PARAMETER_GIT_REF
+              value: main
+            - name: PARAMETER_GIT_HTTP_PROXY
+              value: {{ HTTP_PROXY }}
+            - name: PARAMETER_GIT_HTTPS_PROXY
+              value: {{ HTTP_PROXY }}
+            - name: PARAMETER_GIT_DIR
+              value: /git/parameters
+            - name: CLONED_TEMPLATE_GIT_DIR
+              value: /git/templates/{{ CLONED_TEMPLATE_GIT_DIR }}
+            - name: CLONED_PARAMETER_GIT_DIR
+              value: /git/parameters/{{ CLONED_PARAMETER_GIT_DIR }}
+            - name: MANIFEST_DIR
+              value: /git/manifests
+            - name: CREATE_MODE
+              value: Apply
+            - name: DELETE_MODE
+              value: Delete
+            - name: ACTION
+              value: create
+            - name: TEMPLATE_GITCONFIG
+              value: /template-gitconfig
+            - name: PARAMETER_GITCONFIG
+              value: /parameter-gitconfig
+          image: {{ TEMPLATE_ENGINE }}
+          command:
+            - /bin/sh
+            - '-c'
+            - |
+              while true; do
+                printenv | sort
+                sleep 60
+              done
+          imagePullPolicy: IfNotPresent
+          name: eunomia-jinja-ansible
+          resources:
+            limits:
+              cpu: "1"
+              memory: 3Gi
+            requests:
+              cpu: 400m
+              memory: 2Gi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+            - mountPath: /git
+              name: workspace
+            - mountPath: /template-gitconfig
+              name: template-gitconfig
+            - mountPath: /parameter-gitconfig
+              name: parameter-gitconfig
+#            - mountPath: /usr/local/bin/appendResourceVersion.py
+#              name: appendresourceversion
+#              subPath: appendResourceVersion.py
+      dnsPolicy: ClusterFirst
+      enableServiceLinks: true
+      preemptionPolicy: PreemptLowerPriority
+      priority: 0
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: eunomia-runner
+      serviceAccountName: eunomia-runner
+      terminationGracePeriodSeconds: 30
+      tolerations:
+        - effect: NoExecute
+          key: node.kubernetes.io/not-ready
+          operator: Exists
+          tolerationSeconds: 300
+        - effect: NoExecute
+          key: node.kubernetes.io/unreachable
+          operator: Exists
+          tolerationSeconds: 300
+      volumes:
+        - emptyDir: {}
+          name: workspace
+        - name: template-gitconfig
+          secret:
+            defaultMode: 420
+            secretName: gitlab-resources-project
+        - name: parameter-gitconfig
+          secret:
+            defaultMode: 420
+            secretName: gitlab-config-project
+#        - configMap:
+#            defaultMode: 0777
+#            name: appendresourceversion
+#          name: appendresourceversion
+

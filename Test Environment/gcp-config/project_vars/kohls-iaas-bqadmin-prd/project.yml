@@ -1,0 +1,14 @@
+---
+project:
+  name: kohls-iaas-bqadmin-prd
+  deletionProtect: true
+  managed: true
+  folderId: "206335353876"
+  billingAccount: "00C36A-CD0BDB-E543D0"
+  labels: # Only hyphens (-), underscores (_), lowercase characters, and numbers are allowed as characters in labels
+    billing-dept-id: "90548"
+    project-manager: steve-pethan
+    devops-lead: hamilton-hoover
+    environment-type: prd
+    project-requestor: hamilton-hoover
+    line-of-business: iaas

@@ -1,0 +1,9 @@
+---
+vpcs:
+  platform-nx-prd:
+
+    routingMode: GLOBAL
+    autoCreateSubnets: false
+    psaNetwork:
+      platform-nx-prod-dbaas-psa-01:
+        network: 10.124.16.0/20

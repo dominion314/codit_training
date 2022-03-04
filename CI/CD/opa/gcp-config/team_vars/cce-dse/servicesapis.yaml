@@ -1,0 +1,59 @@
+---
+serviceAPIs:
+  # APIs & services
+  serviceusage.googleapis.com:
+  # Big Data APIs
+  dataproc.googleapis.com:
+  bigquery.googleapis.com:
+  datafusion.googleapis.com:
+  pubsub.googleapis.com:
+  metastore.googleapis.com:
+  bigtabletableadmin.googleapis.com:
+  pubsublite.googleapis.com:
+  bigquerydatatransfer.googleapis.com:
+  bigtableadmin.googleapis.com:
+  # Compute Engine APIs
+  appengine.googleapis.com:
+  container.googleapis.com:
+  run.googleapis.com:
+  compute.googleapis.com:
+  appengineflex.googleapis.com:
+  replicapool.googleapis.com:
+  # DB APIs
+  datastore.googleapis.com:
+  datamigration.googleapis.com:
+  firestore.googleapis.com:
+  # Developer Tools APIs
+  cloudbuild.googleapis.com:
+  deploymentmanager.googleapis.com:
+  containerregistry.googleapis.com:
+  # Google Cloud APIs
+  dataflow.googleapis.com:
+  cloudresourcemanager.googleapis.com:
+  # Machine learning APIs
+  # Commented out for now getting the approval from Security
+  # ml.googleapis.com:
+  # automl.googleapis.com:
+  # language.googleapis.com:
+  # translate.googleapis.com:
+  # videointelligence.googleapis.com:
+  # vision.googleapis.com:
+  # dialogflow.googleapis.com:
+  # Monitoring APIs
+  clouderrorreporting.googleapis.com:
+  monitoring.googleapis.com:
+  cloudtrace.googleapis.com:
+  # Security APIs
+  # Commented out for now getting the approval from Security
+  # cloudidentity.googleapis.com:
+  # cloudkms.googleapis.com:
+  # Storage APIs
+  storage-component.googleapis.com:
+  storage-api.googleapis.com:
+  storagetransfer.googleapis.com:
+  # Network
+  networktopology.googleapis.com:
+  # Other APIs
+  logging.googleapis.com:
+  cloudasset.googleapis.com:
+  stackdriver.googleapis.com:

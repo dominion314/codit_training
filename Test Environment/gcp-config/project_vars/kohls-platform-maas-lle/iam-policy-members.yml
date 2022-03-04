@@ -1,0 +1,52 @@
+---
+iamPolicyMembers:
+  groupsByEmail:
+    gcp-et-devops-admin@kohls.com:
+      roles:
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - iam.serviceAccountKeyAdmin
+      - storage.admin
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+    gcp-et-devops-l3@kohls.com:
+      roles:
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - storage.admin
+    gcp-kre-systemsengineer-admin@kohls.com:
+      roles:
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - storage.admin
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+  serviceAccountsByEmail:
+    kafkaplatform-msg@kohls-platform-maas-lle.iam.gserviceaccount.com:
+      roles:
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - storage.objectAdmin
+      - storage.admin
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.networkViewer
+    terraform@kohls-platform-maas-lle.iam.gserviceaccount.com:
+      roles:
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - storage.objectAdmin
+      - storage.admin
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.networkViewer
+    platform-devops@kohls-platform-maas-lle.iam.gserviceaccount.com:
+      roles:
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - storage.objectAdmin
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - storage.admin

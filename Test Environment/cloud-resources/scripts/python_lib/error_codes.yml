@@ -1,0 +1,104 @@
+---
+OPA:
+  OPA-5000: The API(s) ~item(s)~ violates our policies and cannot be added to your project. ~split~ View the list of allowed APIs
+        [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/service/apis.yml)
+        If you see your listed API, validate that it is spelled correctly within the change request. To fix this error remove the API from your project which is preferred
+        if possible, or request an exception if the API is required for your use case.
+        For more information on OPA and for the steps required to have an exception added click [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/OPA.md).
+  OPA-6000: The user role(s) ~item(s)~ violates our policies and cannot be added to your project. ~split~ View the list of allowed user roles
+        [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/iam/iam-roles.yml)
+        If you see your listed role, validate that it is spelled correctly within the change request and is allowed for users. To fix this error remove the role from your
+        project which is preferred if possible, or request an exception if the role is required for your use case.
+        For more information on OPA and for the steps required to have an exception added click [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/OPA.md).
+  OPA-6010: The group role(s) ~item(s)~ violates our policies and cannot be added to your project. ~split~ View the list of allowed group roles
+        [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/iam/iam-roles.yml)
+        If you see your listed role, validate that it is spelled correctly within the change request and is allowed for groups. To fix this error remove the role from
+        your project which is preferred if possible, or request an exception if the role is required for your use case.
+        For more information on OPA and for the steps required to have an exception added click [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/OPA.md).
+  OPA-6020: The service account role(s) ~item(s)~ violates our policies and cannot be added to your project. ~split~ View the list of allowed service account roles
+        [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/iam/iam-roles.yml) If you see your listed role,
+        validate that it is spelled correctly within the change request and is allowed for service accounts. To fix this error remove the role from your project which is
+        preferred if possible, or request an exception if the role is required for your use case.
+        For more information on OPA and for the steps required to have an exception added click [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/OPA.md).
+  OPA-7000: The custom user role(s) ~item(s)~ violates our policies and cannot be added to your project. ~split~ View the list of allowed custom user roles
+        [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/iam/custom-iam-roles.yml)
+        If you see your listed role, validate that it is spelled correctly within the change request and is allowed for users. To fix this error remove the role from your
+        project which is preferred if possible, or request an exception if the role is required for your use case.
+        For more information on OPA and for the steps required to have an exception added click [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/OPA.md).
+  OPA-7010: The custom group role(s) ~item(s)~ violates our policies and cannot be added to your project. ~split~ View the list of allowed custom group roles
+        [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/iam/custom-iam-roles.yml)
+        If you see your listed role, validate that it is spelled correctly within the change request and is allowed for group. To fix this error remove the role from your
+        project which is preferred if possible, or request an exception if the role is required for your use case.
+        For more information on OPA and for the steps required to have an exception added click [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/OPA.md).
+  OPA-7020: The custom service account role(s) ~item(s)~ violates our policies and cannot be added to your project. ~split~ View the list of allowed custom service account roles
+        [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/iam/custom-iam-roles.yml) If you see your listed role,
+        validate that it is spelled correctly within the change request and is allowed for service accounts. To fix this error remove the role from your project which is
+        preferred if possible, or request an exception if the role is required for your use case.
+        For more information on OPA and for the steps required to have an exception added click [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/OPA.md).
+  OPA-8000: The environment type and FolderID for one of your project(s) is not allowed to be used together. ~split~ Please update your FolderID(s) from the following list under the
+        "NetX Project Folder ID Lookup Table" section [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Project_Jump_Start_Guide.md).
+  OPA-8010: Your project's FolderID is incorrect for the given product domain/environment type and is not allowed to be used together. ~split~ Please update your FolderID or product domain
+        from the following list under the "NetX Project Folder ID Lookup Table" section [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Project_Jump_Start_Guide.md)
+  OPA-8020: Your project's billing department ID, billingDeptId and or billing-dept-id must all match for a single project. ~split~ Go to your project.yml file and select only one id to use for these feilds.
+  OPA-9000: Your project's big-query-dataset must include at least one bigquery.dataOwner role within each separate dataset. ~split~ Add the role and make sure the dataset is formated correctly.
+
+Cerberus:
+  Cerberus-102: String value can only contain lower case, uppercase letters, and/or underscores, but MUST be between 5 and 1024 characters.
+                # regex: '[a-zA-Z0-9_]{5,1024}'
+  Cerberus-104: String value can only contain numbers, lower case letters, and/or hyphens.
+                # regex: '^[0-9a-z-]+'
+  Cerberus-106: String value can only end with "@kohls.com", "@qa.kohls.com", or "@dev.kohls.com".
+                # regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+  Cerberus-108: String value can only end with ".gserviceaccount.com".
+                # regex: '.*@.*\.gserviceaccount\.com'
+  Cerberus-110: String value must start with a lower case letter and can only contain numbers and/or lower case letters.
+                # regex: '[a-z]([-a-z0-9]*[a-z0-9])?'
+  Cerberus-112: String value can only contain numbers, lower case letters, hyphens, and/or underscores.
+                # regex: '^[0-9a-z-_]+'
+  Cerberus-114: String value must start with a lower case letter and after can only contain numbers, upper/lowercase letters and/or hyphens.
+                # regex: '^[a-z][a-zA-Z0-9-]{5,29}$'    # first lower alpha, after that alphanums plus hyphens, 6 to 30 total lengh
+  Cerberus-116: Value can only be numbers with up to 2 decimal spaces and has to end with a "s".
+                # regex: '^\d+(.?\d?\d?)s$'
+  Cerberus-118: String value can only contain numbers, lower case letters, and/or hyphens and MUST be between 6 and 30 characters.
+                # regex: '^[0-9a-z-]{6,30}$'
+  Cerberus-120: String value can only contain numbers, upper/lower case letters, hyphens, forward slashes, and/or periods and MUST be between 1 and 100 characters.
+                # regex: '^[ 0-9a-zA-Z-\/\.]{1,100}$'
+  Cerberus-122: String value can only contain numbers, upper/lower case letters, hyphens, commas, and/or periods and MUST be between 1 and 256 characters.
+                # regex: '^[ 0-9a-zA-Z-\.\,]{1,256}$'
+  Cerberus-124: String value can only contain numbers, lower case letters, periods, hyphens, and/or underscores.
+                # regex: '[-a-z0-9\._]+'
+  Cerberus-126: String value can only end with "@kohls.com", "@qa.kohls.com", "@dev.kohls.com", or ".gserviceaccount.com".
+                # regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com|.*\.gserviceaccount\.com'
+  Cerberus-128: Format is divided into three parts divided by hyphens. Must start with "19", "20", or "21", followed by two digits. Add a "-".
+                Then "0" and a digit (1 through 9) or "1" followed by "0", "1", or "2". Add a "-".
+                Finally "0" and a digit (1 through 9), or ("1" or "2") and a digit (1 through 9), or a "3" and ("0" or "1").
+                # regex: '^(19|20|21)\d\d-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])'
+  Cerberus-130: Value can be any number.
+                # regex: '\d+'
+  Cerberus-132: Value must start with a lowercase letter and end with "-" and followed by nx or xpn. Then "-" and followed by lle, hle, prd, ops, sbx or transit.
+                # regex: '^[a-z][a-z0-9]+-(nx|xpn)-(lle|hle|prd|ops|sbx|transit)$'
+  Cerberus-134: Value must start with a lowercase letter and end with "-" and followed by nx or xpn. Then "-" and followed by lle, hle, prd, ops, sbx or transit.
+                Next add "-" and "c" or "d" followed by a digit. Finally ends with "-gcp-rtr" and two digits (0 through 9).
+                # regex: '^[a-z][a-z0-9]+-(nx|xpn)-(lle|hle|prd|ops|sbx|transit)-((c|e)\d)-gcp-rtr[0-9]{2}$'
+  Cerberus-136: Value must be one to three digits + "." + one to three digits + "." + one to three digits + "." + one to three digits + "/"
+                + (a digit or ("1" or "2") and a digit or "3" and ("0" or "1" or "2")).
+                # regex: '^([0-9]{1,3}\.){3}[0-9]{1,3}(\/([0-9]|[1-2][0-9]|3[0-2]))$'
+  Cerberus-138: Value must start with a lowercase letter and end with "-" and followed by nx or xpn. Then "-" and followed by lle, hle, prd, ops, sbx or transit.
+                Next add "-", up to ten characters of (lowercase and numbers), and "c" or "d" followed by a digit. Finally ends with "-nat-gateway" and two digits (0 through 9).
+                # regex: '^[a-z][a-z0-9]+-(nx|xpn)-(lle|hle|prd|ops|sbx|transit)-([a-z0-9-]{0,10})?((c|e)\d)-nat-gateway$'
+  Cerberus-140: Value must start with a lowercase letter and end with "-" and followed by nx or xpn. Then "-" and followed by lle, hle, prd, ops, sbx or transit.
+                Next add "-" and "c" or "d" followed by a digit. Finally ends with "-totransit-" and two digits (0 through 9).
+                # regex: '^[a-z][a-z0-9]+-(nx|xpn)-(lle|hle|prd|ops|sbx|transit)-((c|e)\d)-totransit(-\d\d)?$'
+  Cerberus-142: Contact GitOps Network Team.
+                # regex: '(169\.254\.)((([0-9](?!\d)|[1-9][0-9](?!\d)|1[0-9]{2}|2[0-4][0-9]|25[0-4])[.])(([0-9](?!\d)|[1-9][0-9](?!\d)|1[0-9]{2}|2[0-4][0-9]|25[0-5])))/30$'
+  Cerberus-144: Contact GitOps Network Team.
+                # regex: '^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(\/([0-9]|[1-2][0-9]|3[0-2]))?$'
+  Cerberus-146: Contact GitOps Network Team.
+                # regex: ^(((6553[0-5]|655[0-2]\d|65[0-4]\d\d|6[0-4]\d{3}|[1-5]\d{4}|[1-9]\d{0,3}|0))-)?((6553[0-5]|655[0-2]\d|65[0-4]\d\d|6[0-4]\d{3}|[1-5]\d{4}|[1-9]\d{0,3}|0))$
+  Cerberus-148: Value must be "." + lowercase letters and/or numbers + "." + lowercase letters.
+                # regex: '\.([a-z0-9]+\.)*[a-z0-9]+\.[a-z]+'
+  Cerberus-150: String value can only contain numbers, lower case letters, and/or hyphens and MUST be between 5 and 50 characters.
+                # regex: '([a-z0-9-]{5,50})'
+
+  Cerberus-200: We are not able to use that role/service api within the system or it has not been listed as able to be used yet. Contact GitOps Team.
+  Cerberus-250: Cerberus has failed. Check Cerberus Stage. If unable to troubleshoot contact GitOps Team.

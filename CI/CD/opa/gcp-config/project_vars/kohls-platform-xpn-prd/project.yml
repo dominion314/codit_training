@@ -1,0 +1,37 @@
+---
+billingDeptId: "90548"
+project:
+  name: kohls-platform-xpn-prd
+  deletionProtect: true
+  managed: true
+  folderId: "970875009337"
+  billingAccount: "00C36A-CD0BDB-E543D0"
+  # Only hyphens (-), underscores (_), lowercase characters,
+  # and numbers are allowed as characters in labels
+  labels:
+    billing-dept-id: "90548"
+    project-manager: marsha-siatczynski
+    devops-lead: ryan-criss
+    environment-type: prd
+    line-of-business: platform
+    project-requestor: ryan-criss
+serviceAPIs:
+  compute.googleapis.com:
+  cloudasset.googleapis.com:
+  cloudresourcemanager.googleapis.com:
+  logging.googleapis.com:
+  monitoring.googleapis.com:
+  networkmanagement.googleapis.com:
+  oslogin.googleapis.com:
+  servicenetworking.googleapis.com:
+  storage-component.googleapis.com:
+  storage-api.googleapis.com:
+  stackdriver.googleapis.com:
+  networktopology.googleapis.com:
+  firewallinsights.googleapis.com:
+
+projectSharing:
+- kohls-platform-dbaas-prd
+- kohls-platform-maas-prd
+- kohls-platform-netservices-prd
+- kohls-platform-openshift-prd

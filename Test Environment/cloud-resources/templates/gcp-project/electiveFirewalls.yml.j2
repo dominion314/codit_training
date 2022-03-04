@@ -1,0 +1,62 @@
+{%- if vpcs is defined %}
+{%-   for vpc_name, vpc_def in vpcs.items() %}
+{#- Begin Block for Elective Firewall Rule Block #}
+{%-     if vpc_def.electiveFWrules is defined and vpc_def.electiveFWrules is not none %}
+{%-       for elective_name in vpc_def.electiveFWrules %}
+{#- Begin Block for Specific Elective Firewall Rules #}
+{%-         if electiveRules[elective_name] is defined %}
+{%-           for electiveFW_name, electiveFW_def in electiveRules[elective_name].items() %}
+
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeFirewall
+metadata:
+  labels:
+{%-         for key, value in project.labels.items() %}
+    {{ key }}: "{{ value }}"
+{%-         endfor %}
+  name: {{ vpc_name }}-{{ electiveFW_name }}
+  namespace: gcp-{{ project.name }}
+{%- if project.deletionProtect | default(true, true) %}
+{%-   if electiveFW_def.deletionProtect | default(false, true) %}
+  annotations:
+    cnrm.cloud.google.com/deletion-policy: abandon
+{%-   endif %}
+{%- endif %}
+spec:
+  description: {{ electiveFW_def.description | default('""',true) }}
+  direction: {{ electiveFW_def.direction }}
+  disabled: {{ electiveFW_def['disabled'] }}
+{%- if electiveFW_def.logging is defined and electiveFW_def.logging == true %}
+  logConfig:
+    metadata: "INCLUDE_ALL_METADATA"
+{%- endif %}
+  networkRef:
+    name: {{ vpc_name }}
+  priority: {{ electiveFW_def.priority }}
+  {%- if electiveFW_def.rule.destinationRanges is defined and electiveFW_def.rule.destinationRanges %}
+  destinationRanges: {{ electiveFW_def.rule.destinationRanges | to_json }}{% endif %}
+  {%- if electiveFW_def.rule.targetServiceAccounts is defined and electiveFW_def.rule.targetServiceAccounts %}
+  targetServiceAccounts: {{ electiveFW_def.rule.targetServiceAccounts | to_json }}{% endif %}
+  {%- if electiveFW_def.rule.targetTags is defined and electiveFW_def.rule.targetTags %}
+  targetTags: {{ electiveFW_def.rule.targetTags | to_json }}{% endif %}
+  {%- if electiveFW_def.rule.sourceRanges is defined and electiveFW_def.rule.sourceRanges %}
+  sourceRanges: {{ electiveFW_def.rule.sourceRanges | to_json }}{% endif %}
+  {%- if electiveFW_def.rule.sourceServiceAccounts is defined and electiveFW_def.rule.sourceServiceAccounts %}
+  sourceServiceAccounts: {{ electiveFW_def.rule.sourceServiceAccounts | to_json }}{% endif %}
+  {%- if electiveFW_def.rule.sourceTags is defined and electiveFW_def.rule.sourceTags %}
+  sourceTags: {{ electiveFW_def.rule.sourceTags | to_json }}{% endif %}
+  {%- if electiveFW_def.rule.allow is defined and electiveFW_def.rule.allow %}
+  allow: {{ electiveFW_def.rule.allow | to_json }}{% endif %}
+  {%- if electiveFW_def.rule.deny is defined and electiveFW_def.rule.deny %}
+  deny: {{ electiveFW_def.rule.deny | to_json }}{% endif %}
+
+---
+{%-           endfor %}
+{%-         endif %}
+{%-       endfor %}
+{%-     else %}
+{%-       set electiveFWrules = {} %}
+{%-     endif %}
+{%-   endfor %}
+{%- endif %}
+{#- End Block for Elective Firewall Rules #}

@@ -1,0 +1,266 @@
+---
+vpcs:
+  platform-nx-prd:
+    firewallRules:
+      maas-prd-kafka-allow-openshift-prd-prv01:
+        priority: 900
+        direction: INGRESS
+        description: Allow openshift prd to maas prd servers
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          - external: "kafkaplatform-msg@kohls-platform-maas-prd.iam.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+          sourceServiceAccounts:
+          - external: "ocp-app-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com"
+          - external: "ocp-pci-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com"
+          - external: "ocp-pii-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com"
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+            - "2181"
+            - "8446"
+            - "8778"
+            - "9092"
+            - "9094"
+            - "9100"
+            - "9404"
+      openshift-prd-allow-confluent-cloud:
+        priority: 900
+        direction: EGRESS
+        description: Allow egress traffic to Confluent Cloud Kafka via GCP Cloud NAT
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          - "35.239.43.200/32"
+          - "35.226.138.210/32"
+          - "34.69.126.144/32"
+          - "104.197.235.120/32"
+          - "35.222.231.161/32"
+          - "104.197.184.153/32"
+          - "35.223.204.47/32"
+          - "35.232.242.141/32"
+          - "35.223.186.236/32"
+          - "35.193.113.160/32"
+          - "35.224.215.168/32"
+          - "35.202.33.164/32"
+          - "34.67.145.241/32"
+          - "34.68.241.146/32"
+          - "34.68.102.38/32"
+          - "34.70.159.56/32"
+          - "35.194.33.66/32"
+          - "35.192.208.190/32"
+          - "35.224.243.7/32"
+          - "35.224.216.199/32"
+          - "34.66.51.232/32"
+          - "34.68.252.254/32"
+          - "34.67.92.77/32"
+          - "104.197.202.31/32"
+          - "35.184.215.56/32"
+          - "34.66.26.30/32"
+          - "35.238.117.49/32"
+          - "34.72.187.170/32"
+          - "34.68.91.177/32"
+          - "34.68.32.148/32"
+          - "35.222.75.254/32"
+          - "35.193.122.122/32"
+          targetServiceAccounts:
+          - external: "ocp-app-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com"
+          - external: "ocp-pci-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com"
+          - external: "ocp-pii-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "9092"
+            - "9094"
+      openshift-prd-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16098
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-kafka
+          - paas-zookeeper
+          sourceRanges:
+          - "10.184.0.0/23"
+          - "10.188.0.0/23"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+            - "2181"
+            - "2888"
+            - "3888"
+            - "8778"
+            - "9092"
+            - "9100"
+            - "9404"
+      onprem-allow-maas-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16171
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-kafka
+          sourceRanges:
+          - "172.26.0.0/15"
+          - "10.57.0.0/17"
+          - "10.101.70.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "9092"
+            - "22"
+      openshift-prd-maas-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16475
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-kafka
+          - paas-zookeeper
+          sourceRanges:
+          - "10.184.0.0/23"
+          - "10.188.0.0/23"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "9094"
+      interconnectivity-kafka-broker-maas-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16475
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-kafka
+          - paas-zookeeper
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          - paas-kafka
+          - paas-zookeeper
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "9094"
+            - "9091"
+      maas-prd-kafka-allow-openshift-lle-prv01:
+        priority: 900
+        direction: INGRESS
+        description: Allow openshift lle to maas prd servers for gitlab runners
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          - external: "kafkaplatform-msg@kohls-platform-maas-prd.iam.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+          sourceServiceAccounts:
+          - external: "ocp-app-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+            - "2181"
+            - "9092"
+      internal-docker-runner-ingress-kafka:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16696
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          - external: "kafkaplatform-msg@kohls-platform-maas-prd.iam.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+          - "10.185.13.0/24"
+          - "10.189.8.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+            - "2181"
+            - "9092"
+      tvs-kafka-pmdm-ingress:
+        priority: 900
+        direction: INGRESS
+        description: CX-MIGRATION
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          - external: "kafkaplatform-msg@kohls-platform-maas-prd.iam.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+          - "10.187.36.0/23"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "9092"
+      tvscorp-prd-maas-openshift-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-17131,SNOW-17177,SNOW-17193,SNOW-17163
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-kafka
+          sourceRanges:
+          - 10.185.49.0/24
+          - 10.189.38.0/24
+          - 10.185.56.0/21
+          - 10.189.48.0/21
+          - 10.185.2.0/24
+          - 10.189.2.0/24
+          - 10.189.22.0/23
+          - 10.185.24.0/23
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: tcp
+            ports:
+            - '9092-9094'

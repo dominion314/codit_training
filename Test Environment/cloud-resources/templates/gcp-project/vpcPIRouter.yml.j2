@@ -1,0 +1,109 @@
+{%- if vpcs is defined %}
+{%-   for vpc_name, vpc_def in vpcs.items() %}
+{%-     if vpc_def.interconnectRouterDef is defined %}
+{%-       for router_name, router_def in vpc_def.interconnectRouterDef.items() %}
+{%          if router_def.partnerInterconnect is defined %}
+{%-           if 'central' in router_def.region and router_def.partnerInterconnect.availabilityDomain == 1 %}
+{%-             set piName = router_name + "-to-ch2-rtr1" %}
+{%-           elif 'central' in router_def.region and router_def.partnerInterconnect.availabilityDomain == 2 %}
+{%-             set piName = router_name + "-to-ch2-rtr2" %}
+{%-           elif 'east' in router_def.region and router_def.partnerInterconnect.availabilityDomain == 1 %}
+{%-             set piName = router_name + "-to-dc11-rtr1" %}
+{%-           elif 'east' in router_def.region and router_def.partnerInterconnect.availabilityDomain == 2 %}
+{%-             set piName = router_name + "-to-dc11-rtr2" %}
+{%-           endif %}
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeRouter
+metadata:
+  labels:
+{%-           for key, value in project.labels.items() %}
+    "{{ key }}": "{{ value }}"
+{%-           endfor %}
+  name: "{{ router_name }}"
+  namespace: "gcp-{{ project.name }}"
+{%- if project.deletionProtect | default(true, true) %}
+{%-   if router_def.partnerInterconnect.deletionProtect | default(false, true) %}
+  annotations:
+    cnrm.cloud.google.com/deletion-policy: abandon
+{%-   endif %}
+{%- endif %}
+spec:
+  networkRef:
+    name: "{{ vpc_name }}"
+    namespace: "gcp-{{ project.name }}"
+  description: "{{ router_def.description | default('',true) }}"
+  region: "{{ router_def.region }}"
+  bgp:
+    asn: 16550
+    advertiseMode: "{{ router_def.advertiseMode }}"
+{#- Block for Generating  Advertised IP Ranges from subnetwork params #}
+{%- if router_def.advertiseMode != 'DEFAULT' %}
+    advertisedGroups: []
+    advertisedIpRanges:
+{%-     if router_def.custom_advertised_ip_ranges is defined
+                  and router_def.custom_advertised_ip_ranges.customIPList is defined
+                  and router_def.custom_advertised_ip_ranges.customIPList is not none %}
+{%-       for range in router_def.custom_advertised_ip_ranges.customIPList %}
+      - range: {{ range }}
+{%-       endfor %}
+{%-     endif %}
+{%-     if router_def.custom_advertised_ip_ranges is not defined or router_def.custom_advertised_ip_ranges.includeSubnetDef %}
+{%-       if vpc_def.subnets is defined and vpc_def.subnets is not none %}
+{%-       for subnet_name,subnet_def in vpc_def.subnets.items() %}
+{%-         if subnet_def.advertiseRoutes %}
+      - range: {{ subnet_def.network.ip }}
+{%-           if subnet_def.secondary is defined %}
+{%-             for secondary_name,secondary_def in subnet_def.secondary.items() %}
+      - range: {{ secondary_def.ip }}
+{%-              endfor %}
+{%-           endif %}
+{%-           if subnet_def.gke is defined %}
+{%-             for gke_cluster in subnet_def.gke %}
+      - range: {{ gke_cluster.podNetwork.ip }}
+      - range: {{ gke_cluster.serviceNetwork.ip }}
+{%-              endfor %}
+{%-           endif %}
+{%-         endif %}
+{%-       endfor %}
+{%-     endif %}
+{%-   endif %}
+{%- endif %}
+---
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeInterconnectAttachment
+metadata:
+  labels:
+{%-           for key, value in project.labels.items() %}
+    "{{ key }}": "{{ value }}"
+{%-           endfor %}
+  name: "{{ piName }}"
+  namespace: "gcp-{{ project.name }}"
+{%- if project.deletionProtect | default(true, true) %}
+{%-   if router_def.partnerInterconnect.deletionProtect | default(false, true) %}
+  annotations:
+    cnrm.cloud.google.com/deletion-policy: abandon
+{%-   endif %}
+{%- endif %}
+spec:
+  description: {{ router_def.partnerInterconnect.description | default('""',true) }}
+  type: PARTNER
+{%- if router_def.adminEnabled is defined %}
+  adminEnabled: {{ router_def.adminEnabled }}
+{%- else %}
+  adminEnabled: True
+{%- endif %}
+  region: {{ router_def.region }}
+{%- if router_def.partnerInterconnect.availabilityDomain == 1 %}
+  edgeAvailabilityDomain: AVAILABILITY_DOMAIN_1
+{%- elif router_def.partnerInterconnect.availabilityDomain == 2 %}
+  edgeAvailabilityDomain: AVAILABILITY_DOMAIN_2
+{%- endif %}
+  routerRef:
+    name: "{{ router_name }}"
+    namespace: "gcp-{{ project.name }}"
+---
+{%-         endif %}
+{%-       endfor %}
+{%-     endif %}
+{%-   endfor %}
+{%- endif %}

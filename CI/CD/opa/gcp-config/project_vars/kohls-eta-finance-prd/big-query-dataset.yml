@@ -1,0 +1,16 @@
+---
+bigQueryDatasets:
+  finance_erp_ppm_reports:
+    friendlyName: finance_erp_ppm_reports
+    description: ''
+    deletionProtect: false
+    defaultTableExpirationMs: 0
+    permissions:
+      groupsByEmail:
+        gcp-eta-devops-admin@kohls.com:
+          roles:
+          - bigquery.dataOwner
+        gcp-finance-kfs-reporting@kohls.com:
+          roles:
+          - bigquery.dataViewer
+          - bigquery.user

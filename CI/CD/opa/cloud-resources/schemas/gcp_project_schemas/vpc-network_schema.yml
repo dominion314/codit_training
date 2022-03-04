@@ -1,0 +1,16 @@
+---
+vpcs:
+  required: false
+  type: 'dict'
+  keysrules:
+    type: 'string'
+    regex: '^[a-z][a-z0-9]+-(nx|xpn)-(lle|hle|prd|ops|sbx|transit)$'
+  valuesrules:
+    type: 'dict'
+    schema:
+      autoCreateSubnets:
+        type: 'boolean'
+        required: false
+      routingMode:
+        type: 'string'
+        allowed: ['GLOBAL', 'REGIONAL']

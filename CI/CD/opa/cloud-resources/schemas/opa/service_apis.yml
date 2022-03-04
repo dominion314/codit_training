@@ -1,0 +1,14 @@
+---
+service:
+  required: true
+  schema:
+    allowedAPIs:
+      required: true
+      type: dict
+      keysrules:
+        type: string
+        allowed: ['sbx', 'ops', 'lle', 'hle', 'nonprd', 'prd']
+      valuesrules:
+        type: list
+        schema:
+          type: string

@@ -1,0 +1,8 @@
+---
+vpcs:
+  cx-nx-prd:
+    routingMode: GLOBAL
+    autoCreateSubnets: false
+    psaNetwork:
+      cx-nx-prd-dbaas-psa-01:
+        network: 10.124.40.0/21

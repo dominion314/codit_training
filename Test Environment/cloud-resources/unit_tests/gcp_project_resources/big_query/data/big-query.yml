@@ -1,0 +1,35 @@
+---
+bigQueryDatasets:
+  bqdatasetunittestone:
+    friendlyName: big-query-dataset-unit-test-one
+    description: "Big Query Dataset Unit Test One"
+    defaultTableExpirationMs: 3600000
+    defaultPartitionExpirationMs: 3600000
+    labels:
+      unit-test-label-1: label-1
+    permissions:
+      usersByEmail:
+        first.last@example.com:
+          roles:
+          - bigquery.user
+          - editor
+      groupsByEmail:
+        second.last@example.com:
+          roles:
+          - bigquery.dataViewer
+      serviceAccountsByEmail:
+        third.last@example.com:
+          roles:
+          - biqquery.metadataViewer
+
+  bqdatasetunittesttwo:
+    friendlyName: big-query-dataset-unit-test-two
+    labels:
+      unit-test-label-1: label-1
+    permissions:
+      groupsByEmail:
+        second.last@example.com:
+          roles:
+          - bigquery.dataViewer
+
+  bqdatasetunittestthree:

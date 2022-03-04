@@ -1,0 +1,419 @@
+---
+vpcs:
+  eta-nx-lle:
+
+    firewallRules:
+      ssh-access-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0607363
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - eta-ssh
+          sourceRanges:
+          - 10.0.0.0/8
+          - 172.26.0.0/15
+          - 10.101.0.0/16
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      http-10119-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0607363
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - eta-eta-http-10119
+          sourceRanges:
+          - 10.0.0.0/8
+          - 172.26.0.0/15
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "10119"
+      http-5001-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0607363
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - eta-http-5001
+          sourceRanges:
+          - 10.0.0.0/8
+          - 172.26.0.0/15
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "5001"
+      http-5701-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0607363
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - eta-http-5701
+          sourceRanges:
+          - 10.0.0.0/8
+          - 172.26.0.0/15
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "5701"
+      http-6001-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0607363
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - eta-http-6001
+          sourceRanges:
+          - 10.0.0.0/8
+          - 172.26.0.0/15
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "6001"
+      http-6362-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0607363
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - eta-http-6362
+          sourceRanges:
+          - 10.0.0.0/8
+          - 172.26.0.0/15
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "6362"
+      http-7474-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0607363
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - eta-http-7474
+          sourceRanges:
+          - 10.0.0.0/8
+          - 172.26.0.0/15
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "7474"
+      http-7687-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0607363
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - eta-http-7687
+          sourceRanges:
+          - 10.0.0.0/8
+          - 172.26.0.0/15
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "7687"
+      http-8080-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0607363
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - eta-http-8080
+          sourceRanges:
+          - 10.0.0.0/8
+          - 172.26.0.0/15
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "8080"
+      http-8443-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0607363
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - eta-http-8443
+          sourceRanges:
+          - 10.0.0.0/8
+          - 172.26.0.0/15
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "8443"
+      http-8888-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0607363
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - eta-http-8888
+          sourceRanges:
+          - 10.0.0.0/8
+          - 172.26.0.0/15
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "8888"
+      cavisson-fw-access:
+        priority: 900
+        direction: INGRESS
+        description: FW migration
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-cavisson
+          sourceRanges:
+          - 10.206.96.0/25
+          - 10.188.103.0/25
+          - 10.186.219.128/25
+          - 10.188.70.0/23
+          - 10.184.104.0/25
+          - 10.184.70.0/23
+          - 10.188.102.0/25
+          - 10.184.105.0/25
+          - 10.184.68.0/23
+          - 10.184.104.128/25
+          - 10.190.127.0/25
+          - 10.206.224.0/25
+          - 10.188.102.128/25
+          - 10.188.68.0/23
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "7890"
+            - "7899"
+      intra-vpc-traffic:
+        priority: 900
+        direction: INGRESS
+        description: FW migration
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - eta-lle
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          - eta-lle
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "443"
+            - "22"
+            - "3306"
+      cavisson-fw-access-2:
+        priority: 900
+        direction: INGRESS
+        description: FW migration
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-cavisson
+          sourceRanges:
+          - 10.188.70.0/23
+          - 10.184.70.0/23
+          - 10.184.68.0/23
+          - 10.188.68.0/23
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "80"
+            - "443"
+            - "7891-7899"
+      mongodb-access-credit:
+        priority: 900
+        direction: INGRESS
+        description: FW migration
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - iaas-mongo
+          sourceRanges:
+          - 10.57.0.0/17
+          - 172.26.0.0/15
+          - 10.101.0.0/16
+          - 10.190.0.0/23
+          - 10.186.0.0/23
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "27017"
+            - "27020"
+      iaas-mysql-access:
+        priority: 900
+        direction: INGRESS
+        description: FW migration
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - iaas-mysql
+          sourceRanges:
+          - 10.57.0.0/17
+          - 10.109.0.0/16
+          - 172.26.0.0/15
+          - 10.110.0.0/16
+          - 10.101.0.0/16
+          - 10.190.0.0/23
+          - 10.186.0.0/23
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "3306"
+      ocp-kafka-access:
+        priority: 900
+        direction: INGRESS
+        description: FW migration
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-kafka
+          sourceRanges:
+          - 10.190.0.0/23
+          - 10.186.0.0/23
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "9092"
+            - "9094"
+            - "9100"
+      ocp-zookeeper-access:
+        priority: 900
+        direction: INGRESS
+        description: FW migration
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-zookeeper
+          sourceRanges:
+          - 10.190.0.0/23
+          - 10.186.0.0/23
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "2181"
+            - "2888"
+            - "3888"
+            - "9100"
+            - "9404"
+
+      # eta-finance-mysql:
+      #   priority: 900
+      #   direction: INGRESS
+      #   description: SCTASK0607363
+      #   disabled: false
+      #   logging: false
+      #   rule:
+      #     destinationRanges:
+      #     targetServiceAccounts:
+      #     targetTags:
+      #     - iaas-mysql
+      #     sourceRanges:
+      #     - 10.57.0.0/17
+      #     - 10.109.0.0/16
+      #     - 172.26.0.0/15
+      #     - 10.110.0.0/16
+      #     - 10.101.0.0/16
+      #     - 10.100.0.0/16
+      #     sourceServiceAccounts:
+      #     sourceTags:
+      #     allow:
+      #     - protocol: "tcp"
+      #       ports:
+      #       - "3306"

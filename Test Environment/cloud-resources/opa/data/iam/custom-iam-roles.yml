@@ -1,0 +1,3249 @@
+---
+customIam:
+  allowedRoles:
+    nonprd:
+      roles:
+        #Autoscale Group Admin Role
+        #Identified non-production permissions needed for IaaS Network to create  Autoscale Group via Terraform. This Role is to give IaaS Network that ability.
+      - Autoscale_Group_Admin_Role:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom BQ Saved Queries
+          #Created on: 2020-10-20
+      - ComputeInstanceReadOnly:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom ComputeInstanceReadOnly role for CCE Shop
+          #Created on: 2021-09-22
+      - CustomBQsavedqueries:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom BigQuery User
+          #Created on: 5/2/17 Based on: BigQuery User
+      - CustomBigQueryUser:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Billing Super Viewer
+          #Created on: 2017-10-24 Based on: Billing Account Administrator
+      - CustomBillingAccountAdministra:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Bucket Viewer
+          #Created on: 2017-12-06 Based on: storage.buckets.get and storage.buckets.list
+      - CustomBucketViewer:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Compute Instance Admin (v1)
+          #Created on: 2018-06-13 Based on: Compute Instance Admin (v1) no oslogin  or osadminlogin
+      - CustomComputeInstanceAdminv1:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Cloud Armor Admin
+          #|-  Created by Hamilton  Custom role for Cloud Armor Admin
+      - CustomComputeSecurityAdmin:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Instance Move
+          #Created on: 2020-02-07 Based on: Custom Instance Move
+      - CustomCustomInstanceMove:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Dataproc Worker
+          #Created on: 5/2/17 Based on: Dataproc Worker - No Storage/Monitoring  permissions
+      - CustomDataprocWorker:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Firewall Admin
+          #Created on: 2020-10-13 Based on: Compute Security Admin
+      - CustomDynatraceExtensionMetricsRole:
+          allowedForGroups: false
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Metrics for Dynatrace API
+          #Created on: 2021-09-24 Reference SCTASK1166987
+      - CustomFirewallAdmin:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom KT-VMO
+          #Created on: 2021-01-29
+      - CustomKTvmo:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Network Deletion
+          #Created on: 2019-04-03 Based on: Compute Network Admin
+      - CustomNetworkDeletion:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Network Intelligence Center User
+          #Created on: 2021-02-17 Based on: INC11366401
+      - CustomNetworkIntelligenceCenterUser:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Cloud Spanner Admin AddOn
+          #Created on: 2019-01-16
+      - CustomRole0:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Bigquery Create Views
+          #|-  REQ1198865  Venkatasubramanian Chanjeevaram  We need these custom role to be created in order for engineering L3 to be able to create views and tables in Google BigQuery.
+      - CustomRole101:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Bigquery L1
+          #Created on: 2020-05-29 Reference SCTASK1027224
+      - CustomRole103:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #IAM Viewer
+          #Look but dont touch IAM policy
+      - CustomRole106:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Policy L1
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole109:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Spanner Admin
+          #Created on: 2020-06-16 Reference SCTASK1031241
+      - CustomRole117:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Densify SA
+          #Created on: 2018-02-22
+      - CustomRole120:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Consul-PaaS-SA
+          #Created on: 2018-01-23
+      - CustomRole130:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom SSH Process
+          #Created on: 2018-06-24
+      - CustomRole141:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Bigtable Admin
+          #Created on: 2020-05-06 Reference SCTASK1031241
+      - CustomRole147:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Consul-Patching-GCP-API-SA
+          #Created on: 2018-01-12
+      - CustomRole150:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Topics Admin
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole151:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Redlock Storage Admin
+          #Created on: 2020-02-14 Based on RITM0877334, created by SK for Redlock.
+      - CustomRole180:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Storage Bucket Admin
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole186:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX LB Security L2
+          #Created on: 2020-06-15 Reference SCTASK1032487
+      - CustomRole198:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Governance Viewer
+          #Created on: 2019-02-01
+      - CustomRole208:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute OS Admin
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole217:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Static Internal IP
+          #Created on: 2018-02-20
+      - CustomRole221:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Network Instance L2
+          #Created on: 2020-05-01 Reference SCTASK1027222
+      - CustomRole223:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Storage Object L2
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole229:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Platfrom L3
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole231:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom SherlockReadLabels
+          #Created on: 2019-12-27 based on RITM0852862
+      - CustomRole232:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Prisma Cloud AppEngine Monitor
+          #Created on: 2020-03-04 Reference SCTASK0995315
+      - CustomRole233:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Storage L2
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole234:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Spanner L2
+          #Created on: 2020-05-29 Reference SCTASK1027224
+      - CustomRole236:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Redlock Viewer
+          #Created on: 2019-02-07
+      - CustomRole249:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Snapshot L3
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole255:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Storage Object L1
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole257:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Cloud Armor User
+          #|-  Created on: 2020-01-29  RITM0873658  To allow use for Cloud Armor devops teams need to be able to assign security policies to L7 targets . This roles allows the listing and use of polices only.
+      - CustomRole26:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Compute Engine SSH Key Master
+          #Can add SSH keys to Compute Engine Metadata. No other monkey business  allowed.
+      - CustomRole271:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Storage IAM Viewer
+          #Created on: 2020-07-16 SCTASK1043589
+      - CustomRole275:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX LB Instance L2
+          #Created on: 2020-06-15 Reference SCTASK1032487
+      - CustomRole279:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Subscription L2
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole286:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Platfrom L2
+          #Created on: 2020-05-01 Reference SCTASK1023331
+      - CustomRole301:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Resource Specific IAM
+          #Created on: 2018-09-25
+      - CustomRole312:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Policy L2
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole316:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom AppEngine Admin
+          #Created on: 2017-08-17
+      - CustomRole319:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Instance Set Tags
+          #Created on: 2019-07-22 - This role is to set tags on Instances as metadata  - RITM0762379
+      - CustomRole322:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Topics L3
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole325:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #SA-key-read-age
+          #Created on: 2018-01-17
+      - CustomRole327:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Application L2
+          #Created on: 2020-05-01 Reference SCTASK1023331
+      - CustomRole329:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Storage Object Admin
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole341:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Add users to subnets
+          #Created on: 2017-11-29
+      - CustomRole348:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Compute Engine Instances Set Label
+          #Allows setting label values on compute engine instances
+      - CustomRole351:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud LB L1
+          #Created on: 2020-06-15 Reference SCTASK1032487
+      - CustomRole353:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Security L3
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole356:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Compute Reservations Admin
+          #Created on: 2019-10-15 - by HH
+      - CustomRole359:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Security L1
+          #Created on: 2020-05-01 Reference SCTASK1023331
+      - CustomRole364:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Subscription L3
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole367:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Organization Viewer
+          #Created on: 2018-10-23
+      - CustomRole376:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #GCP-Cloud-Engineer-L3
+          #Created on: 2017-12-18 Based on: Add users to subnets, Custom Viewer,  Compute Network Viewer, Organization Role Administrator, Project IAM Admin, Security  Reviewer
+      - CustomRole383:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Snapshot L1
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole386:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #GKE XPN Network Role - AddOn
+          #Created on: 2019-01-23
+      - CustomRole389:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #GCP-DevOps-L2-PRD
+          #Created on: 2018-01-27 Based on: Compute Engine Power State Admin, Compute  Network Viewer, Compute Storage Admin, Compute Viewer, Logs Configuration Writer,  Logs Viewer, Monitoring Metric Writer, Monitoring Viewer, Storage Object Viewer,  Viewer
+      - CustomRole392:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom DialogFlow Product Admin
+          #Created on: 2020-04-09 REQ1294312
+      - CustomRole394:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Network VPN L1
+          #Created on: 2020-05-01 Reference SCTASK1027222
+      - CustomRole396:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Storage L1
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole402:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Storage Admin
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole406:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Temp Network-Security Admin Mobile Prd
+          #Created on: 5/5/17 Based on: Compute Network Admin, Compute Security  Admin
+      - CustomRole408:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Snapshots L2
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole412:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Bigquery L3
+          #Created on: 2020-05-06 Reference SCTASK1031241
+      - CustomRole417:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Network Viewer
+          #Created on: 2019-12-06 REQ1242037 View only VPC and Subnets
+      - CustomRole418:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Topics L1
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole419:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Configurator L3
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole421:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Prisma Remediation
+          #Created on: 2020-05-05
+      - CustomRole423:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom compute.networks.create
+          #Created on: 2019-01-03
+      - CustomRole429:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Vault Authenticator
+          #Created on: 2018-08-23
+      - CustomRole430:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX LB Instance L1
+          #Created on: 2020-06-15 Reference SCTASK1032487
+      - CustomRole437:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Snapshot L2
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole438:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Subscription L1
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole44:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Network L1
+          #Created on: 2020-05-01 Reference SCTASK1027222
+      - CustomRole454:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Create Static External IP
+          #Created on: 2018-02-20
+      - CustomRole458:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom PubSub Editor
+          #Created on: 2020-03-04 Reference SCTASK0993418
+      - CustomRole465:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Storage Object L3
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole49:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Spanner L3
+          #Created on: 2020-06-15 Reference SCTASK1031241
+      - CustomRole512:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #OpenShift Cluster Builder
+          #Used to create OpenShift Clusters an associated service accounts
+      - CustomRole520:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Compute Engine List Instances
+          #Created on: 2017-07-18
+      - CustomRole542:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Instance L2
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole55:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom BigQuery Data Owner
+          #|-  REQ1198865  Venkatasubramanian Chanjeevaram  We need these custom role to be created in order for engineering admins to be able to create datasets in Google BigQuery.
+      - CustomRole570:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Application L3
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole572:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud LB L2
+          #Created on: 2020-06-15 Reference SCTASK1032487
+      - CustomRole574:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Spanner L1
+          #Created on: 2020-05-29 Reference SCTASK1027224
+      - CustomRole582:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom OAuth Client
+          #Created on: 2018-09-21
+      - CustomRole584:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Configurator L2
+          #Created on: 2020-05-01 Reference SCTASK1023331
+      - CustomRole589:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Compute Global Operations List
+          #Compute Global Operations Monitor
+      - CustomRole593:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Storage Bucket L1
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole594:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Platfrom L1
+          #Created on: 2020-05-01 Reference SCTASK1023331
+      - CustomRole60:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Application Admin
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole600:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Bigtable L1
+          #Created on: 2020-05-29 Reference SCTASK1027224
+      - CustomRole601:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #custom bigquery transfer update
+          #Created on: 2020-09-22 SCTASK1063832
+      - CustomRole608:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute OS L1
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole613:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Network Security L1
+          #Created on: 2020-05-01 Reference SCTASK1027222
+      - CustomRole617:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Projects List
+          #Created on: 2018-10-01
+      - CustomRole631:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Bucket List
+          #Created on: 2017-09-25
+      - CustomRole634:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Bigquery L2
+          #Created on: 2020-05-29 Reference SCTASK1027224
+      - CustomRole635:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Application L1
+          #Created on: 2020-05-01 Reference SCTASK1023331
+      - CustomRole636:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Network Instance L1
+          #Created on: 2020-05-01 Reference SCTASK1027222
+      - CustomRole655:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Firebase Admin
+          #Created on: 2018-10-11
+      - CustomRole664:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Set Private IP Google Access
+          #|-  Created on: 2020-02-17  RITM0880119
+      - CustomRole667:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Snapshots L1
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole671:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Compute Disks Set Labels
+          #Created under INC8006178
+      - CustomRole675:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Storage Object List
+          #Created on: 2020-04-07
+      - CustomRole679:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Compute Network Viewer
+          #Created on: 2018-06-19 Based on: Compute network viewer
+      - CustomRole681:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #GCP-DevOps-L2-LLE
+          #Created on: 2018-01-27 Based on: LB Admin, Compute Image User, Compute  Instance Admin (v1), Compute Network User, Compute Storage Admin, Logs Viewer, Monitoring  Viewer, Private Logs Viewer, Storage Object Viewer, Viewer
+      - CustomRole686:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Consul-PaaS-Patching-SA
+          #Created on: 2018-01-12
+      - CustomRole703:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Instance Admin
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole706:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute OS L3
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole710:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Compute Snapshots
+          #Created on: 2019-12-04 Reference - SCTASK0920970
+      - CustomRole716:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Storage Bucket Get IAM Policy
+          #Created on: 2018-03-19
+      - CustomRole717:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #CustomBigQueryJobCancel
+          #|-  INC7616682  Sachin Amarnath  DDH/BDA
+      - CustomRole723:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Platfrom Admin
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole729:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Spanner Database Viewer
+          #Created on: 2019-07-22 This is to grant access to view table and index  definitions. RITM0767324
+      - CustomRole737:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Subscription Admin
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole741:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Project Billing Viewer
+          #Created on: 2020-08-27
+      - CustomRole748:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Security Reviewer
+          #Created on: 2020-12-08 : Ref. : INC11092938
+      - CustomRole750:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Compute Subnetwork Get/List
+          #Used to list subnetworks in a given project
+      - CustomRole757:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Configurator L1
+          #Created on: 2020-05-01 Reference SCTASK1023331
+      - CustomRole762:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #CustomDataprocEditor
+          #Created on: 2019-12-03. Reference - SCTASK0947197
+      - CustomRole774:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Configurator Admin
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole779:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #CustomRole786
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole786:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Project Create Delete
+          #Created on: 2018-02-16
+      - CustomRole791:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX LB Security L1
+          #Created on: 2020-06-15 Reference SCTASK1032487
+      - CustomRole800:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Storage Bucket L2
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole81:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Security Admin
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole815:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Bigtable L2
+          #Created on: 2020-05-29 Reference SCTASK1027224
+      - CustomRole817:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute OS L2
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole821:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Network Instance L3
+          #Created on: 2020-06-12 Reference SCTASK1032485
+      - CustomRole831:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Densify Expanded SA
+          #Created on: 2018-02-26 Based on: Compute Viewer, Monitoring Viewer
+      - CustomRole837:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Bigtable L3
+          #Created on: 2020-05-06 Reference SCTASK1031241
+      - CustomRole844:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Topics L2
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole853:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Policy L3
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole855:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Policy Admin
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole878:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Cloud Scheduler Admin AddOn
+          #Created on: 2019-01-16
+      - CustomRole881:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Snapshot Admin
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole883:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Project IAM Admin
+          #Created on: 2020-05-27 Reference INC10161363
+      - CustomRole886:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #GCP-DevOps-L2-HLE
+          #Created on: 2018-01-27 Based on: Compute Image User, Compute Instance  Admin (v1), Compute Network User, Compute Storage Admin, Logs Viewer, Monitoring  Viewer, Storage Object Viewer, Viewer
+      - CustomRole891:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Storage Bucket L3
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole894:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Committed Use Discounts User
+          #Created on: 2018-02-01
+      - CustomRole900:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Instance L3
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole906:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Bigquery Admin
+          #Created on: 2020-05-06 Reference SCTASK1031241
+      - CustomRole908:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom FCM
+          #Created on: 2019-06-18
+      - CustomRole914:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Instance L1
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole916:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom BigQuery Query Scheduler
+          #Created on: 2019-12-20 REQ1248237
+      - CustomRole919:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Dialogflow Intents
+          #Created on: 2020-04-08 REQ1293355
+      - CustomRole92:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Snapshots L3
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole923:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Security L2
+          #Created on: 2020-05-01 Reference SCTASK1023331
+      - CustomRole945:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Network Instance Admin
+          #Created on: 2020-06-12 Reference SCTASK1032485
+      - CustomRole947:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Storage L3
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole954:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #CustomBigQueryJobViewer
+          #|-  INC7616682  Sachin Amarnath  BDA/DDH
+      - CustomRole960:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Snapshots Admin
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole976:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Dataflow Worker SecA
+          #Created on: 2019-04-01
+      - CustomRole977:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Compute Viewer
+          #Created on: 2020-02-27 Reference to RITM0888008
+      - CustomRole989:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Viewer
+          #Created on: 2017-07-11 Based on: Viewer
+      - CustomViewer:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Viewer
+          #Created on: 2017-12-05 Based on: Viewer no storage.object.list
+      - CustomViewer486:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Jenkins-kos-CICD-Autoscale-Test
+          #Created on: 2017-11-29
+      - Jenkins_kos_CICD_Autoscale:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Storage Object Read Write Delete
+          #Created on: 2017-07-10 Based on: Storage Object Admin
+      - StorageObjectReadWriteDelete:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Cloud SQL Private IP
+          #Created on: 2021-01-07 - Required by DBaaS team to create Cloud SQL  databases using Private IP
+      - cloudSql.privateIP:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Compute Engine Power State Admin
+          #Start and stop Compute Engine instances
+      - compute.engine.power.state.adm:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #GCE-Set-Instance-MetaData
+          #Created on: 2017-07-24
+      - gceSetInstanceMetaData:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #getSerialPortOutput
+          #compute.instances.getSerialPortOutput
+      - getSerialPortOutput:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #GKE XPN Network Role
+          #Created on: 2018-11-01 - This is a custom role to allow GKE rights to  create Alias IP Ranges at the XPN Host Level. This is a role to be given temporarily  to the user who is creating GKE.
+      - gke_xpn_network_role:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #iaas-capacity-mgmt
+          #Created on: 2018-01-11.  This role is to give permissions to poll and  update quotas.
+      - iaas_capacity_mgmt:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #iaas-xpn-engineer
+          #Created on: 2018-01-11. This role is to allow engineers to add and modify  XPN resources. No delete permissions
+      - iaas_xpn_engineer:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Instance Metadata Read Only
+          #Used by Koudification/Unix L2 to query Instance Metadata
+      - instanceMetadataReadOnly:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Pub/Sub Admin Kohls
+          #Created on: 4/25/17 Based on: Pub/Sub Admin
+      - kolhs.pubsub.admin:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #LB Admin
+          #Allow members to admin load balancer functions without having to give  complete network admin permissions
+      - lbadmin:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+    prd:
+      roles:
+        #Autoscale Group Admin Role
+        #Identified non-production permissions needed for IaaS Network to create  Autoscale Group via Terraform. This Role is to give IaaS Network that ability.
+      - Autoscale_Group_Admin_Role:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom BQ Saved Queries
+          #Created on: 2020-10-20
+      - ComputeInstanceReadOnly:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom ComputeInstanceReadOnly role for CCE Shop
+          #Created on: 2021-09-22
+      - CustomBQsavedqueries:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom BigQuery User
+          #Created on: 5/2/17 Based on: BigQuery User
+      - CustomBigQueryUser:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Billing Super Viewer
+          #Created on: 2017-10-24 Based on: Billing Account Administrator
+      - CustomBillingAccountAdministra:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Bucket Viewer
+          #Created on: 2017-12-06 Based on: storage.buckets.get and storage.buckets.list
+      - CustomBucketViewer:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Compute Instance Admin (v1)
+          #Created on: 2018-06-13 Based on: Compute Instance Admin (v1) no oslogin  or osadminlogin
+      - CustomComputeInstanceAdminv1:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Cloud Armor Admin
+          #|-  Created by Hamilton  Custom role for Cloud Armor Admin
+      - CustomComputeSecurityAdmin:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Instance Move
+          #Created on: 2020-02-07 Based on: Custom Instance Move
+      - CustomCustomInstanceMove:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Dataproc Worker
+          #Created on: 5/2/17 Based on: Dataproc Worker - No Storage/Monitoring  permissions
+      - CustomDataprocWorker:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Firewall Admin
+          #Created on: 2020-10-13 Based on: Compute Security Admin
+      - CustomFirewallAdmin:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom KT-VMO
+          #Created on: 2021-01-29
+      - CustomKTvmo:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Network Deletion
+          #Created on: 2019-04-03 Based on: Compute Network Admin
+      - CustomNetworkDeletion:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Network Intelligence Center User
+          #Created on: 2021-02-17 Based on: INC11366401
+      - CustomNetworkIntelligenceCenterUser:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Cloud Spanner Admin AddOn
+          #Created on: 2019-01-16
+      - CustomRole0:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Bigquery Create Views
+          #|-  REQ1198865  Venkatasubramanian Chanjeevaram  We need these custom role to be created in order for engineering L3 to be able to create views and tables in Google BigQuery.
+      - CustomRole101:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Bigquery L1
+          #Created on: 2020-05-29 Reference SCTASK1027224
+      - CustomRole103:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #IAM Viewer
+          #Look but dont touch IAM policy
+      - CustomRole106:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Policy L1
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole109:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Spanner Admin
+          #Created on: 2020-06-16 Reference SCTASK1031241
+      - CustomRole117:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Densify SA
+          #Created on: 2018-02-22
+      - CustomRole120:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Consul-PaaS-SA
+          #Created on: 2018-01-23
+      - CustomRole130:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom SSH Process
+          #Created on: 2018-06-24
+      - CustomRole141:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Bigtable Admin
+          #Created on: 2020-05-06 Reference SCTASK1031241
+      - CustomRole147:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Consul-Patching-GCP-API-SA
+          #Created on: 2018-01-12
+      - CustomRole150:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Topics Admin
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole151:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Redlock Storage Admin
+          #Created on: 2020-02-14 Based on RITM0877334, created by SK for Redlock.
+      - CustomRole180:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Storage Bucket Admin
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole186:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX LB Security L2
+          #Created on: 2020-06-15 Reference SCTASK1032487
+      - CustomRole198:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Governance Viewer
+          #Created on: 2019-02-01
+      - CustomRole208:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute OS Admin
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole217:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Static Internal IP
+          #Created on: 2018-02-20
+      - CustomRole221:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Network Instance L2
+          #Created on: 2020-05-01 Reference SCTASK1027222
+      - CustomRole223:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Storage Object L2
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole229:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Platfrom L3
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole231:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom SherlockReadLabels
+          #Created on: 2019-12-27 based on RITM0852862
+      - CustomRole232:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Prisma Cloud AppEngine Monitor
+          #Created on: 2020-03-04 Reference SCTASK0995315
+      - CustomRole233:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Storage L2
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole234:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Spanner L2
+          #Created on: 2020-05-29 Reference SCTASK1027224
+      - CustomRole236:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Redlock Viewer
+          #Created on: 2019-02-07
+      - CustomRole249:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Snapshot L3
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole255:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Storage Object L1
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole257:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Cloud Armor User
+          #|-  Created on: 2020-01-29  RITM0873658  To allow use for Cloud Armor devops teams need to be able to assign security policies to L7 targets . This roles allows the listing and use of polices only.
+      - CustomRole26:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Compute Engine SSH Key Master
+          #Can add SSH keys to Compute Engine Metadata. No other monkey business  allowed.
+      - CustomRole271:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Storage IAM Viewer
+          #Created on: 2020-07-16 SCTASK1043589
+      - CustomRole275:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX LB Instance L2
+          #Created on: 2020-06-15 Reference SCTASK1032487
+      - CustomRole279:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Subscription L2
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole286:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Platfrom L2
+          #Created on: 2020-05-01 Reference SCTASK1023331
+      - CustomRole301:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Resource Specific IAM
+          #Created on: 2018-09-25
+      - CustomRole312:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Policy L2
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole316:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom AppEngine Admin
+          #Created on: 2017-08-17
+      - CustomRole319:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Instance Set Tags
+          #Created on: 2019-07-22 - This role is to set tags on Instances as metadata  - RITM0762379
+      - CustomRole322:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Topics L3
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole325:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #SA-key-read-age
+          #Created on: 2018-01-17
+      - CustomRole327:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Application L2
+          #Created on: 2020-05-01 Reference SCTASK1023331
+      - CustomRole329:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Storage Object Admin
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole341:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Add users to subnets
+          #Created on: 2017-11-29
+      - CustomRole348:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Compute Engine Instances Set Label
+          #Allows setting label values on compute engine instances
+      - CustomRole351:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud LB L1
+          #Created on: 2020-06-15 Reference SCTASK1032487
+      - CustomRole353:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Security L3
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole356:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Compute Reservations Admin
+          #Created on: 2019-10-15 - by HH
+      - CustomRole359:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Security L1
+          #Created on: 2020-05-01 Reference SCTASK1023331
+      - CustomRole364:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Subscription L3
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole367:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Organization Viewer
+          #Created on: 2018-10-23
+      - CustomRole376:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #GCP-Cloud-Engineer-L3
+          #Created on: 2017-12-18 Based on: Add users to subnets, Custom Viewer,  Compute Network Viewer, Organization Role Administrator, Project IAM Admin, Security  Reviewer
+      - CustomRole383:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Snapshot L1
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole386:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #GKE XPN Network Role - AddOn
+          #Created on: 2019-01-23
+      - CustomRole389:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #GCP-DevOps-L2-PRD
+          #Created on: 2018-01-27 Based on: Compute Engine Power State Admin, Compute  Network Viewer, Compute Storage Admin, Compute Viewer, Logs Configuration Writer,  Logs Viewer, Monitoring Metric Writer, Monitoring Viewer, Storage Object Viewer,  Viewer
+      - CustomRole392:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom DialogFlow Product Admin
+          #Created on: 2020-04-09 REQ1294312
+      - CustomRole394:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Network VPN L1
+          #Created on: 2020-05-01 Reference SCTASK1027222
+      - CustomRole396:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Storage L1
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole402:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Storage Admin
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole406:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Temp Network-Security Admin Mobile Prd
+          #Created on: 5/5/17 Based on: Compute Network Admin, Compute Security  Admin
+      - CustomRole408:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Snapshots L2
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole412:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Bigquery L3
+          #Created on: 2020-05-06 Reference SCTASK1031241
+      - CustomRole417:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Network Viewer
+          #Created on: 2019-12-06 REQ1242037 View only VPC and Subnets
+      - CustomRole418:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Topics L1
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole419:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Configurator L3
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole421:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Prisma Remediation
+          #Created on: 2020-05-05
+      - CustomRole423:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom compute.networks.create
+          #Created on: 2019-01-03
+      - CustomRole429:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Vault Authenticator
+          #Created on: 2018-08-23
+      - CustomRole430:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX LB Instance L1
+          #Created on: 2020-06-15 Reference SCTASK1032487
+      - CustomRole437:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Snapshot L2
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole438:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Subscription L1
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole44:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Network L1
+          #Created on: 2020-05-01 Reference SCTASK1027222
+      - CustomRole454:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Create Static External IP
+          #Created on: 2018-02-20
+      - CustomRole458:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom PubSub Editor
+          #Created on: 2020-03-04 Reference SCTASK0993418
+      - CustomRole465:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Storage Object L3
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole49:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Spanner L3
+          #Created on: 2020-06-15 Reference SCTASK1031241
+      - CustomRole512:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #OpenShift Cluster Builder
+          #Used to create OpenShift Clusters an associated service accounts
+      - CustomRole520:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Compute Engine List Instances
+          #Created on: 2017-07-18
+      - CustomRole542:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Instance L2
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole55:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom BigQuery Data Owner
+          #|-  REQ1198865  Venkatasubramanian Chanjeevaram  We need these custom role to be created in order for engineering admins to be able to create datasets in Google BigQuery.
+      - CustomRole570:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Application L3
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole572:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud LB L2
+          #Created on: 2020-06-15 Reference SCTASK1032487
+      - CustomRole574:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Spanner L1
+          #Created on: 2020-05-29 Reference SCTASK1027224
+      - CustomRole582:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom OAuth Client
+          #Created on: 2018-09-21
+      - CustomRole584:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Configurator L2
+          #Created on: 2020-05-01 Reference SCTASK1023331
+      - CustomRole589:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Compute Global Operations List
+          #Compute Global Operations Monitor
+      - CustomRole593:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Storage Bucket L1
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole594:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Platfrom L1
+          #Created on: 2020-05-01 Reference SCTASK1023331
+      - CustomRole60:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Application Admin
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole600:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Bigtable L1
+          #Created on: 2020-05-29 Reference SCTASK1027224
+      - CustomRole601:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #custom bigquery transfer update
+          #Created on: 2020-09-22 SCTASK1063832
+      - CustomRole608:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute OS L1
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole613:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Network Security L1
+          #Created on: 2020-05-01 Reference SCTASK1027222
+      - CustomRole617:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Projects List
+          #Created on: 2018-10-01
+      - CustomRole631:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Bucket List
+          #Created on: 2017-09-25
+      - CustomRole634:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Bigquery L2
+          #Created on: 2020-05-29 Reference SCTASK1027224
+      - CustomRole635:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Application L1
+          #Created on: 2020-05-01 Reference SCTASK1023331
+      - CustomRole636:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Network Instance L1
+          #Created on: 2020-05-01 Reference SCTASK1027222
+      - CustomRole655:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Firebase Admin
+          #Created on: 2018-10-11
+      - CustomRole664:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Set Private IP Google Access
+          #|-  Created on: 2020-02-17  RITM0880119
+      - CustomRole667:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Snapshots L1
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole671:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Compute Disks Set Labels
+          #Created under INC8006178
+      - CustomRole675:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Storage Object List
+          #Created on: 2020-04-07
+      - CustomRole679:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Compute Network Viewer
+          #Created on: 2018-06-19 Based on: Compute network viewer
+      - CustomRole681:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #GCP-DevOps-L2-LLE
+          #Created on: 2018-01-27 Based on: LB Admin, Compute Image User, Compute  Instance Admin (v1), Compute Network User, Compute Storage Admin, Logs Viewer, Monitoring  Viewer, Private Logs Viewer, Storage Object Viewer, Viewer
+      - CustomRole686:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Consul-PaaS-Patching-SA
+          #Created on: 2018-01-12
+      - CustomRole703:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Instance Admin
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole706:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute OS L3
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole710:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Compute Snapshots
+          #Created on: 2019-12-04 Reference - SCTASK0920970
+      - CustomRole716:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Storage Bucket Get IAM Policy
+          #Created on: 2018-03-19
+      - CustomRole717:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #CustomBigQueryJobCancel
+          #|-  INC7616682  Sachin Amarnath  DDH/BDA
+      - CustomRole723:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Platfrom Admin
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole729:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Spanner Database Viewer
+          #Created on: 2019-07-22 This is to grant access to view table and index  definitions. RITM0767324
+      - CustomRole737:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Subscription Admin
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole741:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Project Billing Viewer
+          #Created on: 2020-08-27
+      - CustomRole748:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Security Reviewer
+          #Created on: 2020-12-08 : Ref. : INC11092938
+      - CustomRole750:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Compute Subnetwork Get/List
+          #Used to list subnetworks in a given project
+      - CustomRole757:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Configurator L1
+          #Created on: 2020-05-01 Reference SCTASK1023331
+      - CustomRole762:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #CustomDataprocEditor
+          #Created on: 2019-12-03. Reference - SCTASK0947197
+      - CustomRole774:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Configurator Admin
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole779:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #CustomRole786
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole786:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Project Create Delete
+          #Created on: 2018-02-16
+      - CustomRole791:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX LB Security L1
+          #Created on: 2020-06-15 Reference SCTASK1032487
+      - CustomRole800:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Storage Bucket L2
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole81:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Security Admin
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole815:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Bigtable L2
+          #Created on: 2020-05-29 Reference SCTASK1027224
+      - CustomRole817:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute OS L2
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole821:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Network Instance L3
+          #Created on: 2020-06-12 Reference SCTASK1032485
+      - CustomRole831:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Densify Expanded SA
+          #Created on: 2018-02-26 Based on: Compute Viewer, Monitoring Viewer
+      - CustomRole837:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Bigtable L3
+          #Created on: 2020-05-06 Reference SCTASK1031241
+      - CustomRole844:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Topics L2
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole853:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Policy L3
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole855:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Policy Admin
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole878:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Cloud Scheduler Admin AddOn
+          #Created on: 2019-01-16
+      - CustomRole881:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Snapshot Admin
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole883:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Project IAM Admin
+          #Created on: 2020-05-27 Reference INC10161363
+      - CustomRole886:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #GCP-DevOps-L2-HLE
+          #Created on: 2018-01-27 Based on: Compute Image User, Compute Instance  Admin (v1), Compute Network User, Compute Storage Admin, Logs Viewer, Monitoring  Viewer, Storage Object Viewer, Viewer
+      - CustomRole891:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Storage Bucket L3
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole894:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Committed Use Discounts User
+          #Created on: 2018-02-01
+      - CustomRole900:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Instance L3
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole906:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Bigquery Admin
+          #Created on: 2020-05-06 Reference SCTASK1031241
+      - CustomRole908:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom FCM
+          #Created on: 2019-06-18
+      - CustomRole914:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Instance L1
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole916:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom BigQuery Query Scheduler
+          #Created on: 2019-12-20 REQ1248237
+      - CustomRole919:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Dialogflow Intents
+          #Created on: 2020-04-08 REQ1293355
+      - CustomRole92:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Snapshots L3
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole923:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Security L2
+          #Created on: 2020-05-01 Reference SCTASK1023331
+      - CustomRole945:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Network Instance Admin
+          #Created on: 2020-06-12 Reference SCTASK1032485
+      - CustomRole947:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Storage L3
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole954:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #CustomBigQueryJobViewer
+          #|-  INC7616682  Sachin Amarnath  BDA/DDH
+      - CustomRole960:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Snapshots Admin
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole976:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Dataflow Worker SecA
+          #Created on: 2019-04-01
+      - CustomRole977:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Compute Viewer
+          #Created on: 2020-02-27 Reference to RITM0888008
+      - CustomRole989:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Viewer
+          #Created on: 2017-07-11 Based on: Viewer
+      - CustomViewer:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Viewer
+          #Created on: 2017-12-05 Based on: Viewer no storage.object.list
+      - CustomViewer486:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Jenkins-kos-CICD-Autoscale-Test
+          #Created on: 2017-11-29
+      - Jenkins_kos_CICD_Autoscale:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Storage Object Read Write Delete
+          #Created on: 2017-07-10 Based on: Storage Object Admin
+      - StorageObjectReadWriteDelete:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Cloud SQL Private IP
+          #Created on: 2021-01-07 - Required by DBaaS team to create Cloud SQL  databases using Private IP
+      - cloudSql.privateIP:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Compute Engine Power State Admin
+          #Start and stop Compute Engine instances
+      - compute.engine.power.state.adm:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #GCE-Set-Instance-MetaData
+          #Created on: 2017-07-24
+      - gceSetInstanceMetaData:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #getSerialPortOutput
+          #compute.instances.getSerialPortOutput
+      - getSerialPortOutput:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #GKE XPN Network Role
+          #Created on: 2018-11-01 - This is a custom role to allow GKE rights to  create Alias IP Ranges at the XPN Host Level. This is a role to be given temporarily  to the user who is creating GKE.
+      - gke_xpn_network_role:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #iaas-capacity-mgmt
+          #Created on: 2018-01-11.  This role is to give permissions to poll and  update quotas.
+      - iaas_capacity_mgmt:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #iaas-xpn-engineer
+          #Created on: 2018-01-11. This role is to allow engineers to add and modify  XPN resources. No delete permissions
+      - iaas_xpn_engineer:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Instance Metadata Read Only
+          #Used by Koudification/Unix L2 to query Instance Metadata
+      - instanceMetadataReadOnly:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Pub/Sub Admin Kohls
+          #Created on: 4/25/17 Based on: Pub/Sub Admin
+      - kolhs.pubsub.admin:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #LB Admin
+          #Allow members to admin load balancer functions without having to give  complete network admin permissions
+      - lbadmin:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+    sbx:
+      roles:
+        #Autoscale Group Admin Role
+        #Identified non-production permissions needed for IaaS Network to create  Autoscale Group via Terraform. This Role is to give IaaS Network that ability.
+      - Autoscale_Group_Admin_Role:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom BQ Saved Queries
+          #Created on: 2020-10-20
+      - CustomBQsavedqueries:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom BigQuery User
+          #Created on: 5/2/17 Based on: BigQuery User
+      - CustomBigQueryUser:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Billing Super Viewer
+          #Created on: 2017-10-24 Based on: Billing Account Administrator
+      - CustomBillingAccountAdministra:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Bucket Viewer
+          #Created on: 2017-12-06 Based on: storage.buckets.get and storage.buckets.list
+      - CustomBucketViewer:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Compute Instance Admin (v1)
+          #Created on: 2018-06-13 Based on: Compute Instance Admin (v1) no oslogin  or osadminlogin
+      - CustomComputeInstanceAdminv1:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Cloud Armor Admin
+          #|-  Created by Hamilton  Custom role for Cloud Armor Admin
+      - CustomComputeSecurityAdmin:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Instance Move
+          #Created on: 2020-02-07 Based on: Custom Instance Move
+      - CustomCustomInstanceMove:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Dataproc Worker
+          #Created on: 5/2/17 Based on: Dataproc Worker - No Storage/Monitoring  permissions
+      - CustomDataprocWorker:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Firewall Admin
+          #Created on: 2020-10-13 Based on: Compute Security Admin
+      - CustomFirewallAdmin:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom KT-VMO
+          #Created on: 2021-01-29
+      - CustomKTvmo:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Network Deletion
+          #Created on: 2019-04-03 Based on: Compute Network Admin
+      - CustomNetworkDeletion:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Network Intelligence Center User
+          #Created on: 2021-02-17 Based on: INC11366401
+      - CustomNetworkIntelligenceCenterUser:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Cloud Spanner Admin AddOn
+          #Created on: 2019-01-16
+      - CustomRole0:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Bigquery Create Views
+          #|-  REQ1198865  Venkatasubramanian Chanjeevaram  We need these custom role to be created in order for engineering L3 to be able to create views and tables in Google BigQuery.
+      - CustomRole101:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Bigquery L1
+          #Created on: 2020-05-29 Reference SCTASK1027224
+      - CustomRole103:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #IAM Viewer
+          #Look but dont touch IAM policy
+      - CustomRole106:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Policy L1
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole109:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Spanner Admin
+          #Created on: 2020-06-16 Reference SCTASK1031241
+      - CustomRole117:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Densify SA
+          #Created on: 2018-02-22
+      - CustomRole120:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Consul-PaaS-SA
+          #Created on: 2018-01-23
+      - CustomRole130:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom SSH Process
+          #Created on: 2018-06-24
+      - CustomRole141:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Bigtable Admin
+          #Created on: 2020-05-06 Reference SCTASK1031241
+      - CustomRole147:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Consul-Patching-GCP-API-SA
+          #Created on: 2018-01-12
+      - CustomRole150:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Topics Admin
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole151:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Redlock Storage Admin
+          #Created on: 2020-02-14 Based on RITM0877334, created by SK for Redlock.
+      - CustomRole180:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Storage Bucket Admin
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole186:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX LB Security L2
+          #Created on: 2020-06-15 Reference SCTASK1032487
+      - CustomRole198:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Governance Viewer
+          #Created on: 2019-02-01
+      - CustomRole208:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute OS Admin
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole217:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Static Internal IP
+          #Created on: 2018-02-20
+      - CustomRole221:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Network Instance L2
+          #Created on: 2020-05-01 Reference SCTASK1027222
+      - CustomRole223:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Storage Object L2
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole229:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Platfrom L3
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole231:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom SherlockReadLabels
+          #Created on: 2019-12-27 based on RITM0852862
+      - CustomRole232:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Prisma Cloud AppEngine Monitor
+          #Created on: 2020-03-04 Reference SCTASK0995315
+      - CustomRole233:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Storage L2
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole234:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Spanner L2
+          #Created on: 2020-05-29 Reference SCTASK1027224
+      - CustomRole236:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Redlock Viewer
+          #Created on: 2019-02-07
+      - CustomRole249:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Snapshot L3
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole255:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Storage Object L1
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole257:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Cloud Armor User
+          #|-  Created on: 2020-01-29  RITM0873658  To allow use for Cloud Armor devops teams need to be able to assign security policies to L7 targets . This roles allows the listing and use of polices only.
+      - CustomRole26:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Compute Engine SSH Key Master
+          #Can add SSH keys to Compute Engine Metadata. No other monkey business  allowed.
+      - CustomRole271:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Storage IAM Viewer
+          #Created on: 2020-07-16 SCTASK1043589
+      - CustomRole275:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX LB Instance L2
+          #Created on: 2020-06-15 Reference SCTASK1032487
+      - CustomRole279:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Subscription L2
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole286:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Platfrom L2
+          #Created on: 2020-05-01 Reference SCTASK1023331
+      - CustomRole301:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Resource Specific IAM
+          #Created on: 2018-09-25
+      - CustomRole312:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Policy L2
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole316:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom AppEngine Admin
+          #Created on: 2017-08-17
+      - CustomRole319:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Instance Set Tags
+          #Created on: 2019-07-22 - This role is to set tags on Instances as metadata  - RITM0762379
+      - CustomRole322:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Topics L3
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole325:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #SA-key-read-age
+          #Created on: 2018-01-17
+      - CustomRole327:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Application L2
+          #Created on: 2020-05-01 Reference SCTASK1023331
+      - CustomRole329:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Storage Object Admin
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole341:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Add users to subnets
+          #Created on: 2017-11-29
+      - CustomRole348:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Compute Engine Instances Set Label
+          #Allows setting label values on compute engine instances
+      - CustomRole351:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud LB L1
+          #Created on: 2020-06-15 Reference SCTASK1032487
+      - CustomRole353:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Security L3
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole356:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Compute Reservations Admin
+          #Created on: 2019-10-15 - by HH
+      - CustomRole359:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Security L1
+          #Created on: 2020-05-01 Reference SCTASK1023331
+      - CustomRole364:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Subscription L3
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole367:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Organization Viewer
+          #Created on: 2018-10-23
+      - CustomRole376:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #GCP-Cloud-Engineer-L3
+          #Created on: 2017-12-18 Based on: Add users to subnets, Custom Viewer,  Compute Network Viewer, Organization Role Administrator, Project IAM Admin, Security  Reviewer
+      - CustomRole383:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Snapshot L1
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole386:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #GKE XPN Network Role - AddOn
+          #Created on: 2019-01-23
+      - CustomRole389:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #GCP-DevOps-L2-PRD
+          #Created on: 2018-01-27 Based on: Compute Engine Power State Admin, Compute  Network Viewer, Compute Storage Admin, Compute Viewer, Logs Configuration Writer,  Logs Viewer, Monitoring Metric Writer, Monitoring Viewer, Storage Object Viewer,  Viewer
+      - CustomRole392:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom DialogFlow Product Admin
+          #Created on: 2020-04-09 REQ1294312
+      - CustomRole394:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Network VPN L1
+          #Created on: 2020-05-01 Reference SCTASK1027222
+      - CustomRole396:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Storage L1
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole402:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Storage Admin
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole406:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Temp Network-Security Admin Mobile Prd
+          #Created on: 5/5/17 Based on: Compute Network Admin, Compute Security  Admin
+      - CustomRole408:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Snapshots L2
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole412:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Bigquery L3
+          #Created on: 2020-05-06 Reference SCTASK1031241
+      - CustomRole417:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Network Viewer
+          #Created on: 2019-12-06 REQ1242037 View only VPC and Subnets
+      - CustomRole418:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Topics L1
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole419:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Configurator L3
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole421:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Prisma Remediation
+          #Created on: 2020-05-05
+      - CustomRole423:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom compute.networks.create
+          #Created on: 2019-01-03
+      - CustomRole429:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Vault Authenticator
+          #Created on: 2018-08-23
+      - CustomRole430:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX LB Instance L1
+          #Created on: 2020-06-15 Reference SCTASK1032487
+      - CustomRole437:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Snapshot L2
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole438:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Subscription L1
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole44:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Network L1
+          #Created on: 2020-05-01 Reference SCTASK1027222
+      - CustomRole454:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Create Static External IP
+          #Created on: 2018-02-20
+      - CustomRole458:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom PubSub Editor
+          #Created on: 2020-03-04 Reference SCTASK0993418
+      - CustomRole465:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Storage Object L3
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole49:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Spanner L3
+          #Created on: 2020-06-15 Reference SCTASK1031241
+      - CustomRole512:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #OpenShift Cluster Builder
+          #Used to create OpenShift Clusters an associated service accounts
+      - CustomRole520:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Compute Engine List Instances
+          #Created on: 2017-07-18
+      - CustomRole542:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Instance L2
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole55:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom BigQuery Data Owner
+          #|-  REQ1198865  Venkatasubramanian Chanjeevaram  We need these custom role to be created in order for engineering admins to be able to create datasets in Google BigQuery.
+      - CustomRole570:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Application L3
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole572:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud LB L2
+          #Created on: 2020-06-15 Reference SCTASK1032487
+      - CustomRole574:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Spanner L1
+          #Created on: 2020-05-29 Reference SCTASK1027224
+      - CustomRole582:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom OAuth Client
+          #Created on: 2018-09-21
+      - CustomRole584:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Configurator L2
+          #Created on: 2020-05-01 Reference SCTASK1023331
+      - CustomRole589:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Compute Global Operations List
+          #Compute Global Operations Monitor
+      - CustomRole593:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Storage Bucket L1
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole594:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Platfrom L1
+          #Created on: 2020-05-01 Reference SCTASK1023331
+      - CustomRole60:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Application Admin
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole600:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Bigtable L1
+          #Created on: 2020-05-29 Reference SCTASK1027224
+      - CustomRole601:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #custom bigquery transfer update
+          #Created on: 2020-09-22 SCTASK1063832
+      - CustomRole608:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute OS L1
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole613:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Network Security L1
+          #Created on: 2020-05-01 Reference SCTASK1027222
+      - CustomRole617:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Projects List
+          #Created on: 2018-10-01
+      - CustomRole631:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Bucket List
+          #Created on: 2017-09-25
+      - CustomRole634:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Bigquery L2
+          #Created on: 2020-05-29 Reference SCTASK1027224
+      - CustomRole635:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Application L1
+          #Created on: 2020-05-01 Reference SCTASK1023331
+      - CustomRole636:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Network Instance L1
+          #Created on: 2020-05-01 Reference SCTASK1027222
+      - CustomRole655:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Firebase Admin
+          #Created on: 2018-10-11
+      - CustomRole664:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: true
+          #Custom Set Private IP Google Access
+          #|-  Created on: 2020-02-17  RITM0880119
+      - CustomRole667:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Snapshots L1
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole671:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Compute Disks Set Labels
+          #Created under INC8006178
+      - CustomRole675:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Storage Object List
+          #Created on: 2020-04-07
+      - CustomRole679:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Compute Network Viewer
+          #Created on: 2018-06-19 Based on: Compute network viewer
+      - CustomRole681:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #GCP-DevOps-L2-LLE
+          #Created on: 2018-01-27 Based on: LB Admin, Compute Image User, Compute  Instance Admin (v1), Compute Network User, Compute Storage Admin, Logs Viewer, Monitoring  Viewer, Private Logs Viewer, Storage Object Viewer, Viewer
+      - CustomRole686:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Consul-PaaS-Patching-SA
+          #Created on: 2018-01-12
+      - CustomRole703:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Instance Admin
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole706:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute OS L3
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole710:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Compute Snapshots
+          #Created on: 2019-12-04 Reference - SCTASK0920970
+      - CustomRole716:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Storage Bucket Get IAM Policy
+          #Created on: 2018-03-19
+      - CustomRole717:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #CustomBigQueryJobCancel
+          #|-  INC7616682  Sachin Amarnath  DDH/BDA
+      - CustomRole723:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Platfrom Admin
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole729:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Spanner Database Viewer
+          #Created on: 2019-07-22 This is to grant access to view table and index  definitions. RITM0767324
+      - CustomRole737:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Subscription Admin
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole741:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Project Billing Viewer
+          #Created on: 2020-08-27
+      - CustomRole748:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Security Reviewer
+          #Created on: 2020-12-08 : Ref. : INC11092938
+      - CustomRole750:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Compute Subnetwork Get/List
+          #Used to list subnetworks in a given project
+      - CustomRole757:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Configurator L1
+          #Created on: 2020-05-01 Reference SCTASK1023331
+      - CustomRole762:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #CustomDataprocEditor
+          #Created on: 2019-12-03. Reference - SCTASK0947197
+      - CustomRole774:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Configurator Admin
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole779:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #CustomRole786
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole786:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Project Create Delete
+          #Created on: 2018-02-16
+      - CustomRole791:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX LB Security L1
+          #Created on: 2020-06-15 Reference SCTASK1032487
+      - CustomRole800:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Storage Bucket L2
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole81:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Security Admin
+          #Created on: 2020-06-15 Reference SCTASK1032486
+      - CustomRole815:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Bigtable L2
+          #Created on: 2020-05-29 Reference SCTASK1027224
+      - CustomRole817:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute OS L2
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole821:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Network Instance L3
+          #Created on: 2020-06-12 Reference SCTASK1032485
+      - CustomRole831:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Densify Expanded SA
+          #Created on: 2018-02-26 Based on: Compute Viewer, Monitoring Viewer
+      - CustomRole837:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Bigtable L3
+          #Created on: 2020-05-06 Reference SCTASK1031241
+      - CustomRole844:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Topics L2
+          #Created on: 2020-05-29 Reference SCTASK1025808
+      - CustomRole853:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Policy L3
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole855:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Policy Admin
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole878:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Cloud Scheduler Admin AddOn
+          #Created on: 2019-01-16
+      - CustomRole881:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Snapshot Admin
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole883:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Project IAM Admin
+          #Created on: 2020-05-27 Reference INC10161363
+      - CustomRole886:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #GCP-DevOps-L2-HLE
+          #Created on: 2018-01-27 Based on: Compute Image User, Compute Instance  Admin (v1), Compute Network User, Compute Storage Admin, Logs Viewer, Monitoring  Viewer, Storage Object Viewer, Viewer
+      - CustomRole891:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Storage Bucket L3
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole894:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Committed Use Discounts User
+          #Created on: 2018-02-01
+      - CustomRole900:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Instance L3
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole906:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Cloud Bigquery Admin
+          #Created on: 2020-05-06 Reference SCTASK1031241
+      - CustomRole908:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom FCM
+          #Created on: 2019-06-18
+      - CustomRole914:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Instance L1
+          #Created on: 2020-05-29 Reference SCTASK1027229
+      - CustomRole916:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom BigQuery Query Scheduler
+          #Created on: 2019-12-20 REQ1248237
+      - CustomRole919:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Dialogflow Intents
+          #Created on: 2020-04-08 REQ1293355
+      - CustomRole92:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Snapshots L3
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole923:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX GKE Security L2
+          #Created on: 2020-05-01 Reference SCTASK1023331
+      - CustomRole945:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Network Instance Admin
+          #Created on: 2020-06-12 Reference SCTASK1032485
+      - CustomRole947:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX Compute Storage L3
+          #Created on: 2020-05-06 Reference SCTASK1031096
+      - CustomRole954:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #CustomBigQueryJobViewer
+          #|-  INC7616682  Sachin Amarnath  BDA/DDH
+      - CustomRole960:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom CX PubSub Snapshots Admin
+          #Created on: 2020-05-06 Reference SCTASK1031239
+      - CustomRole976:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Dataflow Worker SecA
+          #Created on: 2019-04-01
+      - CustomRole977:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Compute Viewer
+          #Created on: 2020-02-27 Reference to RITM0888008
+      - CustomRole989:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Viewer
+          #Created on: 2017-07-11 Based on: Viewer
+      - CustomViewer:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Viewer
+          #Created on: 2017-12-05 Based on: Viewer no storage.object.list
+      - CustomViewer486:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Jenkins-kos-CICD-Autoscale-Test
+          #Created on: 2017-11-29
+      - Jenkins_kos_CICD_Autoscale:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Storage Object Read Write Delete
+          #Created on: 2017-07-10 Based on: Storage Object Admin
+      - StorageObjectReadWriteDelete:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Cloud SQL Private IP
+          #Created on: 2021-01-07 - Required by DBaaS team to create Cloud SQL  databases using Private IP
+      - cloudSql.privateIP:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Custom Compute Engine Power State Admin
+          #Start and stop Compute Engine instances
+      - compute.engine.power.state.adm:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #GCE-Set-Instance-MetaData
+          #Created on: 2017-07-24
+      - gceSetInstanceMetaData:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #getSerialPortOutput
+          #compute.instances.getSerialPortOutput
+      - getSerialPortOutput:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #GKE XPN Network Role
+          #Created on: 2018-11-01 - This is a custom role to allow GKE rights to  create Alias IP Ranges at the XPN Host Level. This is a role to be given temporarily  to the user who is creating GKE.
+      - gke_xpn_network_role:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #iaas-capacity-mgmt
+          #Created on: 2018-01-11.  This role is to give permissions to poll and  update quotas.
+      - iaas_capacity_mgmt:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #iaas-xpn-engineer
+          #Created on: 2018-01-11. This role is to allow engineers to add and modify  XPN resources. No delete permissions
+      - iaas_xpn_engineer:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Instance Metadata Read Only
+          #Used by Koudification/Unix L2 to query Instance Metadata
+      - instanceMetadataReadOnly:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #Pub/Sub Admin Kohls
+          #Created on: 4/25/17 Based on: Pub/Sub Admin
+      - kolhs.pubsub.admin:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false
+          #LB Admin
+          #Allow members to admin load balancer functions without having to give  complete network admin permissions
+      - lbadmin:
+          allowedForGroups: true
+          allowedForServiceAccounts: true
+          allowedForUsers: false

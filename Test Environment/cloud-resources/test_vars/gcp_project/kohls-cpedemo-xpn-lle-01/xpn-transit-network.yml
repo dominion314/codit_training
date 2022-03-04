@@ -1,0 +1,6 @@
+---
+vpcs:
+  xpn-transit:
+
+    vpcName: xpn-transit
+    routingMode: GLOBAL

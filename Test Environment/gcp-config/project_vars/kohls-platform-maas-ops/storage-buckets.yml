@@ -1,0 +1,17 @@
+---
+storageBuckets:
+  kohls-platform-maas-ops-kafkaplatform:
+    location: US
+    versioningEnabled: false
+    labels:
+      technology: kafkaplatform
+    storageClass: MULTI_REGIONAL
+    lifecycleRule:
+    - action:
+        type: Delete
+      condition:
+        age: 30
+  kohls-platform-maas-ops-terraform-states:
+    location: US
+    versioningEnabled: false
+    storageClass: MULTI_REGIONAL

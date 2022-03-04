@@ -1,0 +1,9 @@
+shelllint:
+  stage: data-validation
+  image: registry.gitlab.com/pipeline-components/shellcheck:latest
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  needs: []
+  script:
+    - shellcheck --version
+    - for file in $(find . -name "*.sh") ; do shellcheck $file ; done

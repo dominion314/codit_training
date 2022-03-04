@@ -1,0 +1,89 @@
+---
+#allowed routes per VPC
+advertisedNetworks:
+  subnets:
+    cpe-nx-lle:
+      - 10.120.254.240/28
+      - 10.123.254.96/28
+      - 10.120.255.64/28
+      - 10.120.255.48/28
+      - 10.120.255.80/28
+      - 10.187.34.208/28
+      - 10.191.27.48/28
+    cpe-nx-prd:
+      - 10.121.254.48/28
+      - 10.122.254.64/28
+      - 10.121.254.112/28
+      - 10.121.254.128/26
+    intra-xpn-transit:
+      - 10.120.0.0/15 # central specific route
+      - 10.184.0.0/14 # central specific route
+      - 10.206.0.0/17 # central specific route
+      - 10.207.0.0/17 # central specific route
+      - 10.208.0.0/17 # central specific route
+      - 10.126.0.0/16 # central specific route
+      - 10.207.128.0/17 # central specific route
+      - 10.120.0.0/14 # gcp supernet
+      - 10.184.0.0/13 # gcp supernet
+      - 10.206.0.0/15 # gcp supernet
+      - 10.208.0.0/16 # gcp supernet
+      - 10.126.0.0/15 # gcp supernet
+      - 10.122.0.0/15 # east specific route
+      - 10.206.128.0/17 # east specific route
+      - 10.188.0.0/14 # east specific route
+      - 10.208.128.0/17 # east specific route
+      - 10.127.0.0/16 # east specific route
+      - 10.120.0.0/14 # gcp supernet
+      - 10.184.0.0/13 # gcp supernet
+      - 10.206.0.0/15 # gcp supernet
+      - 10.208.0.0/16 # gcp supernet
+      - 10.127.0.0/15 # gcp supernet
+      - 10.124.0.0/17 # gcp psa supernet
+      - 10.124.0.0/24 # platform lle central mysql psa
+      - 10.124.1.0/29 # platform lle east redis psa
+      - 10.124.1.8/29 # platform lle central redis psa
+      - 10.124.2.0/24 # platform lle east mysql psa
+      - 10.124.3.0/24 # platform lle central postgress psa
+      - 10.124.4.0/24 # platform lle east postgress psa
+      - 10.124.16.0/24 # central mysql psa
+      - 10.124.18.0/24 # central postgres psa
+      - 10.124.20.0/29 # central redis psa
+      - 10.124.17.0/24 # east mysql psa
+      - 10.124.19.0/24 # east postgres psa
+      - 10.124.20.8/29 # east mysql psa
+      - 10.187.33.48/29 # central platform lle proxy
+      - 10.191.27.32/28 # east platform lle proxy
+      - 10.185.26.160/28 # central platform proxy
+      - 10.189.9.208/28 # east platform proxy
+    platform-nx-lle:
+      - 10.187.20.0/22
+      - 10.187.20.0/24
+      - 10.124.0.0/20 # platform lle psa supernet
+      - 10.124.0.0/24 # platform lle central mysql psa
+      - 10.124.1.0/29 # platform lle east redis psa
+      - 10.124.1.8/29 # platform lle central redis psa
+      - 10.124.2.0/24 # platform lle east mysql psa
+      - 10.124.3.0/24 # platform lle central postgress psa
+      - 10.124.4.0/24 # platform lle east postgress psa
+      - 10.187.33.48/29 # central lle proxy
+      - 10.191.27.32/28 # east lle proxy
+      - 10.187.34.208/28
+      - 10.191.27.48/28
+    platform-nx-prd:
+      - 10.124.16.0/20 # platform prd psa supernet
+      - 10.124.16.0/24 # central mysql psa
+      - 10.124.17.0/24 # east mysql psa
+      - 10.124.18.0/24 # central postgres psa
+      - 10.124.19.0/24 # east postgres psa
+      - 10.124.20.0/29 # central redis psa
+      - 10.124.20.8/29 # east mysql psa
+      - 10.185.26.160/28 # central proxy
+      - 10.189.9.208/28 # east proxy
+    sec-nx-lle:
+      - 10.120.255.96/28
+    bda-nx-lle:
+      - 10.120.255.112/28
+    cx-nx-lle:
+      - 10.124.32.0/21
+    cx-nx-prd:
+      - 10.124.40.0/21

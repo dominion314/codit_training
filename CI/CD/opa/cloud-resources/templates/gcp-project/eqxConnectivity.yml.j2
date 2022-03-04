@@ -1,0 +1,89 @@
+{%- if vpcs is defined and vpcs|length %}
+{%-   for vpc_name, vpc_def in vpcs.items() %}
+{%-     if vpc_def.interconnectRouterDef is defined and vpc_def.interconnectRouterDef|length %}
+{%-       for router_name, router_def in vpc_def.interconnectRouterDef.items() %}
+{%          if router_def.partnerInterconnect is defined and router_def.partnerInterconnect|length %}
+{%-           if 'central' in router_def.region and router_def.partnerInterconnect.availabilityDomain == 1 %}
+{%-             set piName = router_name + "-to-ch2-rtr1" %}
+{%-             set eqxName = vpc_name + "-ch2-r1" %}
+{%-             set router = "RT1-9977-CH2" %}
+{%-             set reg = "central" %}
+{%-             set zone = "zone1" %}
+{%-           elif 'central' in router_def.region and router_def.partnerInterconnect.availabilityDomain == 2 %}
+{%-             set piName = router_name + "-to-ch2-rtr2" %}
+{%-             set eqxName = vpc_name + "-ch2-r2" %}
+{%-             set router = "RT2-9977-CH2" %}
+{%-             set reg = "central" %}
+{%-             set zone = "zone2" %}
+{%-           elif 'east' in router_def.region and router_def.partnerInterconnect.availabilityDomain == 1 %}
+{%-             set piName = router_name + "-to-dc11-rtr1" %}
+{%-             set eqxName = vpc_name + "-dc11-r1" %}
+{%-             set router = "RT1-9978-DC11" %}
+{%-             set reg = "east" %}
+{%-             set zone = "zone1" %}
+{%-           elif 'east' in router_def.region and router_def.partnerInterconnect.availabilityDomain == 2 %}
+{%-             set piName = router_name + "-to-dc11-rtr2" %}
+{%-             set eqxName = vpc_name + "-dc11-r2" %}
+{%-             set router = "RT2-9978-DC11" %}
+{%-             set reg = "east" %}
+{%-             set zone = "zone2" %}
+{%-           endif %}
+apiVersion: cne.cpe.kohls.com/v1
+kind: EquinixInterconnect
+metadata:
+  name: "{{ piName }}-eqx"
+  namespace: "gcp-{{ project.name }}"
+spec:
+  targetNonprodApi: {{ router_def.partnerInterconnect.sandboxApi | default(false,true) }}
+  targetQaRouter: {{ router_def.partnerInterconnect.qaRouter | default(false,true) }}
+  dryRun: {{ router_def.partnerInterconnect.apiDryRun | default(false,true) }}
+  abandonOnDelete: {{ router_def.partnerInterconnect.abandonOnDelete | default(false,true) }}
+  connectionName: "{{ eqxName }}"
+  speed: {{ router_def.partnerInterconnect.connectionSpeed[:-2] | int }}
+  speedUnit: {{ router_def.partnerInterconnect.connectionSpeed[-2:] }}
+  vlanStag: {{ interconnectVlans[reg][zone][router_name] | int }}
+  purchaseOrderNumber: {{ billingDeptId | string }}
+
+  gcpInterconnectRef:
+    name: "{{ piName }}"
+    namespace: "gcp-{{ project.name }}"
+    apiVersion: compute.cnrm.cloud.google.com/v1beta1
+
+  emailNotifications:
+    - kt-cne@kohls.com
+---
+apiVersion: cne.cpe.kohls.com/v1
+kind: CiscoInterconnect
+metadata:
+  name: "{{ piName }}-cisco"
+  namespace: "gcp-{{ project.name }}"
+spec:
+  peerDesc: "{{ piName }}"
+{%- if router_def.partnerInterconnect.qaRouter | default(false,true) == true  %}
+  onpremVrf: equinix-cloud-dev
+  targetRouter: "RT1-9977-CH2-TEST"
+{%- elif 'prd' in project['labels']['environment-type'] %}
+  onpremVrf: equinix-cloud-prod
+  targetRouter: "{{ router }}"
+{%- elif 'prod' in project['labels']['environment-type']%}
+  onpremVrf: equinix-cloud-prod
+  targetRouter: "{{ router }}"
+{%- else %}
+  onpremVrf: equinix-cloud-nonprod
+  targetRouter: "{{ router }}"
+{%- endif %}
+  eqxInterconnectRef:
+    name: "{{ piName }}-eqx"
+    namespace: "gcp-{{ project.name }}"
+    apiVersion: cne.cpe.kohls.com/v1alpha1
+
+  gcpInterconnectRef:
+    name: "{{ piName }}"
+    namespace: "gcp-{{ project.name }}"
+    apiVersion: compute.cnrm.cloud.google.com/v1beta1
+---
+{%-         endif %}
+{%-       endfor %}
+{%-     endif %}
+{%-   endfor %}
+{%- endif %}

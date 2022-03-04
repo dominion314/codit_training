@@ -1,0 +1,49 @@
+---
+iamPolicyMembersV2:
+  groupsByEmail:
+    gcp-securitymonitoring-devops-l3@kohls.com:
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    - role: bigquery.jobUser
+    - role: compute.networkViewer
+    - role: iam.serviceAccountTokenCreator
+    - role: iam.serviceAccountUser
+    - role: logging.admin
+    - role: logging.configWriter
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: monitoring.admin
+    gcp-securitytech-devops-admin@kohls.com:
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    - role: bigquery.jobUser
+    - role: compute.networkViewer
+    - role: iam.serviceAccountKeyAdmin
+    - role: iam.serviceAccountTokenCreator
+    - role: iam.serviceAccountUser
+    - role: logging.admin
+    - role: logging.configWriter
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: monitoring.admin
+  serviceAccountsByEmail:
+    terraform-sec@kohls-sec-logging-prd.iam.gserviceaccount.com:
+    - role: lbadmin
+      OrgId: 1035901152068
+    - role: bigquery.admin
+    - role: cloudfunctions.admin
+    - role: cloudscheduler.admin
+    - role: cloudtrace.admin
+    - role: compute.instanceAdmin.v1
+    - role: compute.loadBalancerAdmin
+    - role: compute.storageAdmin
+    - role: container.admin
+    - role: dataflow.admin
+    - role: logging.admin
+    - role: ml.admin
+    - role: monitoring.admin
+    - role: pubsub.admin
+    service-984928122895@gcf-admin-robot.iam.gserviceaccount.com:
+    - role: cloudfunctions.serviceAgent
+    qradar-pubsub-client-sec@kohls-sec-logging-prd.iam.gserviceaccount.com:
+    - role: pubsub.subscriber

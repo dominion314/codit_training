@@ -1,0 +1,50 @@
+---
+storageBuckets:
+  kohls-merch-sp-mft-dev-lle-bucket:
+    versioningEnabled: false
+    deletionProtect: true
+    storageClass: STANDARD
+    location: US-CENTRAL1
+    bucketPolicyOnly: false
+    labels:
+      app-name: "mockshop"
+    lifecycleRule:
+      - action:
+          type: Delete
+        condition:
+          age: 7
+    permissions:
+      serviceAccountsByEmail:
+        sp-mockshop-intg-lle@kohls-merch-pd-lle.iam.gserviceaccount.com:
+          roles:
+            - storage.admin
+        sp-jarvis-intg-lle@kohls-merch-pd-lle.iam.gserviceaccount.com:
+          roles:
+            - storage.admin
+      groupsByEmail:
+        gcp-merch-pdpl-softwareengineer-admin@kohls.com:
+          roles:
+            - storage.admin
+        gcp-merch-pdpl-softwareengineer-l3@kohls.com:
+          roles:
+            - storage.admin
+  merch-pd-vendor-scorecard:
+    versioningEnabled: false
+    deletionProtect: true
+    storageClass: STANDARD
+    location: US-CENTRAL1
+    bucketPolicyOnly: false
+    labels:
+      app-name: "oneplm"
+    permissions:
+      serviceAccountsByEmail:
+        vendor-scorecard-pd@kohls-merch-pd-lle.iam.gserviceaccount.com:
+          roles:
+            - storage.admin
+      groupsByEmail:
+        gcp-merch-pdpl-softwareengineer-admin@kohls.com:
+          roles:
+            - storage.admin
+        gcp-merch-pdpl-softwareengineer-l3@kohls.com:
+          roles:
+            - storage.admin

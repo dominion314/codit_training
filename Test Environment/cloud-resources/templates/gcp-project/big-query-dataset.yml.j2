@@ -1,0 +1,66 @@
+{%- if bigQueryDatasets is defined %}
+{%-   for dataset, dataset_parameters in bigQueryDatasets.items() %}
+apiVersion: bigquery.cnrm.cloud.google.com/v1beta1
+kind: BigQueryDataset
+metadata:
+  name: {{ dataset | replace("_", ".") }}
+  namespace: gcp-{{ project.name }}
+  annotations:
+{%-     if dataset_parameters.deletionProtect | default(false) %}
+    cnrm.cloud.google.com/deletion-policy: abandon
+{%-     endif %}
+  labels:
+    managed-by-cnrm: "true"
+{%-     if defaultLabels is defined %}
+{%-       for key, value in defaultLabels.items() %}
+{%-         if dataset_parameters.labels is defined %}
+{%-           if not key in dataset_parameters.labels %}
+    {{ key }}: "{{ value }}"
+{%-           endif %}
+{%-         else %}
+    {{ key }}: "{{ value }}"
+{%-         endif %}
+{%-       endfor %}
+{%-     endif %}
+{%-     if dataset_parameters.labels is defined %}
+{%-       for key, value in dataset_parameters.labels.items() %}
+    {{ key }}: "{{ value }}"
+{%-       endfor %}
+{%-     endif %}
+spec:
+{%-     if dataset_parameters.defaultTableExpirationMs is defined %}
+  defaultTableExpirationMs: {{ dataset_parameters.defaultTableExpirationMs }}
+{%-     endif %}
+{%-     if dataset_parameters.description is defined %}
+  description: "{{ dataset_parameters.description }}"
+{%-     endif %}
+{%-     if dataset_parameters.friendlyName is defined %}
+  friendlyName: "{{ dataset_parameters.friendlyName }}"
+{%-     endif %}
+  resourceID: {{ dataset }}
+  location: US
+
+{%-     if dataset_parameters.permissions is defined %}
+  access:
+{%-     for access_type, emails in dataset_parameters.permissions.items() %}
+{%-       for email, params in emails.items() %}
+{%-         for role in params.roles %}
+{%-           if role not in ["OWNER", "WRITER", "READER"] %}
+    - role: "roles/{{role}}"
+{%-           else %}
+    - role: "{{role}}"
+{%-           endif %}
+{%-           if access_type == "usersByEmail" %}
+      userByEmail: "{{email}}"
+{%-           elif access_type == "groupsByEmail" %}
+      groupByEmail: "{{email}}"
+{%-           elif access_type == "serviceAccountsByEmail" %}
+      userByEmail: "{{email}}"
+{%-           endif %}
+{%-         endfor %}
+{%-       endfor %}
+{%-     endfor %}
+{%-     endif %}
+---
+{%-   endfor %}
+{%- endif %}

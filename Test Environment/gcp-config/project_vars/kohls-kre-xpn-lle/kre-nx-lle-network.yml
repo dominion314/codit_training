@@ -1,0 +1,6 @@
+---
+vpcs:
+  kre-nx-lle:
+
+    routingMode: GLOBAL
+    autoCreateSubnets: false

@@ -1,0 +1,23 @@
+---
+ComputeFirewall:
+  firewall-rules:
+    demo-global-rule-1:
+      priority: 900
+      direction: EGRESS
+      description: dummy-rule-template
+      disabled: false
+      logging: false
+      rule:
+        destinationRanges:
+        - "8.8.8.8/32"
+        targetServiceAccounts:
+        targetTags:
+        sourceRanges:
+        sourceServiceAccounts:
+        sourceTags:
+        - "demo-tag"
+        deny:
+        - protocol: "udp"
+          ports:
+          - "53"
+        allow:

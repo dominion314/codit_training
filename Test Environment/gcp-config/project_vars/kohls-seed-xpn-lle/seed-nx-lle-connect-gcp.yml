@@ -1,0 +1,42 @@
+---
+vpcs:
+  seed-nx-lle:
+    routerDef:
+      seed-nx-lle-c1-gcp-rtr01:
+        region: us-central1
+        description:
+        routerASN:
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+        ha_vpn_gateways_to_transit:
+          seed-nx-lle-c1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.1.144/30
+              bluecat-id: 1589851
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.1.148/30
+              bluecat-id: 1589853
+              status: PROVISIONED
+      seed-nx-lle-e1-gcp-rtr01:
+        region: us-east1
+        description:
+        routerASN:
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+        ha_vpn_gateways_to_transit:
+          seed-nx-lle-e1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.1.152/30
+              bluecat-id: 1589855
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.1.156/30
+              bluecat-id: 1589857
+              status: PROVISIONED

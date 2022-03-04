@@ -1,0 +1,18 @@
+---
+storageBuckets:
+  sec-wazuh-configs-prd:
+    location: US
+    versioningEnabled: true
+    forceDestroy: false
+    labels:
+      environment-type: prd
+      lob: sec
+      billing-dept-id: "90513"
+      app-name: wazuh
+      app-component: storage
+    storageClass: STANDARD
+    lifecycleRule:
+      - action:
+          type: Delete
+        condition:
+          numNewerVersions: 100

@@ -1,0 +1,23 @@
+---
+billingDeptId: "90546"
+project:
+  name: kohls-cpe-lle
+  deletionProtect: true
+  managed: true
+  folderId: "53524313723"
+  billingAccount: "00C36A-CD0BDB-E543D0"
+  labels:
+    billing-dept-id: "90546"
+    project-manager: josh-doll
+    devops-lead: mark-doll
+    environment-type: lle
+    line-of-business: cpe
+    project-requestor: zaki
+serviceAPIs:
+  compute.googleapis.com:
+  storage-component.googleapis.com:
+  storage-api.googleapis.com:
+  stackdriver.googleapis.com:
+  logging.googleapis.com:
+  monitoring.googleapis.com:
+  cloudasset.googleapis.com:

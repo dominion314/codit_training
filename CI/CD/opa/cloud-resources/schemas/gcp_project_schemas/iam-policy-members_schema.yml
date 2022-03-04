@@ -1,0 +1,41 @@
+---
+iamPolicyMembers:
+  type: 'dict'
+  required: false
+  schema:
+    usersByEmail:
+      required: false
+      keysrules:
+        type: 'string'
+        #TODO: better tune
+        regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+      valuesrules:
+        type: 'dict'
+        schema:
+          roles:
+            required: true
+            type: 'list'
+    groupsByEmail:
+      required: false
+      keysrules:
+        type: 'string'
+        #TODO: better tune
+        regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+      valuesrules:
+        type: 'dict'
+        schema:
+          roles:
+            required: true
+            type: 'list'
+    serviceAccountsByEmail:
+      required: false
+      keysrules:
+        type: 'string'
+        #TODO: better tune
+        regex: '.*@.*\.gserviceaccount\.com'
+      valuesrules:
+        type: 'dict'
+        schema:
+          roles:
+            required: true
+            type: 'list'

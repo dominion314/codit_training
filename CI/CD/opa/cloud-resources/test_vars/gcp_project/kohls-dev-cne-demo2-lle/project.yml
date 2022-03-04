@@ -1,0 +1,31 @@
+---
+billingDeptId: "90586"
+
+project:
+  name: kohls-dev-cne-demo2-lle
+  managed: true
+  folderId: "144994841496"
+  billingAccount: "00C36A-CD0BDB-E543D0"
+  labels:
+    billing-dept-id: "90586"
+    project-manager: charles-anthony
+    devops-lead: placeholder
+    environment-type: lle
+    line-of-business: cpe
+    project-requestor: charles-anthony
+
+serviceAPIs:
+  cloudresourcemanager.googleapis.com:
+    deletionPolicy: abandon
+  storage-api.googleapis.com:
+    deletionPolicy: abandon
+  storage-component.googleapis.com:
+    deletionPolicy: abandon
+  stackdriver.googleapis.com:
+    deletionPolicy: abandon
+  compute.googleapis.com:
+    deletionPolicy: abandon
+  logging.googleapis.com:
+    deletionPolicy: abandon
+  monitoring.googleapis.com:
+    deletionPolicy: abandon

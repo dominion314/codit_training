@@ -1,0 +1,61 @@
+---
+bigQueryDatasets:
+  hr_lab:
+    friendlyName: hr_lab
+    description: "Dataset created for Kohls Human Resources team"
+    deletionProtect: true
+    defaultTableExpirationMs: 0 #Dataset expiration set to 'Never Expire'
+    permissions:
+      groupsByEmail:
+        gcp-hr-gcp-labs-user@kohls.com:
+          roles:
+            - bigquery.dataEditor
+        gcp-hr-gcp-labs-superuser@kohls.com:
+          roles:
+            - bigquery.dataOwner
+      serviceAccountsByEmail:
+        dp-alteryx@kohls-bda-hr-prd.iam.gserviceaccount.com:
+          roles:
+            - bigquery.dataEditor
+  hr_soe_lab:
+    friendlyName: hr_soe_lab
+    description: "Dataset created for Kohls Stores Operations and Experience team"
+    deletionProtect: true
+    defaultTableExpirationMs: 0 #Dataset expiration set to 'Never Expire'
+    permissions:
+      usersByEmail:
+        msi-bigquery@kohls.com:
+          roles:
+            - bigquery.dataEditor
+      groupsByEmail:
+        gcp-bda-gcp-labs-user@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-bda-gcp-labs-superuser@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-bda-softwareengineer-l3@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-hr-gcp-labs-user@kohls.com:
+          roles:
+            - bigquery.dataEditor
+        gcp-hr-gcp-labs-superuser@kohls.com:
+          roles:
+            - bigquery.dataOwner
+        gcp-stores-gcp-labs-user@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-stores-gcp-labs-superuser@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-bda-devops-admin@kohls.com:
+          roles:
+            - bigquery.dataViewer
+      serviceAccountsByEmail:
+        dp-alteryx@kohls-bda-hr-prd.iam.gserviceaccount.com:
+          roles:
+            - bigquery.dataEditor
+        dp-stores-sa@kohls-bda-stores-prd.iam.gserviceaccount.com:
+          roles:
+            - bigquery.dataViewer

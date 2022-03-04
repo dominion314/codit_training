@@ -1,0 +1,18 @@
+---
+billingDeptId: 90541
+project:
+  name: kohls-ea-xpn-prd
+  managed: true
+  deletionProtect: true
+  folderId: 863157377269
+  billingAccount: 00C36A-CD0BDB-E543D0
+  labels:
+    billing-dept-id: 90541
+    project-manager: casey-carlsen
+    devops-lead: casey-carlsen
+    environment-type: prd
+    line-of-business: ea
+    project-requestor: casey-carlsen
+serviceAPIs:
+  cloudresourcemanager.googleapis.com:
+  cloudasset.googleapis.com:

@@ -1,0 +1,30 @@
+---
+billingDeptId: "90586"
+project:
+  name: kohls-cpe-image-mgmt-prd
+  managed: true
+  folderId: "980929416788"
+  billingAccount: "00C36A-CD0BDB-E543D0"
+  labels:
+    billing-dept-id: "90586"
+    project-manager: josh-doll
+    devops-lead: wade-sweet
+    environment-type: prd
+    line-of-business: cpe
+    project-requestor: jacob-napp
+serviceAPIs:
+  appengine.googleapis.com:
+  cloudasset.googleapis.com:
+  cloudbuild.googleapis.com:
+  cloudfunctions.googleapis.com:
+  cloudresourcemanager.googleapis.com:
+  compute.googleapis.com:
+  datastore.googleapis.com:
+  deploymentmanager.googleapis.com:
+  logging.googleapis.com:
+  monitoring.googleapis.com:
+  servicemanagement.googleapis.com:
+  storage-api.googleapis.com:
+  storage-component.googleapis.com:
+  cloudscheduler.googleapis.com:
+

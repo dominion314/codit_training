@@ -1,0 +1,8 @@
+{
+    "items": [
+        {
+            "input_yml_file": "labels.yml",
+            "schema_file": "gcp_project_schemas/labels_schema.yml"
+        }
+    ]
+}

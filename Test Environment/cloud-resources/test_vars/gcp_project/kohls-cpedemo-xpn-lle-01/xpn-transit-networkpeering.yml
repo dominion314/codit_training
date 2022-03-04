@@ -1,0 +1,8 @@
+---
+vpcs:
+  xpn-transit:
+    vpcPeering:
+
+      mtxpnlle1-to-mtxpnlle2:
+        remoteProject: kohls-multitenant-xpn-lle
+        remoteVPC: gitops-example-2

@@ -1,0 +1,41 @@
+---
+billingDeptId: 90565
+project:
+  name: kohls-cx-xpn-prd
+  managed: true
+  deletionProtect: true
+  folderId: "259606834999"
+  billingAccount: "00C36A-CD0BDB-E543D0"
+  labels:
+    billing-dept-id: "90565"
+    project-manager: klarisa-marenitch
+    devops-lead: placeholder
+    environment-type: prd
+    line-of-business: cx
+    project-requestor: twinkle-desai
+
+projectSharing:
+- kohls-bda-dse-prd
+- kohls-cce-dbaas-prd
+- kohls-cce-openshift-prd
+- kohls-cx-sremgmt-prd
+- kohls-cx-associate-prd
+- kohls-cx-post-purchase-prd
+- kohls-cx-pci-prd
+- kohls-cx-rtl-prd
+- kohls-cx-shop-prd
+
+serviceAPIs:
+  cloudresourcemanager.googleapis.com:
+  cloudasset.googleapis.com:
+  container.googleapis.com:
+  oslogin.googleapis.com:
+  compute.googleapis.com:
+  storage-component.googleapis.com:
+  storage-api.googleapis.com:
+  stackdriver.googleapis.com:
+  logging.googleapis.com:
+  monitoring.googleapis.com:
+  networkmanagement.googleapis.com:
+  servicenetworking.googleapis.com:
+  firewallinsights.googleapis.com:

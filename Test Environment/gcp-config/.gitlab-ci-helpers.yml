@@ -1,0 +1,33 @@
+.internal: &internal_runner
+  tags:
+    - internal
+  variables:
+    HTTPS_PROXY: "http://proxy.kohls.com:3128"
+    HTTP_PROXY: "http://proxy.kohls.com:3128"
+    https_proxy: "http://proxy.kohls.com:3128"
+    http_proxy: "http://proxy.kohls.com:3128"
+    #NO_PROXY: ".svc,.local,.internal,.internal.,.gcr.io,.googleapis.com,.kohls.com,100.64.0.0/8,10.0.0.0/8"
+    #no_proxy: ".svc,.local,.internal,.internal.,.gcr.io,.googleapis.com,.kohls.com,100.64.0.0/8,10.0.0.0/8"
+
+.bluecat_req:
+  variables:
+    VAULT_SERVER_URL: "https://vault-us-central1-primary.kohls.com:8200"
+    VAULT_ADDR: "https://vault-us-central1-primary.kohls.com:8200"
+  before_script:
+    - export
+    - wget -q https://releases.hashicorp.com/vault/1.7.1/vault_1.7.1_linux_amd64.zip
+    - unzip vault_1.7.1_linux_amd64.zip
+    - chmod +x ./vault
+    - ls -a
+    - ./vault --version
+    - export VAULT_SKIP_VERIFY=1
+    - export PYTHONWARNINGS="ignore:Unverified HTTPS request"
+    - export VAULT_TOKEN="$(./vault write -field=token auth/jwt-GitLab/login role=gitlab-dynamic-v1 jwt=$CI_JOB_JWT)"
+    - export BC_HOST="$(./vault kv get -field=BLUECAT_URL kv-gitlab/kohls/infra/platform_enablement/cloud-config/shared/network)"
+    - export BC_USER="$(./vault kv get -field=BLUECAT_USER kv-gitlab/kohls/infra/platform_enablement/cloud-config/shared/network)"
+    - export BC_PASS="$(./vault kv get -field=BLUECAT_PASS kv-gitlab/kohls/infra/platform_enablement/cloud-config/shared/network)"
+    - export GL_PRIVKEY="$(./vault kv get -field=IP_Allocation_Service kv-gitlab/kohls/infra/platform_enablement/cloud-config/gcp-config/project-tokens)"
+    - python -m venv .venv
+    - source .venv/bin/activate
+    - pip install bluecatam --extra-index-url https://$CI_REGISTRY_USER:$CI_REGISTRY_PASSWORD@gitlab.com/api/v4/projects/26264516/packages/pypi/simple
+    - pip install gitlab-ipalloc --extra-index-url https://$CI_REGISTRY_USER:$CI_REGISTRY_PASSWORD@gitlab.com/api/v4/projects/26264516/packages/pypi/simple

@@ -1,0 +1,114 @@
+---
+iamPolicyMembersV2:
+  type: 'dict'
+  required: false
+  allowed: [usersByEmail, groupsByEmail, serviceAccountsByEmail]
+  schema:
+    usersByEmail:
+      required: false
+      keysrules:
+        type: 'string'
+        #TODO: better tune
+        regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+      valuesrules:
+        type: 'list'
+        schema:
+          type: 'dict'
+          required: true
+          allowed: [OrgId, role, deletionProtect, condition]
+          schema:
+            role:
+              required: true
+              type: 'string'
+            deletionProtect:
+              required: false
+              type: 'boolean'
+            OrgId:
+              required: false
+              type: 'integer'
+              allowed: [1035901152068, 212666867691, 202079959255]
+            condition:
+              type: 'dict'
+              required: false
+              schema:
+                title:
+                  required: true
+                  type: 'string'
+                description:
+                  required: false
+                  type: 'string'
+                expression:
+                  required: true
+                  type: 'string'
+    groupsByEmail:
+      required: false
+      keysrules:
+        type: 'string'
+        #TODO: better tune
+        regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+      valuesrules:
+        type: 'list'
+        schema:
+          type: 'dict'
+          required: true
+          allowed: [OrgId, role, deletionProtect, condition]
+          schema:
+            role:
+              required: true
+              type: 'string'
+            deletionProtect:
+              required: false
+              type: 'boolean'
+            OrgId:
+              required: false
+              type: 'integer'
+              allowed: [1035901152068, 212666867691, 202079959255]
+            condition:
+              type: 'dict'
+              required: false
+              schema:
+                title:
+                  required: true
+                  type: 'string'
+                description:
+                  required: false
+                  type: 'string'
+                expression:
+                  required: true
+                  type: 'string'
+    serviceAccountsByEmail:
+      required: false
+      keysrules:
+        type: 'string'
+        #TODO: better tune
+        regex: '.*@.*\.gserviceaccount\.com'
+      valuesrules:
+        type: 'list'
+        schema:
+          type: 'dict'
+          required: true
+          allowed: [OrgId, role, deletionProtect, condition]
+          schema:
+            role:
+              required: true
+              type: 'string'
+            deletionProtect:
+              required: false
+              type: 'boolean'
+            OrgId:
+              required: false
+              type: 'integer'
+              allowed: [1035901152068, 212666867691, 202079959255]
+            condition:
+              type: 'dict'
+              required: false
+              schema:
+                title:
+                  required: true
+                  type: 'string'
+                description:
+                  required: false
+                  type: 'string'
+                expression:
+                  required: true
+                  type: 'string'

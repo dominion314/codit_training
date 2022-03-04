@@ -1,0 +1,42 @@
+---
+vpcs:
+  bda-nx-hle:
+    routerDef:
+      bda-nx-hle-c1-gcp-rtr01:
+        region: us-central1
+        description:
+        routerASN:
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+        ha_vpn_gateways_to_transit:
+          bda-nx-hle-c1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.1.240/30
+              bluecat-id: 1588989
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.1.244/30
+              bluecat-id: 1588991
+              status: PROVISIONED
+      bda-nx-hle-e1-gcp-rtr01:
+        region: us-east1
+        description:
+        routerASN:
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+        ha_vpn_gateways_to_transit:
+          bda-nx-hle-e1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.1.248/30
+              bluecat-id: 1588993
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.1.252/30
+              bluecat-id: 1588995
+              status: PROVISIONED

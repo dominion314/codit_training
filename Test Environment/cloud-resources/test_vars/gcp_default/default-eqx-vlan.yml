@@ -1,0 +1,15 @@
+---
+# EQX VLANs attached to Routers
+# QA Range > 900 - 999
+
+interconnectVlans:
+  central:
+    zone1:
+      cpe1-xpn-lle-c1-pi-rtr01: 901
+    zone2:
+      cpe1-xpn-lle-c1-pi-rtr02: 902
+  east:
+    zone1:
+      cpe1-xpn-lle-e1-pi-rtr01: 903
+    zone2:
+      cpe1-xpn-lle-e1-pi-rtr02: 904

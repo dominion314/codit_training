@@ -1,0 +1,12 @@
+---
+project:
+  name: kohlsdev-jeremy-bill-03
+  managed: true
+  folderId: "922938220950"
+  labels: # Only hyphens (-), underscores (_), lowercase characters, and numbers are allowed as characters in labels
+    billing-dept-id: "90586"
+    project-manager: josh-doll
+    devops-lead: mark-doll
+    environment-type: lle
+    env: inspec-test
+    just-another-label: test-sample-label

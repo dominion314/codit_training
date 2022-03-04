@@ -1,0 +1,6 @@
+---
+vpcs:
+  rapidpaas-nx-sbx:
+
+    routingMode: GLOBAL
+    autoCreateSubnets: false

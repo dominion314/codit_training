@@ -1,0 +1,5 @@
+---
+kccTemplates: ['../../../templates/gcp-project/iam-policy-members.yml.j2']
+# No inspec coverage for iam policy members because of missing inspec gcp coverage
+inspecControls: []
+validationDelaySecs: 60

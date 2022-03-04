@@ -1,0 +1,1342 @@
+---
+serviceAPIs:
+  required: false
+  type: 'dict'
+  allow_unknown: false
+        # general key->value rules
+  keysrules:
+    type: 'string'
+    regex: '[\w\-]+.googleapis.com'         # TODO: this is overly relaxed. fix it
+  valuesrules:
+    nullable: true
+    type: 'dict'
+    schema:
+      deletionPolicy:
+        type: 'string'
+        allowed: ['abandon']
+        excludes: 'disableDependentServices'
+      disableDependentServices:
+        type: 'boolean'
+        excludes: 'deletionPolicy'
+        # mandatory service APIs.
+  schema:
+    compute.googleapis.com:
+      nullable: true
+      required: false
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    oslogin.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    cloudresourcemanager.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    storage-component.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    storage-api.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    stackdriver.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    logging.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    monitoring.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    cloudasset.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    actions.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    anthos.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    appengine.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    bigquerydatatransfer.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    cloudbuild.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    clouddebugger.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    sourcerepo.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    cloudscheduler.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    runtimeconfig.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    domains.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    spanner.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    cloudtasks.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    testing.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    dataflow.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    appengineflex.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    datacatalog.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    containerregistry.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    playablelocations.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    vectortile.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    servicecontrol.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    servicemanagement.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    clouderrorreporting.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    cloudtrace.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    storagetransfer.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    transcoder.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    bigquery.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    bigtabletableadmin.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    bigtableadmin.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    cloudiot.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    pubsub.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    metastore.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    genomics.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    vision.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    datafusion.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    lifesciences.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    pubsublite.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    datamigration.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    vpcaccess.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    servicenetworking.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    dns.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    firewallinsights.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    networkmanagement.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    networktopology.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    datastore.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    sqladmin.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    sql-component.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    cloudapis.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    computescanning.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    containeranalysis.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    file.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    iam.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    iamcredentials.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    osconfig.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    replicapool.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    resourceviews.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    serviceusage.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    bigquerystorage.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    cloudfunctions.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    cloudkms.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    deploymentmanager.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    iap.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    container.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    astorage-component.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    bigqueryreservation.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    dataproc.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    firestore.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    run.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    vmmigration.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    stackdriverprovisioning.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    sheets.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    calendar-json.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    bigqueryconnection.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    bigtable.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    cloudbilling.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    fcm.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    recommender.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    redis.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    analytics.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    bigquery-json.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    dialogflow.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    cloudmonitoring.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    firebase.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    googlecloudmessaging.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    admin.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    vault.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    automl.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    translate.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    language.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    notebooks.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    aiplatform.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    firebaserules.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    replicapoolupdater.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    ml.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    drive.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    gmail.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    tasks.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    contacts.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    privateca.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    secretmanager.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    networksecurity.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'
+    googleads.googleapis.com:
+      required: false
+      nullable: true
+      type: 'dict'
+      schema:
+        deletionPolicy:
+          type: 'string'
+          allowed: ['abandon']
+          excludes: 'disableDependentServices'
+        disableDependentServices:
+          type: 'boolean'
+          excludes: 'deletionPolicy'

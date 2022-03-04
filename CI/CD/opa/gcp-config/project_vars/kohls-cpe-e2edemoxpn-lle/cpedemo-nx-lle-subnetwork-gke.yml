@@ -1,0 +1,27 @@
+---
+vpcs:
+  cpedemo-nx-lle:
+    subnets:
+
+      cpedemo-nx-lle-cne-dev-c1-gke01:
+        advertiseRoutes: false
+        region: us-central1
+        network:
+          ip: 10.187.1.48/28
+          bluecat-id: 1547890
+        gke:
+        - podNetwork:
+            name: cpedemo-nx-lle-cne-dev-c1-pod01
+            ip: 10.120.66.64/26
+            bluecat-id: 1547896
+          serviceNetwork:
+            name: cpedemo-nx-lle-cne-dev-c1-svc01
+            ip: 10.120.49.176/28
+            bluecat-id: 1547898
+          masterNetwork:
+            ip: 1.1.1.1/28
+            bluecat-id: 111111
+        permissions:
+          groupsByEmail:
+          - gcp-cpe-cne-devops-admin@kohls.com
+          - gcp-cpe-cne-devops-l3@kohls.com

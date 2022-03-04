@@ -1,0 +1,9 @@
+---
+vpcs:
+  platform-nx-lle:
+
+    routingMode: GLOBAL
+    autoCreateSubnets: false
+    psaNetwork:
+      platform-nx-lle-dbaas-psa-01:
+        network: 10.124.0.0/20

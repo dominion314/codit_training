@@ -1,0 +1,291 @@
+---
+iamPolicyMembersV2:
+  groupsByEmail:
+    gcp-cx-devops-admin@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomRole271
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - OrgId: 1035901152068
+      role: lbadmin
+    - role: bigquery.admin
+    - role: bigtable.viewer
+    - role: cloudfunctions.developer
+    - role: cloudfunctions.viewer
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.storageAdmin
+    - role: container.admin
+    - role: container.clusterAdmin
+    - role: dataflow.admin
+    - role: dataflow.developer
+    - role: dataflow.viewer
+    - role: dataflow.worker
+    - role: deploymentmanager.editor
+    - role: firebase.admin
+    - role: iam.serviceAccountKeyAdmin
+    - role: iam.serviceAccountUser
+    - role: logging.admin
+    - role: logging.privateLogViewer
+    - role: monitoring.admin
+    - role: pubsub.admin
+    - role: spanner.admin
+    - role: storage.admin
+    - role: storage.objectViewer
+    gcp-cx-softwareengineer-admin@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: bigquery.dataEditor
+    - role: bigquery.jobUser
+    - role: bigquery.user
+    - role: bigtable.user
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: dataflow.developer
+    - role: errorreporting.viewer
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: monitoring.viewer
+    - role: pubsub.editor
+    - role: pubsub.viewer
+    - role: storage.objectViewer
+    gcp-cx-softwareengineer-l2@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: bigquery.dataEditor
+    - role: bigquery.jobUser
+    - role: bigquery.user
+    - role: bigtable.user
+    - role: cloudfunctions.developer
+    - role: cloudfunctions.viewer
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: dataflow.developer
+    - role: dataflow.viewer
+    - role: dataflow.worker
+    - role: errorreporting.viewer
+    - role: firebase.viewer
+    - role: firebasecrashlytics.viewer
+    - role: logging.viewer
+    - role: monitoring.viewer
+    - role: pubsub.editor
+    - role: pubsub.publisher
+    - role: pubsub.subscriber
+    - role: pubsub.viewer
+    - role: spanner.databaseReader
+    - role: spanner.viewer
+    - role: storage.objectViewer
+    gcp-cx-softwareengineer-l3@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: bigquery.dataEditor
+    - role: bigquery.jobUser
+    - role: bigquery.user
+    - role: bigtable.user
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: dataflow.developer
+    - role: dataflow.worker
+    - role: firebase.viewer
+    - role: firebasecrashlytics.viewer
+    - role: logging.viewer
+    - role: pubsub.editor
+    - role: pubsub.publisher
+    - role: pubsub.subscriber
+    - role: storage.objectViewer
+    gcp-cx-softwareengineer-manager@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: storage.objectViewer
+    gcp-infra-dataservices-systemsengineer-l3@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    gcp-stores-associate-experience-softwareengineer-l3@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: bigquery.admin
+    - role: bigtable.viewer
+    - role: cloudfunctions.admin
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.storageAdmin
+    - role: compute.viewer
+    - role: container.admin
+    - role: container.clusterAdmin
+    - role: dataflow.admin
+    - role: dataflow.developer
+    - role: dataflow.viewer
+    - role: dataflow.worker
+    - role: deploymentmanager.editor
+    - role: firebase.admin
+    - role: iam.serviceAccountKeyAdmin
+    - role: iam.serviceAccountUser
+    - role: logging.admin
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: monitoring.admin
+    - role: pubsub.admin
+    - role: spanner.admin
+    - role: storage.admin
+    - role: storage.objectViewer
+  serviceAccountsByEmail:
+    consul-cluster-create-temp@kohls-cx-associate-new-lle.iam.gserviceaccount.com:
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkViewer
+    - role: compute.storageAdmin
+    - role: iam.serviceAccountUser
+    - role: logging.logWriter
+    - role: storage.admin
+    consul-paas@kohls-cx-associate-new-lle.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole130
+    - OrgId: 1035901152068
+      role: CustomRole703
+    - role: compute.networkUser
+    - role: compute.viewer
+    - role: iam.serviceAccountUser
+    cta-store-hours-lle-cxdevo@kohls-cx-associate-new-lle.iam.gserviceaccount.com:
+    - role: bigquery.dataViewer
+    - role: bigquery.jobUser
+    - role: bigquery.metadataViewer
+    - role: bigquery.user
+    disposition-manager-sa@kohls-cx-associate-new-lle.iam.gserviceaccount.com:
+    - role: storage.objectAdmin
+    gke-nginx-ingress-cx@kohls-cx-associate-new-lle.iam.gserviceaccount.com:
+    - role: compute.viewer
+    - role: storage.objectViewer
+    harness-cx-dev@kohls-cx-associate-new-lle.iam.gserviceaccount.com:
+    - role: compute.networkViewer
+    - role: logging.viewer
+    - role: monitoring.viewer
+    - role: storage.objectAdmin
+    harness-pov-lle-cxdev@kohls-cx-associate-new-lle.iam.gserviceaccount.com:
+    - role: compute.networkViewer
+    - role: logging.viewer
+    - role: monitoring.viewer
+    - role: storage.objectViewer
+    jenkins-master-lle-cxdev@kohls-cx-associate-new-lle.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - OrgId: 1035901152068
+      role: CustomRole542
+    - OrgId: 1035901152068
+      role: CustomRole593
+    - OrgId: 1035901152068
+      role: CustomRole681
+    - OrgId: 1035901152068
+      role: compute.engine.power.state.adm
+    - role: bigquery.admin
+    - role: cloudfunctions.developer
+    - role: cloudfunctions.viewer
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.loadBalancerAdmin
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.storageAdmin
+    - role: compute.viewer
+    - role: container.admin
+    - role: container.clusterAdmin
+    - role: dataflow.admin
+    - role: dataflow.worker
+    - role: deploymentmanager.editor
+    - role: deploymentmanager.typeEditor
+    - role: deploymentmanager.typeViewer
+    - role: deploymentmanager.viewer
+    - role: iam.serviceAccountUser
+    - role: storage.admin
+    jenkins-mdevop@kohls-cx-associate-new-lle.iam.gserviceaccount.com:
+    - role: storage.admin
+    - role: storage.objectAdmin
+    - role: storage.objectCreator
+    - role: storage.objectViewer
+    lle-cx-admin@kohls-cx-associate-new-lle.iam.gserviceaccount.com:
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.storageAdmin
+    mft-mdevop@kohls-cx-associate-new-lle.iam.gserviceaccount.com:
+    - role: storage.admin
+    - role: storage.objectAdmin
+    - role: storage.objectCreator
+    - role: storage.objectViewer
+    mongo-dba@kohls-cx-associate-new-lle.iam.gserviceaccount.com:
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: iam.serviceAccountUser
+    mysql-dba@kohls-cx-associate-new-lle.iam.gserviceaccount.com:
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: iam.serviceAccountUser
+    pmm-dba@kohls-cx-associate-new-lle.iam.gserviceaccount.com:
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: iam.serviceAccountUser
+    ppd-cxdev-test@kohls-cx-associate-new-lle.iam.gserviceaccount.com:
+    - role: storage.objectAdmin
+    ppd-cxdev@kohls-cx-associate-new-lle.iam.gserviceaccount.com:
+    - role: bigquery.dataEditor
+    - role: bigquery.dataOwner
+    - role: bigquery.dataViewer
+    - role: bigquery.jobUser
+    - role: bigquery.user
+    - role: dataflow.admin
+    - role: dataflow.developer
+    - role: dataflow.viewer
+    - role: dataflow.worker
+    - role: pubsub.editor
+    - role: pubsub.publisher
+    - role: pubsub.subscriber
+    - role: pubsub.viewer
+    - role: storage.admin
+    - role: storage.objectAdmin
+    returnsplatform-mdevop@kohls-cx-associate-new-lle.iam.gserviceaccount.com:
+    - role: storage.objectAdmin
+    rp-rts-lle-cxdev@kohls-cx-associate-new-lle.iam.gserviceaccount.com:
+    - role: storage.objectCreator
+    - role: storage.objectViewer
+    siteline-sa@kohls-cx-associate-new-lle.iam.gserviceaccount.com:
+    - role: storage.admin
+    - role: storage.objectAdmin
+    - role: storage.objectCreator
+    - role: storage.objectViewer
+    smart-apm-vault-lle@kohls-cx-associate-new-lle.iam.gserviceaccount.com:
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.storageAdmin
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: storage.admin
+    spinnaker-strdev@kohls-cx-associate-new-lle.iam.gserviceaccount.com:
+    - role: browser
+    - role: container.admin
+    - role: pubsub.editor
+    - role: storage.admin
+    terraform-paas@kohls-cx-associate-new-lle.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: lbadmin
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.storageAdmin
+    - role: iam.serviceAccountUser
+    - role: logging.logWriter
+    - role: storage.admin
+    - role: storage.objectViewer
+    vml-data-archival-lle@kohls-cx-associate-new-lle.iam.gserviceaccount.com:
+    - role: storage.admin

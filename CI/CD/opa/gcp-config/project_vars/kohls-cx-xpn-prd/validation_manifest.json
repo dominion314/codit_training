@@ -1,0 +1,27 @@
+{
+  "items": [{
+      "input_yml_file": "project.yml",
+      "schema_file": "gcp_project_schemas/project_schema.yml"
+    },
+    {
+      "input_yml_file": "cx-nx-prd-connect-gcp.yml",
+      "schema_file": "gcp_project_schemas/vpc-connect-gcp-schema.yml"
+    },
+    {
+      "input_yml_file": "cx-nx-prd-connect-onprem.yml",
+      "schema_file": "gcp_project_schemas/vpc-connect-onprem-schema.yml"
+    },
+    {
+      "input_yml_file": "cx-nx-prd-network.yml",
+      "schema_file": "gcp_project_schemas/vpc-network_schema.yml"
+    },
+    {
+      "input_yml_file": "cx-nx-prd-subnetwork-std.yml",
+      "schema_file": "gcp_project_schemas/vpc-subnetwork_schema.yml"
+    },
+    {
+      "input_yml_file": "cx-nx-prd-firewall.yml",
+      "schema_file": "gcp_project_schemas/vpc-firewall_schema.yml"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+---
+iamPolicyMembers:
+  serviceAccountsByEmail:
+    service-831336470763@dataproc-accounts.iam.gserviceaccount.com:
+      roles:
+      - compute.networkUser
+    terraform-devops@kohls-bda-lle.iam.gserviceaccount.com:
+      roles:
+      - compute.networkUser
+    nzdians-infra-ansible-bigdata@kohls-bda-lle.iam.gserviceaccount.com:
+      roles:
+      - compute.networkUser
+    service-831336470763@dataflow-service-producer-prod.iam.gserviceaccount.com:
+      roles:
+      - compute.networkUser

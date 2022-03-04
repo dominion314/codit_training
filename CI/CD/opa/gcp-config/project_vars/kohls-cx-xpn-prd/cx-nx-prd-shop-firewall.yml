@@ -1,0 +1,4918 @@
+vpcs:
+  cx-nx-prd:
+    firewallRules:
+      acc-mgmt-access-ingr-to-cnc-blue-prd-cntrl:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-blue-accservice-prod
+          - cprod-blue-accservice-stage
+          targetTags:
+          - cprod-blue-cncservice-stage
+          - cprod-blue-cncservice-prod
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      acc-mgmt-access-ingr-to-cnc-blue-pod-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - dprod-blue-accservice-prod
+          - dprod-blue-accservice-stage
+          targetTags:
+          - dprod-blue-cncservice-prod
+          - dprod-blue-cncservice-stage
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      acc-mgmt-access-ingress-to-cnc-grn-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-green-accservice-stage
+          - cprod-green-accservice-prod
+          targetTags:
+          - cprod-green-cncservice-stage
+          - cprod-green-cncservice-prod
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      acc-mgmt-access-ingress-to-cnc-grn-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - dprod-green-accservice-prod
+          - dprod-green-accservice-stage
+          targetTags:
+          - dprod-green-cncservice-stage
+          - dprod-green-cncservice-prod
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      acc-ui-access-ingr-to-acc-svcs-blue-prd-cntrl:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-blue-accui-prod
+          - cprod-blue-accui-prod-stage
+          - cprod-blue-accui
+          targetTags:
+          - cprod-blue-cncservice-stage
+          - cprod-blue-cncservice-prod
+          - cprod-blue-accservice-prod
+          - cprod-blue-snbservice-prod
+          - cprod-blue-snbservice
+          - cprod-blue-snbservice-stage
+          - cprod-blue-accservice-stage
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      acc-ui-access-ingr-to-acc-svcs-blue-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - dprod-blue-accui
+          - dprod-blue-accui-prod-stage
+          - dprod-blue-accui-prod
+          targetTags:
+          - dprod-blue-cncservice-prod
+          - dprod-blue-accservice-prod
+          - dprod-blue-cncservice-stage
+          - dprod-blue-snbservice
+          - dprod-blue-snbservice-stage
+          - dprod-blue-accservice-stage
+          - dprod-blue-snbservice-prod
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      acc-ui-access-ingress-to-acc-svcs-grn-prod-cntrl:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-green-accui-prod
+          - cprod-green-accui-prod-stage
+          - cprod-green-accui
+          targetTags:
+          - cprod-green-snbservice-stage
+          - cprod-green-accservice-stage
+          - cprod-green-cncservice-stage
+          - cprod-green-accservice-prod
+          - cprod-green-snbservice
+          - cprod-green-cncservice-prod
+          - cprod-green-snbservice-prod
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      acc-ui-access-ingress-to-acc-svcs-grn-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - dprod-green-accui-prod
+          - dprod-green-accui-prod-stage
+          - dprod-green-accui
+          targetTags:
+          - dprod-green-snbservice
+          - dprod-green-cncservice-stage
+          - dprod-green-accservice-prod
+          - dprod-green-cncservice-prod
+          - dprod-green-snbservice-prod
+          - dprod-green-snbservice-stage
+          - dprod-green-accservice-stage
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      acc-ui-bot-ingr-to-acc-svcs-blue-prd-cntrl:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-blue-accui-bot
+          targetTags:
+          - cprod-blue-cncservice-prod
+          - cprod-blue-accservice-prod
+          - cprod-blue-snbservice-prod
+          - cprod-blue-snbservice
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      aie-ing-kos-prod-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '22'
+            - '80'
+            - '443'
+          sourceRanges:
+          - 10.9.65.26
+          - 10.9.65.27
+        description: SCTASK0834090
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      app-csc-ingr-to-acc-cnc-snb-svcs-blue-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - dprod-blue-cscservice-prod
+          targetTags:
+          - dprod-blue-cncservice-prod
+          - dprod-blue-accservice-prod
+          - dprod-blue-snbservice-prod
+        description: SCTASK0644411
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      app-csc-ingr-to-acc-cnc-snb-svcs-grn-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - dprod-green-cscservice-prod
+          targetTags:
+          - dprod-green-accservice-prod
+          - dprod-green-cncservice-prod
+          - dprod-green-snbservice-prod
+        description: SCTASK0644411
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      app-csc-ingr-to-acc-svcs-grn-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-green-cscservice-prod
+          targetTags:
+          - cprod-green-accservice-prod
+        description: SCTASK0642870
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      app-csc-ingr-to-cnc-snb-svcs-blue-prd-central:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-blue-cscservice-prod
+          targetTags:
+          - cprod-blue-cncservice-prod
+          - cprod-blue-accservice-prod
+          - cprod-blue-snbservice-prod
+        description: SCTASK0643868
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      app-csc-ingr-to-cnc-snb-svcs-grn-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-green-cscservice-prod
+          targetTags:
+          - cprod-green-cncservice-prod
+          - cprod-green-snbservice-prod
+        description: SCTASK0643145
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      aws-ingress-prod-central1:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '22'
+          sourceRanges:
+          - 10.195.0.0/18
+          targetTags:
+          - rt-db-replication
+          - ads-pmm-server
+          - paas-consul
+          - fw-ssh
+          - fw-mysql-hle
+          - fw-allow-all
+          - mem
+          - mysql
+          - blue
+          - fw-mysql
+          - fw-ssh-hle
+          - ads-pmm-client
+          - fw-netdiagnostics
+          - fw-bastion-agent-lle
+          - ads-pmm-grafana
+          - ssh
+          - fw-netdiagnostics-hle
+          - fw-emysql-hle
+          - fw-essh-hle
+          - fw-enetdiagnostics-hle
+        description: SNOW-15672
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      aws-ingress-prod-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '22'
+          sourceRanges:
+          - 10.195.0.0/18
+          targetTags:
+          - rt-db-replication
+          - ads-pmm-server
+          - paas-consul
+          - fw-ssh
+          - fw-mysql-hle
+          - fw-allow-all
+          - mem
+          - mysql
+          - blue
+          - fw-mysql
+          - fw-ssh-hle
+          - ads-pmm-client
+          - fw-netdiagnostics
+          - fw-bastion-agent-lle
+          - ads-pmm-grafana
+          - ssh
+          - fw-netdiagnostics-hle
+          - fw-emysql-hle
+          - fw-essh-hle
+          - fw-enetdiagnostics-hle
+        description: SNOW-15672
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      aws-workspace-crp-ingress-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+            - '80'
+          sourceRanges:
+          - 10.195.128.0/18
+          - 10.195.64.0/24
+          - 10.195.192.0/24
+          - 10.195.0.0/18
+          targetTags:
+          - cprod-blue-kasstool-prod
+          - cprod-green-kasstool-prod
+          - batch-admin
+          - kemservice
+          - ads-pmm-grafana
+          - rundeck
+          - fw-kasstool
+        description: SCTASK1042752,SNOW-15692
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      aws-workspace-crp-ingress-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+            - '80'
+          sourceRanges:
+          - 10.195.128.0/18
+          - 10.195.64.0/24
+          - 10.195.192.0/24
+          - 10.195.0.0/18
+          targetTags:
+          - dprod-blue-kasstool-prod
+          - dprod-green-kasstool-prod
+          - batch-admin
+          - kemservice
+          - ads-pmm-grafana
+          - rundeck
+          - fw-kasstool
+        description: SCTASK1042752,SNOW-15692
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      bda-ms-prd-east-to-kafka-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '2181'
+            - '9092'
+            - '9094'
+            - '50500'
+          sourceRanges:
+          - 10.188.20.0/23
+          targetTags:
+          - kafka
+          - blue
+          - fw-allow-all
+        description: SCTASK0647559
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      bda-ms-prd-east-to-kafka-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '2181'
+            - '9092'
+            - '9094'
+            - '50500'
+          sourceRanges:
+          - 10.188.20.0/23
+          targetTags:
+          - kafka
+          - blue
+          - fw-allow-all
+        description: SCTASK0647559
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      bda-ms-prd-to-shop-prd-kafka:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '9091'
+            - '9092'
+            - '9093'
+          sourceRanges:
+          - 10.185.24.0/23
+          - 10.189.22.0/23
+          targetTags:
+          - fw-kafka
+        description: SNOW-17082
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      blue-snbservice-to-kos-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '9092'
+          sourceRanges:
+          - 10.208.12.0/22
+          targetTags:
+          - kafka
+        description: SNOW-16050
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cavisson-ext-to-prd-tcp:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 35.184.131.5/32
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cavisson-ext-to-prd-https:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 35.184.131.5/32
+          targetTags:
+          - production-blue-webstoreui-stage
+          - production-blue-snbservice-prod
+          - production-green-webstoreui
+          - production-green-searchrestapi-ta
+          - production-staging-searchrestapi-ta
+          - production-green-snbservice-prod
+          - production-blue-searchrestapi-ta
+          - production-blue-snbservice-stage
+          - production-blue-webstoreui
+        description: SCTASK0401400
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cavisson-ext-to-prd-east-tcp:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 35.184.131.5/32
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cavisson-prd-ingress:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+            - 7890-7899
+          sourceRanges:
+          - 10.206.96.0/25
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cavisson-prd-ingress-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+            - 7890-7899
+          sourceRanges:
+          - 10.206.96.0/25
+          - 10.206.224.0/25
+        description: SCTASK0466640,SCTASK0737869
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cavisson-prd-to-prod-east-tcp:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - 7891-7999
+          sourceRanges:
+          - 10.206.96.8/32
+        description: SCTASK0426434
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cavisson-prd-ing:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '4431'
+            - 7891-7899
+            - '7991'
+            - '8001'
+            - '9012'
+            - '9999'
+          sourceRanges:
+          - 10.206.224.2/32
+          targetTags:
+          - fw-cavisson
+        description: SCTASK0795215
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cavisson-to-prd-central:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - 7890-7899
+          sourceRanges:
+          - 10.206.96.0/25
+          - 10.188.103.0/25
+          - 10.186.219.128/25
+          - 10.188.70.0/23
+          - 10.184.104.0/25
+          - 10.184.70.0/23
+          - 10.188.102.0/25
+          - 10.184.105.0/25
+          - 10.184.68.0/23
+          - 10.184.104.128/25
+          - 10.190.127.0/25
+          - 10.206.224.0/25
+          - 10.188.102.128/25
+          - 10.188.68.0/23
+          targetTags:
+          - fw-cavisson
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      multi-subnet-prd-ingress:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - 7890-7899
+          sourceRanges:
+          - 10.206.96.0/25
+          - 10.188.103.0/25
+          - 10.186.219.128/25
+          - 10.188.70.0/23
+          - 10.184.104.0/25
+          - 10.184.70.0/23
+          - 10.188.102.0/25
+          - 10.184.105.0/25
+          - 10.184.68.0/23
+          - 10.184.104.128/25
+          - 10.190.127.0/25
+          - 10.206.224.0/25
+          - 10.188.102.128/25
+          - 10.188.68.0/23
+          targetTags:
+          - fw-cavisson
+        description:
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cnc-svcs-ingr-to-acc-mgmt-blue-prd-central:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-blue-cncservice-stage
+          - cprod-blue-cncservice-prod
+          targetTags:
+          - cprod-blue-accservice-prod
+          - cprod-blue-accservice-stage
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cnc-svcs-ingr-to-acc-mgmt-blue-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - dprod-blue-cncservice-prod
+          - dprod-blue-cncservice-stage
+          targetTags:
+          - dprod-blue-accservice-prod
+          - dprod-blue-accservice-stage
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cnc-svcs-ingr-to-acc-mgmt-grn-prd-cntrl:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-green-cncservice-stage
+          - cprod-green-cncservice-prod
+          targetTags:
+          - cprod-green-accservice-stage
+          - cprod-green-accservice-prod
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cnc-svcs-ingr-to-acc-mgmt-grn-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - dprod-green-cncservice-stage
+          - dprod-green-cncservice-prod
+          targetTags:
+          - dprod-green-accservice-prod
+          - dprod-green-accservice-stage
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cnc-ui-ingr-to-cnc-acc-svcs-blue-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-blue-cscui-prod
+          targetTags:
+          - cprod-blue-cncservice-stage
+          - cprod-blue-cscservice-prod
+          - cprod-blue-cncservice-prod
+          - cprod-blue-accservice-prod
+          - cprod-blue-snbservice-prod
+          - cprod-blue-snbservice
+          - cprod-blue-snbservice-stage
+          - cprod-blue-accservice-stage
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cnc-ui-ingr-to-cnc-acc-svcs-blue-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - dprod-blue-cscui-prod
+          targetTags:
+          - dprod-blue-cncservice-prod
+          - dprod-blue-accservice-prod
+          - dprod-blue-cscservice-prod
+          - dprod-blue-cncservice-stage
+          - dprod-blue-snbservice
+          - dprod-blue-snbservice-stage
+          - dprod-blue-accservice-stage
+          - dprod-blue-snbservice-prod
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cnc-ui-ingr-to-cnc-acc-svcs-grn-prod:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-green-cscui-prod
+          targetTags:
+          - cprod-green-snbservice-stage
+          - cprod-green-accservice-stage
+          - cprod-green-cncservice-stage
+          - cprod-green-cscservice-prod
+          - cprod-green-accservice-prod
+          - cprod-green-snbservice
+          - cprod-green-cncservice-prod
+          - cprod-green-snbservice-prod
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cnc-ui-ingr-to-cnc-acc-svcs-grn-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - dprod-green-cscui-prod
+          targetTags:
+          - dprod-green-snbservice
+          - dprod-green-cncservice-stage
+          - dprod-green-accservice-prod
+          - dprod-green-cncservice-prod
+          - dprod-green-cscservice-prod
+          - dprod-green-snbservice-prod
+          - dprod-green-snbservice-stage
+          - dprod-green-accservice-stage
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cnc-ui-ingr-to-cnc-svcs-blue-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-blue-cncui-prod
+          - cprod-blue-cncui
+          - cprod-blue-cncui-prod-stage
+          targetTags:
+          - cprod-blue-cncservice-stage
+          - cprod-blue-cncservice-prod
+          - cprod-blue-accservice-prod
+          - cprod-blue-snbservice-prod
+          - cprod-blue-snbservice
+          - cprod-blue-snbservice-stage
+          - cprod-blue-accservice-stage
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cnc-ui-ingr-to-cnc-svcs-blue-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - dprod-blue-cncui
+          - dprod-blue-cncui-prod-stage
+          - dprod-blue-cncui-prod
+          targetTags:
+          - dprod-blue-cncservice-prod
+          - dprod-blue-accservice-prod
+          - dprod-blue-cncservice-stage
+          - dprod-blue-snbservice
+          - dprod-blue-snbservice-stage
+          - dprod-blue-accservice-stage
+          - dprod-blue-snbservice-prod
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cnc-ui-ingr-to-cnc-svcs-grn-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-green-cncui
+          - cprod-green-cncui-prod-stage
+          - cprod-green-cncui-prod
+          targetTags:
+          - cprod-green-snbservice-stage
+          - cprod-green-accservice-stage
+          - cprod-green-cncservice-stage
+          - cprod-green-accservice-prod
+          - cprod-green-snbservice
+          - cprod-green-cncservice-prod
+          - cprod-green-snbservice-prod
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      cnc-ui-ingr-to-cnc-svcs-grn-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - dprod-green-cncui-prod
+          - dprod-green-cncui
+          - dprod-green-cncui-prod-stage
+          targetTags:
+          - dprod-green-snbservice
+          - dprod-green-cncservice-stage
+          - dprod-green-accservice-prod
+          - dprod-green-cncservice-prod
+          - dprod-green-snbservice-prod
+          - dprod-green-snbservice-stage
+          - dprod-green-accservice-stage
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      consul-egr-to-blue-prd:
+        rule:
+          allow:
+          - protocol: udp
+            ports:
+            - '8301'
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+            - 8500-8501
+            - 8300-8302
+            - '8253'
+          destinationRanges:
+          - 10.208.120.0/22
+          - 10.208.112.0/22
+          targetTags:
+          - consul
+        description: SCTASK0637396
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      consul-egr-to-blue-prd-east:
+        rule:
+          allow:
+          - protocol: udp
+            ports:
+            - '8301'
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+            - 8500-8501
+            - 8300-8302
+            - '8253'
+          destinationRanges:
+          - 10.208.248.0/22
+          - 10.208.240.0/22
+          targetTags:
+          - consul
+        description: SCTASK0577075
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      consul-egr-to-grn-prd:
+        rule:
+          allow:
+          - protocol: udp
+            ports:
+            - '8301'
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+            - 8500-8501
+            - 8300-8302
+            - '8253'
+          destinationRanges:
+          - 10.208.120.0/22
+          - 10.208.112.0/22
+          targetTags:
+          - consul
+        description: SCTASK0637396
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      consul-egr-to-grn-prd-east:
+        rule:
+          allow:
+          - protocol: udp
+            ports:
+            - '8301'
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+            - 8500-8501
+            - 8300-8302
+            - '8253'
+          destinationRanges:
+          - 10.208.248.0/22
+          - 10.208.240.0/22
+          targetTags:
+          - consul
+        description: SCTASK0577075
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      consul-ingr-to-blue-prd:
+        rule:
+          allow:
+          - protocol: udp
+            ports:
+            - '8301'
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+            - 8500-8501
+            - 8300-8302
+            - '8253'
+          sourceTags:
+          - consul
+          targetTags:
+          - cprod-blue-cncservice-stage
+          - cprod-blue-cncservice-prod
+          - cprod-blue-accservice-prod
+          - cprod-blue-accservice-stage
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      consul-ingr-to-blue-prd-east:
+        rule:
+          allow:
+          - protocol: udp
+            ports:
+            - '8301'
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+            - 8500-8501
+            - 8300-8302
+            - '8253'
+          sourceTags:
+          - consul
+          targetTags:
+          - dprod-blue-cncservice-prod
+          - dprod-blue-accservice-prod
+          - dprod-blue-cncservice-stage
+          - dprod-blue-accservice-stage
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      consul-ingr-to-grn-prd:
+        rule:
+          allow:
+          - protocol: udp
+            ports:
+            - '8301'
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+            - 8500-8501
+            - 8300-8302
+            - '8253'
+          sourceTags:
+          - consul
+          targetTags:
+          - cprod-green-accservice-stage
+          - cprod-green-cncservice-stage
+          - cprod-green-accservice-prod
+          - cprod-green-cncservice-prod
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      consul-ingr-to-grn-prd-east:
+        rule:
+          allow:
+          - protocol: udp
+            ports:
+            - '8301'
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+            - 8500-8501
+            - 8300-8302
+            - '8253'
+          sourceTags:
+          - consul
+          targetTags:
+          - dprod-green-cncservice-stage
+          - dprod-green-accservice-prod
+          - dprod-green-cncservice-prod
+          - dprod-green-accservice-stage
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      custom-akamai-dev-to-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 72.247.151.10/32
+          - 195.27.249.106/31
+          - 72.246.2.10/32
+          - 80.67.76.177/32
+          - 80.67.76.170/31
+          - 80.67.76.180/32
+          - 193.108.43.150/31
+          - 204.251.204.200/32
+          - 80.67.65.10/32
+          - 74.9.65.103/32
+          - 74.251.154.122/32
+          - 69.27.161.45/32
+          - 69.27.170.110/32
+          - 60.254.150.10/32
+          - 72.247.151.131/32
+          - 72.247.150.10/32
+          - 80.67.76.185/32
+          - 193.108.43.160/30
+          - 80.67.76.169/32
+          - 140.239.2.162/32
+          - 65.46.75.254/32
+          - 80.67.76.178/31
+          - 122.103.238.70/32
+          - 80.67.76.172/32
+          - 96.17.73.220/31
+          - 80.67.64.10/32
+          - 60.254.174.10/32
+          - 66.239.162.121/32
+          - 81.145.36.61/32
+          - 96.17.73.212/30
+          - 65.44.75.140/32
+          - 71.19.254.140/32
+          - 80.67.68.172/31
+          - 60.254.151.10/32
+          - 72.246.0.10/32
+          - 119.73.252.250/32
+          - 88.2.244.77/32
+          - 80.67.83.10/32
+          - 217.109.58.124/32
+          - 81.252.230.22/32
+          - 80.67.70.10/32
+          - 203.134.166.141/32
+          targetTags:
+          - eprod-blue-snbui
+          - siteshield
+          - akamai-stage
+          - eprod-blue-searchrestapi-ta
+          - akamai-prod
+          - eprod-green-snbui
+          - prod-green-searchrestapi-ta
+          - prod-green-snbui
+          - prod-blue-searchrestapi-ta
+          - eprod-green-searchrestapi-ta
+          - prod-blue-snbui
+        description: SCTASK0545543
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      custom-akamai-dev-to-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 72.247.151.10/32
+          - 195.27.249.106/31
+          - 72.246.2.10/32
+          - 80.67.76.177/32
+          - 80.67.76.170/31
+          - 80.67.76.180/32
+          - 193.108.43.150/31
+          - 204.251.204.200/32
+          - 80.67.65.10/32
+          - 74.9.65.103/32
+          - 74.251.154.122/32
+          - 69.27.161.45/32
+          - 69.27.170.110/32
+          - 60.254.150.10/32
+          - 72.247.151.131/32
+          - 72.247.150.10/32
+          - 80.67.76.185/32
+          - 193.108.43.160/30
+          - 80.67.76.169/32
+          - 140.239.2.162/32
+          - 65.46.75.254/32
+          - 80.67.76.178/31
+          - 122.103.238.70/32
+          - 80.67.76.172/32
+          - 96.17.73.220/31
+          - 80.67.64.10/32
+          - 60.254.174.10/32
+          - 66.239.162.121/32
+          - 81.145.36.61/32
+          - 96.17.73.212/30
+          - 65.44.75.140/32
+          - 71.19.254.140/32
+          - 80.67.68.172/31
+          - 60.254.151.10/32
+          - 72.246.0.10/32
+          - 119.73.252.250/32
+          - 88.2.244.77/32
+          - 80.67.83.10/32
+          - 217.109.58.124/32
+          - 81.252.230.22/32
+          - 80.67.70.10/32
+          - 203.134.166.141/32
+          targetTags:
+          - eprod-blue-snbui
+          - siteshield
+          - akamai-stage
+          - eprod-blue-searchrestapi-ta
+          - akamai-prod
+          - eprod-green-snbui
+          - prod-green-searchrestapi-ta
+          - prod-green-snbui
+          - prod-blue-searchrestapi-ta
+          - eprod-green-searchrestapi-ta
+          - prod-blue-snbui
+        description: SCTASK0539162
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      custom-akamai-stage-to-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 209.8.112.96/30
+          - 209.8.112.104/31
+          - 209.8.112.100/30
+          - 204.2.166.173/32
+          - 67.220.142.22/32
+          - 204.2.166.174/31
+          - 23.50.48.0/20
+          - 67.220.142.21/32
+          - 63.151.118.0/24
+          - 209.170.113.108/32
+          - 208.49.157.52/31
+          - 204.2.166.176/30
+          - 66.198.8.143/32
+          - 209.170.113.98/31
+          - 23.48.168.0/22
+          - 184.84.242.22/31
+          - 184.84.242.21/32
+          - 66.198.8.144/32
+          - 209.170.113.106/31
+          - 67.220.142.20/32
+          - 208.49.157.49/32
+          - 67.220.142.19/32
+          - 66.198.8.141/32
+          - 204.2.166.180/32
+          - 208.49.157.54/32
+          - 209.170.113.100/31
+          - 184.84.242.32/30
+          - 66.198.8.142/32
+          - 208.49.157.50/31
+          targetTags:
+          - eprod-blue-snbui
+          - siteshield
+          - akamai-stage
+          - eprod-blue-searchrestapi-ta
+          - akamai-prod
+          - eprod-green-snbui
+          - prod-green-searchrestapi-ta
+          - prod-green-snbui
+          - prod-blue-searchrestapi-ta
+          - eprod-green-searchrestapi-ta
+          - prod-blue-snbui
+        description: SCTASK0545543
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      custom-akamai-stage-to-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 209.8.112.96/30
+          - 209.8.112.104/31
+          - 209.8.112.100/30
+          - 204.2.166.173/32
+          - 67.220.142.22/32
+          - 204.2.166.174/31
+          - 23.50.48.0/20
+          - 67.220.142.21/32
+          - 63.151.118.0/24
+          - 209.170.113.108/32
+          - 208.49.157.52/31
+          - 204.2.166.176/30
+          - 66.198.8.143/32
+          - 209.170.113.98/31
+          - 23.48.168.0/22
+          - 184.84.242.22/31
+          - 184.84.242.21/32
+          - 66.198.8.144/32
+          - 209.170.113.106/31
+          - 67.220.142.20/32
+          - 208.49.157.49/32
+          - 67.220.142.19/32
+          - 66.198.8.141/32
+          - 204.2.166.180/32
+          - 208.49.157.54/32
+          - 209.170.113.100/31
+          - 184.84.242.32/30
+          - 66.198.8.142/32
+          - 208.49.157.50/31
+          targetTags:
+          - eprod-blue-snbui
+          - siteshield
+          - akamai-stage
+          - eprod-blue-searchrestapi-ta
+          - akamai-prod
+          - eprod-green-snbui
+          - prod-green-searchrestapi-ta
+          - prod-green-snbui
+          - prod-blue-searchrestapi-ta
+          - eprod-green-searchrestapi-ta
+          - prod-blue-snbui
+        description: SCTASK0539162
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      custom-apigee-prd-to-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 54.209.253.252/32
+          - 54.244.7.90/32
+          - 54.244.10.33/32
+          - 54.209.253.251/32
+          - 54.210.253.93/32
+          - 54.210.253.107/32
+          - 54.236.151.37/32
+          - 54.236.161.33/32
+          - 35.225.15.181/32
+          - 35.188.134.216/32
+          - 35.238.91.76/32
+          - 35.184.205.14/32
+          - 104.154.205.252/32
+          - 35.226.23.121/32
+          - 35.190.161.142/32
+          - 104.196.188.11/32
+          targetTags:
+          - prod-blue-snbservice
+          - eprod-blue-snbservice
+        description: SCTASK0545543
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      custom-apigee-prd-to-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 54.209.253.252/32
+          - 54.244.7.90/32
+          - 54.244.10.33/32
+          - 54.209.253.251/32
+          - 54.210.253.93/32
+          - 54.210.253.107/32
+          - 54.236.151.37/32
+          - 54.236.161.33/32
+          - 35.225.15.181/32
+          - 35.188.134.216/32
+          - 35.238.91.76/32
+          - 35.184.205.14/32
+          - 104.154.205.252/32
+          - 35.226.23.121/32
+          - 35.190.161.142/32
+          - 104.196.188.11/32
+          targetTags:
+          - prod-blue-snbservice
+          - eprod-blue-snbservice
+        description: SCTASK0539162
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      custom-site-shield-to-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 23.212.53.0/24
+          - 184.27.120.0/24
+          - 184.51.199.0/24
+          - 72.247.10.0/24
+          - 184.84.239.0/24
+          - 104.85.166.0/24
+          - 23.63.227.0/24
+          - 2.18.240.0/24
+          - 72.246.216.0/24
+          - 23.215.130.0/24
+          - 23.15.7.0/24
+          - 104.71.131.0/24
+          - 184.25.157.0/24
+          - 23.35.150.0/24
+          - 96.17.145.0/24
+          - 23.45.182.0/24
+          - 72.246.150.0/24
+          - 23.205.170.0/24
+          - 23.215.131.0/24
+          - 184.51.151.0/24
+          - 184.28.17.0/24
+          - 23.220.148.0/24
+          - 23.219.36.0/24
+          - 72.246.43.0/24
+          - 23.215.15.0/24
+          - 23.216.10.0/24
+          - 23.14.94.0/24
+          - 72.246.52.0/24
+          - 23.79.255.0/24
+          - 96.7.55.0/24
+          - 104.97.78.0/24
+          - 2.16.106.0/24
+          - 23.79.240.0/24
+          - 72.247.190.0/24
+          - 184.84.243.0/24
+          - 184.24.98.0/24
+          - 184.27.45.0/24
+          targetTags:
+          - eprod-blue-snbui
+          - siteshield
+          - akamai-stage
+          - eprod-blue-searchrestapi-ta
+          - akamai-prod
+          - eprod-green-snbui
+          - prod-green-searchrestapi-ta
+          - prod-green-snbui
+          - prod-blue-searchrestapi-ta
+          - eprod-green-searchrestapi-ta
+          - prod-blue-snbui
+        description: SCTASK0545543
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      custom-site-shield-to-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 23.212.53.0/24
+          - 184.27.120.0/24
+          - 184.51.199.0/24
+          - 72.247.10.0/24
+          - 184.84.239.0/24
+          - 104.85.166.0/24
+          - 23.63.227.0/24
+          - 2.18.240.0/24
+          - 72.246.216.0/24
+          - 23.215.130.0/24
+          - 23.15.7.0/24
+          - 104.71.131.0/24
+          - 184.25.157.0/24
+          - 23.35.150.0/24
+          - 96.17.145.0/24
+          - 23.45.182.0/24
+          - 72.246.150.0/24
+          - 23.205.170.0/24
+          - 23.215.131.0/24
+          - 184.51.151.0/24
+          - 184.28.17.0/24
+          - 23.220.148.0/24
+          - 23.219.36.0/24
+          - 72.246.43.0/24
+          - 23.215.15.0/24
+          - 23.216.10.0/24
+          - 23.14.94.0/24
+          - 72.246.52.0/24
+          - 23.79.255.0/24
+          - 96.7.55.0/24
+          - 104.97.78.0/24
+          - 2.16.106.0/24
+          - 23.79.240.0/24
+          - 72.247.190.0/24
+          - 184.84.243.0/24
+          - 184.24.98.0/24
+          - 184.27.45.0/24
+          targetTags:
+          - eprod-blue-snbui
+          - siteshield
+          - akamai-stage
+          - eprod-blue-searchrestapi-ta
+          - akamai-prod
+          - eprod-green-snbui
+          - prod-green-searchrestapi-ta
+          - prod-green-snbui
+          - prod-blue-searchrestapi-ta
+          - eprod-green-searchrestapi-ta
+          - prod-blue-snbui
+        description: SCTASK0539162
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-apigee-prd-ing-to-kohls-prd-central:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceRanges:
+          - 18.210.146.249/32
+          - 18.235.138.76/32
+          - 34.193.111.18/32
+          targetTags:
+          - fw-apigee-prod
+        description: REQ0939037
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-apigee-prd-ing-to-kohls-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceRanges:
+          - 18.210.146.249/32
+          - 18.235.138.76/32
+          - 34.193.111.18/32
+          targetTags:
+          - fw-apigee-prod
+        description: REQ0939037
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-kohls-networks-to-prd:
+        rule:
+          allow:
+          - protocol: icmp
+          - protocol: udp
+          - protocol: tcp
+          sourceRanges:
+          - 10.9.65.7/32
+          - 172.26.0.0/15
+          - 10.9.65.9/32
+          - 10.4.64.164/32
+          - 10.9.65.11/32
+          - 10.4.64.162/32
+          - 10.4.64.161/32
+          - 10.0.0.0/8
+          - 10.4.64.163/32
+          - 10.4.64.166/32
+          - 10.9.65.10/32
+          - 10.4.64.165/32
+          - 10.9.65.8/32
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-kohls-networks-to-prd-central:
+        rule:
+          allow:
+          - protocol: icmp
+          - protocol: udp
+          - protocol: tcp
+          sourceRanges:
+          - 10.9.65.7/32
+          - 172.26.0.0/15
+          - 10.9.65.9/32
+          - 10.4.64.162/32
+          - 10.0.0.0/8
+          - 10.9.65.10/32
+          - 10.4.64.165/32
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-kohls-networks-to-prd-east:
+        rule:
+          allow:
+          - protocol: icmp
+          - protocol: udp
+          - protocol: tcp
+          sourceRanges:
+          - 10.9.65.7/32
+          - 172.26.0.0/15
+          - 10.4.64.164/32
+          - 10.9.65.11/32
+          - 10.4.64.162/32
+          - 202.44.56.32/32
+          - 10.4.64.161/32
+          - 10.0.0.0/8
+          - 202.44.58.32/32
+          - 10.4.64.163/32
+          - 10.4.64.166/32
+          - 10.9.65.10/32
+          - 10.9.65.8/32
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-kohls-networks-ingress:
+        rule:
+          allow:
+          - protocol: icmp
+          - protocol: udp
+          - protocol: tcp
+          sourceRanges:
+          - 10.9.65.7/32
+          - 172.26.0.0/15
+          - 10.4.64.162/32
+          - 202.44.56.32/32
+          - 10.4.64.161/32
+          - 10.0.0.0/8
+          - 202.44.58.32/32
+          - 10.9.65.10/32
+          - 10.9.65.8/32
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-kohls-public-to-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 66.232.224.0/20
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-kohls-public-to-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 66.232.224.0/20
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-kohls-security-to-prd:
+        rule:
+          allow:
+          - protocol: icmp
+          - protocol: tcp
+          - protocol: udp
+          sourceRanges:
+          - 10.206.5.2/32
+          - 10.206.5.3/32
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-kohls-security-to-prd-east:
+        rule:
+          allow:
+          - protocol: icmp
+          - protocol: tcp
+          - protocol: udp
+          sourceRanges:
+          - 10.206.5.2/32
+          - 10.206.5.3/32
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-apigee-whitelist-to-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '8080'
+          sourceRanges:
+          - 54.209.253.252
+          - 54.244.10.33
+          - 54.210.253.107
+          - 54.236.161.33
+          - 54.209.253.251
+          - 54.244.7.90
+          - 54.210.253.93
+          - 54.236.151.37
+          - 35.225.15.181/32
+          - 35.188.134.216/32
+          - 35.238.91.76/32
+          - 35.184.205.14/32
+          - 104.154.205.252/32
+          - 35.226.23.121/32
+          - 35.190.161.142/32
+          - 104.196.188.11/32
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-apigee-whitelist-to-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '8080'
+          sourceRanges:
+          - 54.209.253.252
+          - 54.244.10.33
+          - 54.210.253.107
+          - 54.236.161.33
+          - 54.209.253.251
+          - 54.244.7.90
+          - 54.210.253.93
+          - 54.236.151.37
+          - 35.225.15.181/32
+          - 35.188.134.216/32
+          - 35.238.91.76/32
+          - 35.184.205.14/32
+          - 104.154.205.252/32
+          - 35.226.23.121/32
+          - 35.190.161.142/32
+          - 104.196.188.11/32
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-gcp-health-check-to-prd:
+        rule:
+          allow:
+          - protocol: tcp
+          sourceRanges:
+          - 209.85.204.0/22
+          - 209.85.152.0/22
+          - 130.211.0.0/22
+          - 35.191.0.0/16
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-gcp-health-check-to-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+          sourceRanges:
+          - 209.85.204.0/22
+          - 209.85.152.0/22
+          - 130.211.0.0/22
+          - 35.191.0.0/16
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-kohls-prd-to-prd:
+        rule:
+          allow:
+          - protocol: icmp
+          - protocol: udp
+          - protocol: tcp
+          sourceRanges:
+          - 10.208.248.0/22
+          - 10.208.120.0/22
+          - 10.208.154.0/29
+          - 10.208.26.0/29
+          - 10.208.240.0/22
+          - 10.208.112.0/22
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-kohls-prd-to-prd-east:
+        rule:
+          allow:
+          - protocol: icmp
+          - protocol: udp
+          - protocol: tcp
+          sourceRanges:
+          - 10.208.248.0/22
+          - 10.208.120.0/22
+          - 10.208.240.0/22
+          - 10.208.26.0/29
+          - 10.208.154.0/29
+          - 10.208.112.0/22
+        description: SCTASK0626402
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-ssh-allow-prd-central:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '22'
+          sourceRanges:
+          - 10.208.112.0/22
+          - 10.208.120.0/22
+          - 10.208.26.0/29
+          - 10.208.248.0/22
+          - 10.208.240.0/22
+          - 10.208.154.0/29
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-ssh-allow-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '22'
+          sourceRanges:
+          - 10.208.112.0/22
+          - 10.208.120.0/22
+          - 10.208.26.0/29
+          - 10.208.248.0/22
+          - 10.208.240.0/22
+          - 10.208.154.0/29
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-tcp-allow-prd-central:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '2181'
+            - '9092'
+            - '8443'
+            - '9090'
+            - '8080'
+            - '4443'
+            - '3389'
+          sourceRanges:
+          - 10.208.248.0/22
+          - 10.208.120.0/22
+          - 10.208.154.0/29
+          - 10.208.26.0/29
+          - 10.208.240.0/22
+          - 10.208.30.0/23
+          - 10.208.112.0/22
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-whitelist-akamaidev-to-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '8080'
+          sourceRanges:
+          - 72.247.151.10/32
+          - 195.27.249.106/31
+          - 72.246.2.10/32
+          - 80.67.65.10/32
+          - 69.27.161.45/32
+          - 69.27.170.110/32
+          - 80.67.76.169/32
+          - 140.239.2.162/32
+          - 80.67.76.178/31
+          - 122.103.238.70/32
+          - 96.17.73.220/31
+          - 80.67.76.172/32
+          - 65.46.75.254/32
+          - 193.108.43.160/30
+          - 80.67.76.185/32
+          - 72.247.150.10/32
+          - 72.247.151.131/32
+          - 60.254.150.10/32
+          - 74.251.154.122/32
+          - 74.9.65.103/32
+          - 204.251.204.200/32
+          - 193.108.43.150/31
+          - 80.67.76.180/32
+          - 80.67.76.170/31
+          - 80.67.76.177/32
+          - 60.254.174.10/32
+          - 80.67.70.10/32
+          - 81.252.230.22/32
+          - 88.2.244.77/32
+          - 119.73.252.250/32
+          - 72.246.0.10/32
+          - 71.19.254.140/32
+          - 81.145.36.61/32
+          - 66.239.162.121/32
+          - 96.17.73.212/30
+          - 80.67.68.172/31
+          - 65.44.75.140/32
+          - 80.67.64.10/32
+          - 60.254.151.10/32
+          - 80.67.83.10/32
+          - 217.109.58.124/32
+          - 203.134.166.141/32
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-whitelist-akamaidev-to-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '8080'
+          sourceRanges:
+          - 72.247.151.10/32
+          - 195.27.249.106/31
+          - 72.246.2.10/32
+          - 80.67.65.10/32
+          - 69.27.161.45/32
+          - 69.27.170.110/32
+          - 80.67.76.169/32
+          - 140.239.2.162/32
+          - 80.67.76.178/31
+          - 122.103.238.70/32
+          - 96.17.73.220/31
+          - 80.67.76.172/32
+          - 65.46.75.254/32
+          - 193.108.43.160/30
+          - 80.67.76.185/32
+          - 72.247.150.10/32
+          - 72.247.151.131/32
+          - 60.254.150.10/32
+          - 74.251.154.122/32
+          - 74.9.65.103/32
+          - 204.251.204.200/32
+          - 193.108.43.150/31
+          - 80.67.76.180/32
+          - 80.67.76.170/31
+          - 80.67.76.177/32
+          - 60.254.174.10/32
+          - 80.67.70.10/32
+          - 81.252.230.22/32
+          - 88.2.244.77/32
+          - 119.73.252.250/32
+          - 72.246.0.10/32
+          - 71.19.254.140/32
+          - 81.145.36.61/32
+          - 66.239.162.121/32
+          - 96.17.73.212/30
+          - 80.67.68.172/31
+          - 65.44.75.140/32
+          - 80.67.64.10/32
+          - 60.254.151.10/32
+          - 80.67.83.10/32
+          - 217.109.58.124/32
+          - 203.134.166.141/32
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-whitelist-akamaistage-to-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '8080'
+          sourceRanges:
+          - 209.8.112.96/30
+          - 209.8.112.100/30
+          - 67.220.142.22/32
+          - 23.50.48.0/20
+          - 67.220.142.21/32
+          - 63.151.118.0/24
+          - 204.2.166.176/30
+          - 66.198.8.143/32
+          - 209.170.113.98/31
+          - 184.84.242.22/31
+          - 23.48.168.0/22
+          - 208.49.157.52/31
+          - 209.170.113.108/32
+          - 184.84.242.21/32
+          - 204.2.166.174/31
+          - 204.2.166.173/32
+          - 209.8.112.104/31
+          - 66.198.8.142/32
+          - 184.84.242.32/30
+          - 209.170.113.100/31
+          - 66.198.8.141/32
+          - 67.220.142.19/32
+          - 208.49.157.49/32
+          - 67.220.142.20/32
+          - 209.170.113.106/31
+          - 66.198.8.144/32
+          - 204.2.166.180/32
+          - 208.49.157.54/32
+          - 208.49.157.50/31
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-whitelist-akamaistage-to-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '8080'
+          sourceRanges:
+          - 209.8.112.96/30
+          - 209.8.112.100/30
+          - 67.220.142.22/32
+          - 23.50.48.0/20
+          - 67.220.142.21/32
+          - 63.151.118.0/24
+          - 204.2.166.176/30
+          - 66.198.8.143/32
+          - 209.170.113.98/31
+          - 184.84.242.22/31
+          - 23.48.168.0/22
+          - 208.49.157.52/31
+          - 209.170.113.108/32
+          - 184.84.242.21/32
+          - 204.2.166.174/31
+          - 204.2.166.173/32
+          - 209.8.112.104/31
+          - 66.198.8.142/32
+          - 184.84.242.32/30
+          - 209.170.113.100/31
+          - 66.198.8.141/32
+          - 67.220.142.19/32
+          - 208.49.157.49/32
+          - 67.220.142.20/32
+          - 209.170.113.106/31
+          - 66.198.8.144/32
+          - 204.2.166.180/32
+          - 208.49.157.54/32
+          - 208.49.157.50/31
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-whitelist-siteshield-to-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '8080'
+          sourceRanges:
+          - 72.247.10.0/24
+          - 104.85.166.0/24
+          - 23.63.227.0/24
+          - 23.215.130.0/24
+          - 23.15.7.0/24
+          - 184.25.157.0/24
+          - 23.35.150.0/24
+          - 72.246.150.0/24
+          - 23.205.170.0/24
+          - 184.28.17.0/24
+          - 23.220.148.0/24
+          - 23.215.15.0/24
+          - 72.246.43.0/24
+          - 23.215.131.0/24
+          - 96.17.145.0/24
+          - 104.71.131.0/24
+          - 72.246.216.0/24
+          - 2.18.240.0/24
+          - 184.84.239.0/24
+          - 184.51.199.0/24
+          - 184.27.120.0/24
+          - 23.212.53.0/24
+          - 23.14.94.0/24
+          - 184.27.45.0/24
+          - 184.84.243.0/24
+          - 23.79.240.0/24
+          - 104.97.78.0/24
+          - 23.79.255.0/24
+          - 72.246.52.0/24
+          - 23.216.10.0/24
+          - 96.7.55.0/24
+          - 2.16.106.0/24
+          - 184.24.98.0/24
+          - 23.45.182.0/24
+          - 23.219.36.0/24
+          - 184.51.151.0/24
+          - 72.247.190.0/24
+        description: SCTASK0484249
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-whitelist-siteshield-to-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '8080'
+          sourceRanges:
+          - 72.247.10.0/24
+          - 104.85.166.0/24
+          - 23.63.227.0/24
+          - 23.215.130.0/24
+          - 23.15.7.0/24
+          - 184.25.157.0/24
+          - 23.35.150.0/24
+          - 23.45.182.0/24
+          - 72.246.150.0/24
+          - 23.205.170.0/24
+          - 184.28.17.0/24
+          - 23.220.148.0/24
+          - 23.219.36.0/24
+          - 23.215.15.0/24
+          - 72.246.43.0/24
+          - 184.51.151.0/24
+          - 23.215.131.0/24
+          - 96.17.145.0/24
+          - 104.71.131.0/24
+          - 72.246.216.0/24
+          - 2.18.240.0/24
+          - 184.84.239.0/24
+          - 184.51.199.0/24
+          - 184.27.120.0/24
+          - 23.212.53.0/24
+          - 23.14.94.0/24
+          - 184.27.45.0/24
+          - 184.84.243.0/24
+          - 23.79.240.0/24
+          - 104.97.78.0/24
+          - 23.79.255.0/24
+          - 72.246.52.0/24
+          - 23.216.10.0/24
+          - 96.7.55.0/24
+          - 2.16.106.0/24
+          - 72.247.190.0/24
+          - 184.24.98.0/24
+        description: SCTASK0484249
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-whitelist-stackdriver-to-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 35.186.144.97
+          - 54.232.81.104/32
+          - 35.199.66.47
+          - 35.199.157.7
+          - 35.199.67.79
+          - 104.155.77.122/32
+          - 54.245.81.193/32
+          - 23.251.144.62
+          - 54.251.48.53/32
+          - 54.251.48.56/32
+          - 35.187.242.246
+          - 35.203.157.42
+          - 54.235.161.191/32
+          - 107.21.247.114/32
+          - 35.198.18.224
+          - 54.232.88.172/32
+          - 107.21.113.149/32
+          - 35.186.164.184
+          - 54.244.253.127/32
+          - 35.199.27.30
+          - 35.188.230.101
+          - 146.148.59.114/32
+          - 104.155.110.139/32
+          - 54.245.81.104/32
+          - 146.148.41.163/32
+          - 54.251.48.52/32
+          - 146.148.119.250/32
+          - 35.198.221.49
+          - 54.232.88.155/32
+          - 23.251.144.62/32
+          - 35.197.117.125
+        description: SCTASK0717704
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      default-whitelist-stackdriver-to-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 35.186.144.97
+          - 54.232.81.104/32
+          - 35.199.66.47
+          - 35.199.157.7
+          - 35.199.67.79
+          - 104.155.77.122/32
+          - 54.245.81.193/32
+          - 23.251.144.62
+          - 54.251.48.53/32
+          - 54.251.48.56/32
+          - 35.187.242.246
+          - 35.203.157.42
+          - 54.235.161.191/32
+          - 107.21.247.114/32
+          - 35.198.18.224
+          - 54.232.88.172/32
+          - 107.21.113.149/32
+          - 35.186.164.184
+          - 54.244.253.127/32
+          - 35.199.27.30
+          - 35.188.230.101
+          - 146.148.59.114/32
+          - 104.155.110.139/32
+          - 54.245.81.104/32
+          - 146.148.41.163/32
+          - 54.251.48.52/32
+          - 146.148.119.250/32
+          - 35.198.221.49
+          - 54.232.88.155/32
+          - 23.251.144.62/32
+          - 35.197.117.125
+        description: SCTASK0717704
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      dflt-apigee-prod-to-prod-central1:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 18.210.146.24/32
+          - 54.244.7.90/32
+          - 54.244.10.33/32
+          - 104.154.205.252/32
+          - 35.184.205.14/32
+          - 35.238.91.76/32
+          - 18.210.146.249/32
+          - 54.210.253.107/32
+          - 54.210.253.93/32
+          - 54.209.253.251/32
+          - 54.209.253.252/32
+          - 35.188.134.216/32
+          - 104.196.188.11/32
+          - 18.235.138.76/32
+          - 54.236.161.33/32
+          - 54.236.151.37/32
+          - 35.190.161.142/32
+          - 34.193.111.18/32
+          - 35.225.15.181/32
+          - 35.226.23.121/32
+          targetTags:
+          - fw-apigee-prod
+        description:
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      deny-ingr-to-cnc-acc-svc-blue-prd:
+        rule:
+          deny:
+          - protocol: icmp
+          - protocol: udp
+          - protocol: tcp
+          sourceRanges:
+          - 10.0.0.0/8
+          targetTags:
+          - cprod-blue-cncservice-prod
+          - cprod-blue-accservice-prod
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 990
+        logging: false
+      deny-ingr-to-cnc-acc-svcs-blue-prd-east:
+        rule:
+          deny:
+          - protocol: icmp
+          - protocol: udp
+          - protocol: tcp
+          sourceRanges:
+          - 10.0.0.0/8
+          targetTags:
+          - dprod-blue-cncservice-prod
+          - dprod-blue-accservice-prod
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 990
+        logging: false
+      deny-ingr-to-cnc-acc-svcs-grn-prd:
+        rule:
+          deny:
+          - protocol: icmp
+          - protocol: udp
+          - protocol: tcp
+          sourceRanges:
+          - 10.0.0.0/8
+          targetTags:
+          - cprod-green-accservice-prod
+          - cprod-green-cncservice-prod
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 990
+        logging: false
+      deny-ingr-to-cnc-acc-svcs-grn-prd-east:
+        rule:
+          deny:
+          - protocol: icmp
+          - protocol: udp
+          - protocol: tcp
+          sourceRanges:
+          - 10.0.0.0/8
+          targetTags:
+          - dprod-blue-cncservice-prod
+          - dprod-green-accservice-prod
+          - dprod-green-cncservice-prod
+          - dprod-blue-accservice-prod
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 990
+        logging: false
+      deny-kohls-user-networks-to-prd:
+        rule:
+          deny:
+          - protocol: icmp
+          - protocol: udp
+          - protocol: tcp
+          sourceRanges:
+          - 10.57.0.0/16
+          - 172.26.0.0/15
+          - 10.9.65.0/25
+          - 10.4.64.0/23
+          - 10.101.0.0/16
+          - 10.100.0.0/16
+        description: SNOW-15974,SNOW-16128
+        direction: INGRESS
+        disabled: false
+        priority: 950
+        logging: false
+      deny-kohls-user-networks-to-prd-east:
+        rule:
+          deny:
+          - protocol: icmp
+          - protocol: udp
+          - protocol: tcp
+          sourceRanges:
+          - 10.57.0.0/16
+          - 172.26.0.0/15
+          - 10.9.65.0/25
+          - 10.4.64.0/23
+          - 10.101.0.0/16
+          - 10.100.0.0/16
+        description: SCTASK1064560,SNOW-16128
+        direction: INGRESS
+        disabled: false
+        priority: 950
+        logging: false
+      ecom-xpn-tonomi-prd-ing-to-kos-xpn-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '22'
+          sourceRanges:
+          - 10.184.72.0/24
+          - 10.188.72.0/24
+          targetTags:
+          - tonomirunner
+        description: SCTASK0850621
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      ecom-xpn-tonomi-prd-ing-to-kos-xpn-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '22'
+          sourceRanges:
+          - 10.184.72.0/24
+          - 10.188.72.0/24
+          targetTags:
+          - tonomirunner
+        description: SCTASK0850621
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      google-uptime-checks-to-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceRanges:
+          - 35.233.165.146
+          - 35.192.92.84
+          - 146.148.59.114
+          - 35.233.206.171
+          - 35.236.207.68
+          - 146.148.41.163
+          - 35.197.32.224
+          - 35.224.249.156
+          - 35.199.157.7
+          - 35.185.252.44
+          - 35.236.221.2
+          - 23.251.144.62
+          - 104.197.30.241
+          - 35.238.3.7
+          - 35.238.118.210
+          - 35.203.157.42
+          - 35.186.176.31
+          - 35.203.129.73
+          - 35.186.164.184
+          - 35.186.167.85
+          - 35.199.12.162
+          - 35.199.27.30
+          - 35.221.55.249
+          - 35.188.230.101
+          - 35.239.194.85
+          - 35.233.167.246
+          - 35.197.117.125
+          targetTags:
+          - fw-haproxy
+          - fw-site-shield
+        description: SCTASK0929988
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      google-uptime-checks-to-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceRanges:
+          - 35.233.165.146
+          - 35.192.92.84
+          - 146.148.59.114
+          - 35.233.206.171
+          - 35.236.207.68
+          - 146.148.41.163
+          - 35.197.32.224
+          - 35.224.249.156
+          - 35.199.157.7
+          - 35.185.252.44
+          - 35.236.221.2
+          - 23.251.144.62
+          - 104.197.30.241
+          - 35.238.3.7
+          - 35.238.118.210
+          - 35.203.157.42
+          - 35.186.176.31
+          - 35.203.129.73
+          - 35.186.164.184
+          - 35.186.167.85
+          - 35.199.12.162
+          - 35.199.27.30
+          - 35.221.55.249
+          - 35.188.230.101
+          - 35.239.194.85
+          - 35.233.167.246
+          - 35.197.117.125
+          targetTags:
+          - fw-haproxy
+          - fw-site-shield
+        description: SCTASK0929988
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      griddynamics-ext-to-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 10.9.65.7/32
+          - 10.4.64.162/32
+          - 10.9.65.10/32
+          - 10.9.65.8/32
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      gspann-ext-to-prd:
+        rule:
+          allow:
+          - protocol: icmp
+          sourceRanges:
+          - 10.4.64.161/32
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      gspann-ext-to-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 10.4.64.161/32
+          - 10.9.65.8/32
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      ha-proxy-ingr-to-acc-svcs-blue-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-blue-accservice-stage-proxy
+          - cprod-blue-accservice-prod-proxy
+          targetTags:
+          - cprod-blue-accservice-prod
+          - cprod-blue-accservice-stage
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      ha-proxy-ingr-to-acc-svcs-blue-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - dprod-blue-accservice-prod-proxy
+          - dprod-blue-accservice-stage-proxy
+          targetTags:
+          - dprod-blue-accservice-prod
+          - dprod-blue-accservice-stage
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      ha-proxy-ingr-to-acc-svcs-grn-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-green-accservice-stage-proxy
+          - cprod-green-accservice-prod-proxy
+          targetTags:
+          - cprod-green-accservice-stage
+          - cprod-green-accservice-prod
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      ha-proxy-ingr-to-acc-svcs-grn-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - dprod-green-accservice-prod-proxy
+          - dprod-green-accservice-stage-proxy
+          targetTags:
+          - dprod-green-accservice-prod
+          - dprod-green-accservice-stage
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      ha-proxy-ingr-to-cnc-svcs-blue-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-blue-cncservice-prod-proxy
+          - cprod-blue-cncservice-stage-proxy
+          targetTags:
+          - cprod-blue-cncservice-stage
+          - cprod-blue-cncservice-prod
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      ha-proxy-ingr-to-cnc-svcs-blue-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - dprod-blue-cncservice-stage-proxy
+          - dprod-blue-cncservice-prod-proxy
+          targetTags:
+          - dprod-blue-cncservice-prod
+          - dprod-blue-cncservice-stage
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      ha-proxy-ingr-to-cnc-svcs-grn-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-green-cncservice-prod-proxy
+          - cprod-green-cncservice-stage-proxy
+          targetTags:
+          - cprod-green-cncservice-stage
+          - cprod-green-cncservice-prod
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      ha-proxy-ingr-to-cnc-svcs-grn-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - dprod-green-cncservice-prod-proxy
+          - dprod-green-cncservice-stage-proxy
+          targetTags:
+          - dprod-green-cncservice-stage
+          - dprod-green-cncservice-prod
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      informatica-prod-servers-ing-to-kos-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '3306'
+          sourceRanges:
+          - 10.2.43.141/32
+          - 10.2.43.139/32
+          - 10.2.43.137/32
+          - 10.2.43.140/32
+          - 10.2.43.138/32
+          targetTags:
+          - fw-allow-all
+          - mysql
+          - blue
+        description: SCTASK0794220
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      informatica-prod-servers-ing-to-kos-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '3306'
+          sourceRanges:
+          - 10.2.43.141/32
+          - 10.2.43.139/32
+          - 10.2.43.137/32
+          - 10.2.43.140/32
+          - 10.2.43.138/32
+          targetTags:
+          - fw-allow-all
+          - mysql
+          - blue
+        description: SCTASK0794220
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      jumpserver-ingr-to-cnc-acc-mgmt-blue-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '22'
+          sourceTags:
+          - jump-server
+          targetTags:
+          - cprod-blue-cncservice-prod
+          - cprod-blue-accservice-prod
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      jumpserver-ingr-to-cnc-acc-mgmt-blue-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - jump-server
+          targetTags:
+          - dprod-blue-cncservice-prod
+          - dprod-blue-accservice-prod
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      jumpserver-ingr-to-cnc-acc-mgmt-grn-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - jump-server
+          targetTags:
+          - cprod-green-accservice-prod
+          - cprod-green-cncservice-prod
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      jumpsrvr-ingr-to-cnc-acc-mgmt-grn-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - jump-server
+          targetTags:
+          - dprod-green-accservice-prod
+          - dprod-green-cncservice-prod
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kasstool-ingr-to-cnc-acc-svcs-blue-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-blue-kasstool-pro
+          targetTags:
+          - cprod-blue-accservice-prod
+          - cprod-blue-accservice-stage
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kasstool-ingr-to-cnc-acc-svcs-grn-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-green-kasstool-pro
+          targetTags:
+          - cprod-green-accservice-stage
+          - cprod-green-accservice-prod
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kohls-ecom-pe-prd-ing-to-kos-xpn-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '22'
+          sourceRanges:
+          - 10.188.74.0/25
+          - 10.184.74.0/25
+          targetTags:
+          - tonomirunner
+          - rundeck
+        description: SCTASK0810540
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kohls-ecom-pe-prd-ing-to-kos-xpn-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '22'
+          sourceRanges:
+          - 10.188.74.0/25
+          - 10.184.74.0/25
+          targetTags:
+          - tonomirunner
+          - rundeck
+        description: SCTASK0810540
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kohls-kos-production-ing-to-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod
+          - blue
+          - green
+          - cprod-bue-searchrestapi-sl
+          - cprod-green-searchrestapi-sl
+          targetTags:
+          - cprod
+          - cprod-green-accservice-prod
+          - blue
+        description: SCTASK0881682
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kohls-kos-xpn-prd-central-egress-to-pnf-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          destinationRanges:
+          - 10.184.43.0/24
+        description: SCTASK0663248
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kohls-kos-xpn-prd-east-egress-to-pnf-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          destinationRanges:
+          - 10.188.45.0/24
+        description: SCTASK0663248
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kohls-on-prem-ibm-mirror-maker-to-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '9092'
+          sourceRanges:
+          - 10.202.6.217
+          - 10.202.6.218
+        description: SCTASK0520597
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kohls-on-prem-ibm-mirror-maker-to-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '9092'
+          sourceRanges:
+          - 10.202.6.217
+          - 10.202.6.218
+        description: SCTASK0520597
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kohls-on-prem-ibm-server-to-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '22'
+          sourceRanges:
+          - 10.202.137.16
+          - 10.202.137.18
+          - 10.202.137.14
+          - 10.202.137.20
+        description: SCTASK0541601
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kohls-on-prem-jump-servers-to-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+            - '3036'
+            - '8080'
+            - '9090'
+            - '9443'
+            - '8443'
+            - '27017'
+            - 9092-9093
+            - 16379-16380
+            - 8300-8302
+            - 8500-8501
+            - 8200-8201
+            - '8243'
+            - '8210'
+            - '8253'
+            - '2181'
+            - '22'
+          sourceRanges:
+          - 10.212.188.128/32
+          - 10.216.188.8/32
+        description: SCTASK0533806
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kohls-on-prem-jump-servers-to-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+            - '3036'
+            - '8080'
+            - '9090'
+            - '9443'
+            - '8443'
+            - '27017'
+            - 9092-9093
+            - 16379-16380
+            - 8300-8302
+            - 8500-8501
+            - 8200-8201
+            - '8243'
+            - '8210'
+            - '8253'
+            - '2181'
+            - '22'
+          sourceRanges:
+          - 10.212.188.128/32
+          - 10.216.188.8/32
+        description: SCTASK0533806
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kohls-on-prem-paw-vdi-to-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+            - 8080-8081
+            - '8443'
+            - '8500'
+            - '4440'
+          sourceRanges:
+          - 10.7.208.0/22
+          - 10.1.208.0/22
+        description: SCTASK0525188
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kohls-on-prem-paw-vdi-to-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+            - 8080-8081
+            - '8443'
+            - '8500'
+            - '4440'
+          sourceRanges:
+          - 10.7.208.0/22
+          - 10.1.208.0/22
+        description: SCTASK0525188
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kohls-onprem-prd-to-kohls-prd-east-mysql:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '3306'
+          sourceRanges:
+          - 10.6.81.37/32
+          - 10.189.48.0/21
+          - 10.2.228.1/32
+          - 10.2.228.2/32
+          - 10.2.228.3/32
+          - 10.2.228.4/32
+          targetTags:
+          - mysql
+        description: SCTASK0579594,SNOW-17273,SNOW-17257
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kohls-onprem-to-kohls-prd-east-mysql:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '3306'
+          sourceRanges:
+          - 10.5.0.143/32
+          - 10.2.47.114/32
+          targetTags:
+          - mysql
+        description: SCTASK0586184
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kohls-onprem-usrs-ing-to-jumpserver-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '22'
+          sourceRanges:
+          - 10.57.0.0/17
+          - 10.109.0.0/16
+          - 172.26.0.0/15
+          - 10.90.81.0/24
+          - 10.90.100.0/23
+          - 10.110.0.0/16
+          - 10.64.0.0/17
+          - 10.90.80.0/24
+          - 10.101.0.0/16
+          - 10.100.0.0/16
+          targetTags:
+          - jump-server
+        description: SCTASK0735940
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kohls-onpremise-openshift-prd-ingr-cnc-crp-proxy:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceRanges:
+          - 10.1.13.0/24
+          - 10.216.7.0/24
+          targetTags:
+          - dprod
+          - fw-allow-all
+          - cprod
+          - blue
+          - fw-cavisson-vm
+          - cprod-cnc-svc-corp-proxy
+          - green
+          - batch
+        description: SCTASK0789179
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kohls-vdi-int-to-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 10.109.0.0/16
+          - 10.110.0.0/16
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kohls-vdi-int-to-prod-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 10.109.0.0/16
+          - 10.110.0.0/16
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kohls-xpn-project-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - 9092-9093
+          sourceRanges:
+          - 10.206.164.0/22
+          targetTags:
+          - kafka
+          - fw-kafka
+        description: SCTASK0819958
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kos-prod-central-egress-sftp-server:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '22'
+          destinationRanges:
+          - 66.232.232.50/32
+          targetTags:
+          - rundeck
+        description: SNOW-16466
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kos-prod-central-to-kos-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '9092'
+          sourceRanges:
+          - 10.208.30.0/23
+          targetTags:
+          - kafka
+          - dprod-blue-kafka-vm
+        description: SCTASK0900972,SCTASK0930872
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kos-prod-central-to-openshift-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          destinationRanges:
+          - 10.184.0.0/23
+          - 10.7.27.207/32
+          - 10.1.26.207/32
+          targetTags:
+          - cprod-blue-snbservice-prod
+          - cprod-green-cncservice-prod
+          - cprod-blue-accservice-prod
+          - cprod-blue-cncservice-prod
+          - cprod-green-accservice-prod
+          - cprod-green-cncservice-stage
+          - cprod-blue-cncservice-stage
+          - cprod-green-accservice-stage
+          - cprod-green-snbservice-stage
+          - cprod-blue-accservice-stage
+          - cprod-blue-snbservice-stage
+          - cprod-green-snbservice-prod
+        description: SCTASK0601923
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kos-prod-east-egress-mongodb-servers:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '27017'
+          destinationRanges:
+          - 34.64.0.0/11
+          - 35.184.0.0/14
+          - 66.249.80.0/20
+          - 146.148.32.0/19
+          - 35.202.0.0/16
+          - 108.170.192.0/20
+          - 162.222.176.0/21
+          - 35.216.0.0/15
+          - 23.236.48.0/20
+          - 8.35.200.0/23
+          - 130.211.32.0/19
+          - 35.206.0.0/15
+          - 35.190.128.0/18
+          - 192.158.28.0/22
+          - 35.190.247.0/24
+          - 209.85.128.0/17
+          - 35.203.232.0/21
+          - 173.255.112.0/20
+          - 199.223.236.0/23
+          - 35.203.192.0/19
+          - 35.204.0.0/14
+          - 130.211.16.0/20
+          - 104.154.0.0/15
+          - 108.170.216.0/22
+          - 130.211.0.0/22
+          - 35.190.224.0/20
+          - 35.242.0.0/15
+          - 130.211.128.0/17
+          - 108.170.208.0/21
+          - 172.217.32.0/20
+          - 35.190.192.0/19
+          - 199.223.232.0/22
+          - 172.217.128.0/19
+          - 35.191.0.0/16
+          - 35.198.0.0/16
+          - 34.100.0.0/18
+          - 146.148.2.0/23
+          - 35.190.240.0/22
+          - 35.200.0.0/15
+          - 35.203.240.0/20
+          - 216.58.192.0/19
+          - 35.199.128.0/18
+          - 208.68.108.0/23
+          - 104.196.0.0/14
+          - 35.208.0.0/13
+          - 130.211.64.0/18
+          - 35.235.192.0/20
+          - 108.177.96.0/19
+          - 108.170.220.0/23
+          - 35.190.242.0/23
+          - 146.148.64.0/18
+          - 173.194.0.0/16
+          - 35.203.128.0/18
+          - 35.234.0.0/16
+          - 108.177.8.0/21
+          - 216.239.32.0/19
+          - 35.240.0.0/15
+          - 108.170.222.0/24
+          - 35.220.0.0/14
+          - 172.217.160.0/20
+          - 8.34.208.0/20
+          - 35.236.0.0/14
+          - 34.96.0.0/14
+          - 74.125.0.0/16
+          - 172.217.0.0/19
+          - 107.167.160.0/19
+          - 146.148.8.0/21
+          - 35.224.0.0/13
+          - 64.233.160.0/19
+          - 35.232.0.0/15
+          - 8.35.192.0/21
+          - 35.192.0.0/14
+          - 35.235.224.0/20
+          - 130.211.8.0/21
+          - 35.235.216.0/21
+          - 23.251.128.0/19
+          - 35.203.0.0/17
+          - 130.211.4.0/22
+          - 35.196.0.0/15
+          - 146.148.16.0/20
+          - 35.188.0.0/15
+          - 72.14.192.0/18
+          - 34.100.64.0/19
+          - 35.235.0.0/17
+          - 199.192.112.0/22
+          - 107.178.192.0/18
+          - 35.199.0.0/17
+          - 66.102.0.0/20
+          - 34.135.0.0/16
+          - 172.217.192.0/19
+          - 108.59.80.0/20
+          - 35.244.0.0/14
+          - 35.190.0.0/17
+          - 146.148.4.0/22
+          - 162.216.148.0/22
+          targetTags:
+          - blue
+          - green
+        description: SNOW-16776
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kos-prod-east-to-openshift-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          destinationRanges:
+          - 10.184.0.0/23
+          - 10.7.27.207/32
+          - 10.1.26.207/32
+          targetTags:
+          - dprod-blue-cncservice-prod
+          - dprod-green-accservice-prod
+          - dprod-green-cncservice-prod
+          - dprod-blue-accservice-prod
+          - dprod-blue-cncservice-stage
+          - dprod-green-cncservice-stage
+          - dprod-green-accservice-stage
+          - dprod-green-snbservice-stage
+          - dprod-green-snbservice-prod
+          - dprod-blue-snbservice-stage
+          - dprod-blue-snbservice-prod
+          - dprod-blue-accservice-stage
+        description: SCTASK0601923
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kos-prod-east-tonomi-to-ddh-ms-prd-cntrl:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '22'
+          destinationRanges:
+          - 10.184.24.0/23
+          targetTags:
+          - tonomi-agent
+        description: SCTASK0587710
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kos-prod-east-solr-to-kos-prd-cntrl-kafka:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - 9092-9093
+          sourceRanges:
+          - 10.208.128.0/22
+          targetTags:
+          - kafka
+        description: SCTASK0930061
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kos-prod-east-to-kos-prd-cntrl:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '9092'
+          sourceRanges:
+          - 10.208.128.0/22
+          targetTags:
+          - kafka
+          - cprod-blue-kafka-vm
+        description: SCTASK0900972,SCTASK0930872
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kos-prod-egress-mongodb-servers:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '27017'
+          destinationRanges:
+          - 34.64.0.0/11
+          - 35.184.0.0/14
+          - 66.249.80.0/20
+          - 146.148.32.0/19
+          - 35.202.0.0/16
+          - 108.170.192.0/20
+          - 162.222.176.0/21
+          - 35.216.0.0/15
+          - 23.236.48.0/20
+          - 8.35.200.0/23
+          - 130.211.32.0/19
+          - 35.206.0.0/15
+          - 35.190.128.0/18
+          - 192.158.28.0/22
+          - 35.190.247.0/24
+          - 209.85.128.0/17
+          - 35.203.232.0/21
+          - 173.255.112.0/20
+          - 199.223.236.0/23
+          - 35.203.192.0/19
+          - 35.204.0.0/14
+          - 130.211.16.0/20
+          - 104.154.0.0/15
+          - 108.170.216.0/22
+          - 130.211.0.0/22
+          - 35.190.224.0/20
+          - 35.242.0.0/15
+          - 130.211.128.0/17
+          - 108.170.208.0/21
+          - 172.217.32.0/20
+          - 35.190.192.0/19
+          - 199.223.232.0/22
+          - 172.217.128.0/19
+          - 35.191.0.0/16
+          - 35.198.0.0/16
+          - 34.100.0.0/18
+          - 146.148.2.0/23
+          - 35.190.240.0/22
+          - 35.200.0.0/15
+          - 35.203.240.0/20
+          - 216.58.192.0/19
+          - 35.199.128.0/18
+          - 208.68.108.0/23
+          - 104.196.0.0/14
+          - 35.208.0.0/13
+          - 130.211.64.0/18
+          - 35.235.192.0/20
+          - 108.177.96.0/19
+          - 108.170.220.0/23
+          - 35.190.242.0/23
+          - 146.148.64.0/18
+          - 173.194.0.0/16
+          - 35.203.128.0/18
+          - 35.234.0.0/16
+          - 108.177.8.0/21
+          - 216.239.32.0/19
+          - 35.240.0.0/15
+          - 108.170.222.0/24
+          - 35.220.0.0/14
+          - 172.217.160.0/20
+          - 8.34.208.0/20
+          - 35.236.0.0/14
+          - 34.96.0.0/14
+          - 74.125.0.0/16
+          - 172.217.0.0/19
+          - 107.167.160.0/19
+          - 146.148.8.0/21
+          - 35.224.0.0/13
+          - 64.233.160.0/19
+          - 35.232.0.0/15
+          - 8.35.192.0/21
+          - 35.192.0.0/14
+          - 35.235.224.0/20
+          - 130.211.8.0/21
+          - 35.235.216.0/21
+          - 23.251.128.0/19
+          - 35.203.0.0/17
+          - 130.211.4.0/22
+          - 35.196.0.0/15
+          - 146.148.16.0/20
+          - 35.188.0.0/15
+          - 72.14.192.0/18
+          - 34.100.64.0/19
+          - 35.235.0.0/17
+          - 199.192.112.0/22
+          - 107.178.192.0/18
+          - 35.199.0.0/17
+          - 66.102.0.0/20
+          - 34.135.0.0/16
+          - 172.217.192.0/19
+          - 108.59.80.0/20
+          - 35.244.0.0/14
+          - 35.190.0.0/17
+          - 146.148.4.0/22
+          - 162.216.148.0/22
+          - 35.223.191.133
+          - 35.238.40.98
+          - 34.139.60.34
+          - 34.135.40.77
+          - 34.139.26.68
+          - 34.73.208.240
+          - 34.72.252.143
+          - 35.232.205.195
+          targetTags:
+          - blue
+          - green
+        description: SNOW-16776
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kos-prod-ing-to-kos-xpn-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - dprod
+          - blue
+          - dprod-blue-searchrestapi-sl
+          targetTags:
+          - dprod
+          - dprod-blue-accservice-prod
+          - blue
+        description: SCTASK0881682
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kos-prod-kafka-prd-cntrl:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '9092'
+            - '9094'
+          sourceRanges:
+          - 10.208.12.0/22
+          targetTags:
+          - kafka
+        description: SNOW-16050
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      kos-production-cntrl-to-bda-ddh-ms-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '22'
+            - 16379-16380
+          destinationRanges:
+          - 10.184.24.0/23
+          targetTags:
+          - cprod-blue-kasstool-prod
+        description: SCTASK0641843
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      mosaic-prod-to-central-prv01-https:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceRanges:
+          - 10.6.81.21
+          - 10.212.188.38
+          - 10.212.188.109
+          - 10.7.27.14
+          - 10.212.4.14
+          - 10.7.231.249
+        description: SCTASK0528246
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      mosaic-prod-to-east-https:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceRanges:
+          - 10.6.81.21
+          - 10.212.188.38
+          - 10.212.188.109
+          - 10.7.27.14
+          - 10.212.4.14
+          - 10.7.231.249
+        description: SCTASK0528246
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      omse-giv-ingr-to-prod-central:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 10.5.49.230/32
+          - 10.5.49.239/32
+          - 10.216.188.22/32
+          - 10.5.49.235/32
+          - 10.216.188.21/32
+          - 10.216.188.34/32
+          - 10.216.188.24/32
+          - 10.216.188.31/32
+          - 10.216.188.18/32
+          - 10.216.188.27/32
+          - 10.216.188.32/32
+          - 10.5.49.229/32
+          - 10.5.49.231/32
+          - 10.5.49.240/32
+          - 10.216.188.16/32
+          - 10.216.188.29/32
+          - 10.5.49.232/32
+          - 10.216.188.15/32
+          - 10.5.49.243/32
+          - 10.5.49.247/32
+          - 10.5.49.237/32
+          - 10.5.49.246/32
+          - 10.5.49.234/32
+          - 10.216.188.13/32
+          - 10.5.49.245/32
+          - 10.216.188.33/32
+          - 10.5.49.228/32
+          - 10.216.188.26/32
+          - 10.216.188.30/32
+          - 10.216.188.19/32
+          - 10.216.188.25/32
+          - 10.216.188.35/32
+          - 10.216.188.20/32
+          - 10.216.188.36/32
+          - 10.5.49.238/32
+          - 10.216.188.23/32
+          - 10.5.49.244/32
+          - 10.5.49.236/32
+          - 10.216.188.14/32
+          - 10.5.49.242/32
+          - 10.216.188.28/32
+          - 10.5.49.233/32
+          - 10.5.49.241/32
+          - 10.216.188.17/32
+          targetTags:
+          - cprod-cnc-svc-corp-proxy
+          - batch
+        description: SCTASK0724386
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      omse-giv-ingr-to-prod-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 10.5.49.230/32
+          - 10.5.49.239/32
+          - 10.216.188.22/32
+          - 10.5.49.235/32
+          - 10.216.188.21/32
+          - 10.216.188.34/32
+          - 10.216.188.24/32
+          - 10.216.188.31/32
+          - 10.216.188.18/32
+          - 10.216.188.27/32
+          - 10.216.188.32/32
+          - 10.5.49.229/32
+          - 10.5.49.231/32
+          - 10.5.49.240/32
+          - 10.216.188.16/32
+          - 10.216.188.29/32
+          - 10.5.49.232/32
+          - 10.216.188.15/32
+          - 10.5.49.243/32
+          - 10.5.49.247/32
+          - 10.5.49.237/32
+          - 10.5.49.246/32
+          - 10.5.49.234/32
+          - 10.216.188.13/32
+          - 10.5.49.245/32
+          - 10.216.188.33/32
+          - 10.5.49.228/32
+          - 10.216.188.26/32
+          - 10.216.188.30/32
+          - 10.216.188.19/32
+          - 10.216.188.25/32
+          - 10.216.188.35/32
+          - 10.216.188.20/32
+          - 10.216.188.36/32
+          - 10.5.49.238/32
+          - 10.216.188.23/32
+          - 10.5.49.244/32
+          - 10.5.49.236/32
+          - 10.216.188.14/32
+          - 10.5.49.242/32
+          - 10.216.188.28/32
+          - 10.5.49.233/32
+          - 10.5.49.241/32
+          - 10.216.188.17/32
+          targetTags:
+          - cprod-cnc-svc-corp-proxy
+          - batch
+        description: SCTASK0724386
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      onperm-yck472u-to-kos-xpn-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '3306'
+          sourceRanges:
+          - 10.2.228.1
+          - 10.2.228.3
+          - 10.2.228.2
+          - 10.2.228.4
+          targetTags:
+          - fw-allow-all
+          - mysql
+          - blue
+        description: SCTASK0862978
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      onprem-pe-tool-srv-ingress-to-prd-cntrl:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '9001'
+            - '8080'
+          sourceRanges:
+          - 10.6.81.37/32
+          targetTags:
+          - cprod-green-cncservice-prod
+          - cprod-blue-accservice-prod
+          - cprod-blue-cncservice-prod
+          - cprod-green-accservice-prod
+          - cprod-green-cncservice-stage
+          - cprod-blue-cncservice-stage
+          - cprod-green-accservice-stage
+          - cprod-blue-accservice-stage
+        description: SCTASK0667576
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      onprem-pe-tool-srv-ingress-to-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '9001'
+            - '8080'
+          sourceRanges:
+          - 10.6.81.37/32
+          targetTags:
+          - dprod-blue-cncservice-prod
+          - dprod-green-accservice-prod
+          - dprod-green-cncservice-prod
+          - dprod-blue-accservice-prod
+          - dprod-blue-cncservice-stage
+          - dprod-green-cncservice-stage
+          - dprod-green-accservice-stage
+          - dprod-blue-accservice-stage
+        description: SCTASK0667576
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      onprem-ing-to-kos-xpn-prd-cntrl:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '3306'
+          sourceRanges:
+          - 10.2.228.1
+          - 10.2.228.3
+          - 10.2.228.2
+          - 10.2.228.4
+          targetTags:
+          - fw-allow-all
+          - mysql
+          - blue
+        description: SCTASK0862978
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-central-navigate-app-egress-mongo-atlas:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '27017'
+          destinationRanges:
+          - 34.73.208.240
+          - 3.92.230.111
+          - 34.139.26.68
+          - 3.94.238.78
+          - 35.238.40.98
+          - 35.223.191.133
+          - 34.135.40.77
+          - 35.232.205.195
+          - 34.72.252.143
+          - 34.139.60.34
+          - 35.170.231.208
+          - 54.84.208.96
+          targetTags:
+          - mongo-atlas
+        description: SNOW-16892
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-central-to-tonomi-ext-deny:
+        rule:
+          deny:
+          - protocol: icmp
+          - protocol: udp
+          - protocol: tcp
+          destinationRanges:
+          - 0.0.0.0/0
+          targetTags:
+          - tonomi-agent
+        description: ''
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-cntrl-tonomi-to-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '22'
+          destinationRanges:
+          - 10.208.248.0/22
+          - 10.208.154.0/29
+          - 10.208.240.0/22
+          targetTags:
+          - tonomi-agent
+        description: SCTASK0451096
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-cntrl-pub01-to-tonomi-ext:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '5671'
+          - protocol: icmp
+          destinationRanges:
+          - 52.203.10.44/32
+          - 52.203.10.35/32
+          - 184.169.156.89/32
+          - 184.169.158.126/32
+          targetTags:
+          - tonomi-agent
+        description: tonomi-agent access to Tonomi SaaS
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-cntrl-internal-access-tcp:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceTags:
+          - cprod-blue-accui-stage
+          - cprod-green-accui-stage
+          targetTags:
+          - cprod-blue-accservice-prod
+          - cprod-green-accservice-prod
+          - fw-cncservice-prod
+          - fw-cncservice
+        description: SCTASK0831186
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-central-internal-access-tcp:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceTags:
+          - cprod-blue-cncui-stage
+          - cprod-green-cncui-stage
+          targetTags:
+          - cprod-blue-accservice-prod
+          - cprod-green-accservice-prod
+          - fw-cncservice-prod
+          - fw-cncservice
+        description: SCTASK0831186
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-cntrl-to-kohls-production:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '8080'
+            - '8543'
+            - '8443'
+            - '8544'
+            - '8444'
+          destinationRanges:
+          - 10.7.28.50
+          - 10.1.28.210
+        description: SCTASK0520609
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-cntrl-to-mosaic-dns:
+        rule:
+          allow:
+          - protocol: udp
+            ports:
+            - '53'
+          - protocol: tcp
+            ports:
+            - '53'
+          destinationRanges:
+          - 10.220.2.28
+          - 10.220.2.26
+          - 10.220.2.27
+        description: SCTASK0535824
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prd-cntrl-to-mosaic-http:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+          destinationRanges:
+          - 10.7.28.108
+          - 10.1.28.108
+          - 10.202.2.16
+          - 10.202.130.16
+        description: SCTASK0517755
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prd-to-mosaic-https:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          destinationRanges:
+          - 10.4.29.20
+          - 10.9.29.20
+          - 10.202.2.50
+          - 10.202.130.50
+          - 10.1.28.58
+          - 10.1.28.63
+          - 10.1.28.64
+          - 10.1.28.195
+          - 10.1.28.196
+          - 10.2.28.88
+          - 10.2.28.21
+          - 10.2.28.22
+          - 10.7.28.56
+          - 10.7.28.49
+          - 10.7.28.169
+          - 10.7.28.115
+          - 10.7.28.116
+          - 10.7.28.59
+          - 10.7.28.148
+          - 10.7.28.195
+          - 10.7.28.196
+          - 10.1.26.148
+          - 10.7.27.14
+          - 10.212.4.14
+          - 10.212.188.109
+          - 10.212.188.38
+          - 10.6.81.21
+          - 10.7.231.249
+          - 10.2.28.68
+          - 10.7.28.68
+        description: SCTASK0517755,RITM0470202,RITM0470297(email approval),SCTASK0549495
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-to-mosaic-lbs-servers:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '8203'
+          destinationRanges:
+          - 10.2.28.88
+          - 10.7.28.59
+        description: SCTASK0546606
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-to-mosaic-oms-mq-server:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '1414'
+          destinationRanges:
+          - 10.2.47.42
+        description: SCTASK0546606
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-to-mosaic-ssh:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '22'
+          destinationRanges:
+          - 10.6.81.21
+        description: SCTASK0535824
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-to-mosaic:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '17080'
+          destinationRanges:
+          - 10.202.2.17
+          - 10.202.130.17
+        description: SCTASK0517755
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-deny:
+        rule:
+          deny:
+          - protocol: icmp
+          - protocol: udp
+          - protocol: tcp
+          destinationRanges:
+          - 10.208.120.0/22
+          - 10.208.26.0/29
+          targetTags:
+          - production-blue-snbservice-prod
+          - production-blue-searchrestapi-ta
+          - production-blue-snbservice-stage
+          - production-blue-webstoreui
+        description: ''
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-pub-ingress:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+            - '8081'
+            - '8088'
+            - '2181'
+            - '16379'
+            - '27017'
+            - '3306'
+            - '9092'
+            - '8500'
+          destinationRanges:
+          - 10.208.120.0/22
+          - 10.208.26.0/29
+          targetTags:
+          - production-blue-snbservice-prod
+          - production-blue-searchrestapi-ta
+          - production-blue-snbservice-stage
+          - production-blue-webstoreui
+        description: ''
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-pub-to-ingress:
+        rule:
+          allow:
+          - protocol: icmp
+          - protocol: tcp
+            ports:
+            - '22'
+          destinationRanges:
+          - 10.208.120.0/22
+          - 10.208.123.203/32
+          targetTags:
+          - tonomi-agent
+        description:
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-central-to-cavisson:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+            - 7890-7899
+          destinationRanges:
+          - 10.206.96.0/25
+          - 10.188.103.0/25
+          - 10.186.219.128/25
+          - 10.188.70.0/23
+          - 10.184.104.0/25
+          - 10.184.70.0/23
+          - 10.188.102.0/25
+          - 10.184.105.0/25
+          - 10.184.68.0/23
+          - 10.184.104.128/25
+          - 10.190.127.0/25
+          - 10.206.224.0/25
+          - 10.188.102.128/25
+          - 10.188.68.0/23
+          targetTags:
+          - fw-cavisson
+        description: ''
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-to-google-api:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          destinationRanges:
+          - 35.184.0.0/14
+          - 146.148.32.0/19
+          - 35.202.0.0/16
+          - 108.170.192.0/20
+          - 162.222.176.0/21
+          - 23.236.48.0/20
+          - 35.212.0.0/16
+          - 8.35.200.0/23
+          - 130.211.32.0/19
+          - 35.190.128.0/18
+          - 192.158.28.0/22
+          - 35.203.232.0/21
+          - 173.255.112.0/20
+          - 199.223.236.0/23
+          - 35.203.192.0/19
+          - 35.204.0.0/14
+          - 130.211.16.0/20
+          - 104.154.0.0/15
+          - 35.244.128.0/17
+          - 108.170.216.0/22
+          - 35.190.224.0/20
+          - 35.242.0.0/15
+          - 130.211.128.0/17
+          - 108.170.208.0/21
+          - 35.190.192.0/19
+          - 199.223.232.0/22
+          - 35.198.0.0/16
+          - 146.148.2.0/23
+          - 35.200.0.0/15
+          - 35.203.240.0/20
+          - 35.199.128.0/18
+          - 208.68.108.0/23
+          - 104.196.0.0/14
+          - 130.211.64.0/18
+          - 35.235.192.0/20
+          - 108.170.220.0/23
+          - 146.148.64.0/18
+          - 35.203.128.0/18
+          - 35.234.0.0/16
+          - 35.240.0.0/15
+          - 108.170.222.0/24
+          - 35.220.0.0/14
+          - 8.34.208.0/20
+          - 35.236.0.0/14
+          - 107.167.160.0/19
+          - 146.148.8.0/21
+          - 35.224.0.0/13
+          - 35.232.0.0/15
+          - 8.35.192.0/21
+          - 35.192.0.0/14
+          - 35.235.224.0/20
+          - 130.211.8.0/21
+          - 23.251.128.0/19
+          - 35.203.0.0/17
+          - 130.211.4.0/22
+          - 35.196.0.0/15
+          - 146.148.16.0/20
+          - 35.188.0.0/15
+          - 35.235.0.0/17
+          - 199.192.112.0/22
+          - 107.178.192.0/18
+          - 35.199.0.0/17
+          - 108.59.80.0/20
+          - 35.190.0.0/17
+          - 146.148.4.0/22
+          - 162.216.148.0/22
+          - 35.208.0.0/14
+          - 35.244.0.0/18
+        description: ''
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-cntrl-to-kohls-cavisson-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+            - 7891-7899
+          destinationRanges:
+          - 10.206.224.0/25
+        description: SCTASK0518557
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-cntrl-to-kohls-onprem-queue-access:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '1414'
+          destinationRanges:
+          - 10.7.41.83/32
+        description: SCTASK0579541
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-east-to-mosaic-http:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+          destinationRanges:
+          - 10.1.28.108
+          - 10.202.2.16
+          - 10.202.130.16
+          - 10.7.28.108
+        description: SCTASK0517755
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-east-to-mosaic-https:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          destinationRanges:
+          - 10.4.29.20
+          - 10.9.29.20
+          - 10.202.2.50
+          - 10.202.130.50
+          - 10.1.28.58
+          - 10.1.28.63
+          - 10.1.28.64
+          - 10.1.28.195
+          - 10.1.28.196
+          - 10.2.28.88
+          - 10.2.28.21
+          - 10.2.28.22
+          - 10.7.28.56
+          - 10.7.28.49
+          - 10.7.28.169
+          - 10.7.28.115
+          - 10.7.28.116
+          - 10.7.28.59
+          - 10.7.28.148
+          - 10.7.28.195
+          - 10.7.28.196
+          - 10.1.26.148
+          - 10.7.27.14
+          - 10.212.4.14
+          - 10.212.188.109
+          - 10.212.188.38
+          - 10.6.81.21
+          - 10.7.231.249
+          - 10.2.28.68
+          - 10.7.28.68
+        description: SCTASK0517755,RITM0470202, RITM0470297 (email approval),SCTASK0549495
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-east-to-mosaic-tcp:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '17080'
+          destinationRanges:
+          - 10.202.2.17
+          - 10.202.130.17
+        description: SCTASK0517755
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-east-to-cavisson:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+            - 7890-7899
+          destinationRanges:
+          - 10.206.96.0/25
+          - 10.188.103.0/25
+          - 10.186.219.128/25
+          - 10.188.70.0/23
+          - 10.184.104.0/25
+          - 10.184.70.0/23
+          - 10.188.102.0/25
+          - 10.184.105.0/25
+          - 10.184.68.0/23
+          - 10.184.104.128/25
+          - 10.190.127.0/25
+          - 10.206.224.0/25
+          - 10.188.102.128/25
+          - 10.188.68.0/23
+          targetTags:
+          - fw-cavisson
+        description: ''
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-east-to-cavisson-prd-tcp:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+            - 7891-7899
+          sourceRanges:
+          - 10.206.96.0/25
+        description: To monitor East GCP  server in central ND - SCTASK0464177
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-east-to-google-api:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          destinationRanges:
+          - 35.184.0.0/14
+          - 146.148.32.0/19
+          - 35.202.0.0/16
+          - 108.170.192.0/20
+          - 162.222.176.0/21
+          - 23.236.48.0/20
+          - 35.212.0.0/16
+          - 8.35.200.0/23
+          - 130.211.32.0/19
+          - 35.190.128.0/18
+          - 192.158.28.0/22
+          - 35.203.232.0/21
+          - 173.255.112.0/20
+          - 199.223.236.0/23
+          - 35.203.192.0/19
+          - 35.204.0.0/14
+          - 130.211.16.0/20
+          - 104.154.0.0/15
+          - 35.244.128.0/17
+          - 108.170.216.0/22
+          - 35.190.224.0/20
+          - 35.242.0.0/15
+          - 130.211.128.0/17
+          - 108.170.208.0/21
+          - 35.190.192.0/19
+          - 199.223.232.0/22
+          - 35.198.0.0/16
+          - 146.148.2.0/23
+          - 35.200.0.0/15
+          - 35.203.240.0/20
+          - 35.199.128.0/18
+          - 208.68.108.0/23
+          - 104.196.0.0/14
+          - 130.211.64.0/18
+          - 35.235.192.0/20
+          - 108.170.220.0/23
+          - 146.148.64.0/18
+          - 35.203.128.0/18
+          - 35.234.0.0/16
+          - 35.240.0.0/15
+          - 108.170.222.0/24
+          - 35.220.0.0/14
+          - 8.34.208.0/20
+          - 35.236.0.0/14
+          - 107.167.160.0/19
+          - 146.148.8.0/21
+          - 35.224.0.0/13
+          - 35.232.0.0/15
+          - 8.35.192.0/21
+          - 35.192.0.0/14
+          - 35.235.224.0/20
+          - 130.211.8.0/21
+          - 23.251.128.0/19
+          - 35.203.0.0/17
+          - 130.211.4.0/22
+          - 35.196.0.0/15
+          - 146.148.16.0/20
+          - 35.188.0.0/15
+          - 35.235.0.0/17
+          - 199.192.112.0/22
+          - 107.178.192.0/18
+          - 35.199.0.0/17
+          - 108.59.80.0/20
+          - 35.190.0.0/17
+          - 146.148.4.0/22
+          - 162.216.148.0/22
+          - 35.208.0.0/14
+          - 35.244.0.0/18
+        description: ''
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-east-to-kohls-cavisson-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+            - 7891-7899
+          destinationRanges:
+          - 10.206.224.0/25
+        description: SCTASK0518557
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      prod-east-to-kohls-onprem-queue-access:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '1414'
+          destinationRanges:
+          - 10.2.47.42/32
+          - 10.7.41.83/32
+        description: SCTASK0579541
+        direction: EGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      professional-ext-to-prd-cntrl-tcp:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 10.9.65.9/32
+          - 10.4.64.165/32
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      professional-ext-to-prod-east-tcp:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '80'
+            - '443'
+          sourceRanges:
+          - 202.44.56.32/32
+          - 202.44.58.32/32
+        description: ''
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      sacuelab-elb-monitoring-to-ingr-prd-cntrl:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceRanges:
+          - 162.222.72.0/21
+          - 66.85.48.0/21
+          targetTags:
+          - blue
+          - green
+        description: SCTASK0735931
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      sacuelab-elb-monitoring-to-ingr-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceRanges:
+          - 162.222.72.0/21
+          - 66.85.48.0/21
+          targetTags:
+          - blue
+          - green
+        description: SCTASK0735931
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      snb-ingr-to-cnc-acc-mgmt-blue-prd-cntrl:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-blue-snbservice-prod
+          - cprod-blue-snbservice
+          - cprod-blue-snbservice-stage
+          targetTags:
+          - cprod-blue-cncservice-prod
+          - cprod-blue-accservice-prod
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      snb-ingr-to-cnc-acc-mgmt-blue-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - dprod-blue-snbservice
+          - dprod-blue-snbservice-stage
+          - dprod-blue-snbservice-prod
+          targetTags:
+          - dprod-blue-cncservice-prod
+          - dprod-blue-accservice-prod
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      snb-ingr-to-cnc-acc-mgmt-grn-prd-cntrl:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-green-snbservice-stage
+          - cprod-green-snbservice
+          - cprod-green-snbservice-prod
+          targetTags:
+          - cprod-green-accservice-prod
+          - cprod-green-cncservice-prod
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      snb-ingr-to-cnc-acc-mgmt-grn-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - dprod-green-snbservice
+          - dprod-green-snbservice-prod
+          - dprod-green-snbservice-stage
+          targetTags:
+          - dprod-green-accservice-prod
+          - dprod-green-cncservice-prod
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      snbuibot-ingr-to-cnc-acc-svcs-blue-prd-cntrl:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-blue-snbui-bot
+          targetTags:
+          - cprod-blue-accservice-prod
+          - cprod-blue-accservice-stage
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      snbuibot-ingr-to-cnc-acc-svcs-grn-prd-cntrl:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-green-snbui-bot
+          targetTags:
+          - cprod-green-accservice-stage
+          - cprod-green-accservice-prod
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      tableau-server-to-prd-east-prv:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '3306'
+          sourceRanges:
+          - 10.7.231.252
+          - 10.7.231.184
+          - 10.7.231.251
+          - 10.7.231.250
+          - 10.7.231.181
+          - 10.188.20.0/23
+          targetTags:
+          - mysql
+        description: SCTASK0553086,SCTASK0724134
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      test-apigee-whitelist-to-prd-cntrl:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '8080'
+          sourceRanges:
+          - 104.154.50.76
+        description: SCTASK0467678
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      tmp-cscsrv-ingr-to-acc-svcs-grn-prd-cntrl:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - cprod-green-cscservice-prod
+          targetTags:
+          - cprod-green-accservice-prod
+        description: “TMP”
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      tonomi-ingr-to-cnc-acc-svcs-blue-prd-cntrl:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - tonomirunner
+          targetTags:
+          - cprod-blue-cncservice-prod
+          - cprod-blue-accservice-prod
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      tonomi-ingr-to-cnc-acc-svcs-blue-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - tonomirunner
+          targetTags:
+          - dprod-blue-cncservice-prod
+          - dprod-blue-accservice-prod
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      tonomi-ingr-to-cnc-acc-svcs-grn-prd-cntrl:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - tonomirunner
+          targetTags:
+          - cprod-green-accservice-prod
+          - cprod-green-cncservice-prod
+        description: SCTASK0637396
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      tonomi-ingr-to-cnc-acc-svcs-grn-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceTags:
+          - tonomirunner
+          targetTags:
+          - dprod-green-accservice-prod
+          - dprod-green-cncservice-prod
+        description: SCTASK0577075
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      vendor-portal-prd-cntrl-ing-to-prd-cntrl:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - 9092-9093
+          sourceRanges:
+          - 10.207.10.0/23
+          targetTags:
+          - kafka
+        description: SCTASK0819958
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      vendor-portal-prd-central-ing-to-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - 9092-9093
+          sourceRanges:
+          - 10.207.10.0/23
+          targetTags:
+          - kafka
+        description: SCTASK0824475
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      xpn-project-prd-east-ing-to-kos-xpn-prd-east:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - 9092-9093
+          sourceRanges:
+          - 10.206.164.0/22
+          targetTags:
+          - kafka
+          - kafka-mm
+        description: SCTASK0810540
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      tvs-ecom-publisher-to-corp-cloud-kafka:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - 9091-9093
+          sourceRanges:
+          - 10.184.51.0/24
+          - 10.185.49.0/24
+          - 10.189.48.0/21
+          targetTags:
+          - fw-allow-all
+        description: SNOW-17047
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      extracts-onprem-access-ingress-cx-nx-shop-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '3131'
+            - '8085'
+          sourceRanges:
+          - 10.5.48.4
+          - 10.6.48.4
+          targetTags:
+          - fw-allow-all
+        description: SNOW-17046
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      oms-cnc-corp-mosaic-ingress-cx-nx-shop-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+          sourceRanges:
+          - 10.216.7.0/24
+          - 10.6.48.0/24
+          - 10.1.13.0/24
+          - 10.2.44.0/24
+          targetTags:
+          - cprodn-cnc-svc-corp-proxy
+          - dprodn-cnc-svc-corp-proxy
+        description: SNOW-17077
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false
+      ravpn-user-ingress-cx-nx-shop-prd:
+        rule:
+          allow:
+          - protocol: tcp
+            ports:
+            - '443'
+            - '80'
+            - '8080'
+            - '8443'
+            - '543'
+          sourceRanges:
+          - 172.26.0.0/15
+          targetTags:
+          - fw-allow-all
+        description: SNOW-17161
+        direction: INGRESS
+        disabled: false
+        priority: 900
+        logging: false

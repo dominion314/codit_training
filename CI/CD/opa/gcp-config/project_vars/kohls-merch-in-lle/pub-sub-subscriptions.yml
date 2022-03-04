@@ -1,0 +1,19 @@
+---
+pubSubSubscriptions:
+  create-po-inbound-sub:
+    labels:
+      line-of-business: po
+    topicName: create-po-inbound
+    ackDeadlineSeconds: 30
+    messageRetentionDuration: 10080s
+    retainAckedMessages: false
+  gcf-startinstancepubsub-start-instance-event:
+    topicName: start-instance-event
+    ackDeadlineSeconds: 600
+    messageRetentionDuration: 10080s
+    retainAckedMessages: false
+  gcf-stopinstancepubsub-stop-instance-event:
+    topicName: stop-instance-event
+    ackDeadlineSeconds: 600
+    messageRetentionDuration: 10080s
+    retainAckedMessages: false

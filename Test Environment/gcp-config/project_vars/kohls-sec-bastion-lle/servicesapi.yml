@@ -1,0 +1,10 @@
+---
+serviceAPIs:
+  cloudresourcemanager.googleapis.com: null
+  compute.googleapis.com: null
+  logging.googleapis.com: null
+  monitoring.googleapis.com: null
+  pubsub.googleapis.com: null
+  stackdriver.googleapis.com: null
+  storage-api.googleapis.com: null
+  storage-component.googleapis.com: null

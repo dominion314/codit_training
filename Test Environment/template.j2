@@ -1,0 +1,36 @@
+vpcs:
+{% for name, FW_entry in vpcs.items() %}
+  {{ name }}
+    name: {{ FW_entry.firewallRules.name }}
+      description: {{ FW_entry.firewallRules.description }}
+      direction: {{ FW_entry.firewallRules.direction }}
+      disabled: {{ FW_entry.firewallRules.disabled }}
+      logging: {{ FW_entry.firewallRules.logging }}
+      priority: {{ FW_entry.firewallRules.priority }}
+      rule:
+          allow: 
+          - protocol: {{ FW_entry.protocol }}
+{%- for protocol in FW_entry.protocol %}
+            - "{{ protocol }}"
+{%- endfor %}
+            - ports:{{ FW_entry.ports }}
+{%- for ports in FW_entry.ports %}
+            - "{{ ports }}"
+{%- endfor %}
+            sourceRanges:
+{%- for cidr in FW_entry.sourceRanges %}
+            - "{{ cidr }}"
+{%- endfor %}
+            targetTags: {{ FW_entry.targetTags }}
+{%- for tag in FW_entry.targetTags %}
+{%- endfor %}
+            sourceServiceAccounts: {{ FW_entry.sourceServiceAccounts }}
+            sourceTags: {{ FW_entry.sourceTags }}
+            destinationRanges: {{ FW_entry.destinationRanges }}
+{%- for cidr in FW_entry.destinationRanges %}
+            - "{{ cidr }}"
+{%- endfor %}
+            targetServiceAccounts: {{ FW_entry.targetServiceAccounts }}            
+{%- for ports in FW_entry.ports %}
+{%- endfor %}
+{%- endfor %}

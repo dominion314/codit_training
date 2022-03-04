@@ -1,0 +1,42 @@
+---
+vpcs:
+  ea-nx-prd:
+    routerDef:
+      ea-nx-prd-c1-gcp-rtr01:
+        region: us-central1
+        description:
+        routerASN:
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+        ha_vpn_gateways_to_transit:
+          ea-nx-prd-c1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.1.72/30
+              bluecat-id: 1587854
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.1.76/30
+              bluecat-id: 1587856
+              status: PROVISIONED
+      ea-nx-prd-e1-gcp-rtr01:
+        region: us-east1
+        description:
+        routerASN:
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+        ha_vpn_gateways_to_transit:
+          ea-nx-prd-e1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.1.80/30
+              bluecat-id: 1587858
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.1.84/30
+              bluecat-id: 1587860
+              status: PROVISIONED

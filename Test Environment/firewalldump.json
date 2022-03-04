@@ -1,0 +1,15 @@
+[
+  {
+    "allowed": "['tcp:9092,tcp:9094']",
+    "direction": "INGRESS",
+    "disabled": "False",
+    "name": "resource-name",
+    "network": "resource-network.com",
+    "priority": 900,
+    "sourceRanges": "10.186.2.128/25,10.190.70.128/25",
+    "targetTags": "fw-akamai-dev",
+    "sourceTags": "cloud-dev",
+    "destinationRanges": "10.190.70.129/25",
+    "denied": ""
+  }
+]

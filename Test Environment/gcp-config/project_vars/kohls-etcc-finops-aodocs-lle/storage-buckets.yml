@@ -1,0 +1,14 @@
+---
+storageBuckets:
+  kohls-etcc-finops-aodocs-lle:
+    location: US
+    storageClass: MULTI_REGIONAL
+    versioningEnabled: false
+    deletionProtect: true
+    forceDestroy: true
+  kohls-etcc-finops-aodocs-lle-test:
+    location: US
+    storageClass: MULTI_REGIONAL
+    versioningEnabled: false
+    deletionProtect: true
+    forceDestroy: true

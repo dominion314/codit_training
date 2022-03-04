@@ -1,0 +1,423 @@
+---
+vpcs:
+  platform-nx-prd:
+    # The firewall rules in this file are a little bit of a hot mess
+    # and ideally need some clean up. It seems that the mandatory ServiceNow process
+    # for firewall rules tends to generate a bit of an unorganized pile of garbage.
+    #
+    # Please ...
+    #
+    # 1. Try NOT to add more garbage to this file.
+    # 2. Add rules to team and environment(prd) specific files instead
+    # 3. Put rules in alphabetrical order by firewall rule name
+    # 4. Create a useful description and name for firewall rules
+    firewallRules:
+      gtm-internal-dns-sync-mgmt:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0515978
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          - external: "f5-dns-gtm-service@kohls-platform-netservices-prd.iam.gserviceaccount.com"
+          - external: "bluecat-bdds-service@kohls-platform-netservices-prd.iam.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+          - "172.26.0.0/15"
+          - "10.0.0.0/8"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+            - "53"
+            - "443"
+            - "4353"
+            - "8443"
+          - protocol: "udp"
+            ports:
+            - "53"
+            - "4353"
+          - protocol: "icmp"
+      dns-root-server-access:
+        priority: 900
+        direction: EGRESS
+        description: Required for Bluecat Root lookup
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          - 208.67.222.222 #Umbrella
+          - 208.67.220.220 #Umbrella
+          - 198.41.0.4 # Verisign
+          - 192.228.79.201 # USC-ISI
+          - 192.33.4.12 # Cogent Communications
+          - 199.7.91.13 # University of Maryland
+          - 192.203.230.10 # NASA
+          - 192.5.5.241 # ISC
+          - 192.112.36.4 # DoD NIC
+          - 128.63.2.53  # US Army Research Lab
+          - 192.36.148.17 # Autonomica
+          - 192.58.128.30 # VeriSign
+          - 193.0.14.129 # RIPE NCC
+          - 199.7.83.42 # ICANN
+          - 202.12.27.33  # WIDE Project
+          targetServiceAccounts:
+          - external: "bluecat-bdds-service@kohls-platform-netservices-prd.iam.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "53"
+          - protocol: "udp"
+            ports:
+            - "53"
+          - protocol: "icmp"
+      gtm-internal-ilb-healthcheck:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0515978
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          - external: "f5-dns-gtm-service@kohls-platform-netservices-prd.iam.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+          - "130.211.0.0/22"
+          - "35.191.0.0/16"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "53"
+      gtm-internal-solarwinds:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0515978
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          - external: "f5-dns-gtm-service@kohls-platform-netservices-prd.iam.gserviceaccount.com"
+          - external: "bluecat-bdds-service@kohls-platform-netservices-prd.iam.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+          - "10.1.6.192/27"
+          - "10.1.37.230"
+          - "10.1.37.246"
+          - "10.2.8.249"
+          - "10.3.17.189"
+          - "10.1.6.129"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "161"
+          - protocol: "udp"
+            ports:
+            - "161"
+          - protocol: "icmp"
+      bdds-internal-sync-mgmt:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0832998
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          - external: "bluecat-bdds-service@kohls-platform-netservices-prd.iam.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+          - "10.5.8.1"
+          - "10.6.8.1"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "10042"
+            - "10045"
+          - protocol: "udp"
+            ports:
+            - "10045"
+            - "161"
+      kic-ravpn-platform-01:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-15998
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-kafka
+          sourceRanges:
+          - "10.57.0.0/17"
+          - "172.26.0.0/15"
+          - "10.101.70.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "9092"
+      mysql-replication:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK1056946
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - mysql
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          - mysql
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+            - "3306"
+      openshift-mysql:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK1056946
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - mysql
+          sourceRanges:
+          - "10.57.0.0/17"
+          - "10.64.0.0/17"
+          - "10.90.80.0/24"
+          - "10.90.81.0/24"
+          - "10.90.100.0/23"
+          - "10.100.0.0/16"
+          - "10.101.0.0/16"
+          - "10.109.0.0/16"
+          - "10.110.0.0/16"
+          - "10.184.0.0/23"
+          - "10.184.4.0/23"
+          - "10.184.80.0/24"
+          - "10.188.0.0/23"
+          - "10.188.4.0/23"
+          - "10.188.80.0/24"
+          - "10.195.0.0/18"
+          - "10.195.64.0/24"
+          - "10.195.128.0/18"
+          - "10.195.192.0/24"
+          - "172.26.0.0/15"
+          - "10.198.0.0/22"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "3306"
+      openshift-platform-01:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-15920
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - paas-kafka
+          - paas-zookeeper
+          sourceRanges:
+          - "10.184.0.0/23"
+          - "10.188.0.0/23"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+            - "2181"
+            - "2888"
+            - "3888"
+            - "9092"
+            - "9100"
+            - "9404"
+            - "8778"
+      openshift-prd-ingress:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-15746
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-msp-mon
+          sourceRanges:
+          - "10.184.0.0/23"
+          - "10.188.0.0/23"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "8446"
+      percona-management:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK1056946
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-msp-mon
+          sourceRanges:
+          - "10.57.0.0/17"
+          - "10.64.0.0/17"
+          - "10.90.80.0/24"
+          - "10.90.81.0/24"
+          - "10.90.100.0/23"
+          - "10.100.0.0/16"
+          - "10.101.0.0/16"
+          - "10.109.0.0/16"
+          - "10.110.0.0/16"
+          - "10.195.0.0/18"
+          - "10.195.64.0/24"
+          - "10.195.128.0/18"
+          - "10.195.192.0/24"
+          - "172.26.0.0/15"
+          - "10.198.0.0/22"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+            - "443"
+            - "3000"
+            - "8443"
+            - "9093"
+      percona-monitoring:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK1050570
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - global-pmm-client-prd
+          - ads-msp-mon
+          sourceRanges:
+          - "10.184.0.0/13"
+          - "10.206.0.0/15"
+          - "10.208.0.0/16"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "443"
+            - "5667"
+            - "8443"
+            - "9093"
+      percona-monitoring-02:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK1056946
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - mysql
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          - ads-msp-mon
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+            - "3306"
+            - "5666"
+            - "7777"
+            - "42000-51999"
+      percona-monitoring-03:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK1056946
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - ads-msp-mon
+          sourceRanges:
+          sourceServiceAccounts:
+          sourceTags:
+          - ads-pmm-client
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "443"
+            - "5667"
+            - "8443"
+            - "9093"
+      cassandra-ingress-prd:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-17276
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - platform-nx-prd
+          sourceRanges:
+          - "10.5.48.67/32"
+          - "10.5.48.68/32"
+          - "10.5.48.69/32"
+          - "10.5.48.70/32"
+          - "10.5.48.71/32"
+          - "10.5.48.75/32"
+          - "10.7.45.27/32"
+          - "10.7.45.28/32"
+          - "10.7.45.29/32"
+          - "10.7.45.31/32"
+          - "10.7.45.32/32"
+          - "10.7.45.42/32"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "9042"
+            - "7000"
+            - "7001"
+            - "7199"

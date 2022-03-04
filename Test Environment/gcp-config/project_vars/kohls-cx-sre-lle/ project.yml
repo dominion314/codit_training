@@ -1,0 +1,22 @@
+project:
+  name: kohls-cx-sre-lle
+  managed: true
+  folderId: "124759181101" # CCE
+  billingAccount: 00C36A-CD0BDB-E543D0 # Same billing account as loyalty retail services
+  labels:
+    billing-dept-id: "90526"
+    project-manager: "sushil-singh"
+    devops-lead: "manish-parmar"
+    environment-type: lle
+    line-of-business: sre
+    lob: sre
+    project-requestor: "arunkumar-kesavamoorthy"
+
+serviceAPIs:
+  compute.googleapis.com:
+  storage-component.googleapis.com:
+  storage-api.googleapis.com:
+  stackdriver.googleapis.com:
+  logging.googleapis.com:
+  monitoring.googleapis.com:
+  cloudasset.googleapis.com:

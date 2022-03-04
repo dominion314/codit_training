@@ -1,0 +1,85 @@
+---
+storageBuckets:
+  ao-vendor-uploader:
+    storageClass: MULTI_REGIONAL
+    location: US
+    bucketPolicyOnly: false
+  finance-erp-ppm-prd:
+    storageClass: MULTI_REGIONAL
+    location: US
+    lifecycleRule:
+    - action:
+        type: Delete
+      condition:
+        age: 3
+    bucketPolicyOnly: false
+  geotax-prd:
+    storageClass: MULTI_REGIONAL
+    location: US
+    bucketPolicyOnly: false
+  geotax-prd-appl-deploy:
+    storageClass: MULTI_REGIONAL
+    location: US
+    bucketPolicyOnly: false
+  geotax-prd-appl-patches:
+    storageClass: MULTI_REGIONAL
+    location: US
+    bucketPolicyOnly: false
+  geotax-prd-config-db-deploy:
+    storageClass: MULTI_REGIONAL
+    location: US
+    bucketPolicyOnly: false
+  geotax-prd-db-updates:
+    storageClass: MULTI_REGIONAL
+    location: US
+    bucketPolicyOnly: false
+  geotax-prd-debug-files:
+    storageClass: MULTI_REGIONAL
+    location: US
+    bucketPolicyOnly: false
+  kohls-eta-finance-ar-vgc-pin-decrypt-prod:
+    storageClass: MULTI_REGIONAL
+    location: US
+    bucketPolicyOnly: false
+  kohls-eta-finance-prd-geotax:
+    storageClass: MULTI_REGIONAL
+    location: US
+    bucketPolicyOnly: false
+  kohls-eta-finance-prd-geotax-startup-scripts:
+    storageClass: MULTI_REGIONAL
+    location: US
+    bucketPolicyOnly: false
+  kohls-eta-finance-prd-mongo:
+    storageClass: MULTI_REGIONAL
+    location: US
+    bucketPolicyOnly: false
+  kohls-eta-finance-prd-mysql:
+    storageClass: MULTI_REGIONAL
+    location: US
+    bucketPolicyOnly: false
+  kohls-eta-finance-prd-terraform-states:
+    storageClass: MULTI_REGIONAL
+    location: US
+    bucketPolicyOnly: false
+  kohls-eta-finance-prd-us-central1-primary-consul-backup:
+    storageClass: NEARLINE
+    location: US-CENTRAL1
+    lifecycleRule:
+    - action:
+        type: Delete
+      condition:
+        age: 14
+    bucketPolicyOnly: false
+  kohls-eta-finance-prd-us-east1-primary-consul-backup:
+    storageClass: NEARLINE
+    location: US-EAST1
+    lifecycleRule:
+    - action:
+        type: Delete
+      condition:
+        age: 14
+    bucketPolicyOnly: false
+  kohls-etafinance-mft-prod-prd-bucket:
+    storageClass: STANDARD
+    location: US
+    bucketPolicyOnly: false

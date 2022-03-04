@@ -1,0 +1,20 @@
+---
+iamPolicyMembersV2:
+  usersByEmail:
+    pavel.leonovitch@kohls.com:
+    - role: viewer
+    - role: editor
+      deletionProtect: true
+    - role: bigquery.jobUser
+      condition:
+        title: one-week
+        description: this-is-optional
+        expression: 'request.time < timestamp("2021-01-01T06:00:00.000Z")'
+    - role: Custom_Governance_Viewer
+      OrgId: 212666867691
+  groupsByEmail:
+    gcp-et-devops-l2@kohls.com:
+    - role: viewer
+  serviceAccountsByEmail:
+    gitops-example-1@kohlsqa-kcc-upgrade-lle.iam.gserviceaccount.com:
+    - role: viewer

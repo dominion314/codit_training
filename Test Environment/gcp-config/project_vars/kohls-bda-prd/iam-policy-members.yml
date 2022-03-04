@@ -1,0 +1,88 @@
+---
+iamPolicyMembersV2:
+  groupsByEmail:
+    gcp-bda-devops-admin@kohls.com:
+    - role: bigquery.jobUser
+    - role: bigquery.user
+    - role: compute.networkViewer
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: iam.serviceAccountTokenCreator
+    - role: iam.serviceAccountKeyAdmin
+    - role: iam.serviceAccountUser
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    - role: oauthconfig.editor
+    - role: dataflow.developer
+    gcp-mkt-bt-cede@kohls.com:
+    - role: bigtable.admin
+    gcp-bda-gcp-labs-user@kohls.com:
+    - role: bigquery.resourceViewer
+  serviceAccountsByEmail:
+    dp-qlik@kohls-bda-prd.iam.gserviceaccount.com:
+    - role: CustomBigQueryUser
+      OrgId: 1035901152068
+    - role: bigquery.readSessionUser
+    dp-platform-stats@kohls-bda-prd.iam.gserviceaccount.com:
+    - role: bigquery.readSessionUser
+    - role: bigquery.dataViewer
+    - role: bigquery.jobUser
+    - role: monitoring.viewer
+    - role: storage.objectViewer
+    terraform-win@kohls-bda-prd.iam.gserviceaccount.com:
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.storageAdmin
+    - role: iam.serviceAccountUser
+    - role: logging.configWriter
+    - role: logging.logWriter
+    - role: storage.admin
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    grafana-sre@kohls-cx-sremgmt-prd.iam.gserviceaccount.com:
+    - role: CustomBigQueryUser
+      OrgId: 1035901152068
+    pzpmmfp-mserv-metafeed-bigdata@kohls-bda-prd.iam.gserviceaccount.com:
+    - role: CustomBigQueryUser
+      OrgId: 1035901152068
+    - role: bigtable.user
+    - role: logging.configWriter
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    hclsw-unicakdpprodbqg-hclsw-gc@hclsw-gcp-kohl.iam.gserviceaccount.com:
+    - role: bigquery.jobUser
+    pzpmede-mserv-ede-bigdata@kohls-bda-prd.iam.gserviceaccount.com:
+    - role: CustomBigQueryUser
+      OrgId: 1035901152068
+    - role: bigtable.user
+    - role: logging.configWriter
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    pzpmkra-mserv-kirap-bigdata@kohls-bda-prd.iam.gserviceaccount.com:
+    - role: CustomBigQueryUser
+      OrgId: 1035901152068
+    - role: bigtable.user
+    - role: logging.configWriter
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    kos-rundeck@kohls-kos-production.iam.gserviceaccount.com:
+    - role: storage.objectViewer
+    dp-pelican@kohls-bda-prd.iam.gserviceaccount.com:
+    - role: bigquery.readSessionUser
+    cta-store-hours-prd-cxdevo@kohls-cx-prd.iam.gserviceaccount.com:
+    - role: CustomBigQueryUser
+      OrgId: 1035901152068
+    cce-dse-rec@kohls-bda-dse-prd.iam.gserviceaccount.com:
+    - role: bigtable.user
+    - role: bigtable.admin
+    service-899600061317@dataproc-accounts.iam.gserviceaccount.com:
+    - role: storage.admin
+    dp-qlik-finance@kohls-bda-prd.iam.gserviceaccount.com:
+    - role: CustomBigQueryUser
+      OrgId: 1035901152068
+    - role: bigquery.readSessionUser
+    dp-bda-adhoc@kohls-bda-prd.iam.gserviceaccount.com:
+    - role: CustomBigQueryUser
+      OrgId: 1035901152068

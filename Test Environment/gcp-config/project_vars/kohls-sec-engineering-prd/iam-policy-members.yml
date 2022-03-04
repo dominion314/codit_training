@@ -1,0 +1,51 @@
+---
+iamPolicyMembers:
+  groupsByEmail:
+    gcp-securitymonitoring-devops-l3@kohls.com:
+      roles:
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - storage.admin
+      - compute.instanceAdmin
+      - compute.networkUser
+      - bigquery.jobUser
+    gcp-securityplanning-devops-admin@kohls.com:
+      roles:
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - storage.admin
+      - compute.instanceAdmin
+      - compute.networkUser
+    gcp-securityplanning-devops-l2@kohls.com:
+      roles:
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - storage.admin
+      - compute.instanceAdmin
+      - compute.networkUser
+    gcp-securityplanning-devops-l3@kohls.com:
+      roles:
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - storage.admin
+      - compute.instanceAdmin
+      - compute.networkUser
+    gcp-securitytech-devops-admin@kohls.com:
+      roles:
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - storage.admin
+      - compute.instanceAdmin
+      - compute.networkUser
+      - iam.serviceAccountKeyAdmin
+      - container.admin
+      - bigquery.jobUser
+      - oauthconfig.editor
+    gcp-securitytech-devops-manager@kohls.com:
+      roles:
+      - compute.storageAdmin
+      - iam.serviceAccountUser
+      - storage.admin
+      - compute.instanceAdmin
+      - compute.networkUser
+      - bigquery.jobUser

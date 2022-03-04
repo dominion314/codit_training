@@ -1,0 +1,77 @@
+{%- if pubSubTopics is defined %}
+{%-   for topic_name, topic_def in pubSubTopics.items() %}
+apiVersion: pubsub.cnrm.cloud.google.com/v1beta1
+kind: PubSubTopic
+metadata:
+  name: "{{ topic_name }}"
+  namespace: gcp-{{ project.name }}
+  annotations:
+{%-     if topic_def.deletionProtect | default(false) %}
+    cnrm.cloud.google.com/deletion-policy: abandon
+{%-     endif %}
+  labels:
+    managed-by-cnrm: "true"
+{%-     if defaultLabels is defined %}
+{%-       for key, value in defaultLabels.items() %}
+{%-         if topic_def.labels is defined %}
+{%-           if not key in topic_def.labels %}
+    {{ key }}: "{{ value }}"
+{%-           endif %}
+{%-         else %}
+    {{ key }}: "{{ value }}"
+{%-         endif %}
+{%-       endfor %}
+{%-     endif %}
+{%-     if topic_def.labels is defined %}
+{%-       for key, value in topic_def.labels.items() %}
+    {{ key }}: {{ value }}
+{%-       endfor %}
+{%-     endif %}
+---
+{%-     if topic_def.permissions is defined %}
+{%-       for entity_type, entity_def in topic_def.permissions.items() %}
+{%-         for member, role_def in entity_def.items() %}
+{%-           for role in role_def.roles %}
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  name: "pubsub-{{ topic_name }}-{{ member | replace("@", ".") | lower }}-{{ role }}"
+  namespace: gcp-{{ project.name }}
+  labels:
+    managed-by-cnrm: "true"
+{%-     if defaultLabels is defined %}
+{%-       for key, value in defaultLabels.items() %}
+{%-         if topic_def.labels is defined %}
+{%-           if not key in topic_def.labels %}
+    {{ key }}: "{{ value }}"
+{%-           endif %}
+{%-         else %}
+    {{ key }}: "{{ value }}"
+{%-         endif %}
+{%-       endfor %}
+{%-     endif %}
+{%-     if topic_def.labels is defined %}
+{%-       for key, value in topic_def.labels.items() %}
+    {{ key }}: {{ value }}
+{%-       endfor %}
+{%-     endif %}
+spec:
+{%-     if entity_type == 'usersByEmail' %}
+  member: "user:{{ member }}"
+{%-     elif entity_type == 'groupsByEmail' %}
+  member: "group:{{ member }}"
+{%-     elif entity_type == 'serviceAccountsByEmail' %}
+  member: "serviceAccount:{{ member }}"
+{%-     endif %}
+  role: roles/{{ role }}
+  resourceRef:
+    apiVersion: pubsub.cnrm.cloud.google.com/v1beta1
+    kind: PubSubTopic
+    name: "{{ topic_name }}"
+---
+{%-           endfor %}
+{%-         endfor %}
+{%-       endfor %}
+{%-     endif %}
+{%-   endfor %}
+{%- endif %}

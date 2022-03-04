@@ -1,0 +1,614 @@
+---
+projects:
+- name: kohls-bda-analytics-prd
+  gitRef: main
+- name: kohls-bda-dse-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "20 0,8,16 * * *"
+- name: kohls-bda-dse-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "25 0,8,16 * * *"
+- name: kohls-bda-hle
+  gitRef: main
+- name: kohls-bda-lle
+  gitRef: main
+- name: kohls-bda-log-prd
+  gitRef: main
+- name: kohls-bda-prd
+  gitRef: main
+- name: kohls-bda-xpn-hle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "05 2,10,18 * * *"
+- name: kohls-bda-xpn-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "20 2,10,18 * * *"
+- name: kohls-bda-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "45 1,9,17 * * *"
+- name: kohls-cce-openshift-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "40 3,11,19 * * *"
+- name: kohls-cce-openshift-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "55 3,11,19 * * *"
+- name: kohls-cpa-lle
+  gitRef: main
+- name: kohls-cpa-xpn-lle
+  gitRef: main
+- name: kohls-cpe-cne-lle
+  gitRef: main
+- name: kohls-cpe-cpa-lle
+  gitRef: main
+- name: kohls-cpe-e2edemo-lle
+  gitRef: main
+- name: kohls-cpe-image-mgmt-lle
+  gitRef: main
+- name: kohls-cpe-image-mgmt-prd
+  gitRef: main
+- name: kohls-cpe-kcc-prd
+  gitRef: main
+- name: kohls-cpe-sample-lle
+  gitRef: main
+- name: kohls-cpe-sre-lle
+  gitRef: main
+- name: kohls-cpe-sre-prd
+  gitRef: main
+- name: kohls-cpe-xpn-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "00 2,10,18 * * *"
+- name: kohls-cpe-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "20 3,11,19 * * *"
+- name: kohls-credit-ia-lle
+  gitRef: main
+- name: kohls-cx-associate-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "00 1,9,17 * * *"
+- name: kohls-cx-associate-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "20 1,9,17 * * *"
+- name: kohls-cx-loyalty-retailsrv-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "50 0,8,16 * * *"
+- name: kohls-cx-rtl-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "45 0,8,16 * * *"
+- name: kohls-cx-rtl-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "45 0,8,16 * * *"
+- name: kohls-cx-pci-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "05 1,8,17 * * *"
+- name: kohls-cx-pci-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "05 1,8,17 * * *"
+- name: kohls-cx-poc-lle
+  gitRef: main
+- name: kohls-cx-post-purchase-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "55 0,8,16 * * *"
+- name: kohls-cx-post-purchase-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "50 1,9,17 * * *"
+- name: kohls-cx-shop-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "10 1,9,17 * * *"
+- name: kohls-cx-shop-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "10 1,9,17 * * *"
+- name: kohls-cx-sremgmt-prd
+  gitRef: main
+- name: kohls-cx-sre-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "15 1,9,17 * * *"
+- name: kohls-cx-xpn-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "40 1,9,17 * * *"
+- name: kohls-cx-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "55 1,9,17 * * *"
+- name: kohls-devexp-tools-lle
+  gitRef: main
+- name: kohls-devexp-tools-prd
+  gitRef: main
+- name: kohls-devexp-tools-sbx
+  gitRef: main
+- name: kohls-ea-xpn-lle
+  gitRef: main
+- name: kohls-ea-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "35 4,12,20 * * *"
+- name: kohls-ecom-xpn-hle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "05 3,11,19 * * *"
+- name: kohls-ecom-xpn-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "35 2,10,18 * * *"
+- name: kohls-ecom-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "30 4,12,20 * * *"
+- name: kohls-eta-hr-lle
+  gitRef: main
+- name: kohls-eta-hr-prd
+  gitRef: main
+- name: kohls-eta-xpn-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "30 3,11,19 * * *"
+- name: kohls-eta-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "05 4,12,20 * * *"
+- name: kohls-etcc-exterro-lle
+  gitRef: main
+- name: kohls-etcc-exterro-prd
+  gitRef: main
+- name: kohls-etcc-finops-aodocs-lle
+  gitRef: main
+- name: kohls-etcc-poppulo-prd
+  gitRef: main
+- name: kohls-etcc-tax-lle
+  gitRef: main
+- name: kohls-etcc-tax-prd
+  gitRef: main
+- name: kohls-etcc-uc-lle
+  gitRef: main
+- name: kohls-iaas-bqadmin-prd
+  gitRef: main
+- name: kohls-iaas-lle
+  gitRef: main
+- name: kohls-iaas-prd
+  gitRef: main
+- name: kohls-iaas-xpn-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "45 4,12,20 * * *"
+- name: kohls-iaas-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "40 4,12,20 * * *"
+- name: kohls-infra-aiops-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "20 4,12,20 * * *"
+- name: kohls-infra-aiops-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "50 4,12,20 * * *"
+- name: kohls-infra-monitoring-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "25 4,12,20 * * *"
+- name: kohls-infra-monitoring-prd
+  gitRef: main
+- name: kohls-infra-xpn-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "45 3,11,19 * * *"
+- name: kohls-infra-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "25 3,11,19 * * *"
+- name: kohls-intra-transit-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "15 0,8,16 * * *"
+- name: kohls-kre-xpn-lle
+  gitRef: main
+- name: kohls-merch-in-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "10 0,8,16 * * *"
+- name: kohls-merch-item-lle
+  gitRef: main
+- name: kohls-merch-item-prd
+  gitRef: main
+- name: kohls-merch-pl-lle
+  gitRef: main
+- name: kohls-merch-pl-prd
+  gitRef: main
+- name: kohls-merch-pd-lle
+  gitRef: main
+- name: kohls-merch-pd-prd
+  gitRef: main
+- name: kohls-merch-xpn-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "15 3,11,19 * * *"
+- name: kohls-merch-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "00 4,12,20 * * *"
+- name: kohls-multitenant-xpn-lle
+  gitRef: main
+- name: kohls-ocf-adhoc-prd
+  gitRef: main
+- name: kohls-ocf-ext-prd
+  gitRef: main
+- name: kohls-ocf-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "40 0,8,16 * * *"
+- name: kohls-ocf-prd
+  gitRef: main
+- name: kohls-ocf-stateful-lle
+  gitRef: main
+- name: kohls-paas-ops
+  gitRef: main
+- name: kohls-platform-dbaas-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "40 2,10,18 * * *"
+- name: kohls-platform-dbaas-ops
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "55 2,10,18 * * *"
+- name: kohls-platform-dbaas-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "00 3,11,19 * * *"
+- name: kohls-platform-maas-lle
+  gitRef: main
+- name: kohls-platform-maas-ops
+  gitRef: main
+- name: kohls-platform-maas-prd
+  gitRef: main
+- name: kohls-platform-netservices-lle
+  gitRef: main
+- name: kohls-platform-netservices-prd
+  gitRef: main
+- name: kohls-platform-openshift-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "35 3,11,19 * * *"
+- name: kohls-platform-openshift-ops
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "30 2,10,18 * * *"
+- name: kohls-platform-openshift-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "50 3,11,19 * * *"
+- name: kohls-platform-xpn-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "35 1,9,17 * * *"
+- name: kohls-platform-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "25 1,9,17 * * *"
+- name: kohls-rapidpaas-sbx
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "15 2,10,18 * * *"
+- name: kohls-scf-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "30 1,9,17 * * *"
+- name: kohls-scf-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "10 2,10,18 * * *"
+- name: kohls-sec-engineering-lle
+  gitRef: main
+- name: kohls-sec-engineering-prd
+  gitRef: main
+- name: kohls-sec-oasa-lle
+  gitRef: main
+- name: kohls-sec-vault-lle
+  gitRef: main
+- name: kohls-sec-vault-prd
+  gitRef: main
+- name: kohls-sec-xpn-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "25 2,10,18 * * *"
+- name: kohls-sec-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "45 2,10,18 * * *"
+- name: kohls-seed-xpn-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "10 4,12,20 * * *"
+- name: kohls-seed-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "15 4,12,20 * * *"
+- name: kohls-bda-mkt-lle
+  gitRef: main
+- name: kohls-bda-ecom-prd
+  gitRef: main
+- name: kohls-bda-hr-prd
+  gitRef: main
+- name: kohls-bda-stores-prd
+  gitRef: main
+- name: kohls-bda-finance-prd
+  gitRef: main
+- name: kohls-bda-mkt-prd
+  gitRef: main
+- name: kohls-bda-lp-prd
+  gitRef: main
+- name: kohls-bda-credit-prd
+  gitRef: main
+- name: kohls-bda-merch-prd
+  gitRef: main
+- name: kohls-bda-pd-prd
+  gitRef: main
+- name: kohls-bda-ers-prd
+  gitRef: main
+- name: kohls-visionapi-prd
+  gitRef: main
+- name: kohls-visionapi-sbx
+  gitRef: main
+- name: kohls-eta-credit-prd
+  gitRef: main
+- name: kohls-eta-credit-lle
+  gitRef: main
+- name: kohls-merch-ps-lle
+  gitRef: main
+- name: kohls-merch-ps-prd
+  gitRef: main
+- name: kohls-cce-dbaas-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "50 2,10,18 * * *"
+- name: kohls-cce-dbaas-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "10 3,11,19 * * *"
+- name: kohls-cx-scf-instaclustr-lle
+  gitRef: main
+- name: kohls-infra-kdx-lle
+  gitRef: main
+- name: kohls-infra-kdx-prd
+  gitRef: main
+- name: kohls-sec-okta-lle
+  gitRef: main
+- name: kohls-infra-vmo-prd
+  gitRef: main
+- name: kohls-etcc-finstrat-lle
+  gitRef: main
+- name: kohls-cx-associate-new-lle
+  gitRef: main
+- name: kohls-infra-win-ad-prd
+  gitRef: main
+- name: kohls-sec-logging-prd
+  gitRef: main
+- name: kohls-sec-cspm-prd
+  gitRef: main
+- name: kohls-sec-bastion-lle
+  gitRef: main
+- name: kohls-sec-bastion-prd
+  gitRef: main
+- name: kohls-infosec-prd
+  gitRef: main
+- name: kohls-eta-finance-lle
+  gitRef: main
+- name: kohls-eta-finance-prd
+  gitRef: main
+- name: kohls-etcc-payments-lle
+  gitRef: main
+- name: kohls-etcc-creditops-lle
+  gitRef: main
+- name: kohls-infra-pie-lle
+  gitRef: main
+- name: kohls-infra-pie-prd
+  gitRef: main
+- name: kohls-merch-in-prd
+  gitRef: main
+- name: kohls-etcc-creditops-prd
+  gitRef: main
+- name: kohls-sec-okta-prd
+  gitRef: main
+- name: kohls-etcc-aacs-lle
+  gitRef: main
+- name: kohls-etcc-aacs-prd
+  gitRef: main
+- name: kohls-infra-cuds-prd
+  gitRef: main
+- name: kohls-platformops-xpn-lle
+  gitRef: main
+- name: kohls-etcc-ccproductivity-lle
+  gitRef: main

@@ -1,0 +1,14 @@
+---
+storageBuckets:
+  kohls-bda-dev-ext-placeiq:
+    location: us-central1
+    versioningEnabled: false
+    labels:
+      versioning: "false"
+      line-of-business: marketing
+  kohls-bda-lle-uat-dp-marketing-analytics:
+    location: us-central1
+    versioningEnabled: false
+    labels:
+      versioning: "false"
+      line-of-business: marketing

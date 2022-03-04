@@ -1,0 +1,25 @@
+---
+vpcs:
+  cpa-nx-qa:
+    firewallRules:
+      rule-1:
+        priority: 900
+        direction: INGRESS
+        description: dummy-rule-template
+        disabled: true
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - "qa-tag"
+          sourceRanges:
+          - "10.120.1.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          deny:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "80"
+            - "443"

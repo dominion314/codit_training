@@ -1,0 +1,28 @@
+---
+vpcs:
+  ea-nx-lle:
+    interconnectRouterDef:
+      ea-nx-lle-c1-pi-rtr01:
+        region: us-central1
+        description:
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+        partnerInterconnect:
+          abandonOnDelete: true
+          description:
+          availabilityDomain: 2
+          connectionSpeed: 50MB
+      ea-nx-lle-e1-pi-rtr01:
+        region: us-east1
+        description:
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+        partnerInterconnect:
+          abandonOnDelete: true
+          description:
+          availabilityDomain: 2
+          connectionSpeed: 50MB

@@ -1,0 +1,6 @@
+---
+#allowed special rates are 500MB or 1GB
+bandwidth:
+  allowedRates:
+    cpe-nx-lle:
+    - 20MB

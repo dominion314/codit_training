@@ -1,0 +1,41 @@
+---
+vpcs:
+    cpe-nx-lle:
+        proxyDeployV2:
+            central:
+                imageVersion: 0.3.13
+                network:
+                    ip: 10.187.34.208/28
+                    bluecat-id: 3260274
+                    status: MANUAL
+                natLogConfig:
+                    enable: false
+                natManualAddresses: 4
+                advancedNatSettings:
+                    #min_ports_per_vm:
+                    #tcp_est_timeout:
+                    #tcp_trans_timeout:
+                    #udp_timeout:
+                    #eimEnabled:
+                    #icmp_timeout: 20000
+            east:
+                imageVersion: 0.3.13
+                network:
+                    ip: 10.191.27.48/28
+                    bluecat-id: 3260285
+                    status: MANUAL
+                natLogConfig:
+                    enable: false
+                natManualAddresses: 4
+                advancedNatSettings:
+                    #min_ports_per_vm:
+                    #tcp_est_timeout:
+                    #tcp_trans_timeout:
+                    #udp_timeout:
+                    #eimEnabled:
+                    #icmp_timeout: 20000
+        proxySettings:
+            proxyPermitURL:
+                - .yahoo.com
+            proxyDenyURL:
+                - .reddit.com

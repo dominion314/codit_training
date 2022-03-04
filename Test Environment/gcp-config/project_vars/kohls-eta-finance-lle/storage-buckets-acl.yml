@@ -1,0 +1,6 @@
+---
+storageBuckets:
+  geotax-lle:
+    acls:
+      usersByEmail:
+        160005724144-compute@developer.gserviceaccount.com: OWNER

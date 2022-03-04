@@ -1,0 +1,93 @@
+---
+storageBuckets:
+  kohls-bda-dse-lle-cce-dse-rec:
+    acls:
+      usersByEmail:
+        cce-dse-rec@kohls-bda-dse-lle.iam.gserviceaccount.com: WRITER
+        cce-dse-lot@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        cce-dse-src@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        cce-dse-cmn@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        cce-dse-mkt@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        cce-dse-ifo@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+      groupsByEmail:
+        GCP-Data-Scientist-Enterprise@kohls.com: WRITER
+        gcp-bda-enterprisedatascience-softwareengineer-l3@kohls.com: WRITER
+  kohls-bda-dse-lle-cce-dse-stg:
+    acls:
+      usersByEmail:
+        cce-dse-rec@kohls-bda-dse-lle.iam.gserviceaccount.com: WRITER
+        cce-dse-lot@kohls-bda-dse-lle.iam.gserviceaccount.com: WRITER
+        cce-dse-src@kohls-bda-dse-lle.iam.gserviceaccount.com: WRITER
+        cce-dse-cmn@kohls-bda-dse-lle.iam.gserviceaccount.com: WRITER
+        cce-dse-mkt@kohls-bda-dse-lle.iam.gserviceaccount.com: WRITER
+        cce-dse-ifo@kohls-bda-dse-lle.iam.gserviceaccount.com: WRITER
+      groupsByEmail:
+        GCP-Data-Scientist-Enterprise@kohls.com: WRITER
+        gcp-bda-enterprisedatascience-softwareengineer-l3@kohls.com: WRITER
+  kohls-bda-dse-lle-cce-dse-int:
+    acls:
+      usersByEmail:
+        cce-dse-rec@kohls-bda-dse-lle.iam.gserviceaccount.com: WRITER
+        cce-dse-lot@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        cce-dse-src@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        cce-dse-cmn@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        cce-dse-mkt@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        cce-dse-ifo@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+      groupsByEmail:
+        GCP-Data-Scientist-Enterprise@kohls.com: WRITER
+        gcp-bda-enterprisedatascience-softwareengineer-l3@kohls.com: WRITER
+  kohls-bda-dse-lle-cce-dse-src:
+    acls:
+      usersByEmail:
+        cce-dse-src@kohls-bda-dse-lle.iam.gserviceaccount.com: WRITER
+        cce-dse-rec@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        cce-dse-lot@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        cce-dse-cmn@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        cce-dse-mkt@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        cce-dse-ifo@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        search-solr@kohls-kos-lle.iam.gserviceaccount.com: READER
+        search-solr@kohls-cx-shop-lle.iam.gserviceaccount.com: READER
+      groupsByEmail:
+        GCP-Data-Scientist-Enterprise@kohls.com: WRITER
+        gcp-bda-enterprisedatascience-softwareengineer-l3@kohls.com: WRITER
+  kohls-bda-dse-lle-cce-dse-lot:
+    acls:
+      usersByEmail:
+        cce-dse-lot@kohls-bda-dse-lle.iam.gserviceaccount.com: WRITER
+        cce-dse-src@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        cce-dse-rec@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        cce-dse-cmn@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        cce-dse-mkt@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        cce-dse-ifo@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+      groupsByEmail:
+        GCP-Data-Scientist-Enterprise@kohls.com: WRITER
+        gcp-bda-enterprisedatascience-softwareengineer-l3@kohls.com: WRITER
+  kohls-bda-dse-lle-cce-dse-cmn:
+    acls:
+      groupsByEmail:
+        GCP-Data-Scientist-Enterprise@kohls.com: WRITER
+        gcp-bda-enterprisedatascience-softwareengineer-l3@kohls.com: WRITER
+  kohls-bda-dse-lle-cce-dse-mkt:
+    acls:
+      usersByEmail:
+        cce-dse-mkt@kohls-bda-dse-lle.iam.gserviceaccount.com: WRITER
+        cce-dse-lot@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        cce-dse-src@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        cce-dse-rec@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        cce-dse-cmn@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        cce-dse-ifo@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+      groupsByEmail:
+        GCP-Data-Scientist-Enterprise@kohls.com: WRITER
+        gcp-bda-enterprisedatascience-softwareengineer-l3@kohls.com: WRITER
+  kohls-bda-dse-lle-cce-dse-ifo:
+    acls:
+      usersByEmail:
+        cce-dse-ifo@kohls-bda-dse-lle.iam.gserviceaccount.com: WRITER
+        cce-dse-lot@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        cce-dse-src@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        cce-dse-cmn@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        cce-dse-mkt@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+        cce-dse-rec@kohls-bda-dse-lle.iam.gserviceaccount.com: READER
+      groupsByEmail:
+        GCP-Data-Scientist-Enterprise@kohls.com: WRITER
+        gcp-bda-enterprisedatascience-softwareengineer-l3@kohls.com: WRITER

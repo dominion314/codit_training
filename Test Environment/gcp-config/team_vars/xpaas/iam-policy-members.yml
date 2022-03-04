@@ -1,0 +1,72 @@
+---
+iamPolicyMembers:
+  groupsByEmail:
+    gcp-xpaas-openshift-admin@kohls.com:
+      roles:
+        # MISSING "Custom Cloud Scheduler Admin AddOn" and "Compute Engine SSH Key Master"
+      - bigquery.admin
+      - cloudfunctions.developer
+      - cloudscheduler.admin
+      - compute.imageUser
+      - compute.instanceAdmin.v1
+      - compute.loadBalancerAdmin
+      - compute.networkUser
+      - compute.networkViewer
+      - compute.storageAdmin
+      - compute.viewer
+      - container.admin
+      - container.clusterAdmin
+      - iam.securityReviewer
+      - iam.serviceAccountKeyAdmin
+      - iam.serviceAccountTokenCreator
+      - iam.serviceAccountUser
+      - logging.admin
+      - logging.configWriter
+      - logging.viewer
+      - monitoring.admin
+      - monitoring.metricWriter
+      - monitoring.viewer
+      - pubsub.admin
+      - servicemanagement.quotaAdmin
+      - storage.admin
+    gcp-xpaas-openshift-l3@kohls.com:
+      roles:
+        # MISSING "Custom Cloud Scheduler Admin AddOn"
+      - appengine.appViewer
+      - bigquery.admin
+      - cloudfunctions.developer
+      - cloudscheduler.admin
+      - compute.imageUser
+      - compute.instanceAdmin.v1
+      - compute.loadBalancerAdmin
+      - compute.networkUser
+      - compute.networkViewer
+      - compute.storageAdmin
+      - compute.viewer
+      - container.admin
+      - container.clusterAdmin
+      - iam.serviceAccountUser
+      - logging.admin
+      - logging.configWriter
+      - logging.viewer
+      - monitoring.admin
+      - monitoring.metricWriter
+      - monitoring.viewer
+      - pubsub.admin
+      - storage.admin
+    gcp-xpaas-openshift-l2@kohls.com:
+      roles:
+        # MISSING "Custom Compute Engine Power State Admin"
+      - cloudfunctions.developer
+      - compute.imageUser
+      - compute.networkUser
+      - compute.networkViewer
+      - compute.storageAdmin
+      - compute.viewer
+      - container.admin
+      - iam.serviceAccountUser
+      - logging.configWriter
+      - logging.viewer
+      - monitoring.metricWriter
+      - monitoring.viewer
+      - storage.objectViewer

@@ -1,0 +1,21 @@
+---
+billingDeptId: 90577
+project:
+  name: kohls-seed-xpn-prd
+  managed: true
+  deletionProtect: true
+  folderId: 970875009337
+  billingAccount: 00C36A-CD0BDB-E543D0
+  labels:
+    billing-dept-id: 90577
+    project-manager: matt-ploetz
+    devops-lead: todd-winter
+    environment-type: prd
+    line-of-business: seed
+    project-requestor: neha-racharla
+serviceAPIs:
+  cloudresourcemanager.googleapis.com:
+  cloudasset.googleapis.com:
+  firewallinsights.googleapis.com:
+projectSharing:
+- kohls-scf-prd

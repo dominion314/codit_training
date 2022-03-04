@@ -1,0 +1,70 @@
+{%- if vpcs is defined %}
+{%-   for vpc_name, vpc_def in vpcs.items() %}
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeNetwork
+metadata:
+  labels:
+{%-         for key, value in project.labels.items() %}
+    "{{ key }}": "{{ value }}"
+{%-         endfor %}
+  name: "{{ vpc_name }}"
+  namespace: gcp-{{ project.name }}
+{%- if project.deletionProtect | default(true, true) %}
+{%-   if vpc_def.deletionProtect | default(true, true) %}
+  annotations:
+    cnrm.cloud.google.com/deletion-policy: abandon
+{%-   endif %}
+{%- endif %}
+spec:
+  routingMode: {{ vpc_def.routingMode }}
+  autoCreateSubnetworks: {{ vpc_def.autoCreateSubnetworks | default("false", true) }}
+---
+{%-     if vpc_def.subnets is defined and vpc_def.subnets is not none %}
+{%-       for subnet_name, subnet_def in vpc_def.subnets.items() %}
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeSubnetwork
+metadata:
+  labels:
+{%-         for key, value in project.labels.items() %}
+    "{{ key }}": "{{ value }}"
+{%-         endfor %}
+  name: "{{ subnet_name }}"
+  namespace: "gcp-{{ project.name }}"
+{%- if project.deletionProtect | default(true, true) %}
+{%-   if subnet_def.deletionProtect | default(false, true) %}
+  annotations:
+    cnrm.cloud.google.com/deletion-policy: abandon
+{%-   endif %}
+{%- endif %}
+spec:
+  ipCidrRange: {{ subnet_def.network.ip }}
+  region: {{ subnet_def.region }}
+  description: {{ subnet_def.desc | default('None') }}
+{%-         if subnet_def.flowlogs is defined %}
+  logConfig: {{ subnet_def.flowlogs }}
+{%-         endif %}
+  privateIpGoogleAccess: true
+  networkRef:
+    name: {{ vpc_name }}
+{%-         if subnet_def.secondary is defined or subnet_def.gke is defined %}
+  secondaryIpRange:
+{%-         endif %}
+{%-         if subnet_def.secondary is defined %}
+{%-           for secondary_name,secondary_value in subnet_def.secondary.items() %}
+    - ipCidrRange: {{ secondary_value.ip }}
+      rangeName: {{ secondary_name }}
+{%-           endfor %}
+{%-         endif %}
+{%-         if subnet_def.gke is defined %}
+{%-           for cluster in subnet_def.gke %}
+    - ipCidrRange: {{ cluster.podNetwork.ip }}
+      rangeName: {{ cluster.podNetwork.name }}
+    - ipCidrRange: {{ cluster.serviceNetwork.ip }}
+      rangeName: {{ cluster.serviceNetwork.name }}
+{%-           endfor %}
+{%-         endif %}
+---
+{%-       endfor %}
+{%-     endif %}
+{%-   endfor %}
+{%- endif %}

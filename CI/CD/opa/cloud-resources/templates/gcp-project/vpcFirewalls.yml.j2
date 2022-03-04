@@ -1,0 +1,109 @@
+{%- if vpcs is defined %}
+{%-   for vpc_name, vpc_def in vpcs.items() %}
+{#- Begin Block for Global Firewall Rules #}
+{%-     if DefaultFirewall is not none and DefaultFirewall is defined %}
+{%-       for dftFW_name, dftFW_def in DefaultFirewall.items() %}
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeFirewall
+metadata:
+  labels:
+{%-         for key, value in project.labels.items() %}
+    {{ key }}: "{{ value }}"
+{%-         endfor %}
+  name: {{ vpc_name }}-{{ dftFW_name }}
+  namespace: gcp-{{ project.name }}
+{%- if project.deletionProtect | default(true, true) %}
+{%-   if dftFW_def.deletionProtect | default(false, true) %}
+  annotations:
+    cnrm.cloud.google.com/deletion-policy: abandon
+{%-   endif %}
+{%- endif %}
+spec:
+  description: {{ dftFW_def.description | default('""',true) }}
+  direction: {{ dftFW_def.direction }}
+{%- if vpc_def['firewallRules'][dftFW_name] is defined %}
+  disabled: {{ vpc_def['firewallRules'][dftFW_name]['disabled'] }}
+{%- else %}
+  disabled: {{ dftFW_def['disabled'] }}
+{%- endif %}
+{%- if dftFW_def.logging is defined and dftFW_def.logging == true %}
+  logConfig:
+    metadata: "INCLUDE_ALL_METADATA"
+{%- endif %}
+  networkRef:
+    name: {{ vpc_name }}
+  priority: {{ dftFW_def.priority }}
+  {%- if dftFW_def.rule.destinationRanges is defined and dftFW_def.rule.destinationRanges %}
+  destinationRanges: {{ dftFW_def.rule.destinationRanges | to_json }}{% endif %}
+  {%- if dftFW_def.rule.targetServiceAccounts is defined and dftFW_def.rule.targetServiceAccounts %}
+  targetServiceAccounts: {{ dftFW_def.rule.targetServiceAccounts | to_json }}{% endif %}
+  {%- if dftFW_def.rule.targetTags is defined and dftFW_def.rule.targetTags %}
+  targetTags: {{ dftFW_def.rule.targetTags | to_json }}{% endif %}
+  {%- if dftFW_def.rule.sourceRanges is defined and dftFW_def.rule.sourceRanges %}
+  sourceRanges: {{ dftFW_def.rule.sourceRanges | to_json }}{% endif %}
+  {%- if dftFW_def.rule.sourceServiceAccounts is defined and dftFW_def.rule.sourceServiceAccounts %}
+  sourceServiceAccounts: {{ dftFW_def.rule.sourceServiceAccounts | to_json }}{% endif %}
+  {%- if dftFW_def.rule.sourceTags is defined and dftFW_def.rule.sourceTags %}
+  sourceTags: {{ dftFW_def.rule.sourceTags | to_json }}{% endif %}
+  {%- if dftFW_def.rule.allow is defined and dftFW_def.rule.allow %}
+  allow: {{ dftFW_def.rule.allow | to_json }}{% endif %}
+  {%- if dftFW_def.rule.deny is defined and dftFW_def.rule.deny %}
+  deny: {{ dftFW_def.rule.deny | to_json }}{% endif %}
+---
+{%-       endfor %}
+{%-     else %}
+{%-       set DefaultFirewall = {} %}
+{%-     endif %}
+{#- End Block for Global Firewall Rules #}
+{#- Begin Block for VPC Specific Firewall Rules #}
+{%-     if vpc_def.firewallRules is defined and vpc_def.firewallRules is not none %}
+{%-       for firewall_name, firewall_param in vpc_def.firewallRules.items() %}
+{%-         if DefaultFirewall[firewall_name] is not defined %}
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeFirewall
+metadata:
+  labels:
+{%-         for key, value in project.labels.items() %}
+    {{ key }}: "{{ value }}"
+{%-         endfor %}
+  name: {{ vpc_name }}-{{ firewall_name }}
+  namespace: gcp-{{ project.name }}
+{%- if project.deletionProtect | default(true, true) %}
+{%-   if firewall_param.deletionProtect | default(false, true) %}
+  annotations:
+    cnrm.cloud.google.com/deletion-policy: abandon
+{%-   endif %}
+{%- endif %}
+spec:
+  description: {{ firewall_param.description | default('""',true) }}
+  direction: {{ firewall_param.direction }}
+  disabled: {{ firewall_param.disabled | default(false, true) }}
+{%- if firewall_param.logging is defined and firewall_param.logging == true %}
+  logConfig:
+    metadata: "INCLUDE_ALL_METADATA"
+{%- endif %}
+  networkRef:
+    name: {{ vpc_name }}
+  priority: {{ firewall_param.priority | default(900, true)}}
+  {%- if firewall_param.rule.destinationRanges is defined and firewall_param.rule.destinationRanges %}
+  destinationRanges: {{ firewall_param.rule.destinationRanges | to_json }}{% endif %}
+  {%- if firewall_param.rule.targetServiceAccounts is defined and firewall_param.rule.targetServiceAccounts %}
+  targetServiceAccounts: {{ firewall_param.rule.targetServiceAccounts | to_json }}{% endif %}
+  {%- if firewall_param.rule.targetTags is defined and firewall_param.rule.targetTags %}
+  targetTags: {{ firewall_param.rule.targetTags | to_json }}{% endif %}
+  {%- if firewall_param.rule.sourceRanges is defined and firewall_param.rule.sourceRanges %}
+  sourceRanges: {{ firewall_param.rule.sourceRanges | to_json }}{% endif %}
+  {%- if firewall_param.rule.sourceServiceAccounts is defined and firewall_param.rule.sourceServiceAccounts %}
+  sourceServiceAccounts: {{ firewall_param.rule.sourceServiceAccounts | to_json }}{% endif %}
+  {%- if firewall_param.rule.sourceTags is defined and firewall_param.rule.sourceTags %}
+  sourceTags: {{ firewall_param.rule.sourceTags | to_json }}{% endif %}
+  {%- if firewall_param.rule.allow is defined and firewall_param.rule.allow %}
+  allow: {{ firewall_param.rule.allow | to_json }}{% endif %}
+  {%- if firewall_param.rule.deny is defined and firewall_param.rule.deny %}
+  deny: {{ firewall_param.rule.deny | to_json }}{% endif %}
+---
+{%-         endif %}
+{%-       endfor %}
+{%-     endif %}
+{%-   endfor %}
+{%- endif %}

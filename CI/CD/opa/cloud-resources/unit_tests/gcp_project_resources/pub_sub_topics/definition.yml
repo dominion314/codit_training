@@ -1,0 +1,4 @@
+---
+kccTemplates: ['../../../templates/gcp-project/pub-sub-topics.yml.j2']
+inspecControls: ['../../../inspec/controls/PubSubTopics.rb']
+validationDelaySecs: 60

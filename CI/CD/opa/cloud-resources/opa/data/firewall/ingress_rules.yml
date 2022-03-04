@@ -1,0 +1,58 @@
+---
+#within "disable_exception" key, enter your VPC name as a dictionary item that contains
+#a list of the names of firewall rules that are allowed to be disabled
+disable_exception:
+  example-nx-lle: #vpc name
+    - "example-rule-01" #name exempted fw rule that is desired to be disabled
+    - "test-rule-01" #name exempted fw rule that is desired to be disabled
+
+####################################
+#within the "exemptedPriorities" key, enter your VPC name as a dictionary item
+#that contains a list of firewall rules that are permitted to have priorities that are
+#non-900 value as the key with the required priority as the value.
+#valid format is "fw-rule-name: priority-#"
+exemptedPriorities:
+  example-nx-lle: #vpc name
+    - example-access-01: 100 #exempted fw rule that has a priority of 100
+    - test-access-02: 1000 #exempted fw rule that has a priority of 1000
+  cx-nx-prd:
+    - onprem-proxy-ingress-deny-to-pnf-prd: 800
+    - ravpn-users-ingress-cre-portal: 850
+    - ravpn-users-ingress-ghrgh-cluster: 850
+    - ravpn-users-ingress-azkaban: 850
+    - monitoring-internal3-ingress: 850
+    - deny-kohls-user-networks-to-prd: 950
+    - deny-kohls-user-networks-to-prd-east: 950
+    - deny-ingr-to-cnc-acc-svcs-grn-prd: 990
+    - deny-ingr-to-cnc-acc-svcs-grn-prd-east: 990
+    - deny-ingr-to-cnc-acc-svc-blue-prd: 990
+    - deny-ingr-to-cnc-acc-svcs-blue-prd-east: 990
+    - aws-workspaces-ingress-pnf-prd: 890
+    - cicd-ingress-ssh-pnf-prd: 890
+    - ecom-xpn-pnf-prd-ing-to-ecom-xpn-pnf-prd: 890
+    - ecom-xpn-pnf-prd-ing-to-ecom-xpn-tonomi-prd: 890
+    - ecom-xpn-tonomi-prd-ing-to-ecom-xpn-pnf-prd: 890
+    - gspann-b2b-ing-to-kohls-ecom-pnf-prd: 890
+    - jump-servers-ingress-to-pnf-prd: 890
+    - kohls-ecom-pe-prd-ing-to-ecom-xpn-prd-pnf-prd: 890
+    - kohls-kos-xpn-prd-ingress-pnf-prd-ha-proxy: 890
+    - kohls-kos-xpn-prd-ingress-pnf-prd-ssh: 890
+    - kohls-kos-xpn-prd-ingress-pnf-prd-tcp-01: 890
+    - kohls-kosxpn-prd-ing-kohls-pnf-prd-01: 890
+    - kohls-openshift-prd-kohls-pnf-prd-https: 890
+    - kos-prd-ingress-https-pnf-prd: 890
+    - on-prem-subnets-ingress-pnf-prd-for-gdc-clustering: 890
+    - openshift-prod-cdc-ing-kohls-ecom-xpn-pnf-prd: 890
+    - same-subnet-access-ingress-to-pnf-prd: 890
+    - sps-application-ing-to-kohls-ecom-xpn-pnf-prd: 890
+    - oms-reauth-prd-in-cx-pci-pnf: 890
+    - pnf-deny-all-ingress: 895
+  sec-nx-prd:
+    - vault-consul-intercommunication-prd-01: 840
+    - ingress-deny-consul-access-dflt-rule-override: 850
+    - sec-nx-prd-vault-prometheus-consul: 840
+  sec-nx-lle:
+    - vault-consul-intercommunication-dev-01: 840
+    - ingress-deny-consul-access-dflt-rule-override: 850
+    - vault-consul-intercommunication-lle-01: 840
+    - sec-nx-lle-vault-prometheus-consul: 840

@@ -1,0 +1,45 @@
+---
+vpcs:
+  kre-nx-lle:
+    routerDef:
+      kre-nx-lle-c1-gcp-rtr01:
+        region: us-central1
+        description:
+        routerASN:  # Custom ASN, if blank will pull from GLOBAL-ASN.YML
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+
+        ha_vpn_gateways_to_transit:
+          kre-nx-lle-c1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.0.176/30
+              bluecat-id: 1572216
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.0.180/30
+              bluecat-id: 1572218
+              status: PROVISIONED
+
+      kre-nx-lle-e1-gcp-rtr01:
+        region: us-east1
+        description:
+        routerASN:  # Custom ASN, if blank will pull from GLOBAL-ASN.YML
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+
+        ha_vpn_gateways_to_transit:
+          kre-nx-lle-e1-totransit:
+            description:
+            if0_peer_cidr:
+              cidr: 169.254.0.184/30
+              bluecat-id: 1572220
+              status: PROVISIONED
+            if1_peer_cidr:
+              cidr: 169.254.0.188/30
+              bluecat-id: 1572222
+              status: PROVISIONED

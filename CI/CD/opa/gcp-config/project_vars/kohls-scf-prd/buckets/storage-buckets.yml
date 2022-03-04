@@ -1,0 +1,75 @@
+---
+storageBuckets:
+  kohls-scf-prd-terraform-states:
+    versioningEnabled: false
+    deletionProtect: true
+    storageClass: MULTI_REGIONAL
+    location: US
+    labels:
+      app-name: "oic"
+    permissions:
+      serviceAccountsByEmail:
+        terraform-devops@kohls-scf-prd.iam.gserviceaccount.com:
+          roles:
+          - storage.admin
+  kohls-scf-prd-oscr:
+    versioningEnabled: false
+    deletionProtect: true
+    storageClass: MULTI_REGIONAL
+    location: US
+    labels:
+      app-name: "oscr"
+    permissions:
+      serviceAccountsByEmail:
+        oscr-prod@kohls-scf-prd.iam.gserviceaccount.com:
+          roles:
+          - storage.admin
+  kohls-scf-prd-ocf-sku-sync-prd:
+    versioningEnabled: false
+    deletionProtect: true
+    storageClass: MULTI_REGIONAL
+    location: US
+    labels:
+      app-name: "ocf-sku-sync-prd"
+    permissions:
+      serviceAccountsByEmail:
+        scf-sku-sync@kohls-scf-prd.iam.gserviceaccount.com:
+          roles:
+            - storage.admin
+  kohls-scf-prd-scd-decon:
+    versioningEnabled: false
+    deletionProtect: true
+    storageClass: MULTI_REGIONAL
+    location: US
+    labels:
+      app-name: "scf-scd-decon-prd"
+    permissions:
+      serviceAccountsByEmail:
+        scf-scd-decon@kohls-scf-prd.iam.gserviceaccount.com:
+          roles:
+            - storage.admin
+  kohls-spie-proda-deploy:
+    versioningEnabled: false
+    deletionProtect: true
+    storageClass: MULTI_REGIONAL
+    location: US
+    labels:
+      app-name: "spie"
+    permissions:
+      serviceAccountsByEmail:
+        giv-spie-dataflow@kohls-scf-prd.iam.gserviceaccount.com:
+          roles:
+            - storage.admin
+
+  forced-replen-automator-production-bucket:
+    versioningEnabled: false
+    deletionProtect: true
+    storageClass: MULTI_REGIONAL
+    location: US
+    labels:
+      app-name: "forced-replen-automator"
+    permissions:
+      serviceAccountsByEmail:
+        customer-fulfillment-prod@kohls-scf-prd.iam.gserviceaccount.com:
+          roles:
+            - storage.admin

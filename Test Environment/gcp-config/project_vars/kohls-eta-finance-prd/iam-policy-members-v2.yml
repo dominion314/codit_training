@@ -1,0 +1,117 @@
+---
+iamPolicyMembersV2:
+  groupsByEmail:
+    gcp-eta-devops-admin@kohls.com:
+    - role: CustomBigQueryUser
+      OrgId: 1035901152068
+    - role: CustomRole584
+      OrgId: 1035901152068
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    - role: cloudfunctions.developer
+    - role: compute.networkViewer
+    - role: iam.serviceAccountKeyAdmin
+    - role: iam.serviceAccountTokenCreator
+    - role: iam.serviceAccountUser
+    - role: logging.admin
+    - role: logging.configWriter
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: monitoring.admin
+    gcp-finance-sd-l3@kohls.com:
+    - role: CustomRole351
+      OrgId: 1035901152068
+    - role: CustomRole542
+      OrgId: 1035901152068
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: storage.objectViewer
+    gcp-eta-softwareengineer-l2@kohls.com:
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    gcp-eta-softwareengineer-l3@kohls.com:
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    gcp-finance-kfs-reporting@kohls.com:
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    - role: bigquery.dataViewer
+    - role: bigquery.user
+    gcp-finance-kfs-sd-admin@kohls.com:
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    gcp-finance-kfs-sd-l3@kohls.com:
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    gcp-finance-sd-admin@kohls.com:
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    - role: compute.networkViewer
+    - role: iam.serviceAccountUser
+    - role: logging.admin
+    - role: logging.configWriter
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: monitoring.admin
+    gcp-finance-sd-l2@kohls.com:
+    - role: CustomViewer486
+      OrgId: 1035901152068
+  serviceAccountsByEmail:
+    wercsmart-mft-eta@kohls-eta-finance-prd.iam.gserviceaccount.com:
+    - role: CustomBucketViewer
+      OrgId: 1035901152068
+    - role: iam.serviceAccountUser
+    - role: storage.admin
+    - role: storage.objectAdmin
+    - role: storage.objectViewer
+    consul-paas@kohls-eta-finance-prd.iam.gserviceaccount.com:
+    - role: CustomRole130
+      OrgId: 1035901152068
+    - role: CustomRole150
+      OrgId: 1035901152068
+    - role: CustomRole703
+      OrgId: 1035901152068
+    - role: compute.networkUser
+    vgc-inbound-prd-eta@kohls-eta-finance-prd.iam.gserviceaccount.com:
+    - role: StorageObjectReadWriteDelete
+      OrgId: 1035901152068
+    - role: pubsub.subscriber
+    - role: storage.admin
+    - role: storage.objectAdmin
+    - role: storage.objectCreator
+    - role: storage.objectViewer
+    terraform-devops@kohls-eta-finance-prd.iam.gserviceaccount.com:
+    - role: lbadmin
+      OrgId: 1035901152068
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.storageAdmin
+    - role: iam.serviceAccountUser
+    - role: storage.admin
+    - role: storage.objectAdmin
+    mongo-dba@kohls-eta-finance-prd.iam.gserviceaccount.com:
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: iam.serviceAccountUser
+    mysql-dba@kohls-eta-finance-prd.iam.gserviceaccount.com:
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: iam.serviceAccountUser
+    ao-vendor-eta@kohls-eta-finance-prd.iam.gserviceaccount.com:
+    - role: pubsub.editor
+    - role: storage.admin
+    pro143-logs-prd-eta@kohls-eta-finance-prd.iam.gserviceaccount.com:
+    - role: pubsub.subscriber
+    - role: pubsub.viewer
+    finance-storage-eta@kohls-eta-finance-prd.iam.gserviceaccount.com:
+    - role: storage.admin
+    - role: storage.objectAdmin

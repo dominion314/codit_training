@@ -1,0 +1,6 @@
+---
+vpcs:
+  cpe-nx-lle:
+
+    routingMode: GLOBAL
+    autoCreateSubnets: false

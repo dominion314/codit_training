@@ -1,0 +1,17 @@
+---
+pubSubTopics:
+  cloud-logs-network:
+    deletionProtect: false
+    labels:
+      app-name: gcp-audit-logs
+      env-type: prd
+  cloud-logs-compute:
+    deletionProtect: false
+    labels:
+      app-name: gcp-audit-logs
+      env-type: prd
+  cloud-logs-iam:
+    deletionProtect: false
+    labels:
+      app-name: gcp-audit-logs
+      env-type: prd

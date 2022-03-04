@@ -1,0 +1,47 @@
+---
+vpcs:
+  cpa-nx-lle:
+    subnets:
+      # cpa-nx-lle-sre-theia-c1-prv01:
+      #   advertiseRoutes: true
+      #   region: us-central1
+      #   network:
+      #     status: BLUECAT_ALLOC_GCP_28
+
+      # cpa-nx-lle-sre-theia-e1-prv01:
+      #   advertiseRoutes: true
+      #   region: us-east1
+      #   network:
+      #     status: BLUECAT_ALLOC_GCP_28
+
+      # cpa-nx-lle-testing-sandbox-c1-prv01:
+      #   advertiseRoutes: false
+      #   region: us-central1
+      #   network:
+      #     ip: 10.187.12.0/25
+      #     bluecat-id: 1562409
+      #     status: PROVISIONED
+      #
+      # cpa-nx-lle-testing-sandbox-e1-prv01:
+      #   advertiseRoutes: false
+      #   region: us-east1
+      #   network:
+      #     ip: 10.191.6.128/25
+      #     bluecat-id: 1562411
+      #     status: PROVISIONED
+      #
+      # cpa-nx-lle-general-c1-prv01:
+      #   advertiseRoutes: false
+      #   region: us-central1
+      #   network:
+      #     ip: 10.187.21.128/25
+      #     bluecat-id: 1596764
+      #     status: PROVISIONED
+      #
+      # cpa-nx-lle-general-e1-prv01:
+      #   advertiseRoutes: false
+      #   region: us-east1
+      #   network:
+      #     ip: 10.191.11.128/25
+      #     bluecat-id: 1596766
+      #     status: PROVISIONED

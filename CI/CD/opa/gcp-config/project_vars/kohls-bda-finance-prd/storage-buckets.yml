@@ -1,0 +1,14 @@
+---
+storageBuckets:
+  kohls-bda-finance-biz:
+    location: US
+    versioningEnabled: false
+    labels:
+      versioning: "false"
+      line-of-business: finance
+    storageClass: MULTI_REGIONAL
+    lifecycleRule:
+    - action:
+        type: Delete
+      condition:
+        age: 90

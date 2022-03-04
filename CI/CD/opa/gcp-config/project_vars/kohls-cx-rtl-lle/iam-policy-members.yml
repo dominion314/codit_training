@@ -1,0 +1,376 @@
+---
+iamPolicyMembersV2:
+  groupsByEmail:
+    GCP-DevOps-ECom-Admin@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - OrgId: 1035901152068
+      role: lbadmin
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.storageAdmin
+    - role: iam.serviceAccountKeyAdmin
+    - role: iam.serviceAccountTokenCreator
+    - role: iam.serviceAccountUser
+    - role: logging.admin
+    - role: logging.configWriter
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: monitoring.admin
+    - role: storage.admin
+    GCP-DevOps-ECom@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - OrgId: 1035901152068
+      role: lbadmin
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.storageAdmin
+    - role: iam.serviceAccountTokenCreator
+    - role: iam.serviceAccountUser
+    - role: logging.admin
+    - role: logging.configWriter
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: monitoring.admin
+    - role: storage.admin
+    gcp-ecom-cmdm-softwareengineer-l3@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: storage.objectViewer
+    gcp-ecom-tvs-devops-admin@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - OrgId: 1035901152068
+      role: lbadmin
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.storageAdmin
+    - role: iam.serviceAccountKeyAdmin
+    - role: iam.serviceAccountTokenCreator
+    - role: iam.serviceAccountUser
+    - role: logging.admin
+    - role: logging.configWriter
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: monitoring.admin
+    - role: storage.admin
+    gcp-ecom-tvs-devops-l2@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - OrgId: 1035901152068
+      role: lbadmin
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.storageAdmin
+    - role: logging.viewer
+    - role: monitoring.viewer
+    - role: storage.objectViewer
+    gcp-ecom-tvs-devops-l3@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - OrgId: 1035901152068
+      role: lbadmin
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.storageAdmin
+    - role: iam.serviceAccountTokenCreator
+    - role: iam.serviceAccountUser
+    - role: logging.admin
+    - role: logging.configWriter
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: monitoring.admin
+    - role: storage.admin
+    gcp-ecom-tvs-devops-manager@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - OrgId: 1035901152068
+      role: lbadmin
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.storageAdmin
+    - role: iam.serviceAccountTokenCreator
+    - role: iam.serviceAccountUser
+    - role: logging.admin
+    - role: logging.configWriter
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: monitoring.admin
+    - role: storage.admin
+    gcp-ecom-tvs-performanceengineer-admin@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: logging.viewer
+    - role: monitoring.metricWriter
+    - role: monitoring.viewer
+    - role: storage.objectViewer
+    gcp-ecom-tvs-performanceengineer-l2@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: logging.viewer
+    - role: monitoring.metricWriter
+    - role: monitoring.viewer
+    - role: storage.objectViewer
+    gcp-ecom-tvs-performanceengineer-l3@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: logging.viewer
+    - role: monitoring.metricWriter
+    - role: monitoring.viewer
+    - role: storage.objectViewer
+    gcp-ecom-tvs-performanceengineer-manager@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: logging.viewer
+    - role: monitoring.metricWriter
+    - role: monitoring.viewer
+    - role: storage.objectViewer
+    gcp-ecom-tvs-productionengineer-admin@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - OrgId: 1035901152068
+      role: lbadmin
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: monitoring.editor
+    - role: monitoring.viewer
+    - role: storage.objectViewer
+    gcp-ecom-tvs-productionengineer-l2@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: monitoring.viewer
+    - role: storage.objectViewer
+    gcp-ecom-tvs-productionengineer-l3@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - OrgId: 1035901152068
+      role: lbadmin
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: monitoring.viewer
+    - role: storage.objectViewer
+    gcp-ecom-tvs-productionengineer-manager@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: monitoring.viewer
+    - role: storage.admin
+    - role: storage.objectViewer
+    gcp-ecom-tvs-qualityengineer-admin@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: storage.objectViewer
+    gcp-ecom-tvs-qualityengineer-l2@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: storage.objectViewer
+    gcp-ecom-tvs-qualityengineer-l3@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: storage.objectViewer
+    gcp-ecom-tvs-qualityengineer-manager@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: storage.objectViewer
+    gcp-ecom-tvs-softwareengineer-admin@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: storage.objectViewer
+    gcp-ecom-tvs-softwareengineer-l2@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: storage.objectViewer
+    gcp-ecom-tvs-softwareengineer-l3@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: storage.objectViewer
+    gcp-ecom-tvs-softwareengineer-manager@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: storage.objectViewer
+    gcp-infra-dataservices-systemsengineer-l3@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: storage.admin
+    gcp-infra-dataservices-systemsengineer-l2@kohls.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: storage.admin
+  serviceAccountsByEmail:
+    activity-reporter@kohls-kos-cicd.iam.gserviceaccount.com:
+    - role: monitoring.metricWriter
+    - role: monitoring.viewer
+    cache-loader-tvsc@kohls-cx-rtl-lle.iam.gserviceaccount.com:
+    - role: logging.logWriter
+    consul-paas@kohls-cx-rtl-lle.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole130
+    - OrgId: 1035901152068
+      role: CustomRole150
+    - OrgId: 1035901152068
+      role: CustomRole703
+    - role: compute.networkUser
+    export-tvsc@kohls-cx-rtl-lle.iam.gserviceaccount.com:
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    - role: storage.objectCreator
+    import-tvsc@kohls-cx-rtl-lle.iam.gserviceaccount.com:
+    - role: logging.logWriter
+    ingress-proxy-api-tvsc@kohls-cx-rtl-lle.iam.gserviceaccount.com:
+    - role: logging.logWriter
+    ingress-proxy-k-tvsc@kohls-cx-rtl-lle.iam.gserviceaccount.com:
+    - role: logging.logWriter
+    kafka-mm-tvsc@kohls-cx-rtl-lle.iam.gserviceaccount.com:
+    - role: logging.logWriter
+    kafka-tvsc@kohls-cx-rtl-lle.iam.gserviceaccount.com:
+    - role: logging.logWriter
+    kos-reporting-noc@kohls-kos-lle.iam.gserviceaccount.com:
+    - role: compute.viewer
+    mongo-dba@kohls-cx-rtl-lle.iam.gserviceaccount.com:
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: iam.serviceAccountUser
+    mysql-dba@kohls-cx-rtl-lle.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.viewer
+    - role: iam.serviceAccountUser
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    mysql-tvsc@kohls-cx-rtl-lle.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole351
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.viewer
+    - role: iam.serviceAccountUser
+    - role: logging.logWriter
+    - role: storage.objectViewer
+    oma-tvsc@kohls-cx-rtl-lle.iam.gserviceaccount.com:
+    - role: logging.logWriter
+    redis-tvsc@kohls-cx-rtl-lle.iam.gserviceaccount.com:
+    - role: logging.logWriter
+    servicereg-tvsc@kohls-cx-rtl-lle.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomRole430
+    - role: compute.networkViewer
+    - role: logging.logWriter
+    - role: storage.objectCreator
+    tax-service-tvsc@kohls-cx-rtl-lle.iam.gserviceaccount.com:
+    - role: logging.logWriter
+    terraform-devops@kohls-cx-rtl-lle.iam.gserviceaccount.com:
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.storageAdmin
+    - role: compute.loadBalancerAdmin
+    - role: container.admin
+    - role: iam.serviceAccountUser
+    - role: storage.admin
+    terraform-provisioning-tvsc@kohls-cx-rtl-lle.iam.gserviceaccount.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - OrgId: 1035901152068
+      role: lbadmin
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.storageAdmin
+    - role: iam.serviceAccountUser
+    - role: logging.logWriter
+    - role: storage.admin
+    tvs-app-tvsc@kohls-cx-rtl-lle.iam.gserviceaccount.com:
+    - role: logging.logWriter
+    tvs-ci-dashboard-tvsc@kohls-cx-rtl-lle.iam.gserviceaccount.com:
+    - role: logging.logWriter
+    vp-automation-noc@kohls-vendor-portal-lle.iam.gserviceaccount.com:
+    - role: compute.viewer
+    zkui-tvsc@kohls-cx-rtl-lle.iam.gserviceaccount.com:
+    - role: compute.storageAdmin
+    - role: iam.serviceAccountUser
+    zookeeper-tvsc@kohls-cx-rtl-lle.iam.gserviceaccount.com:
+    - role: compute.storageAdmin
+    - role: iam.serviceAccountUser

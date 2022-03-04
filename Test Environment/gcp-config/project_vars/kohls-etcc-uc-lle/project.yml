@@ -1,0 +1,28 @@
+---
+billingDeptId: "90507"
+
+project:
+  name: kohls-etcc-uc-lle
+  managed: true
+  folderId: "859213288423"
+  billingAccount: "00C36A-CD0BDB-E543D0"
+  # Only hyphens (-), underscores (_), lowercase characters,
+  # and numbers are allowed as characters in labels
+  labels:
+    billing-dept-id: "90507"
+    project-manager: brenda-rockwell
+    devops-lead: mark-schultz
+    environment-type: lle
+    line-of-business: etcc
+    project-requestor: mark-schultz
+    app-name: universal-calendar
+serviceAPIs:
+  compute.googleapis.com:
+  cloudresourcemanager.googleapis.com:
+  storage-component.googleapis.com:
+  storage-api.googleapis.com:
+  stackdriver.googleapis.com:
+  logging.googleapis.com:
+  monitoring.googleapis.com:
+  cloudasset.googleapis.com:
+  networkmanagement.googleapis.com:

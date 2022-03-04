@@ -1,0 +1,54 @@
+---
+vpcs:
+  demo-vpc:
+
+    interconnectRouterDef:
+      demo-vpc-c1-pi-rtr01:
+        region: us-central1
+        description:
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+
+        partnerInterconnect:
+          description: test
+          availabilityDomain: 1
+
+      demo-vpc-c1-pi-rtr02:
+        region: us-central1
+        description:
+        advertiseMode: DEFAULT
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+
+        partnerInterconnect:
+          description: test
+          availabilityDomain: 2
+
+      demo-vpc-e1-pi-rtr01:
+        region: us-east1
+        description:
+        advertiseMode: DEFAULT
+        custom_route_priority:
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+
+        partnerInterconnect:
+          description: test
+          availabilityDomain: 1
+
+      demo-vpc-e1-pi-rtr02:
+        region: us-east1
+        description:
+        advertiseMode: DEFAULT
+        custom_route_priority:
+        custom_advertised_ip_ranges:
+          includeSubnetDef: true
+          customIPList:
+
+        partnerInterconnect:
+          description: test
+          availabilityDomain: 2

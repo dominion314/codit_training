@@ -1,0 +1,22 @@
+---
+vpcs:
+  cpe1-nx-lle:
+    subnets:
+
+      cpe1-xpn-lle-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 192.168.13.128/27
+
+      # cpe1-xpn-lle-e1-prv01:
+      #   advertiseRoutes: true
+      #   region: us-east1
+      #   network:
+      #     ip: 192.168.1.224/27
+
+      cpe1-xpn-lle-test-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 192.168.16.128/27

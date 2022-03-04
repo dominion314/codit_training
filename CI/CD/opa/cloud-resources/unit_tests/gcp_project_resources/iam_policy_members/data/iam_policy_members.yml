@@ -1,0 +1,18 @@
+---
+iamPolicyMembers:
+  usersByEmail:
+    first.last@example.com:
+      roles:
+      - owner
+    second.last@example.com:
+      roles:
+      - editor
+      - viewer
+  groupsByEmail:
+    group-l3@example.com:
+      roles:
+      - viewer
+  serviceAccountsByEmail:
+    service.account@gserviceaccount.com:
+      roles:
+      - viewer

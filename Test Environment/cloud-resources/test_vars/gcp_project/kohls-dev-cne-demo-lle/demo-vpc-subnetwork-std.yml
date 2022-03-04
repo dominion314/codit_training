@@ -1,0 +1,37 @@
+---
+vpcs:
+  demo-vpc:
+    subnets:
+
+      demo-vpc-sampleappname-c1-prv01:
+        advertiseRoutes: true
+        natRouter: demo-vpc-c1-gcp-rtr01
+        region: us-central1
+        network:
+          ip: 192.168.10.0/28
+          bluecat-id: 1231232
+
+      demo-vpc-othersampleappname-e1-sec01:
+        advertiseRoutes: true
+        natRouter: demo-vpc-e1-gcp-rtr01
+        region: us-east1
+        network:
+          ip: 192.168.11.0/28
+          bluecat-id: 1111111
+        secondary:
+          secondary-demo-01:
+            ip: 192.168.12.0/28
+            bluecat-id: 2222222
+          secondary-demo-02:
+            ip: 192.168.13.0/28
+            bluecat-id: 33333333
+
+      demo-vpc-sampleappname-c1-prv02:
+        advertiseRoutes: true
+        natRouter: demo-vpc-c1-gcp-rtr01
+        region: us-central1
+        network:
+          ip: 192.168.38.128/28
+          bluecat-id: 1549024
+          status: PROVISIONED
+

@@ -1,0 +1,5 @@
+#! /usr/bin/env groovy
+//Jenkinsfile to call Go lint tests
+
+//calls groovy script in githook-yaml-lint repo
+goLint(1.12)

@@ -1,0 +1,90 @@
+---
+bigQueryDatasets:
+  merch_lab:
+    friendlyName: merch_lab
+    description: "Dataset created for Kohls merchandising team"
+    deletionProtect: true
+    defaultTableExpirationMs: 0 #Dataset expiration set to 'Never Expire'
+    permissions:
+      groupsByEmail:
+        gcp-bda-gcp-labs-user@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-bda-gcp-labs-superuser@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-bda-softwareengineer-l3@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-mkt-gcp-labs-user@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-mkt-gcp-labs-superuser@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-mkt-gcp-labs-analytics-user@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-credit-gcp-labs-user@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-credit-gcp-labs-superuser@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-ecom-gcp-labs-user@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-ecom-gcp-labs-superuser@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-finance-gcp-labs-user@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-finance-gcp-labs-superuser@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-hr-gcp-labs-user@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-hr-gcp-labs-superuser@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-lp-gcp-labs-user@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-lp-gcp-labs-superuser@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-log-gcp-labs-user@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-log-gcp-labs-superuser@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-stores-gcp-labs-user@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-stores-gcp-labs-superuser@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-pd-gcp-labs-user@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-pd-gcp-labs-superuser@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-merch-gcp-labs-user@kohls.com:
+          roles:
+            - bigquery.dataEditor
+        gcp-merch-gcp-labs-superuser@kohls.com:
+          roles:
+            - bigquery.dataEditor
+        gcp-ers-gcp-labs-user@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-ers-gcp-labs-superuser@kohls.com:
+          roles:
+            - bigquery.dataViewer
+        gcp-bda-devops-admin@kohls.com:
+          roles:
+            - bigquery.dataOwner
