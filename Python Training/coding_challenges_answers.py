@@ -1,4 +1,4 @@
-'''
+
 # Task 1 - Print splice
 # Complete the function to print the first X number of characters in the given string
 def printFirst(mystring, x):
@@ -9,11 +9,6 @@ printFirst('Codit Interns Rule', 3)
 
 # Expected output: Codit Co
 printFirst('Codit Interns Rule', 6)
- 
-# Expected output: Codit College
-printFirst('Codit Interns Rule', 11)
-'''
-
 
 '''
 # Task 2 - String splice
@@ -31,7 +26,7 @@ print(getLast('Codit Interns Rule', 2))
 print(getLast('Codit Interns Rule', 13))
 '''
 
-
+'''
 # Task 3 - Use True or False to complete the function to return True if the word Codit exists in the given string otherwise return False
 
 # Complete the function to return True if the word Codit exists in the given string
@@ -47,7 +42,7 @@ print(containsCodit('Codit Interns Rule'))
     
 # Expected output: False
 print(containsCodit('Night Owls Rock'))
-
+'''
 
 '''
 # Task 4 - Use print to complete the function to print all of the words in the given string

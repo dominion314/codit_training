@@ -1,5 +1,5 @@
 
-# Task 1 - Print splice
+# Task 1 - Print splicing
 # Complete the function to print the first X number of characters in the given string
 def printFirst(mystring, x):
 
@@ -11,6 +11,7 @@ printFirst('Codit Interns Rule', 3)
 printFirst('Codit Interns Rule', 6)
  
 # Expected output: Codit College
+printFirst('Codit Interns Rule', 11)
 
 
 '''
