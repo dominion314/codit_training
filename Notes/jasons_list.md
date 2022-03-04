@@ -3,6 +3,7 @@
 -Terraform
 -K8S
 
+
 Questions:
 
 1. What is the Difference between stateful and stateless
@@ -20,12 +21,19 @@ The API distinction is usually not that great because APIs can come in many shap
 A monolith app can implement a “microservice-ish architecture“ if their classes are structured in a way that allows teams to operate and hopefully deploy independently from each other.
 
 3. What is Brown field and green field deployment
-4. What is Canary deployments 
+
+A greenfield deployment is the installation and configuration of a network where none existed before, for example in a new office. A brownfield deployment, in contrast, is an upgrade or addition to an existing network and uses some legacy components.
+
+4. What is Canary deployments
+
+A canary deployment is a deployment strategy that releases an application or service incrementally to a subset of users. All infrastructure in a target environment is updated in small phases (e.g: 2%, 25%, 75%, 100%).
+
 5. What is blue/green deployments
 
+Blue/Green deployments are a form of progressive delivery where a new version of the application is deployed while the old version still exists. The two versions coexist for a brief period of time while user traffic is routed to the new version, before the old version is discarded (if all goes well).
+
+
 Learn how api’s work. https://www.educative.io/blog/python-fastapi-tutorial
-
--We should build an API in Python and then deploy it via kubernetes into GCP. 
-
+    -We should build an API in Python and then deploy it via kubernetes into GCP. 
 Learn automation with CI/CD jenkins 
 Learn monitoring and alerting in gcp
