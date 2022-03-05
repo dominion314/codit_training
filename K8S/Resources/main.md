@@ -28,7 +28,7 @@ PART 1: Introduction
     Pod - Smallest, most basic unit of kubernetes. It will encapsualte the running application and is ephemeral.
     Comprised of one or more containers and shares network/storage resources.
     Node - A pod "fleet" or pool of worker machines.
-    Controllers – Define desired the state of the cluster. They're exposed as a workspace API object, which create and configure pods for you to maintain health. If the health or state of a pod changes, the controller responds. 
+    Controllers define desired the state of the cluster. They're exposed as a workspace API object, which create and configure pods for you to maintain health. If the health or state of a pod changes, the controller responds. 
     Cluster - A Kubernetes cluster consists of the components that represent the control plane and multiple nodes. When you deploy Kubernetes, you get a cluster, which has atleast one worker node.
 
 ►  Services
@@ -69,7 +69,7 @@ PART 1: Introduction
 
 ►  Controller Manager
 
-    The Cloud Controller Manager can be described as three different things looking at it from a high level view:
+    The Cloud Controller Manager can be described as three different things looking at it from a high level view
         A binary
         A number of control loops
         Part of the glue between k8s and your cloud
@@ -102,7 +102,7 @@ PART 1a: Hands On Engineering - Basic Command Line
     Install kubectl - https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
         - Run the command "kubectl cluster-info" to verify
 
-Commands and Output
+   Commands and Output
 
 ►  Create a deployment (nginx server)
 
@@ -261,72 +261,83 @@ PART 2: K8S Object Configuration
 
 PART 2a: Hands On Engineering - Configure an nginx deployment and service
 
-    Code you will use:
+Code you will use:
 
-    You will need to add these two yaml files to the directory in your cluster.
+You will need to add these two yaml files to the directory in your cluster.
 
-        nginx-deployment.yaml
 
-            apiVersion: apps/v1
-            kind: Deployment
-            metadata:
-            name: nginx-deployment
-            labels:
-                app: nginx
-            spec:
-            replicas: 2
-            selector:
-                matchLabels:
-                app: nginx
-            template:
-                metadata:
-                labels:
-                    app: nginx
-                spec:
-                containers:
-                - name: nginx
-                    image: nginx:1.20
 
-        nginx-service.yaml
+nginx-deployment.yaml
 
-            apiVersion: v1
-            kind: Service
-            metadata:
-            name: nginx-service
-            labels:
-                app: nginx
-                svc: test-nginx
-            spec:
-            selector:
-                app: nginx
-            ports:
-                - protocol: TCP
-                port: 8080
-                targetPort: 80
 
-    Commands you will use:
 
-        kubectl apply -f nginx-deployment.yaml
-        kubectl apply -f nginx-service.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.16
+        ports:
+        - containerPort: 8080
 
-        kubectl get svc
-        kubectl get ep
-        kubectl get svc --show-labels
-        kubectl get svc -l app=nginx 
-        kubectl get pod --show-labels
-        kubectl get pod -l app=nginx
-        kubectl logs -l app=nginx
-        kubectl get pod -n kube-system --show-labels
 
-        kubectl scale --help
-        kubectl scale deployment nginx-deployment --replicas 4
-        kubectl scale deployment nginx-deployment --replicas 3
-        kubectl rollout history deployment nginx-deployment
 
-        kubectl run test-nginx-service --image=busybox
-        kubectl describe pod test-nginx-service
-        kubectl edit pod test-nginx-service
-        kubectl logs nginx-deployment-6d777db949-89t8p 
+nginx-service.yaml
+
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+
+
+
+Commands you will use:
+
+
+
+kubectl apply -f nginx-deployment.yaml
+kubectl apply -f nginx-service.yaml
+
+kubectl get svc
+kubectl get ep
+kubectl get svc --show-labels
+kubectl get svc -l app=nginx 
+kubectl get pod --show-labels
+kubectl get pod -l app=nginx
+kubectl logs -l app=nginx
+kubectl get pod -n kube-system --show-labels
+
+kubectl scale --help
+kubectl scale deployment nginx-deployment --replicas 4
+kubectl scale deployment nginx-deployment --replicas 3
+kubectl rollout history deployment nginx-deployment
+
+kubectl run test-nginx-service --image=busybox
+kubectl describe pod test-nginx-service
+kubectl edit pod test-nginx-service
+kubectl logs nginx-deployment-6d777db949-89t8p 
 
 
 
@@ -334,23 +345,189 @@ PART 2b: Hands On Engineering - Deploy MongoDB
 
 
 
-    Code you will use:
+Code you will use:
 
 
-        mongo-configmap.yaml
 
-            apiVersion: v1
-            kind: ConfigMap
-            metadata:
+mongo-express.yaml
+
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongo-express
+  labels:
+    app: mongo-express
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongo-express
+  template:
+    metadata:
+      labels:
+        app: mongo-express
+    spec:
+      containers:
+      - name: mongo-express
+        image: mongo-express
+        ports:
+        - containerPort: 8081
+        env:
+        - name: ME_CONFIG_MONGODB_ADMINUSERNAME
+          valueFrom:
+            secretKeyRef:
+              name: mongodb-secret
+              key: mongo-root-username
+        - name: ME_CONFIG_MONGODB_ADMINPASSWORD
+          valueFrom: 
+            secretKeyRef:
+              name: mongodb-secret
+              key: mongo-root-password
+        - name: ME_CONFIG_MONGODB_SERVER
+          valueFrom: 
+            configMapKeyRef:
               name: mongodb-configmap
-            data:
-              database_url: mongodb-service
+              key: database_url
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongo-express-service
+spec:
+  selector:
+    app: mongo-express
+  type: LoadBalancer  
+  ports:
+    - protocol: TCP
+      port: 8081
+      targetPort: 8081
+      nodePort: 30000
 
-        mongo-express.yaml
-
-        
 
 
+mongo.yaml
+
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongodb-deployment
+  labels:
+    app: mongodb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongodb
+  template:
+    metadata:
+      labels:
+        app: mongodb
+    spec:
+      containers:
+      - name: mongodb
+        image: mongo
+        ports:
+        - containerPort: 27017
+        env:
+        - name: MONGO_INITDB_ROOT_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: mongodb-secret
+              key: mongo-root-username
+        - name: MONGO_INITDB_ROOT_PASSWORD
+          valueFrom: 
+            secretKeyRef:
+              name: mongodb-secret
+              key: mongo-root-password
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb-service
+spec:
+  selector:
+    app: mongodb
+  ports:
+    - protocol: TCP
+      port: 27017
+      targetPort: 27017
+
+
+
+mongo-secret.yaml
+
+
+
+apiVersion: v1
+kind: Secret
+metadata:
+    name: mongodb-secret
+type: Opaque
+data:
+    mongo-root-username: dXNlcm5hbWU=
+    mongo-root-password: cGFzc3dvcmQ=
+
+
+
+mongo-configmap.yaml
+
+
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongodb-configmap
+data:
+  database_url: mongodb-service
+
+
+
+ingress.yaml
+
+
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: name
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+    - host: app.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: my-service
+              servicePort: 8080
+
+
+
+Commands you will use:
+
+
+
+kubectl apply -f mongo-secret.yaml
+kubectl apply -f mongo.yaml
+kubectl apply -f mongo-configmap.yaml 
+kubectl apply -f mongo-express.yaml
+kubectl get pod
+kubectl get pod --watch
+kubectl get pod -o wide
+kubectl get service
+kubectl get secret
+kubectl get all | grep mongodb
+kubectl describe pod mongodb-deployment-xxxxxx
+kubectl describe service mongodb-service
+kubectl logs mongo-express-xxxxxx
+
+give a URL to external service in minikube
+minikube service mongo-express-service
 
 ►  Deploying MongoDB and Mongo Express
 ►  MongoDB Pod
