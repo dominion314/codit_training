@@ -22,7 +22,7 @@ vpcs:
           description: "None"
           availabilityDomain: 1
           vlanId:
-          connectionSpeed: 50MB
+          connectionSpeed: 2GB
 
       cpe-nx-lle-c1-pi-rtr02:
         region: us-central1

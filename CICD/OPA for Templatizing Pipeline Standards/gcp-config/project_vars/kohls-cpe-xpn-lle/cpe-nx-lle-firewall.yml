@@ -17,7 +17,6 @@ vpcs:
           - "10.1.43.26"
           - "10.7.33.1"
           - "10.7.33.2"
-          - "0.0.0.0/0"
           sourceServiceAccounts:
           sourceTags:
           allow:

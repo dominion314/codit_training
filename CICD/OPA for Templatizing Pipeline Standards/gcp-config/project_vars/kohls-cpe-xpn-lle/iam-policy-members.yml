@@ -11,11 +11,11 @@ iamPolicyMembers:
     612510086557@cloudservices.gserviceaccount.com:
       roles:
       - compute.networkUser
-    terraform-devops@kohls-cpe-image-mgmt-lle.iam.gserviceaccount.com:
+    terraform-devops@doms-cpe-image-mgmt-lle.iam.gserviceaccount.com:
       roles:
       - compute.networkUser
   groupsByEmail:
-    gcp-cpe-cne-devops-admin@kohls.com:
+    gcp-cpe-cne-devops-admin@doms.com:
       roles:
       - compute.storageAdmin
       - iam.serviceAccountUser
@@ -24,7 +24,7 @@ iamPolicyMembers:
       - compute.networkUser
       - container.admin
       - networkmanagement.admin
-    gcp-cpe-cne-devops-l3@kohls.com:
+    gcp-cpe-cne-devops-l3@doms.com:
       roles:
       - compute.storageAdmin
       - iam.serviceAccountUser
@@ -33,6 +33,6 @@ iamPolicyMembers:
       - compute.networkUser
       - container.admin
       - networkmanagement.admin
-    gcp-cpe-developerexperience-softwareengineer-admin@kohls.com:
+    gcp-cpe-developerexperience-softwareengineer-admin@doms.com:
       roles:
       - compute.networkViewer

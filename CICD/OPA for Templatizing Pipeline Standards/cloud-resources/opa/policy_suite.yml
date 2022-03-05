@@ -14,13 +14,13 @@ policies:
 #   - data/empty.yml
 #   policyRegoFile: rego/firewall-egress.rego
 #   package: "kohls.gitops.kcc.gcp_project.firewall_egress.apis"
-- name: "Ingress Firewall rule checks"
-  active: true
-  enforce: true
-  policyDataFiles:
-  - data/firewall/ingress_rules.yml
-  policyRegoFile: rego/firewall-ingress.rego
-  package: "kohls.gitops.kcc.gcp_project.firewall_ingress"
+# - name: "Ingress Firewall rule checks"
+#   active: true
+#   enforce: true
+#   policyDataFiles:
+#   - data/firewall/ingress_rules.yml
+#   policyRegoFile: rego/firewall-ingress.rego
+#   package: "kohls.gitops.kcc.gcp_project.firewall_ingress"
 - name: "Limit interconnect bandwidth"
   active: true
   enforce: true

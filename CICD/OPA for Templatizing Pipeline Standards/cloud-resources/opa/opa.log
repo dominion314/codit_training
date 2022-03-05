@@ -1,36 +1,6 @@
-2022-03-04 23:05:05,431  INFO: Loaded OPA validation config
-2022-03-04 23:05:05,432  INFO: Processing project data for kohls-cpe-xpn-lle
-2022-03-04 23:05:05,432  INFO: Processing input data for /home/dominion314/codit_training/CICD/OPA for Templatizing Pipeline Standards/gcp-config/project_vars/kohls-cpe-xpn-lle
-2022-03-04 23:05:05,510  INFO: Processing policy 'Ingress Firewall rule checks'
-2022-03-04 23:05:05,525  ERROR: Exited with code 1
-2022-03-04 23:05:05,525  INFO: Some of policy checks were not OK
-2022-03-04 23:05:17,309  INFO: Loaded OPA validation config
-2022-03-04 23:05:17,309  INFO: Processing project data for kohls-cpe-xpn-lle
-2022-03-04 23:05:17,309  INFO: Processing input data for /home/dominion314/codit_training/CICD/OPA for Templatizing Pipeline Standards/gcp-config/project_vars/kohls-cpe-xpn-lle
-2022-03-04 23:05:17,383  INFO: Processing policy 'Ingress Firewall rule checks'
-2022-03-04 23:05:17,398  ERROR: Exited with code 1
-2022-03-04 23:05:17,399  INFO: Some of policy checks were not OK
-2022-03-04 23:05:39,133  INFO: Loaded OPA validation config
-2022-03-04 23:05:39,133  INFO: Processing project data for kohls-cpe-xpn-lle
-2022-03-04 23:05:39,133  INFO: Processing input data for /home/dominion314/codit_training/CICD/OPA for Templatizing Pipeline Standards/gcp-config/project_vars/kohls-cpe-xpn-lle
-2022-03-04 23:05:39,214  INFO: Processing policy 'Ingress Firewall rule checks'
-2022-03-04 23:05:39,230  ERROR: Exited with code 1
-2022-03-04 23:05:39,230  INFO: Some of policy checks were not OK
-2022-03-04 23:05:45,396  INFO: Loaded OPA validation config
-2022-03-04 23:05:45,396  INFO: Processing project data for kohls-cpe-xpn-lle
-2022-03-04 23:05:45,396  INFO: Processing input data for /home/dominion314/codit_training/CICD/OPA for Templatizing Pipeline Standards/gcp-config/project_vars/kohls-cpe-xpn-lle
-2022-03-04 23:05:45,474  INFO: Processing policy 'Ingress Firewall rule checks'
-2022-03-04 23:05:45,489  ERROR: Exited with code 1
-2022-03-04 23:05:45,490  INFO: Some of policy checks were not OK
-2022-03-04 23:06:07,092  INFO: Loaded OPA validation config
-2022-03-04 23:06:07,092  INFO: Processing project data for kohls-cpe-xpn-lle
-2022-03-04 23:06:07,092  INFO: Processing input data for /home/dominion314/codit_training/CICD/OPA for Templatizing Pipeline Standards/gcp-config/project_vars/kohls-cpe-xpn-lle
-2022-03-04 23:06:07,169  INFO: Processing policy 'Ingress Firewall rule checks'
-2022-03-04 23:06:07,185  ERROR: Exited with code 1
-2022-03-04 23:06:07,185  INFO: Some of policy checks were not OK
-2022-03-04 23:06:47,564  INFO: Loaded OPA validation config
-2022-03-04 23:06:47,564  INFO: Processing project data for kohls-cpe-xpn-lle
-2022-03-04 23:06:47,564  INFO: Processing input data for /home/dominion314/codit_training/CICD/OPA for Templatizing Pipeline Standards/gcp-config/project_vars/kohls-cpe-xpn-lle
-2022-03-04 23:06:47,645  INFO: Processing policy 'Ingress Firewall rule checks'
-2022-03-04 23:06:47,660  ERROR: Exited with code 1
-2022-03-04 23:06:47,660  INFO: Some of policy checks were not OK
+2022-03-04 23:14:57,006  INFO: Loaded OPA validation config
+2022-03-04 23:14:57,006  INFO: Processing project data for kohls-cpe-xpn-lle
+2022-03-04 23:14:57,006  INFO: Processing input data for /home/dominion314/codit_training/CICD/OPA for Templatizing Pipeline Standards/gcp-config/project_vars/kohls-cpe-xpn-lle
+2022-03-04 23:14:57,089  INFO: Processing policy 'Limit interconnect bandwidth'
+2022-03-04 23:14:57,101  ERROR: Exited with code 1
+2022-03-04 23:14:57,101  INFO: Some of policy checks were not OK

@@ -1,14 +1,14 @@
 ---
 billingDeptId: "90586"
 projectSharing:
-- kohls-cpe-cne-lle
-- kohls-cpe-image-mgmt-lle
-- kohls-cpe-sample-lle
-- kohls-cpe-sre-lle
-- kohls-devexp-tools-lle
-- kohls-devexp-tools-sbx
+- doms-cpe-cne-lle
+- doms-cpe-image-mgmt-lle
+- doms-cpe-sample-lle
+- doms-cpe-sre-lle
+- doms-devexp-tools-lle
+- doms-devexp-tools-sbx
 project:
-  name: kohls-cpe-xpn-lle
+  name: doms-cpe-xpn-lle
   managed: true
   folderId: "778811484176"
   billingAccount: "00C36A-CD0BDB-E543D0"
