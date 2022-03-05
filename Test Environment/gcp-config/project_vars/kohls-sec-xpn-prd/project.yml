@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90513"
 project:
-  name: kohls-sec-xpn-prd
+  name: doms-sec-xpn-prd
   deletionProtect: true
   managed: true
   folderId: "970875009337"
@@ -30,7 +30,7 @@ serviceAPIs:
   networktopology.googleapis.com:
 
 projectSharing:
-- kohls-sec-engineering-prd
-#- kohls-sec-bastion-prd
-- kohls-sec-vault-prd
-- kohls-sec-okta-prd
+- doms-sec-engineering-prd
+#- doms-sec-bastion-prd
+- doms-sec-vault-prd
+- doms-sec-okta-prd

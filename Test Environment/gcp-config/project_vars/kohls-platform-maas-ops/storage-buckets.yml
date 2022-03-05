@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-platform-maas-ops-kafkaplatform:
+  doms-platform-maas-ops-kafkaplatform:
     location: US
     versioningEnabled: false
     labels:
@@ -11,7 +11,7 @@ storageBuckets:
         type: Delete
       condition:
         age: 30
-  kohls-platform-maas-ops-terraform-states:
+  doms-platform-maas-ops-terraform-states:
     location: US
     versioningEnabled: false
     storageClass: MULTI_REGIONAL

@@ -15,6 +15,6 @@ Custom built images are stored in Container Registry of the project that has CB 
 Those images can be refered to immediatelly by another cloud build process.
 
 ## Concerns
-For reasons of enforcing uniform security and corporate policies it is seem to be beneficial to allow CB process to utilize Docker container images produced and vetteed by Kohls and stored in appropriate corporate container registry. Currently two options appear to be worth validating: 
+For reasons of enforcing uniform security and corporate policies it is seem to be beneficial to allow CB process to utilize Docker container images produced and vetteed by doms and stored in appropriate corporate container registry. Currently two options appear to be worth validating: 
     - Ability of CB process to 'pull' container image into CB worker space must be validated. 
-    - Synchronization of certain images from Kohls repository to GCP Container Registry
+    - Synchronization of certain images from doms repository to GCP Container Registry

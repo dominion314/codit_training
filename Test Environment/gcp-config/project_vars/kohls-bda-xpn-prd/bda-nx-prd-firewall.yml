@@ -542,7 +542,7 @@ vpcs:
           - fw-haproxy
           - fw-bd-ede-prod
           - fw-bd-haproxy-prod
-          - fw-kohls-cavisson-vm
+          - fw-doms-cavisson-vm
           - fw-netdiagnostics
       cavisson-prd-to-airflow-ddh-bigdata-prd:
         description: SCTASK0856551
@@ -609,7 +609,7 @@ vpcs:
           - fw-bd-atscale
           - fw-bd-haproxy-prod
           - fw-bd-bpbs-prod
-          - fw-kohls-cavisson-vm
+          - fw-doms-cavisson-vm
           - fw-bd-kirap-prod
           - fw-netdiagnostics
           - fw-bd-workbench-prod
@@ -1493,7 +1493,7 @@ vpcs:
           - fw-bd-haproxy-prod
           - fw-http
           - fw-https
-      kohls-mobile-prd-ingr-ddh-bigdata-prd:
+      doms-mobile-prd-ingr-ddh-bigdata-prd:
         description: SCTASK0962541
         direction: INGRESS
         disabled: false
@@ -1515,7 +1515,7 @@ vpcs:
           sourceTags:
           destinationRanges:
           targetServiceAccounts:
-      kohls-onprem-esp-to-ddh-bigdata-prd:
+      doms-onprem-esp-to-ddh-bigdata-prd:
         description: SCTASK0656721,SCTASK0926429
         direction: INGRESS
         disabled: false
@@ -1543,7 +1543,7 @@ vpcs:
           sourceTags:
           destinationRanges:
           targetServiceAccounts:
-      kohls-onprem-to-bda-xpn-prd-jenkins-acc:
+      doms-onprem-to-bda-xpn-prd-jenkins-acc:
         description: SCTASK0690845
         direction: INGRESS
         disabled: false
@@ -1566,7 +1566,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
           - fw-bd-tableau-prod
-      kohls-onprem-proxy-to-ddh-bigdata-prd:
+      doms-onprem-proxy-to-ddh-bigdata-prd:
         description: SCTASK0650961
         direction: INGRESS
         disabled: false
@@ -1585,7 +1585,7 @@ vpcs:
           sourceTags:
           destinationRanges:
           targetServiceAccounts:
-      kohls-onprem-proxy-ing-ssh:
+      doms-onprem-proxy-ing-ssh:
         description: SCTASK0706477
         direction: INGRESS
         disabled: false
@@ -1606,7 +1606,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
           - fw-bd-haproxy-prod
-      kohls-onpremises-host-to-bda-tableau:
+      doms-onpremises-host-to-bda-tableau:
         description: SCTASK0713587
         direction: INGRESS
         disabled: false
@@ -1629,7 +1629,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
           - fw-bd-tableau-prod
-      kohls-onprem-access-to-bd-selfserv-prod:
+      doms-onprem-access-to-bd-selfserv-prod:
         description: SCTASK0719994
         direction: INGRESS
         disabled: false
@@ -1660,7 +1660,7 @@ vpcs:
           sourceTags:
           destinationRanges:
           targetServiceAccounts:
-      kohls-onprem-access-to-consul-ddh-ms-hle:
+      doms-onprem-access-to-consul-ddh-ms-hle:
         description: SCTASK0574017
         direction: INGRESS
         disabled: false
@@ -1693,7 +1693,7 @@ vpcs:
           sourceTags:
           destinationRanges:
           targetServiceAccounts:
-      kohls-onprem-dft-access-to-ddh-bigdata-prd:
+      doms-onprem-dft-access-to-ddh-bigdata-prd:
         description: SCTASK0565489
         direction: INGRESS
         disabled: false
@@ -1723,7 +1723,7 @@ vpcs:
           sourceTags:
           destinationRanges:
           targetServiceAccounts:
-      kohls-onprem-access-to-elb:
+      doms-onprem-access-to-elb:
         description: SCTASK0608900
         direction: INGRESS
         disabled: false
@@ -1741,7 +1741,7 @@ vpcs:
           sourceServiceAccounts:
           sourceTags:
           targetServiceAccounts:
-      kohls-onprem-to-azkabanpii-ddh-bigdata-prd:
+      doms-onprem-to-azkabanpii-ddh-bigdata-prd:
         description: SCTASK0600393,SCTASK0656721
         direction: INGRESS
         disabled: false
@@ -1771,7 +1771,7 @@ vpcs:
           sourceTags:
           destinationRanges:
           targetServiceAccounts:
-      kohls-onprem-to-consul-ddh-bigdata-prd:
+      doms-onprem-to-consul-ddh-bigdata-prd:
         description: SCTASK0600393
         direction: INGRESS
         disabled: false
@@ -1801,7 +1801,7 @@ vpcs:
           sourceTags:
           destinationRanges:
           targetServiceAccounts:
-      kohls-poc-ing-ddh-bigdata-prd-central:
+      doms-poc-ing-ddh-bigdata-prd-central:
         description: SCTASK0978375,SCTASK1006560
         direction: INGRESS
         disabled: false
@@ -1877,7 +1877,7 @@ vpcs:
           sourceTags:
           destinationRanges:
           targetServiceAccounts:
-      onprem-ing-to-kohls-bda-xpn-prd-mads-1025:
+      onprem-ing-to-doms-bda-xpn-prd-mads-1025:
         description: SCTASK0811287,SCTASK0817325
         direction: INGRESS
         disabled: false
@@ -1908,7 +1908,7 @@ vpcs:
           sourceTags:
           destinationRanges:
           targetServiceAccounts:
-      onprem-ing-to-kohls-bda-xpn-prd-mads-5480:
+      onprem-ing-to-doms-bda-xpn-prd-mads-5480:
         description: SCTASK0811287,SCTASK0817325
         direction: INGRESS
         disabled: false
@@ -1930,7 +1930,7 @@ vpcs:
           sourceTags:
           destinationRanges:
           targetServiceAccounts:
-      onprem-ing-to-kohls-bda-xpn-prd-mads-https:
+      onprem-ing-to-doms-bda-xpn-prd-mads-https:
         description: SCTASK0823873
         direction: INGRESS
         disabled: false
@@ -1953,7 +1953,7 @@ vpcs:
           sourceTags:
           destinationRanges:
           targetServiceAccounts:
-      onprem-ing-to-kohls-bda-xpn-prd-mads-ssh:
+      onprem-ing-to-doms-bda-xpn-prd-mads-ssh:
         description: SCTASK0811287,SCTASK0817325
         direction: INGRESS
         disabled: false
@@ -2870,7 +2870,7 @@ vpcs:
             ports:
             - "9092"
             - "9093"
-      cce-kohls-wallet-ingress:
+      cce-doms-wallet-ingress:
         description: SNOW-16565
         direction: INGRESS
         disabled: false

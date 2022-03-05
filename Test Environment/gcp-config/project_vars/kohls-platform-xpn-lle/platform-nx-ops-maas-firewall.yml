@@ -11,11 +11,11 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "kafkaplatform-msg@kohls-platform-maas-ops.iam.gserviceaccount.com"
+          - external: "kafkaplatform-msg@doms-platform-maas-ops.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: "ocp-app-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-app-node-paas@doms-platform-openshift-lle.iam.gserviceaccount.com"
           sourceTags:
           allow:
           - protocol: "tcp"
@@ -97,7 +97,7 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "kafkaplatform-msg@kohls-platform-maas-ops.iam.gserviceaccount.com"
+          - external: "kafkaplatform-msg@doms-platform-maas-ops.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           - "10.185.13.0/24"

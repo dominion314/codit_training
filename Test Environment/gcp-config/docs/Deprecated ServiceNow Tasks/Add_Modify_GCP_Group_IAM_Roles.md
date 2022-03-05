@@ -1,7 +1,7 @@
 # Add/Modify GCP Group IAM Roles
 
 ## IAM Policies:
-Be aware that only certain roles are allowed to be assigned to a group for each environment type. For a full list of allowed roles per environment please click <a href="https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/iam/iam-roles.yml" target="_blank">here</a>.
+Be aware that only certain roles are allowed to be assigned to a group for each environment type. For a full list of allowed roles per environment please click <a href="https://gitlab.com/doms/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/iam/iam-roles.yml" target="_blank">here</a>.
 
 Group roles, as well as the other two forms of IAM roles users and service accounts, are evaluated by OPA or Open Policy Agent at the “opa-check” job of the pipeline for a given merge request. If you add a role that is not allowed for an environment it will fail the data integrity check. As a result the configuration will not be allowed to be applied and must be removed and the merge request resubmitted. However as an alternative, exceptions per-project can be made as discussed below.
 
@@ -31,11 +31,11 @@ Below is an example of valid GCP group IAM roles with two groups.
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-iaas-cpa-devops-admin@kohls.com:
+    gcp-iaas-cpa-devops-admin@doms.com:
       roles:
       - compute.loadBalancerAdmin
       - bigquery.dataViewer
-    gcp-iaas-cpa-devops-l3@kohls.com:
+    gcp-iaas-cpa-devops-l3@doms.com:
       roles:
       - bigquery.dataViewer
       - bigtable.viewer
@@ -48,7 +48,7 @@ For example this iam-policy-members.yml file will be changed to include the role
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-iaas-cpa-devop-admin@kohls.com:
+    gcp-iaas-cpa-devop-admin@doms.com:
       roles:
       - compute.storageAdmin
       - iam.serviceAccountUser
@@ -58,14 +58,14 @@ Therefore it must follow the correct indentation and be preceded with a dash as 
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-iaas-cpa-devop-admin@kohls.com:
+    gcp-iaas-cpa-devop-admin@doms.com:
       roles:
       - compute.storageAdmin
       - iam.serviceAccountUser
       - compute.networkUser
 ```
 ## Additional Concerns:
-Exceptions can be made to an individual project to contain roles that are not allowed otherwise. Adding a project and roles for that project to the yaml file <a href="https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/iam/iam-roles-per-project.yml" target="_blank">here</a> will allow that lone project to contain those roles without causing a violation. In addition, for each role it must define whether it is allowed to be used by groups, service accounts, and or users. To have your listed roles as a group role it must have allowedForGroups as true.
+Exceptions can be made to an individual project to contain roles that are not allowed otherwise. Adding a project and roles for that project to the yaml file <a href="https://gitlab.com/doms/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/iam/iam-roles-per-project.yml" target="_blank">here</a> will allow that lone project to contain those roles without causing a violation. In addition, for each role it must define whether it is allowed to be used by groups, service accounts, and or users. To have your listed roles as a group role it must have allowedForGroups as true.
 
 The following is a sample for that structure.
 ```yaml
@@ -87,14 +87,14 @@ For example the file below has two groups gcp-iaas-cpa-devop-admin and gcp-iaas-
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-iaas-cpa-devop-admin@kohls.com:
+    gcp-iaas-cpa-devop-admin@doms.com:
       roles:
       - compute.storageAdmin
       - iam.serviceAccountUser
       - storage.admin
       - compute.instanceAdmin
       - compute.networkUser
-    gcp-iaas-cpa-devop-l3@kohls.com:
+    gcp-iaas-cpa-devop-l3@doms.com:
       roles:
       - compute.storageAdmin
       - iam.serviceAccountUser
@@ -102,7 +102,7 @@ iamPolicyMembers:
       - compute.instanceAdmin
       - compute.networkUser
  serviceAccountsByEmail:
-    bda-devops@kohls-bda-dse-lle.iam.gserviceaccount.com:
+    bda-devops@doms-bda-dse-lle.iam.gserviceaccount.com:
       roles:
       - compute.storageAdmin
 ```

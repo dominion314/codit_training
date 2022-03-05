@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-scf-prd-terraform-states:
+  doms-scf-prd-terraform-states:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -9,10 +9,10 @@ storageBuckets:
       app-name: "oic"
     permissions:
       serviceAccountsByEmail:
-        terraform-devops@kohls-scf-prd.iam.gserviceaccount.com:
+        terraform-devops@doms-scf-prd.iam.gserviceaccount.com:
           roles:
           - storage.admin
-  kohls-scf-prd-oscr:
+  doms-scf-prd-oscr:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -21,10 +21,10 @@ storageBuckets:
       app-name: "oscr"
     permissions:
       serviceAccountsByEmail:
-        oscr-prod@kohls-scf-prd.iam.gserviceaccount.com:
+        oscr-prod@doms-scf-prd.iam.gserviceaccount.com:
           roles:
           - storage.admin
-  kohls-scf-prd-ocf-sku-sync-prd:
+  doms-scf-prd-ocf-sku-sync-prd:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -33,10 +33,10 @@ storageBuckets:
       app-name: "ocf-sku-sync-prd"
     permissions:
       serviceAccountsByEmail:
-        scf-sku-sync@kohls-scf-prd.iam.gserviceaccount.com:
+        scf-sku-sync@doms-scf-prd.iam.gserviceaccount.com:
           roles:
             - storage.admin
-  kohls-scf-prd-scd-decon:
+  doms-scf-prd-scd-decon:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -45,10 +45,10 @@ storageBuckets:
       app-name: "scf-scd-decon-prd"
     permissions:
       serviceAccountsByEmail:
-        scf-scd-decon@kohls-scf-prd.iam.gserviceaccount.com:
+        scf-scd-decon@doms-scf-prd.iam.gserviceaccount.com:
           roles:
             - storage.admin
-  kohls-spie-proda-deploy:
+  doms-spie-proda-deploy:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -57,7 +57,7 @@ storageBuckets:
       app-name: "spie"
     permissions:
       serviceAccountsByEmail:
-        giv-spie-dataflow@kohls-scf-prd.iam.gserviceaccount.com:
+        giv-spie-dataflow@doms-scf-prd.iam.gserviceaccount.com:
           roles:
             - storage.admin
 
@@ -70,6 +70,6 @@ storageBuckets:
       app-name: "forced-replen-automator"
     permissions:
       serviceAccountsByEmail:
-        customer-fulfillment-prod@kohls-scf-prd.iam.gserviceaccount.com:
+        customer-fulfillment-prod@doms-scf-prd.iam.gserviceaccount.com:
           roles:
             - storage.admin

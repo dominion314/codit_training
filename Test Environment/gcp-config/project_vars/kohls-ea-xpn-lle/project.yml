@@ -1,7 +1,7 @@
 ---
 billingDeptId: 90541
 project:
-  name: kohls-ea-xpn-lle
+  name: doms-ea-xpn-lle
   managed: true
   deletionProtect: true
   folderId: 872364499101

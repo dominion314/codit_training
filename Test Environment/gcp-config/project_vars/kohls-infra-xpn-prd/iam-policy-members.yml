@@ -1,12 +1,12 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-aiops-devops-admin@kohls.com:
+    gcp-aiops-devops-admin@doms.com:
       roles:
       - compute.networkViewer
-    gcp-aiops-devops-l3@kohls.com:
+    gcp-aiops-devops-l3@doms.com:
       roles:
       - compute.networkViewer
-    gcp-aiops-devops-manager@kohls.com:
+    gcp-aiops-devops-manager@doms.com:
       roles:
       - compute.networkViewer

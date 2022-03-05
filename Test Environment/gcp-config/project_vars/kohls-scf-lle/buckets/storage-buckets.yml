@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-scf-lle-terraform-states:
+  doms-scf-lle-terraform-states:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -9,10 +9,10 @@ storageBuckets:
       app-name: "oic"
     permissions:
       serviceAccountsByEmail:
-        terraform-devops@kohls-scf-lle.iam.gserviceaccount.com:
+        terraform-devops@doms-scf-lle.iam.gserviceaccount.com:
           roles:
           - storage.admin
-  kohls-scf-lle-oscr:
+  doms-scf-lle-oscr:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -21,7 +21,7 @@ storageBuckets:
       app-name: "oscr"
     permissions:
       serviceAccountsByEmail:
-        oscr-nonprod@kohls-scf-lle.iam.gserviceaccount.com:
+        oscr-nonprod@doms-scf-lle.iam.gserviceaccount.com:
           roles:
           - storage.admin
   ocf-sku-sync:
@@ -33,7 +33,7 @@ storageBuckets:
       app-name: "ocf-sku-sync"
     permissions:
       serviceAccountsByEmail:
-        scf-sku-sync@kohls-scf-lle.iam.gserviceaccount.com:
+        scf-sku-sync@doms-scf-lle.iam.gserviceaccount.com:
           roles:
             - storage.admin
   scf-scd-decon:
@@ -45,7 +45,7 @@ storageBuckets:
       app-name: "scf-scd-decon"
     permissions:
       serviceAccountsByEmail:
-        scf-scd-decon@kohls-scf-lle.iam.gserviceaccount.com:
+        scf-scd-decon@doms-scf-lle.iam.gserviceaccount.com:
           roles:
             - storage.admin
 
@@ -58,7 +58,7 @@ storageBuckets:
       app-name: "forced-replen-automator"
     permissions:
       serviceAccountsByEmail:
-        customer-fulfillment-lle@kohls-scf-lle.iam.gserviceaccount.com:
+        customer-fulfillment-lle@doms-scf-lle.iam.gserviceaccount.com:
           roles:
             - storage.admin
 
@@ -71,6 +71,6 @@ storageBuckets:
       app-name: "forced-replen-automator"
     permissions:
       serviceAccountsByEmail:
-        customer-fulfillment-lle@kohls-scf-lle.iam.gserviceaccount.com:
+        customer-fulfillment-lle@doms-scf-lle.iam.gserviceaccount.com:
           roles:
             - storage.admin

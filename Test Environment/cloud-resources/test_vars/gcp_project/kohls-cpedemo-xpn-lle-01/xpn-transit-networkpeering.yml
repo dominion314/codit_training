@@ -4,5 +4,5 @@ vpcs:
     vpcPeering:
 
       mtxpnlle1-to-mtxpnlle2:
-        remoteProject: kohls-multitenant-xpn-lle
+        remoteProject: doms-multitenant-xpn-lle
         remoteVPC: gitops-example-2

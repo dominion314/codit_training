@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90577"
 project:
-  name: kohls-ocf-ext-prd
+  name: doms-ocf-ext-prd
   managed: true
   folderId: "921350738615"
   billingAccount: "00C36A-CD0BDB-E543D0"

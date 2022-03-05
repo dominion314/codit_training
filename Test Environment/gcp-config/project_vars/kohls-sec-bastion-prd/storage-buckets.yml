@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-sec-bastion-prd-terraform-states:
+  doms-sec-bastion-prd-terraform-states:
     storageClass: MULTI_REGIONAL
     location: US
     bucketPolicyOnly: false

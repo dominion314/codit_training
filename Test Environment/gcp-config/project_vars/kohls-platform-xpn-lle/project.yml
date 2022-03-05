@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90548"
 project:
-  name: kohls-platform-xpn-lle
+  name: doms-platform-xpn-lle
   managed: true
   folderId: "778811484176"
   billingAccount: "00C36A-CD0BDB-E543D0"
@@ -29,10 +29,10 @@ serviceAPIs:
   firewallinsights.googleapis.com:
 
 projectSharing:
-- kohls-platform-dbaas-lle
-- kohls-platform-dbaas-ops
-- kohls-platform-maas-lle
-- kohls-platform-maas-ops
-- kohls-platform-openshift-ops
-- kohls-platform-openshift-lle
-- kohls-platform-netservices-lle
+- doms-platform-dbaas-lle
+- doms-platform-dbaas-ops
+- doms-platform-maas-lle
+- doms-platform-maas-ops
+- doms-platform-openshift-ops
+- doms-platform-openshift-lle
+- doms-platform-netservices-lle

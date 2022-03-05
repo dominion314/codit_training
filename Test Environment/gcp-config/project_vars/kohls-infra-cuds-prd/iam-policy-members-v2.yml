@@ -1,7 +1,7 @@
 # IAM policy members v2 file created using automation v 1.1
 iamPolicyMembersV2:
   groupsByEmail:
-    kt-cpa@kohls.com:
+    kt-cpa@doms.com:
     - role: compute.networkViewer
     - role: compute.viewer
     - role: logging.privateLogViewer

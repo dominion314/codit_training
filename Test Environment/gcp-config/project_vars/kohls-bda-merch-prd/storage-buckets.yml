@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-bda-merch-biz:
+  doms-bda-merch-biz:
     location: US
     versioningEnabled: false
     labels:

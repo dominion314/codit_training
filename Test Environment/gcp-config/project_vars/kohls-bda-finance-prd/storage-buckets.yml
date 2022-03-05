@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-bda-finance-biz:
+  doms-bda-finance-biz:
     location: US
     versioningEnabled: false
     labels:

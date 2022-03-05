@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-etcc-ccproductivity-lle-bucket:
+  doms-etcc-ccproductivity-lle-bucket:
     versioningEnabled: true
     deletionProtect: true
     storageClass: STANDARD

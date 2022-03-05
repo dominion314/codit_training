@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-bda-log-biz:
+  doms-bda-log-biz:
     location: US
     versioningEnabled: false
     labels:

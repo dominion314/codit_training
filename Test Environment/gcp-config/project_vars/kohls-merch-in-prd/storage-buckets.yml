@@ -13,40 +13,40 @@ storageBuckets:
       condition:
         age: 90
     bucketPolicyOnly: false
-  kohls-merch-archive-prod-bucket:
+  doms-merch-archive-prod-bucket:
     storageClass: COLDLINE
     location: US-CENTRAL1
     bucketPolicyOnly: false
-  kohls-merch-fuse-prd-dataload:
+  doms-merch-fuse-prd-dataload:
     storageClass: MULTI_REGIONAL
     location: US
     bucketPolicyOnly: false
-  kohls-merch-in-prd-allocpubsub:
+  doms-merch-in-prd-allocpubsub:
     storageClass: STANDARD
     location: US
     bucketPolicyOnly: true
-  kohls-merch-in-prd-mongo:
+  doms-merch-in-prd-mongo:
     storageClass: NEARLINE
     location: US
     bucketPolicyOnly: false
-  kohls-merch-in-prd-mysql:
+  doms-merch-in-prd-mysql:
     storageClass: NEARLINE
     location: US
     bucketPolicyOnly: false
-  kohls-merch-in-prd-pipelines-staging:
+  doms-merch-in-prd-pipelines-staging:
     storageClass: STANDARD
     location: US-CENTRAL1
     bucketPolicyOnly: false
-  kohls-merch-in-prd-prod-dataproc-bucket:
+  doms-merch-in-prd-prod-dataproc-bucket:
     storageClass: MULTI_REGIONAL
     location: US
     bucketPolicyOnly: false
-  kohls-merch-in-prd-terraform-states:
+  doms-merch-in-prd-terraform-states:
     storageClass: REGIONAL
     location: US-CENTRAL1
     versioningEnabled: true
     bucketPolicyOnly: false
-  kohls-merch-in-prd-us-central1-primary-consul-backup:
+  doms-merch-in-prd-us-central1-primary-consul-backup:
     storageClass: NEARLINE
     location: US-CENTRAL1
     lifecycleRule:
@@ -55,7 +55,7 @@ storageBuckets:
       condition:
         age: 14
     bucketPolicyOnly: false
-  kohls-merch-in-prd-us-east1-primary-consul-backup:
+  doms-merch-in-prd-us-east1-primary-consul-backup:
     storageClass: NEARLINE
     location: US-EAST1
     lifecycleRule:
@@ -64,11 +64,11 @@ storageBuckets:
       condition:
         age: 14
     bucketPolicyOnly: false
-  kohls-merch-mft-prod-prod1-bucket:
+  doms-merch-mft-prod-prod1-bucket:
     storageClass: MULTI_REGIONAL
     location: US
     bucketPolicyOnly: false
-  kohls-po-edihub-prd:
+  doms-po-edihub-prd:
     storageClass: MULTI_REGIONAL
     location: US
     bucketPolicyOnly: false

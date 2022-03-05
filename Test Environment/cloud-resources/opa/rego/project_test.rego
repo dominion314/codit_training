@@ -1,4 +1,4 @@
-package kohls.gitops.kcc.gcp_project.project
+package doms.gitops.kcc.gcp_project.project
 
 policy_data_project = {
       "allowedFolderId": {

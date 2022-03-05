@@ -1,6 +1,6 @@
-# kohls-ocf-lle
+# doms-ocf-lle
 
-Configuration for Google Project 'kohls-ocf-lle'
+Configuration for Google Project 'doms-ocf-lle'
 
 ## Structure
 

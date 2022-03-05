@@ -1,7 +1,7 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-iaas-softwareengineer-l3@kohls.com:
+    gcp-iaas-softwareengineer-l3@doms.com:
       roles:
       - bigquery.dataOwner
       - bigquery.jobUser
@@ -17,6 +17,6 @@ iamPolicyMembers:
       roles:
       - bigquery.jobUser
       - bigquery.dataViewer
-    tableau-gcp-iam@kohls-sec-vault-lle.iam.gserviceaccount.com:
+    tableau-gcp-iam@doms-sec-vault-lle.iam.gserviceaccount.com:
       roles:
       - bigquery.user

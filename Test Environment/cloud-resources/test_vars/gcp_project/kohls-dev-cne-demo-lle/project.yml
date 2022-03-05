@@ -2,7 +2,7 @@
 billingDeptId: "90586"
 
 project:
-  name: kohls-dev-cne-demo-lle
+  name: doms-dev-cne-demo-lle
   managed: true
   folderId: "144994841496"
   billingAccount: "00C36A-CD0BDB-E543D0"
@@ -31,4 +31,4 @@ serviceAPIs:
     deletionPolicy: abandon
 
 projectSharing:
-- kohls-dev-cne-demo2-lle
+- doms-dev-cne-demo2-lle

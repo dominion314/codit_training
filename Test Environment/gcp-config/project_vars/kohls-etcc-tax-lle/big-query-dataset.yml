@@ -1,15 +1,15 @@
 ---
 bigQueryDatasets:
-  kohls_etcc_tax_tpbd_lle:
-    friendlyName: "kohls-etcc-tax-tpbd-lle"
+  doms_etcc_tax_tpbd_lle:
+    friendlyName: "doms-etcc-tax-tpbd-lle"
     description: "Third Party Bad Debt dataset"
     permissions:
       groupsByEmail:
-        gcp-eta-devops-admin@kohls.com:
+        gcp-eta-devops-admin@doms.com:
           roles:
             - bigquery.admin
       serviceAccountsByEmail:
-        third-party-bad-debt-lle@kohls-etcc-tax-lle.iam.gserviceaccount.com:
+        third-party-bad-debt-lle@doms-etcc-tax-lle.iam.gserviceaccount.com:
           roles:
             - bigquery.dataEditor
             - bigquery.dataOwner

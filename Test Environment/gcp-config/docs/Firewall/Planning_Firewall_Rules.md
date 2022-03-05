@@ -27,7 +27,7 @@ IP address blocks are allocated to your VPC via subnetwork objects.  One compute
 
 In order to be cloud native, teams will need to determine deployment patterns that will scale up and down quickly, where instances are created and destroyed as needed.  Because of this, it's not advised to use singular IP addresses unless the resource referenced is static.
 
-Subnetworks have the ability to be purpose driven, so instead of creating a large subnet for all compute, users have the choice to create smaller subnets for different purposes.  With this in mind it is recommended that IP CIDRs are used instead.  IP CIDRs are shorthand notation for IP address networks and their subnet masks.  [This](https://www.keycdn.com/support/what-is-cidr#how-does-cidr-work) article is useful in understanding how to use this notation.  [Here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Network/CIDR_Prefix_Table.md) is a chart that can help customers determine a CIDR block based on how many IPs (and VM hosts) can be within.
+Subnetworks have the ability to be purpose driven, so instead of creating a large subnet for all compute, users have the choice to create smaller subnets for different purposes.  With this in mind it is recommended that IP CIDRs are used instead.  IP CIDRs are shorthand notation for IP address networks and their subnet masks.  [This](https://www.keycdn.com/support/what-is-cidr#how-does-cidr-work) article is useful in understanding how to use this notation.  [Here](https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Network/CIDR_Prefix_Table.md) is a chart that can help customers determine a CIDR block based on how many IPs (and VM hosts) can be within.
 
 ### Network Tags
 
@@ -94,7 +94,7 @@ A `target tag` is required in this case, but customers should consider adding a 
 
 As mentioned before, Egress firewall rules are all open on instances in GCP.  This means that users will only need to consider Firewall access onprem or to non Kohl's Segments (SaaS provider as an example).  These onprem firewalls do not use tagging, and instead require IP addressing to determine source and destination.  
 
-> Note: When choosing rules that are not for deployment into GCP, you have the option to use an `Object Group`.  An `Object Group` is a logical name for one or more CIDRs that can be used in multiple firewall rules.  As customers, you have the option create and update your own `Object Group` and potentially use an existing `Object Group` as needed. The form to request these groups can be found [here](https://kohls.service-now.com/nav_to.do?uri=%2Fcom.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1%26sysparm_id%3Dec1f723cdb1d8c5080c3ec51ca9619fe%26sysparm_link_parent%3D5e0dd8c02b190100ca80b14d59da1561%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view%3Dcatalog_default%26sysparm_view%3Dcatalog_default)
+> Note: When choosing rules that are not for deployment into GCP, you have the option to use an `Object Group`.  An `Object Group` is a logical name for one or more CIDRs that can be used in multiple firewall rules.  As customers, you have the option create and update your own `Object Group` and potentially use an existing `Object Group` as needed. The form to request these groups can be found [here](https://doms.service-now.com/nav_to.do?uri=%2Fcom.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1%26sysparm_id%3Dec1f723cdb1d8c5080c3ec51ca9619fe%26sysparm_link_parent%3D5e0dd8c02b190100ca80b14d59da1561%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view%3Dcatalog_default%26sysparm_view%3Dcatalog_default)
 
 #### Example
 
@@ -116,7 +116,7 @@ If the other VPC belongs to you, the customer, the consider this as an Ingress r
 
 Due to strict auditing and review processes involving teams across the environment, a form is utilized for all firewall related activities and can be found below:
 
-[Service Now Firewall Request](https://kohls.service-now.com/nav_to.do?uri=%2Fcom.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1%26sysparm_id%3D60c03d6fd5a16d008555ecdaf8f2ed65%26sysparm_link_parent%3D5e0dd8c02b190100ca80b14d59da1561%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4)
+[Service Now Firewall Request](https://doms.service-now.com/nav_to.do?uri=%2Fcom.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1%26sysparm_id%3D60c03d6fd5a16d008555ecdaf8f2ed65%26sysparm_link_parent%3D5e0dd8c02b190100ca80b14d59da1561%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4)
 
 With the planned rules you have documented, you should be able to use this form to get the process started.  The form itself may change and improve over time, but the core structure of the rule will stay the same.
 

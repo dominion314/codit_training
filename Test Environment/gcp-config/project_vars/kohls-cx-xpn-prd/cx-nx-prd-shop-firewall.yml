@@ -1510,7 +1510,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      default-apigee-prd-ing-to-kohls-prd-central:
+      default-apigee-prd-ing-to-doms-prd-central:
         rule:
           allow:
           - protocol: tcp
@@ -1527,7 +1527,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      default-apigee-prd-ing-to-kohls-prd-east:
+      default-apigee-prd-ing-to-doms-prd-east:
         rule:
           allow:
           - protocol: tcp
@@ -1544,7 +1544,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      default-kohls-networks-to-prd:
+      default-doms-networks-to-prd:
         rule:
           allow:
           - protocol: icmp
@@ -1569,7 +1569,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      default-kohls-networks-to-prd-central:
+      default-doms-networks-to-prd-central:
         rule:
           allow:
           - protocol: icmp
@@ -1588,7 +1588,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      default-kohls-networks-to-prd-east:
+      default-doms-networks-to-prd-east:
         rule:
           allow:
           - protocol: icmp
@@ -1613,7 +1613,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      default-kohls-networks-ingress:
+      default-doms-networks-ingress:
         rule:
           allow:
           - protocol: icmp
@@ -1634,7 +1634,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      default-kohls-public-to-prd:
+      default-doms-public-to-prd:
         rule:
           allow:
           - protocol: tcp
@@ -1648,7 +1648,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      default-kohls-public-to-prd-east:
+      default-doms-public-to-prd-east:
         rule:
           allow:
           - protocol: tcp
@@ -1662,7 +1662,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      default-kohls-security-to-prd:
+      default-doms-security-to-prd:
         rule:
           allow:
           - protocol: icmp
@@ -1676,7 +1676,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      default-kohls-security-to-prd-east:
+      default-doms-security-to-prd-east:
         rule:
           allow:
           - protocol: icmp
@@ -1774,7 +1774,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      default-kohls-prd-to-prd:
+      default-doms-prd-to-prd:
         rule:
           allow:
           - protocol: icmp
@@ -1792,7 +1792,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      default-kohls-prd-to-prd-east:
+      default-doms-prd-to-prd-east:
         rule:
           allow:
           - protocol: icmp
@@ -2348,7 +2348,7 @@ vpcs:
         disabled: false
         priority: 990
         logging: false
-      deny-kohls-user-networks-to-prd:
+      deny-doms-user-networks-to-prd:
         rule:
           deny:
           - protocol: icmp
@@ -2366,7 +2366,7 @@ vpcs:
         disabled: false
         priority: 950
         logging: false
-      deny-kohls-user-networks-to-prd-east:
+      deny-doms-user-networks-to-prd-east:
         rule:
           deny:
           - protocol: icmp
@@ -2817,7 +2817,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-ecom-pe-prd-ing-to-kos-xpn-prd:
+      doms-ecom-pe-prd-ing-to-kos-xpn-prd:
         rule:
           allow:
           - protocol: tcp
@@ -2834,7 +2834,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-ecom-pe-prd-ing-to-kos-xpn-prd-east:
+      doms-ecom-pe-prd-ing-to-kos-xpn-prd-east:
         rule:
           allow:
           - protocol: tcp
@@ -2851,7 +2851,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-kos-production-ing-to-prd:
+      doms-kos-production-ing-to-prd:
         rule:
           allow:
           - protocol: tcp
@@ -2872,7 +2872,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-kos-xpn-prd-central-egress-to-pnf-prd:
+      doms-kos-xpn-prd-central-egress-to-pnf-prd:
         rule:
           allow:
           - protocol: tcp
@@ -2885,7 +2885,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-kos-xpn-prd-east-egress-to-pnf-prd:
+      doms-kos-xpn-prd-east-egress-to-pnf-prd:
         rule:
           allow:
           - protocol: tcp
@@ -2898,7 +2898,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-on-prem-ibm-mirror-maker-to-prd:
+      doms-on-prem-ibm-mirror-maker-to-prd:
         rule:
           allow:
           - protocol: tcp
@@ -2912,7 +2912,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-on-prem-ibm-mirror-maker-to-prd-east:
+      doms-on-prem-ibm-mirror-maker-to-prd-east:
         rule:
           allow:
           - protocol: tcp
@@ -2926,7 +2926,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-on-prem-ibm-server-to-prd:
+      doms-on-prem-ibm-server-to-prd:
         rule:
           allow:
           - protocol: tcp
@@ -2942,7 +2942,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-on-prem-jump-servers-to-prd:
+      doms-on-prem-jump-servers-to-prd:
         rule:
           allow:
           - protocol: tcp
@@ -2973,7 +2973,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-on-prem-jump-servers-to-prd-east:
+      doms-on-prem-jump-servers-to-prd-east:
         rule:
           allow:
           - protocol: tcp
@@ -3004,7 +3004,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-on-prem-paw-vdi-to-prd:
+      doms-on-prem-paw-vdi-to-prd:
         rule:
           allow:
           - protocol: tcp
@@ -3023,7 +3023,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-on-prem-paw-vdi-to-prd-east:
+      doms-on-prem-paw-vdi-to-prd-east:
         rule:
           allow:
           - protocol: tcp
@@ -3042,7 +3042,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-onprem-prd-to-kohls-prd-east-mysql:
+      doms-onprem-prd-to-doms-prd-east-mysql:
         rule:
           allow:
           - protocol: tcp
@@ -3062,7 +3062,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-onprem-to-kohls-prd-east-mysql:
+      doms-onprem-to-doms-prd-east-mysql:
         rule:
           allow:
           - protocol: tcp
@@ -3078,7 +3078,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-onprem-usrs-ing-to-jumpserver-prd-east:
+      doms-onprem-usrs-ing-to-jumpserver-prd-east:
         rule:
           allow:
           - protocol: tcp
@@ -3102,7 +3102,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-onpremise-openshift-prd-ingr-cnc-crp-proxy:
+      doms-onpremise-openshift-prd-ingr-cnc-crp-proxy:
         rule:
           allow:
           - protocol: tcp
@@ -3125,7 +3125,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-vdi-int-to-prd:
+      doms-vdi-int-to-prd:
         rule:
           allow:
           - protocol: tcp
@@ -3140,7 +3140,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-vdi-int-to-prod-east:
+      doms-vdi-int-to-prod-east:
         rule:
           allow:
           - protocol: tcp
@@ -3155,7 +3155,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-xpn-project-prd-east:
+      doms-xpn-project-prd-east:
         rule:
           allow:
           - protocol: tcp
@@ -3942,7 +3942,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      prod-cntrl-to-kohls-production:
+      prod-cntrl-to-doms-production:
         rule:
           allow:
           - protocol: tcp
@@ -4264,7 +4264,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      prod-cntrl-to-kohls-cavisson-prd:
+      prod-cntrl-to-doms-cavisson-prd:
         rule:
           allow:
           - protocol: tcp
@@ -4279,7 +4279,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      prod-cntrl-to-kohls-onprem-queue-access:
+      prod-cntrl-to-doms-onprem-queue-access:
         rule:
           allow:
           - protocol: tcp
@@ -4489,7 +4489,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      prod-east-to-kohls-cavisson-prd:
+      prod-east-to-doms-cavisson-prd:
         rule:
           allow:
           - protocol: tcp
@@ -4504,7 +4504,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      prod-east-to-kohls-onprem-queue-access:
+      prod-east-to-doms-onprem-queue-access:
         rule:
           allow:
           - protocol: tcp

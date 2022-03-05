@@ -7,9 +7,9 @@ iamPolicyMembers:
     899600061317-compute@developer.gserviceaccount.com:
       roles:
       - compute.networkUser
-    terraform-devops@kohls-bda-prd.iam.gserviceaccount.com:
+    terraform-devops@doms-bda-prd.iam.gserviceaccount.com:
       roles:
       - compute.networkUser
-    pzpians-infra-ansible-bigdata@kohls-bda-prd.iam.gserviceaccount.com:
+    pzpians-infra-ansible-bigdata@doms-bda-prd.iam.gserviceaccount.com:
       roles:
       - compute.networkUser

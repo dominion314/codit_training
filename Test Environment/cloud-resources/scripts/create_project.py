@@ -339,7 +339,7 @@ def equinix_vlan(data, data1, **kwargs):
 
 def eunomia(path, data):
     """ Update the eunomia variables file """
-    eunomia_path = path + "/eunomia_vars/kohls-cpe-kcc-prd-01/vars"
+    eunomia_path = path + "/eunomia_vars/doms-cpe-kcc-prd-01/vars"
     os.chdir(eunomia_path)
     with open("projects.yml", "a+") as file:
         file.write("- name: " + data.get("name") + "\n")

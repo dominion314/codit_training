@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90548"
 project:
-  name: kohls-platform-netservices-prd
+  name: doms-platform-netservices-prd
   managed: true
   folderId: "106220115873"
   billingAccount: "00C36A-CD0BDB-E543D0"

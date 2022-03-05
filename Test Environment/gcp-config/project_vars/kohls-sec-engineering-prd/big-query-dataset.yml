@@ -6,12 +6,12 @@ bigQueryDatasets:
     deletionProtect: true                                   # optional - if set to true dataset will be unmanaged from kcc
     permissions:                                            # optional
       groupsByEmail:                                        # optional - multiple roles per group can be defined
-        kt-securitydelivery@kohls.com:
+        kt-securitydelivery@doms.com:
           roles:
             - bigquery.dataOwner
             - bigquery.dataEditor
       serviceAccountsByEmail:                               # optiona; - multiple roles per service account can be defined
-        invcomp-sec@kohls-sec-engineering-prd.iam.gserviceaccount.com:
+        invcomp-sec@doms-sec-engineering-prd.iam.gserviceaccount.com:
           roles:
             - bigquery.dataOwner
             - bigquery.dataEditor

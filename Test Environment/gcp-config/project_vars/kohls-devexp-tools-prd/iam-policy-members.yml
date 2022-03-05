@@ -1,11 +1,11 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-cpe-developerexperience-softwareengineer-admin@kohls.com:
+    gcp-cpe-developerexperience-softwareengineer-admin@doms.com:
       roles:
       - iam.serviceAccountKeyAdmin
   serviceAccountsByEmail:
-    devexp-automation@kohls-devexp-tools-prd.iam.gserviceaccount.com:
+    devexp-automation@doms-devexp-tools-prd.iam.gserviceaccount.com:
       roles:
       - compute.loadBalancerAdmin
       - compute.imageUser
@@ -14,12 +14,12 @@ iamPolicyMembers:
       - compute.storageAdmin
       - iam.serviceAccountUser
       - storage.admin
-    sherlock-cpe@kohls-devexp-tools-prd.iam.gserviceaccount.com:
+    sherlock-cpe@doms-devexp-tools-prd.iam.gserviceaccount.com:
       roles:
       - pubsub.admin
       - pubsub.publisher
       - pubsub.subscriber
-    gitlab-runner@kohls-devexp-tools-prd.iam.gserviceaccount.com:
+    gitlab-runner@doms-devexp-tools-prd.iam.gserviceaccount.com:
       roles:
       - compute.imageUser
       - compute.instanceAdmin.v1

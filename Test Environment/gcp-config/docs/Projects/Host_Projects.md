@@ -26,7 +26,7 @@ Follow directions within the `parameter_schema.md` file.  After created your `pr
 ---
 billingDeptId: "90546"
 project:
-  name: kohls-cpe-sample-lle
+  name: doms-cpe-sample-lle
   managed: true
   folderId: "345254712059"
   billingAccount: "00C36A-CD0BDB-E543D0"
@@ -51,18 +51,18 @@ serviceAPIs:
 
 Eunomia will pull your new folder definition once the Eunomia seed configuration is updated with the relevant details.
 
-Navigate to the `gcp-config` repo, then to `eunomia_vars/kohls-cpe-kcc-prd-01/vars/projects.yml`
+Navigate to the `gcp-config` repo, then to `eunomia_vars/doms-cpe-kcc-prd-01/vars/projects.yml`
 
 Add your project folder to the list of managed projects.  The file will look like this.  Ensure you use proper indentation.
 
 ```yaml
 ---
 projects:
-- name: kohls-cpe-xpn-lle
+- name: doms-cpe-xpn-lle
   gitRef: master
-- name: kohls-cpe-xpn-prd
+- name: doms-cpe-xpn-prd
   gitRef: master
-- name: kohls-intra-transit-xpn-prd
+- name: doms-intra-transit-xpn-prd
   gitRef: master
 ```
 

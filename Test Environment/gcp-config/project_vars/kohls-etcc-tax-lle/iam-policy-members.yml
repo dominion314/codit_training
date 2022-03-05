@@ -1,7 +1,7 @@
 ---
 iamPolicyMembersV2:
   groupsByEmail:
-    gcp-eta-devops-admin@kohls.com:
+    gcp-eta-devops-admin@doms.com:
     - role: bigquery.jobUser
     - role: bigquery.user
     - role: compute.imageUser
@@ -24,10 +24,10 @@ iamPolicyMembersV2:
     - role: CustomRole221
       OrgId: 1035901152068
   serviceAccountsByEmail:
-    third-party-bad-debt-lle@kohls-etcc-tax-lle.iam.gserviceaccount.com:
+    third-party-bad-debt-lle@doms-etcc-tax-lle.iam.gserviceaccount.com:
     - role: CustomBigQueryUser
       OrgId: 1035901152068
-    terraform-devops@kohls-etcc-tax-lle.iam.gserviceaccount.com:
+    terraform-devops@doms-etcc-tax-lle.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: compute.networkViewer
@@ -36,11 +36,11 @@ iamPolicyMembersV2:
     - role: iam.serviceAccountUser
     - role: storage.admin
     - role: storage.objectAdmin
-    consul-paas@kohls-etcc-tax-lle.iam.gserviceaccount.com:
+    consul-paas@doms-etcc-tax-lle.iam.gserviceaccount.com:
     - role: compute.networkUser
     - role: compute.networkViewer
     - role: iam.serviceAccountUser
     - role: storage.admin
-    terraform-devops@kohls-etcc-tax-prd.iam.gserviceaccount.com:
+    terraform-devops@doms-etcc-tax-prd.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: storage.objectViewer

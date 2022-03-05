@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90514"
 project:
-  name: kohls-merch-sre-lle
+  name: doms-merch-sre-lle
   managed: true
   folderId: "963520663007"
   billingAccount: "00C36A-CD0BDB-E543D0"

@@ -1,7 +1,7 @@
 ---
 billingDeptId: 90577
 project:
-  name: kohls-seed-xpn-lle
+  name: doms-seed-xpn-lle
   managed: true
   deletionProtect: true
   folderId: 778811484176
@@ -17,5 +17,5 @@ serviceAPIs:
   cloudresourcemanager.googleapis.com:
   cloudasset.googleapis.com:
 projectSharing:
-- kohls-scf-lle
-- kohls-cx-scf-instaclustr-lle
+- doms-scf-lle
+- doms-cx-scf-instaclustr-lle

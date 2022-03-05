@@ -1,23 +1,23 @@
 ---
 storageBuckets:
-  kohls-platform-openshift-prd-oadp-gcpusc1-prd-xpaas:
+  doms-platform-openshift-prd-oadp-gcpusc1-prd-xpaas:
     permissions:
       serviceAccountsByEmail:
-        oadp-operator@kohls-platform-openshift-prd.iam.gserviceaccount.com:
+        oadp-operator@doms-platform-openshift-prd.iam.gserviceaccount.com:
           deletionProtect: false
           roles:
           - storage.objectAdmin
-  kohls-platform-openshift-prd-oadp-gcpuse1-prd-xpaas:
+  doms-platform-openshift-prd-oadp-gcpuse1-prd-xpaas:
     permissions:
       serviceAccountsByEmail:
-        oadp-operator@kohls-platform-openshift-prd.iam.gserviceaccount.com:
+        oadp-operator@doms-platform-openshift-prd.iam.gserviceaccount.com:
           deletionProtect: false
           roles:
           - storage.objectAdmin
-  kohls-platform-openshift-prd-thanos-gcpusc1-prd-xpaas:
+  doms-platform-openshift-prd-thanos-gcpusc1-prd-xpaas:
     permissions:
       serviceAccountsByEmail:
-        thanos-store@kohls-platform-openshift-prd.iam.gserviceaccount.com:
+        thanos-store@doms-platform-openshift-prd.iam.gserviceaccount.com:
           deletionProtect: false
           roles:
           - storage.objectAdmin

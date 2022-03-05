@@ -7,7 +7,7 @@ bigQueryDatasets:
     defaultTableExpirationMs: 7884010000  # Approximately 3 months
     permissions:
       groupsByEmail:
-        gcp-bda-devops-admin@kohls.com:
+        gcp-bda-devops-admin@doms.com:
           roles:
           - bigquery.dataOwner
   dp_marketing_unica_uat:
@@ -17,17 +17,17 @@ bigQueryDatasets:
     defaultTableExpirationMs: 0 #Dataset expiration set to 'Never Expire'
     permissions:
       groupsByEmail:
-        gcp-bda-devops-admin@kohls.com:
+        gcp-bda-devops-admin@doms.com:
           roles:
             - bigquery.dataOwner
-        gcp-bda-softwareengineer-l3@kohls.com:
+        gcp-bda-softwareengineer-l3@doms.com:
           roles:
             - bigquery.dataEditor
       serviceAccountsByEmail:
-        dp-marketing@kohls-bda-lle.iam.gserviceaccount.com:
+        dp-marketing@doms-bda-lle.iam.gserviceaccount.com:
           roles:
           - bigquery.dataEditor
-        hclsw-unicakohlsbqg@hclsw-gcp-kohl.iam.gserviceaccount.com:
+        hclsw-unicadomsbqg@hclsw-gcp-kohl.iam.gserviceaccount.com:
           roles:
           - bigquery.dataEditor
           - bigquery.metadataViewer

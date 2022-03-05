@@ -1,7 +1,7 @@
 ---
 iamPolicyMembersV2:
   groupsByEmail:
-    gcp-infra-dataservices-systemsengineer-l3@kohls.com:
+    gcp-infra-dataservices-systemsengineer-l3@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: compute.instanceAdmin.v1
@@ -10,7 +10,7 @@ iamPolicyMembersV2:
     - role: compute.viewer
     - role: logging.viewer
     - role: storage.admin
-    gcp-infra-dataservices-systemsengineer-l2@kohls.com:
+    gcp-infra-dataservices-systemsengineer-l2@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: compute.instanceAdmin.v1

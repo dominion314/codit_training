@@ -1,6 +1,6 @@
 ---
 iamPolicyMembersV2:
   groupsByEmail:
-    gcp-iaas-cpa-devops-admin@kohls.com:
+    gcp-iaas-cpa-devops-admin@doms.com:
       - role: CustomViewer486       # Custom Viewer
         OrgId: 1035901152068

@@ -1,18 +1,18 @@
 ---
 storageBuckets:
-  kohls-merch-archive-prod-bucket:
+  doms-merch-archive-prod-bucket:
     acls:
       usersByEmail:
-        merch-psin-dataproc-admin@kohls-merch-in-prd.iam.gserviceaccount.com: OWNER
-  kohls-merch-in-prd-prod-dataproc-bucket:
+        merch-psin-dataproc-admin@doms-merch-in-prd.iam.gserviceaccount.com: OWNER
+  doms-merch-in-prd-prod-dataproc-bucket:
     acls:
       usersByEmail:
-        merch-psin-dataproc-admin@kohls-merch-in-prd.iam.gserviceaccount.com: WRITER
-  kohls-merch-mft-prod-prod1-bucket:
+        merch-psin-dataproc-admin@doms-merch-in-prd.iam.gserviceaccount.com: WRITER
+  doms-merch-mft-prod-prod1-bucket:
     acls:
       usersByEmail:
-        merch-psin-dataproc-admin@kohls-merch-in-prd.iam.gserviceaccount.com: OWNER
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com: OWNER
-        dp-smdmnd@kohls-bda-prd.iam.gserviceaccount.com: WRITER
+        merch-psin-dataproc-admin@doms-merch-in-prd.iam.gserviceaccount.com: OWNER
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com: OWNER
+        dp-smdmnd@doms-bda-prd.iam.gserviceaccount.com: WRITER
       groupsByEmail:
-        gcp-merch-sd-l3@kohls.com: READER
+        gcp-merch-sd-l3@doms.com: READER

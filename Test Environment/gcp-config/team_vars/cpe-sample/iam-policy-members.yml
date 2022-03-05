@@ -1,7 +1,7 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-iaas-cpa-devops-admin@kohls.com:
+    gcp-iaas-cpa-devops-admin@doms.com:
       roles:
       - compute.storageAdmin
       - compute.instanceAdmin.v1
@@ -14,7 +14,7 @@ iamPolicyMembers:
       - monitoring.admin
       - iam.serviceAccountKeyAdmin
       - servicemanagement.quotaAdmin
-    gcp-cpe-cne-devops-admin@kohls.com:
+    gcp-cpe-cne-devops-admin@doms.com:
       roles:
       - bigquery.dataViewer
       - bigquery.user

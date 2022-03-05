@@ -1,9 +1,9 @@
 ---
 iamPolicyMembersV2:
   groupsByEmail:
-    gcp-cx-stores-sd-admin@kohls.com:
+    gcp-cx-stores-sd-admin@doms.com:
     - role: compute.viewer
-    gcp-cx-stores-sd-l2@kohls.com:
+    gcp-cx-stores-sd-l2@doms.com:
     - role: compute.networkViewer
     - role: compute.viewer
     - role: CustomRole301         # Custom CX GKE Platform L2
@@ -16,13 +16,13 @@ iamPolicyMembersV2:
       OrgId: 1035901152068
     - role: CustomViewer486       # Custom Viewer
       OrgId: 1035901152068
-    gcp-productionengineering-ecom@kohls.com:
+    gcp-productionengineering-ecom@doms.com:
     - role: compute.networkViewer
     - role: compute.viewer
     - role: logging.viewer
     - role: CustomViewer486       # Custom Viewer
       OrgId: 1035901152068
-    gcp-cce-sre-admin@kohls.com:
+    gcp-cce-sre-admin@doms.com:
     - role: compute.networkViewer
     - role: compute.viewer
     - role: CustomViewer486       # Custom Viewer
@@ -36,7 +36,7 @@ iamPolicyMembersV2:
     - role: storage.admin
     - role: monitoring.editor
     - role: serviceusage.serviceUsageConsumer
-    gcp-cce-sre-manager@kohls.com:
+    gcp-cce-sre-manager@doms.com:
     - role: compute.networkViewer
     - role: compute.viewer
     - role: logging.viewer
@@ -46,7 +46,7 @@ iamPolicyMembersV2:
     - role: iam.serviceAccountKeyAdmin
     - role: serviceusage.serviceUsageConsumer
   serviceAccountsByEmail:
-    servicereg-sre@kohls-cx-sremgmt-prd.iam.gserviceaccount.com:
+    servicereg-sre@doms-cx-sremgmt-prd.iam.gserviceaccount.com:
     - role: CustomRole430        # Custom Vault Authenticator
       OrgId: 1035901152068
     - role: compute.networkViewer
@@ -54,7 +54,7 @@ iamPolicyMembersV2:
     - role: monitoring.metricWriter
     - role: compute.networkUser
     - role: storage.objectCreator
-    terraform-provisioning-sre@kohls-cx-sremgmt-prd.iam.gserviceaccount.com:
+    terraform-provisioning-sre@doms-cx-sremgmt-prd.iam.gserviceaccount.com:
     - role: compute.loadBalancerAdmin
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
@@ -64,18 +64,18 @@ iamPolicyMembersV2:
     - role: storage.admin
     - role: monitoring.editor
     - role: serviceusage.serviceUsageConsumer
-    mysql-sre@kohls-cx-sremgmt-prd.iam.gserviceaccount.com:
+    mysql-sre@doms-cx-sremgmt-prd.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: iam.serviceAccountUser
     - role: logging.logWriter
-    grafana-sre@kohls-cx-sremgmt-prd.iam.gserviceaccount.com:
+    grafana-sre@doms-cx-sremgmt-prd.iam.gserviceaccount.com:
     - role: logging.logWriter
     - role: monitoring.metricWriter
     - role: monitoring.viewer
-    influxdb-sre@kohls-cx-sremgmt-prd.iam.gserviceaccount.com:
+    influxdb-sre@doms-cx-sremgmt-prd.iam.gserviceaccount.com:
     - role: logging.logWriter
     - role: monitoring.metricWriter
-    creportal-sre@kohls-cx-sremgmt-prd.iam.gserviceaccount.com:
+    creportal-sre@doms-cx-sremgmt-prd.iam.gserviceaccount.com:
     - role: logging.logWriter
     - role: monitoring.metricWriter

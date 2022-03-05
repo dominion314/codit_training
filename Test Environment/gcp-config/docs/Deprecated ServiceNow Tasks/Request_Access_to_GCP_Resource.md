@@ -42,14 +42,14 @@ bigQueryDatasets:
     deletionProtect: true
     permissions:
       groupsByEmail:
-        gcp-bda-gcp-labs-user@kohls.com:
+        gcp-bda-gcp-labs-user@doms.com:
           roles:
           - bigquery.dataEditor
-        gcp-bda-gcp-labs-superuser@kohls.com:
+        gcp-bda-gcp-labs-superuser@doms.com:
           roles:
           - bigquery.dataEditor
           - bigquery.dataViewer
-        gcp-bda-softwareengineer-l3@kohls.com:
+        gcp-bda-softwareengineer-l3@doms.com:
           roles:
           - bigquery.dataViewer
 ```
@@ -92,10 +92,10 @@ pubSubTopics:
       app-name:
     permissions:                        # optional - permissions applied at topic level are optional
       usersByEmail:                     # optional -
-        mark.doll@kohls.com:
+        mark.doll@doms.com:
           roles:
             - pubsub.subscriber
-        hamilton.hoover@kohls.com:
+        hamilton.hoover@doms.com:
           roles:
             - pubsub.publisher
 ```
@@ -131,15 +131,15 @@ Storage-buckets-iam.yml Sample Below:
 ---
 # Good Storage Buckets Iam
 storageBuckets:
-  kohlsdev-test-bucket-01:
+  domsdev-test-bucket-01:
     permissions:
       usersByEmail:
-        bryce.mcmurtry@kohls.com:
+        bryce.mcmurtry@doms.com:
           deletionProtect: true
           roles:
           - storage.legacyBucketReader
       groupsByEmail:
-        hamilton.hoover@kohls.com:
+        hamilton.hoover@doms.com:
           deletionProtect: false
           roles:
           - storage.legacyBucketWriter

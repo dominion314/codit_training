@@ -5,7 +5,7 @@ pubSubTopics:
       app-name: "ocf-sku-sync"
     permissions:
       serviceAccountsByEmail:
-        scf-sku-sync@kohls-scf-lle.iam.gserviceaccount.com:
+        scf-sku-sync@doms-scf-lle.iam.gserviceaccount.com:
           roles:
             - pubsub.admin
             - pubsub.publisher
@@ -15,7 +15,7 @@ pubSubTopics:
       app-name: "asn-integration-testing"
     permissions:
       serviceAccountsByEmail:
-        scf-rdcwms-nonprod@kohls-scf-lle.iam.gserviceaccount.com:
+        scf-rdcwms-nonprod@doms-scf-lle.iam.gserviceaccount.com:
           roles:
             - pubsub.admin
 
@@ -25,7 +25,7 @@ pubSubTopics:
       app-name: "forced-replen-automator"
     permissions:
       serviceAccountsByEmail:
-        customer-fulfillment-lle@kohls-scf-lle.iam.gserviceaccount.com:
+        customer-fulfillment-lle@doms-scf-lle.iam.gserviceaccount.com:
           roles:
             - pubsub.editor
 
@@ -35,6 +35,6 @@ pubSubTopics:
       app-name: "forced-replen-automator"
     permissions:
       serviceAccountsByEmail:
-        customer-fulfillment-lle@kohls-scf-lle.iam.gserviceaccount.com:
+        customer-fulfillment-lle@doms-scf-lle.iam.gserviceaccount.com:
           roles:
             - pubsub.editor

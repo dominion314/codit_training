@@ -1,7 +1,7 @@
 ---
 billingDeptId: 90548
 project:
-  name: kohls-platformops-xpn-lle
+  name: doms-platformops-xpn-lle
   managed: true
   deletionProtect: true
   folderId: 778811484176
@@ -26,7 +26,7 @@ serviceAPIs:
   servicenetworking.googleapis.com:
 
 projectSharing:
-- kohls-platform-dbaas-ops
-- kohls-platform-maas-ops
-- kohls-platform-openshift-ops
-- kohls-platform-netservices-lle
+- doms-platform-dbaas-ops
+- doms-platform-maas-ops
+- doms-platform-openshift-ops
+- doms-platform-netservices-lle

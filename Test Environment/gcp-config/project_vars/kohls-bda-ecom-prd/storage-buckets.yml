@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-bda-ecom-biz:
+  doms-bda-ecom-biz:
     location: US
     versioningEnabled: false
     labels:

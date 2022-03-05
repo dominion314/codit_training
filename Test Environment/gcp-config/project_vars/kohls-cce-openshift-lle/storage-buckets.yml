@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-cce-openshift-lle-oadp-gcpusc1-lle-cce:
+  doms-cce-openshift-lle-oadp-gcpusc1-lle-cce:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -13,7 +13,7 @@ storageBuckets:
     labels:
       app-name: oadp
       environment-type: lle
-  kohls-cce-openshift-lle-oadp-gcpuse1-lle-cce:
+  doms-cce-openshift-lle-oadp-gcpuse1-lle-cce:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD

@@ -60,94 +60,94 @@
 # CODEOWNERS by project
 
 # paas team
-/project_vars/kohls-paas-ops/ @EnterpriseDevOps/xpaas-openshift-admin
-/project_vars/kohls-rapidpaas-sbx/ @EnterpriseDevOps/xpaas-openshift-admin
+/project_vars/doms-paas-ops/ @EnterpriseDevOps/xpaas-openshift-admin
+/project_vars/doms-rapidpaas-sbx/ @EnterpriseDevOps/xpaas-openshift-admin
 
 # XPN Hosts
-/project_vars/kohls-*-xpn-*/ @EnterpriseDevOps/cpe-cne-devops-admin
+/project_vars/doms-*-xpn-*/ @EnterpriseDevOps/cpe-cne-devops-admin
 
 # ETA
-/project_vars/kohls-eta-credit-*/ @EnterpriseDevOps/GHApproversETA @EnterpriseDevOps/GHApprovers-CNE-CPA
+/project_vars/doms-eta-credit-*/ @EnterpriseDevOps/GHApproversETA @EnterpriseDevOps/GHApprovers-CNE-CPA
 
 # ETA Finance
-/project_vars/kohls-eta-finance-*/ @EnterpriseDevOps/GHApproversETAFinance @EnterpriseDevOps/GHApprovers-CNE-CPA
+/project_vars/doms-eta-finance-*/ @EnterpriseDevOps/GHApproversETAFinance @EnterpriseDevOps/GHApprovers-CNE-CPA
 
 # bda-lle/hle/prd
-/project_vars/kohls-bda-lle/ @EnterpriseDevOps/BDAGitOpsPRApprovers @EnterpriseDevOps/GHApprovers-CNE-CPA
-/project_vars/kohls-bda-hle/ @EnterpriseDevOps/BDAGitOpsPRApprovers @EnterpriseDevOps/GHApprovers-CNE-CPA
-/project_vars/kohls-bda-prd/ @EnterpriseDevOps/BDAGitOpsPRApprovers @EnterpriseDevOps/GHApprovers-CNE-CPA
+/project_vars/doms-bda-lle/ @EnterpriseDevOps/BDAGitOpsPRApprovers @EnterpriseDevOps/GHApprovers-CNE-CPA
+/project_vars/doms-bda-hle/ @EnterpriseDevOps/BDAGitOpsPRApprovers @EnterpriseDevOps/GHApprovers-CNE-CPA
+/project_vars/doms-bda-prd/ @EnterpriseDevOps/BDAGitOpsPRApprovers @EnterpriseDevOps/GHApprovers-CNE-CPA
 
 # Dev Exp
-/project_vars/kohls-sandbox-1/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApproversDevExp
-/project_vars/kohls-shared-services/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApproversDevExp
-/project_vars/kohls-cpe-lle/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApproversDevExp
-/project_vars/kohls-cpe-prd/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApproversDevExp
-/project_vars/kohls-iaas-prd/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApproversDevExp
-/project_vars/kohls-iaas-lle/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApproversDevExp
+/project_vars/doms-sandbox-1/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApproversDevExp
+/project_vars/doms-shared-services/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApproversDevExp
+/project_vars/doms-cpe-lle/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApproversDevExp
+/project_vars/doms-cpe-prd/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApproversDevExp
+/project_vars/doms-iaas-prd/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApproversDevExp
+/project_vars/doms-iaas-lle/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApproversDevExp
 
 # merch-in-lle
-/project_vars/kohls-merch-in-lle/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApprovers-merch-in
+/project_vars/doms-merch-in-lle/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApprovers-merch-in
 
 # merch-in-prd
-/project_vars/kohls-merch-in-prd/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApprovers-merch-in
+/project_vars/doms-merch-in-prd/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApprovers-merch-in
 
 # merch-ps-lle
-/project_vars/kohls-merch-in-lle/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApproverMerchPS
+/project_vars/doms-merch-in-lle/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApproverMerchPS
 
 # merch-ps-prd
-/project_vars/kohls-merch-in-prd/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApproverMerchPS
+/project_vars/doms-merch-in-prd/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApproverMerchPS
 
 # merch-pl
-/project_vars/kohls-merch-pl-*/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApproversMerchPL
-/project_vars/kohls-merch-item-*/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApproversMerchPL
+/project_vars/doms-merch-pl-*/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApproversMerchPL
+/project_vars/doms-merch-item-*/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApproversMerchPL
 
 # ecom-tvs-corp
-/project_vars/kohls-ecom-tvs-corp-*/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApprovers-ecom-tvs-corp
+/project_vars/doms-ecom-tvs-corp-*/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/GHApprovers-ecom-tvs-corp
 
 # CPE DBAAS
-/project_vars/kohls-platform-dbaas-*/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/Kloud-ADS
+/project_vars/doms-platform-dbaas-*/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/Kloud-ADS
 
 # CPE MAAS
-/project_vars/kohls-platform-maas-*/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/Kloud-ET-Leads
+/project_vars/doms-platform-maas-*/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/Kloud-ET-Leads
 
 # CX SRE
-/project_vars/kohls-cx-sremgmt-prd/ @EnterpriseDevOps/iaas-cpa-devops-admin @EnterpriseDevOps/cx-sre-admin
+/project_vars/doms-cx-sremgmt-prd/ @EnterpriseDevOps/iaas-cpa-devops-admin @EnterpriseDevOps/cx-sre-admin
 
 # Rapid PaaS - team needs to be created
-/project_vars/kohls-rapidpaas-*/ @EnterpriseDevOps/GHApprovers-CNE-CPA
+/project_vars/doms-rapidpaas-*/ @EnterpriseDevOps/GHApprovers-CNE-CPA
 
 # BDA (BDA team needs to be onboarded.)
-/project_vars/kohls-bda-dse-lle/ @EnterpriseDevOps/GHApproversDSE @EnterpriseDevOps/GHApprovers-CNE-CPA
-/project_vars/kohls-bda-scripts-ops/ @EnterpriseDevOps/GHApproversDSE @EnterpriseDevOps/GHApprovers-CNE-CPA
+/project_vars/doms-bda-dse-lle/ @EnterpriseDevOps/GHApproversDSE @EnterpriseDevOps/GHApprovers-CNE-CPA
+/project_vars/doms-bda-scripts-ops/ @EnterpriseDevOps/GHApproversDSE @EnterpriseDevOps/GHApprovers-CNE-CPA
 
 # CPA
-/project_vars/kohls-cpe-cpa-lle/ @EnterpriseDevOps/iaas-cpa-devops-admin
-/project_vars/kohls-cpe-sample-lle/ @EnterpriseDevOps/GHApprovers-CNE-CPA
+/project_vars/doms-cpe-cpa-lle/ @EnterpriseDevOps/iaas-cpa-devops-admin
+/project_vars/doms-cpe-sample-lle/ @EnterpriseDevOps/GHApprovers-CNE-CPA
 
 # CPE IMAGE
-/project_vars/kohls-cpe-image-mgmt-*/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/kap_admin
+/project_vars/doms-cpe-image-mgmt-*/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/kap_admin
 
 # CPE KCC
-/project_vars/kohls-cpe-kcc-*/ @EnterpriseDevOps/GHApprovers-CNE-CPA
+/project_vars/doms-cpe-kcc-*/ @EnterpriseDevOps/GHApprovers-CNE-CPA
 
 # CREDIT
-/project_vars/kohls-credit-*/ @EnterpriseDevOps/GHApprovers-CNE-CPA
+/project_vars/doms-credit-*/ @EnterpriseDevOps/GHApprovers-CNE-CPA
 
 # ETCC
-/project_vars/kohls-etcc-uc-lle/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/eta-admin
+/project_vars/doms-etcc-uc-lle/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/eta-admin
 
 # PLATFORM NETSERVICES
-/project_vars/kohls-platform-netservices-*/ @EnterpriseDevOps/iaas-cpa-devops-admin @EnterpriseDevOps/cpe-cne-devops-admin
+/project_vars/doms-platform-netservices-*/ @EnterpriseDevOps/iaas-cpa-devops-admin @EnterpriseDevOps/cpe-cne-devops-admin
 
 # SEC IAM
-/project_vars/kohls-sec-oasa-lle/ @EnterpriseDevOps/securitytechdevopsadmin @EnterpriseDevOps/IAM-L3
-/project_vars/kohls-sec-vault*/ @EnterpriseDevOps/securitytechdevopsadmin @EnterpriseDevOps/IAM-L3
+/project_vars/doms-sec-oasa-lle/ @EnterpriseDevOps/securitytechdevopsadmin @EnterpriseDevOps/IAM-L3
+/project_vars/doms-sec-vault*/ @EnterpriseDevOps/securitytechdevopsadmin @EnterpriseDevOps/IAM-L3
 
 # HR
-/project_vars/kohls-eta-hr-*/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/PeopleServicesEngineeringAdminGitOps
+/project_vars/doms-eta-hr-*/ @EnterpriseDevOps/GHApprovers-CNE-CPA @EnterpriseDevOps/PeopleServicesEngineeringAdminGitOps
 
 # infra-monitoring
-/project_vars/kohls-infra-monitoring*/ @EnterpriseDevOps/GHAproverInfraMonitoring
+/project_vars/doms-infra-monitoring*/ @EnterpriseDevOps/GHAproverInfraMonitoring
 
 # infra-aiops
-/project_vars/kohls-infra-aiops*/ @EnterpriseDevOps/GHApproverAIOPS
+/project_vars/doms-infra-aiops*/ @EnterpriseDevOps/GHApproverAIOPS

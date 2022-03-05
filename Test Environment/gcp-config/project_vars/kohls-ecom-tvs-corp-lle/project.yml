@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90505"
 project:
-  name: kohls-ecom-tvs-corp-lle
+  name: doms-ecom-tvs-corp-lle
   deletionProtect: true
   managed: false
   folderId: "872364499101"

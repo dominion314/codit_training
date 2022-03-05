@@ -1,5 +1,5 @@
 project:
-  name: kohls-cx-sre-lle
+  name: doms-cx-sre-lle
   managed: true
   folderId: "124759181101" # CCE
   billingAccount: 00C36A-CD0BDB-E543D0 # Same billing account as loyalty retail services

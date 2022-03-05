@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90538"
 project:
-  name: kohls-etcc-ccproductivity-lle
+  name: doms-etcc-ccproductivity-lle
   deletionProtect: true
   managed: true
   folderId: "859213288423"

@@ -146,7 +146,7 @@ vpcs:
           - paas-consul-agent
 
 vpcs:
-  app-mongodb-egr-kohls-cx-innovation-hle:
+  app-mongodb-egr-doms-cx-innovation-hle:
     firewallRules:
       cx-innovation-hle:
         description: ''
@@ -175,7 +175,7 @@ vpcs:
           - gke-cluster
 
 vpcs:
-  app-to-mongodb-ing-kohls-cx-innovation-hle:
+  app-to-mongodb-ing-doms-cx-innovation-hle:
     firewallRules:
       cx-innovation-hle:
         description: ''
@@ -202,7 +202,7 @@ vpcs:
           - cache-instance
 
 vpcs:
-  app-to-mongodb-ing-kohls-cx-innovation-hle-01:
+  app-to-mongodb-ing-doms-cx-innovation-hle-01:
     firewallRules:
       cx-innovation-hle:
         description: ''
@@ -1029,7 +1029,7 @@ vpcs:
           targetServiceAccounts: null
           targetTags:
           - mongodb-hle
-          - kohls-vpn
+          - doms-vpn
           - paas-openshift-app
           - all
 
@@ -1956,7 +1956,7 @@ vpcs:
           - ''
 
 vpcs:
-  cx-hle-to-kohls-cx-openshift-hle-egr-v39:
+  cx-hle-to-doms-cx-openshift-hle-egr-v39:
     firewallRules:
       cx-hle:
         description: ''
@@ -2948,7 +2948,7 @@ vpcs:
           - ''
 
 vpcs:
-  cx-mgmt-hle-egr-kohls-ftp-server:
+  cx-mgmt-hle-egr-doms-ftp-server:
     firewallRules:
       cx-mgmt-hle:
         description: ''
@@ -3028,7 +3028,7 @@ vpcs:
           targetServiceAccounts: null
           targetTags:
           - cloud-mgmt
-          - kohls-vpn
+          - doms-vpn
           - cache-instance
 
 vpcs:
@@ -5074,7 +5074,7 @@ vpcs:
           - ''
 
 vpcs:
-  cx-openshift-hle-to-kohls-splunk-monitoring-lle-v39:
+  cx-openshift-hle-to-doms-splunk-monitoring-lle-v39:
     firewallRules:
       cx-openshift-hle:
         description: ''
@@ -5976,7 +5976,7 @@ vpcs:
           - ''
 
 vpcs:
-  cx-xpn-prv-subnet-to-kohls-shared-services-tcp-01:
+  cx-xpn-prv-subnet-to-doms-shared-services-tcp-01:
     firewallRules:
       cx-openshift-hle:
         description: ''
@@ -28092,7 +28092,7 @@ vpcs:
           - mongodb-hle
 
 vpcs:
-  gspann-remote-hosts-kohls-cx-openshift-hle-webservices:
+  gspann-remote-hosts-doms-cx-openshift-hle-webservices:
     firewallRules:
       cx-openshift-hle:
         description: ''
@@ -28547,7 +28547,7 @@ vpcs:
           - ''
           targetServiceAccounts: null
           targetTags:
-          - kohls-vpn
+          - doms-vpn
 
 vpcs:
   kloud9-b2b-ing-to-cx-db-hle:
@@ -28581,7 +28581,7 @@ vpcs:
           - ''
           targetServiceAccounts: null
           targetTags:
-          - kohls-vpn
+          - doms-vpn
 
 vpcs:
   kloud9-b2b-ing-to-cx-db-hle-01:
@@ -28644,7 +28644,7 @@ vpcs:
           - ''
           targetServiceAccounts: null
           targetTags:
-          - kohls-vpn
+          - doms-vpn
 
 vpcs:
   kloud9-b2b-ing-to-cx-management-cavssn-hle:
@@ -28681,7 +28681,7 @@ vpcs:
           - ''
           targetServiceAccounts: null
           targetTags:
-          - kohls-vpn
+          - doms-vpn
 
 vpcs:
   kloud9-b2b-ing-to-cx-openshift-hle:
@@ -28718,7 +28718,7 @@ vpcs:
           - ''
           targetServiceAccounts: null
           targetTags:
-          - kohls-vpn
+          - doms-vpn
 
 vpcs:
   kloud9-b2b-ing-to-cx-xpn-hle:
@@ -28756,10 +28756,10 @@ vpcs:
           - ''
           targetServiceAccounts: null
           targetTags:
-          - kohls-vpn
+          - doms-vpn
 
 vpcs:
-  kloud9-b2b-ing-to-kohls-cx-xpn-prd:
+  kloud9-b2b-ing-to-doms-cx-xpn-prd:
     firewallRules:
       cx-innovation-hle:
         description: ''
@@ -28782,7 +28782,7 @@ vpcs:
           targetServiceAccounts: null
           targetTags:
           - mongodb-hle
-          - kohls-vpn
+          - doms-vpn
           - paas-openshift-app
           - all
 
@@ -29003,7 +29003,7 @@ vpcs:
           - ''
           targetServiceAccounts: null
           targetTags:
-          - kohls-vpn
+          - doms-vpn
           - devops-tools
           - jenkins-mgmt
           - all
@@ -29088,7 +29088,7 @@ vpcs:
           targetTags:
           - management-prd
           - nde-mgmt
-          - kohls-vpn
+          - doms-vpn
           - devops-tools
           - jenkins-mgmt
 
@@ -29120,7 +29120,7 @@ vpcs:
           - pass-openshift-app
           - mysql-db-hle
           - mongo-db-hle
-          - kohls-vpn
+          - doms-vpn
 
 vpcs:
   kloud9-remote-hosts-ingress-consul-ui:
@@ -29259,7 +29259,7 @@ vpcs:
           - ''
           targetServiceAccounts: null
           targetTags:
-          - kohls-vpn
+          - doms-vpn
 
 vpcs:
   kloud9-vpn-to-ingress-cx-openshift-hle-02:
@@ -29284,7 +29284,7 @@ vpcs:
           - ''
           targetServiceAccounts: null
           targetTags:
-          - kohls-vpn
+          - doms-vpn
 
 vpcs:
   kloud9-vpn-to-ingress-cx-xpn-hle-01:
@@ -29321,7 +29321,7 @@ vpcs:
           - ''
           targetServiceAccounts: null
           targetTags:
-          - kohls-vpn
+          - doms-vpn
 
 vpcs:
   kloud9new-b2b-to-cx-openshift-hle-01:
@@ -29359,7 +29359,7 @@ vpcs:
           - paas-openshift-app
 
 vpcs:
-  kohls-bda-prd-igr-to-kohls-cx-db-hle-mongodb:
+  doms-bda-prd-igr-to-doms-cx-db-hle-mongodb:
     firewallRules:
       cx-db-hle:
         description: ''
@@ -29384,7 +29384,7 @@ vpcs:
           - mongodb-hle
 
 vpcs:
-  kohls-bda-prd-igr-to-kohls-cx-db-hle-mongodb-tcp:
+  doms-bda-prd-igr-to-doms-cx-db-hle-mongodb-tcp:
     firewallRules:
       cx-db-hle:
         description: ''
@@ -29409,7 +29409,7 @@ vpcs:
           - mongodb-hle
 
 vpcs:
-  kohls-cx-db-hle-egr-to-apache-server:
+  doms-cx-db-hle-egr-to-apache-server:
     firewallRules:
       cx-db-hle:
         description: ''
@@ -29437,7 +29437,7 @@ vpcs:
           - ''
 
 vpcs:
-  kohls-cx-db-hle-igr-to-internal-vpc:
+  doms-cx-db-hle-igr-to-internal-vpc:
     firewallRules:
       cx-db-hle:
         description: ''
@@ -29464,7 +29464,7 @@ vpcs:
           - mongodb-hle
 
 vpcs:
-  kohls-cx-db-hle-ing-gke-app-node:
+  doms-cx-db-hle-ing-gke-app-node:
     firewallRules:
       cx-hle:
         description: ''
@@ -29491,7 +29491,7 @@ vpcs:
           - gke-app-node
 
 vpcs:
-  kohls-cx-db-hle-ingr-to-apache-server:
+  doms-cx-db-hle-ingr-to-apache-server:
     firewallRules:
       cx-db-hle:
         description: ''
@@ -29513,15 +29513,15 @@ vpcs:
           sourceTags:
           - paas-openshift-node-app
           - mongodb-hle
-          - kohls-vpn
+          - doms-vpn
           targetServiceAccounts: null
           targetTags:
           - paas-openshift-node-app
           - mongodb-hle
-          - kohls-vpn
+          - doms-vpn
 
 vpcs:
-  kohls-cx-hle-intra-vpc-access:
+  doms-cx-hle-intra-vpc-access:
     firewallRules:
       cx-hle:
         description: ''
@@ -29546,7 +29546,7 @@ vpcs:
           - gke-app-node
 
 vpcs:
-  kohls-cx-hle-intra-vpc-access-nginx-metrics:
+  doms-cx-hle-intra-vpc-access-nginx-metrics:
     firewallRules:
       cx-hle:
         description: ''
@@ -29571,7 +29571,7 @@ vpcs:
           - gke-ingress-proxy
 
 vpcs:
-  kohls-cx-hle-intra-vpc-gke-management-to-gke-app-node:
+  doms-cx-hle-intra-vpc-gke-management-to-gke-app-node:
     firewallRules:
       cx-hle:
         description: ''
@@ -29596,7 +29596,7 @@ vpcs:
           - gke-app-node
 
 vpcs:
-  kohls-cx-hle-prd-ing-devops-tools:
+  doms-cx-hle-prd-ing-devops-tools:
     firewallRules:
       cx-mgmt-hle:
         description: ''
@@ -29625,7 +29625,7 @@ vpcs:
           - devops-tools
 
 vpcs:
-  kohls-cx-innovation-hle-ing-mongo-db-servers:
+  doms-cx-innovation-hle-ing-mongo-db-servers:
     firewallRules:
       cx-innovation-hle:
         description: ''
@@ -29646,10 +29646,10 @@ vpcs:
           - ''
           targetServiceAccounts: null
           targetTags:
-          - kohls-vpn
+          - doms-vpn
 
 vpcs:
-  kohls-cx-innovation-hle-intra-subnet-access:
+  doms-cx-innovation-hle-intra-subnet-access:
     firewallRules:
       cx-innovation-hle:
         description: ''
@@ -29676,7 +29676,7 @@ vpcs:
           - cache-instance
 
 vpcs:
-  kohls-cx-innovation-hle-intra-subnet-access01:
+  doms-cx-innovation-hle-intra-subnet-access01:
     firewallRules:
       cx-innovation-hle:
         description: ''
@@ -29706,7 +29706,7 @@ vpcs:
           - cache-instance
 
 vpcs:
-  kohls-cx-mgmt-hle-ing-cx-innovation-hle:
+  doms-cx-mgmt-hle-ing-cx-innovation-hle:
     firewallRules:
       cx-innovation-hle:
         description: ''
@@ -29736,7 +29736,7 @@ vpcs:
           - cloud-mgmt
 
 vpcs:
-  kohls-cx-mgmt-hle-ing-mongo-db-servers:
+  doms-cx-mgmt-hle-ing-mongo-db-servers:
     firewallRules:
       cx-mgmt-hle:
         description: ''
@@ -29763,7 +29763,7 @@ vpcs:
           - nde-mgmt
 
 vpcs:
-  kohls-cx-mgmt-hle-inter-vpc-access-ingress-proxy:
+  doms-cx-mgmt-hle-inter-vpc-access-ingress-proxy:
     firewallRules:
       cx-hle:
         description: ''
@@ -29791,7 +29791,7 @@ vpcs:
           - devops-tools
 
 vpcs:
-  kohls-cx-mgmt-hle-inter-vpc-access-nginx-gke-consul:
+  doms-cx-mgmt-hle-inter-vpc-access-nginx-gke-consul:
     firewallRules:
       cx-hle:
         description: ''
@@ -29819,7 +29819,7 @@ vpcs:
           - gke-ingress-proxy
 
 vpcs:
-  kohls-cx-mgmt-hle-inter-vpc-gke-app-node:
+  doms-cx-mgmt-hle-inter-vpc-gke-app-node:
     firewallRules:
       cx-hle:
         description: ''
@@ -29845,7 +29845,7 @@ vpcs:
           - gke-app-node
 
 vpcs:
-  kohls-cx-mgmt-hle-interconnecting-cx-innovation-hle:
+  doms-cx-mgmt-hle-interconnecting-cx-innovation-hle:
     firewallRules:
       cx-mgmt-hle:
         description: ''
@@ -29875,7 +29875,7 @@ vpcs:
           - cloud-mgmt
 
 vpcs:
-  kohls-cx-mgmt-hle-to-kohls-cx-hle:
+  doms-cx-mgmt-hle-to-doms-cx-hle:
     firewallRules:
       cx-hle:
         description: ''
@@ -29905,7 +29905,7 @@ vpcs:
           - gke-app-node
 
 vpcs:
-  kohls-cx-openshift-hle-to-cx-hle-ing-v39:
+  doms-cx-openshift-hle-to-cx-hle-ing-v39:
     firewallRules:
       cx-hle:
         description: ''
@@ -29933,7 +29933,7 @@ vpcs:
           - paas-consul
 
 vpcs:
-  kohls-cx-public-hle-ing-cx-hle-ingress-proxy:
+  doms-cx-public-hle-ing-cx-hle-ingress-proxy:
     firewallRules:
       cx-hle:
         description: ''
@@ -29957,7 +29957,7 @@ vpcs:
           - gke-ingress-proxy
 
 vpcs:
-  kohls-cx-xpn-hle-ingress-cavisson-server:
+  doms-cx-xpn-hle-ingress-cavisson-server:
     firewallRules:
       cx-mgmt-hle:
         description: ''
@@ -29993,7 +29993,7 @@ vpcs:
           - nde-mgmt
 
 vpcs:
-  kohls-cx-xpn-hle-ingress-cluster-nodes-mongo-db:
+  doms-cx-xpn-hle-ingress-cluster-nodes-mongo-db:
     firewallRules:
       cx-db-hle:
         description: ''
@@ -30018,7 +30018,7 @@ vpcs:
           - mongo-db-hle
 
 vpcs:
-  kohls-cx-xpn-hle-ingress-cluster-nodes-mysql-db:
+  doms-cx-xpn-hle-ingress-cluster-nodes-mysql-db:
     firewallRules:
       cx-db-hle:
         description: ''
@@ -30044,7 +30044,7 @@ vpcs:
           - mysql-db-hle
 
 vpcs:
-  kohls-cx-xpn-hle-intra-subnetwork-access:
+  doms-cx-xpn-hle-intra-subnetwork-access:
     firewallRules:
       cx-openshift-hle:
         description: ''
@@ -30070,7 +30070,7 @@ vpcs:
           - paas-openshift-node
 
 vpcs:
-  kohls-cx-xpn-hle-intra-subnetwork-access-tcp:
+  doms-cx-xpn-hle-intra-subnetwork-access-tcp:
     firewallRules:
       cx-openshift-hle:
         description: ''
@@ -30095,7 +30095,7 @@ vpcs:
           - paas-openshift-node-router
 
 vpcs:
-  kohls-cx-xpn-hle-intra-subnetwork-egress-access:
+  doms-cx-xpn-hle-intra-subnetwork-egress-access:
     firewallRules:
       cx-openshift-hle:
         description: ''
@@ -30121,7 +30121,7 @@ vpcs:
           - paas-openshift-node-app
 
 vpcs:
-  kohls-cx-xpn-hle-intra-subnetwork-ingress-access:
+  doms-cx-xpn-hle-intra-subnetwork-ingress-access:
     firewallRules:
       cx-openshift-hle:
         description: ''
@@ -30145,7 +30145,7 @@ vpcs:
           - paas-openshift-node
 
 vpcs:
-  kohls-cx-xpn-lle-to-ing-cx-xpn-hle-nd-agent-01:
+  doms-cx-xpn-lle-to-ing-cx-xpn-hle-nd-agent-01:
     firewallRules:
       cx-management-hle:
         description: ''
@@ -30190,7 +30190,7 @@ vpcs:
           - nde-mgmt
 
 vpcs:
-  kohls-cx-xpn-openshift-hle-egr-to-kohls-vault-lle:
+  doms-cx-xpn-openshift-hle-egr-to-doms-vault-lle:
     firewallRules:
       cx-openshift-hle:
         description: ''
@@ -30218,7 +30218,7 @@ vpcs:
           - paas-openshift-node
 
 vpcs:
-  kohls-on-prem-ext-to-cx-hle-01:
+  doms-on-prem-ext-to-cx-hle-01:
     firewallRules:
       cx-hle:
         description: ''
@@ -30243,7 +30243,7 @@ vpcs:
           - ''
 
 vpcs:
-  kohls-on-prem-to-cx-openshift-http-https-01:
+  doms-on-prem-to-cx-openshift-http-https-01:
     firewallRules:
       cx-openshift-hle:
         description: ''
@@ -30270,7 +30270,7 @@ vpcs:
           - ''
 
 vpcs:
-  kohls-on-prem-to-cx-openshift-ssh-01:
+  doms-on-prem-to-cx-openshift-ssh-01:
     firewallRules:
       cx-openshift-hle:
         description: ''
@@ -30297,7 +30297,7 @@ vpcs:
           - ''
 
 vpcs:
-  kohls-on-premises-hosts-cx-xpn-hle-tcp:
+  doms-on-premises-hosts-cx-xpn-hle-tcp:
     firewallRules:
       cx-mgmt-hle:
         description: ''
@@ -30324,7 +30324,7 @@ vpcs:
           - nde-mgmt
 
 vpcs:
-  kohls-onprem-to-cx-db-hle-mongodb-acc01:
+  doms-onprem-to-cx-db-hle-mongodb-acc01:
     firewallRules:
       cx-db-hle:
         description: ''
@@ -30346,10 +30346,10 @@ vpcs:
           - ''
           targetServiceAccounts: null
           targetTags:
-          - kohls-vpn
+          - doms-vpn
 
 vpcs:
-  kohls-onprem-to-devops-tools-cx-hle-01:
+  doms-onprem-to-devops-tools-cx-hle-01:
     firewallRules:
       cx-hle:
         description: ''
@@ -30380,7 +30380,7 @@ vpcs:
           - ''
 
 vpcs:
-  kohls-onprem-to-mongo-cx-db-hle-01:
+  doms-onprem-to-mongo-cx-db-hle-01:
     firewallRules:
       cx-db-hle:
         description: ''
@@ -30406,7 +30406,7 @@ vpcs:
           - mongo-db-hle
 
 vpcs:
-  kohls-preprod-lab-network-ingress-gke-subnet:
+  doms-preprod-lab-network-ingress-gke-subnet:
     firewallRules:
       cx-hle:
         description: ''
@@ -30440,7 +30440,7 @@ vpcs:
           - gke-app-node
 
 vpcs:
-  kohls-store-ing-to-cx-openshift-hle:
+  doms-store-ing-to-cx-openshift-hle:
     firewallRules:
       cx-openshift-hle:
         description: ''
@@ -30474,7 +30474,7 @@ vpcs:
           - paas-openshift-node-router
 
 vpcs:
-  kohls-user-segments-ingress-gke-subnet:
+  doms-user-segments-ingress-gke-subnet:
     firewallRules:
       cx-hle:
         description: ''
@@ -30504,7 +30504,7 @@ vpcs:
           - gke-app-node
 
 vpcs:
-  kohls-vault-lle-ingress-gke-app-nodes:
+  doms-vault-lle-ingress-gke-app-nodes:
     firewallRules:
       cx-hle:
         description: ''
@@ -30530,7 +30530,7 @@ vpcs:
           - gke-app-node
 
 vpcs:
-  mgmt-cavisson-egr-kohls-cx-innovation-hle:
+  mgmt-cavisson-egr-doms-cx-innovation-hle:
     firewallRules:
       cx-innovation-hle:
         description: ''
@@ -30564,7 +30564,7 @@ vpcs:
           - gke-cluster
 
 vpcs:
-  mgmt-cavisson-ing-kohls-cx-innovation-hle:
+  mgmt-cavisson-ing-doms-cx-innovation-hle:
     firewallRules:
       cx-innovation-hle:
         description: ''
@@ -30747,7 +30747,7 @@ vpcs:
           - cloud-mgmt
 
 vpcs:
-  nat-gateway-egr-to-kohls-cx-xpn-hle:
+  nat-gateway-egr-to-doms-cx-xpn-hle:
     firewallRules:
       cx-mgmt-hle:
         description: ''
@@ -30773,7 +30773,7 @@ vpcs:
           - fw-cx-mgmt-hle-nat-gw
 
 vpcs:
-  nat-gateway-ing-to-kohls-cx-xpn-hle:
+  nat-gateway-ing-to-doms-cx-xpn-hle:
     firewallRules:
       cx-mgmt-hle:
         description: ''
@@ -30830,7 +30830,7 @@ vpcs:
           - mysql-db-hle
 
 vpcs:
-  on-prem-ing-to-kohls-cx-xpn-hle-rdp:
+  on-prem-ing-to-doms-cx-xpn-hle-rdp:
     firewallRules:
       cx-mgmt-hle:
         description: ''
@@ -30855,7 +30855,7 @@ vpcs:
           - cloud-mgmt
 
 vpcs:
-  on-prem-ing-to-kohls-cx-xpn-hle-tcp:
+  on-prem-ing-to-doms-cx-xpn-hle-tcp:
     firewallRules:
       cx-mgmt-hle:
         description: ''
@@ -31022,7 +31022,7 @@ vpcs:
           targetServiceAccounts: null
           targetTags:
           - management-prd
-          - kohls-vpn
+          - doms-vpn
 
 vpcs:
   openshift-heketi-subnet-egr-to-access-openshift-gluster-01:
@@ -31154,7 +31154,7 @@ vpcs:
           - paas-openshift-app
 
 vpcs:
-  origin-url-to-kohls-cx-innovation-hle:
+  origin-url-to-doms-cx-innovation-hle:
     firewallRules:
       cx-innovation-hle:
         description: ''
@@ -31208,7 +31208,7 @@ vpcs:
           - ''
 
 vpcs:
-  pod-to-pod-kohls-egr-cx-innovation-hle-01:
+  pod-to-pod-doms-egr-cx-innovation-hle-01:
     firewallRules:
       cx-innovation-hle:
         description: ''
@@ -31241,7 +31241,7 @@ vpcs:
           - ''
 
 vpcs:
-  pod-to-pod-kohls-egr-cx-innovation-hle-02:
+  pod-to-pod-doms-egr-cx-innovation-hle-02:
     firewallRules:
       cx-innovation-hle:
         description: ''
@@ -31272,7 +31272,7 @@ vpcs:
           - ''
 
 vpcs:
-  pod-to-pod-kohls-ing-cx-innovation-hle-01:
+  pod-to-pod-doms-ing-cx-innovation-hle-01:
     firewallRules:
       cx-innovation-hle:
         description: ''
@@ -31304,7 +31304,7 @@ vpcs:
           - ''
 
 vpcs:
-  pod-to-pod-kohls-ing-cx-innovation-hle-02:
+  pod-to-pod-doms-ing-cx-innovation-hle-02:
     firewallRules:
       cx-innovation-hle:
         description: ''

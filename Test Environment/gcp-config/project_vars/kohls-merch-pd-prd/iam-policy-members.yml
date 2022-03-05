@@ -1,7 +1,7 @@
 ---
 iamPolicyMembersV2:
   groupsByEmail:
-    gcp-merch-devops-admin@kohls.com:
+    gcp-merch-devops-admin@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: compute.networkViewer
@@ -13,7 +13,7 @@ iamPolicyMembersV2:
     - role: storage.admin
     - role: datastore.owner
     - role: bigquery.admin
-    gcp-merch-pdpl-softwareengineer-admin@kohls.com:
+    gcp-merch-pdpl-softwareengineer-admin@doms.com:
     - role: compute.networkViewer
     - role: compute.viewer
     - role: iam.serviceAccountKeyAdmin
@@ -22,7 +22,7 @@ iamPolicyMembersV2:
     - role: logging.admin
     - role: monitoring.admin
     - role: storage.objectViewer
-    gcp-merch-devops-l2@kohls.com:
+    gcp-merch-devops-l2@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: compute.engine.power.state.adm
@@ -37,7 +37,7 @@ iamPolicyMembersV2:
     - role: logging.viewer
     - role: monitoring.metricWriter
     - role: monitoring.viewer
-    gcp-merch-devops-l3@kohls.com:
+    gcp-merch-devops-l3@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: bigquery.dataViewer
@@ -49,7 +49,7 @@ iamPolicyMembersV2:
     - role: logging.admin
     - role: logging.privateLogViewer
     - role: monitoring.admin
-    gcp-merch-pdpl-softwareengineer-l3@kohls.com:
+    gcp-merch-pdpl-softwareengineer-l3@doms.com:
     - role: CustomBucketViewer
       OrgId: 1035901152068
     - role: CustomRole634
@@ -65,7 +65,7 @@ iamPolicyMembersV2:
     - role: compute.viewer
     - role: logging.viewer
     - role: storage.admin
-    gcp-merch-pdpl-softwareengineer-l2@kohls.com:
+    gcp-merch-pdpl-softwareengineer-l2@doms.com:
     - role: bigquery.dataViewer
     - role: bigquery.jobUser
     - role: compute.networkViewer
@@ -73,22 +73,14 @@ iamPolicyMembersV2:
     - role: logging.viewer
     - role: storage.objectViewer
     - role: storage.admin
-    gcp-merch-pdpl-softwareengineer-manager@kohls.com:
+    gcp-merch-pdpl-softwareengineer-manager@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: compute.networkViewer
     - role: compute.viewer
     - role: logging.viewer
     - role: storage.objectViewer
-    gcp-merch-softwareengineer-admin@kohls.com:
-    - role: CustomViewer486
-      OrgId: 1035901152068
-    - role: compute.networkViewer
-    - role: compute.viewer
-    - role: logging.viewer
-    - role: monitoring.viewer
-    - role: storage.objectViewer
-    gcp-merch-softwareengineer-manager@kohls.com:
+    gcp-merch-softwareengineer-admin@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: compute.networkViewer
@@ -96,7 +88,15 @@ iamPolicyMembersV2:
     - role: logging.viewer
     - role: monitoring.viewer
     - role: storage.objectViewer
-    gcp-merch-sd-l3@kohls.com:
+    gcp-merch-softwareengineer-manager@doms.com:
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: monitoring.viewer
+    - role: storage.objectViewer
+    gcp-merch-sd-l3@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: compute.networkViewer
@@ -105,14 +105,14 @@ iamPolicyMembersV2:
     - role: pubsub.viewer
     - role: storage.admin
   serviceAccountsByEmail:
-    vendor-scorecard-pd@kohls-merch-pd-prd.iam.gserviceaccount.com:
+    vendor-scorecard-pd@doms-merch-pd-prd.iam.gserviceaccount.com:
     - role: storage.admin
-    sp-jarvis-intg-prd@kohls-merch-pd-prd.iam.gserviceaccount.com:
+    sp-jarvis-intg-prd@doms-merch-pd-prd.iam.gserviceaccount.com:
     - role: storage.admin
-    sp-mockshop-bq-prd@kohls-merch-pd-prd.iam.gserviceaccount.com:
+    sp-mockshop-bq-prd@doms-merch-pd-prd.iam.gserviceaccount.com:
     - role: bigquery.dataEditor
     - role: bigquery.jobUser
     - role: bigquery.metadataViewer
     - role: bigquery.user
-    sp-mockshop-intg-prd@kohls-merch-pd-prd.iam.gserviceaccount.com:
+    sp-mockshop-intg-prd@doms-merch-pd-prd.iam.gserviceaccount.com:
     - role: storage.admin

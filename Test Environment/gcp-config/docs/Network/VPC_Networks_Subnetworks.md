@@ -134,7 +134,7 @@ vpcs:
 
 ## Subnetwork Permissions
 
-When creating subnetworks, the resources live in the host project.  If the host project is attached to many service projects, permissions are used to determine which of the service projects will have access to use the subnetwork.  You can create these permissions by following [this document](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Parameter_Schema.md#iam-policy-subnets).
+When creating subnetworks, the resources live in the host project.  If the host project is attached to many service projects, permissions are used to determine which of the service projects will have access to use the subnetwork.  You can create these permissions by following [this document](https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Parameter_Schema.md#iam-policy-subnets).
 
 It is important to note, that while the subnetwork permissions can reside in it's own YAML file, you have the option to code your `permissions` dict directly into the subnetwork structure.  An example of this would look like so.
 
@@ -153,13 +153,13 @@ vpcs:
           status: PROVISIONED
         permissions:
           serviceAccountsByEmail:
-          - terraform-demo@kohls-demo-lle.iam.gserviceaccount.com
+          - terraform-demo@doms-demo-lle.iam.gserviceaccount.com
           groupsByEmail:
-          - demo-role-monitoring-devops-l3@kohls.com
-          - demo-role-devops-admin@kohls.com
-          - demo-role-devops-l2@kohls.com
-          - demo-role-devops-l3@kohls.com
-          - demo-role-devops-manager@kohls.com
+          - demo-role-monitoring-devops-l3@doms.com
+          - demo-role-devops-admin@doms.com
+          - demo-role-devops-l2@doms.com
+          - demo-role-devops-l3@doms.com
+          - demo-role-devops-manager@doms.com
 ```
 
 > Note: if a team or service account is given access to a subnet, it's possible the subnet will be shared with multiple service accounts if that team has IAM permissions on the project.
@@ -168,4 +168,4 @@ vpcs:
 
 Please review the following document to understand how IP address allocations are requested and performed
 
-https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Network/IP_Address_Allocation.md
+https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Network/IP_Address_Allocation.md

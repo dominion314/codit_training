@@ -7,9 +7,9 @@ project:
     project-manager: "susmita_agnihotri"
     line-of-business: in
     project-requestor: "susmita_agnihotri"
-  name: kohls-merch-in-prd
+  name: doms-merch-in-prd
   managed: true
   deletionProtect: true
   folderId: "217021366087"
   billingAccount: "00C36A-CD0BDB-E543D0"
-# For lookup table of folder ids: https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Project_Jump_Start_Guide.md#netx-project-folder-id-lookup-table
+# For lookup table of folder ids: https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Project_Jump_Start_Guide.md#netx-project-folder-id-lookup-table

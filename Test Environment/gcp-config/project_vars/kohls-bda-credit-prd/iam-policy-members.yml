@@ -1,30 +1,30 @@
 iamPolicyMembersV2:
   groupsByEmail:
-    gcp-bda-gcp-labs-user@kohls.com:
+    gcp-bda-gcp-labs-user@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
       - role: bigquery.resourceViewer
-    gcp-bda-gcp-labs-superuser@kohls.com:
+    gcp-bda-gcp-labs-superuser@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
-    gcp-bda-softwareengineer-l3@kohls.com:
+    gcp-bda-softwareengineer-l3@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
-    gcp-mkt-gcp-labs-user@kohls.com:
+    gcp-mkt-gcp-labs-user@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
-    gcp-mkt-gcp-labs-superuser@kohls.com:
+    gcp-mkt-gcp-labs-superuser@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
-    gcp-mkt-gcp-labs-analytics-user@kohls.com:
+    gcp-mkt-gcp-labs-analytics-user@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
-    gcp-credit-gcp-labs-user@kohls.com:
+    gcp-credit-gcp-labs-user@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
       - role: CustomBigQueryUser
         OrgId: 1035901152068
-    gcp-credit-gcp-labs-superuser@kohls.com:
+    gcp-credit-gcp-labs-superuser@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
       - role: CustomBigQueryUser
@@ -32,65 +32,65 @@ iamPolicyMembersV2:
       - role: CustomRole919 # Custom role which grants BQ Scheduler access.
         OrgId: 1035901152068
       - role: iam.serviceAccountKeyAdmin
-    gcp-ecom-gcp-labs-user@kohls.com:
+    gcp-ecom-gcp-labs-user@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
-    gcp-ecom-gcp-labs-superuser@kohls.com:
+    gcp-ecom-gcp-labs-superuser@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
-    gcp-finance-gcp-labs-user@kohls.com:
+    gcp-finance-gcp-labs-user@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
-    gcp-finance-gcp-labs-superuser@kohls.com:
+    gcp-finance-gcp-labs-superuser@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
-    gcp-hr-gcp-labs-user@kohls.com:
+    gcp-hr-gcp-labs-user@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
-    gcp-hr-gcp-labs-superuser@kohls.com:
+    gcp-hr-gcp-labs-superuser@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
-    gcp-lp-gcp-labs-user@kohls.com:
+    gcp-lp-gcp-labs-user@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
-    gcp-lp-gcp-labs-superuser@kohls.com:
+    gcp-lp-gcp-labs-superuser@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
-    gcp-log-gcp-labs-user@kohls.com:
+    gcp-log-gcp-labs-user@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
-    gcp-log-gcp-labs-superuser@kohls.com:
+    gcp-log-gcp-labs-superuser@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
-    gcp-stores-gcp-labs-user@kohls.com:
+    gcp-stores-gcp-labs-user@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
-    gcp-stores-gcp-labs-superuser@kohls.com:
+    gcp-stores-gcp-labs-superuser@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
-    gcp-ers-gcp-labs-user@kohls.com:
+    gcp-ers-gcp-labs-user@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
-    gcp-ers-gcp-labs-superuser@kohls.com:
+    gcp-ers-gcp-labs-superuser@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
-    gcp-pd-gcp-labs-user@kohls.com:
+    gcp-pd-gcp-labs-user@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
-    gcp-pd-gcp-labs-superuser@kohls.com:
+    gcp-pd-gcp-labs-superuser@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
-    gcp-merch-gcp-labs-user@kohls.com:
+    gcp-merch-gcp-labs-user@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
-    gcp-merch-gcp-labs-superuser@kohls.com:
+    gcp-merch-gcp-labs-superuser@doms.com:
       - role: CustomViewer486
         OrgId: 1035901152068
-    gcp-bda-devops-admin@kohls.com:
+    gcp-bda-devops-admin@doms.com:
       - role: logging.viewer
       - role: iam.securityReviewer
   serviceAccountsByEmail:
-    sas-credit@kohls-bda-credit-prd.iam.gserviceaccount.com:
+    sas-credit@doms-bda-credit-prd.iam.gserviceaccount.com:
       - role: CustomBigQueryUser
         OrgId: 1035901152068
       - role: bigquery.readSessionUser

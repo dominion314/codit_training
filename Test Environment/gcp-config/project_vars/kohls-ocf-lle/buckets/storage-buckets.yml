@@ -20,17 +20,17 @@ storageBuckets:
         341959189149-compute@developer.gserviceaccount.com:
           roles:
           - storage.objectCreator
-        actual-delivery-date-feed-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+        actual-delivery-date-feed-ocf@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.objectCreator
-        ocf-giv-nonprod-feed-producers@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocf-giv-nonprod-feed-producers@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.objectAdmin
-        ocf-ore-nonprod-feed-integrati@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocf-ore-nonprod-feed-integrati@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-3plack-mft-dev-dev-bucket:
+  doms-3plack-mft-dev-dev-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -41,14 +41,14 @@ storageBuckets:
       environment-type: "dev"
     permissions:
       serviceAccountsByEmail:
-        giv-googlestorage-1-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+        giv-googlestorage-1-ocf@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.admin
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-3plack-mft-dev-preprod-bucket:
+  doms-3plack-mft-dev-preprod-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -59,11 +59,11 @@ storageBuckets:
       environment-type: "dev"
     permissions:
       serviceAccountsByEmail:
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-3plack-mft-dev-staging-bucket:
+  doms-3plack-mft-dev-staging-bucket:
     versioningEnabled: false
     deletionProtect: true
     bucketPolicyOnly: true
@@ -75,11 +75,11 @@ storageBuckets:
       environment-type: "stage"
     permissions:
       serviceAccountsByEmail:
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-3plack-mft-stress-stress-bucket:
+  doms-3plack-mft-stress-stress-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -90,11 +90,11 @@ storageBuckets:
       environment-type: "stress"
     permissions:
       serviceAccountsByEmail:
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-3plorder-mft-dev-dev-bucket:
+  doms-3plorder-mft-dev-dev-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -104,7 +104,7 @@ storageBuckets:
       environment-name: "dev"
       environment-type: "dev"
 
-  kohls-3plorder-mft-dev-preprod-bucket:
+  doms-3plorder-mft-dev-preprod-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -115,11 +115,11 @@ storageBuckets:
       environment-type: "dev"
     permissions:
       serviceAccountsByEmail:
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-3plorder-mft-dev-staging-bucket:
+  doms-3plorder-mft-dev-staging-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -130,11 +130,11 @@ storageBuckets:
       environment-type: "stage"
     permissions:
       serviceAccountsByEmail:
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-3plorder-mft-stress-stress-bucket:
+  doms-3plorder-mft-stress-stress-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -145,11 +145,11 @@ storageBuckets:
       environment-type: "stress"
     permissions:
       serviceAccountsByEmail:
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-akash:
+  doms-akash:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -157,7 +157,7 @@ storageBuckets:
     labels:
       app-name: "ocr"
 
-  kohls-cf-out:
+  doms-cf-out:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -165,7 +165,7 @@ storageBuckets:
     labels:
       app-name: "cf"
 
-  kohls-cf-test-in:
+  doms-cf-test-in:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -175,7 +175,7 @@ storageBuckets:
       environment-name: "test"
       environment-type: "test"
 
-  kohls-cloud-mft-giv-dev:
+  doms-cloud-mft-giv-dev:
     versioningEnabled: false
     deletionProtect: true
     bucketPolicyOnly: true
@@ -187,11 +187,11 @@ storageBuckets:
       environment-type: "dev"
     permissions:
       serviceAccountsByEmail:
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-cloud-mft-giv-staging:
+  doms-cloud-mft-giv-staging:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -202,11 +202,11 @@ storageBuckets:
       environment-type: "stage"
     permissions:
       serviceAccountsByEmail:
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-cloud-mft-omse-dev:
+  doms-cloud-mft-omse-dev:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -217,11 +217,11 @@ storageBuckets:
       environment-type: "dev"
     permissions:
       serviceAccountsByEmail:
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-cloud-mft-omse-staging:
+  doms-cloud-mft-omse-staging:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -232,11 +232,11 @@ storageBuckets:
       environment-type: "stage"
     permissions:
       serviceAccountsByEmail:
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-dspi-dev009:
+  doms-dspi-dev009:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -246,7 +246,7 @@ storageBuckets:
       environment-name: "dev009"
       environment-type: "dev"
 
-  kohls-dspi-dev010:
+  doms-dspi-dev010:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -261,7 +261,7 @@ storageBuckets:
       condition:
         age: 1
 
-  kohls-dspi-preprod:
+  doms-dspi-preprod:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -271,7 +271,7 @@ storageBuckets:
       environment-name: "preprod"
       environment-type: "preprod"
 
-  kohls-dspi-staging:
+  doms-dspi-staging:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -281,7 +281,7 @@ storageBuckets:
       environment-name: "staging"
       environment-type: "stage"
 
-  kohls-dspi-stress:
+  doms-dspi-stress:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -291,7 +291,7 @@ storageBuckets:
       environment-name: "stress"
       environment-type: "stress"
 
-  kohls-giv-mft-dev-dev-bucket:
+  doms-giv-mft-dev-dev-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -302,11 +302,11 @@ storageBuckets:
       environment-type: "dev"
     permissions:
       serviceAccountsByEmail:
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-giv-mft-dev-preprod-bucket:
+  doms-giv-mft-dev-preprod-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -317,11 +317,11 @@ storageBuckets:
       environment-type: "preprod"
     permissions:
       serviceAccountsByEmail:
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-giv-mft-dev-staging-bucket:
+  doms-giv-mft-dev-staging-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -332,11 +332,11 @@ storageBuckets:
       environment-type: "stage"
     permissions:
       serviceAccountsByEmail:
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-giv-mft-stress-stress-bucket:
+  doms-giv-mft-stress-stress-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -347,15 +347,15 @@ storageBuckets:
       environment-type: "stress"
     permissions:
       groupsByEmail:
-        OCF_Perf_Team@kohls.com:
+        OCF_Perf_Team@doms.com:
           roles:
           - storage.admin
       serviceAccountsByEmail:
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-ocf-lle-backup-gcpusc1-b-lle-ocf:
+  doms-ocf-lle-backup-gcpusc1-b-lle-ocf:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -369,11 +369,11 @@ storageBuckets:
         age: 30
     permissions:
       serviceAccountsByEmail:
-        openshift-master-paas@kohls-ocf-lle.iam.gserviceaccount.com:
+        openshift-master-paas@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.objectAdmin
 
-  kohls-ocf-lle-backup-gcpuse1-b-lle-ocf:
+  doms-ocf-lle-backup-gcpuse1-b-lle-ocf:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -388,11 +388,11 @@ storageBuckets:
       withState: LIVE
     permissions:
       serviceAccountsByEmail:
-        openshift-master-paas@kohls-ocf-lle.iam.gserviceaccount.com:
+        openshift-master-paas@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.objectAdmin
 
-  kohls-ocf-lle-cassandra-backup:
+  doms-ocf-lle-cassandra-backup:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -405,7 +405,7 @@ storageBuckets:
           roles:
           - storage.admin
 
-  kohls-ocf-lle-eot:
+  doms-ocf-lle-eot:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -413,7 +413,7 @@ storageBuckets:
     labels:
       app-name: "eot"
 
-  kohls-ocf-lle-gcpusc1-b-lle-ocf-registry:
+  doms-ocf-lle-gcpusc1-b-lle-ocf-registry:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -422,11 +422,11 @@ storageBuckets:
       app-name: "registry"
     permissions:
       serviceAccountsByEmail:
-        openshift-registry-paas@kohls-ocf-lle.iam.gserviceaccount.com:
+        openshift-registry-paas@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.objectAdmin
 
-  kohls-ocf-lle-gcpusc1-b-lle-ocf-tfstate:
+  doms-ocf-lle-gcpusc1-b-lle-ocf-tfstate:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -434,7 +434,7 @@ storageBuckets:
     labels:
       app-name: "tfstate"
 
-  kohls-ocf-lle-gcpuse1-b-lle-ocf-registry:
+  doms-ocf-lle-gcpuse1-b-lle-ocf-registry:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -443,11 +443,11 @@ storageBuckets:
       app-name: "registry"
     permissions:
       serviceAccountsByEmail:
-        openshift-registry-paas@kohls-ocf-lle.iam.gserviceaccount.com:
+        openshift-registry-paas@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.objectAdmin
 
-  kohls-ocf-lle-gcpuse1-b-lle-ocf-tfstate:
+  doms-ocf-lle-gcpuse1-b-lle-ocf-tfstate:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -455,7 +455,7 @@ storageBuckets:
     labels:
       app-name: "tfstate"
 
-  kohls-ocf-lle-mongo:
+  doms-ocf-lle-mongo:
     versioningEnabled: false
     deletionProtect: true
     storageClass: NEARLINE
@@ -464,14 +464,14 @@ storageBuckets:
       app-name: "omse"
     default_object_acls:
       usersByEmail:
-        kohls-ocf-lle-mongo@kohls-ocf-lle.iam.gserviceaccount.com: "OWNER"
+        doms-ocf-lle-mongo@doms-ocf-lle.iam.gserviceaccount.com: "OWNER"
     permissions:
       serviceAccountsByEmail:
-        kohls-ocf-lle-mongo@kohls-ocf-lle.iam.gserviceaccount.com:
+        doms-ocf-lle-mongo@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-ocf-lle-mysql:
+  doms-ocf-lle-mysql:
     versioningEnabled: false
     deletionProtect: true
     storageClass: NEARLINE
@@ -480,21 +480,21 @@ storageBuckets:
       app-name: "ocr"
     acls:
       usersByEmail:
-        mysql-dba@kohls-ocf-lle.iam.gserviceaccount.com: "OWNER"
+        mysql-dba@doms-ocf-lle.iam.gserviceaccount.com: "OWNER"
     default_object_acls:
       usersByEmail:
-        kohls-ocf-lle-mysql@kohls-ocf-lle.iam.gserviceaccount.com: "OWNER"
+        doms-ocf-lle-mysql@doms-ocf-lle.iam.gserviceaccount.com: "OWNER"
     permissions:
       serviceAccountsByEmail:
-        kohls-ocf-lle-mysql@kohls-ocf-lle.iam.gserviceaccount.com:
+        doms-ocf-lle-mysql@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.admin
-        mysql-dba@kohls-ocf-lle.iam.gserviceaccount.com:
+        mysql-dba@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.admin
           - storage.legacyBucketOwner
 
-  kohls-ocf-lle-oic:
+  doms-ocf-lle-oic:
     versioningEnabled: false
     deletionProtect: true
     bucketPolicyOnly: true
@@ -509,14 +509,14 @@ storageBuckets:
         age: 1
     permissions:
       usersByEmail:
-        Nicole.Olson@kohls.com:
+        Nicole.Olson@doms.com:
           roles:
           - storage.objectAdmin
       serviceAccountsByEmail:
-        bigquery-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+        bigquery-ocf@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.objectAdmin
-        gcp-bigquery-dba@kohls-ocf-lle.iam.gserviceaccount.com:
+        gcp-bigquery-dba@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.admin
           - storage.legacyBucketOwner
@@ -528,7 +528,7 @@ storageBuckets:
           - storage.objectCreator
           - storage.objectViewer
 
-  kohls-ocf-lle-oracle:
+  doms-ocf-lle-oracle:
     versioningEnabled: false
     deletionProtect: true
     storageClass: NEARLINE
@@ -537,9 +537,9 @@ storageBuckets:
       app-name: "omse"
     default_object_acls:
       usersByEmail:
-        kohls-ocf-lle-oracle@kohls-ocf-lle.iam.gserviceaccount.com: "OWNER"
+        doms-ocf-lle-oracle@doms-ocf-lle.iam.gserviceaccount.com: "OWNER"
 
-  kohls-ocf-lle-oscr:
+  doms-ocf-lle-oscr:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -547,7 +547,7 @@ storageBuckets:
     labels:
       app-name: "oscr"
 
-  kohls-ocf-lle-pmm:
+  doms-ocf-lle-pmm:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -556,11 +556,11 @@ storageBuckets:
       app-name: "pmm"
     permissions:
       serviceAccountsByEmail:
-        kohls-ocf-lle-mysql@kohls-ocf-lle.iam.gserviceaccount.com:
+        doms-ocf-lle-mysql@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-ocf-lle-solr-backup:
+  doms-ocf-lle-solr-backup:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -573,7 +573,7 @@ storageBuckets:
       condition:
         age: 14
 
-  kohls-ocf-lle-terraform-states:
+  doms-ocf-lle-terraform-states:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -582,23 +582,23 @@ storageBuckets:
       app-name: "oic"
     acls:
       usersByEmail:
-        kohls-ocf-lle-mysql@kohls-ocf-lle.iam.gserviceaccount.com: "OWNER"
-        mysql-dba@kohls-ocf-lle.iam.gserviceaccount.com: "OWNER"
+        doms-ocf-lle-mysql@doms-ocf-lle.iam.gserviceaccount.com: "OWNER"
+        mysql-dba@doms-ocf-lle.iam.gserviceaccount.com: "OWNER"
     permissions:
       serviceAccountsByEmail:
         433908714941-compute@developer.gserviceaccount.com:
           roles:
           - storage.admin
-        kohls-ocf-lle-mysql@kohls-ocf-lle.iam.gserviceaccount.com:
+        doms-ocf-lle-mysql@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.admin
           - storage.legacyBucketOwner
-        mysql-dba@kohls-ocf-lle.iam.gserviceaccount.com:
+        mysql-dba@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.admin
           - storage.legacyBucketOwner
 
-  kohls-ocf-lle:
+  doms-ocf-lle:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -606,7 +606,7 @@ storageBuckets:
     labels:
       app-name: "lle"
 
-  kohls-ocf-nonprod-openshift-docker-registry:
+  doms-ocf-nonprod-openshift-docker-registry:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -615,14 +615,14 @@ storageBuckets:
       app-name: "oic"
     permissions:
       serviceAccountsByEmail:
-        ocf-openshift-admin@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocf-openshift-admin@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.admin
-        oic-openshift-cluster@kohls-ocf-lle.iam.gserviceaccount.com:
+        oic-openshift-cluster@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-ocf-rundeck-bucket:
+  doms-ocf-rundeck-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -630,7 +630,7 @@ storageBuckets:
     labels:
       app-name: "oic"
 
-  kohls-ocf-sbx-terraform-states:
+  doms-ocf-sbx-terraform-states:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -640,7 +640,7 @@ storageBuckets:
       environment-name: "sandbox"
       environment-type: "sbx"
 
-  kohls-ocfint-mft-dev-archive-bucket:
+  doms-ocfint-mft-dev-archive-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: NEARLINE
@@ -655,7 +655,7 @@ storageBuckets:
       condition:
         age: 2
 
-  kohls-ocfint-mft-dev-dev-bucket:
+  doms-ocfint-mft-dev-dev-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -671,11 +671,11 @@ storageBuckets:
         age: 2
     permissions:
       serviceAccountsByEmail:
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.objectAdmin
 
-  kohls-ocfint-mft-dev-stage-bucket:
+  doms-ocfint-mft-dev-stage-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -691,11 +691,11 @@ storageBuckets:
         age: 2
     permissions:
       serviceAccountsByEmail:
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.objectAdmin
 
-  kohls-ocfint-mft-stage-archive-bucket:
+  doms-ocfint-mft-stage-archive-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: NEARLINE
@@ -710,7 +710,7 @@ storageBuckets:
       condition:
         age: 2
 
-  kohls-ocfint-mft-stress-archive-bucket:
+  doms-ocfint-mft-stress-archive-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: NEARLINE
@@ -725,7 +725,7 @@ storageBuckets:
       condition:
         age: 2
 
-  kohls-ocfint-mft-stress-stress-bucket:
+  doms-ocfint-mft-stress-stress-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -741,11 +741,11 @@ storageBuckets:
         age: 2
     permissions:
       serviceAccountsByEmail:
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.objectAdmin
 
-  kohls-ocr-mft-dev-dev-bucket:
+  doms-ocr-mft-dev-dev-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -756,11 +756,11 @@ storageBuckets:
       environment-type: "dev"
     permissions:
       serviceAccountsByEmail:
-        kdx-svc@kohls-kdx-lle.iam.gserviceaccount.com:
+        kdx-svc@doms-kdx-lle.iam.gserviceaccount.com:
           roles:
           - storage.objectAdmin
 
-  kohls-ocr-mft-dev-stage-bucket:
+  doms-ocr-mft-dev-stage-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -771,23 +771,23 @@ storageBuckets:
       environment-type: "stage"
     acls:
       usersByEmail:
-        svc-kdx@kohls-kdx-hle.iam.gserviceaccount.com: "WRITER"
+        svc-kdx@doms-kdx-hle.iam.gserviceaccount.com: "WRITER"
     default_object_acls:
       usersByEmail:
-        svc-kdx@kohls-kdx-hle.iam.gserviceaccount.com: "READER"
+        svc-kdx@doms-kdx-hle.iam.gserviceaccount.com: "READER"
     permissions:
       serviceAccountsByEmail:
-        kdx-svc@kohls-kdx-lle.iam.gserviceaccount.com:
+        kdx-svc@doms-kdx-lle.iam.gserviceaccount.com:
           roles:
           - storage.objectAdmin
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.admin
-        svc-kdx@kohls-kdx-hle.iam.gserviceaccount.com:
+        svc-kdx@doms-kdx-hle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketWriter
 
-  kohls-omse-mft-dev-dev-bucket:
+  doms-omse-mft-dev-dev-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -798,11 +798,11 @@ storageBuckets:
       environment-type: "dev"
     permissions:
       serviceAccountsByEmail:
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-omse-mft-dev-preprod-bucket:
+  doms-omse-mft-dev-preprod-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -813,11 +813,11 @@ storageBuckets:
       environment-type: "preprod"
     permissions:
       serviceAccountsByEmail:
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-omse-mft-dev-staging-bucket:
+  doms-omse-mft-dev-staging-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -828,11 +828,11 @@ storageBuckets:
       environment-type: "stage"
     permissions:
       serviceAccountsByEmail:
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-omse-mft-stress-stress-bucket:
+  doms-omse-mft-stress-stress-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -843,15 +843,15 @@ storageBuckets:
       environment-type: "stress"
     permissions:
       groupsByEmail:
-        OCF_Perf_Team@kohls.com:
+        OCF_Perf_Team@doms.com:
           roles:
           - storage.admin
       serviceAccountsByEmail:
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-ore-cia-data:
+  doms-ore-cia-data:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -862,14 +862,14 @@ storageBuckets:
       environment-type: "ci"
     acls:
       usersByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com: "OWNER"
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com: "OWNER"
     permissions:
       serviceAccountsByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketOwner
 
-  kohls-ore-cia-deployment:
+  doms-ore-cia-deployment:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -880,14 +880,14 @@ storageBuckets:
       environment-type: "ci"
     acls:
       usersByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com: "READER"
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com: "READER"
     permissions:
       serviceAccountsByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketReader
 
-  kohls-ore-cia-staging:
+  doms-ore-cia-staging:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -898,14 +898,14 @@ storageBuckets:
       environment-type: "stage"
     acls:
       usersByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com: "OWNER"
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com: "OWNER"
     permissions:
       serviceAccountsByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketOwner
 
-  kohls-ore-dev025-backup-datastore:
+  doms-ore-dev025-backup-datastore:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -915,7 +915,7 @@ storageBuckets:
       environment-name: "dev025"
       environment-type: "dev"
 
-  kohls-ore-dev025-data:
+  doms-ore-dev025-data:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -926,14 +926,14 @@ storageBuckets:
       environment-type: "dev"
     acls:
       usersByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com: "OWNER"
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com: "OWNER"
     permissions:
       serviceAccountsByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketOwner
 
-  kohls-ore-dev025-deployment:
+  doms-ore-dev025-deployment:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -944,14 +944,14 @@ storageBuckets:
       environment-type: "dev"
     acls:
       usersByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com: "READER"
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com: "READER"
     permissions:
       serviceAccountsByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketReader
 
-  kohls-ore-dev025-staging:
+  doms-ore-dev025-staging:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -962,14 +962,14 @@ storageBuckets:
       environment-type: "dev"
     acls:
       usersByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com: "OWNER"
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com: "OWNER"
     permissions:
       serviceAccountsByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketOwner
 
-  kohls-ore-dev026-data:
+  doms-ore-dev026-data:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -979,7 +979,7 @@ storageBuckets:
       environment-name: "dev026"
       environment-type: "dev"
 
-  kohls-ore-dev026-deployment:
+  doms-ore-dev026-deployment:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -989,7 +989,7 @@ storageBuckets:
       environment-name: "dev026"
       environment-type: "dev"
 
-  kohls-ore-dev026-staging:
+  doms-ore-dev026-staging:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -999,7 +999,7 @@ storageBuckets:
       environment-name: "dev026"
       environment-type: "dev"
 
-  kohls-ore-dev032-deployment:
+  doms-ore-dev032-deployment:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -1009,7 +1009,7 @@ storageBuckets:
       environment-name: "dev032"
       environment-type: "dev"
 
-  kohls-ore-fqa-data:
+  doms-ore-fqa-data:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -1019,7 +1019,7 @@ storageBuckets:
       environment-name: "fqa"
       environment-type: "qa"
 
-  kohls-ore-kpi-dev-deployment:
+  doms-ore-kpi-dev-deployment:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -1029,7 +1029,7 @@ storageBuckets:
       environment-name: "dev"
       environment-type: "dev"
 
-  kohls-ore-kpi-staginga-data:
+  doms-ore-kpi-staginga-data:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -1039,7 +1039,7 @@ storageBuckets:
       environment-name: "staginga"
       environment-type: "stage"
 
-  kohls-ore-kpi-staginga-deployment:
+  doms-ore-kpi-staginga-deployment:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -1049,7 +1049,7 @@ storageBuckets:
       environment-name: "staginga"
       environment-type: "stage"
 
-  kohls-ore-preprod-data:
+  doms-ore-preprod-data:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -1059,7 +1059,7 @@ storageBuckets:
       environment-name: "preprod"
       environment-type: "preprod"
 
-  kohls-ore-preprod-deployment:
+  doms-ore-preprod-deployment:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -1069,7 +1069,7 @@ storageBuckets:
       environment-name: "preprod"
       environment-type: "preprod"
 
-  kohls-ore-preprod-staging:
+  doms-ore-preprod-staging:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -1079,7 +1079,7 @@ storageBuckets:
       environment-name: "staging"
       environment-type: "stage"
 
-  kohls-ore-preproda-backup-datastore:
+  doms-ore-preproda-backup-datastore:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -1089,7 +1089,7 @@ storageBuckets:
       environment-name: "preproda"
       environment-type: "preprod"
 
-  kohls-ore-preproda-data:
+  doms-ore-preproda-data:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -1100,14 +1100,14 @@ storageBuckets:
       environment-type: "preprod"
     acls:
       usersByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com: "OWNER"
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com: "OWNER"
     permissions:
       serviceAccountsByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketOwner
 
-  kohls-ore-preproda-deployment:
+  doms-ore-preproda-deployment:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -1118,14 +1118,14 @@ storageBuckets:
       environment-type: "preprod"
     acls:
       usersByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com: "READER"
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com: "READER"
     permissions:
       serviceAccountsByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketReader
 
-  kohls-ore-preproda-staging:
+  doms-ore-preproda-staging:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -1136,14 +1136,14 @@ storageBuckets:
       environment-type: "stage"
     acls:
       usersByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com: "OWNER"
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com: "OWNER"
     permissions:
       serviceAccountsByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketOwner
 
-  kohls-ore-stage-data:
+  doms-ore-stage-data:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -1153,7 +1153,7 @@ storageBuckets:
       environment-name: "stage"
       environment-type: "stage"
 
-  kohls-ore-staginga-data:
+  doms-ore-staginga-data:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -1164,14 +1164,14 @@ storageBuckets:
       environment-type: "stage"
     acls:
       usersByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com: "OWNER"
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com: "OWNER"
     permissions:
       serviceAccountsByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketOwner
 
-  kohls-ore-staginga-deployment:
+  doms-ore-staginga-deployment:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -1182,14 +1182,14 @@ storageBuckets:
       environment-type: "stage"
     acls:
       usersByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com: "READER"
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com: "READER"
     permissions:
       serviceAccountsByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketReader
 
-  kohls-ore-staginga-staging:
+  doms-ore-staginga-staging:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -1200,14 +1200,14 @@ storageBuckets:
       environment-type: "stage"
     acls:
       usersByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com: "OWNER"
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com: "OWNER"
     permissions:
       serviceAccountsByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketOwner
 
-  kohls-ore-stress-deployment:
+  doms-ore-stress-deployment:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -1217,7 +1217,7 @@ storageBuckets:
       environment-name: "stress"
       environment-type: "stress"
 
-  kohls-ore-stress-staging:
+  doms-ore-stress-staging:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -1227,7 +1227,7 @@ storageBuckets:
       environment-name: "stress"
       environment-type: "stress"
 
-  kohls-ore-stressa-backup-datastore:
+  doms-ore-stressa-backup-datastore:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -1237,7 +1237,7 @@ storageBuckets:
       environment-name: "stressa"
       environment-type: "stress"
 
-  kohls-ore-stressa-data:
+  doms-ore-stressa-data:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -1248,14 +1248,14 @@ storageBuckets:
       environment-type: "stress"
     acls:
       usersByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com: "OWNER"
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com: "OWNER"
     permissions:
       serviceAccountsByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketOwner
 
-  kohls-ore-stressa-deployment:
+  doms-ore-stressa-deployment:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -1266,14 +1266,14 @@ storageBuckets:
       environment-type: "stress"
     acls:
       usersByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com: "READER"
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com: "READER"
     permissions:
       serviceAccountsByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketReader
 
-  kohls-ore-stressa-staging:
+  doms-ore-stressa-staging:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -1284,14 +1284,14 @@ storageBuckets:
       environment-type: "stress"
     acls:
       usersByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com: "OWNER"
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com: "OWNER"
     permissions:
       serviceAccountsByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketOwner
 
-  kohls-pse-mft-nonprod-dev-bucket:
+  doms-pse-mft-nonprod-dev-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -1299,7 +1299,7 @@ storageBuckets:
     labels:
       app-name: "pse"
 
-  kohls-saleshub-mft-dev-staging-bucket:
+  doms-saleshub-mft-dev-staging-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -1310,11 +1310,11 @@ storageBuckets:
       environment-type: "staging"
     permissions:
       serviceAccountsByEmail:
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-saleshub-mft-stress-stress-bucket:
+  doms-saleshub-mft-stress-stress-bucket:
     versioningEnabled: false
     deletionProtect: true
     bucketPolicyOnly: true
@@ -1326,11 +1326,11 @@ storageBuckets:
       environment-type: "stress"
     permissions:
       serviceAccountsByEmail:
-        mft-hub-storage-rw@kohls-shared-services.iam.gserviceaccount.com:
+        mft-hub-storage-rw@doms-shared-services.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-shc-jars:
+  doms-shc-jars:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -1338,7 +1338,7 @@ storageBuckets:
     labels:
       app-name: "saleshub"
 
-  kohls-shc-stress-data:
+  doms-shc-stress-data:
     versioningEnabled: false
     deletionProtect: true
     storageClass: NEARLINE
@@ -1348,7 +1348,7 @@ storageBuckets:
       environment-name: "stress"
       environment-type: "stress"
 
-  kohls-spie-cia-deployment:
+  doms-spie-cia-deployment:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -1359,11 +1359,11 @@ storageBuckets:
       environment-type: "ci"
     permissions:
       serviceAccountsByEmail:
-        giv-spie-dataflow-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+        giv-spie-dataflow-ocf@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.objectViewer
 
-  kohls-spie-dev032-deployment:
+  doms-spie-dev032-deployment:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -1374,18 +1374,18 @@ storageBuckets:
       environment-type: "dev"
     acls:
       usersByEmail:
-        terraform-ocf-devops@kohls-ocf-lle.iam.gserviceaccount.com: "OWNER"
+        terraform-ocf-devops@doms-ocf-lle.iam.gserviceaccount.com: "OWNER"
     permissions:
       serviceAccountsByEmail:
-        giv-spie-dataflow-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+        giv-spie-dataflow-ocf@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.objectViewer
-        terraform-ocf-devops@kohls-ocf-lle.iam.gserviceaccount.com:
+        terraform-ocf-devops@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.admin
           - storage.legacyBucketOwner
 
-  kohls-spie-preproda-deployment:
+  doms-spie-preproda-deployment:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -1396,11 +1396,11 @@ storageBuckets:
       environment-type: "preprod"
     permissions:
       serviceAccountsByEmail:
-        giv-spie-dataflow-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+        giv-spie-dataflow-ocf@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.objectViewer
 
-  kohls-spie-staginga-deployment:
+  doms-spie-staginga-deployment:
     versioningEnabled: false
     deletionProtect: true
     storageClass: REGIONAL
@@ -1411,11 +1411,11 @@ storageBuckets:
       environment-type: "stage"
     permissions:
       serviceAccountsByEmail:
-        giv-spie-dataflow-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+        giv-spie-dataflow-ocf@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.objectViewer
 
-  kohls-spie-stressa-deployment:
+  doms-spie-stressa-deployment:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -1426,7 +1426,7 @@ storageBuckets:
       environment-type: "stress"
     permissions:
       serviceAccountsByEmail:
-        giv-spie-dataflow-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+        giv-spie-dataflow-ocf@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.objectViewer
 
@@ -1439,7 +1439,7 @@ storageBuckets:
       app-name: "oic"
     permissions:
       serviceAccountsByEmail:
-        nonprod-presourcing-onera-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+        nonprod-presourcing-onera-ocf@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.objectViewer
 
@@ -1452,7 +1452,7 @@ storageBuckets:
       app-name: "allure"
     permissions:
       usersByEmail:
-        jacob.napp@kohls.com:
+        jacob.napp@doms.com:
           roles:
           - storage.objectViewer
 
@@ -1467,10 +1467,10 @@ storageBuckets:
       environment-type: "dev"
     acls:
       usersByEmail:
-        ots-item-ocf@kohls-ocf-lle.iam.gserviceaccount.com: "OWNER"
+        ots-item-ocf@doms-ocf-lle.iam.gserviceaccount.com: "OWNER"
     permissions:
       serviceAccountsByEmail:
-        ots-item-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+        ots-item-ocf@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.admin
           - storage.legacyBucketOwner
@@ -1508,10 +1508,10 @@ storageBuckets:
       environment-type: "stress"
     acls:
       usersByEmail:
-        ots-item-ocf@kohls-ocf-prd.iam.gserviceaccount.com: "OWNER"
+        ots-item-ocf@doms-ocf-prd.iam.gserviceaccount.com: "OWNER"
     permissions:
       serviceAccountsByEmail:
-        ots-item-ocf@kohls-ocf-prd.iam.gserviceaccount.com:
+        ots-item-ocf@doms-ocf-prd.iam.gserviceaccount.com:
           roles:
           - storage.admin
           - storage.legacyBucketOwner
@@ -1565,18 +1565,18 @@ storageBuckets:
       environment-type: "dev"
     acls:
       usersByEmail:
-        ocr-nonprod-jobexecutor@kohls-ocf-lle.iam.gserviceaccount.com: "WRITER"
+        ocr-nonprod-jobexecutor@doms-ocf-lle.iam.gserviceaccount.com: "WRITER"
     permissions:
       groupsByEmail:
-        gcp-cloud-database-admin-l3@kohls.com:
+        gcp-cloud-database-admin-l3@doms.com:
           roles:
           - storage.objectAdmin
       serviceAccountsByEmail:
-        ocr-nonprod-jobexecutor@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocr-nonprod-jobexecutor@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketReader
           - storage.legacyBucketWriter
-        splunk-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+        splunk-ocf@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.objectAdmin
 
@@ -1591,25 +1591,25 @@ storageBuckets:
       environment-type: "dev"
     acls:
       usersByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com: "WRITER"
-        ocr-nonprod-ci@kohls-ocf-lle.iam.gserviceaccount.com: "WRITER"
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com: "WRITER"
+        ocr-nonprod-ci@doms-ocf-lle.iam.gserviceaccount.com: "WRITER"
     permissions:
       groupsByEmail:
-        gcp-cloud-database-admin-l3@kohls.com:
+        gcp-cloud-database-admin-l3@doms.com:
           roles:
           - storage.objectAdmin
       serviceAccountsByEmail:
-        ocr-nonprod-ci@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocr-nonprod-ci@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketWriter
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.admin
           - storage.legacyBucketWriter
           - storage.objectAdmin
           - storage.objectCreator
           - storage.objectViewer
-        terraform-ocf-devops@kohls-ocf-lle.iam.gserviceaccount.com:
+        terraform-ocf-devops@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.admin
           - storage.objectAdmin
@@ -1627,21 +1627,21 @@ storageBuckets:
       environment-type: "dev"
     acls:
       usersByEmail:
-        ocr-nonprod-jobexecutor@kohls-ocf-lle.iam.gserviceaccount.com: "WRITER"
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com: "READER"
+        ocr-nonprod-jobexecutor@doms-ocf-lle.iam.gserviceaccount.com: "WRITER"
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com: "READER"
     default_object_acls:
       usersByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com: "READER"
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com: "READER"
     permissions:
       groupsByEmail:
-        gcp-cloud-database-admin-l3@kohls.com:
+        gcp-cloud-database-admin-l3@doms.com:
           roles:
           - storage.objectAdmin
       serviceAccountsByEmail:
-        ocr-nonprod-jobexecutor@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocr-nonprod-jobexecutor@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketWriter
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketReader
 
@@ -1656,14 +1656,14 @@ storageBuckets:
       environment-type: "stage"
     acls:
       usersByEmail:
-        ocr-nonprod-jobexecutor@kohls-ocf-lle.iam.gserviceaccount.com: "WRITER"
+        ocr-nonprod-jobexecutor@doms-ocf-lle.iam.gserviceaccount.com: "WRITER"
     permissions:
       groupsByEmail:
-        gcp-cloud-database-admin-l3@kohls.com:
+        gcp-cloud-database-admin-l3@doms.com:
           roles:
           - storage.objectAdmin
       serviceAccountsByEmail:
-        ocr-nonprod-jobexecutor@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocr-nonprod-jobexecutor@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketWriter
 
@@ -1678,14 +1678,14 @@ storageBuckets:
       environment-type: "stage"
     acls:
       usersByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com: "WRITER"
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com: "WRITER"
     permissions:
       groupsByEmail:
-        gcp-cloud-database-admin-l3@kohls.com:
+        gcp-cloud-database-admin-l3@doms.com:
           roles:
           - storage.objectAdmin
       serviceAccountsByEmail:
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketWriter
 
@@ -1700,18 +1700,18 @@ storageBuckets:
       environment-type: "stage"
     acls:
       usersByEmail:
-        ocr-nonprod-jobexecutor@kohls-ocf-lle.iam.gserviceaccount.com: "WRITER"
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com: "READER"
+        ocr-nonprod-jobexecutor@doms-ocf-lle.iam.gserviceaccount.com: "WRITER"
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com: "READER"
     permissions:
       groupsByEmail:
-        gcp-cloud-database-admin-l3@kohls.com:
+        gcp-cloud-database-admin-l3@doms.com:
           roles:
           - storage.objectAdmin
       serviceAccountsByEmail:
-        ocr-nonprod-jobexecutor@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocr-nonprod-jobexecutor@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketWriter
-        ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com:
+        ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketReader
 
@@ -1745,14 +1745,14 @@ storageBuckets:
     acls:
       usersByEmail:
         433908714941-compute@developer.gserviceaccount.com: "READER"
-        nzocf-storage-admin@kohls-ocf-lle.iam.gserviceaccount.com: "READER"
+        nzocf-storage-admin@doms-ocf-lle.iam.gserviceaccount.com: "READER"
     permissions:
       serviceAccountsByEmail:
         433908714941-compute@developer.gserviceaccount.com:
           roles:
           - storage.legacyBucketReader
           - storage.objectViewer
-        nzocf-storage-admin@kohls-ocf-lle.iam.gserviceaccount.com:
+        nzocf-storage-admin@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketReader
           - storage.objectViewer
@@ -1795,7 +1795,7 @@ storageBuckets:
       environment-name: "dev"
       environment-type: "dev"
 
-  kohls-vendorportal-mft-qa-qa-bucket:
+  doms-vendorportal-mft-qa-qa-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -1804,11 +1804,11 @@ storageBuckets:
       app-name: "ocf-ots-item"
     permissions:
       serviceAccountsByEmail:
-        ots-item-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+        ots-item-ocf@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
             - storage.admin
 
-  kohls-vendorportal-mft-qa-bucket:
+  doms-vendorportal-mft-qa-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -1817,7 +1817,7 @@ storageBuckets:
       app-name: "ocf-ots-item"
     permissions:
       serviceAccountsByEmail:
-        ots-item-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+        ots-item-ocf@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
             - storage.admin
 

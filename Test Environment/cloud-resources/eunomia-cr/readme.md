@@ -60,19 +60,19 @@ projects:
 ```
 
 Project name is required
-gitUri: is optional.  If not defined, gitUri will be https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources
+gitUri: is optional.  If not defined, gitUri will be https://gitlab.com/doms/infra/platform_enablement/cloud-config/cloud-resources
 gitRef: is optional.  If not defined, gitRef will be master
 
 Sample projects.yml configuration
 ```yaml
 projects:
-  - kohlsdev-cpa-test001-lle:
-    gitUri: https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources
+  - domsdev-cpa-test001-lle:
+    gitUri: https://gitlab.com/doms/infra/platform_enablement/cloud-config/cloud-resources
     gitRef: master
-  - kohlsdev-cpa-test002-lle:
+  - domsdev-cpa-test002-lle:
 ```
 ## Seed CR
-The seed CR will be installed in the eunomia-operator namespace in the kohls-cpe-kcc-lle k8s cluster by the PaaS team.
+The seed CR will be installed in the eunomia-operator namespace in the doms-cpe-kcc-lle k8s cluster by the PaaS team.
 The seed CR points to eunomia-cr/templates and eunomia-cr/vars directories.
 The seed CR will render and apply new project and folder eunomia CRs based on data in projects.yml and folders.yml configuration files.
 Seed CR will create the following objects for each project and folder listed in vars files:

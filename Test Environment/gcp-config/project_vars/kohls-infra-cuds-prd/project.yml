@@ -1,6 +1,6 @@
 # Project file created using automation v 2.0
 project:
-  name: kohls-infra-cuds-prd
+  name: doms-infra-cuds-prd
   managed: true
   deletionProtect: true
   folderId: 980929416788

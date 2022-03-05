@@ -2,7 +2,7 @@
 billingDeptId: "90507"
 
 project:
-  name: kohls-etcc-finstrat-lle
+  name: doms-etcc-finstrat-lle
   managed: true
   folderId: "859213288423"
   billingAccount: "00C36A-CD0BDB-E543D0"

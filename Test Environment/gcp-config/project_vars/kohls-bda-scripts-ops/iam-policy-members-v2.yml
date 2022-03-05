@@ -1,7 +1,7 @@
 ---
 iamPolicyMembersV2:
   groupsByEmail:
-    gcp-bda-productionengineer-admin@kohls.com:
+    gcp-bda-productionengineer-admin@doms.com:
       - role: oauthconfig.editor
       - role: logging.configWriter
       - role: serviceusage.serviceUsageConsumer

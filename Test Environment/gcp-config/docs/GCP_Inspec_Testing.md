@@ -146,7 +146,7 @@ supports:
 # copyright: 2018, The Authors
 
 title "Check if project exists"
-project_id = 'kohls-cpa-forseti-sbx'
+project_id = 'doms-cpa-forseti-sbx'
 
 # you add controls here
 control "check if project exists" do
@@ -170,7 +170,7 @@ Version: 0.1.0
 Target:  gcp://32555940559.apps.googleusercontent.com
 
   ✔  check if project exists: Check if project exists
-     ✔  Compute Project Info kohls-cpa-forseti-sbx should exist
+     ✔  Compute Project Info doms-cpa-forseti-sbx should exist
 
 
 Profile: Google Cloud Platform Resource Pack (inspec-gcp)
@@ -191,7 +191,7 @@ $inspec exec . -t gcp:// --reporter json:./result.json
 
 result.json:
 ```json
-{"platform":{"name":"gcp","release":"google-api-client-v0.23.9"},"profiles":[{"name":"gitops","version":"0.1.0","sha256":"60afcf72e3902760447c2c056d65426128e5f0a87b6ad150f67020eb5a250c50","title":"GCP InSpec Profile","maintainer":"The Authors","summary":"An InSpec Compliance Profile For GCP","license":"Apache-2.0","copyright":"The Authors","copyright_email":"you@example.com","supports":[{"platform":"gcp"}],"attributes":[],"depends":[{"name":"inspec-gcp","url":"https://github.com/inspec/inspec-gcp/archive/master.tar.gz","status":"loaded"}],"groups":[{"id":"controls/project_exists.rb","controls":["check if project exists"],"title":"Check if project exists"}],"controls":[{"id":"check if project exists","title":"Check if project exists","desc":"An optional description...","descriptions":[{"label":"default","data":"An optional description..."}],"impact":1.0,"refs":[],"tags":{},"code":"control \"check if project exists\" do\n  impact 1.0\n  title \"Check if project exists\"\n  desc \"An optional description...\"\n    describe google_compute_project_info(project: project_id) do\n        it { should exist }\n    end\nend\n","source_location":{"line":7,"ref":"./controls/project_exists.rb"},"results":[{"status":"passed","code_desc":"Compute Project Info kohls-cpa-forseti-sbx should exist","run_time":0.002256,"start_time":"2019-10-15T13:01:48-05:00"}]}],"status":"loaded"},{"name":"inspec-gcp","version":"0.16.1","sha256":"c7cb1b87ce95c77b5a147c2cdceea3a15070e569477ffc50adccbb854809c861","title":"Google Cloud Platform Resource Pack","maintainer":"spaterson@chef.io,russell.seymour@turtlesystems.co.uk","summary":"This resource pack provides compliance resources_old_ignore for Google Cloud Platform","license":"Apache-2.0","copyright":"spaterson@chef.io,russell.seymour@turtlesystems.co.uk","copyright_email":"spaterson@chef.io,russell.seymour@turtlesystems.co.uk","supports":[{"platform":"gcp"}],"attributes":[],"parent_profile":"gitops","groups":[],"controls":[],"status":"loaded"}],"statistics":{"duration":0.00655},"version":"4.16.0"}
+{"platform":{"name":"gcp","release":"google-api-client-v0.23.9"},"profiles":[{"name":"gitops","version":"0.1.0","sha256":"60afcf72e3902760447c2c056d65426128e5f0a87b6ad150f67020eb5a250c50","title":"GCP InSpec Profile","maintainer":"The Authors","summary":"An InSpec Compliance Profile For GCP","license":"Apache-2.0","copyright":"The Authors","copyright_email":"you@example.com","supports":[{"platform":"gcp"}],"attributes":[],"depends":[{"name":"inspec-gcp","url":"https://github.com/inspec/inspec-gcp/archive/master.tar.gz","status":"loaded"}],"groups":[{"id":"controls/project_exists.rb","controls":["check if project exists"],"title":"Check if project exists"}],"controls":[{"id":"check if project exists","title":"Check if project exists","desc":"An optional description...","descriptions":[{"label":"default","data":"An optional description..."}],"impact":1.0,"refs":[],"tags":{},"code":"control \"check if project exists\" do\n  impact 1.0\n  title \"Check if project exists\"\n  desc \"An optional description...\"\n    describe google_compute_project_info(project: project_id) do\n        it { should exist }\n    end\nend\n","source_location":{"line":7,"ref":"./controls/project_exists.rb"},"results":[{"status":"passed","code_desc":"Compute Project Info doms-cpa-forseti-sbx should exist","run_time":0.002256,"start_time":"2019-10-15T13:01:48-05:00"}]}],"status":"loaded"},{"name":"inspec-gcp","version":"0.16.1","sha256":"c7cb1b87ce95c77b5a147c2cdceea3a15070e569477ffc50adccbb854809c861","title":"Google Cloud Platform Resource Pack","maintainer":"spaterson@chef.io,russell.seymour@turtlesystems.co.uk","summary":"This resource pack provides compliance resources_old_ignore for Google Cloud Platform","license":"Apache-2.0","copyright":"spaterson@chef.io,russell.seymour@turtlesystems.co.uk","copyright_email":"spaterson@chef.io,russell.seymour@turtlesystems.co.uk","supports":[{"platform":"gcp"}],"attributes":[],"parent_profile":"gitops","groups":[],"controls":[],"status":"loaded"}],"statistics":{"duration":0.00655},"version":"4.16.0"}
 ```
 
 Highlighted **outcome**:

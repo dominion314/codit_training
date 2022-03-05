@@ -1,13 +1,13 @@
 ---
 storageBuckets:
-  kohls-cpe-sample-lle-sample-data-1:
+  doms-cpe-sample-lle-sample-data-1:
     location: US
     versioningEnabled: false
     labels:
       business: cpa
       sub-business: prm
     storageClass: MULTI_REGIONAL
-  kohls-cpe-sample-lle-sample-data-2:
+  doms-cpe-sample-lle-sample-data-2:
     location: US
     versioningEnabled: false
     labels:

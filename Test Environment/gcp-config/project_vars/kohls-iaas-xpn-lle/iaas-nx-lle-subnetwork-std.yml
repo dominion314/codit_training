@@ -2,7 +2,7 @@
 vpcs:
   iaas-nx-lle:
     subnets:
-      # Legacy kohls-iaas-lle migrated to NetX
+      # Legacy doms-iaas-lle migrated to NetX
       iaas-nx-lle-iaas-legacy-e1-prv01:
         advertiseRoutes: true
         region: us-east1

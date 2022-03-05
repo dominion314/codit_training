@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 @Library("openshift-operations@master") _
-import com.kohls.xpaas.openshift.*
+import com.doms.xpaas.openshift.*
 
 void setBuildStatus(String message, String state, String context) {
     repoUrl = getRepoURL()
@@ -80,7 +80,7 @@ def runConfigValidation(String context) {
                         dir('tests/config-validation/openshift-resources-jinja-processing') {
                             git branch: "master",
                                 credentialsId: 'github-pzxpaas',
-                                url: 'https://github.kohls.com/Ansible/openshift-resources-jinja-processing'
+                                url: 'https://github.doms.com/Ansible/openshift-resources-jinja-processing'
                         }
                         sh "ansible-playbook tests/config-validation/validate-config.yml \
                                             -e cluster_name=${cluster} -e dump_location=dump -T ${responseTime}"
@@ -140,13 +140,13 @@ def runProductionChangeCheck(String context) {
                         dir("${workspace_dir}/openshift-resources-jinja-processing") {
                             git branch: "master",
                                 credentialsId: 'github-pzxpaas',
-                                url: 'https://github.kohls.com/Ansible/openshift-resources-jinja-processing'
+                                url: 'https://github.doms.com/Ansible/openshift-resources-jinja-processing'
                         }
 
                         dir(master_config_path) {
                             git branch: "master",
                                 credentialsId: 'github-pzxpaas',
-                                url: 'https://github.kohls.com/xPaaS-Operations/openshift-cluster-config'
+                                url: 'https://github.doms.com/xPaaS-Operations/openshift-cluster-config'
                         }
                         dir(workspace_dir){
                             writeFile file: 'config_validation.py', text:config_validation_file_content

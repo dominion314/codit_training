@@ -1,5 +1,5 @@
 # Variable Hierarchy
-This configuration is intended to leverage the hierarchy function provided by Eunomia. You have to ensure the hierarchy.lst is properly configured as described on [here](https://github.com/KohlsTechnology/eunomia#variable-hierarchy).
+This configuration is intended to leverage the hierarchy function provided by Eunomia. You have to ensure the hierarchy.lst is properly configured as described on [here](https://github.com/domsTechnology/eunomia#variable-hierarchy).
 
 ## Current Hierarchy
 ```
@@ -24,7 +24,7 @@ Including the team_vars prevents the need to repeatedly include the same set of 
 ## Example hierarchy.lst
 Located at gcp-config/team_vars/xpaas/ the xpaas team has defined the file iam-policy-members.yml so that the team only has to define the configurations for iam-policy once for use by their team.
 
-The team uses variable hierarchy for the project kohls-platform-openshift-ops located at gcp-config/project_vars/ to add the predefined iam-policy to the project by including it within the hierarchy.lst as shown below.
+The team uses variable hierarchy for the project doms-platform-openshift-ops located at gcp-config/project_vars/ to add the predefined iam-policy to the project by including it within the hierarchy.lst as shown below.
 
 hierarchy.lst:
 ```

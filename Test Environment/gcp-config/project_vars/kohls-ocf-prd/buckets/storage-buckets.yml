@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-ocf-prd-eot:
+  doms-ocf-prd-eot:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -12,7 +12,7 @@ storageBuckets:
         type: Delete
       condition:
         age: 30
-  kohls-ocfscm-mft-prod-archive-bucket:
+  doms-ocfscm-mft-prod-archive-bucket:
     versioningEnabled: false
     deletionProtect: false
     storageClass: STANDARD

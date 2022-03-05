@@ -3,12 +3,12 @@ Open Policy Agent or OPA is a data validation check used in the gcp-config pipel
 
 # OPA Exceptions:
 If your project requires for your use case a role or API that violates our policies you can request a per-project exception to use that role/API. However it is greatly preferred to remove the violating role/API if possible. Follow the steps below to have an exception added, it must be approved by the platform and security team.
-- First, clone the cloud-resources repo located <a href="https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources" target="_blank">here</a> to make a merge request for your per-project exception.
-- Second, add to the yaml file located <a href="https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/iam/iam-roles-per-project.yml" target="_blank">here</a> for iam and custom iam roles under cloud-resources/opa/data/iam/iam-roles-per-project.yml or <a href="https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/service/apis-per-project.yml" target="_blank">here</a> for APIs under cloud-resources/opa/data/service/apis-per-project.yml.
+- First, clone the cloud-resources repo located <a href="https://gitlab.com/doms/infra/platform_enablement/cloud-config/cloud-resources" target="_blank">here</a> to make a merge request for your per-project exception.
+- Second, add to the yaml file located <a href="https://gitlab.com/doms/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/iam/iam-roles-per-project.yml" target="_blank">here</a> for iam and custom iam roles under cloud-resources/opa/data/iam/iam-roles-per-project.yml or <a href="https://gitlab.com/doms/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/service/apis-per-project.yml" target="_blank">here</a> for APIs under cloud-resources/opa/data/service/apis-per-project.yml.
 - Follow the structure in the file of project name and then the iam role/API as shown below. Iam roles can be set to be allowed for users, groups, and service accounts, only set to true for what you need to use.
 ### Iam Roles:
 ```yaml
-    kohls-cpa-lle:
+    doms-cpa-lle:
       roles:
       - cloudsql.viewer:
           allowedForGroups: true
@@ -17,7 +17,7 @@ If your project requires for your use case a role or API that violates our polic
 ```
 ### APIs:
 ```yaml
-    kohls-cpa-lle:
+    doms-cpa-lle:
     - cloudtrace.googleapis.com
 ```
 - Next, create a branch with your change, create a merge request, and have it reviewed and merged into main. You can request a review in the NetX GitOps and Firewall Q&A Webex space.

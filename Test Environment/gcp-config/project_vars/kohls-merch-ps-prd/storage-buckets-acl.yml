@@ -1,17 +1,17 @@
 ---
 storageBuckets:
-  kohls-merch-ps-prd-dataproc:
+  doms-merch-ps-prd-dataproc:
     acls:
       usersByEmail:
-        merch-psin-dataproc-admin@kohls-merch-ps-prd.iam.gserviceaccount.com: OWNER
-  kohls-merch-ps-prd-mdm-dly:
+        merch-psin-dataproc-admin@doms-merch-ps-prd.iam.gserviceaccount.com: OWNER
+  doms-merch-ps-prd-mdm-dly:
     acls:
       usersByEmail:
-        merch-psin-spanner-rw@kohls-merch-ps-prd.iam.gserviceaccount.com: OWNER
-        merch-psin-spanner-admin@kohls-merch-ps-prd.iam.gserviceaccount.com: OWNER
-  kohls-merch-ps-prd-spanner-backup:
+        merch-psin-spanner-rw@doms-merch-ps-prd.iam.gserviceaccount.com: OWNER
+        merch-psin-spanner-admin@doms-merch-ps-prd.iam.gserviceaccount.com: OWNER
+  doms-merch-ps-prd-spanner-backup:
     acls:
       groupsByEmail:
-        gcp-merch-psin-softwareengineer-l3@kohls.com: READER
+        gcp-merch-psin-softwareengineer-l3@doms.com: READER
       usersByEmail:
-        merch-psin-dataflow-admin@kohls-merch-ps-prd.iam.gserviceaccount.com: OWNER
+        merch-psin-dataflow-admin@doms-merch-ps-prd.iam.gserviceaccount.com: OWNER

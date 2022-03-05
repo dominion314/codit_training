@@ -1,12 +1,12 @@
 ---
 storageBuckets:
-  kohlsdev-cpa-inspec-test-bucket-01:
+  domsdev-cpa-inspec-test-bucket-01:
     default_object_acls:
       usersByEmail:
-        mark.doll@kohls.com: OWNER
-        hamilton.hoover@kohls.com: READER
+        mark.doll@doms.com: OWNER
+        hamilton.hoover@doms.com: READER
       groupsByEmail:
-        gcp-iaas-cpa-devops-l3@kohls.com: OWNER
+        gcp-iaas-cpa-devops-l3@doms.com: OWNER
       primitiveRoles:
         909813690926:                             # project number for primitive roles - viewers, editors or owners
           viewers: READER
@@ -16,7 +16,7 @@ storageBuckets:
         allUsers: READER
         allAuthenticatedUsers: READER
 
-  kohlsdev-cpa-inspec-test-bucket-02:
+  domsdev-cpa-inspec-test-bucket-02:
     default_object_acls:
       primitiveRoles:
         909813690926:

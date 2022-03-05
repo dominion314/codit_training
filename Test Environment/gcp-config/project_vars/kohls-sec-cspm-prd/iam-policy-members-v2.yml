@@ -1,7 +1,7 @@
 ---
 iamPolicyMembersV2:
   serviceAccountsByEmail:
-    terraform-devops@kohls-sec-cspm-prd.iam.gserviceaccount.com:
+    terraform-devops@doms-sec-cspm-prd.iam.gserviceaccount.com:
     - role: lbadmin
       OrgId: 1035901152068
     - role: bigquery.admin
@@ -21,7 +21,7 @@ iamPolicyMembersV2:
     - role: storage.admin
     - role: storage.objectAdmin
   groupsByEmail:
-    gcp-securitytech-devops-admin@kohls.com:
+    gcp-securitytech-devops-admin@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: compute.networkViewer

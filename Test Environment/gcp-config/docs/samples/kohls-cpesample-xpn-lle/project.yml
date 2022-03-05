@@ -1,7 +1,7 @@
 ---
 billingDeptId: enter billing dept id
 project:
-  name: kohls-cpesample-xpn-lle #pre determined via LOB
+  name: doms-cpesample-xpn-lle #pre determined via LOB
   managed: true #boolean - default true
   deletionProtect: true #boolean - default true
   folderId: pre populated

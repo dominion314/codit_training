@@ -54,10 +54,10 @@ def call(String opaRepo, String opaPolicyFolder, String localOpaConfig) {
             ansiColor('xterm')
         }
         environment {
-            HTTP_PROXY="http://proxy-gcp-central.kohls.com:8080"
-            HTTPS_PROXY="http://proxy-gcp-central.kohls.com:8080"
-            http_proxy="http://proxy-gcp-central.kohls.com:8080"
-            https_proxy="http://proxy-gcp-central.kohls.com:8080"
+            HTTP_PROXY="http://proxy-gcp-central.doms.com:8080"
+            HTTPS_PROXY="http://proxy-gcp-central.doms.com:8080"
+            http_proxy="http://proxy-gcp-central.doms.com:8080"
+            https_proxy="http://proxy-gcp-central.doms.com:8080"
         }
 
         stages {
@@ -83,7 +83,7 @@ def call(String opaRepo, String opaPolicyFolder, String localOpaConfig) {
                     ln -s \$opa_binary /tmp/opa/opa
                     else
                     echo "opa binary is not found in the system. Will download..."
-                    curl -L -o /tmp/opa/opa.tgz https://cicd-nexus.kohls.com:8443/nexus/service/local/repositories/cmfc-nexus-thirdparty/content/com/kohls/infrastructure/open-policy-agent/0.17.3/open-policy-agent-0.17.3.tar.gz
+                    curl -L -o /tmp/opa/opa.tgz https://cicd-nexus.doms.com:8443/nexus/service/local/repositories/cmfc-nexus-thirdparty/content/com/doms/infrastructure/open-policy-agent/0.17.3/open-policy-agent-0.17.3.tar.gz
                     cd /tmp/opa; tar -xzvf opa.tgz; chmod 755 opa
                     fi
                     ls -la /tmp/opa/opa
@@ -105,7 +105,7 @@ def call(String opaRepo, String opaPolicyFolder, String localOpaConfig) {
                         // install python requirements
                         // Todo: will bring those requirements in image to minimize installation of deps in pipeline.
                         sh("""
-                          pip3 install -r requirements.txt --user --proxy=http://proxy-gcp-central.kohls.com:8080
+                          pip3 install -r requirements.txt --user --proxy=http://proxy-gcp-central.doms.com:8080
                           """)
 
                         sh("""

@@ -1,4 +1,4 @@
-package kohls.gitops.kcc.gcp_project.limit_bandwidth.apis
+package doms.gitops.kcc.gcp_project.limit_bandwidth.apis
 
 default allow = false
 

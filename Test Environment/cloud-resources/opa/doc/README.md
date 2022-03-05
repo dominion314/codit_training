@@ -31,7 +31,7 @@ cat Jennkinsfile.opa
 //Jenkinsfile to call linting tests
 
 //calls groovy script in githook-yaml-lint repo
-opaKCCGcpResources('https://github.kohls.com/EnterpriseDevOps/cpa-kcc-templates', 'opa', 'opa.yml')
+opaKCCGcpResources('https://github.doms.com/EnterpriseDevOps/cpa-kcc-templates', 'opa', 'opa.yml')
 ```
 
 - ```opa.yml``` allows to enable/disable policy validation and specify which project data are subject to validation
@@ -42,8 +42,8 @@ enabled: true
 projectVarFolder: project_vars
 validateAllProjects: false # if set to to true, validateProjects is ignored and all projects are validated
 validateProjects:
-- kohlsdev-cpa-inspec
-- kohls-sec-xpn-lle
+- domsdev-cpa-inspec
+- doms-sec-xpn-lle
 ```
 
 ### Setup of control ( or policy )repository
@@ -85,14 +85,14 @@ policies:
   - data/iam/iam-roles.yml
   - data/iam/iam-roles-per-project.yml
   policyRegoFile: rego/iam-roles.rego
-  package: "kohls.gitops.kcc.gcp_project.iam.roles"
+  package: "doms.gitops.kcc.gcp_project.iam.roles"
 - name: "Only allow whitelisted Service APIs"
   active: true
   policyDataFiles:
   - data/service/apis.yml
   - data/service/apis-per-project.yml
   policyRegoFile: rego/service-apis.rego
-  package: "kohls.gitops.kcc.gcp_project.service.apis"
+  package: "doms.gitops.kcc.gcp_project.service.apis"
 ```
 
 
@@ -107,11 +107,11 @@ Opa validation is performed as in-repo organization linter job.
 It is possible to "deconstruct" Jenkins runtime environment into your workstation  and perform evaluation and validation without Jenkins and without doing pull requests, commits etc. Bellow are the simple steps you can follow:
 ### Checkout prerequisite repos
 - Clone template repo
-```git clone https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources.git```
+```git clone https://gitlab.com/doms/infra/platform_enablement/cloud-config/cloud-resources.git```
 - Clone config repo
-```git clone https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config.git```
+```git clone https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config.git```
 - Clone linter repo
-```git clone https://gitlab.com/kohls/sre/infra/githook-yaml-lint.git```
+```git clone https://gitlab.com/doms/sre/infra/githook-yaml-lint.git```
 
 ### Install and activate proper python environment
 ```
@@ -137,7 +137,7 @@ chmod 755 opa
 - Check results:
 ```
 cat ./report.txt
-******* Validating policies for project kohls-sec-xpn-lle *********
+******* Validating policies for project doms-sec-xpn-lle *********
 Policy 'Users, Groups and Service Accounts are only given allowed roles' ---> passed
 Policy 'Only allow whitelisted Service APIs' ---> FAILED
 ------------------------------------------------------------------------
@@ -146,8 +146,8 @@ Policy 'Only allow whitelisted Service APIs' ---> FAILED
 ```
 cat ./opa.log
 2020-09-10 09:13:50,175  INFO: Loaded OPA validation config
-2020-09-10 09:13:50,176  INFO: Processing project data for kohls-sec-xpn-lle
-2020-09-10 09:13:50,176  INFO: Processing input data for /Users/tkmam6x/VSC_Projects/CPA-2990/DELETEME/gcp-config/project_vars/kohls-sec-xpn-lle
+2020-09-10 09:13:50,176  INFO: Processing project data for doms-sec-xpn-lle
+2020-09-10 09:13:50,176  INFO: Processing input data for /Users/tkmam6x/VSC_Projects/CPA-2990/DELETEME/gcp-config/project_vars/doms-sec-xpn-lle
 2020-09-10 09:13:50,621  INFO: Processing policy 'Users, Groups and Service Accounts are only given allowed roles'
 2020-09-10 09:13:50,922  INFO: OPA evaluation compeleted
 2020-09-10 09:13:50,922  INFO: Result set. START
@@ -617,14 +617,14 @@ cat ./opa.log
             "allowed_user_roles_per_project": [],
             "environment": "lle",
             "group_roles": [],
-            "project_id": "kohls-sec-xpn-lle",
+            "project_id": "doms-sec-xpn-lle",
             "requested_group_roles": [],
             "requested_sa_roles": [],
             "requested_user_roles": [],
             "sa_roles": [],
             "user_roles": []
           },
-          "text": "data.kohls.gitops.kcc.gcp_project.iam.roles",
+          "text": "data.doms.gitops.kcc.gcp_project.iam.roles",
           "location": {
             "row": 1,
             "col": 1
@@ -663,7 +663,7 @@ cat ./opa.log
             ],
             "allowed_service_apis_per_project": [],
             "environment": "lle",
-            "project_id": "kohls-sec-xpn-lle",
+            "project_id": "doms-sec-xpn-lle",
             "requested_service_apis": [
               "cloudresourcemanager.googleapis.com",
               "monitoring.googleapis.com",
@@ -677,7 +677,7 @@ cat ./opa.log
               "logging.googleapis.com"
             ]
           },
-          "text": "data.kohls.gitops.kcc.gcp_project.service.apis",
+          "text": "data.doms.gitops.kcc.gcp_project.service.apis",
           "location": {
             "row": 1,
             "col": 1

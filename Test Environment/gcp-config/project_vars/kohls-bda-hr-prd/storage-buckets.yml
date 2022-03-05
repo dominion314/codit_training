@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-bda-hr-biz:
+  doms-bda-hr-biz:
     location: US
     versioningEnabled: false
     labels:

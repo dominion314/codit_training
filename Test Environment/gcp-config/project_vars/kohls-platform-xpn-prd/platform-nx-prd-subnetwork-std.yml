@@ -13,18 +13,18 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-et-devops-admin@kohls.com
-          - gcp-et-devops-l3@kohls.com
-          - gcp-infradb-dataservices-systemsengineer-l3@kohls.com
-          - gcp-infradb-dataservices-systemsengineer-admin@kohls.com
-          - gcp-infra-dataservices-systemsengineer-l3@kohls.com
-          - gcp-infra-dataservices-systemsengineer-admin@kohls.com
+          - gcp-et-devops-admin@doms.com
+          - gcp-et-devops-l3@doms.com
+          - gcp-infradb-dataservices-systemsengineer-l3@doms.com
+          - gcp-infradb-dataservices-systemsengineer-admin@doms.com
+          - gcp-infra-dataservices-systemsengineer-l3@doms.com
+          - gcp-infra-dataservices-systemsengineer-admin@doms.com
           # Add provisioning service account
           serviceAccountsByEmail:
-          - pmm-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com
-          - mysql-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com
-          - mongo-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com
-          - platform-devops@kohls-platform-dbaas-prd.iam.gserviceaccount.com
+          - pmm-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com
+          - mysql-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com
+          - mongo-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com
+          - platform-devops@doms-platform-dbaas-prd.iam.gserviceaccount.com
 
       platform-nx-prd-dbaas-c1-prv02:
         advertiseRoutes: true
@@ -36,18 +36,18 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-et-devops-admin@kohls.com
-          - gcp-et-devops-l3@kohls.com
-          - gcp-infradb-dataservices-systemsengineer-l3@kohls.com
-          - gcp-infradb-dataservices-systemsengineer-admin@kohls.com
-          - gcp-infra-dataservices-systemsengineer-l3@kohls.com
-          - gcp-infra-dataservices-systemsengineer-admin@kohls.com
+          - gcp-et-devops-admin@doms.com
+          - gcp-et-devops-l3@doms.com
+          - gcp-infradb-dataservices-systemsengineer-l3@doms.com
+          - gcp-infradb-dataservices-systemsengineer-admin@doms.com
+          - gcp-infra-dataservices-systemsengineer-l3@doms.com
+          - gcp-infra-dataservices-systemsengineer-admin@doms.com
           # Add provisioning service account
           serviceAccountsByEmail:
-          - pmm-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com
-          - mysql-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com
-          - mongo-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com
-          - platform-devops@kohls-platform-dbaas-prd.iam.gserviceaccount.com
+          - pmm-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com
+          - mysql-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com
+          - mongo-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com
+          - platform-devops@doms-platform-dbaas-prd.iam.gserviceaccount.com
 
       platform-nx-prd-dbaas-e1-prv01:
         advertiseRoutes: true
@@ -59,18 +59,18 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-et-devops-admin@kohls.com
-          - gcp-et-devops-l3@kohls.com
-          - gcp-infradb-dataservices-systemsengineer-l3@kohls.com
-          - gcp-infradb-dataservices-systemsengineer-admin@kohls.com
-          - gcp-infra-dataservices-systemsengineer-l3@kohls.com
-          - gcp-infra-dataservices-systemsengineer-admin@kohls.com
+          - gcp-et-devops-admin@doms.com
+          - gcp-et-devops-l3@doms.com
+          - gcp-infradb-dataservices-systemsengineer-l3@doms.com
+          - gcp-infradb-dataservices-systemsengineer-admin@doms.com
+          - gcp-infra-dataservices-systemsengineer-l3@doms.com
+          - gcp-infra-dataservices-systemsengineer-admin@doms.com
           # Add provisioning service account
           serviceAccountsByEmail:
-          - pmm-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com
-          - mysql-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com
-          - mongo-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com
-          - platform-devops@kohls-platform-dbaas-prd.iam.gserviceaccount.com
+          - pmm-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com
+          - mysql-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com
+          - mongo-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com
+          - platform-devops@doms-platform-dbaas-prd.iam.gserviceaccount.com
 
       platform-nx-prd-dbaas-e1-prv02:
         advertiseRoutes: true
@@ -82,18 +82,18 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-et-devops-admin@kohls.com
-          - gcp-et-devops-l3@kohls.com
-          - gcp-infradb-dataservices-systemsengineer-l3@kohls.com
-          - gcp-infradb-dataservices-systemsengineer-admin@kohls.com
-          - gcp-infra-dataservices-systemsengineer-l3@kohls.com
-          - gcp-infra-dataservices-systemsengineer-admin@kohls.com
+          - gcp-et-devops-admin@doms.com
+          - gcp-et-devops-l3@doms.com
+          - gcp-infradb-dataservices-systemsengineer-l3@doms.com
+          - gcp-infradb-dataservices-systemsengineer-admin@doms.com
+          - gcp-infra-dataservices-systemsengineer-l3@doms.com
+          - gcp-infra-dataservices-systemsengineer-admin@doms.com
           # Add provisioning service account
           serviceAccountsByEmail:
-          - pmm-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com
-          - mysql-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com
-          - mongo-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com
-          - platform-devops@kohls-platform-dbaas-prd.iam.gserviceaccount.com
+          - pmm-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com
+          - mysql-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com
+          - mongo-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com
+          - platform-devops@doms-platform-dbaas-prd.iam.gserviceaccount.com
 
       platform-nx-prd-maas-c1-prv01:
         advertiseRoutes: true
@@ -104,12 +104,12 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-et-devops-admin@kohls.com
-          - gcp-et-devops-l3@kohls.com
+          - gcp-et-devops-admin@doms.com
+          - gcp-et-devops-l3@doms.com
           serviceAccountsByEmail:
-          - terraform@kohls-platform-maas-prd.iam.gserviceaccount.com
-          - kafkaplatform-msg@kohls-platform-maas-prd.iam.gserviceaccount.com
-          - platform-devops@kohls-platform-dbaas-prd.iam.gserviceaccount.com
+          - terraform@doms-platform-maas-prd.iam.gserviceaccount.com
+          - kafkaplatform-msg@doms-platform-maas-prd.iam.gserviceaccount.com
+          - platform-devops@doms-platform-dbaas-prd.iam.gserviceaccount.com
 
       platform-nx-prd-maas-e1-prv01:
         advertiseRoutes: true
@@ -120,12 +120,12 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-et-devops-admin@kohls.com
-          - gcp-et-devops-l3@kohls.com
+          - gcp-et-devops-admin@doms.com
+          - gcp-et-devops-l3@doms.com
           serviceAccountsByEmail:
-          - terraform@kohls-platform-maas-prd.iam.gserviceaccount.com
-          - kafkaplatform-msg@kohls-platform-maas-prd.iam.gserviceaccount.com
-          - platform-devops@kohls-platform-dbaas-prd.iam.gserviceaccount.com
+          - terraform@doms-platform-maas-prd.iam.gserviceaccount.com
+          - kafkaplatform-msg@doms-platform-maas-prd.iam.gserviceaccount.com
+          - platform-devops@doms-platform-dbaas-prd.iam.gserviceaccount.com
 
       platform-nx-prd-maas-c1-sec01:
         advertiseRoutes: true
@@ -136,12 +136,12 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-et-devops-admin@kohls.com
-          - gcp-et-devops-l3@kohls.com
+          - gcp-et-devops-admin@doms.com
+          - gcp-et-devops-l3@doms.com
           serviceAccountsByEmail:
-          - terraform@kohls-platform-maas-prd.iam.gserviceaccount.com
-          - kafkaplatform-msg@kohls-platform-maas-prd.iam.gserviceaccount.com
-          - platform-devops@kohls-platform-dbaas-prd.iam.gserviceaccount.com
+          - terraform@doms-platform-maas-prd.iam.gserviceaccount.com
+          - kafkaplatform-msg@doms-platform-maas-prd.iam.gserviceaccount.com
+          - platform-devops@doms-platform-dbaas-prd.iam.gserviceaccount.com
 
       platform-nx-prd-maas-e1-sec01:
         advertiseRoutes: true
@@ -152,12 +152,12 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-et-devops-admin@kohls.com
-          - gcp-et-devops-l3@kohls.com
+          - gcp-et-devops-admin@doms.com
+          - gcp-et-devops-l3@doms.com
           serviceAccountsByEmail:
-          - terraform@kohls-platform-maas-prd.iam.gserviceaccount.com
-          - kafkaplatform-msg@kohls-platform-maas-prd.iam.gserviceaccount.com
-          - platform-devops@kohls-platform-dbaas-prd.iam.gserviceaccount.com
+          - terraform@doms-platform-maas-prd.iam.gserviceaccount.com
+          - kafkaplatform-msg@doms-platform-maas-prd.iam.gserviceaccount.com
+          - platform-devops@doms-platform-dbaas-prd.iam.gserviceaccount.com
 
       platform-nx-prd-openshift-c1-prv01:
         advertiseRoutes: true
@@ -169,18 +169,18 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-xpaas-openshift-admin@kohls.com
-          - gcp-xpaas-openshift-l3@kohls.com
-          - gcp-xpaas-openshift-l2@kohls.com
+          - gcp-xpaas-openshift-admin@doms.com
+          - gcp-xpaas-openshift-l3@doms.com
+          - gcp-xpaas-openshift-l2@doms.com
           serviceAccountsByEmail:
-          - ocp-installer-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com
-          - ocp-bootstrap-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com
-          - ocp-master-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com
-          - ocp-app-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com
-          - ocp-infra-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com
-          - ocp-pci-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com
-          - ocp-pii-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com
-          - ocp-router-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com
+          - ocp-installer-paas@doms-platform-openshift-prd.iam.gserviceaccount.com
+          - ocp-bootstrap-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com
+          - ocp-master-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com
+          - ocp-app-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com
+          - ocp-infra-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com
+          - ocp-pci-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com
+          - ocp-pii-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com
+          - ocp-router-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com
 
       platform-nx-prd-openshift-e1-prv01:
         advertiseRoutes: true
@@ -192,18 +192,18 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-xpaas-openshift-admin@kohls.com
-          - gcp-xpaas-openshift-l3@kohls.com
-          - gcp-xpaas-openshift-l2@kohls.com
+          - gcp-xpaas-openshift-admin@doms.com
+          - gcp-xpaas-openshift-l3@doms.com
+          - gcp-xpaas-openshift-l2@doms.com
           serviceAccountsByEmail:
-          - ocp-installer-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com
-          - ocp-bootstrap-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com
-          - ocp-master-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com
-          - ocp-app-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com
-          - ocp-infra-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com
-          - ocp-pci-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com
-          - ocp-pii-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com
-          - ocp-router-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com
+          - ocp-installer-paas@doms-platform-openshift-prd.iam.gserviceaccount.com
+          - ocp-bootstrap-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com
+          - ocp-master-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com
+          - ocp-app-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com
+          - ocp-infra-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com
+          - ocp-pci-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com
+          - ocp-pii-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com
+          - ocp-router-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com
 
       platform-nx-prd-netserv-dns-c1-prv01:
         advertiseRoutes: true
@@ -214,9 +214,9 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-infra-network-devops-L3@kohls.com
-          - gcp-cpe-CNE-DevOps-L3@kohls.com
-          - gcp-cpe-CNE-DevOps-admin@kohls.com
+          - gcp-infra-network-devops-L3@doms.com
+          - gcp-cpe-CNE-DevOps-L3@doms.com
+          - gcp-cpe-CNE-DevOps-admin@doms.com
           serviceAccountsByEmail:
           - 640557111300@cloudservices.gserviceaccount.com
 
@@ -229,9 +229,9 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-infra-network-devops-L3@kohls.com
-          - gcp-cpe-CNE-DevOps-L3@kohls.com
-          - gcp-cpe-CNE-DevOps-admin@kohls.com
+          - gcp-infra-network-devops-L3@doms.com
+          - gcp-cpe-CNE-DevOps-L3@doms.com
+          - gcp-cpe-CNE-DevOps-admin@doms.com
           serviceAccountsByEmail:
           - 640557111300@cloudservices.gserviceaccount.com
 
@@ -245,9 +245,9 @@ vpcs:
           status: MANUAL
         permissions:
           groupsByEmail:
-          - gcp-infra-network-devops-L3@kohls.com
-          - gcp-cpe-CNE-DevOps-L3@kohls.com
-          - gcp-cpe-CNE-DevOps-admin@kohls.com
+          - gcp-infra-network-devops-L3@doms.com
+          - gcp-cpe-CNE-DevOps-L3@doms.com
+          - gcp-cpe-CNE-DevOps-admin@doms.com
           serviceAccountsByEmail:
           - 640557111300@cloudservices.gserviceaccount.com
 
@@ -261,9 +261,9 @@ vpcs:
           status: MANUAL
         permissions:
           groupsByEmail:
-          - gcp-infra-network-devops-L3@kohls.com
-          - gcp-cpe-CNE-DevOps-L3@kohls.com
-          - gcp-cpe-CNE-DevOps-admin@kohls.com
+          - gcp-infra-network-devops-L3@doms.com
+          - gcp-cpe-CNE-DevOps-L3@doms.com
+          - gcp-cpe-CNE-DevOps-admin@doms.com
           serviceAccountsByEmail:
           - 640557111300@cloudservices.gserviceaccount.com
 

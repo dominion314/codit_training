@@ -4,7 +4,7 @@ billingDeptId: "90586"
 project:
   environmentType: ops
   lineOfBusiness: infra
-  projectName: kohls-cpedemo-xpn-lle-01
+  projectName: doms-cpedemo-xpn-lle-01
   managed: true
   folderId: "144994841496"
   billingAccount: 00C36A-CD0BDB-E543D0

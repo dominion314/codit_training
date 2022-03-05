@@ -1,13 +1,13 @@
 ---
 billingDeptId: "90522"
 projectSharing:
-- kohls-etcc-uc-lle
-- kohls-etcc-tax-lle
-- kohls-eta-credit-lle
-- kohls-etcc-payments-lle
-- kohls-etcc-creditops-lle
+- doms-etcc-uc-lle
+- doms-etcc-tax-lle
+- doms-eta-credit-lle
+- doms-etcc-payments-lle
+- doms-etcc-creditops-lle
 project:
-  name: kohls-eta-xpn-lle
+  name: doms-eta-xpn-lle
   managed: true
   folderId: "778811484176"
   billingAccount: "00C36A-CD0BDB-E543D0"

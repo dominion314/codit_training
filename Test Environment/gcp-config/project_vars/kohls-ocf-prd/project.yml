@@ -1,6 +1,6 @@
 ---
 project:
-  name: kohls-ocf-prd
+  name: doms-ocf-prd
   managed: true
   deletionProtect: true
   folderId: 48229324135

@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90546"
 project:
-  name: kohls-cpe-lle
+  name: doms-cpe-lle
   deletionProtect: true
   managed: true
   folderId: "53524313723"

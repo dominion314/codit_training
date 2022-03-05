@@ -1,7 +1,7 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-iaas-softwareengineer-l3@kohls.com:
+    gcp-iaas-softwareengineer-l3@doms.com:
       roles:
       - appengine.appAdmin
       - appengine.appCreator
@@ -22,21 +22,21 @@ iamPolicyMembers:
       - storage.admin
       - cloudscheduler.admin
   serviceAccountsByEmail:
-    image-build@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com:
+    image-build@doms-cpe-image-mgmt-prd.iam.gserviceaccount.com:
       roles:
       - compute.networkUser
       - storage.objectAdmin
-    jenkins@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com:
+    jenkins@doms-cpe-image-mgmt-prd.iam.gserviceaccount.com:
       roles:
       - compute.networkUser
       - storage.objectAdmin
-    kohls-cpe-image-mgmt-prd@appspot.gserviceaccount.com:
+    doms-cpe-image-mgmt-prd@appspot.gserviceaccount.com:
       roles:
       - datastore.user
       - storage.objectAdmin
       - storage.admin
       - compute.imageUser
-    terraform-devops@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com:
+    terraform-devops@doms-cpe-image-mgmt-prd.iam.gserviceaccount.com:
       roles:
       - appengine.appCreator
       - appengine.deployer
@@ -45,9 +45,9 @@ iamPolicyMembers:
       - compute.storageAdmin
       - iam.serviceAccountUser
       - storage.admin
-    yum-repo@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com:
+    yum-repo@doms-cpe-image-mgmt-prd.iam.gserviceaccount.com:
       roles:
       - compute.networkUser
-    platform-devops@kohls-platform-dbaas-ops.iam.gserviceaccount.com:
+    platform-devops@doms-platform-dbaas-ops.iam.gserviceaccount.com:
       roles:
         - compute.imageUser

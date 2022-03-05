@@ -12,19 +12,19 @@ vpcs:
           status: # auto generated
         permissions:
           serviceAccountsByEmail:
-          - kohls-infra-aiops-prd-mysql@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - kohls-infra-aiops-prd-mongo@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - kohls-infra-aiops-prd@appspot.gserviceaccount.com
-          - mysql-dba@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - mongo-dba@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - terraform-devops@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - terraform-iaas-project-creator@kohls-iaas-prd.iam.gserviceaccount.com
-          - consul-paas@kohls-infra-aiops-prd.iam.gserviceaccount.com
+          - doms-infra-aiops-prd-mysql@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - doms-infra-aiops-prd-mongo@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - doms-infra-aiops-prd@appspot.gserviceaccount.com
+          - mysql-dba@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - mongo-dba@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - terraform-iaas-project-creator@doms-iaas-prd.iam.gserviceaccount.com
+          - consul-paas@doms-infra-aiops-prd.iam.gserviceaccount.com
           groupsByEmail:
-          - gcp-aiops-devops-admin@kohls.com
-          - gcp-aiops-devops-l2@kohls.com
-          - gcp-aiops-devops-l3@kohls.com
-          - gcp-aiops-devops-manager@kohls.com
+          - gcp-aiops-devops-admin@doms.com
+          - gcp-aiops-devops-l2@doms.com
+          - gcp-aiops-devops-l3@doms.com
+          - gcp-aiops-devops-manager@doms.com
 
       cpesample-xpn-lle-e1-prv01:
         advertiseRoutes: false
@@ -35,16 +35,16 @@ vpcs:
           status: PROVISIONED
         permissions:
           serviceAccountsByEmail:
-          - kohls-infra-aiops-prd-mysql@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - kohls-infra-aiops-prd-mongo@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - kohls-infra-aiops-prd@appspot.gserviceaccount.com
-          - mysql-dba@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - mongo-dba@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - terraform-devops@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - terraform-iaas-project-creator@kohls-iaas-prd.iam.gserviceaccount.com
-          - consul-paas@kohls-infra-aiops-prd.iam.gserviceaccount.com
+          - doms-infra-aiops-prd-mysql@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - doms-infra-aiops-prd-mongo@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - doms-infra-aiops-prd@appspot.gserviceaccount.com
+          - mysql-dba@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - mongo-dba@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - terraform-iaas-project-creator@doms-iaas-prd.iam.gserviceaccount.com
+          - consul-paas@doms-infra-aiops-prd.iam.gserviceaccount.com
           groupsByEmail:
-          - gcp-aiops-devops-admin@kohls.com
-          - gcp-aiops-devops-l2@kohls.com
-          - gcp-aiops-devops-l3@kohls.com
-          - gcp-aiops-devops-manager@kohls.com
+          - gcp-aiops-devops-admin@doms.com
+          - gcp-aiops-devops-l2@doms.com
+          - gcp-aiops-devops-l3@doms.com
+          - gcp-aiops-devops-manager@doms.com

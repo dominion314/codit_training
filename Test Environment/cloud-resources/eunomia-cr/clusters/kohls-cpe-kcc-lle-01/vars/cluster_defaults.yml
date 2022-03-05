@@ -1,22 +1,22 @@
 ---
-configRepo: https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources.git
+configRepo: https://gitlab.com/doms/infra/platform_enablement/cloud-config/cloud-resources.git
 configPath: test_vars/gcp_project
-configHttpProxy: proxy-gcp-central.kohls.com:8080
-configHttpsProxy: proxy-gcp-central.kohls.com:8080
+configHttpProxy: proxy-gcp-central.doms.com:8080
+configHttpsProxy: proxy-gcp-central.doms.com:8080
 configSecretRef: gitlab-resources-project
 
-templateRepo: https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources.git
+templateRepo: https://gitlab.com/doms/infra/platform_enablement/cloud-config/cloud-resources.git
 templatePath: templates/gcp-project
-templateHttpProxy: proxy-gcp-central.kohls.com:8080
-templateHttpsProxy: proxy-gcp-central.kohls.com:8080
+templateHttpProxy: proxy-gcp-central.doms.com:8080
+templateHttpsProxy: proxy-gcp-central.doms.com:8080
 templateSecretRef: gitlab-resources-project
 
-templateProcessorImage: us.gcr.io/kohls-cpe-kcc-lle/eunomia-jinja-ansible:v0.0.8
+templateProcessorImage: us.gcr.io/doms-cpe-kcc-lle/eunomia-jinja-ansible:v0.0.8
 resourceHandlingMode: Apply
 resourceDeletionMode: Delete
 
 commonAccessNamespace:
-- kohlsqa-cpe2-xpn-lle
+- domsqa-cpe2-xpn-lle
 
 defaultTriggers:
 - type: Webhook

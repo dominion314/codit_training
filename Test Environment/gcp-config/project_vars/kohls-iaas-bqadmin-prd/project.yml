@@ -1,6 +1,6 @@
 ---
 project:
-  name: kohls-iaas-bqadmin-prd
+  name: doms-iaas-bqadmin-prd
   deletionProtect: true
   managed: true
   folderId: "206335353876"

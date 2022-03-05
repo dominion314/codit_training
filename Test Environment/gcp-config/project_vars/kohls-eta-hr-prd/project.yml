@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90527"
 project:
-  name: kohls-eta-hr-prd
+  name: doms-eta-hr-prd
   deletionProtect: true
   managed: true
   folderId: "347385755519"

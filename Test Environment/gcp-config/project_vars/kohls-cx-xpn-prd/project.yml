@@ -1,7 +1,7 @@
 ---
 billingDeptId: 90565
 project:
-  name: kohls-cx-xpn-prd
+  name: doms-cx-xpn-prd
   managed: true
   deletionProtect: true
   folderId: "259606834999"
@@ -15,15 +15,15 @@ project:
     project-requestor: twinkle-desai
 
 projectSharing:
-- kohls-bda-dse-prd
-- kohls-cce-dbaas-prd
-- kohls-cce-openshift-prd
-- kohls-cx-sremgmt-prd
-- kohls-cx-associate-prd
-- kohls-cx-post-purchase-prd
-- kohls-cx-pci-prd
-- kohls-cx-rtl-prd
-- kohls-cx-shop-prd
+- doms-bda-dse-prd
+- doms-cce-dbaas-prd
+- doms-cce-openshift-prd
+- doms-cx-sremgmt-prd
+- doms-cx-associate-prd
+- doms-cx-post-purchase-prd
+- doms-cx-pci-prd
+- doms-cx-rtl-prd
+- doms-cx-shop-prd
 
 serviceAPIs:
   cloudresourcemanager.googleapis.com:

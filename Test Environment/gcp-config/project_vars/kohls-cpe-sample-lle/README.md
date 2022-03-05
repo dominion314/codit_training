@@ -1,6 +1,6 @@
-# kohls-cpe-sample-lle
+# doms-cpe-sample-lle
 
-Configuration for Google Project 'kohls-cpe-sample-lle'
+Configuration for Google Project 'doms-cpe-sample-lle'
 
 ## Structure
 

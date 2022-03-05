@@ -9,11 +9,11 @@ storageBuckets:
       app-name: "giv"
     permissions:
       serviceAccountsByEmail:
-        terraform-devops@kohls-ocf-stateful-lle.iam.gserviceaccount.com:
+        terraform-devops@doms-ocf-stateful-lle.iam.gserviceaccount.com:
           roles:
           - storage.admin
 
-  kohls-ocf-nonprod-oic:
+  doms-ocf-nonprod-oic:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -22,13 +22,13 @@ storageBuckets:
       app-name: "oic"
     permissions:
       serviceAccountsByEmail:
-        bigquery-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+        bigquery-ocf@doms-ocf-lle.iam.gserviceaccount.com:
           roles:
           - storage.admin
           - storage.objectAdmin
           - storage.objectCreator
           - storage.objectViewer
-        svc-kdx@kohls-kdx-hle.iam.gserviceaccount.com:
+        svc-kdx@doms-kdx-hle.iam.gserviceaccount.com:
           roles:
           - storage.admin
           - storage.objectAdmin
@@ -39,7 +39,7 @@ storageBuckets:
       condition:
         age: 1
 
-  kohls-ocf-stateful-lle-cassandra-backup:
+  doms-ocf-stateful-lle-cassandra-backup:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -52,7 +52,7 @@ storageBuckets:
       condition:
         age: 14
 
-  kohls-ocf-stateful-lle-mongo:
+  doms-ocf-stateful-lle-mongo:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -61,9 +61,9 @@ storageBuckets:
       app-name: "mongo"
     default_object_acls:
       usersByEmail:
-        mongo-dba@kohls-ocf-stateful-lle.iam.gserviceaccount.com: "OWNER"
+        mongo-dba@doms-ocf-stateful-lle.iam.gserviceaccount.com: "OWNER"
 
-  kohls-ocf-stateful-lle-mysql:
+  doms-ocf-stateful-lle-mysql:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL
@@ -72,9 +72,9 @@ storageBuckets:
       app-name: "mysql"
     default_object_acls:
       usersByEmail:
-        mysql-dba@kohls-ocf-stateful-lle.iam.gserviceaccount.com: "OWNER"
+        mysql-dba@doms-ocf-stateful-lle.iam.gserviceaccount.com: "OWNER"
 
-  kohls-ocf-stateful-lle-solr-backup:
+  doms-ocf-stateful-lle-solr-backup:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -87,7 +87,7 @@ storageBuckets:
       condition:
         age: 14
 
-  kohls-ocf-stateful-lle-terraform-states:
+  doms-ocf-stateful-lle-terraform-states:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL

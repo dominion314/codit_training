@@ -4,28 +4,28 @@ pubSubTopics:
     deletionProtect: false
     permissions:
       usersByEmail:
-        steve.roegner@kohls.com:
+        steve.roegner@doms.com:
           roles:
             - pubsub.admin
-        appalaswamy.gondesi@kohls.com:
+        appalaswamy.gondesi@doms.com:
           roles:
             - pubsub.admin
-        kerry.davis@kohls.com:
+        kerry.davis@doms.com:
           roles:
             - pubsub.admin
-        cheri.stoffel@kohls.com:
+        cheri.stoffel@doms.com:
           roles:
             - pubsub.viewer
-        lihua.liang@kohls.com:
+        lihua.liang@doms.com:
           roles:
             - pubsub.viewer
-        surajit.das@kohls.com:
+        surajit.das@doms.com:
           roles:
             - pubsub.viewer
-        jayjit.banerjee@kohls.com:
+        jayjit.banerjee@doms.com:
           roles:
             - pubsub.viewer
-        ankita.sanyal@kohls.com:
+        ankita.sanyal@doms.com:
           roles:
             - pubsub.viewer
   opc-alloc-pub-prod:

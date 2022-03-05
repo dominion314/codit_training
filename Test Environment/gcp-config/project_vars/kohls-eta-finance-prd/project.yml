@@ -7,12 +7,12 @@ project:
     project-manager: meenakshi-s
     line-of-business: etcc
     project-requestor: john-traudt
-  name: kohls-eta-finance-prd
+  name: doms-eta-finance-prd
   managed: true
   deletionProtect: true
   folderId: '155882274299'
   billingAccount: '00C36A-CD0BDB-E543D0'
-# For lookup table of folder ids: https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Project_Jump_Start_Guide.md#netx-project-folder-id-lookup-table
+# For lookup table of folder ids: https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Project_Jump_Start_Guide.md#netx-project-folder-id-lookup-table
 serviceAPIS:
   calendar-json.googleapis.com:
   container.googleapis.com:

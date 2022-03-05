@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-platform-openshift-ops-thanos-gcpusc1-ops-xpaas:
+  doms-platform-openshift-ops-thanos-gcpusc1-ops-xpaas:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD

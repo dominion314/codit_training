@@ -4,7 +4,7 @@ globalVPNSecretRef:
   secretObjectKey: sharedSecret
 
 transit_hub:
-  namespace: gcp-kohlsqa-cpe2-xpn-lle
+  namespace: gcp-domsqa-cpe2-xpn-lle
   vpc: cpe2-nx-lle
   centralRouterName: cpe2-xpn-lle-c1-gcp-rtr01
   eastRouterName: cpe2-xpn-lle-e1-gcp-rtr01

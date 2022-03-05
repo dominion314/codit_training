@@ -149,7 +149,7 @@ vpcs:
           targetTags:
             - pass-kafka
 
-      gspann-to-kohls-merch-in-lle-tcp:
+      gspann-to-doms-merch-in-lle-tcp:
         direction: INGRESS
         description: SNOW-16668
         disabled: false
@@ -168,7 +168,7 @@ vpcs:
           targetTags:
             - merch-pl-lle-ssh
 
-      kohls-onprem-ingress-to-merch-in-lle-mysql-haproxy:
+      doms-onprem-ingress-to-merch-in-lle-mysql-haproxy:
         direction: INGRESS
         description: SNOW-16668
         disabled: false
@@ -394,7 +394,7 @@ vpcs:
           targetTags:
             - merch-in-lle-db-cache
 
-      onprem-to-kohls-merch-in-lle-mango-db-tcp-01:
+      onprem-to-doms-merch-in-lle-mango-db-tcp-01:
         direction: INGRESS
         description: SNOW-16668
         disabled: false
@@ -527,11 +527,11 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "helix-merch@kohls-merch-ps-lle.iam.gserviceaccount.com"
+          - external: "helix-merch@doms-merch-ps-lle.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: "helix-merch@kohls-merch-ps-lle.iam.gserviceaccount.com"
+          - external: "helix-merch@doms-merch-ps-lle.iam.gserviceaccount.com"
           sourceTags:
           allow:
           - protocol: "tcp"
@@ -574,11 +574,11 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "ccnet-dataproc@kohls-merch-in-lle.iam.gserviceaccount.com"
+          - external: "ccnet-dataproc@doms-merch-in-lle.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: "ccnet-dataproc@kohls-merch-in-lle.iam.gserviceaccount.com"
+          - external: "ccnet-dataproc@doms-merch-in-lle.iam.gserviceaccount.com"
           sourceTags:
           allow:
           - protocol: "tcp"

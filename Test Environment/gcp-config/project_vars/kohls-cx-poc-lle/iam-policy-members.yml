@@ -1,7 +1,7 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    GCP-DevOps-ECom@kohls.com:
+    GCP-DevOps-ECom@doms.com:
       roles:
       - compute.storageAdmin
       - iam.serviceAccountUser

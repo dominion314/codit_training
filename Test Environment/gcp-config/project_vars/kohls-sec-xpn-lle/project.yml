@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90513"
 project:
-  name: kohls-sec-xpn-lle
+  name: doms-sec-xpn-lle
   managed: true
   folderId: "778811484176"
   billingAccount: "00C36A-CD0BDB-E543D0"
@@ -28,8 +28,8 @@ serviceAPIs:
   networkmanagement.googleapis.com:
   networktopology.googleapis.com:
 projectSharing:
-- kohls-sec-engineering-lle
-#- kohls-sec-bastion-lle
-- kohls-sec-oasa-lle
-- kohls-sec-vault-lle
-- kohls-sec-okta-lle
+- doms-sec-engineering-lle
+#- doms-sec-bastion-lle
+- doms-sec-oasa-lle
+- doms-sec-vault-lle
+- doms-sec-okta-lle

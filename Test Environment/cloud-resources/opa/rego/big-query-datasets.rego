@@ -1,4 +1,4 @@
-package kohls.gitops.kcc.gcp_project.big.query.datasets
+package doms.gitops.kcc.gcp_project.big.query.datasets
 default allow = false
 
 required_roles[item] { item := data.bigQueryDatasets.requiredRoles[_] }

@@ -21,8 +21,8 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "f5-dns-gtm-service@kohls-platform-netservices-prd.iam.gserviceaccount.com"
-          - external: "bluecat-bdds-service@kohls-platform-netservices-prd.iam.gserviceaccount.com"
+          - external: "f5-dns-gtm-service@doms-platform-netservices-prd.iam.gserviceaccount.com"
+          - external: "bluecat-bdds-service@doms-platform-netservices-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           - "172.26.0.0/15"
@@ -66,7 +66,7 @@ vpcs:
           - 199.7.83.42 # ICANN
           - 202.12.27.33  # WIDE Project
           targetServiceAccounts:
-          - external: "bluecat-bdds-service@kohls-platform-netservices-prd.iam.gserviceaccount.com"
+          - external: "bluecat-bdds-service@doms-platform-netservices-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
@@ -88,7 +88,7 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "f5-dns-gtm-service@kohls-platform-netservices-prd.iam.gserviceaccount.com"
+          - external: "f5-dns-gtm-service@doms-platform-netservices-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           - "130.211.0.0/22"
@@ -108,8 +108,8 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "f5-dns-gtm-service@kohls-platform-netservices-prd.iam.gserviceaccount.com"
-          - external: "bluecat-bdds-service@kohls-platform-netservices-prd.iam.gserviceaccount.com"
+          - external: "f5-dns-gtm-service@doms-platform-netservices-prd.iam.gserviceaccount.com"
+          - external: "bluecat-bdds-service@doms-platform-netservices-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           - "10.1.6.192/27"
@@ -137,7 +137,7 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "bluecat-bdds-service@kohls-platform-netservices-prd.iam.gserviceaccount.com"
+          - external: "bluecat-bdds-service@doms-platform-netservices-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           - "10.5.8.1"

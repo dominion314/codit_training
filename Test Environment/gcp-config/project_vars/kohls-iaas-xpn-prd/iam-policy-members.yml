@@ -1,7 +1,7 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-infra-network-devops-L3@kohls.com:
+    gcp-infra-network-devops-L3@doms.com:
       roles:
       - compute.storageAdmin
       - iam.serviceAccountUser

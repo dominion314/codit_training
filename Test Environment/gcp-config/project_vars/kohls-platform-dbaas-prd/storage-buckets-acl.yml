@@ -1,47 +1,47 @@
 ---
 storageBuckets:
-  kohls-platform-dbaas-prd-mysql:
+  doms-platform-dbaas-prd-mysql:
     acls:
       usersByEmail:
-        mysql-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com: OWNER
+        mysql-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com: OWNER
       groupsByEmail:
-        gcp-infra-dataservices-systemsengineer-l3@kohls.com: OWNER
-        gcp-infra-dataservices-systemsengineer-l2@kohls.com: OWNER
-        gcp-infra-dataservices-qualityengineer-l3@kohls.com: OWNER
-  kohls-platform-dbaas-prd-mongo:
+        gcp-infra-dataservices-systemsengineer-l3@doms.com: OWNER
+        gcp-infra-dataservices-systemsengineer-l2@doms.com: OWNER
+        gcp-infra-dataservices-qualityengineer-l3@doms.com: OWNER
+  doms-platform-dbaas-prd-mongo:
     acls:
       usersByEmail:
-        mongo-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com: OWNER
+        mongo-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com: OWNER
       groupsByEmail:
-        gcp-infra-dataservices-systemsengineer-l3@kohls.com: OWNER
-        gcp-infra-dataservices-systemsengineer-l2@kohls.com: OWNER
-        gcp-infra-dataservices-qualityengineer-l3@kohls.com: OWNER
-  kohls-platform-dbaas-prd-pmm:
+        gcp-infra-dataservices-systemsengineer-l3@doms.com: OWNER
+        gcp-infra-dataservices-systemsengineer-l2@doms.com: OWNER
+        gcp-infra-dataservices-qualityengineer-l3@doms.com: OWNER
+  doms-platform-dbaas-prd-pmm:
     acls:
       usersByEmail:
-        pmm-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com: OWNER
+        pmm-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com: OWNER
       groupsByEmail:
-        gcp-infra-dataservices-systemsengineer-l3@kohls.com: OWNER
-        gcp-infra-dataservices-systemsengineer-l2@kohls.com: OWNER
-        gcp-infra-dataservices-qualityengineer-l3@kohls.com: OWNER
-  kohls-platform-dbaas-prd-longterm:
+        gcp-infra-dataservices-systemsengineer-l3@doms.com: OWNER
+        gcp-infra-dataservices-systemsengineer-l2@doms.com: OWNER
+        gcp-infra-dataservices-qualityengineer-l3@doms.com: OWNER
+  doms-platform-dbaas-prd-longterm:
     acls:
       usersByEmail:
-        pmm-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com: OWNER
-        mysql-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com: OWNER
-        mongo-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com: OWNER
+        pmm-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com: OWNER
+        mysql-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com: OWNER
+        mongo-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com: OWNER
       groupsByEmail:
-        gcp-infra-dataservices-systemsengineer-l3@kohls.com: OWNER
-        gcp-infra-dataservices-systemsengineer-l2@kohls.com: OWNER
-        gcp-infra-dataservices-qualityengineer-l3@kohls.com: OWNER
-  kohls-platform-dbaas-prd-terraform-states:
+        gcp-infra-dataservices-systemsengineer-l3@doms.com: OWNER
+        gcp-infra-dataservices-systemsengineer-l2@doms.com: OWNER
+        gcp-infra-dataservices-qualityengineer-l3@doms.com: OWNER
+  doms-platform-dbaas-prd-terraform-states:
     acls:
       usersByEmail:
-        pmm-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com: OWNER
-        mysql-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com: OWNER
-        mongo-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com: OWNER
-        platform-devops@kohls-platform-dbaas-prd.iam.gserviceaccount.com: OWNER
+        pmm-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com: OWNER
+        mysql-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com: OWNER
+        mongo-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com: OWNER
+        platform-devops@doms-platform-dbaas-prd.iam.gserviceaccount.com: OWNER
       groupsByEmail:
-        gcp-infra-dataservices-systemsengineer-l3@kohls.com: OWNER
-        gcp-infra-dataservices-systemsengineer-l2@kohls.com: OWNER
-        gcp-infra-dataservices-qualityengineer-l3@kohls.com: OWNER
+        gcp-infra-dataservices-systemsengineer-l3@doms.com: OWNER
+        gcp-infra-dataservices-systemsengineer-l2@doms.com: OWNER
+        gcp-infra-dataservices-qualityengineer-l3@doms.com: OWNER

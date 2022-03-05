@@ -65,10 +65,10 @@ def call(String vlanFile, String asnFile) {
             ansiColor('xterm')
         }
         environment {
-            HTTP_PROXY = "http://proxy-gcp-central.kohls.com:8080"
-            HTTPS_PROXY = "http://proxy-gcp-central.kohls.com:8080"
-            http_proxy = "http://proxy-gcp-central.kohls.com:8080"
-            https_proxy = "http://proxy-gcp-central.kohls.com:8080"
+            HTTP_PROXY = "http://proxy-gcp-central.doms.com:8080"
+            HTTPS_PROXY = "http://proxy-gcp-central.doms.com:8080"
+            http_proxy = "http://proxy-gcp-central.doms.com:8080"
+            https_proxy = "http://proxy-gcp-central.doms.com:8080"
         }
         stages { 
             stage('Validate python version') {

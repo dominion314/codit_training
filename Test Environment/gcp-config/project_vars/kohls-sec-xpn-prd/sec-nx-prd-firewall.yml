@@ -430,7 +430,7 @@ vpcs:
           - "34.231.149.193/32"
           - "52.206.198.212/32"
           targetServiceAccounts:
-          - external: vault-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
+          - external: vault-sec@doms-sec-vault-prd.iam.gserviceaccount.com
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
@@ -472,7 +472,7 @@ vpcs:
           - "184.72.239.183/32"
           - "107.22.174.147/32"
           targetServiceAccounts:
-          - external: vault-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
+          - external: vault-sec@doms-sec-vault-prd.iam.gserviceaccount.com
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
@@ -491,8 +491,8 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: vault-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
-          - external: consul-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
+          - external: vault-sec@doms-sec-vault-prd.iam.gserviceaccount.com
+          - external: consul-sec@doms-sec-vault-prd.iam.gserviceaccount.com
           targetTags:
           sourceRanges:
           - "172.26.0.0/15"
@@ -504,7 +504,7 @@ vpcs:
             ports:
             - "8500"
 
-      kohls-vault-access-prd:
+      doms-vault-access-prd:
         priority: 900
         direction: INGRESS
         description: NetX migration of SCTASK0519517
@@ -513,7 +513,7 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: vault-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
+          - external: vault-sec@doms-sec-vault-prd.iam.gserviceaccount.com
           targetTags:
           sourceRanges:
           - "172.26.0.0/15"
@@ -548,7 +548,7 @@ vpcs:
           - "198.41.128.0/17"
           - "190.93.240.0/20"
           targetServiceAccounts:
-          - external: vault-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
+          - external: vault-sec@doms-sec-vault-prd.iam.gserviceaccount.com
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
@@ -567,12 +567,12 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: consul-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
+          - external: consul-sec@doms-sec-vault-prd.iam.gserviceaccount.com
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: vault-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
-          - external: consul-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
+          - external: vault-sec@doms-sec-vault-prd.iam.gserviceaccount.com
+          - external: consul-sec@doms-sec-vault-prd.iam.gserviceaccount.com
           sourceTags:
           allow:
           - protocol: "tcp"
@@ -588,13 +588,13 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: consul-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
-          - external: vault-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
+          - external: consul-sec@doms-sec-vault-prd.iam.gserviceaccount.com
+          - external: vault-sec@doms-sec-vault-prd.iam.gserviceaccount.com
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: vault-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
-          - external: consul-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
+          - external: vault-sec@doms-sec-vault-prd.iam.gserviceaccount.com
+          - external: consul-sec@doms-sec-vault-prd.iam.gserviceaccount.com
           sourceTags:
           allow:
           - protocol: "tcp"
@@ -616,11 +616,11 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: consul-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
+          - external: consul-sec@doms-sec-vault-prd.iam.gserviceaccount.com
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: consul-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
+          - external: consul-sec@doms-sec-vault-prd.iam.gserviceaccount.com
           sourceTags:
           allow:
           - protocol: "tcp"
@@ -639,11 +639,11 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: vault-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
+          - external: vault-sec@doms-sec-vault-prd.iam.gserviceaccount.com
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: vault-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
+          - external: vault-sec@doms-sec-vault-prd.iam.gserviceaccount.com
           sourceTags:
           allow:
           - protocol: "tcp"
@@ -660,13 +660,13 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: vault-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
-          - external: consul-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
+          - external: vault-sec@doms-sec-vault-prd.iam.gserviceaccount.com
+          - external: consul-sec@doms-sec-vault-prd.iam.gserviceaccount.com
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: vault-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
-          - external: consul-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
+          - external: vault-sec@doms-sec-vault-prd.iam.gserviceaccount.com
+          - external: consul-sec@doms-sec-vault-prd.iam.gserviceaccount.com
           sourceTags:
           allow:
           - protocol: "tcp"
@@ -692,8 +692,8 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-            - external: vault-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
-            - external: consul-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
+            - external: vault-sec@doms-sec-vault-prd.iam.gserviceaccount.com
+            - external: consul-sec@doms-sec-vault-prd.iam.gserviceaccount.com
           targetTags:
           sourceRanges:
           - "10.184.2.0/25"
@@ -723,8 +723,8 @@ vpcs:
         logging: false
         rule:
           targetServiceAccounts:
-            - external: consul-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
-            - external: consul-sec-dev@kohls-sec-vault-prd.iam.gserviceaccount.com
+            - external: consul-sec@doms-sec-vault-prd.iam.gserviceaccount.com
+            - external: consul-sec-dev@doms-sec-vault-prd.iam.gserviceaccount.com
           sourceRanges:
             - "10.184.0.0/23" # TODO: legacy OpenShift v3.x central subnetwork. Update to OpenShift v4.x(i.e. NetX)
             - "10.188.0.0/23" # TODO: legacy OpenShift v3.x east subnetwork. Update to OpenShift v4.x(i.e. NetX)
@@ -743,10 +743,10 @@ vpcs:
         logging: false
         rule:
           targetServiceAccounts:
-            - external: consul-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
-            - external: consul-sec-dev@kohls-sec-vault-prd.iam.gserviceaccount.com
-            - external: vault-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
-            - external: vault-sec-dev@kohls-sec-vault-prd.iam.gserviceaccount.com
+            - external: consul-sec@doms-sec-vault-prd.iam.gserviceaccount.com
+            - external: consul-sec-dev@doms-sec-vault-prd.iam.gserviceaccount.com
+            - external: vault-sec@doms-sec-vault-prd.iam.gserviceaccount.com
+            - external: vault-sec-dev@doms-sec-vault-prd.iam.gserviceaccount.com
           sourceRanges:
             - "10.184.0.0/23" # TODO: legacy OpenShift v3.x central subnetwork. Update to OpenShift v4.x(i.e. NetX)
             - "10.188.0.0/23" # TODO: legacy OpenShift v3.x east subnetwork. Update to OpenShift v4.x(i.e. NetX)
@@ -766,8 +766,8 @@ vpcs:
         logging: false
         rule:
           targetServiceAccounts:
-            - external: vault-sec@kohls-sec-vault-prd.iam.gserviceaccount.com
-            - external: vault-sec-dev@kohls-sec-vault-prd.iam.gserviceaccount.com
+            - external: vault-sec@doms-sec-vault-prd.iam.gserviceaccount.com
+            - external: vault-sec-dev@doms-sec-vault-prd.iam.gserviceaccount.com
           sourceRanges:
             - "10.184.0.0/23" # TODO: legacy OpenShift v3.x central subnetwork. Update to OpenShift v4.x(i.e. NetX)
             - "10.188.0.0/23" # TODO: legacy OpenShift v3.x east subnetwork. Update to OpenShift v4.x(i.e. NetX)

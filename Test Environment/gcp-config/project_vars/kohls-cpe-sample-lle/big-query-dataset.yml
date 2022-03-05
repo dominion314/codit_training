@@ -7,10 +7,10 @@ bigQueryDatasets:
     defaultTableExpirationMs: 0 #Dataset expiration set to 'Never Expire'
     permissions:
       groupsByEmail:
-        gcp-cpe-cloud-architect@kohls.com:
+        gcp-cpe-cloud-architect@doms.com:
           roles:
             - bigquery.dataEditor
-        gcp-cloud-architect@kohls.com:
+        gcp-cloud-architect@doms.com:
           roles:
             - bigquery.dataOwner
   sample_history:
@@ -20,10 +20,10 @@ bigQueryDatasets:
     defaultTableExpirationMs: 0 #Dataset expiration set to 'Never Expire'
     permissions:
       groupsByEmail:
-        gcp-iaas-cpa-devops-admin@kohls.com:
+        gcp-iaas-cpa-devops-admin@doms.com:
           roles:
             - bigquery.dataViewer
       serviceAccountsByEmail:
-        cpe-sample-sa2@kohls-cpe-sample-lle.iam.gserviceaccount.com:
+        cpe-sample-sa2@doms-cpe-sample-lle.iam.gserviceaccount.com:
           roles:
             - bigquery.dataOwner

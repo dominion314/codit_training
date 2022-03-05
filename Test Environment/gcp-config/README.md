@@ -1,4 +1,4 @@
-# If you are having trouble accessing this repo or submitting PRs please contact kt-cpa@kohls.com #
+# If you are having trouble accessing this repo or submitting PRs please contact kt-cpa@doms.com #
 Comment, suggestions, bugs? Please fil out this form so we can make this the best experince for all..
 https://docs.google.com/forms/d/1I8v_JZoSCTl17VZpiXcPZ0VcxW-xrJOXTsvV_uRxpYI
 
@@ -44,7 +44,7 @@ At this time, NetX offers the following benefits for any product team:
 
 ## Getting Started!
 
-Please visit [docs/Readme.md](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Readme.md).
+Please visit [docs/Readme.md](https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Readme.md).
 <!-- 
 ## Structure
 

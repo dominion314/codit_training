@@ -6,20 +6,20 @@ bigQueryDatasets:
     defaultTableExpirationMs: 0
     permissions:
       groupsByEmail:
-        gcp-securitytech-devops-admin@kohls.com:
+        gcp-securitytech-devops-admin@doms.com:
           roles:
           - bigquery.admin
           - bigquery.user
           - bigquery.dataOwner
-        gcp-infra-dataservices-systemsengineer-l3@kohls.com:
+        gcp-infra-dataservices-systemsengineer-l3@doms.com:
           roles:
           - bigquery.dataViewer
           - bigquery.user
-        gcp-infra-dataservices-qualityengineer-l3@kohls.com:
+        gcp-infra-dataservices-qualityengineer-l3@doms.com:
           roles:
           - bigquery.dataViewer
           - bigquery.user
-        gcp-securitymonitoring-devops-l3@kohls.com:
+        gcp-securitymonitoring-devops-l3@doms.com:
           roles:
           - bigquery.user
       serviceAccountsByEmail:

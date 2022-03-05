@@ -1,13 +1,13 @@
 ---
 storageBuckets:
-  kohls-etcc-finstrat-test-service-lle:
+  doms-etcc-finstrat-test-service-lle:
     permissions:
       groupsByEmail:
-        gcp-eta-devops-admin@kohls.com:
+        gcp-eta-devops-admin@doms.com:
           roles:
           - storage.objectAdmin
       serviceAccountsByEmail:
-        test-service-lle@kohls-etcc-finstrat-lle.iam.gserviceaccount.com:
+        test-service-lle@doms-etcc-finstrat-lle.iam.gserviceaccount.com:
           deletionProtect: false
           roles:
           - storage.objectAdmin

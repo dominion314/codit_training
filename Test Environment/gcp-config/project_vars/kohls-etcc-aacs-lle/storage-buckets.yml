@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-etcc-aacs-carrier-lle-bucket:
+  doms-etcc-aacs-carrier-lle-bucket:
     versioningEnabled: true
     deletionProtect: true
     storageClass: STANDARD

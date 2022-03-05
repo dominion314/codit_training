@@ -1,7 +1,7 @@
 ---
 iamPolicyMembersV2:
   serviceAccountsByEmail:
-    lemur-cpe@kohls-infra-pie-lle.iam.gserviceaccount.com:
+    lemur-cpe@doms-infra-pie-lle.iam.gserviceaccount.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: compute.instanceAdmin.v1
@@ -9,10 +9,10 @@ iamPolicyMembersV2:
     - role: compute.viewer
     - role: iam.serviceAccountUser
     - role: storage.admin
-    lemur-cpe@kohls-infra-pie-prd.iam.gserviceaccount.com:
+    lemur-cpe@doms-infra-pie-prd.iam.gserviceaccount.com:
     - role: CustomViewer486
       OrgId: 1035901152068
-    terraform-devops@kohls-infra-pie-lle.iam.gserviceaccount.com:
+    terraform-devops@doms-infra-pie-lle.iam.gserviceaccount.com:
     - role: lbadmin
       OrgId: 1035901152068
     - role: compute.instanceAdmin.v1
@@ -20,12 +20,12 @@ iamPolicyMembersV2:
     - role: compute.storageAdmin
     - role: iam.serviceAccountUser
     - role: storage.admin
-    postgres-cpe@kohls-infra-pie-lle.iam.gserviceaccount.com:
+    postgres-cpe@doms-infra-pie-lle.iam.gserviceaccount.com:
     - role: storage.objectAdmin
     - role: storage.objectCreator
     - role: storage.objectViewer
   groupsByEmail:
-    kt-casey@kohls.com:
+    kt-casey@doms.com:
     - role: compute.imageUser
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
@@ -40,7 +40,7 @@ iamPolicyMembersV2:
     - role: logging.viewer
     - role: monitoring.admin
     - role: storage.admin
-    gcp-et-devops-admin@kohls.com:
+    gcp-et-devops-admin@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: lbadmin
@@ -59,7 +59,7 @@ iamPolicyMembersV2:
     - role: logging.viewer
     - role: monitoring.admin
     - role: storage.admin
-    gcp-et-devops-l2@kohls.com:
+    gcp-et-devops-l2@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: lbadmin
@@ -71,7 +71,7 @@ iamPolicyMembersV2:
     - role: logging.viewer
     - role: monitoring.viewer
     - role: storage.objectViewer
-    gcp-et-devops-l3@kohls.com:
+    gcp-et-devops-l3@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: lbadmin

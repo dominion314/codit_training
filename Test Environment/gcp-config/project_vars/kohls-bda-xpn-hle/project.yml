@@ -1,7 +1,7 @@
 ---
 billingDeptId: 90585
 project:
-  name: kohls-bda-xpn-hle
+  name: doms-bda-xpn-hle
   managed: true
   deletionProtect: true
   folderId: 778811484176
@@ -17,4 +17,4 @@ serviceAPIs:
   cloudresourcemanager.googleapis.com:
   cloudasset.googleapis.com:
 projectSharing:
-- kohls-bda-hle
+- doms-bda-hle

@@ -1,6 +1,6 @@
-# kohls-ocf-stateful-lle
+# doms-ocf-stateful-lle
 
-Configuration for Google Project 'kohls-ocf-stateful-lle'
+Configuration for Google Project 'doms-ocf-stateful-lle'
 
 ## Structure
 

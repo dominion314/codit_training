@@ -1,13 +1,13 @@
 ---
 storageBuckets:
-  kohlsdev-cpa-test01-lle-bucket-05:
+  domsdev-cpa-test01-lle-bucket-05:
     permissions:
       UsersByEmail:
         mark.doll:
           deletionProtect: sure
           roles:
           - storage.admin
-        hamilton.hoover@kohls.com:
+        hamilton.hoover@doms.com:
           roles:
           - cool.role
           - storage.objectViewer
@@ -21,18 +21,18 @@ storageBuckets:
           deletionProtect: sure
           roles:
           - storage.admin
-        hamilton.hoover@kohls.com:
+        hamilton.hoover@doms.com:
           roles:
           - cool.role
           - storage.objectViewer
-  kohlsdev-cpa-test01-lle-bucket-06:
+  domsdev-cpa-test01-lle-bucket-06:
     permissions:
       usersByEmail:
         mark.doll:
           deletionProtect: sure
           roles:
           - storage.admin
-        hamilton.hoover@kohls.com:
+        hamilton.hoover@doms.com:
           roles:
           - cool.role
           - storage.objectViewer
@@ -46,7 +46,7 @@ storageBuckets:
           deletionProtect: sure
           roles:
           - storage.admin
-        hamilton.hoover@kohls.com:
+        hamilton.hoover@doms.com:
           roles:
           - cool.role
           - storage.objectViewer

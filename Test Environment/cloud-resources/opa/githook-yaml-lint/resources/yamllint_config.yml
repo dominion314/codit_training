@@ -8,7 +8,7 @@ rules:
   comments: disable
 # disable document-start, since after using `to_nice_yaml` filter on a yaml file
 # it has no "---" at the beginning (even if originally it had)
-# https://github.kohls.com/Ansible/openshift-resources-jinja-processing/blob/master/tasks/dump-resource.yml
+# https://github.doms.com/Ansible/openshift-resources-jinja-processing/blob/master/tasks/dump-resource.yml
   document-start: disable
   empty-lines:
     level: warning

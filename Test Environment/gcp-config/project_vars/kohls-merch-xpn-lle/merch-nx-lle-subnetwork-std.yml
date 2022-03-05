@@ -12,11 +12,11 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-merch-pdpl-softwareengineer-admin@kohls.com
-          - gcp-merch-pdpl-softwareengineer-l3@kohls.com
-          - gcp-merch-devops-admin@kohls.com
+          - gcp-merch-pdpl-softwareengineer-admin@doms.com
+          - gcp-merch-pdpl-softwareengineer-l3@doms.com
+          - gcp-merch-devops-admin@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-merch-pl-lle.iam.gserviceaccount.com
+          - terraform-devops@doms-merch-pl-lle.iam.gserviceaccount.com
           - service-232531157600@dataproc-accounts.iam.gserviceaccount.com
           - 232531157600-compute@developer.gserviceaccount.com
           - 232531157600@cloudservices.gserviceaccount.com
@@ -30,10 +30,10 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-merch-pdpl-softwareengineer-admin@kohls.com
-          - gcp-merch-devops-admin@kohls.com
+          - gcp-merch-pdpl-softwareengineer-admin@doms.com
+          - gcp-merch-devops-admin@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-merch-pl-lle.iam.gserviceaccount.com
+          - terraform-devops@doms-merch-pl-lle.iam.gserviceaccount.com
 
       merch-nx-lle-item-c1-prv01:
         advertiseRoutes: true
@@ -44,10 +44,10 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-merch-pdpl-softwareengineer-admin@kohls.com
-          - gcp-merch-devops-admin@kohls.com
+          - gcp-merch-pdpl-softwareengineer-admin@doms.com
+          - gcp-merch-devops-admin@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-merch-pl-lle.iam.gserviceaccount.com
+          - terraform-devops@doms-merch-pl-lle.iam.gserviceaccount.com
 
       merch-nx-lle-item-e1-prv01:
         advertiseRoutes: true
@@ -58,10 +58,10 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-merch-pdpl-softwareengineer-admin@kohls.com
-          - gcp-merch-devops-admin@kohls.com
+          - gcp-merch-pdpl-softwareengineer-admin@doms.com
+          - gcp-merch-devops-admin@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-merch-pl-lle.iam.gserviceaccount.com
+          - terraform-devops@doms-merch-pl-lle.iam.gserviceaccount.com
 
       merch-nx-lle-in-c1-prv01:
         advertiseRoutes: true
@@ -72,54 +72,54 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-merch-devops-admin@kohls.com
-          - gcp-merch-devops-l2@kohls.com
-          - gcp-merch-devops-l3@kohls.com
-          - gcp-merch-devops-manager@kohls.com
-          - gcp-merch-inventory-po-l2@kohls.com
-          - gcp-merch-psin-softwareengineer-admin@kohls.com
-          - gcp-merch-psin-softwareengineer-l2@kohls.com
-          - gcp-merch-psin-softwareengineer-l3@kohls.com
-          - gcp-merch-psin-softwareengineer-manager@kohls.com
-          - gcp-merch-sd-l3@kohls.com
-          - gcp-securityssg-qualityengineer-l2@kohls.com
+          - gcp-merch-devops-admin@doms.com
+          - gcp-merch-devops-l2@doms.com
+          - gcp-merch-devops-l3@doms.com
+          - gcp-merch-devops-manager@doms.com
+          - gcp-merch-inventory-po-l2@doms.com
+          - gcp-merch-psin-softwareengineer-admin@doms.com
+          - gcp-merch-psin-softwareengineer-l2@doms.com
+          - gcp-merch-psin-softwareengineer-l3@doms.com
+          - gcp-merch-psin-softwareengineer-manager@doms.com
+          - gcp-merch-sd-l3@doms.com
+          - gcp-securityssg-qualityengineer-l2@doms.com
           serviceAccountsByEmail:
-          - ace-ecom-auto-alloc-merch@kohls-merch-in-lle.iam.gserviceaccount.com
-          - bigquery-spanner-merch@kohls-merch-in-lle.iam.gserviceaccount.com
-          - consul-paas@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-apps@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-dps-ppe-rw@kohls-merch-ps-lle.iam.gserviceaccount.com
-          - merch-ims-roc-lle-rw@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-in-ace-lle-rw@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-in-airflow-ce-lle@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-in-da-lle-rw@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-in-dap@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-in-dar@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-in-eligibility-lle-rw@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-in-fuse-lle-rw@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-in-imk-lle-rw@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-in-pcs-lle-rw@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-in-replen-lle-rw@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-in-rms-lle-rw@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-psin-bigquery-admin@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-psin-bigquery-rw@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-psin-dataflow-admin@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-psin-dataflow-rw@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-psin-dataproc-admin@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-psin-dataproc-rw@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-psin-engineering-report@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-psin-engineering-ro@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-psin-spanner-admin@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-psin-spanner-rw@kohls-merch-in-lle.iam.gserviceaccount.com
-          - mongo-dba@kohls-merch-in-lle.iam.gserviceaccount.com
-          - mysql-dba@kohls-merch-in-lle.iam.gserviceaccount.com
-          - poedihub-merch@kohls-merch-in-lle.iam.gserviceaccount.com
-          - ray-fuse@kohls-merch-in-lle.iam.gserviceaccount.com
+          - ace-ecom-auto-alloc-merch@doms-merch-in-lle.iam.gserviceaccount.com
+          - bigquery-spanner-merch@doms-merch-in-lle.iam.gserviceaccount.com
+          - consul-paas@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-apps@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-dps-ppe-rw@doms-merch-ps-lle.iam.gserviceaccount.com
+          - merch-ims-roc-lle-rw@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-in-ace-lle-rw@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-in-airflow-ce-lle@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-in-da-lle-rw@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-in-dap@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-in-dar@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-in-eligibility-lle-rw@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-in-fuse-lle-rw@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-in-imk-lle-rw@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-in-pcs-lle-rw@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-in-replen-lle-rw@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-in-rms-lle-rw@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-psin-bigquery-admin@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-psin-bigquery-rw@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-psin-dataflow-admin@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-psin-dataflow-rw@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-psin-dataproc-admin@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-psin-dataproc-rw@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-psin-engineering-report@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-psin-engineering-ro@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-psin-spanner-admin@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-psin-spanner-rw@doms-merch-in-lle.iam.gserviceaccount.com
+          - mongo-dba@doms-merch-in-lle.iam.gserviceaccount.com
+          - mysql-dba@doms-merch-in-lle.iam.gserviceaccount.com
+          - poedihub-merch@doms-merch-in-lle.iam.gserviceaccount.com
+          - ray-fuse@doms-merch-in-lle.iam.gserviceaccount.com
           - service-80000348469@dataproc-accounts.iam.gserviceaccount.com
-          - spanner-merch@kohls-merch-in-lle.iam.gserviceaccount.com
-          - terraform-devops@kohls-merch-in-lle.iam.gserviceaccount.com
+          - spanner-merch@doms-merch-in-lle.iam.gserviceaccount.com
+          - terraform-devops@doms-merch-in-lle.iam.gserviceaccount.com
           - 528200183246@cloudservices.gserviceaccount.com
-          - ccnet-dataproc@kohls-merch-in-lle.iam.gserviceaccount.com
+          - ccnet-dataproc@doms-merch-in-lle.iam.gserviceaccount.com
           - service-528200183246@dataproc-accounts.iam.gserviceaccount.com
 
       merch-nx-lle-ps-c1-prv01:
@@ -131,20 +131,20 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-merch-psin-softwareengineer-l3@kohls.com
-          - gcp-merch-psin-softwareengineer-admin@kohls.com
-          - gcp-merch-devops-admin@kohls.com
-          - gcp-merch-devops-l3@kohls.com
+          - gcp-merch-psin-softwareengineer-l3@doms.com
+          - gcp-merch-psin-softwareengineer-admin@doms.com
+          - gcp-merch-devops-admin@doms.com
+          - gcp-merch-devops-l3@doms.com
           serviceAccountsByEmail:
           - 80000348469@cloudservices.gserviceaccount.com
-          - helix-merch@kohls-merch-ps-lle.iam.gserviceaccount.com
-          - terraform-devops@kohls-merch-ps-lle.iam.gserviceaccount.com
-          - merch-apps@kohls-merch-ps-lle.iam.gserviceaccount.com
-          - merch-dps-ppe-rw@kohls-merch-ps-lle.iam.gserviceaccount.com
-          - merch-in-pcs-lle-rw@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-ps-airflow-ce-lle@kohls-merch-ps-lle.iam.gserviceaccount.com
-          - merch-ps-sign-lle-rw@kohls-merch-ps-lle.iam.gserviceaccount.com
-          - ppe-mdm-sync-merch@kohls-merch-ps-lle.iam.gserviceaccount.com
+          - helix-merch@doms-merch-ps-lle.iam.gserviceaccount.com
+          - terraform-devops@doms-merch-ps-lle.iam.gserviceaccount.com
+          - merch-apps@doms-merch-ps-lle.iam.gserviceaccount.com
+          - merch-dps-ppe-rw@doms-merch-ps-lle.iam.gserviceaccount.com
+          - merch-in-pcs-lle-rw@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-ps-airflow-ce-lle@doms-merch-ps-lle.iam.gserviceaccount.com
+          - merch-ps-sign-lle-rw@doms-merch-ps-lle.iam.gserviceaccount.com
+          - ppe-mdm-sync-merch@doms-merch-ps-lle.iam.gserviceaccount.com
           - service-80000348469@dataproc-accounts.iam.gserviceaccount.com
           - service-80000348469@dataflow-service-producer-prod.iam.gserviceaccount.com
 
@@ -157,19 +157,19 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-merch-psin-softwareengineer-l3@kohls.com
-          - gcp-merch-psin-softwareengineer-admin@kohls.com
-          - gcp-merch-devops-admin@kohls.com
-          - gcp-merch-devops-l3@kohls.com
+          - gcp-merch-psin-softwareengineer-l3@doms.com
+          - gcp-merch-psin-softwareengineer-admin@doms.com
+          - gcp-merch-devops-admin@doms.com
+          - gcp-merch-devops-l3@doms.com
           serviceAccountsByEmail:
           - 80000348469@cloudservices.gserviceaccount.com
-          - helix-merch@kohls-merch-ps-lle.iam.gserviceaccount.com
-          - terraform-devops@kohls-merch-ps-lle.iam.gserviceaccount.com
-          - merch-apps@kohls-merch-ps-lle.iam.gserviceaccount.com
-          - merch-dps-ppe-rw@kohls-merch-ps-lle.iam.gserviceaccount.com
-          - merch-in-pcs-lle-rw@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-ps-airflow-ce-lle@kohls-merch-ps-lle.iam.gserviceaccount.com
-          - merch-ps-sign-lle-rw@kohls-merch-ps-lle.iam.gserviceaccount.com
-          - ppe-mdm-sync-merch@kohls-merch-ps-lle.iam.gserviceaccount.com
+          - helix-merch@doms-merch-ps-lle.iam.gserviceaccount.com
+          - terraform-devops@doms-merch-ps-lle.iam.gserviceaccount.com
+          - merch-apps@doms-merch-ps-lle.iam.gserviceaccount.com
+          - merch-dps-ppe-rw@doms-merch-ps-lle.iam.gserviceaccount.com
+          - merch-in-pcs-lle-rw@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-ps-airflow-ce-lle@doms-merch-ps-lle.iam.gserviceaccount.com
+          - merch-ps-sign-lle-rw@doms-merch-ps-lle.iam.gserviceaccount.com
+          - ppe-mdm-sync-merch@doms-merch-ps-lle.iam.gserviceaccount.com
           - service-80000348469@dataproc-accounts.iam.gserviceaccount.com
           - service-80000348469@dataflow-service-producer-prod.iam.gserviceaccount.com

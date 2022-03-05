@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90522"
 project:
-  name: kohls-etcc-creditops-lle
+  name: doms-etcc-creditops-lle
   deletionProtect: true
   managed: true
   folderId: "859213288423"

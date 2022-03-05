@@ -5,6 +5,6 @@ bigQueryDatasets:
     deletionProtect: true
     permissions:
       serviceAccountsByEmail:
-        prometheus-ocf@kohls-ocf-stateful-lle.iam.gserviceaccount.com:
+        prometheus-ocf@doms-ocf-stateful-lle.iam.gserviceaccount.com:
           roles:
           - bigquery.dataOwner

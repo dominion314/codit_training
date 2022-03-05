@@ -1,13 +1,13 @@
 ---
 # bucket policy only and ACLs are not part of these definitions
 storageBuckets:
-  kohlsdev-cpa-inspec-test-bucket-01:
+  domsdev-cpa-inspec-test-bucket-01:
     versioningEnabled: false
     labels:
       versioning: "false"
       line-of-business: cpe
 
-  kohlsdev-cpa-inspec-test-bucket-02:
+  domsdev-cpa-inspec-test-bucket-02:
     versioningEnabled: true
     labels:
       versioning: "true"

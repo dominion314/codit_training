@@ -1,7 +1,7 @@
 ---
 iamPolicyMembersV2:
   groupsByEmail:
-    gcp-merch-psin-softwareengineer-l3@kohls.com:
+    gcp-merch-psin-softwareengineer-l3@doms.com:
     - role: CustomBigQueryUser
       OrgId: 1035901152068
     - role: CustomViewer486
@@ -23,7 +23,7 @@ iamPolicyMembersV2:
     - role: spanner.databaseReader
     - role: spanner.viewer
     - role: storage.objectViewer
-    gcp-merch-sd-l3@kohls.com:
+    gcp-merch-sd-l3@doms.com:
     - role: CustomBigQueryUser
       OrgId: 1035901152068
     - role: CustomBucketViewer
@@ -83,7 +83,7 @@ iamPolicyMembersV2:
     - role: pubsub.viewer
     - role: servicemanagement.quotaViewer
     - role: spanner.viewer
-    gcp-merch-sd-manager@kohls.com:
+    gcp-merch-sd-manager@doms.com:
     - role: CustomBucketViewer
       OrgId: 1035901152068
     - role: CustomViewer486
@@ -91,14 +91,14 @@ iamPolicyMembersV2:
     - role: compute.viewer
     - role: logging.privateLogViewer
     - role: logging.viewer
-    gcp-merch-sd-l2@kohls.com:
+    gcp-merch-sd-l2@doms.com:
     - role: CustomRole737
       OrgId: 1035901152068
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: spanner.databaseReader
     - role: spanner.viewer
-    gcp-merch-devops-admin@kohls.com:
+    gcp-merch-devops-admin@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: iam.serviceAccountKeyAdmin
@@ -113,7 +113,7 @@ iamPolicyMembersV2:
     - role: spanner.viewer
     - role: storage.objectViewer
     - role: servicemanagement.quotaAdmin
-    gcp-merch-devops-l2@kohls.com:
+    gcp-merch-devops-l2@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: compute.engine.power.state.adm
@@ -125,7 +125,7 @@ iamPolicyMembersV2:
     - role: logging.viewer
     - role: monitoring.metricWriter
     - role: monitoring.viewer
-    gcp-merch-devops-l3@kohls.com:
+    gcp-merch-devops-l3@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: compute.networkViewer
@@ -136,7 +136,7 @@ iamPolicyMembersV2:
     - role: logging.privateLogViewer
     - role: logging.viewer
     - role: monitoring.admin
-    gcp-merch-devops-manager@kohls.com:
+    gcp-merch-devops-manager@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: compute.networkViewer
@@ -147,7 +147,7 @@ iamPolicyMembersV2:
     - role: logging.viewer
     - role: monitoring.admin
     - role: storage.objectViewer
-    gcp-merch-inventory-po-l2@kohls.com:
+    gcp-merch-inventory-po-l2@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: bigquery.jobUser
@@ -160,14 +160,14 @@ iamPolicyMembersV2:
     - role: logging.viewer
     - role: spanner.databaseReader
     - role: spanner.viewer
-    gcp-merch-psin-ext-softwareengineer-l3@kohls.com:
+    gcp-merch-psin-ext-softwareengineer-l3@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: bigquery.jobUser
     - role: compute.networkViewer
     - role: compute.viewer
     - role: logging.viewer
-    gcp-merch-psin-softwareengineer-admin@kohls.com:
+    gcp-merch-psin-softwareengineer-admin@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: bigquery.dataViewer
@@ -177,7 +177,7 @@ iamPolicyMembersV2:
     - role: compute.viewer
     - role: logging.viewer
     - role: monitoring.admin
-    gcp-merch-psin-softwareengineer-l2@kohls.com:
+    gcp-merch-psin-softwareengineer-l2@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: bigquery.dataViewer
@@ -192,35 +192,35 @@ iamPolicyMembersV2:
     - role: spanner.databaseReader
     - role: spanner.viewer
     - role: storage.objectViewer
-    gcp-merch-psin-softwareengineer-manager@kohls.com:
+    gcp-merch-psin-softwareengineer-manager@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: compute.networkViewer
     - role: compute.viewer
     - role: logging.viewer
-    gcp-merch-sd-admin@kohls.com:
+    gcp-merch-sd-admin@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
-    gcp-merch-softwareengineer-admin@kohls.com:
-    - role: CustomViewer486
-      OrgId: 1035901152068
-    - role: compute.networkViewer
-    - role: compute.viewer
-    - role: logging.viewer
-    gcp-merch-softwareengineer-manager@kohls.com:
+    gcp-merch-softwareengineer-admin@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: compute.networkViewer
     - role: compute.viewer
     - role: logging.viewer
-    gcp-merch-softwareengineer-l2@kohls.com:
+    gcp-merch-softwareengineer-manager@doms.com:
+    - role: CustomViewer486
+      OrgId: 1035901152068
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    gcp-merch-softwareengineer-l2@doms.com:
     - role: compute.networkViewer
     - role: compute.viewer
     - role: logging.viewer
     - role: storage.objectViewer
     - role: viewer
   serviceAccountsByEmail:
-    merch-in-dap@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-in-dap@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: CustomBucketViewer
       OrgId: 1035901152068
     - role: CustomRole634
@@ -229,7 +229,7 @@ iamPolicyMembersV2:
     - role: compute.networkUser
     - role: compute.networkViewer
     - role: dataproc.editor
-    merch-psin-dataproc-admin@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-psin-dataproc-admin@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: CustomBucketViewer
       OrgId: 1035901152068
     - role: CustomRole634
@@ -238,7 +238,7 @@ iamPolicyMembersV2:
     - role: compute.networkViewer
     - role: dataproc.editor
     - role: storage.objectAdmin
-    consul-paas@kohls-merch-in-prd.iam.gserviceaccount.com:
+    consul-paas@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: CustomRole130
       OrgId: 1035901152068
     - role: CustomRole150
@@ -248,7 +248,7 @@ iamPolicyMembersV2:
     - role: compute.imageUser
     - role: compute.viewer
     - role: iam.serviceAccountUser
-    terraform-devops@kohls-merch-in-prd.iam.gserviceaccount.com:
+    terraform-devops@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: lbadmin
       OrgId: 1035901152068
     - role: compute.imageUser
@@ -257,9 +257,9 @@ iamPolicyMembersV2:
     - role: iam.serviceAccountUser
     - role: logging.logWriter
     - role: storage.admin
-    merch-psin-bigquery-admin@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-psin-bigquery-admin@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: bigquery.admin
-    merch-in-ace-prd-rw@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-in-ace-prd-rw@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: bigquery.dataEditor
     - role: bigquery.dataViewer
     - role: bigquery.jobUser
@@ -276,7 +276,7 @@ iamPolicyMembersV2:
     - role: spanner.databaseAdmin
     - role: spanner.databaseUser
     - role: storage.admin
-    merch-in-dar@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-in-dar@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: bigquery.dataEditor
     - role: bigquery.jobUser
     - role: bigquery.readSessionUser
@@ -286,7 +286,7 @@ iamPolicyMembersV2:
     - role: spanner.admin
     - role: storage.objectCreator
     - role: storage.objectViewer
-    merch-in-fuse-prd-rw@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-in-fuse-prd-rw@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: bigquery.dataEditor
     - role: bigquery.dataViewer
     - role: bigquery.jobUser
@@ -297,7 +297,7 @@ iamPolicyMembersV2:
     - role: dataproc.viewer
     - role: dataproc.worker
     - role: iam.serviceAccountUser
-    merch-in-imk-prd-rw@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-in-imk-prd-rw@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: bigquery.dataEditor
     - role: bigquery.dataViewer
     - role: bigquery.jobUser
@@ -312,7 +312,7 @@ iamPolicyMembersV2:
     - role: spanner.admin
     - role: spanner.databaseAdmin
     - role: storage.admin
-    merch-in-pcs-lle-rw@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-in-pcs-lle-rw@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: bigquery.dataEditor
     - role: bigquery.dataViewer
     - role: bigquery.jobUser
@@ -321,7 +321,7 @@ iamPolicyMembersV2:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: iam.serviceAccountUser
-    merch-in-pcs-prd-rw@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-in-pcs-prd-rw@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: bigquery.dataEditor
     - role: bigquery.dataViewer
     - role: bigquery.jobUser
@@ -330,7 +330,7 @@ iamPolicyMembersV2:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: iam.serviceAccountUser
-    merch-in-replen-prd-rw@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-in-replen-prd-rw@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: bigquery.dataEditor
     - role: bigquery.dataViewer
     - role: bigquery.jobUser
@@ -338,7 +338,7 @@ iamPolicyMembersV2:
     - role: bigquery.readSessionUser
     - role: bigquery.user
     - role: compute.instanceAdmin.v1
-    merch-in-rms-prd-rw@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-in-rms-prd-rw@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: bigquery.dataEditor
     - role: bigquery.dataViewer
     - role: bigquery.jobUser
@@ -353,7 +353,7 @@ iamPolicyMembersV2:
     - role: spanner.admin
     - role: spanner.databaseAdmin
     - role: storage.admin
-    merch-psin-bigquery-rw@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-psin-bigquery-rw@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: bigquery.dataEditor
     - role: bigquery.dataOwner
     - role: bigquery.jobUser
@@ -362,14 +362,14 @@ iamPolicyMembersV2:
     - role: compute.networkUser
     - role: iam.serviceAccountUser
     - role: pubsub.admin
-    merch-psin-engineering-report@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-psin-engineering-report@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: bigquery.dataViewer
     - role: bigquery.jobUser
     - role: bigquery.metadataViewer
     - role: bigquery.user
     - role: spanner.databaseReader
     - role: spanner.viewer
-    merch-psin-engineering-ro@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-psin-engineering-ro@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: bigquery.dataViewer
     - role: bigquery.metadataViewer
     - role: bigtable.reader
@@ -378,56 +378,56 @@ iamPolicyMembersV2:
     - role: spanner.databaseReader
     - role: spanner.viewer
     - role: storage.objectViewer
-    merch-in-ext@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-in-ext@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: bigquery.jobUser
-    merch-dps-ppe-rw@kohls-merch-ps-prd.iam.gserviceaccount.com:
+    merch-dps-ppe-rw@doms-merch-ps-prd.iam.gserviceaccount.com:
     - role: bigquery.user
-    kohls-merch-in-prd-mongo@kohls-merch-in-prd.iam.gserviceaccount.com:
+    doms-merch-in-prd-mongo@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
-    kohls-merch-in-prd-mysql@kohls-merch-in-prd.iam.gserviceaccount.com:
+    doms-merch-in-prd-mysql@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
-    merch-in-airflow-ce-prd@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-in-airflow-ce-prd@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: iam.serviceAccountUser
-    mongo-dba@kohls-merch-in-prd.iam.gserviceaccount.com:
+    mongo-dba@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: iam.serviceAccountUser
     - role: storage.objectViewer
-    mysql-dba@kohls-merch-in-prd.iam.gserviceaccount.com:
+    mysql-dba@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: iam.serviceAccountUser
     - role: storage.objectViewer
-    terraform-devops@kohls-merch-in-lle.iam.gserviceaccount.com:
+    terraform-devops@doms-merch-in-lle.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
-    merch-psin-dataflow-admin@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-psin-dataflow-admin@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: dataflow.admin
-    merch-psin-dataflow-rw@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-psin-dataflow-rw@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: dataflow.developer
     - role: dataflow.worker
-    merch-psin-dataproc-rw@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-psin-dataproc-rw@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: dataproc.worker
-    ace-ecom-auto-alloc-merch@kohls-merch-in-prd.iam.gserviceaccount.com:
+    ace-ecom-auto-alloc-merch@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: iam.serviceAccountUser
     - role: logging.logWriter
-    merch-in-pubsub-rw@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-in-pubsub-rw@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: pubsub.publisher
     - role: pubsub.subscriber
     - role: pubsub.viewer
-    merch-in-memorystore-adm-prd@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-in-memorystore-adm-prd@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: redis.admin
-    merch-psin-spanner-admin@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-psin-spanner-admin@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: spanner.admin
     - role: spanner.databaseAdmin
-    merch-ims-roc-prd-rw@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-ims-roc-prd-rw@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: spanner.databaseUser
-    merch-in-da-prd-rw@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-in-da-prd-rw@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: spanner.databaseUser
-    merch-psin-spanner-rw@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-psin-spanner-rw@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: spanner.databaseUser
-    poedihub-merch@kohls-merch-in-prd.iam.gserviceaccount.com:
+    poedihub-merch@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: storage.objectAdmin
-    merch-in-ccnet-prd@kohls-merch-in-prd.iam.gserviceaccount.com:
+    merch-in-ccnet-prd@doms-merch-in-prd.iam.gserviceaccount.com:
     - role: iam.serviceAccountUser
     - role: compute.networkUser
     - role: dataproc.editor

@@ -1,6 +1,6 @@
-# kohls-bda-dse-lle
+# doms-bda-dse-lle
 
-Configuration for Google Project 'kohls-bda-dse-lle'
+Configuration for Google Project 'doms-bda-dse-lle'
 
 ## Structure
 

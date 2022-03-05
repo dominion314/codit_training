@@ -1,6 +1,6 @@
 iamPolicyMembersV2:
   groupsByEmail:
-    gcp-eta-devops-admin@kohls.com:
+    gcp-eta-devops-admin@doms.com:
     - OrgId: 1035901152068
       role: CustomRole881
     - OrgId: 1035901152068
@@ -28,7 +28,7 @@ iamPolicyMembersV2:
     - role: pubsub.admin
     - role: storage.admin
   serviceAccountsByEmail:
-    consul-paas@kohls-eta-credit-lle.iam.gserviceaccount.com:
+    consul-paas@doms-eta-credit-lle.iam.gserviceaccount.com:
     - OrgId: 1035901152068
       role: CustomRole130
     - OrgId: 1035901152068
@@ -36,16 +36,16 @@ iamPolicyMembersV2:
     - OrgId: 1035901152068
       role: CustomRole703
     - role: compute.networkUser
-    credit-storage-eta@kohls-eta-credit-lle.iam.gserviceaccount.com:
+    credit-storage-eta@doms-eta-credit-lle.iam.gserviceaccount.com:
     - role: storage.admin
     - role: storage.objectAdmin
     - role: storage.objectCreator
     - role: storage.objectViewer
-    mongo-dba@kohls-eta-credit-lle.iam.gserviceaccount.com:
+    mongo-dba@doms-eta-credit-lle.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: iam.serviceAccountUser
-    mysql-dba@kohls-eta-credit-lle.iam.gserviceaccount.com:
+    mysql-dba@doms-eta-credit-lle.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: iam.serviceAccountUser
@@ -53,7 +53,7 @@ iamPolicyMembersV2:
     - role: dataflow.serviceAgent
     service-939130776839@gcf-admin-robot.iam.gserviceaccount.com:
     - role: cloudfunctions.serviceAgent
-    terraform-devops@kohls-eta-credit-lle.iam.gserviceaccount.com:
+    terraform-devops@doms-eta-credit-lle.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: compute.storageAdmin

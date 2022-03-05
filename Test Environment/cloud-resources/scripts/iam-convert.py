@@ -1,8 +1,8 @@
 #pylint: disable=C0301, C0303, C0103, C0114, E0401
 # This script may be used to convert gcloud iam service account list to Kohl's gitops config
 # Before executing this script;
-#     Run gcloud projects get-iam-policy kohls-cpe-cpa-lle --format yaml > iam-bindings.yml
-#     where you replace kohls-cpe-cpa-lle with the project that you want to export iam bindings from.
+#     Run gcloud projects get-iam-policy doms-cpe-cpa-lle --format yaml > iam-bindings.yml
+#     where you replace doms-cpe-cpa-lle with the project that you want to export iam bindings from.
 # The iam-bindings.yml file that is output from the gcloud command will be input into this script.
 # Make sure you execute this script from the same directory where the iam-bindings.yml file is saved.
 #

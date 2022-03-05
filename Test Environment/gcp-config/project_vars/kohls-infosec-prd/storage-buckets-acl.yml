@@ -3,7 +3,7 @@ storageBuckets:
   kss-qradar-backup:
     acls:
       groupsByEmail:
-        gcp-securitytech-devops-l3@kohls.com: OWNER
-        gcp-securitytech-devops-manager@kohls.com: READER
+        gcp-securitytech-devops-l3@doms.com: OWNER
+        gcp-securitytech-devops-manager@doms.com: READER
       usersByEmail:
         526474172617-compute@developer.gserviceaccount.com: OWNER

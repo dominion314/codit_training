@@ -1,22 +1,22 @@
 ---
 iamPolicyMembersV2:
   groupsByEmail:
-    gcp-infra-dataservices-qualityengineer-l3@kohls.com:
+    gcp-infra-dataservices-qualityengineer-l3@doms.com:
     - role: CustomDynatraceExtensionMetricsRole
       OrgId: 1035901152068
     - role: cloudSql.privateIP
       OrgId: 1035901152068
-    gcp-infra-dataservices-systemsengineer-l2@kohls.com:
+    gcp-infra-dataservices-systemsengineer-l2@doms.com:
     - role: cloudSql.privateIP
       OrgId: 1035901152068
-    gcp-infra-dataservices-systemsengineer-l3@kohls.com:
+    gcp-infra-dataservices-systemsengineer-l3@doms.com:
     - role: cloudSql.privateIP
       OrgId: 1035901152068
   serviceAccountsByEmail:
-    pmm-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com:
+    pmm-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com:
     - role: cloudSql.privateIP
       OrgId: 1035901152068
-    platform-devops@kohls-platform-dbaas-prd.iam.gserviceaccount.com:
+    platform-devops@doms-platform-dbaas-prd.iam.gserviceaccount.com:
     - role: cloudSql.privateIP
       OrgId: 1035901152068
     - role: CustomDynatraceExtensionMetricsRole

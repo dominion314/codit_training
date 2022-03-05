@@ -74,7 +74,7 @@ def call(String schemaFolder) {
                         writeFile file: 'script.py', text: script
                         
                         sh("""
-                          pip3 install -r requirements.txt --user --proxy=http://proxy.kohls.com:3128
+                          pip3 install -r requirements.txt --user --proxy=http://proxy.doms.com:3128
                           python3 script.py ${SCHEMA_FOLDER}
                           """)
                     }

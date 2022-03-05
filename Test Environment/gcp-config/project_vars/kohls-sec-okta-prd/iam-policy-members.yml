@@ -1,7 +1,7 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-securitytech-devops-admin@kohls.com:
+    gcp-securitytech-devops-admin@doms.com:
       roles:
       - compute.loadBalancerAdmin
       - compute.instanceAdmin.v1
@@ -12,20 +12,7 @@ iamPolicyMembers:
       - logging.logWriter
       - monitoring.admin
       - storage.admin
-    gcp-securitypam-sd-l3@kohls.com:
-      roles:
-      - compute.loadBalancerAdmin
-      - compute.instanceAdmin.v1
-      - compute.networkUser
-      - compute.networkViewer
-      - iam.serviceAccountKeyAdmin
-      - iam.serviceAccountUser
-      - logging.configWriter
-      - logging.logWriter
-      - monitoring.admin
-      - storage.admin
-      - cloudsql.admin
-    gcp-iam-l3@kohls.com:
+    gcp-securitypam-sd-l3@doms.com:
       roles:
       - compute.loadBalancerAdmin
       - compute.instanceAdmin.v1
@@ -38,13 +25,26 @@ iamPolicyMembers:
       - monitoring.admin
       - storage.admin
       - cloudsql.admin
-    gcp-infra-windows-devops-l3@kohls.com:
+    gcp-iam-l3@doms.com:
+      roles:
+      - compute.loadBalancerAdmin
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.networkViewer
+      - iam.serviceAccountKeyAdmin
+      - iam.serviceAccountUser
+      - logging.configWriter
+      - logging.logWriter
+      - monitoring.admin
+      - storage.admin
+      - cloudsql.admin
+    gcp-infra-windows-devops-l3@doms.com:
       roles:
       - iam.serviceAccountUser
       - compute.instanceAdmin
       - compute.networkUser
   serviceAccountsByEmail:
-    okta-prd@kohls-sec-okta-prd.iam.gserviceaccount.com:
+    okta-prd@doms-sec-okta-prd.iam.gserviceaccount.com:
       roles:
       - compute.networkViewer
       - compute.networkUser

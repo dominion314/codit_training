@@ -36,7 +36,7 @@ vpcs:
           sourceTags:
           allow:
           - protocol: "tcp"
-      allow-kohls-ingress:
+      allow-doms-ingress:
         priority: 900
         direction: INGRESS
         description: RAPP-106
@@ -54,7 +54,7 @@ vpcs:
           - protocol: "tcp"
           - protocol: "udp"
       # TODO: Add target service accounts for this rule will have to change when "final" cluster is built
-      #       See https://jiradc.kohls.com:8443/browse/RAPP-155
+      #       See https://jiradc.doms.com:8443/browse/RAPP-155
       allow-internal-api:
         priority: 900
         direction: INGRESS

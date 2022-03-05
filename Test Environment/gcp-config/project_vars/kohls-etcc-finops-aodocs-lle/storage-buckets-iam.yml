@@ -1,22 +1,22 @@
 ---
 storageBuckets:
-  kohls-etcc-finops-aodocs-lle:
+  doms-etcc-finops-aodocs-lle:
     permissions:
       groupsByEmail:
-        gcp-eta-devops-admin@kohls.com:
+        gcp-eta-devops-admin@doms.com:
           roles:
           - storage.admin
       serviceAccountsByEmail:
-        aodocs-lle@kohls-etcc-finops-aodocs-lle.iam.gserviceaccount.com:
+        aodocs-lle@doms-etcc-finops-aodocs-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketWriter
-  kohls-etcc-finops-aodocs-lle-test:
+  doms-etcc-finops-aodocs-lle-test:
     permissions:
       groupsByEmail:
-        gcp-eta-devops-admin@kohls.com:
+        gcp-eta-devops-admin@doms.com:
           roles:
           - storage.admin
       serviceAccountsByEmail:
-        aodocs-lle@kohls-etcc-finops-aodocs-lle.iam.gserviceaccount.com:
+        aodocs-lle@doms-etcc-finops-aodocs-lle.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketWriter

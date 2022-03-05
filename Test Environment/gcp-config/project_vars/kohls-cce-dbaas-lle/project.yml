@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90548"
 project:
-  name: kohls-cce-dbaas-lle
+  name: doms-cce-dbaas-lle
   deletionProtect: true
   managed: true
   folderId: "124759181101"

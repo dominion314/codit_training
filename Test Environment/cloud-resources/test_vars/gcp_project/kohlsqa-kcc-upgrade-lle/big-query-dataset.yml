@@ -8,10 +8,10 @@ bigQueryDatasets:
       app-name: "loyaly"
     permissions:
       usersByEmail:
-        hamilton.hoover@kohls.com:
+        hamilton.hoover@doms.com:
           roles:
           - OWNER
       groupsByEmail:
-        gcp-et-devops-l3@kohls.com:
+        gcp-et-devops-l3@doms.com:
           roles:
           - OWNER

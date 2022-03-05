@@ -13,8 +13,8 @@ Google Cloud projects form the basis for creating, enabling, and using all Googl
 
 This page explains how to create and manage Google Cloud projects using Kohl's gitops process.
 ## What is the gitops process?
-Google Cloud resources can now be configured using Kohl's developed yaml definitions for gcp resources stored in this centralized git repo - [gcp-config](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config).  All gcp resource configurations are stored in a folder named after the gcp project within the project_vars directory.  Pick any project folder in the repo to see its gcp resource configuration files.
-[Example Folder kohls-cpe-sample-lle](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/tree/main/project_vars/kohls-cpe-sample-lle)
+Google Cloud resources can now be configured using Kohl's developed yaml definitions for gcp resources stored in this centralized git repo - [gcp-config](https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config).  All gcp resource configurations are stored in a folder named after the gcp project within the project_vars directory.  Pick any project folder in the repo to see its gcp resource configuration files.
+[Example Folder doms-cpe-sample-lle](https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/tree/main/project_vars/doms-cpe-sample-lle)
 
 To create and modify gcp resources using the gitops process, the following steps need to occur.
 1. Create a branch
@@ -26,11 +26,11 @@ After pull request tests have completed successfully, the pull request will be a
 
 Too see some of the types of gcp resources that can be created and managed using the gitops process, please reference the following document.
 
-[Gitops GCP Resource Definitions](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Service_Projects.md#2-create-iam-policies)
+[Gitops GCP Resource Definitions](https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Service_Projects.md#2-create-iam-policies)
 ## Before you begin
 Gather the following the following information that will be used when creating a Google Cloud project.
 
-1.  Determine the name of the project - the naming convention for projects is: kohls-{lob}-{app}-{environment-type}.  Where lob is line of business, app is the application or business domain and environment type is ops, sbx, lle, hle or prd.  Make sure the project name is unique and has not already been used.
+1.  Determine the name of the project - the naming convention for projects is: doms-{lob}-{app}-{environment-type}.  Where lob is line of business, app is the application or business domain and environment type is ops, sbx, lle, hle or prd.  Make sure the project name is unique and has not already been used.
 2.  Determine the Folder ID that the project should use.  Reference Project Folder ID Lookup Tables at the end of this document.
 3.  Determine billing department id that project will be associated with.  Any costs incurred within the project will be charged against that billing department id.
 4.  Determine project requestor. *** Add purpose here ***
@@ -47,11 +47,11 @@ There are two types of gcp projects that can be created and managed, service pro
 **Host Projects** are gcp projects that contain all the network configurations that a service project will use.  Service projects are "linked" to Host projects so that the service project can utilize the network configurations stored in the host project.  Many service projects can be connected to the same host project.
 
 ### New Service Project - Connecting to existing Host Project
-This will be the most common scenario for application teams.  In this scenario, the host project that the service project will be connected to already exists.  Therefore, only the service project needs to be created.  Follow instructions found here in [Creating a service project](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Service_Projects.md).
+This will be the most common scenario for application teams.  In this scenario, the host project that the service project will be connected to already exists.  Therefore, only the service project needs to be created.  Follow instructions found here in [Creating a service project](https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Service_Projects.md).
 ### New Host Project
 This scenario is most likely to be deployed by a Cloud Network Engineer.  Users who are not a Cloud Network Engineer should first consult with the Network team as this configuration can be complex for teams not familiar with Google networking.
 
-To create a host project, follow instructions found here in [How to create/manage a net x environment host project ](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Host_Projects.md#how-to-createmanage-a-netx-environment-host-project).
+To create a host project, follow instructions found here in [How to create/manage a net x environment host project ](https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Host_Projects.md#how-to-createmanage-a-netx-environment-host-project).
 # Appendix
 ## NetX Project Folder ID Lookup Table
 #

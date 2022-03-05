@@ -1,8 +1,8 @@
 ---
-global_vpn_enc_secret: Kohls123
+global_vpn_enc_secret: doms123
 
 transit_hub:
-  namespace: gcp-kohls-dev-cne-transit-lle
+  namespace: gcp-doms-dev-cne-transit-lle
   vpc: xpn-transit
   centralRouterName: transit-hub-central1-router
   eastRouterName: transit-hub-east1-router

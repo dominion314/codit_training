@@ -57,7 +57,7 @@ vpcs:
             - fw-emysql-hle
             - fw-essh-hle
             - fw-enetdiagnostics-hle
-      cavisson-b2b-ing-to-kohls-ecom-ecmdm-hle-ssh:
+      cavisson-b2b-ing-to-doms-ecom-ecmdm-hle-ssh:
         description: SCTASK0761033
         direction: INGRESS
         disabled: false
@@ -83,7 +83,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-ssh
-            - fw-kohls-cavisson-vm
+            - fw-doms-cavisson-vm
       cavisson-prd-to-ecom-ecmdm-hle-netdiagnostics:
         description: SCTASK0720338,REQ0967128
         direction: INGRESS
@@ -104,7 +104,7 @@ vpcs:
           sourceTags:
           targetServiceAccounts:
           targetTags:
-            - fw-kohls-cavisson-vm
+            - fw-doms-cavisson-vm
             - fw-netdiagnostics
       cavisson-prd-to-ecom-ecmdm-hle-tcp-02:
         description: SCTASK0969564
@@ -179,7 +179,7 @@ vpcs:
           sourceTags:
           targetServiceAccounts:
           targetTags:
-            - fw-kohls-cavisson-vm
+            - fw-doms-cavisson-vm
       ecom-ecmdm-hle-ing-to-ecom-ecmdm-hle-consul:
         description: SCTASK0799348
         direction: INGRESS
@@ -564,7 +564,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-zk
-      kohls-cavisson-prd-egress-to-kohls-ecom-ecmdm-hle:
+      doms-cavisson-prd-egress-to-doms-ecom-ecmdm-hle:
         description: SCTASK0759637
         direction: EGRESS
         disabled: false
@@ -588,9 +588,9 @@ vpcs:
           sourceTags:
           targetServiceAccounts:
           targetTags:
-            - fw-kohls-cavisson-vm
+            - fw-doms-cavisson-vm
             - fw-cavisson
-      kohls-cavisson-prd-ing-to-kohls-ecom-ecmdm-hle:
+      doms-cavisson-prd-ing-to-doms-ecom-ecmdm-hle:
         description: SCTASK0756445
         direction: INGRESS
         disabled: false
@@ -614,9 +614,9 @@ vpcs:
           sourceTags:
           targetServiceAccounts:
           targetTags:
-            - fw-kohls-cavisson-vm
+            - fw-doms-cavisson-vm
             - fw-cavisson
-      cavisson-prd-ing-to-kohls-ecom-ecmdm-hle-tcp9999:
+      cavisson-prd-ing-to-doms-ecom-ecmdm-hle-tcp9999:
         description: SCTASK0803586
         direction: INGRESS
         disabled: false
@@ -642,7 +642,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-cavisson
-      kohls-onperm-network-kohls-ecom-ecmdm-hle:
+      doms-onperm-network-doms-ecom-ecmdm-hle:
         description: SCTASK0976269
         direction: INGRESS
         disabled: false
@@ -1205,7 +1205,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-https
-      onprem-mash-ing-to-kohls-ecom-ecmdm-hle-01:
+      onprem-mash-ing-to-doms-ecom-ecmdm-hle-01:
         description: SCTASK0841017
         direction: INGRESS
         disabled: false

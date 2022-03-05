@@ -1,7 +1,7 @@
 ---
 iamPolicyMembersV2:
   groupsByEmail:
-    gcp-etcc-credit-fraudandcollections-engineering@kohls.com:
+    gcp-etcc-credit-fraudandcollections-engineering@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: compute.networkViewer
@@ -11,7 +11,7 @@ iamPolicyMembersV2:
     - role: logging.viewer
     - role: monitoring.admin
     - role: storage.objectViewer
-    gcp-eta-devops-admin@kohls.com:
+    gcp-eta-devops-admin@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: cloudfunctions.developer

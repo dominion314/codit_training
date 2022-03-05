@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90538"
 project:
-  name: kohls-etcc-aacs-lle
+  name: doms-etcc-aacs-lle
   deletionProtect: true
   managed: true
   folderId: "859213288423"

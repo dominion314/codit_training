@@ -1517,7 +1517,7 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-            - external: creportal-sre@kohls-cx-sremgmt-prd.iam.gserviceaccount.com
+            - external: creportal-sre@doms-cx-sremgmt-prd.iam.gserviceaccount.com
           targetTags:
           sourceRanges:
           - "172.26.0.0/15"
@@ -1540,7 +1540,7 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-            - external: bda-azkaban@kohls-bda-dse-prd.iam.gserviceaccount.com
+            - external: bda-azkaban@doms-bda-dse-prd.iam.gserviceaccount.com
           targetTags:
           sourceRanges:
           - "172.26.0.0/15"

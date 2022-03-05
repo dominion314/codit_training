@@ -1,41 +1,41 @@
 ---
 storageBuckets:
-  kohls-etcc-tax-third-party-bad-debt-report-lle:
+  doms-etcc-tax-third-party-bad-debt-report-lle:
     permissions:
       groupsByEmail:
-        gcp-eta-devops-admin@kohls.com:
+        gcp-eta-devops-admin@doms.com:
           roles:
           - storage.objectAdmin
       serviceAccountsByEmail:
-        third-party-bad-debt-lle@kohls-etcc-tax-lle.iam.gserviceaccount.com:
+        third-party-bad-debt-lle@doms-etcc-tax-lle.iam.gserviceaccount.com:
           deletionProtect: false
           roles:
           - storage.objectAdmin
-        tpbd-bizlink-lle@kohls-etcc-tax-lle.iam.gserviceaccount.com:
+        tpbd-bizlink-lle@doms-etcc-tax-lle.iam.gserviceaccount.com:
           deletionProtect: false
           roles:
           - storage.objectViewer
-  kohls-etcc-tax-lle-us-central1-primary-consul-backup:
+  doms-etcc-tax-lle-us-central1-primary-consul-backup:
     permissions:
       groupsByEmail:
-        gcp-eta-devops-admin@kohls.com:
+        gcp-eta-devops-admin@doms.com:
           roles:
           - storage.objectAdmin
-  kohls-etcc-tax-lle-terraform-states:
+  doms-etcc-tax-lle-terraform-states:
     permissions:
       groupsByEmail:
-        gcp-eta-devops-admin@kohls.com:
+        gcp-eta-devops-admin@doms.com:
           roles:
           - storage.objectAdmin
       serviceAccountsByEmail:
-        terraform-devops@kohls-etcc-tax-lle.iam.gserviceaccount.com:
+        terraform-devops@doms-etcc-tax-lle.iam.gserviceaccount.com:
           roles:
           - storage.objectViewer
           - storage.objectCreator
-  kohls-etcc-tax-lle-config-db-deploy:
+  doms-etcc-tax-lle-config-db-deploy:
     permissions:
       groupsByEmail:
-        gcp-eta-devops-admin@kohls.com:
+        gcp-eta-devops-admin@doms.com:
           roles:
           - storage.objectAdmin
       serviceAccountsByEmail:
@@ -43,10 +43,10 @@ storageBuckets:
           deletionProtect: false
           roles:
           - storage.objectAdmin
-  kohls-etcc-tax-lle-geotax-deploy:
+  doms-etcc-tax-lle-geotax-deploy:
     permissions:
       groupsByEmail:
-        gcp-eta-devops-admin@kohls.com:
+        gcp-eta-devops-admin@doms.com:
           roles:
           - storage.objectAdmin
       serviceAccountsByEmail:
@@ -54,10 +54,10 @@ storageBuckets:
           deletionProtect: false
           roles:
           - storage.objectAdmin
-  kohls-etcc-tax-lle-db-updates:
+  doms-etcc-tax-lle-db-updates:
     permissions:
       groupsByEmail:
-        gcp-eta-devops-admin@kohls.com:
+        gcp-eta-devops-admin@doms.com:
           roles:
           - storage.objectAdmin
       serviceAccountsByEmail:
@@ -65,10 +65,10 @@ storageBuckets:
           deletionProtect: false
           roles:
           - storage.objectAdmin
-  kohls-etcc-tax-lle-geotax-patches:
+  doms-etcc-tax-lle-geotax-patches:
     permissions:
       groupsByEmail:
-        gcp-eta-devops-admin@kohls.com:
+        gcp-eta-devops-admin@doms.com:
           roles:
           - storage.objectAdmin
       serviceAccountsByEmail:
@@ -76,10 +76,10 @@ storageBuckets:
           deletionProtect: false
           roles:
           - storage.objectAdmin
-  kohls-etcc-tax-lle-haproxy:
+  doms-etcc-tax-lle-haproxy:
     permissions:
       groupsByEmail:
-        gcp-eta-devops-admin@kohls.com:
+        gcp-eta-devops-admin@doms.com:
           roles:
           - storage.objectAdmin
       serviceAccountsByEmail:

@@ -2,7 +2,7 @@
 vpcs:
   infra-nx-lle:
     firewallRules:
-      kohls-networks-ingress-splunk:
+      doms-networks-ingress-splunk:
         priority: 900
         direction: INGRESS
         description: SNOW-16518
@@ -58,7 +58,7 @@ vpcs:
             - "3514"
             - "4514"
             - "5514"
-      kohls-aws-workspace-corpsubnets-mongo-to-aiops-lle:
+      doms-aws-workspace-corpsubnets-mongo-to-aiops-lle:
         priority: 900
         direction: INGRESS
         description: SCTASK1038187
@@ -86,7 +86,7 @@ vpcs:
           - protocol: "udp"
             ports:
             - "27020"
-      kohls-onprem-jarvis-to-aiops-lle:
+      doms-onprem-jarvis-to-aiops-lle:
         priority: 900
         direction: INGRESS
         description: SCTASK0594512
@@ -108,7 +108,7 @@ vpcs:
             ports:
             - "22"
             - "3306"
-      kohls-onprem-mongo-to-aiops-lle-02:
+      doms-onprem-mongo-to-aiops-lle-02:
         priority: 900
         direction: INGRESS
         description: SCTASK0697568
@@ -131,7 +131,7 @@ vpcs:
           - protocol: "tcp"
             ports:
             - "27020"
-      kohls-onprem-mysql-to-aiops-lle:
+      doms-onprem-mysql-to-aiops-lle:
         priority: 900
         direction: INGRESS
         description: SCTASK0591635
@@ -151,7 +151,7 @@ vpcs:
           - protocol: "tcp"
             ports:
             - "3306"
-      kohls-onprem-rundeck-to-aiops-lle:
+      doms-onprem-rundeck-to-aiops-lle:
         priority: 900
         direction: INGRESS
         description: SCTASK0624680
@@ -172,7 +172,7 @@ vpcs:
             - "80"
             - "443"
             - "4443"
-      kohls-onprem-rundeck-to-aiops-lle-ssh:
+      doms-onprem-rundeck-to-aiops-lle-ssh:
         priority: 900
         direction: INGRESS
         description: SCTASK0679346
@@ -234,7 +234,7 @@ vpcs:
           - protocol: "tcp"
             ports:
             - "22"
-      kohls-onprem-ssh-to-aiops-lle:
+      doms-onprem-ssh-to-aiops-lle:
         priority: 900
         direction: INGRESS
         description: SCTASK0591635
@@ -254,7 +254,7 @@ vpcs:
           - protocol: "tcp"
             ports:
             - "22"
-      kohls-onpremise-host-kohls-infra-xpn-aiops-lle-ssh:
+      doms-onpremise-host-doms-infra-xpn-aiops-lle-ssh:
         priority: 900
         direction: INGRESS
         description: SCTASK0676081
@@ -308,7 +308,7 @@ vpcs:
           - protocol: "tcp"
             ports:
             - "22"
-      kohls-percona-monitoring-to-aiops-lle:
+      doms-percona-monitoring-to-aiops-lle:
         priority: 900
         direction: INGRESS
         description:
@@ -2169,7 +2169,7 @@ vpcs:
             ports:
             - "80"
             - "443"
-      ext-partn-workday-ing-to-kohls-kdx-hle-cent-sftp:
+      ext-partn-workday-ing-to-doms-kdx-hle-cent-sftp:
         priority: 900
         direction: INGRESS
         description: SCTASK0773175,SCTASK0906072
@@ -2358,7 +2358,7 @@ vpcs:
             - "80"
             - "443"
             - "22"
-      kohls-cavisson-prd-ing-kdx-hle-01:
+      doms-cavisson-prd-ing-kdx-hle-01:
         priority: 900
         direction: INGRESS
         description: SCTASK0901046
@@ -2379,7 +2379,7 @@ vpcs:
           - protocol: "tcp"
             ports:
             - "7891-7899"
-      kohls-cavisson-prd-ing-kdx-hle-kdxrel1:
+      doms-cavisson-prd-ing-kdx-hle-kdxrel1:
         priority: 900
         direction: INGRESS
         description: SCTASK0916442
@@ -2400,7 +2400,7 @@ vpcs:
           - protocol: "tcp"
             ports:
             - "7891-7892"
-      kohls-kdx-hle-cent-egr-to-stress-env-01:
+      doms-kdx-hle-cent-egr-to-stress-env-01:
         priority: 900
         direction: INGRESS
         description: SCTASK0761024
@@ -2424,7 +2424,7 @@ vpcs:
             - "2181"
             - "2888"
             - "3888"
-      kohls-kdx-hle-ing-to-kdx-hle-consul:
+      doms-kdx-hle-ing-to-kdx-hle-consul:
         priority: 900
         direction: INGRESS
         description: SCTASK0701142
@@ -2452,7 +2452,7 @@ vpcs:
           - protocol: "udp"
             ports:
             - "8301-8302"
-      kohls-kdx-hle-ing-to-kdx-hle-kdx-services:
+      doms-kdx-hle-ing-to-kdx-hle-kdx-services:
         priority: 900
         direction: INGRESS
         description: SCTASK0701142
@@ -2473,7 +2473,7 @@ vpcs:
           - protocol: "tcp"
             ports:
             - "8080"
-      kohls-kdx-hle-ing-to-kdx-hle-kdx-sftp:
+      doms-kdx-hle-ing-to-kdx-hle-kdx-sftp:
         priority: 900
         direction: INGRESS
         description: SCTASK0701142
@@ -2494,7 +2494,7 @@ vpcs:
           - protocol: "tcp"
             ports:
             - "22"
-      kohls-kdx-hle-ing-to-kdx-hle-kdx-sftp-01:
+      doms-kdx-hle-ing-to-kdx-hle-kdx-sftp-01:
         priority: 900
         direction: INGRESS
         description: SCTASK0701142
@@ -2515,7 +2515,7 @@ vpcs:
           - protocol: "tcp"
             ports:
             - "8080"
-      kohls-kdx-hle-ing-to-kdx-hle-mysql:
+      doms-kdx-hle-ing-to-kdx-hle-mysql:
         priority: 900
         direction: INGRESS
         description: SCTASK0701142,SCTASK0907126,SCTASK0990423
@@ -2541,7 +2541,7 @@ vpcs:
             - "42000-42004"
             - "64460"
             - "64470"
-      kohls-kdx-hle-ing-to-kdx-hle-ssh:
+      doms-kdx-hle-ing-to-kdx-hle-ssh:
         priority: 900
         direction: INGRESS
         description: SCTASK0701142
@@ -2562,7 +2562,7 @@ vpcs:
           - protocol: "tcp"
             ports:
             - "22"
-      kohls-kdx-hle-ing-to-kdx-hle-vault:
+      doms-kdx-hle-ing-to-kdx-hle-vault:
         priority: 900
         direction: INGRESS
         description: SCTASK0701142
@@ -2586,7 +2586,7 @@ vpcs:
             - "8243"
             - "8210"
             - "8253"
-      kohls-kdx-hle-ing-to-kdx-hle-zookeeper:
+      doms-kdx-hle-ing-to-kdx-hle-zookeeper:
         priority: 900
         direction: INGRESS
         description: SCTASK0701142
@@ -2607,7 +2607,7 @@ vpcs:
           - protocol: "tcp"
             ports:
             - "2181"
-      kohls-kos-cicd-ing-to-kdx-hle-tonomi:
+      doms-kos-cicd-ing-to-kdx-hle-tonomi:
         priority: 900
         direction: INGRESS
         description: SCTASK0701142
@@ -2626,7 +2626,7 @@ vpcs:
           - protocol: "tcp"
             ports:
             - "22"
-      kohls-kos-xpn-hle-to-kdx-hle-tonomi:
+      doms-kos-xpn-hle-to-kdx-hle-tonomi:
         priority: 900
         direction: INGRESS
         description: SCTASK1038035
@@ -2646,7 +2646,7 @@ vpcs:
           - protocol: "tcp"
             ports:
             - "22"
-      kohls-on-premise-inet-services-ra-vpn-kdx-hle-cent:
+      doms-on-premise-inet-services-ra-vpn-kdx-hle-cent:
         priority: 900
         direction: INGRESS
         description: SCTASK0546237
@@ -2687,7 +2687,7 @@ vpcs:
             - "8600"
             - "9090"
             - "28080"
-      kohlsonprem-ingress-to-kdx-hle-mysql-tcp-01:
+      domsonprem-ingress-to-kdx-hle-mysql-tcp-01:
         priority: 900
         direction: INGRESS
         description: SCTASK0559136
@@ -2958,7 +2958,7 @@ vpcs:
           - protocol: "tcp"
             ports:
             - "22"
-      kohls-onprem-vpn-to-kdx-lle:
+      doms-onprem-vpn-to-kdx-lle:
         priority: 900
         direction: INGRESS
         description:

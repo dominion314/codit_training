@@ -1,6 +1,6 @@
 ---
 project:
-  name: kohlsdev-cpa-inspec
+  name: domsdev-cpa-inspec
   managed: true
   folderId: "922938220950"
   billingAccount: "00C36A-CD0BDB-E543D0"

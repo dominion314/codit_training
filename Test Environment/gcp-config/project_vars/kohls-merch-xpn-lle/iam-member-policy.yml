@@ -1,16 +1,16 @@
 iamPolicyMembersV2:
   groupsByEmail:
-    gcp-merch-psin-softwareengineer-l3@kohls.com:
+    gcp-merch-psin-softwareengineer-l3@doms.com:
     - role: compute.networkUser
-    gcp-merch-pdpl-softwareengineer-l3@kohls.com:
+    gcp-merch-pdpl-softwareengineer-l3@doms.com:
     - role: compute.networkUser
-    gcp-merch-devops-admin@kohls.com:
+    gcp-merch-devops-admin@doms.com:
     - role: compute.networkUser
   serviceAccountsByEmail:
-    merch-ps-sign-lle-rw@kohls-merch-ps-lle.iam.gserviceaccount.com:
+    merch-ps-sign-lle-rw@doms-merch-ps-lle.iam.gserviceaccount.com:
     - role: compute.networkUser
-    terraform-devops@kohls-merch-pl-lle.iam.gserviceaccount.com:
+    terraform-devops@doms-merch-pl-lle.iam.gserviceaccount.com:
     - role: compute.networkUser
-    kohls-merch-hermes@kohls-merch-pl-lle.iam.gserviceaccount.com:
+    doms-merch-hermes@doms-merch-pl-lle.iam.gserviceaccount.com:
     - role: compute.networkUser
 

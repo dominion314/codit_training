@@ -19,7 +19,7 @@
 |                             | Projects - LLE | 979004260447  |
 |                             | Projects - HLE | 545282641185  |
 |                             | Projects - PRD | 699108937069  |
-| Kohls-Reliability-Engeering | Projects - OPS | 351126992478  |
+| doms-Reliability-Engeering | Projects - OPS | 351126992478  |
 |                             | Projects - SBX | 3295572382    |
 |                             | Projects - LLE | 448245936424  |
 |                             | Projects - HLE | 668741070945  |

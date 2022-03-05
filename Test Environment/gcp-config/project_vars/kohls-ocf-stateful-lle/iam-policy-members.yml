@@ -1,12 +1,12 @@
 ---
 iamPolicyMembers:
   serviceAccountsByEmail:
-    prometheus-ocf@kohls-ocf-stateful-lle.iam.gserviceaccount.com:
+    prometheus-ocf@doms-ocf-stateful-lle.iam.gserviceaccount.com:
       roles:
       - bigquery.dataEditor
       - bigquery.dataViewer
       - bigquery.jobUser
-    stackdriver-ocf@kohls-ocf-stateful-lle.iam.gserviceaccount.com:
+    stackdriver-ocf@doms-ocf-stateful-lle.iam.gserviceaccount.com:
       roles:
       - compute.imageUser
       - compute.instanceAdmin.v1

@@ -3,7 +3,7 @@ storageBuckets:
   gitlab-ocp-cache-sbx:
     permissions:
       serviceAccountsByEmail:
-        gitlab-ocp-cache@kohls-devexp-tools-sbx.iam.gserviceaccount.com:
+        gitlab-ocp-cache@doms-devexp-tools-sbx.iam.gserviceaccount.com:
           deletionProtect: false
           roles:
           - storage.objectAdmin

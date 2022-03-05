@@ -1,10 +1,10 @@
 ---
 storageBuckets:
-  kohls-bda-credit-biz:
+  doms-bda-credit-biz:
     acls:
       groupsByEmail:
-        gcp-credit-gcp-labs-user@kohls.com: WRITER
-        gcp-credit-gcp-labs-superuser@kohls.com: WRITER
-        gcp-bda-devops-admin@kohls.com: OWNER
+        gcp-credit-gcp-labs-user@doms.com: WRITER
+        gcp-credit-gcp-labs-superuser@doms.com: WRITER
+        gcp-bda-devops-admin@doms.com: OWNER
       serviceAccountsByEmail:
-        sas-credit@kohls-bda-credit-prd.iam.gserviceaccount.com: WRITER
+        sas-credit@doms-bda-credit-prd.iam.gserviceaccount.com: WRITER

@@ -1,6 +1,6 @@
 ---
 iamPolicyMembersV2:
   serviceAccountsByEmail:
-    terraform-devops@kohls-etcc-tax-prd.iam.gserviceaccount.com:
+    terraform-devops@doms-etcc-tax-prd.iam.gserviceaccount.com:
     - role: compute.networkUser
     - role: compute.networkViewer

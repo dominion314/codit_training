@@ -74,7 +74,7 @@ vpcs:
             - rel02-blue-cncservice-prod
             - cnc-batch-master
             - qa02
-            - fw-kohls-cavisson-vm
+            - fw-doms-cavisson-vm
             - qa01-blue-cncservice-prod
             - fw-eredis-hle
             - fw-ssh-hle
@@ -220,7 +220,7 @@ vpcs:
           targetTags:
             - fw-ssh
 
-      dflt-access-kohls-networks-to-cnc-alpha-qa-central:
+      dflt-access-doms-networks-to-cnc-alpha-qa-central:
         direction: INGRESS
         description: SNOW-16677
         disabled: false
@@ -248,7 +248,7 @@ vpcs:
             - "10.4.64.165/32"
             - "10.9.65.8/32"
 
-      dflt-access-kohls-public-to-cnc-alpha-qa-central:
+      dflt-access-doms-public-to-cnc-alpha-qa-central:
         direction: INGRESS
         description: SNOW-16677
         disabled: false
@@ -353,7 +353,7 @@ vpcs:
             - "130.211.0.0/22"
             - "35.191.0.0/16"
 
-      default-kohls-lle-to-cnc-alpha-qa-central:
+      default-doms-lle-to-cnc-alpha-qa-central:
         direction: INGRESS
         description: SNOW-16677
         disabled: false
@@ -598,7 +598,7 @@ vpcs:
             - "23.205.127.0/24"
             - "23.67.60.0/24"
 
-      gspann-b2b-to-ingress-kohls-kos-xpn-lle:
+      gspann-b2b-to-ingress-doms-kos-xpn-lle:
         direction: INGRESS
         description: SNOW-16677
         disabled: false
@@ -646,7 +646,7 @@ vpcs:
           targetTags:
             - fw-allow-all
 
-      kohls-klink-application-ingress-kohls-kos-xpn-lle:
+      doms-klink-application-ingress-doms-kos-xpn-lle:
         direction: INGRESS
         description: SNOW-16677
         disabled: false
@@ -910,11 +910,11 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "kos-servicereg@kohls-cx-shop-lle.iam.gserviceaccount.com"
+          - external: "kos-servicereg@doms-cx-shop-lle.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: "kos-servicereg@kohls-cx-shop-lle.iam.gserviceaccount.com"
+          - external: "kos-servicereg@doms-cx-shop-lle.iam.gserviceaccount.com"
           sourceTags:
           allow:
           - protocol: "tcp"

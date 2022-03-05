@@ -118,11 +118,11 @@ vpcs:
           targettags:
           - paas-consul
           - paas-consul-agent
-      app-mongodb-egr-kohls-cx-innovation-hle:
+      app-mongodb-egr-doms-cx-innovation-hle:
         description: ''
         direction: EGRESS
         disabled: false
-        name: app-mongodb-egr-kohls-cx-innovation-hle
+        name: app-mongodb-egr-doms-cx-innovation-hle
         priority: 990
         rule:
           allow:
@@ -140,11 +140,11 @@ vpcs:
           - ''
           targettags:
           - gke-cluster
-      app-to-mongodb-ing-kohls-cx-innovation-hle:
+      app-to-mongodb-ing-doms-cx-innovation-hle:
         description: ''
         direction: INGRESS
         disabled: false
-        name: app-to-mongodb-ing-kohls-cx-innovation-hle
+        name: app-to-mongodb-ing-doms-cx-innovation-hle
         priority: 990
         rule:
           allow:
@@ -160,11 +160,11 @@ vpcs:
           - gke-cluster
           targettags:
           - cache-instance
-      app-to-mongodb-ing-kohls-cx-innovation-hle-01:
+      app-to-mongodb-ing-doms-cx-innovation-hle-01:
         description: ''
         direction: INGRESS
         disabled: false
-        name: app-to-mongodb-ing-kohls-cx-innovation-hle-01
+        name: app-to-mongodb-ing-doms-cx-innovation-hle-01
         priority: 990
         rule:
           allow:
@@ -826,7 +826,7 @@ vpcs:
           - ''
           targettags:
           - mongodb-hle
-          - kohls-vpn
+          - doms-vpn
           - paas-openshift-app
           - all
       cx-db-hle-ingr-cx-xpn-mgm-hle-01:
@@ -1565,11 +1565,11 @@ vpcs:
           - ''
           targettags:
           - ''
-      cx-hle-to-kohls-cx-openshift-hle-egr-v39:
+      cx-hle-to-doms-cx-openshift-hle-egr-v39:
         description: ''
         direction: EGRESS
         disabled: false
-        name: cx-hle-to-kohls-cx-openshift-hle-egr-v39
+        name: cx-hle-to-doms-cx-openshift-hle-egr-v39
         priority: 900
         rule:
           allow:
@@ -2355,11 +2355,11 @@ vpcs:
           - ''
           targettags:
           - ''
-      cx-mgmt-hle-egr-kohls-ftp-server:
+      cx-mgmt-hle-egr-doms-ftp-server:
         description: ''
         direction: EGRESS
         disabled: false
-        name: cx-mgmt-hle-egr-kohls-ftp-server
+        name: cx-mgmt-hle-egr-doms-ftp-server
         priority: 900
         rule:
           allow:
@@ -2418,7 +2418,7 @@ vpcs:
           - ''
           targettags:
           - cloud-mgmt
-          - kohls-vpn
+          - doms-vpn
           - cache-instance
       cx-mgmt-hle-ing-cx-innovation-hle-cache-instance:
         description: ''
@@ -4020,11 +4020,11 @@ vpcs:
           - ''
           targettags:
           - ''
-      cx-openshift-hle-to-kohls-splunk-monitoring-lle-v39:
+      cx-openshift-hle-to-doms-splunk-monitoring-lle-v39:
         description: ''
         direction: EGRESS
         disabled: false
-        name: cx-openshift-hle-to-kohls-splunk-monitoring-lle-v39
+        name: cx-openshift-hle-to-doms-splunk-monitoring-lle-v39
         priority: 900
         rule:
           allow:
@@ -4734,11 +4734,11 @@ vpcs:
           - paas-openshift-app
           targettags:
           - ''
-      cx-xpn-prv-subnet-to-kohls-shared-services-tcp-01:
+      cx-xpn-prv-subnet-to-doms-shared-services-tcp-01:
         description: ''
         direction: EGRESS
         disabled: false
-        name: cx-xpn-prv-subnet-to-kohls-shared-services-tcp-01
+        name: cx-xpn-prv-subnet-to-doms-shared-services-tcp-01
         priority: 900
         rule:
           allow:
@@ -23558,11 +23558,11 @@ vpcs:
           targettags:
           - mysqldb-hle
           - mongodb-hle
-      gspann-remote-hosts-kohls-cx-openshift-hle-webservices:
+      gspann-remote-hosts-doms-cx-openshift-hle-webservices:
         description: ''
         direction: INGRESS
         disabled: false
-        name: gspann-remote-hosts-kohls-cx-openshift-hle-webservices
+        name: gspann-remote-hosts-doms-cx-openshift-hle-webservices
         priority: 900
         rule:
           allow:
@@ -23918,7 +23918,7 @@ vpcs:
           sourcetags:
           - ''
           targettags:
-          - kohls-vpn
+          - doms-vpn
       kloud9-b2b-ing-to-cx-db-hle:
         description: ''
         direction: INGRESS
@@ -23946,7 +23946,7 @@ vpcs:
           sourcetags:
           - ''
           targettags:
-          - kohls-vpn
+          - doms-vpn
       kloud9-b2b-ing-to-cx-db-hle-01:
         description: ''
         direction: INGRESS
@@ -23997,7 +23997,7 @@ vpcs:
           sourcetags:
           - ''
           targettags:
-          - kohls-vpn
+          - doms-vpn
       kloud9-b2b-ing-to-cx-management-cavssn-hle:
         description: ''
         direction: INGRESS
@@ -24028,7 +24028,7 @@ vpcs:
           sourcetags:
           - ''
           targettags:
-          - kohls-vpn
+          - doms-vpn
       kloud9-b2b-ing-to-cx-openshift-hle:
         description: ''
         direction: INGRESS
@@ -24059,7 +24059,7 @@ vpcs:
           sourcetags:
           - ''
           targettags:
-          - kohls-vpn
+          - doms-vpn
       kloud9-b2b-ing-to-cx-xpn-hle:
         description: ''
         direction: INGRESS
@@ -24091,12 +24091,12 @@ vpcs:
           sourcetags:
           - ''
           targettags:
-          - kohls-vpn
-      kloud9-b2b-ing-to-kohls-cx-xpn-prd:
+          - doms-vpn
+      kloud9-b2b-ing-to-doms-cx-xpn-prd:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kloud9-b2b-ing-to-kohls-cx-xpn-prd
+        name: kloud9-b2b-ing-to-doms-cx-xpn-prd
         priority: 900
         rule:
           allow:
@@ -24111,7 +24111,7 @@ vpcs:
           - ''
           targettags:
           - mongodb-hle
-          - kohls-vpn
+          - doms-vpn
           - paas-openshift-app
           - all
       kloud9-b2b-ingress-to-cx-management-cavssn-hle:
@@ -24284,7 +24284,7 @@ vpcs:
           sourcetags:
           - ''
           targettags:
-          - kohls-vpn
+          - doms-vpn
           - devops-tools
           - jenkins-mgmt
           - all
@@ -24351,7 +24351,7 @@ vpcs:
           targettags:
           - management-prd
           - nde-mgmt
-          - kohls-vpn
+          - doms-vpn
           - devops-tools
           - jenkins-mgmt
       kloud9-new-cx-xpn-hle:
@@ -24377,7 +24377,7 @@ vpcs:
           - pass-openshift-app
           - mysql-db-hle
           - mongo-db-hle
-          - kohls-vpn
+          - doms-vpn
       kloud9-remote-hosts-ingress-consul-ui:
         description: ''
         direction: INGRESS
@@ -24486,7 +24486,7 @@ vpcs:
           sourcetags:
           - ''
           targettags:
-          - kohls-vpn
+          - doms-vpn
       kloud9-vpn-to-ingress-cx-openshift-hle-02:
         description: ''
         direction: INGRESS
@@ -24505,7 +24505,7 @@ vpcs:
           sourcetags:
           - ''
           targettags:
-          - kohls-vpn
+          - doms-vpn
       kloud9-vpn-to-ingress-cx-xpn-hle-01:
         description: ''
         direction: INGRESS
@@ -24536,7 +24536,7 @@ vpcs:
           sourcetags:
           - ''
           targettags:
-          - kohls-vpn
+          - doms-vpn
       kloud9new-b2b-to-cx-openshift-hle-01:
         description: ''
         direction: INGRESS
@@ -24566,11 +24566,11 @@ vpcs:
           - ''
           targettags:
           - paas-openshift-app
-      kohls-bda-prd-igr-to-kohls-cx-db-hle-mongodb:
+      doms-bda-prd-igr-to-doms-cx-db-hle-mongodb:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-bda-prd-igr-to-kohls-cx-db-hle-mongodb
+        name: doms-bda-prd-igr-to-doms-cx-db-hle-mongodb
         priority: 900
         rule:
           allow:
@@ -24585,11 +24585,11 @@ vpcs:
           - ''
           targettags:
           - mongodb-hle
-      kohls-bda-prd-igr-to-kohls-cx-db-hle-mongodb-tcp:
+      doms-bda-prd-igr-to-doms-cx-db-hle-mongodb-tcp:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-bda-prd-igr-to-kohls-cx-db-hle-mongodb-tcp
+        name: doms-bda-prd-igr-to-doms-cx-db-hle-mongodb-tcp
         priority: 900
         rule:
           allow:
@@ -24604,11 +24604,11 @@ vpcs:
           - ''
           targettags:
           - mongodb-hle
-      kohls-cx-db-hle-egr-to-apache-server:
+      doms-cx-db-hle-egr-to-apache-server:
         description: ''
         direction: EGRESS
         disabled: false
-        name: kohls-cx-db-hle-egr-to-apache-server
+        name: doms-cx-db-hle-egr-to-apache-server
         priority: 900
         rule:
           allow:
@@ -24626,11 +24626,11 @@ vpcs:
           - ''
           targettags:
           - ''
-      kohls-cx-db-hle-igr-to-internal-vpc:
+      doms-cx-db-hle-igr-to-internal-vpc:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-db-hle-igr-to-internal-vpc
+        name: doms-cx-db-hle-igr-to-internal-vpc
         priority: 900
         rule:
           allow:
@@ -24647,11 +24647,11 @@ vpcs:
           - mongodb-hle
           targettags:
           - mongodb-hle
-      kohls-cx-db-hle-ing-gke-app-node:
+      doms-cx-db-hle-ing-gke-app-node:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-db-hle-ing-gke-app-node
+        name: doms-cx-db-hle-ing-gke-app-node
         priority: 900
         rule:
           allow:
@@ -24668,11 +24668,11 @@ vpcs:
           - ''
           targettags:
           - gke-app-node
-      kohls-cx-db-hle-ingr-to-apache-server:
+      doms-cx-db-hle-ingr-to-apache-server:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-db-hle-ingr-to-apache-server
+        name: doms-cx-db-hle-ingr-to-apache-server
         priority: 900
         rule:
           allow:
@@ -24687,16 +24687,16 @@ vpcs:
           sourcetags:
           - paas-openshift-node-app
           - mongodb-hle
-          - kohls-vpn
+          - doms-vpn
           targettags:
           - paas-openshift-node-app
           - mongodb-hle
-          - kohls-vpn
-      kohls-cx-hle-intra-vpc-access:
+          - doms-vpn
+      doms-cx-hle-intra-vpc-access:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-hle-intra-vpc-access
+        name: doms-cx-hle-intra-vpc-access
         priority: 900
         rule:
           allow:
@@ -24711,11 +24711,11 @@ vpcs:
           - devops-tools
           targettags:
           - gke-app-node
-      kohls-cx-hle-intra-vpc-access-nginx-metrics:
+      doms-cx-hle-intra-vpc-access-nginx-metrics:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-hle-intra-vpc-access-nginx-metrics
+        name: doms-cx-hle-intra-vpc-access-nginx-metrics
         priority: 900
         rule:
           allow:
@@ -24730,11 +24730,11 @@ vpcs:
           - gke-app-node
           targettags:
           - gke-ingress-proxy
-      kohls-cx-hle-intra-vpc-gke-management-to-gke-app-node:
+      doms-cx-hle-intra-vpc-gke-management-to-gke-app-node:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-hle-intra-vpc-gke-management-to-gke-app-node
+        name: doms-cx-hle-intra-vpc-gke-management-to-gke-app-node
         priority: 900
         rule:
           allow:
@@ -24749,11 +24749,11 @@ vpcs:
           - gke-ingress-proxy
           targettags:
           - gke-app-node
-      kohls-cx-hle-prd-ing-devops-tools:
+      doms-cx-hle-prd-ing-devops-tools:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-hle-prd-ing-devops-tools
+        name: doms-cx-hle-prd-ing-devops-tools
         priority: 900
         rule:
           allow:
@@ -24772,11 +24772,11 @@ vpcs:
           - ''
           targettags:
           - devops-tools
-      kohls-cx-innovation-hle-ing-mongo-db-servers:
+      doms-cx-innovation-hle-ing-mongo-db-servers:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-innovation-hle-ing-mongo-db-servers
+        name: doms-cx-innovation-hle-ing-mongo-db-servers
         priority: 900
         rule:
           allow:
@@ -24789,12 +24789,12 @@ vpcs:
           sourcetags:
           - ''
           targettags:
-          - kohls-vpn
-      kohls-cx-innovation-hle-intra-subnet-access:
+          - doms-vpn
+      doms-cx-innovation-hle-intra-subnet-access:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-innovation-hle-intra-subnet-access
+        name: doms-cx-innovation-hle-intra-subnet-access
         priority: 900
         rule:
           allow:
@@ -24810,11 +24810,11 @@ vpcs:
           - gke-cluster
           targettags:
           - cache-instance
-      kohls-cx-innovation-hle-intra-subnet-access01:
+      doms-cx-innovation-hle-intra-subnet-access01:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-innovation-hle-intra-subnet-access01
+        name: doms-cx-innovation-hle-intra-subnet-access01
         priority: 900
         rule:
           allow:
@@ -24833,11 +24833,11 @@ vpcs:
           - ''
           targettags:
           - cache-instance
-      kohls-cx-mgmt-hle-ing-cx-innovation-hle:
+      doms-cx-mgmt-hle-ing-cx-innovation-hle:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-mgmt-hle-ing-cx-innovation-hle
+        name: doms-cx-mgmt-hle-ing-cx-innovation-hle
         priority: 900
         rule:
           allow:
@@ -24856,11 +24856,11 @@ vpcs:
           - ''
           targettags:
           - cloud-mgmt
-      kohls-cx-mgmt-hle-ing-mongo-db-servers:
+      doms-cx-mgmt-hle-ing-mongo-db-servers:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-mgmt-hle-ing-mongo-db-servers
+        name: doms-cx-mgmt-hle-ing-mongo-db-servers
         priority: 900
         rule:
           allow:
@@ -24877,11 +24877,11 @@ vpcs:
           - ''
           targettags:
           - nde-mgmt
-      kohls-cx-mgmt-hle-inter-vpc-access-ingress-proxy:
+      doms-cx-mgmt-hle-inter-vpc-access-ingress-proxy:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-mgmt-hle-inter-vpc-access-ingress-proxy
+        name: doms-cx-mgmt-hle-inter-vpc-access-ingress-proxy
         priority: 900
         rule:
           allow:
@@ -24899,11 +24899,11 @@ vpcs:
           targettags:
           - gke-ingress-proxy
           - devops-tools
-      kohls-cx-mgmt-hle-inter-vpc-access-nginx-gke-consul:
+      doms-cx-mgmt-hle-inter-vpc-access-nginx-gke-consul:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-mgmt-hle-inter-vpc-access-nginx-gke-consul
+        name: doms-cx-mgmt-hle-inter-vpc-access-nginx-gke-consul
         priority: 900
         rule:
           allow:
@@ -24921,11 +24921,11 @@ vpcs:
           - cx-consul
           - gke-app-node
           - gke-ingress-proxy
-      kohls-cx-mgmt-hle-inter-vpc-gke-app-node:
+      doms-cx-mgmt-hle-inter-vpc-gke-app-node:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-mgmt-hle-inter-vpc-gke-app-node
+        name: doms-cx-mgmt-hle-inter-vpc-gke-app-node
         priority: 900
         rule:
           allow:
@@ -24941,11 +24941,11 @@ vpcs:
           - ''
           targettags:
           - gke-app-node
-      kohls-cx-mgmt-hle-interconnecting-cx-innovation-hle:
+      doms-cx-mgmt-hle-interconnecting-cx-innovation-hle:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-mgmt-hle-interconnecting-cx-innovation-hle
+        name: doms-cx-mgmt-hle-interconnecting-cx-innovation-hle
         priority: 900
         rule:
           allow:
@@ -24964,11 +24964,11 @@ vpcs:
           - ''
           targettags:
           - cloud-mgmt
-      kohls-cx-mgmt-hle-to-kohls-cx-hle:
+      doms-cx-mgmt-hle-to-doms-cx-hle:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-mgmt-hle-to-kohls-cx-hle
+        name: doms-cx-mgmt-hle-to-doms-cx-hle
         priority: 900
         rule:
           allow:
@@ -24988,11 +24988,11 @@ vpcs:
           - ''
           targettags:
           - gke-app-node
-      kohls-cx-openshift-hle-to-cx-hle-ing-v39:
+      doms-cx-openshift-hle-to-cx-hle-ing-v39:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-openshift-hle-to-cx-hle-ing-v39
+        name: doms-cx-openshift-hle-to-cx-hle-ing-v39
         priority: 900
         rule:
           allow:
@@ -25010,11 +25010,11 @@ vpcs:
           - ''
           targettags:
           - paas-consul
-      kohls-cx-public-hle-ing-cx-hle-ingress-proxy:
+      doms-cx-public-hle-ing-cx-hle-ingress-proxy:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-public-hle-ing-cx-hle-ingress-proxy
+        name: doms-cx-public-hle-ing-cx-hle-ingress-proxy
         priority: 900
         rule:
           allow:
@@ -25028,11 +25028,11 @@ vpcs:
           - ''
           targettags:
           - gke-ingress-proxy
-      kohls-cx-xpn-hle-ingress-cavisson-server:
+      doms-cx-xpn-hle-ingress-cavisson-server:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-xpn-hle-ingress-cavisson-server
+        name: doms-cx-xpn-hle-ingress-cavisson-server
         priority: 900
         rule:
           allow:
@@ -25058,11 +25058,11 @@ vpcs:
           - ''
           targettags:
           - nde-mgmt
-      kohls-cx-xpn-hle-ingress-cluster-nodes-mongo-db:
+      doms-cx-xpn-hle-ingress-cluster-nodes-mongo-db:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-xpn-hle-ingress-cluster-nodes-mongo-db
+        name: doms-cx-xpn-hle-ingress-cluster-nodes-mongo-db
         priority: 900
         rule:
           allow:
@@ -25077,11 +25077,11 @@ vpcs:
           - ''
           targettags:
           - mongo-db-hle
-      kohls-cx-xpn-hle-ingress-cluster-nodes-mysql-db:
+      doms-cx-xpn-hle-ingress-cluster-nodes-mysql-db:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-xpn-hle-ingress-cluster-nodes-mysql-db
+        name: doms-cx-xpn-hle-ingress-cluster-nodes-mysql-db
         priority: 900
         rule:
           allow:
@@ -25097,11 +25097,11 @@ vpcs:
           - ''
           targettags:
           - mysql-db-hle
-      kohls-cx-xpn-hle-intra-subnetwork-access:
+      doms-cx-xpn-hle-intra-subnetwork-access:
         description: ''
         direction: EGRESS
         disabled: false
-        name: kohls-cx-xpn-hle-intra-subnetwork-access
+        name: doms-cx-xpn-hle-intra-subnetwork-access
         priority: 400
         rule:
           allow:
@@ -25117,11 +25117,11 @@ vpcs:
           - ''
           targettags:
           - paas-openshift-node
-      kohls-cx-xpn-hle-intra-subnetwork-access-tcp:
+      doms-cx-xpn-hle-intra-subnetwork-access-tcp:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-xpn-hle-intra-subnetwork-access-tcp
+        name: doms-cx-xpn-hle-intra-subnetwork-access-tcp
         priority: 500
         rule:
           allow:
@@ -25136,11 +25136,11 @@ vpcs:
           - ''
           targettags:
           - paas-openshift-node-router
-      kohls-cx-xpn-hle-intra-subnetwork-egress-access:
+      doms-cx-xpn-hle-intra-subnetwork-egress-access:
         description: ''
         direction: EGRESS
         disabled: false
-        name: kohls-cx-xpn-hle-intra-subnetwork-egress-access
+        name: doms-cx-xpn-hle-intra-subnetwork-egress-access
         priority: 900
         rule:
           allow:
@@ -25156,11 +25156,11 @@ vpcs:
           - ''
           targettags:
           - paas-openshift-node-app
-      kohls-cx-xpn-hle-intra-subnetwork-ingress-access:
+      doms-cx-xpn-hle-intra-subnetwork-ingress-access:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-xpn-hle-intra-subnetwork-ingress-access
+        name: doms-cx-xpn-hle-intra-subnetwork-ingress-access
         priority: 900
         rule:
           allow:
@@ -25174,11 +25174,11 @@ vpcs:
           - paas-openshift-node-app
           targettags:
           - paas-openshift-node
-      kohls-cx-xpn-lle-to-ing-cx-xpn-hle-nd-agent-01:
+      doms-cx-xpn-lle-to-ing-cx-xpn-hle-nd-agent-01:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-cx-xpn-lle-to-ing-cx-xpn-hle-nd-agent-01
+        name: doms-cx-xpn-lle-to-ing-cx-xpn-hle-nd-agent-01
         priority: 900
         rule:
           allow:
@@ -25213,11 +25213,11 @@ vpcs:
           - ''
           targettags:
           - nde-mgmt
-      kohls-cx-xpn-openshift-hle-egr-to-kohls-vault-lle:
+      doms-cx-xpn-openshift-hle-egr-to-doms-vault-lle:
         description: ''
         direction: EGRESS
         disabled: false
-        name: kohls-cx-xpn-openshift-hle-egr-to-kohls-vault-lle
+        name: doms-cx-xpn-openshift-hle-egr-to-doms-vault-lle
         priority: 900
         rule:
           allow:
@@ -25235,11 +25235,11 @@ vpcs:
           - paas-openshift-node-app
           - paas-openshift-node-pii
           - paas-openshift-node
-      kohls-on-prem-ext-to-cx-hle-01:
+      doms-on-prem-ext-to-cx-hle-01:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-on-prem-ext-to-cx-hle-01
+        name: doms-on-prem-ext-to-cx-hle-01
         priority: 900
         rule:
           allow:
@@ -25254,11 +25254,11 @@ vpcs:
           - ''
           targettags:
           - ''
-      kohls-on-prem-to-cx-openshift-http-https-01:
+      doms-on-prem-to-cx-openshift-http-https-01:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-on-prem-to-cx-openshift-http-https-01
+        name: doms-on-prem-to-cx-openshift-http-https-01
         priority: 900
         rule:
           allow:
@@ -25275,11 +25275,11 @@ vpcs:
           - ''
           targettags:
           - ''
-      kohls-on-prem-to-cx-openshift-ssh-01:
+      doms-on-prem-to-cx-openshift-ssh-01:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-on-prem-to-cx-openshift-ssh-01
+        name: doms-on-prem-to-cx-openshift-ssh-01
         priority: 900
         rule:
           allow:
@@ -25296,11 +25296,11 @@ vpcs:
           - ''
           targettags:
           - ''
-      kohls-on-premises-hosts-cx-xpn-hle-tcp:
+      doms-on-premises-hosts-cx-xpn-hle-tcp:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-on-premises-hosts-cx-xpn-hle-tcp
+        name: doms-on-premises-hosts-cx-xpn-hle-tcp
         priority: 900
         rule:
           allow:
@@ -25317,11 +25317,11 @@ vpcs:
           - ''
           targettags:
           - nde-mgmt
-      kohls-onprem-to-cx-db-hle-mongodb-acc01:
+      doms-onprem-to-cx-db-hle-mongodb-acc01:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-onprem-to-cx-db-hle-mongodb-acc01
+        name: doms-onprem-to-cx-db-hle-mongodb-acc01
         priority: 900
         rule:
           allow:
@@ -25335,12 +25335,12 @@ vpcs:
           sourcetags:
           - ''
           targettags:
-          - kohls-vpn
-      kohls-onprem-to-devops-tools-cx-hle-01:
+          - doms-vpn
+      doms-onprem-to-devops-tools-cx-hle-01:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-onprem-to-devops-tools-cx-hle-01
+        name: doms-onprem-to-devops-tools-cx-hle-01
         priority: 900
         rule:
           allow:
@@ -25361,11 +25361,11 @@ vpcs:
           - ''
           targettags:
           - ''
-      kohls-onprem-to-mongo-cx-db-hle-01:
+      doms-onprem-to-mongo-cx-db-hle-01:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-onprem-to-mongo-cx-db-hle-01
+        name: doms-onprem-to-mongo-cx-db-hle-01
         priority: 900
         rule:
           allow:
@@ -25381,11 +25381,11 @@ vpcs:
           targettags:
           - mysql-db-hle
           - mongo-db-hle
-      kohls-preprod-lab-network-ingress-gke-subnet:
+      doms-preprod-lab-network-ingress-gke-subnet:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-preprod-lab-network-ingress-gke-subnet
+        name: doms-preprod-lab-network-ingress-gke-subnet
         priority: 900
         rule:
           allow:
@@ -25409,11 +25409,11 @@ vpcs:
           - ''
           targettags:
           - gke-app-node
-      kohls-store-ing-to-cx-openshift-hle:
+      doms-store-ing-to-cx-openshift-hle:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-store-ing-to-cx-openshift-hle
+        name: doms-store-ing-to-cx-openshift-hle
         priority: 900
         rule:
           allow:
@@ -25437,11 +25437,11 @@ vpcs:
           - ''
           targettags:
           - paas-openshift-node-router
-      kohls-user-segments-ingress-gke-subnet:
+      doms-user-segments-ingress-gke-subnet:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-user-segments-ingress-gke-subnet
+        name: doms-user-segments-ingress-gke-subnet
         priority: 900
         rule:
           allow:
@@ -25461,11 +25461,11 @@ vpcs:
           - ''
           targettags:
           - gke-app-node
-      kohls-vault-lle-ingress-gke-app-nodes:
+      doms-vault-lle-ingress-gke-app-nodes:
         description: ''
         direction: INGRESS
         disabled: false
-        name: kohls-vault-lle-ingress-gke-app-nodes
+        name: doms-vault-lle-ingress-gke-app-nodes
         priority: 900
         rule:
           allow:
@@ -25481,11 +25481,11 @@ vpcs:
           - ''
           targettags:
           - gke-app-node
-      mgmt-cavisson-egr-kohls-cx-innovation-hle:
+      mgmt-cavisson-egr-doms-cx-innovation-hle:
         description: ''
         direction: EGRESS
         disabled: false
-        name: mgmt-cavisson-egr-kohls-cx-innovation-hle
+        name: mgmt-cavisson-egr-doms-cx-innovation-hle
         priority: 990
         rule:
           allow:
@@ -25508,11 +25508,11 @@ vpcs:
           - egproxy-cluster
           - cache-instance
           - gke-cluster
-      mgmt-cavisson-ing-kohls-cx-innovation-hle:
+      mgmt-cavisson-ing-doms-cx-innovation-hle:
         description: ''
         direction: INGRESS
         disabled: false
-        name: mgmt-cavisson-ing-kohls-cx-innovation-hle
+        name: mgmt-cavisson-ing-doms-cx-innovation-hle
         priority: 990
         rule:
           allow:
@@ -25658,11 +25658,11 @@ vpcs:
           - ''
           targettags:
           - cloud-mgmt
-      nat-gateway-egr-to-kohls-cx-xpn-hle:
+      nat-gateway-egr-to-doms-cx-xpn-hle:
         description: ''
         direction: EGRESS
         disabled: false
-        name: nat-gateway-egr-to-kohls-cx-xpn-hle
+        name: nat-gateway-egr-to-doms-cx-xpn-hle
         priority: 900
         rule:
           allow:
@@ -25678,11 +25678,11 @@ vpcs:
           - ''
           targettags:
           - fw-cx-mgmt-hle-nat-gw
-      nat-gateway-ing-to-kohls-cx-xpn-hle:
+      nat-gateway-ing-to-doms-cx-xpn-hle:
         description: ''
         direction: INGRESS
         disabled: false
-        name: nat-gateway-ing-to-kohls-cx-xpn-hle
+        name: nat-gateway-ing-to-doms-cx-xpn-hle
         priority: 900
         rule:
           allow:
@@ -25723,11 +25723,11 @@ vpcs:
           - ''
           targettags:
           - mysql-db-hle
-      on-prem-ing-to-kohls-cx-xpn-hle-rdp:
+      on-prem-ing-to-doms-cx-xpn-hle-rdp:
         description: ''
         direction: INGRESS
         disabled: false
-        name: on-prem-ing-to-kohls-cx-xpn-hle-rdp
+        name: on-prem-ing-to-doms-cx-xpn-hle-rdp
         priority: 900
         rule:
           allow:
@@ -25742,11 +25742,11 @@ vpcs:
           - ''
           targettags:
           - cloud-mgmt
-      on-prem-ing-to-kohls-cx-xpn-hle-tcp:
+      on-prem-ing-to-doms-cx-xpn-hle-tcp:
         description: ''
         direction: INGRESS
         disabled: false
-        name: on-prem-ing-to-kohls-cx-xpn-hle-tcp
+        name: on-prem-ing-to-doms-cx-xpn-hle-tcp
         priority: 900
         rule:
           allow:
@@ -25875,7 +25875,7 @@ vpcs:
           - ''
           targettags:
           - management-prd
-          - kohls-vpn
+          - doms-vpn
       openshift-heketi-subnet-egr-to-access-openshift-gluster-01:
         description: ''
         direction: EGRESS
@@ -25975,11 +25975,11 @@ vpcs:
           - paas-openshift-node-app
           - paas-openshift-infra
           - paas-openshift-app
-      origin-url-to-kohls-cx-innovation-hle:
+      origin-url-to-doms-cx-innovation-hle:
         description: ''
         direction: INGRESS
         disabled: false
-        name: origin-url-to-kohls-cx-innovation-hle
+        name: origin-url-to-doms-cx-innovation-hle
         priority: 900
         rule:
           allow:
@@ -26015,11 +26015,11 @@ vpcs:
           - ''
           targettags:
           - ''
-      pod-to-pod-kohls-egr-cx-innovation-hle-01:
+      pod-to-pod-doms-egr-cx-innovation-hle-01:
         description: ''
         direction: EGRESS
         disabled: false
-        name: pod-to-pod-kohls-egr-cx-innovation-hle-01
+        name: pod-to-pod-doms-egr-cx-innovation-hle-01
         priority: 990
         rule:
           allow:
@@ -26041,11 +26041,11 @@ vpcs:
           - ''
           targettags:
           - ''
-      pod-to-pod-kohls-egr-cx-innovation-hle-02:
+      pod-to-pod-doms-egr-cx-innovation-hle-02:
         description: ''
         direction: EGRESS
         disabled: false
-        name: pod-to-pod-kohls-egr-cx-innovation-hle-02
+        name: pod-to-pod-doms-egr-cx-innovation-hle-02
         priority: 990
         rule:
           allow:
@@ -26066,11 +26066,11 @@ vpcs:
           - ''
           targettags:
           - ''
-      pod-to-pod-kohls-ing-cx-innovation-hle-01:
+      pod-to-pod-doms-ing-cx-innovation-hle-01:
         description: ''
         direction: INGRESS
         disabled: false
-        name: pod-to-pod-kohls-ing-cx-innovation-hle-01
+        name: pod-to-pod-doms-ing-cx-innovation-hle-01
         priority: 990
         rule:
           allow:
@@ -26091,11 +26091,11 @@ vpcs:
           - ''
           targettags:
           - ''
-      pod-to-pod-kohls-ing-cx-innovation-hle-02:
+      pod-to-pod-doms-ing-cx-innovation-hle-02:
         description: ''
         direction: INGRESS
         disabled: false
-        name: pod-to-pod-kohls-ing-cx-innovation-hle-02
+        name: pod-to-pod-doms-ing-cx-innovation-hle-02
         priority: 990
         rule:
           allow:

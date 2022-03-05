@@ -26,11 +26,11 @@ vpcs:
             bluecat-id: 1555540
         permissions:
           serviceAccountsByEmail:
-          - terraform-sec@kohls-sec-engineering-prd.iam.gserviceaccount.com
+          - terraform-sec@doms-sec-engineering-prd.iam.gserviceaccount.com
           - 622655287475@cloudservices.gserviceaccount.com
           - 622655287475-compute@developer.gserviceaccount.com
           - service-622655287475@container-engine-robot.iam.gserviceaccount.com
           groupsByEmail:
-          - gcp-securitytech-devops-admin@kohls.com
-          - gcp-securitytech-devops-manager@kohls.com
+          - gcp-securitytech-devops-admin@doms.com
+          - gcp-securitytech-devops-manager@doms.com
 

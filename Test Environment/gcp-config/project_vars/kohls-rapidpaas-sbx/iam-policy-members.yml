@@ -1,7 +1,7 @@
 ---
 iamPolicyMembers:
   serviceAccountsByEmail:
-    ocp-installer@kohls-rapidpaas-sbx.iam.gserviceaccount.com:
+    ocp-installer@doms-rapidpaas-sbx.iam.gserviceaccount.com:
       roles:
       - compute.admin
       - dns.admin
@@ -11,7 +11,7 @@ iamPolicyMembers:
       - storage.admin
 
   usersByEmail:
-    adam.doman@kohls.com:
+    adam.doman@doms.com:
       roles:
       - compute.instanceAdmin.v1
       - compute.networkAdmin
@@ -23,7 +23,7 @@ iamPolicyMembers:
       - iam.serviceAccountAdmin
       - iam.serviceAccountKeyAdmin
       - iam.serviceAccountUser
-    ford.donald@kohls.com:
+    ford.donald@doms.com:
       roles:
       - compute.instanceAdmin.v1
       - compute.networkAdmin
@@ -35,7 +35,7 @@ iamPolicyMembers:
       - iam.serviceAccountAdmin
       - iam.serviceAccountKeyAdmin
       - iam.serviceAccountUser
-    nolan.hansen@kohls.com:
+    nolan.hansen@doms.com:
       roles:
       - compute.instanceAdmin.v1
       - compute.networkAdmin
@@ -47,7 +47,7 @@ iamPolicyMembers:
       - iam.serviceAccountAdmin
       - iam.serviceAccountKeyAdmin
       - iam.serviceAccountUser
-    ramesh.venkitaswaran@kohls.com:
+    ramesh.venkitaswaran@doms.com:
       roles:
       - compute.instanceAdmin.v1
       - compute.networkAdmin
@@ -59,7 +59,7 @@ iamPolicyMembers:
       - iam.serviceAccountAdmin
       - iam.serviceAccountKeyAdmin
       - iam.serviceAccountUser
-    thad.craft@kohls.com:
+    thad.craft@doms.com:
       roles:
       - appengine.appAdmin
       - compute.instanceAdmin.v1
@@ -73,7 +73,7 @@ iamPolicyMembers:
       - iam.serviceAccountAdmin
       - iam.serviceAccountKeyAdmin
       - iam.serviceAccountUser
-    vincent.sabatini@kohls.com:
+    vincent.sabatini@doms.com:
       roles:
       - compute.instanceAdmin.v1
       - compute.networkAdmin
@@ -88,7 +88,7 @@ iamPolicyMembers:
 
 
   groupsByEmail:
-    gcp-securitytech-devops-admin@kohls.com:
+    gcp-securitytech-devops-admin@doms.com:
       roles:
       - compute.securityAdmin
       - logging.admin

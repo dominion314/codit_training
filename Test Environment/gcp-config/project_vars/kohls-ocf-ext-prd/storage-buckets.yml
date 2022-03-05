@@ -1,14 +1,14 @@
 ---
 storageBuckets:
-  kohls-ocf-ext-prd-mongo:
+  doms-ocf-ext-prd-mongo:
     storageClass: MULTI_REGIONAL
     location: US
     bucketPolicyOnly: false
-  kohls-ocf-ext-prd-mysql:
+  doms-ocf-ext-prd-mysql:
     storageClass: MULTI_REGIONAL
     location: US
     bucketPolicyOnly: false
-  kohls-ocf-ext-prd-terraform-states:
+  doms-ocf-ext-prd-terraform-states:
     storageClass: MULTI_REGIONAL
     location: US
     bucketPolicyOnly: false

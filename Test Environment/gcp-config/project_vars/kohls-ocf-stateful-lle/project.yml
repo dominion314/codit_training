@@ -1,6 +1,6 @@
 ---
 project:
-  name: kohls-ocf-stateful-lle
+  name: doms-ocf-stateful-lle
   managed: false
   folderId: "1031310294968"
   billingAccount: "00C36A-CD0BDB-E543D0"

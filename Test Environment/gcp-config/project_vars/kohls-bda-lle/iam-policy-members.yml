@@ -1,13 +1,13 @@
 ---
 iamPolicyMembersV2:
   serviceAccountsByEmail:
-    dp-pelican@kohls-bda-prd.iam.gserviceaccount.com:
+    dp-pelican@doms-bda-prd.iam.gserviceaccount.com:
     - role: bigquery.user
     - role: bigquery.dataEditor
     - role: bigquery.readSessionUser
-    hclsw-unicakohlsbqg@hclsw-gcp-kohl.iam.gserviceaccount.com:
+    hclsw-unicadomsbqg@hclsw-gcp-kohl.iam.gserviceaccount.com:
     - role: bigquery.jobUser
-    nzdmmfp-mserv-metafeed-bigdata@kohls-bda-lle.iam.gserviceaccount.com:
+    nzdmmfp-mserv-metafeed-bigdata@doms-bda-lle.iam.gserviceaccount.com:
     - role: bigquery.jobUser
     - role: bigtable.user
     - role: logging.configWriter
@@ -15,33 +15,33 @@ iamPolicyMembersV2:
     - role: storage.objectViewer
     831336470763-compute@developer.gserviceaccount.com:
     - role: dataflow.worker
-    nzsmede-mserv-ede-bigdata@kohls-bda-hle.iam.gserviceaccount.com:
+    nzsmede-mserv-ede-bigdata@doms-bda-hle.iam.gserviceaccount.com:
     - role: bigtable.user
-    nzsmmfp-mserv-metafeed-bigdata@kohls-bda-hle.iam.gserviceaccount.com:
+    nzsmmfp-mserv-metafeed-bigdata@doms-bda-hle.iam.gserviceaccount.com:
     - role: bigtable.user
     - role: bigquery.jobUser
     - role: logging.configWriter
     - role: logging.logWriter
     - role: storage.objectViewer
-    kirap-mserv@kohls-bda-hle.iam.gserviceaccount.com:
+    kirap-mserv@doms-bda-hle.iam.gserviceaccount.com:
     - role: bigtable.user
-    cta-store-hours-lle-cxdevo@kohls-cx-lle.iam.gserviceaccount.com:
+    cta-store-hours-lle-cxdevo@doms-cx-lle.iam.gserviceaccount.com:
     - role: CustomBigQueryUser
       OrgId: 1035901152068
-    dp-platform-stats@kohls-bda-prd.iam.gserviceaccount.com:
+    dp-platform-stats@doms-bda-prd.iam.gserviceaccount.com:
     - role: monitoring.viewer
-    gitlab-bda-automation@kohls-bda-lle.iam.gserviceaccount.com:
+    gitlab-bda-automation@doms-bda-lle.iam.gserviceaccount.com:
     - role: bigquery.user
     - role: bigquery.dataViewer
   groupsByEmail:
-    gcp-bda-softwareengineer-l3@kohls.com:
+    gcp-bda-softwareengineer-l3@doms.com:
       - role: container.developer
-    gcp-infra-windows-devops-l3@kohls.com:
+    gcp-infra-windows-devops-l3@doms.com:
       - role: iam.serviceAccountUser
       - role: CustomViewer486
         OrgId: 1035901152068
       - role: compute.instanceAdmin
       - role: compute.networkUser
-    gcp-bda-devops-admin@kohls.com:
+    gcp-bda-devops-admin@doms.com:
       - role: oauthconfig.editor
       - role: storage.admin

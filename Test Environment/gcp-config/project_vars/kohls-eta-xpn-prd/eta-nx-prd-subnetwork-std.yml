@@ -43,12 +43,12 @@ vpcs:
           status: PROVISIONED
         permissions:
           serviceAccountsByEmail:
-          - geotax-prd@kohls-etcc-tax-prd.iam.gserviceaccount.com
+          - geotax-prd@doms-etcc-tax-prd.iam.gserviceaccount.com
           - 841125694829-compute@developer.gserviceaccount.com
           - 841125694829@cloudservices.gserviceaccount.com
-          - terraform-devops@kohls-etcc-tax-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-etcc-tax-prd.iam.gserviceaccount.com
           groupsByEmail:
-          - gcp-eta-devops-admin@kohls.com
+          - gcp-eta-devops-admin@doms.com
 
       eta-nx-prd-tax-geotax-e1-prv01:
         region: us-east1
@@ -59,10 +59,10 @@ vpcs:
           status: PROVISIONED
         permissions:
           serviceAccountsByEmail:
-          - geotax-prd@kohls-etcc-tax-prd.iam.gserviceaccount.com
+          - geotax-prd@doms-etcc-tax-prd.iam.gserviceaccount.com
           - 841125694829-compute@developer.gserviceaccount.com
           - 841125694829@cloudservices.gserviceaccount.com
-          - terraform-devops@kohls-etcc-tax-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-etcc-tax-prd.iam.gserviceaccount.com
           groupsByEmail:
-          - gcp-eta-devops-admin@kohls.com
+          - gcp-eta-devops-admin@doms.com
 

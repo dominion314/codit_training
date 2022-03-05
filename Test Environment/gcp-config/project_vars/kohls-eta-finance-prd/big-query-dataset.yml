@@ -7,10 +7,10 @@ bigQueryDatasets:
     defaultTableExpirationMs: 0
     permissions:
       groupsByEmail:
-        gcp-eta-devops-admin@kohls.com:
+        gcp-eta-devops-admin@doms.com:
           roles:
           - bigquery.dataOwner
-        gcp-finance-kfs-reporting@kohls.com:
+        gcp-finance-kfs-reporting@doms.com:
           roles:
           - bigquery.dataViewer
           - bigquery.user

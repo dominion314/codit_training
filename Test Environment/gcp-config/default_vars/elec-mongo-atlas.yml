@@ -148,15 +148,15 @@ electiveRules:
       rule:
         destinationRanges: *destinationRanges
         targetServiceAccounts:
-        - external: "ocp-app-node-paas@kohls-platform-openshift-ops.iam.gserviceaccount.com"
-        - external: "ocp-pci-node-paas@kohls-platform-openshift-ops.iam.gserviceaccount.com"
-        - external: "ocp-pii-node-paas@kohls-platform-openshift-ops.iam.gserviceaccount.com"
-        - external: "ocp-app-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
-        - external: "ocp-pci-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
-        - external: "ocp-pii-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
-        - external: "ocp-app-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com"
-        - external: "ocp-pci-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com"
-        - external: "ocp-pii-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com"
+        - external: "ocp-app-node-paas@doms-platform-openshift-ops.iam.gserviceaccount.com"
+        - external: "ocp-pci-node-paas@doms-platform-openshift-ops.iam.gserviceaccount.com"
+        - external: "ocp-pii-node-paas@doms-platform-openshift-ops.iam.gserviceaccount.com"
+        - external: "ocp-app-node-paas@doms-platform-openshift-lle.iam.gserviceaccount.com"
+        - external: "ocp-pci-node-paas@doms-platform-openshift-lle.iam.gserviceaccount.com"
+        - external: "ocp-pii-node-paas@doms-platform-openshift-lle.iam.gserviceaccount.com"
+        - external: "ocp-app-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com"
+        - external: "ocp-pci-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com"
+        - external: "ocp-pii-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com"
         targetTags:
         sourceRanges:
         sourceServiceAccounts:
@@ -173,12 +173,12 @@ electiveRules:
       rule:
         destinationRanges: *destinationRanges
         targetServiceAccounts:
-        - external: "ocp-app-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-        - external: "ocp-pci-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-        - external: "ocp-pii-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-        - external: "ocp-app-node-paas@kohls-cce-openshift-prd.iam.gserviceaccount.com"
-        - external: "ocp-pci-node-paas@kohls-cce-openshift-prd.iam.gserviceaccount.com"
-        - external: "ocp-pii-node-paas@kohls-cce-openshift-prd.iam.gserviceaccount.com"
+        - external: "ocp-app-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+        - external: "ocp-pci-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+        - external: "ocp-pii-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+        - external: "ocp-app-node-paas@doms-cce-openshift-prd.iam.gserviceaccount.com"
+        - external: "ocp-pci-node-paas@doms-cce-openshift-prd.iam.gserviceaccount.com"
+        - external: "ocp-pii-node-paas@doms-cce-openshift-prd.iam.gserviceaccount.com"
         targetTags:
         sourceRanges:
         sourceServiceAccounts:

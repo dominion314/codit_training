@@ -1,7 +1,7 @@
 ---
 iamPolicyMembers:
   serviceAccountsByEmail:
-    bda-devops@kohls-bda-dse-prd.iam.gserviceaccount.com:
+    bda-devops@doms-bda-dse-prd.iam.gserviceaccount.com:
       roles:
         - compute.storageAdmin
         - compute.instanceAdmin.v1
@@ -27,7 +27,7 @@ iamPolicyMembers:
         - storage.objectAdmin
         - container.admin
         - cloudbuild.builds.editor
-    bda-terraform@kohls-bda-dse-prd.iam.gserviceaccount.com:
+    bda-terraform@doms-bda-dse-prd.iam.gserviceaccount.com:
       roles:
         - compute.storageAdmin
         - compute.instanceAdmin.v1
@@ -53,7 +53,7 @@ iamPolicyMembers:
         - storage.objectAdmin
         - container.admin
         - cloudbuild.builds.editor
-    bda-azkaban@kohls-bda-dse-prd.iam.gserviceaccount.com:
+    bda-azkaban@doms-bda-dse-prd.iam.gserviceaccount.com:
       roles:
         - bigtable.user
         - bigtable.reader
@@ -64,7 +64,7 @@ iamPolicyMembers:
         - logging.logWriter
         - monitoring.metricWriter
         - compute.networkViewer
-    bda-airflow@kohls-bda-dse-prd.iam.gserviceaccount.com:
+    bda-airflow@doms-bda-dse-prd.iam.gserviceaccount.com:
       roles:
         - bigtable.user
         - bigtable.reader
@@ -75,7 +75,7 @@ iamPolicyMembers:
         - logging.logWriter
         - monitoring.metricWriter
         - compute.networkViewer
-    bda-dataproc@kohls-bda-dse-prd.iam.gserviceaccount.com:
+    bda-dataproc@doms-bda-dse-prd.iam.gserviceaccount.com:
       roles:
         - bigtable.user
         - bigtable.reader
@@ -86,7 +86,7 @@ iamPolicyMembers:
         - logging.logWriter
         - monitoring.metricWriter
         - compute.networkViewer
-    mysql-dba@kohls-bda-dse-prd.iam.gserviceaccount.com:
+    mysql-dba@doms-bda-dse-prd.iam.gserviceaccount.com:
       roles:
         - compute.storageAdmin
         - iam.serviceAccountUser
@@ -94,7 +94,7 @@ iamPolicyMembers:
         - compute.instanceAdmin.v1
         - compute.networkUser
         - compute.networkViewer
-    mongo-dba@kohls-bda-dse-prd.iam.gserviceaccount.com:
+    mongo-dba@doms-bda-dse-prd.iam.gserviceaccount.com:
       roles:
         - compute.storageAdmin
         - iam.serviceAccountUser
@@ -102,7 +102,7 @@ iamPolicyMembers:
         - compute.instanceAdmin.v1
         - compute.networkUser
         - compute.networkViewer
-    bda-consul@kohls-bda-dse-prd.iam.gserviceaccount.com:
+    bda-consul@doms-bda-dse-prd.iam.gserviceaccount.com:
       roles:
         - compute.storageAdmin
         - iam.serviceAccountUser
@@ -110,7 +110,7 @@ iamPolicyMembers:
         - compute.instanceAdmin.v1
         - compute.networkUser
         - compute.networkViewer
-    bda-servicereg@kohls-bda-dse-prd.iam.gserviceaccount.com:
+    bda-servicereg@doms-bda-dse-prd.iam.gserviceaccount.com:
       roles:
         - bigtable.user
         - bigtable.reader
@@ -121,7 +121,7 @@ iamPolicyMembers:
         - logging.logWriter
         - monitoring.metricWriter
         - compute.networkViewer
-    bda-redis@kohls-bda-dse-prd.iam.gserviceaccount.com:
+    bda-redis@doms-bda-dse-prd.iam.gserviceaccount.com:
       roles:
         - bigtable.user
         - bigtable.reader
@@ -132,7 +132,7 @@ iamPolicyMembers:
         - logging.logWriter
         - monitoring.metricWriter
         - compute.networkViewer
-    cce-dse-rec@kohls-bda-dse-prd.iam.gserviceaccount.com:
+    cce-dse-rec@doms-bda-dse-prd.iam.gserviceaccount.com:
       roles:
         - bigtable.user
         - bigtable.admin
@@ -140,7 +140,7 @@ iamPolicyMembers:
         - storage.objectViewer
         - bigquery.readSessionUser
         - dataflow.worker
-    cce-dse-lot@kohls-bda-dse-prd.iam.gserviceaccount.com:
+    cce-dse-lot@doms-bda-dse-prd.iam.gserviceaccount.com:
       roles:
         - bigtable.user
         - bigtable.reader
@@ -148,7 +148,7 @@ iamPolicyMembers:
         - storage.objectViewer
         - bigquery.readSessionUser
         - dataflow.worker
-    cce-dse-src@kohls-bda-dse-prd.iam.gserviceaccount.com:
+    cce-dse-src@doms-bda-dse-prd.iam.gserviceaccount.com:
       roles:
         - bigtable.user
         - bigtable.admin
@@ -157,7 +157,7 @@ iamPolicyMembers:
         - bigquery.readSessionUser
         - dataflow.worker
         - dataflow.admin
-    cce-dse-cmn@kohls-bda-dse-prd.iam.gserviceaccount.com:
+    cce-dse-cmn@doms-bda-dse-prd.iam.gserviceaccount.com:
       roles:
         - bigtable.user
         - bigtable.reader
@@ -165,7 +165,7 @@ iamPolicyMembers:
         - storage.objectViewer
         - bigquery.readSessionUser
         - dataflow.worker
-    cce-dse-mkt@kohls-bda-dse-prd.iam.gserviceaccount.com:
+    cce-dse-mkt@doms-bda-dse-prd.iam.gserviceaccount.com:
       roles:
         - bigtable.user
         - bigtable.reader
@@ -173,7 +173,7 @@ iamPolicyMembers:
         - storage.objectViewer
         - bigquery.readSessionUser
         - dataflow.worker
-    cce-dse-ifo@kohls-bda-dse-prd.iam.gserviceaccount.com:
+    cce-dse-ifo@doms-bda-dse-prd.iam.gserviceaccount.com:
       roles:
         - bigtable.user
         - bigtable.reader
@@ -181,7 +181,7 @@ iamPolicyMembers:
         - storage.objectViewer
         - bigquery.readSessionUser
         - dataflow.worker
-    pzpihve-infra-hive-bigdata@kohls-bda-dse-prd.iam.gserviceaccount.com:
+    pzpihve-infra-hive-bigdata@doms-bda-dse-prd.iam.gserviceaccount.com:
       roles:
         - storage.objectViewer
     515294286086-compute@developer.gserviceaccount.com:
@@ -190,14 +190,14 @@ iamPolicyMembers:
     515294286086@cloudbuild.gserviceaccount.com:
       roles:
         - cloudbuild.builds.builder
-    cce-dse-rec@kohls-bda-dse-lle.iam.gserviceaccount.com:
+    cce-dse-rec@doms-bda-dse-lle.iam.gserviceaccount.com:
       roles:
         - storage.objectViewer
-    search-solr@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    search-solr@doms-cx-shop-prd.iam.gserviceaccount.com:
       roles:
         - storage.objectViewer
         - bigtable.reader
-    kos-rundeck@kohls-cx-shop-prd.iam.gserviceaccount.com:
+    kos-rundeck@doms-cx-shop-prd.iam.gserviceaccount.com:
       roles:
         - storage.objectViewer
         - bigtable.reader

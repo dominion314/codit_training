@@ -11,7 +11,7 @@ pubSubTopics:
       app-name: "ocf-sku-sync-prd"
     permissions:
       serviceAccountsByEmail:
-        scf-sku-sync@kohls-scf-prd.iam.gserviceaccount.com:
+        scf-sku-sync@doms-scf-prd.iam.gserviceaccount.com:
           roles:
             - pubsub.editor
 
@@ -21,6 +21,6 @@ pubSubTopics:
       app-name: "forced-replen-automator"
     permissions:
       serviceAccountsByEmail:
-        customer-fulfillment-prod@kohls-scf-prd.iam.gserviceaccount.com:
+        customer-fulfillment-prod@doms-scf-prd.iam.gserviceaccount.com:
           roles:
             - pubsub.editor

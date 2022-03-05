@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-bda-analytics-prd-01:
+  doms-bda-analytics-prd-01:
     location: US
     versioningEnabled: false
     labels:

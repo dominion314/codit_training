@@ -1,7 +1,7 @@
 #pylint: disable=C0301, C0103, C0114, E0401
 # This script may be used to convert gcloud iam service account list to Kohl's gitops config
 # Before executing this script;
-#     Run gcloud iam service-accounts list --project kohls-cpe-kcc-lle --format yaml > service-accounts.yml
+#     Run gcloud iam service-accounts list --project doms-cpe-kcc-lle --format yaml > service-accounts.yml
 #     where you change the --project parameter to whatever project you want the service account list
 #     generated from.
 # The service-accounts.yml file that is output from the gcloud command will be input into this script.

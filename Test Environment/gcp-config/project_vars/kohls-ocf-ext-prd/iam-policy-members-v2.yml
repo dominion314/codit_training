@@ -1,7 +1,7 @@
 ---
 iamPolicyMembersV2:
   groupsByEmail:
-    gcp-ocf-sd-l2@kohls.com:
+    gcp-ocf-sd-l2@doms.com:
     - role: CustomRole101 # Custom Bigquery Create Views
       OrgId: 1035901152068
     - role: CustomViewer486 # Custom Viewer
@@ -9,7 +9,7 @@ iamPolicyMembersV2:
     - role: bigquery.dataViewer
     - role: bigquery.jobUser
     - role: browser
-    gcp-ocf-sd-l3@kohls.com:
+    gcp-ocf-sd-l3@doms.com:
     - role: CustomRole101 # Custom Bigquery Create Views
       OrgId: 1035901152068
     - role: CustomViewer486 # Custom Viewer
@@ -17,7 +17,7 @@ iamPolicyMembersV2:
     - role: bigquery.dataViewer
     - role: bigquery.jobUser
     - role: browser
-    gcp-ocf-softwareengineer-admin@kohls.com:
+    gcp-ocf-softwareengineer-admin@doms.com:
     - role: CustomRole101 # Custom Bigquery Create Views
       OrgId: 1035901152068
     - role: CustomRole570 # Custom BigQuery Data Owner
@@ -29,7 +29,7 @@ iamPolicyMembersV2:
     - role: compute.networkViewer
     - role: compute.viewer
     - role: logging.viewer
-    gcp-ocf-softwareengineer-l3@kohls.com:
+    gcp-ocf-softwareengineer-l3@doms.com:
     - role: CustomRole101 # Custom Bigquery Create Views
       OrgId: 1035901152068
     - role: CustomViewer486 # Custom Viewer
@@ -39,10 +39,10 @@ iamPolicyMembersV2:
     - role: compute.networkViewer
     - role: compute.viewer
     - role: logging.viewer
-    GCP-Dev-OCF@kohls.com:
+    GCP-Dev-OCF@doms.com:
     - role: CustomViewer486 # Custom Viewer
       OrgId: 1035901152068
-    gcp-ocf-devops-admin@kohls.com:
+    gcp-ocf-devops-admin@doms.com:
     - role: CustomViewer486 # Custom Viewer
       OrgId: 1035901152068
     - role: compute.networkViewer
@@ -54,7 +54,7 @@ iamPolicyMembersV2:
     - role: logging.privateLogViewer
     - role: logging.viewer
     - role: monitoring.admin
-    gcp-ocf-softwareengineer-l2@kohls.com:
+    gcp-ocf-softwareengineer-l2@doms.com:
     - role: CustomViewer486 # Custom Viewer
       OrgId: 1035901152068
     - role: bigquery.dataViewer
@@ -62,14 +62,14 @@ iamPolicyMembersV2:
     - role: compute.networkViewer
     - role: compute.viewer
     - role: logging.viewer
-    gcp-ocf-softwareengineer-manager@kohls.com:
+    gcp-ocf-softwareengineer-manager@doms.com:
     - role: CustomViewer486 # Custom Viewer
       OrgId: 1035901152068
     - role: compute.networkViewer
     - role: compute.viewer
     - role: logging.viewer
   serviceAccountsByEmail:
-    consul-paas@kohls-ocf-ext-prd.iam.gserviceaccount.com:
+    consul-paas@doms-ocf-ext-prd.iam.gserviceaccount.com:
     - role: CustomRole130
       OrgId: 1035901152068
     - role: CustomRole150
@@ -77,15 +77,15 @@ iamPolicyMembersV2:
     - role: CustomRole703
       OrgId: 1035901152068
     - role: compute.networkUser
-    mongo-dba@kohls-ocf-ext-prd.iam.gserviceaccount.com:
+    mongo-dba@doms-ocf-ext-prd.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: iam.serviceAccountUser
-    mysql-dba@kohls-ocf-ext-prd.iam.gserviceaccount.com:
+    mysql-dba@doms-ocf-ext-prd.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: iam.serviceAccountUser
-    terraform-devops@kohls-ocf-ext-prd.iam.gserviceaccount.com:
+    terraform-devops@doms-ocf-ext-prd.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: compute.storageAdmin

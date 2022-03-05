@@ -1,14 +1,14 @@
 ---
 clusters:
-- name: kohls-cpe-cne-lle-01
-  xpnProjectName: kohls-cpe-cne-lle
-  displayName: kohls-cpe-cne-lle-01
+- name: doms-cpe-cne-lle-01
+  xpnProjectName: doms-cpe-cne-lle
+  displayName: doms-cpe-cne-lle-01
   initialNodeCount: 1
   location: us-central1-c
   masterIpv4CidrBlock: 10.120.255.80/28
-  network: projects/kohls-cpe-xpn-lle/global/networks/cpe-nx-lle
+  network: projects/doms-cpe-xpn-lle/global/networks/cpe-nx-lle
   externalNetwork: true
-  subnetwork: projects/kohls-cpe-xpn-lle/regions/us-central1/subnetworks/cpe-nx-lle-cne-dev-c1-gke01
+  subnetwork: projects/doms-cpe-xpn-lle/regions/us-central1/subnetworks/cpe-nx-lle-cne-dev-c1-gke01
   externalSubnetwork: true
   podSubnetwork: cpe-nx-lle-cne-dev-c1-pod01
   serviceSubnetwork: cpe-nx-lle-cne-dev-c1-svc01
@@ -23,7 +23,7 @@ clusters:
   networkPolicyConfig:
     disabled: false
   nodePools:
-  - name: kohls-cpe-cne-lle-01-nodepool
+  - name: doms-cpe-cne-lle-01-nodepool
     machineType: n1-standard-1
     maxPodsPerNode: 16
     maxNodeCount: 16

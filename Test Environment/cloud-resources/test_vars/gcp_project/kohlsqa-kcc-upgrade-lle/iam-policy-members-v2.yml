@@ -1,7 +1,7 @@
 ---
 iamPolicyMembersV2:
   usersByEmail:
-    pavel.leonovitch@kohls.com:
+    pavel.leonovitch@doms.com:
     - role: viewer
     - role: editor
       deletionProtect: true
@@ -13,8 +13,8 @@ iamPolicyMembersV2:
     - role: Custom_Governance_Viewer
       OrgId: 212666867691
   groupsByEmail:
-    gcp-et-devops-l2@kohls.com:
+    gcp-et-devops-l2@doms.com:
     - role: viewer
   serviceAccountsByEmail:
-    gitops-example-1@kohlsqa-kcc-upgrade-lle.iam.gserviceaccount.com:
+    gitops-example-1@domsqa-kcc-upgrade-lle.iam.gserviceaccount.com:
     - role: viewer

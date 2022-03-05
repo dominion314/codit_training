@@ -27,9 +27,9 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-iaas-softwareengineer-l3@kohls.com
+          - gcp-iaas-softwareengineer-l3@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-cpe-image-mgmt-lle.iam.gserviceaccount.com
+          - terraform-devops@doms-cpe-image-mgmt-lle.iam.gserviceaccount.com
           - 576826117778-compute@developer.gserviceaccount.com
 
       cpe-nx-lle-cie-image-mgmt-subnet-e1-prv01:
@@ -42,9 +42,9 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-iaas-softwareengineer-l3@kohls.com
+          - gcp-iaas-softwareengineer-l3@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-cpe-image-mgmt-lle.iam.gserviceaccount.com
+          - terraform-devops@doms-cpe-image-mgmt-lle.iam.gserviceaccount.com
           - 576826117778-compute@developer.gserviceaccount.com
 
       cpe-nx-lle-sample-c1-prv01:
@@ -66,8 +66,8 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-cpe-cne-devops-l3@kohls.com
-          - gcp-cpe-cne-devops-admin@kohls.com
+          - gcp-cpe-cne-devops-l3@doms.com
+          - gcp-cpe-cne-devops-admin@doms.com
           serviceAccountsByEmail:
           - 612510086557-compute@developer.gserviceaccount.com
           - 612510086557@cloudservices.gserviceaccount.com
@@ -89,12 +89,12 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-cpe-developerexperience-softwareengineer-admin@kohls.com
+          - gcp-cpe-developerexperience-softwareengineer-admin@doms.com
           serviceAccountsByEmail:
-          - devexp-automation@kohls-devexp-tools-lle.iam.gserviceaccount.com
-          - devexp-automation@kohls-devexp-tools-sbx.iam.gserviceaccount.com
-          - gitlab-runner@kohls-devexp-tools-lle.iam.gserviceaccount.com
-          - gitlab-runner@kohls-devexp-tools-sbx.iam.gserviceaccount.com
+          - devexp-automation@doms-devexp-tools-lle.iam.gserviceaccount.com
+          - devexp-automation@doms-devexp-tools-sbx.iam.gserviceaccount.com
+          - gitlab-runner@doms-devexp-tools-lle.iam.gserviceaccount.com
+          - gitlab-runner@doms-devexp-tools-sbx.iam.gserviceaccount.com
           - 1082044040530@cloudservices.gserviceaccount.com
 
       cpe-nx-lle-devexp-tools-e1-prv01:
@@ -106,12 +106,12 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-cpe-developerexperience-softwareengineer-admin@kohls.com
+          - gcp-cpe-developerexperience-softwareengineer-admin@doms.com
           serviceAccountsByEmail:
-          - devexp-automation@kohls-devexp-tools-lle.iam.gserviceaccount.com
-          - devexp-automation@kohls-devexp-tools-sbx.iam.gserviceaccount.com
-          - gitlab-runner@kohls-devexp-tools-lle.iam.gserviceaccount.com
-          - gitlab-runner@kohls-devexp-tools-sbx.iam.gserviceaccount.com
+          - devexp-automation@doms-devexp-tools-lle.iam.gserviceaccount.com
+          - devexp-automation@doms-devexp-tools-sbx.iam.gserviceaccount.com
+          - gitlab-runner@doms-devexp-tools-lle.iam.gserviceaccount.com
+          - gitlab-runner@doms-devexp-tools-sbx.iam.gserviceaccount.com
           - 1082044040530@cloudservices.gserviceaccount.com
 
       cpe-nx-lle-devexp-tools-runnerpci-c1-prv01:
@@ -123,12 +123,12 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-cpe-developerexperience-softwareengineer-admin@kohls.com
+          - gcp-cpe-developerexperience-softwareengineer-admin@doms.com
           serviceAccountsByEmail:
-          - devexp-automation@kohls-devexp-tools-lle.iam.gserviceaccount.com
-          - devexp-automation@kohls-devexp-tools-sbx.iam.gserviceaccount.com
-          - gitlab-runner@kohls-devexp-tools-lle.iam.gserviceaccount.com
-          - gitlab-runner@kohls-devexp-tools-sbx.iam.gserviceaccount.com
+          - devexp-automation@doms-devexp-tools-lle.iam.gserviceaccount.com
+          - devexp-automation@doms-devexp-tools-sbx.iam.gserviceaccount.com
+          - gitlab-runner@doms-devexp-tools-lle.iam.gserviceaccount.com
+          - gitlab-runner@doms-devexp-tools-sbx.iam.gserviceaccount.com
           - 1082044040530@cloudservices.gserviceaccount.com
 
       cpe-nx-lle-devexp-tools-runnerpci-e1-prv01:
@@ -140,12 +140,12 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-cpe-developerexperience-softwareengineer-admin@kohls.com
+          - gcp-cpe-developerexperience-softwareengineer-admin@doms.com
           serviceAccountsByEmail:
-          - devexp-automation@kohls-devexp-tools-lle.iam.gserviceaccount.com
-          - devexp-automation@kohls-devexp-tools-sbx.iam.gserviceaccount.com
-          - gitlab-runner@kohls-devexp-tools-lle.iam.gserviceaccount.com
-          - gitlab-runner@kohls-devexp-tools-sbx.iam.gserviceaccount.com
+          - devexp-automation@doms-devexp-tools-lle.iam.gserviceaccount.com
+          - devexp-automation@doms-devexp-tools-sbx.iam.gserviceaccount.com
+          - gitlab-runner@doms-devexp-tools-lle.iam.gserviceaccount.com
+          - gitlab-runner@doms-devexp-tools-sbx.iam.gserviceaccount.com
           - 1082044040530@cloudservices.gserviceaccount.com
 
       cpe-nx-lle-sre-theia-c1-prv01:
@@ -173,7 +173,7 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-cloudplatformengineering-devops-admin@kohls.com
+          - gcp-cloudplatformengineering-devops-admin@doms.com
 
       cpe-nx-lle-gitopsdemo-c1-prv01:
         advertiseRoutes: true

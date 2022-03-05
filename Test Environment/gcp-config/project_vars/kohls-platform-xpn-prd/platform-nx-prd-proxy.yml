@@ -39,4 +39,4 @@ vpcs:
             proxyPermitURL:
             - .cisco.com
             proxyDenyURL:
-            - .kohlsidentitynow.com
+            - .domsidentitynow.com

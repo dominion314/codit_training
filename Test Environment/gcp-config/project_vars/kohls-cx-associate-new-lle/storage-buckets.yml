@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  new-test-bucket-kohls-stores-dm-engineering-lle-bucket:
+  new-test-bucket-doms-stores-dm-engineering-lle-bucket:
     bucketPolicyOnly: false
     labels:
       app-name: disposition-manager

@@ -98,7 +98,7 @@ pubSubTopics:
     deletionProtect: true
   tkma4iz-test-log:
     deletionProtect: true
-  kohls-merch-ps-lle-test-topic:
+  doms-merch-ps-lle-test-topic:
     deletionProtect: true
   helix-optimization:
     deletionProtect: true

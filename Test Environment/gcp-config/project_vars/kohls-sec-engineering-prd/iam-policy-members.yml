@@ -1,7 +1,7 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-securitymonitoring-devops-l3@kohls.com:
+    gcp-securitymonitoring-devops-l3@doms.com:
       roles:
       - compute.storageAdmin
       - iam.serviceAccountUser
@@ -9,28 +9,28 @@ iamPolicyMembers:
       - compute.instanceAdmin
       - compute.networkUser
       - bigquery.jobUser
-    gcp-securityplanning-devops-admin@kohls.com:
+    gcp-securityplanning-devops-admin@doms.com:
       roles:
       - compute.storageAdmin
       - iam.serviceAccountUser
       - storage.admin
       - compute.instanceAdmin
       - compute.networkUser
-    gcp-securityplanning-devops-l2@kohls.com:
+    gcp-securityplanning-devops-l2@doms.com:
       roles:
       - compute.storageAdmin
       - iam.serviceAccountUser
       - storage.admin
       - compute.instanceAdmin
       - compute.networkUser
-    gcp-securityplanning-devops-l3@kohls.com:
+    gcp-securityplanning-devops-l3@doms.com:
       roles:
       - compute.storageAdmin
       - iam.serviceAccountUser
       - storage.admin
       - compute.instanceAdmin
       - compute.networkUser
-    gcp-securitytech-devops-admin@kohls.com:
+    gcp-securitytech-devops-admin@doms.com:
       roles:
       - compute.storageAdmin
       - iam.serviceAccountUser
@@ -41,7 +41,7 @@ iamPolicyMembers:
       - container.admin
       - bigquery.jobUser
       - oauthconfig.editor
-    gcp-securitytech-devops-manager@kohls.com:
+    gcp-securitytech-devops-manager@doms.com:
       roles:
       - compute.storageAdmin
       - iam.serviceAccountUser

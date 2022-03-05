@@ -22,7 +22,7 @@ Project link:  https://marketplace.visualstudio.com/items?itemName=misogi.ruby-r
 Project link: https://github.com/adrienverge/yamllint
 
 Yamllinter with xpaas custom config:
-https://gitlab.com/kohls/sre/infra/githook-yaml-lint/-/blob/master/resources/yamllint_custom_config.yml
+https://gitlab.com/doms/sre/infra/githook-yaml-lint/-/blob/master/resources/yamllint_custom_config.yml
 
 `pip install --user yamllint`
 

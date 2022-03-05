@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90576"
 project:
-  name: kohls-sec-vault-lle
+  name: doms-sec-vault-lle
   managed: true
   folderId: "882166644980"
   billingAccount: "00C36A-CD0BDB-E543D0"

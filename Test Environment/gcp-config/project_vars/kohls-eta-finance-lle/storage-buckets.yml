@@ -41,23 +41,23 @@ storageBuckets:
     storageClass: MULTI_REGIONAL
     location: US
     bucketPolicyOnly: false
-  kohls-eta-finance-ar-vgc-pin-decrypt-dev:
+  doms-eta-finance-ar-vgc-pin-decrypt-dev:
     storageClass: MULTI_REGIONAL
     location: US
     bucketPolicyOnly: false
-  kohls-eta-finance-lle-mongo:
+  doms-eta-finance-lle-mongo:
     storageClass: MULTI_REGIONAL
     location: US
     bucketPolicyOnly: false
-  kohls-eta-finance-lle-mysql:
+  doms-eta-finance-lle-mysql:
     storageClass: MULTI_REGIONAL
     location: US
     bucketPolicyOnly: false
-  kohls-eta-finance-lle-terraform-states:
+  doms-eta-finance-lle-terraform-states:
     storageClass: MULTI_REGIONAL
     location: US
     bucketPolicyOnly: false
-  kohls-eta-finance-lle-us-central1-primary-consul-backup:
+  doms-eta-finance-lle-us-central1-primary-consul-backup:
     storageClass: NEARLINE
     location: US-CENTRAL1
     lifecycleRule:
@@ -66,7 +66,7 @@ storageBuckets:
       condition:
         age: 14
     bucketPolicyOnly: false
-  kohls-eta-finance-lle-us-east1-primary-consul-backup:
+  doms-eta-finance-lle-us-east1-primary-consul-backup:
     storageClass: NEARLINE
     location: US-EAST1
     lifecycleRule:
@@ -75,11 +75,11 @@ storageBuckets:
       condition:
         age: 14
     bucketPolicyOnly: false
-  kohls-etafinance-mft-dev-lle-bucket:
+  doms-etafinance-mft-dev-lle-bucket:
     storageClass: STANDARD
     location: US
     bucketPolicyOnly: false
-  us.artifacts.kohls-eta-finance-lle.appspot.com:
+  us.artifacts.doms-eta-finance-lle.appspot.com:
     storageClass: STANDARD
     location: US
     bucketPolicyOnly: false

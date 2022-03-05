@@ -1,13 +1,13 @@
 ---
 iamPolicyMembersV2:
   groupsByEmail:
-    gcp-bda-productionengineer-l3@kohls.com:
+    gcp-bda-productionengineer-l3@doms.com:
     - role: CustomBigQueryUser # Custom BigQuery User
       OrgId: 1035901152068
     - role: bigquery.dataViewer
     - role: bigquery.jobUser
     - role: storage.objectViewer
-    gcp-ocf-sd-l2@kohls.com:
+    gcp-ocf-sd-l2@doms.com:
     - role: CustomBigQueryUser # Custom BigQuery User
       OrgId: 1035901152068
     - role: CustomViewer486 # Custom Viewer
@@ -15,7 +15,7 @@ iamPolicyMembersV2:
     - role: bigquery.dataViewer
     - role: bigquery.jobUser
     - role: storage.objectViewer
-    GCP-Dev-OCF@kohls.com:
+    GCP-Dev-OCF@doms.com:
     - role: CustomBucketViewer
       OrgId: 1035901152068
     - role: CustomRole634
@@ -36,14 +36,14 @@ iamPolicyMembersV2:
     - role: logging.privateLogViewer
     - role: monitoring.editor
     - role: pubsub.admin
-    gcp-ocf-adhoc-customer-l3@kohls.com:
+    gcp-ocf-adhoc-customer-l3@doms.com:
     - role: CustomRole101
       OrgId: 1035901152068
     - role: CustomViewer486 # Custom Viewer
       OrgId: 1035901152068
     - role: bigquery.dataViewer
     - role: bigquery.jobUser
-    gcp-xpaas-openshift-admin@kohls.com:
+    gcp-xpaas-openshift-admin@doms.com:
     - role: CustomRole271
       OrgId: 1035901152068
     - role: lbadmin
@@ -62,7 +62,7 @@ iamPolicyMembersV2:
     - role: monitoring.metricWriter
     - role: monitoring.viewer
     - role: storage.admin
-    gcp-ocf-devops-admin@kohls.com:
+    gcp-ocf-devops-admin@doms.com:
     - role: CustomRole429
       OrgId: 1035901152068
     - role: CustomRole881
@@ -93,7 +93,7 @@ iamPolicyMembersV2:
     - role: spanner.admin
     - role: storage.admin
     - role: storage.objectAdmin
-    gcp-cloud-database-admin-l3@kohls.com:
+    gcp-cloud-database-admin-l3@doms.com:
     - role: CustomViewer486 # Custom Viewer
       OrgId: 1035901152068
     - role: bigquery.admin
@@ -101,12 +101,12 @@ iamPolicyMembersV2:
     - role: logging.configWriter
     - role: logging.viewer
     - role: monitoring.admin
-    gcp-et-devops-l3@kohls.com:
+    gcp-et-devops-l3@doms.com:
     - role: CustomViewer486 # Custom Viewer
       OrgId: 1035901152068
     - role: compute.viewer
     - role: storage.objectViewer
-    gcp-ocf-performanceengineer-l3@kohls.com:
+    gcp-ocf-performanceengineer-l3@doms.com:
     - role: CustomViewer486 # Custom Viewer
       OrgId: 1035901152068
     - role: compute.imageUser
@@ -116,7 +116,7 @@ iamPolicyMembersV2:
     - role: monitoring.metricWriter
     - role: monitoring.viewer
     - role: storage.objectViewer
-    gcp-ocf-qualityengineer-l3@kohls.com:
+    gcp-ocf-qualityengineer-l3@doms.com:
     - role: CustomViewer486 # Custom Viewer
       OrgId: 1035901152068
     - role: StorageObjectReadWriteDelete
@@ -135,7 +135,7 @@ iamPolicyMembersV2:
     - role: storage.admin
     - role: storage.objectAdmin
     - role: storage.objectViewer
-    gcp-ocf-softwareengineer-admin@kohls.com:
+    gcp-ocf-softwareengineer-admin@doms.com:
     - role: CustomViewer486 # Custom Viewer
       OrgId: 1035901152068
     - role: bigquery.admin
@@ -159,14 +159,14 @@ iamPolicyMembersV2:
     - role: dataproc.editor
     - role: logging.viewer
     - role: storage.objectViewer
-    gcp-ocf-softwareengineer-l2@kohls.com:
+    gcp-ocf-softwareengineer-l2@doms.com:
     - role: CustomViewer486 # Custom Viewer
       OrgId: 1035901152068
     - role: compute.networkViewer
     - role: compute.viewer
     - role: logging.viewer
     - role: storage.objectViewer
-    gcp-ocf-softwareengineer-l3@kohls.com:
+    gcp-ocf-softwareengineer-l3@doms.com:
     - role: CustomViewer486 # Custom Viewer
       OrgId: 1035901152068
     - role: bigquery.admin
@@ -187,10 +187,10 @@ iamPolicyMembersV2:
     - role: storage.admin
     - role: storage.objectAdmin
     - role: storage.objectViewer
-    gcp-stores-softwareengineer-l2@kohls.com:
+    gcp-stores-softwareengineer-l2@doms.com:
     - role: CustomViewer486 # Custom Viewer
       OrgId: 1035901152068
-    gcp-xpaas-openshift-l2@kohls.com:
+    gcp-xpaas-openshift-l2@doms.com:
     - role: compute.engine.power.state.adm
       OrgId: 1035901152068
     - role: compute.imageUser
@@ -204,7 +204,7 @@ iamPolicyMembersV2:
     - role: monitoring.metricWriter
     - role: monitoring.viewer
     - role: storage.objectViewer
-    gcp-xpaas-manager@kohls.com:
+    gcp-xpaas-manager@doms.com:
     - role: lbadmin
       OrgId: 1035901152068
     - role: compute.imageUser
@@ -218,7 +218,7 @@ iamPolicyMembersV2:
     - role: logging.viewer
     - role: monitoring.metricWriter
     - role: monitoring.viewer
-    gcp-xpaas-openshift-l3@kohls.com:
+    gcp-xpaas-openshift-l3@doms.com:
     - role: lbadmin
       OrgId: 1035901152068
     - role: compute.imageUser
@@ -232,7 +232,7 @@ iamPolicyMembersV2:
     - role: monitoring.metricWriter
     - role: monitoring.viewer
     - role: storage.admin
-    gcp-ocf-sd-admin@kohls.com:
+    gcp-ocf-sd-admin@doms.com:
     - role: bigquery.admin
     - role: bigquery.dataOwner
     - role: storage.objectAdmin
@@ -245,30 +245,30 @@ iamPolicyMembersV2:
     - role: secretmanager.admin
     - role: iam.serviceAccountUser
     - role: serviceusage.serviceUsageConsumer
-    gcp-bda-softwareengineer-l3@kohls.com:
+    gcp-bda-softwareengineer-l3@doms.com:
     - role: bigquery.dataEditor
     - role: dataproc.editor
     - role: storage.objectCreator
     - role: storage.objectViewer
-    gcp-merch-psin-softwareengineer-l3@kohls.com:
+    gcp-merch-psin-softwareengineer-l3@doms.com:
     - role: bigquery.user
-    GCP-Performance-Engineer-Enterprise@kohls.com:
+    GCP-Performance-Engineer-Enterprise@doms.com:
     - role: browser
     - role: compute.networkViewer
     - role: logging.privateLogViewer
     - role: logging.viewer
     - role: storage.objectViewer
-    GCP-Cloud-Database-Admin@kohls.com:
+    GCP-Cloud-Database-Admin@doms.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: compute.storageAdmin
-    GCP-DevOps-Enterprise@kohls.com:
+    GCP-DevOps-Enterprise@doms.com:
     - role: compute.instanceAdmin.v1
     - role: storage.admin
-    gcp-eta-devops-admin@kohls.com:
+    gcp-eta-devops-admin@doms.com:
     - role: compute.instanceAdmin.v1
   serviceAccountsByEmail:
-    gcp-bigquery-dba@kohls-ocf-lle.iam.gserviceaccount.com:
+    gcp-bigquery-dba@doms-ocf-lle.iam.gserviceaccount.com:
     - role: CustomBigQueryUser # Custom BigQuery User
       OrgId: 1035901152068
     - role: bigquery.admin
@@ -280,14 +280,14 @@ iamPolicyMembersV2:
     - role: logging.viewer
     - role: monitoring.admin
     - role: storage.admin
-    jenkins@kohls-ocf-lle.iam.gserviceaccount.com:
+    jenkins@doms-ocf-lle.iam.gserviceaccount.com:
     - role: CustomBucketViewer
       OrgId: 1035901152068
     - role: compute.engine.power.state.adm
       OrgId: 1035901152068
     - role: compute.instanceAdmin.v1
     - role: dataproc.editor
-    ocf-oms@kohls-ocf-lle.iam.gserviceaccount.com:
+    ocf-oms@doms-ocf-lle.iam.gserviceaccount.com:
     - role: CustomBucketViewer
       OrgId: 1035901152068
     - role: CustomDataprocWorker
@@ -325,7 +325,7 @@ iamPolicyMembersV2:
     - role: monitoring.admin
     - role: pubsub.admin
     - role: storage.admin
-    dspi-order-retry-1-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    dspi-order-retry-1-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: CustomRole106
       OrgId: 1035901152068
     - role: CustomRole327
@@ -335,7 +335,7 @@ iamPolicyMembersV2:
     - role: CustomViewer486 # Custom Viewer
       OrgId: 1035901152068
     - role: iam.serviceAccountUser
-    consul-paas@kohls-ocf-lle.iam.gserviceaccount.com:
+    consul-paas@doms-ocf-lle.iam.gserviceaccount.com:
     - role: CustomRole130
       OrgId: 1035901152068
     - role: CustomRole703
@@ -343,18 +343,18 @@ iamPolicyMembersV2:
     - role: compute.networkUser
     - role: compute.viewer
     - role: iam.serviceAccountUser
-    ocf-gcp-dashboard-devops@kohls-ocf-lle.iam.gserviceaccount.com:
+    ocf-gcp-dashboard-devops@doms-ocf-lle.iam.gserviceaccount.com:
     - role: CustomRole351
       OrgId: 1035901152068
     - role: CustomRole542
       OrgId: 1035901152068
     - role: compute.instanceAdmin.v1
-    jenkins-patching-paas@kohls-ocf-lle.iam.gserviceaccount.com:
+    jenkins-patching-paas@doms-ocf-lle.iam.gserviceaccount.com:
     - role: CustomRole703
       OrgId: 1035901152068
     - role: compute.networkUser
     - role: iam.serviceAccountUser
-    giv-feed-producer-fun-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    giv-feed-producer-fun-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: StorageObjectReadWriteDelete
       OrgId: 1035901152068
     - role: cloudfunctions.developer
@@ -363,7 +363,7 @@ iamPolicyMembersV2:
     - role: iam.serviceAccountUser
     - role: storage.objectCreator
     - role: storage.objectViewer
-    oscr-cindy@kohls-ocf-lle.iam.gserviceaccount.com:
+    oscr-cindy@doms-ocf-lle.iam.gserviceaccount.com:
     - role: StorageObjectReadWriteDelete
       OrgId: 1035901152068
     - role: storage.admin
@@ -372,7 +372,7 @@ iamPolicyMembersV2:
     - role: storage.objectViewer
     - role: storagetransfer.user
     - role: storagetransfer.viewer
-    terraform-paas@kohls-ocf-lle.iam.gserviceaccount.com:
+    terraform-paas@doms-ocf-lle.iam.gserviceaccount.com:
     - role: lbadmin
       OrgId: 1035901152068
     - role: compute.imageUser
@@ -382,7 +382,7 @@ iamPolicyMembersV2:
     - role: iam.serviceAccountUser
     - role: logging.logWriter
     - role: storage.admin
-    terraform-ocf-devops@kohls-ocf-lle.iam.gserviceaccount.com:
+    terraform-ocf-devops@doms-ocf-lle.iam.gserviceaccount.com:
     - role: lbadmin
       OrgId: 1035901152068
     - role: bigquery.dataOwner
@@ -399,36 +399,36 @@ iamPolicyMembersV2:
     - role: dataproc.viewer
     - role: dataproc.worker
     - role: pubsub.admin
-    actual-delivery-date-feed-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    actual-delivery-date-feed-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: bigquery.dataEditor
     - role: bigquery.dataOwner
     - role: bigquery.dataViewer
     - role: bigquery.jobUser
     - role: bigquery.metadataViewer
     - role: bigquery.user
-    bigquery-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    bigquery-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: bigquery.dataEditor
     - role: bigquery.dataViewer
     - role: bigquery.user
-    dataflow-runner@kohls-scf-lle.iam.gserviceaccount.com:
+    dataflow-runner@doms-scf-lle.iam.gserviceaccount.com:
     - role: bigquery.dataEditor
     - role: compute.networkUser
     - role: dataflow.worker
     - role: pubsub.publisher
     - role: pubsub.subscriber
     - role: pubsub.viewer
-    gcp-bigquery-pse-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    gcp-bigquery-pse-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: bigquery.dataEditor
     - role: bigquery.jobUser
     - role: bigquery.metadataViewer
     - role: bigquery.readSessionUser
     - role: bigquery.user
-    giv-googlestorage-1-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    giv-googlestorage-1-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: bigquery.dataEditor
     - role: bigquery.dataOwner
     - role: bigquery.dataViewer
     - role: storage.admin
-    giv-ore-dataflow-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    giv-ore-dataflow-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: bigquery.dataEditor
     - role: bigquery.dataViewer
     - role: bigquery.jobUser
@@ -436,7 +436,7 @@ iamPolicyMembersV2:
     - role: dataflow.worker
     - role: datastore.owner
     - role: pubsub.editor
-    giv-spie-dataflow-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    giv-spie-dataflow-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: bigquery.dataEditor
     - role: bigquery.dataViewer
     - role: bigquery.jobUser
@@ -444,19 +444,7 @@ iamPolicyMembersV2:
     - role: dataflow.worker
     - role: datastore.owner
     - role: pubsub.editor
-    giv-spie-dataflow@kohls-scf-lle.iam.gserviceaccount.com:
-    - role: bigquery.dataEditor
-    - role: bigquery.dataViewer
-    - role: bigquery.jobUser
-    - role: bigquery.user
-    - role: dataflow.worker
-    - role: datastore.owner
-    - role: pubsub.editor
-    - role: pubsub.publisher
-    - role: pubsub.subscriber
-    - role: pubsub.viewer
-    - role: storage.admin
-    giv-ore-dataflow@kohls-scf-lle.iam.gserviceaccount.com:
+    giv-spie-dataflow@doms-scf-lle.iam.gserviceaccount.com:
     - role: bigquery.dataEditor
     - role: bigquery.dataViewer
     - role: bigquery.jobUser
@@ -468,13 +456,25 @@ iamPolicyMembersV2:
     - role: pubsub.subscriber
     - role: pubsub.viewer
     - role: storage.admin
-    kohls-ocf-lle@appspot.gserviceaccount.com:
+    giv-ore-dataflow@doms-scf-lle.iam.gserviceaccount.com:
+    - role: bigquery.dataEditor
+    - role: bigquery.dataViewer
+    - role: bigquery.jobUser
+    - role: bigquery.user
+    - role: dataflow.worker
+    - role: datastore.owner
+    - role: pubsub.editor
+    - role: pubsub.publisher
+    - role: pubsub.subscriber
+    - role: pubsub.viewer
+    - role: storage.admin
+    doms-ocf-lle@appspot.gserviceaccount.com:
     - role: bigquery.dataEditor
     - role: bigquery.user
-    msi-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    msi-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: bigquery.dataEditor
     - role: bigquery.user
-    ocr-nonprod-scheduler@kohls-ocf-lle.iam.gserviceaccount.com:
+    ocr-nonprod-scheduler@doms-ocf-lle.iam.gserviceaccount.com:
     - role: bigquery.dataEditor
     - role: bigquery.jobUser
     - role: compute.instanceAdmin.v1
@@ -484,7 +484,7 @@ iamPolicyMembersV2:
     - role: dataproc.worker
     - role: datastore.owner
     - role: pubsub.editor
-    qe-automation-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    qe-automation-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: bigquery.dataEditor
     - role: bigquery.dataOwner
     - role: bigquery.dataViewer
@@ -500,10 +500,10 @@ iamPolicyMembersV2:
     - role: storage.objectCreator
     - role: storage.objectViewer
     - role: storagetransfer.user
-    tableau-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    tableau-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: bigquery.dataEditor
     - role: bigquery.user
-    ocf-ore-nonprod-datastore@kohls-ocf-lle.iam.gserviceaccount.com:
+    ocf-ore-nonprod-datastore@doms-ocf-lle.iam.gserviceaccount.com:
     - role: bigquery.dataOwner
     - role: bigquery.dataViewer
     - role: bigquery.jobUser
@@ -511,22 +511,22 @@ iamPolicyMembersV2:
     - role: bigtable.user
     - role: datastore.user
     - role: datastore.viewer
-    ocr-nonprod-jobexecutor@kohls-ocf-lle.iam.gserviceaccount.com:
+    ocr-nonprod-jobexecutor@doms-ocf-lle.iam.gserviceaccount.com:
     - role: bigquery.dataOwner
     - role: bigquery.jobUser
     - role: dataflow.worker
     - role: dataproc.editor
     - role: dataproc.worker
-    ocr-nonprod-scheduling@kohls-scf-lle.iam.gserviceaccount.com:
+    ocr-nonprod-scheduling@doms-scf-lle.iam.gserviceaccount.com:
     - role: bigquery.dataOwner
     - role: bigquery.jobUser
     - role: storage.admin
     - role: storage.objectAdmin
-    ocr-nonprod-streaming@kohls-scf-lle.iam.gserviceaccount.com:
+    ocr-nonprod-streaming@doms-scf-lle.iam.gserviceaccount.com:
     - role: bigquery.dataOwner
     - role: bigquery.jobUser
     - role: storage.admin
-    ocf-giv-nonprod-feed-producers@kohls-ocf-lle.iam.gserviceaccount.com:
+    ocf-giv-nonprod-feed-producers@doms-ocf-lle.iam.gserviceaccount.com:
     - role: bigquery.dataViewer
     - role: bigquery.jobUser
     - role: bigquery.metadataViewer
@@ -536,22 +536,22 @@ iamPolicyMembersV2:
     - role: dataproc.worker
     - role: monitoring.editor
     - role: monitoring.metricWriter
-    openshift-ore-dev@kohls-ocf-lle.iam.gserviceaccount.com:
+    openshift-ore-dev@doms-ocf-lle.iam.gserviceaccount.com:
     - role: bigquery.dataViewer
     - role: datastore.user
-    ore-datastore-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    ore-datastore-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: bigquery.dataViewer
     - role: bigquery.user
-    tableau-iaas-govops@kohls-iaas-lle.iam.gserviceaccount.com:
+    tableau-iaas-govops@doms-iaas-lle.iam.gserviceaccount.com:
     - role: bigquery.user
-    tableau-ocf-nonprod-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    tableau-ocf-nonprod-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: bigquery.user
-    ocf-ore-nonprod-bigdata@kohls-ocf-lle.iam.gserviceaccount.com:
+    ocf-ore-nonprod-bigdata@doms-ocf-lle.iam.gserviceaccount.com:
     - role: bigtable.reader
     - role: bigtable.user
     - role: datastore.user
     - role: datastore.viewer
-    ocf-nonprod-scheduler-sis@kohls-ocf-lle.iam.gserviceaccount.com:
+    ocf-nonprod-scheduler-sis@doms-ocf-lle.iam.gserviceaccount.com:
     - role: cloudscheduler.admin
     - role: cloudscheduler.viewer
     - role: iam.serviceAccountUser
@@ -561,29 +561,29 @@ iamPolicyMembersV2:
     - role: compute.networkUser
     - role: compute.storageAdmin
     - role: storage.admin
-    ocf-openshift-admin@kohls-ocf-lle.iam.gserviceaccount.com:
+    ocf-openshift-admin@doms-ocf-lle.iam.gserviceaccount.com:
     - role: compute.imageUser
     - role: compute.instanceAdmin
     - role: compute.networkUser
     - role: compute.storageAdmin
-    stackdriver-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    stackdriver-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: compute.imageUser
     - role: compute.instanceAdmin.v1
-    terraform-enterprise-devops@kohls-ocf-lle.iam.gserviceaccount.com:
+    terraform-enterprise-devops@doms-ocf-lle.iam.gserviceaccount.com:
     - role: compute.imageUser
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: compute.storageAdmin
-    kohls-ocf-lle-mongo@kohls-ocf-lle.iam.gserviceaccount.com:
+    doms-ocf-lle-mongo@doms-ocf-lle.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
-    kohls-ocf-lle-mysql@kohls-ocf-lle.iam.gserviceaccount.com:
+    doms-ocf-lle-mysql@doms-ocf-lle.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
-    kohls-ocf-lle-oracle@kohls-ocf-lle.iam.gserviceaccount.com:
+    doms-ocf-lle-oracle@doms-ocf-lle.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
-    mysql-dba@kohls-ocf-lle.iam.gserviceaccount.com:
+    mysql-dba@doms-ocf-lle.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: deploymentmanager.editor
@@ -591,127 +591,127 @@ iamPolicyMembersV2:
     - role: deploymentmanager.typeViewer
     - role: deploymentmanager.viewer
     - role: iam.serviceAccountUser
-    oic-openshift-cluster@kohls-ocf-lle.iam.gserviceaccount.com:
+    oic-openshift-cluster@doms-ocf-lle.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: compute.storageAdmin
     - role: monitoring.editor
     - role: storage.objectAdmin
-    openshift-master-paas@kohls-ocf-lle.iam.gserviceaccount.com:
+    openshift-master-paas@doms-ocf-lle.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: compute.storageAdmin
     - role: compute.viewer
     - role: iam.serviceAccountUser
-    pmm-dba@kohls-ocf-lle.iam.gserviceaccount.com:
+    pmm-dba@doms-ocf-lle.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: deploymentmanager.editor
     - role: deploymentmanager.typeEditor
     - role: deploymentmanager.viewer
     - role: iam.serviceAccountUser
-    splunk-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    splunk-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.viewer
     - role: iam.serviceAccountUser
     - role: monitoring.editor
     - role: monitoring.viewer
-    gluster-paas@kohls-ocf-lle.iam.gserviceaccount.com:
+    gluster-paas@doms-ocf-lle.iam.gserviceaccount.com:
     - role: compute.networkUser
     - role: compute.viewer
     - role: iam.serviceAccountUser
-    ingress-haproxy-paas@kohls-ocf-lle.iam.gserviceaccount.com:
+    ingress-haproxy-paas@doms-ocf-lle.iam.gserviceaccount.com:
     - role: compute.viewer
     - role: storage.objectViewer
-    openshift-node-paas@kohls-ocf-lle.iam.gserviceaccount.com:
+    openshift-node-paas@doms-ocf-lle.iam.gserviceaccount.com:
     - role: compute.viewer
     - role: logging.configWriter
     - role: logging.logWriter
     - role: storage.objectViewer
-    ore-giv-feed-producers-adm-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    ore-giv-feed-producers-adm-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: dataproc.editor
-    ore-giv-feed-producers-ops-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    ore-giv-feed-producers-ops-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: dataproc.viewer
     - role: storage.objectAdmin
-    ore-api-datastore-owner1-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    ore-api-datastore-owner1-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: datastore.owner
-    ocf-ore-inventory-changes-moji@kohls-ocf-lle.iam.gserviceaccount.com:
+    ocf-ore-inventory-changes-moji@doms-ocf-lle.iam.gserviceaccount.com:
     - role: iam.serviceAccountUser
     - role: pubsub.subscriber
-    ocf-ore-inventory-changes-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    ocf-ore-inventory-changes-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: iam.serviceAccountUser
     - role: pubsub.subscriber
-    ocf-ore-inventory-changes-sml@kohls-ocf-lle.iam.gserviceaccount.com:
+    ocf-ore-inventory-changes-sml@doms-ocf-lle.iam.gserviceaccount.com:
     - role: iam.serviceAccountUser
     - role: pubsub.subscriber
-    openshift-registry-paas@kohls-ocf-lle.iam.gserviceaccount.com:
+    openshift-registry-paas@doms-ocf-lle.iam.gserviceaccount.com:
     - role: iam.serviceAccountUser
-    skaler-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    skaler-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: iam.serviceAccountUser
-    terraform-project-creation@kohls-shared-services.iam.gserviceaccount.com:
+    terraform-project-creation@doms-shared-services.iam.gserviceaccount.com:
     - role: iam.serviceAccountUser
-    openshift-stackdriver-paas@kohls-ocf-lle.iam.gserviceaccount.com:
+    openshift-stackdriver-paas@doms-ocf-lle.iam.gserviceaccount.com:
     - role: monitoring.viewer
-    carrierstatus-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    carrierstatus-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: pubsub.admin
     - role: storage.admin
-    cnrm-system-cpe@kohls-cpe-kcc-prd.iam.gserviceaccount.com:
+    cnrm-system-cpe@doms-cpe-kcc-prd.iam.gserviceaccount.com:
     - role: pubsub.admin
     - role: storage.admin
-    item-service-daniel@kohls-ocf-lle.iam.gserviceaccount.com:
+    item-service-daniel@doms-ocf-lle.iam.gserviceaccount.com:
     - role: pubsub.admin
     - role: storage.admin
-    ocf-ore-nonprod-feed-integrati@kohls-ocf-lle.iam.gserviceaccount.com:
+    ocf-ore-nonprod-feed-integrati@doms-ocf-lle.iam.gserviceaccount.com:
     - role: pubsub.editor
-    ots-item-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    ots-item-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: pubsub.editor
     - role: pubsub.publisher
     - role: storage.objectCreator
     - role: storage.objectViewer
-    giv-inventory-changes-pub1@kohls-ocf-lle.iam.gserviceaccount.com:
+    giv-inventory-changes-pub1@doms-ocf-lle.iam.gserviceaccount.com:
     - role: pubsub.publisher
-    giv-sales-history-pub1@kohls-ocf-lle.iam.gserviceaccount.com:
+    giv-sales-history-pub1@doms-ocf-lle.iam.gserviceaccount.com:
     - role: pubsub.publisher
-    ocf-ocr-mls-stage-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    ocf-ocr-mls-stage-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: pubsub.publisher
     - role: pubsub.viewer
-    ocf-ocr-uph-dev-ocr@kohls-ocf-lle.iam.gserviceaccount.com:
+    ocf-ocr-uph-dev-ocr@doms-ocf-lle.iam.gserviceaccount.com:
     - role: pubsub.publisher
-    ocf-ore-nonprod-kafka-connect@kohls-ocf-lle.iam.gserviceaccount.com:
+    ocf-ore-nonprod-kafka-connect@doms-ocf-lle.iam.gserviceaccount.com:
     - role: pubsub.publisher
-    giv-inventory-changes-sub1@kohls-ocf-lle.iam.gserviceaccount.com:
+    giv-inventory-changes-sub1@doms-ocf-lle.iam.gserviceaccount.com:
     - role: pubsub.subscriber
-    giv-sales-history-sub1@kohls-ocf-lle.iam.gserviceaccount.com:
+    giv-sales-history-sub1@doms-ocf-lle.iam.gserviceaccount.com:
     - role: pubsub.subscriber
-    ocf-ocr-nonprod-uphsub@kohls-ocf-lle.iam.gserviceaccount.com:
+    ocf-ocr-nonprod-uphsub@doms-ocf-lle.iam.gserviceaccount.com:
     - role: pubsub.subscriber
-    ocf-ore-supply-changes-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    ocf-ore-supply-changes-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: pubsub.subscriber
     224156074435@cloudservices.gserviceaccount.com:
     - role: storage.admin
-    inventoryadapter-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    inventoryadapter-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: storage.admin
-    nzocf-storage-admin@kohls-ocf-lle.iam.gserviceaccount.com:
+    nzocf-storage-admin@doms-ocf-lle.iam.gserviceaccount.com:
     - role: storage.admin
-    omse-googlestorage-1-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    omse-googlestorage-1-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: storage.admin
     - role: storage.objectAdmin
     service-224156074435@dataproc-accounts.iam.gserviceaccount.com:
     - role: storage.admin
-    supplychainmovement-ocf-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    supplychainmovement-ocf-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: storage.admin
     - role: storage.objectAdmin
-    wslfcasn-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    wslfcasn-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: storage.admin
-    standard-ocf@kohls-ocf-lle.iam.gserviceaccount.com:
+    standard-ocf@doms-ocf-lle.iam.gserviceaccount.com:
     - role: storage.objectCreator
     - role: storage.objectViewer
     - role: storagetransfer.user
-    sis-feed-producers@kohls-scf-lle.iam.gserviceaccount.com:
+    sis-feed-producers@doms-scf-lle.iam.gserviceaccount.com:
     - role: storage.objectAdmin
     - role: dataproc.worker
-    dp-qlik@kohls-bda-prd.iam.gserviceaccount.com:
+    dp-qlik@doms-bda-prd.iam.gserviceaccount.com:
     - role: bigquery.dataViewer
-    dynatrace-gcp-service-non-prod@kohls-ocf-lle.iam.gserviceaccount.com:
+    dynatrace-gcp-service-non-prod@doms-ocf-lle.iam.gserviceaccount.com:
     - role: CustomDynatraceExtensionMetricsRole
       OrgId: 1035901152068

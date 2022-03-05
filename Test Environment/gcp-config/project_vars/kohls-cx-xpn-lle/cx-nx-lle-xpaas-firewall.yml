@@ -12,7 +12,7 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "ocp-bootstrap-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-bootstrap-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           - "10.126.128.0/17" # central lle supernet
@@ -32,8 +32,8 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "ocp-bootstrap-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-master-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-bootstrap-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-master-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           - "10.126.128.0/17" # central lle supernet
@@ -53,9 +53,9 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "ocp-bootstrap-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-router-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-master-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-bootstrap-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-router-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-master-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           - "35.191.0.0/16"
@@ -79,13 +79,13 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "ocp-bootstrap-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-master-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-bootstrap-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-master-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: "ocp-bootstrap-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-master-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-bootstrap-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-master-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
           sourceTags:
           allow:
           - protocol: "tcp"
@@ -100,19 +100,19 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "ocp-bootstrap-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-master-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-bootstrap-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-master-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: "ocp-app-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-bootstrap-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-infra-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-storage-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-master-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-pci-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-pii-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-router-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-app-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-bootstrap-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-infra-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-storage-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-master-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-pci-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-pii-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-router-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
           sourceTags:
           allow:
           - protocol: "tcp"
@@ -129,14 +129,14 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "ocp-app-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-bootstrap-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-infra-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-storage-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-master-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-pci-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-pii-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-router-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-app-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-bootstrap-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-infra-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-storage-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-master-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-pci-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-pii-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-router-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           - "10.126.128.0/17" # central lle supernet
@@ -157,25 +157,25 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "ocp-app-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-bootstrap-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-infra-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-storage-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-master-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-pci-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-pii-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-router-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-app-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-bootstrap-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-infra-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-storage-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-master-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-pci-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-pii-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-router-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: "ocp-app-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-bootstrap-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-infra-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-storage-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-master-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-pci-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-pii-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-router-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-app-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-bootstrap-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-infra-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-storage-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-master-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-pci-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-pii-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-router-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
           sourceTags:
           allow:
           - protocol: "udp"
@@ -189,7 +189,7 @@ vpcs:
             - "9000-9999"
             - "10250"
             - "30000-32767"
-      openshift-lle-prv01-allow-kohls-network:
+      openshift-lle-prv01-allow-doms-network:
         priority: 900
         direction: INGRESS
         description: Allow
@@ -198,9 +198,9 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "ocp-bootstrap-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-master-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-router-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-bootstrap-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-master-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-router-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           - "10.0.0.0/8"
@@ -213,7 +213,7 @@ vpcs:
             - "80"
             - "443"
             - "6443"
-      openshift-lle-prv01-allow-kohls-asn-network:
+      openshift-lle-prv01-allow-doms-asn-network:
         priority: 900
         direction: INGRESS
         description: Allow
@@ -222,7 +222,7 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "ocp-router-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-router-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
             - "66.232.224.0/24"
@@ -252,12 +252,12 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "ocp-app-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-bootstrap-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-infra-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-storage-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-master-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
-          - external: "ocp-router-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-app-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-bootstrap-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-infra-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-storage-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-master-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-router-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           - "10.57.0.0/16"  # KIC User Segment

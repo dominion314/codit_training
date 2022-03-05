@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90586"
 project:
-  name: kohlsqa-gcpdemo-xpn-lle
+  name: domsqa-gcpdemo-xpn-lle
   managed: true
   folderId: "4553252134"
   billingAccount: "00C36A-CD0BDB-E543D0"
@@ -17,4 +17,4 @@ project:
 serviceAPIs:
   compute.googleapis.com:
 projectSharing:
-- kohlsqa-gcpdemo-serv-lle
+- domsqa-gcpdemo-serv-lle

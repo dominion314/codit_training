@@ -49,7 +49,7 @@ vpcs:
             - "443"
             - "22"
             - "8080"
-      onprem-to-kohls-cpe-kcc-lle-01:
+      onprem-to-doms-cpe-kcc-lle-01:
         priority: 900
         direction: INGRESS
         description: GKE-MONITORING

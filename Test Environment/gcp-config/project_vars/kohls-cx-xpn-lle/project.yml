@@ -1,7 +1,7 @@
 ---
 billingDeptId: 90565
 project:
-  name: kohls-cx-xpn-lle
+  name: doms-cx-xpn-lle
   managed: true
   deletionProtect: true
   folderId: "402839726008"
@@ -14,17 +14,17 @@ project:
     line-of-business: cx
     project-requestor: manish
 projectSharing:
-- kohls-bda-dse-lle
-- kohls-cce-dbaas-lle
-- kohls-cce-openshift-lle
-- kohls-cx-associate-lle
-- kohls-cx-loyalty-retailsrv-lle
-- kohls-cx-pci-lle
-- kohls-cx-poc-lle
-- kohls-cx-post-purchase-lle
-- kohls-cx-rtl-lle
-- kohls-cx-shop-lle
-- kohls-cx-sre-lle
+- doms-bda-dse-lle
+- doms-cce-dbaas-lle
+- doms-cce-openshift-lle
+- doms-cx-associate-lle
+- doms-cx-loyalty-retailsrv-lle
+- doms-cx-pci-lle
+- doms-cx-poc-lle
+- doms-cx-post-purchase-lle
+- doms-cx-rtl-lle
+- doms-cx-shop-lle
+- doms-cx-sre-lle
 serviceAPIs:
   cloudresourcemanager.googleapis.com:
   cloudasset.googleapis.com:

@@ -1,16 +1,16 @@
 ---
 storageBuckets:
-  kohls-etcc-ccproductivity-lle-bucket:
+  doms-etcc-ccproductivity-lle-bucket:
     permissions:
       groupsByEmail:
-        bt-callcenterproductivity@kohls.com:
+        bt-callcenterproductivity@doms.com:
           roles:
           - storage.objectAdmin
-        MKEOPS-ALL@kohls.com:
+        MKEOPS-ALL@doms.com:
           roles:
           - storage.objectViewer
       serviceAccountsByEmail:
-        ccproductivity@kohls-etcc-ccproductivity-lle.iam.gserviceaccount.com:
+        ccproductivity@doms-etcc-ccproductivity-lle.iam.gserviceaccount.com:
           deletionProtect: false
           roles:
           - storage.objectAdmin

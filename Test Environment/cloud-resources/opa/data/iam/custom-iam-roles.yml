@@ -1077,7 +1077,7 @@ customIam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-          #Pub/Sub Admin Kohls
+          #Pub/Sub Admin doms
           #Created on: 4/25/17 Based on: Pub/Sub Admin
       - kolhs.pubsub.admin:
           allowedForGroups: true
@@ -2159,7 +2159,7 @@ customIam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-          #Pub/Sub Admin Kohls
+          #Pub/Sub Admin doms
           #Created on: 4/25/17 Based on: Pub/Sub Admin
       - kolhs.pubsub.admin:
           allowedForGroups: true
@@ -3235,7 +3235,7 @@ customIam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-          #Pub/Sub Admin Kohls
+          #Pub/Sub Admin doms
           #Created on: 4/25/17 Based on: Pub/Sub Admin
       - kolhs.pubsub.admin:
           allowedForGroups: true

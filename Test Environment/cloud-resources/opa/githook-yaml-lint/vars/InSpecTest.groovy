@@ -72,7 +72,7 @@ def call() {
                 try {
                     stage("Validating Inspec Tests") {
                         def checks = [:]
-                        projectLists = ["kohlsqa-cpa-inspec"]
+                        projectLists = ["domsqa-cpa-inspec"]
                         for (int x = 0; x < projectLists.size(); x++) {
                             def project = projectLists[x]
                             checks[project] = {
@@ -102,7 +102,7 @@ def call() {
                                                 vaultSecrets = [
                                                     [
                                                         $class: 'VaultSecret',
-                                                        path: 'secret/xpaas/openshift/gcp/kohls-cpe-kcc-lle/inspec',
+                                                        path: 'secret/xpaas/openshift/gcp/doms-cpe-kcc-lle/inspec',
                                                         engineVersion: 1,
                                                         secretValues: [
                                                             [$class: 'VaultSecretValue', envVar: 'GCP_JSON_CREDS', vaultKey: 'key']

@@ -1,7 +1,7 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-iaas-cpa-devops-admin@kohls.com:
+    gcp-iaas-cpa-devops-admin@doms.com:
       roles:
       - compute.loadBalancerAdmin
       - bigquery.dataViewer
@@ -12,7 +12,7 @@ iamPolicyMembers:
       - storage.admin
       - compute.instanceAdmin
       - compute.networkUser
-    gcp-iaas-cpa-devops-l3@kohls.com:
+    gcp-iaas-cpa-devops-l3@doms.com:
       roles:
       - bigquery.dataViewer
       - bigtable.viewer

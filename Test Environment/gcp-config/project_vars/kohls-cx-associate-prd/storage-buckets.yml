@@ -7,7 +7,7 @@ storageBuckets:
     location: US
     labels:
       app-name: "siteline"
-  kohls-stores-dm-batch-bucket:
+  doms-stores-dm-batch-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD

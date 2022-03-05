@@ -1,7 +1,7 @@
 ---
 iamPolicyMembersV2:
   groupsByEmail:
-    gcp-securitymonitoring-devops-l3@kohls.com:
+    gcp-securitymonitoring-devops-l3@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: bigquery.jobUser
@@ -13,7 +13,7 @@ iamPolicyMembersV2:
     - role: logging.privateLogViewer
     - role: logging.viewer
     - role: monitoring.admin
-    gcp-securitytech-devops-admin@kohls.com:
+    gcp-securitytech-devops-admin@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: bigquery.jobUser
@@ -27,7 +27,7 @@ iamPolicyMembersV2:
     - role: logging.viewer
     - role: monitoring.admin
   serviceAccountsByEmail:
-    terraform-sec@kohls-sec-logging-prd.iam.gserviceaccount.com:
+    terraform-sec@doms-sec-logging-prd.iam.gserviceaccount.com:
     - role: lbadmin
       OrgId: 1035901152068
     - role: bigquery.admin
@@ -45,5 +45,5 @@ iamPolicyMembersV2:
     - role: pubsub.admin
     service-984928122895@gcf-admin-robot.iam.gserviceaccount.com:
     - role: cloudfunctions.serviceAgent
-    qradar-pubsub-client-sec@kohls-sec-logging-prd.iam.gserviceaccount.com:
+    qradar-pubsub-client-sec@doms-sec-logging-prd.iam.gserviceaccount.com:
     - role: pubsub.subscriber

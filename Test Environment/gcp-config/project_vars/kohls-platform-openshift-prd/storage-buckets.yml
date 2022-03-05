@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-platform-openshift-prd-oadp-gcpusc1-prd-xpaas:
+  doms-platform-openshift-prd-oadp-gcpusc1-prd-xpaas:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -13,7 +13,7 @@ storageBuckets:
     labels:
       app-name: oadp
       environment-type: prd
-  kohls-platform-openshift-prd-oadp-gcpuse1-prd-xpaas:
+  doms-platform-openshift-prd-oadp-gcpuse1-prd-xpaas:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -26,7 +26,7 @@ storageBuckets:
     labels:
       app-name: oadp
       environment-type: prd
-  kohls-platform-openshift-prd-thanos-gcpusc1-prd-xpaas:
+  doms-platform-openshift-prd-thanos-gcpusc1-prd-xpaas:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD

@@ -11,22 +11,22 @@ vpcs:
           status: PROVISIONED
         permissions:
           serviceAccountsByEmail:
-          - automl-aiops@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - consul-paas@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - kohls-infra-aiops-prd-mongo@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - kohls-infra-aiops-prd-mysql@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - mongo-dba@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - mysql-dba@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - returnreversal-aiops@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - rpa-aiops@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - terraform-devops@kohls-infra-aiops-prd.iam.gserviceaccount.com
+          - automl-aiops@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - consul-paas@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - doms-infra-aiops-prd-mongo@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - doms-infra-aiops-prd-mysql@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - mongo-dba@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - mysql-dba@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - returnreversal-aiops@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - rpa-aiops@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-infra-aiops-prd.iam.gserviceaccount.com
           - 35843875440-compute@developer.gserviceaccount.com
           - 35843875440@cloudservices.gserviceaccount.com
           groupsByEmail:
-          - gcp-aiops-devops-admin@kohls.com
-          - gcp-aiops-devops-l2@kohls.com
-          - gcp-aiops-devops-l3@kohls.com
-          - gcp-aiops-devops-manager@kohls.com
+          - gcp-aiops-devops-admin@doms.com
+          - gcp-aiops-devops-l2@doms.com
+          - gcp-aiops-devops-l3@doms.com
+          - gcp-aiops-devops-manager@doms.com
 
       infra-xpn-prd-aiops-e1-prv01:
         advertiseRoutes: true
@@ -37,22 +37,22 @@ vpcs:
           status: PROVISIONED
         permissions:
           serviceAccountsByEmail:
-          - automl-aiops@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - consul-paas@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - kohls-infra-aiops-prd-mongo@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - kohls-infra-aiops-prd-mysql@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - mongo-dba@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - mysql-dba@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - returnreversal-aiops@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - rpa-aiops@kohls-infra-aiops-prd.iam.gserviceaccount.com
-          - terraform-devops@kohls-infra-aiops-prd.iam.gserviceaccount.com
+          - automl-aiops@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - consul-paas@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - doms-infra-aiops-prd-mongo@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - doms-infra-aiops-prd-mysql@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - mongo-dba@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - mysql-dba@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - returnreversal-aiops@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - rpa-aiops@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-infra-aiops-prd.iam.gserviceaccount.com
           - 35843875440-compute@developer.gserviceaccount.com
           - 35843875440@cloudservices.gserviceaccount.com
           groupsByEmail:
-          - gcp-aiops-devops-admin@kohls.com
-          - gcp-aiops-devops-l2@kohls.com
-          - gcp-aiops-devops-l3@kohls.com
-          - gcp-aiops-devops-manager@kohls.com
+          - gcp-aiops-devops-admin@doms.com
+          - gcp-aiops-devops-l2@doms.com
+          - gcp-aiops-devops-l3@doms.com
+          - gcp-aiops-devops-manager@doms.com
 
       infra-nx-prd-sre-theia-c1-prv01:
         advertiseRoutes: true
@@ -79,20 +79,20 @@ vpcs:
           status: PROVISIONED
         permissions:
           serviceAccountsByEmail:
-          - aiops-docker-mlops@kohls-infra-monitoring-prd.iam.gserviceaccount.com
-          - consul-paas@kohls-infra-monitoring-prd.iam.gserviceaccount.com
-          - dbquery-readonly-aiops@kohls-infra-monitoring-prd.iam.gserviceaccount.com
-          - govops-extract-splunk@kohls-infra-monitoring-prd.iam.gserviceaccount.com
-          - mongo-dba@kohls-infra-monitoring-prd.iam.gserviceaccount.com
-          - mysql-dba@kohls-infra-monitoring-prd.iam.gserviceaccount.com
-          - terraform-devops@kohls-infra-monitoring-prd.iam.gserviceaccount.com
+          - aiops-docker-mlops@doms-infra-monitoring-prd.iam.gserviceaccount.com
+          - consul-paas@doms-infra-monitoring-prd.iam.gserviceaccount.com
+          - dbquery-readonly-aiops@doms-infra-monitoring-prd.iam.gserviceaccount.com
+          - govops-extract-splunk@doms-infra-monitoring-prd.iam.gserviceaccount.com
+          - mongo-dba@doms-infra-monitoring-prd.iam.gserviceaccount.com
+          - mysql-dba@doms-infra-monitoring-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-infra-monitoring-prd.iam.gserviceaccount.com
           - 432140288211-compute@developer.gserviceaccount.com
           - 432140288211@cloudservices.gserviceaccount.com
           groupsByEmail:
-          - gcp-aiops-devops-admin@kohls.com
-          - gcp-aiops-devops-l2@kohls.com
-          - gcp-aiops-devops-l3@kohls.com
-          - gcp-aiops-devops-manager@kohls.com
+          - gcp-aiops-devops-admin@doms.com
+          - gcp-aiops-devops-l2@doms.com
+          - gcp-aiops-devops-l3@doms.com
+          - gcp-aiops-devops-manager@doms.com
 
       infra-nx-prd-monitoring-e1-prv01:
         advertiseRoutes: false
@@ -103,20 +103,20 @@ vpcs:
           status: PROVISIONED
         permissions:
           serviceAccountsByEmail:
-          - aiops-docker-mlops@kohls-infra-monitoring-prd.iam.gserviceaccount.com
-          - consul-paas@kohls-infra-monitoring-prd.iam.gserviceaccount.com
-          - dbquery-readonly-aiops@kohls-infra-monitoring-prd.iam.gserviceaccount.com
-          - govops-extract-splunk@kohls-infra-monitoring-prd.iam.gserviceaccount.com
-          - mongo-dba@kohls-infra-monitoring-prd.iam.gserviceaccount.com
-          - mysql-dba@kohls-infra-monitoring-prd.iam.gserviceaccount.com
-          - terraform-devops@kohls-infra-monitoring-prd.iam.gserviceaccount.com
+          - aiops-docker-mlops@doms-infra-monitoring-prd.iam.gserviceaccount.com
+          - consul-paas@doms-infra-monitoring-prd.iam.gserviceaccount.com
+          - dbquery-readonly-aiops@doms-infra-monitoring-prd.iam.gserviceaccount.com
+          - govops-extract-splunk@doms-infra-monitoring-prd.iam.gserviceaccount.com
+          - mongo-dba@doms-infra-monitoring-prd.iam.gserviceaccount.com
+          - mysql-dba@doms-infra-monitoring-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-infra-monitoring-prd.iam.gserviceaccount.com
           - 432140288211-compute@developer.gserviceaccount.com
           - 432140288211@cloudservices.gserviceaccount.com
           groupsByEmail:
-          - gcp-aiops-devops-admin@kohls.com
-          - gcp-aiops-devops-l2@kohls.com
-          - gcp-aiops-devops-l3@kohls.com
-          - gcp-aiops-devops-manager@kohls.com
+          - gcp-aiops-devops-admin@doms.com
+          - gcp-aiops-devops-l2@doms.com
+          - gcp-aiops-devops-l3@doms.com
+          - gcp-aiops-devops-manager@doms.com
 
       infra-nx-prd-kdx-c1-prv01:
         advertiseRoutes: false
@@ -128,27 +128,27 @@ vpcs:
         permissions:
           serviceAccountsByEmail:
           - 683393625024@cloudservices.gserviceaccount.com
-          - consul-paas@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - densify-data-collector@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-mysql-kdx@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-servicereg@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-sftp@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-svc@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-ui@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-zkui@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-zookeeper@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kohls-infra-kdx-prd-mongo@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kohls-infra-kdx-prd-mysql@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - terraform@kohls-infra-kdx-prd.iam.gserviceaccount.com
+          - consul-paas@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - densify-data-collector@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-mysql-kdx@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-servicereg@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-sftp@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-svc@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-ui@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-zkui@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-zookeeper@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - doms-infra-kdx-prd-mongo@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - doms-infra-kdx-prd-mysql@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - terraform@doms-infra-kdx-prd.iam.gserviceaccount.com
           groupsByEmail:
-          - gcp-aiops-devops-admin@kohls.com
-          - gcp-aiops-devops-l2@kohls.com
-          - gcp-aiops-devops-l3@kohls.com
-          - gcp-aiops-devops-manager@kohls.com
-          - gcp-dataanalytics-ei-productionengineer-admin@kohls.com
-          - gcp-devops-mdx@kohls.com
-          - gcp-marketing-mdx-productionengineer-admin@kohls.com
-          - gcp-mdx-viewers@kohls.com
+          - gcp-aiops-devops-admin@doms.com
+          - gcp-aiops-devops-l2@doms.com
+          - gcp-aiops-devops-l3@doms.com
+          - gcp-aiops-devops-manager@doms.com
+          - gcp-dataanalytics-ei-productionengineer-admin@doms.com
+          - gcp-devops-mdx@doms.com
+          - gcp-marketing-mdx-productionengineer-admin@doms.com
+          - gcp-mdx-viewers@doms.com
 
       infra-nx-prd-kdx-e1-prv01:
         advertiseRoutes: false
@@ -160,27 +160,27 @@ vpcs:
         permissions:
           serviceAccountsByEmail:
           - 683393625024@cloudservices.gserviceaccount.com
-          - consul-paas@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - densify-data-collector@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-mysql-kdx@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-servicereg@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-sftp@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-svc@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-ui@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-zkui@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-zookeeper@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kohls-infra-kdx-prd-mongo@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kohls-infra-kdx-prd-mysql@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - terraform@kohls-infra-kdx-prd.iam.gserviceaccount.com
+          - consul-paas@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - densify-data-collector@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-mysql-kdx@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-servicereg@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-sftp@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-svc@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-ui@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-zkui@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-zookeeper@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - doms-infra-kdx-prd-mongo@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - doms-infra-kdx-prd-mysql@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - terraform@doms-infra-kdx-prd.iam.gserviceaccount.com
           groupsByEmail:
-          - gcp-aiops-devops-admin@kohls.com
-          - gcp-aiops-devops-l2@kohls.com
-          - gcp-aiops-devops-l3@kohls.com
-          - gcp-aiops-devops-manager@kohls.com
-          - gcp-dataanalytics-ei-productionengineer-admin@kohls.com
-          - gcp-devops-mdx@kohls.com
-          - gcp-marketing-mdx-productionengineer-admin@kohls.com
-          - gcp-mdx-viewers@kohls.com
+          - gcp-aiops-devops-admin@doms.com
+          - gcp-aiops-devops-l2@doms.com
+          - gcp-aiops-devops-l3@doms.com
+          - gcp-aiops-devops-manager@doms.com
+          - gcp-dataanalytics-ei-productionengineer-admin@doms.com
+          - gcp-devops-mdx@doms.com
+          - gcp-marketing-mdx-productionengineer-admin@doms.com
+          - gcp-mdx-viewers@doms.com
 
       infra-nx-prd-kdx-c1-sec01:
         advertiseRoutes: false
@@ -192,27 +192,27 @@ vpcs:
         permissions:
           serviceAccountsByEmail:
           - 683393625024@cloudservices.gserviceaccount.com
-          - consul-paas@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - densify-data-collector@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-mysql-kdx@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-servicereg@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-sftp@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-svc@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-ui@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-zkui@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-zookeeper@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kohls-infra-kdx-prd-mongo@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kohls-infra-kdx-prd-mysql@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - terraform@kohls-infra-kdx-prd.iam.gserviceaccount.com
+          - consul-paas@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - densify-data-collector@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-mysql-kdx@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-servicereg@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-sftp@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-svc@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-ui@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-zkui@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-zookeeper@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - doms-infra-kdx-prd-mongo@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - doms-infra-kdx-prd-mysql@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - terraform@doms-infra-kdx-prd.iam.gserviceaccount.com
           groupsByEmail:
-          - gcp-aiops-devops-admin@kohls.com
-          - gcp-aiops-devops-l2@kohls.com
-          - gcp-aiops-devops-l3@kohls.com
-          - gcp-aiops-devops-manager@kohls.com
-          - gcp-dataanalytics-ei-productionengineer-admin@kohls.com
-          - gcp-devops-mdx@kohls.com
-          - gcp-marketing-mdx-productionengineer-admin@kohls.com
-          - gcp-mdx-viewers@kohls.com
+          - gcp-aiops-devops-admin@doms.com
+          - gcp-aiops-devops-l2@doms.com
+          - gcp-aiops-devops-l3@doms.com
+          - gcp-aiops-devops-manager@doms.com
+          - gcp-dataanalytics-ei-productionengineer-admin@doms.com
+          - gcp-devops-mdx@doms.com
+          - gcp-marketing-mdx-productionengineer-admin@doms.com
+          - gcp-mdx-viewers@doms.com
 
       infra-nx-prd-kdx-e1-sec01:
         advertiseRoutes: true
@@ -224,27 +224,27 @@ vpcs:
         permissions:
           serviceAccountsByEmail:
           - 683393625024@cloudservices.gserviceaccount.com
-          - consul-paas@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - densify-data-collector@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-mysql-kdx@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-servicereg@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-sftp@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-svc@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-ui@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-zkui@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-zookeeper@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kohls-infra-kdx-prd-mongo@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kohls-infra-kdx-prd-mysql@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - terraform@kohls-infra-kdx-prd.iam.gserviceaccount.com
+          - consul-paas@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - densify-data-collector@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-mysql-kdx@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-servicereg@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-sftp@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-svc@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-ui@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-zkui@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-zookeeper@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - doms-infra-kdx-prd-mongo@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - doms-infra-kdx-prd-mysql@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - terraform@doms-infra-kdx-prd.iam.gserviceaccount.com
           groupsByEmail:
-          - gcp-aiops-devops-admin@kohls.com
-          - gcp-aiops-devops-l2@kohls.com
-          - gcp-aiops-devops-l3@kohls.com
-          - gcp-aiops-devops-manager@kohls.com
-          - gcp-dataanalytics-ei-productionengineer-admin@kohls.com
-          - gcp-devops-mdx@kohls.com
-          - gcp-marketing-mdx-productionengineer-admin@kohls.com
-          - gcp-mdx-viewers@kohls.com
+          - gcp-aiops-devops-admin@doms.com
+          - gcp-aiops-devops-l2@doms.com
+          - gcp-aiops-devops-l3@doms.com
+          - gcp-aiops-devops-manager@doms.com
+          - gcp-dataanalytics-ei-productionengineer-admin@doms.com
+          - gcp-devops-mdx@doms.com
+          - gcp-marketing-mdx-productionengineer-admin@doms.com
+          - gcp-mdx-viewers@doms.com
 
       infra-nx-prd-ad-c1-sec01:
         advertiseRoutes: true
@@ -255,7 +255,7 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-infra-windows-devops-l3@kohls.com
+          - gcp-infra-windows-devops-l3@doms.com
           serviceAccountsByEmail:
           - 633980228478@cloudservices.gserviceaccount.com
 
@@ -268,7 +268,7 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-infra-windows-devops-l3@kohls.com
+          - gcp-infra-windows-devops-l3@doms.com
           serviceAccountsByEmail:
           - 633980228478@cloudservices.gserviceaccount.com
 
@@ -282,27 +282,27 @@ vpcs:
         permissions:
           serviceAccountsByEmail:
           - 683393625024@cloudservices.gserviceaccount.com
-          - consul-paas@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - densify-data-collector@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-mysql-kdx@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-servicereg@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-sftp@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-svc@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-ui@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-zkui@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-zookeeper@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kohls-infra-kdx-prd-mongo@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kohls-infra-kdx-prd-mysql@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - terraform@kohls-infra-kdx-prd.iam.gserviceaccount.com
+          - consul-paas@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - densify-data-collector@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-mysql-kdx@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-servicereg@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-sftp@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-svc@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-ui@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-zkui@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-zookeeper@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - doms-infra-kdx-prd-mongo@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - doms-infra-kdx-prd-mysql@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - terraform@doms-infra-kdx-prd.iam.gserviceaccount.com
           groupsByEmail:
-          - gcp-aiops-devops-admin@kohls.com
-          - gcp-aiops-devops-l2@kohls.com
-          - gcp-aiops-devops-l3@kohls.com
-          - gcp-aiops-devops-manager@kohls.com
-          - gcp-dataanalytics-ei-productionengineer-admin@kohls.com
-          - gcp-devops-mdx@kohls.com
-          - gcp-marketing-mdx-productionengineer-admin@kohls.com
-          - gcp-mdx-viewers@kohls.com
+          - gcp-aiops-devops-admin@doms.com
+          - gcp-aiops-devops-l2@doms.com
+          - gcp-aiops-devops-l3@doms.com
+          - gcp-aiops-devops-manager@doms.com
+          - gcp-dataanalytics-ei-productionengineer-admin@doms.com
+          - gcp-devops-mdx@doms.com
+          - gcp-marketing-mdx-productionengineer-admin@doms.com
+          - gcp-mdx-viewers@doms.com
 
       infra-nx-prd-kdx-e1-pub01:
         advertiseRoutes: true
@@ -314,27 +314,27 @@ vpcs:
         permissions:
           serviceAccountsByEmail:
           - 683393625024@cloudservices.gserviceaccount.com
-          - consul-paas@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - densify-data-collector@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-mysql-kdx@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-servicereg@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-sftp@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-svc@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-ui@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-zkui@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kdx-zookeeper@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kohls-infra-kdx-prd-mongo@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - kohls-infra-kdx-prd-mysql@kohls-infra-kdx-prd.iam.gserviceaccount.com
-          - terraform@kohls-infra-kdx-prd.iam.gserviceaccount.com
+          - consul-paas@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - densify-data-collector@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-mysql-kdx@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-servicereg@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-sftp@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-svc@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-ui@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-zkui@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - kdx-zookeeper@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - doms-infra-kdx-prd-mongo@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - doms-infra-kdx-prd-mysql@doms-infra-kdx-prd.iam.gserviceaccount.com
+          - terraform@doms-infra-kdx-prd.iam.gserviceaccount.com
           groupsByEmail:
-          - gcp-aiops-devops-admin@kohls.com
-          - gcp-aiops-devops-l2@kohls.com
-          - gcp-aiops-devops-l3@kohls.com
-          - gcp-aiops-devops-manager@kohls.com
-          - gcp-dataanalytics-ei-productionengineer-admin@kohls.com
-          - gcp-devops-mdx@kohls.com
-          - gcp-marketing-mdx-productionengineer-admin@kohls.com
-          - gcp-mdx-viewers@kohls.com
+          - gcp-aiops-devops-admin@doms.com
+          - gcp-aiops-devops-l2@doms.com
+          - gcp-aiops-devops-l3@doms.com
+          - gcp-aiops-devops-manager@doms.com
+          - gcp-dataanalytics-ei-productionengineer-admin@doms.com
+          - gcp-devops-mdx@doms.com
+          - gcp-marketing-mdx-productionengineer-admin@doms.com
+          - gcp-mdx-viewers@doms.com
 
       infra-nx-prd-pie-c1-prv01:
         advertiseRoutes: true
@@ -345,14 +345,14 @@ vpcs:
           status: PROVISIONED
         permissions:
           serviceAccountsByEmail:
-          - lemur-cpe@kohls-infra-pie-prd.iam.gserviceaccount.com
-          - terraform-devops@kohls-infra-pie-prd.iam.gserviceaccount.com
-          - postgres-cpe@kohls-infra-pie-prd.iam.gserviceaccount.com
+          - lemur-cpe@doms-infra-pie-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-infra-pie-prd.iam.gserviceaccount.com
+          - postgres-cpe@doms-infra-pie-prd.iam.gserviceaccount.com
           - 919911916074@cloudservices.gserviceaccount.com
           - 919911916074-compute@developer.gserviceaccount.com
           groupsByEmail:
-          - kt-casey@kohls.com
-          - IT-MiddlewareOffshore-L2@kohls.com
+          - kt-casey@doms.com
+          - IT-MiddlewareOffshore-L2@doms.com
 
       infra-nx-prd-pie-e1-prv01:
         advertiseRoutes: true
@@ -363,14 +363,14 @@ vpcs:
           status: PROVISIONED
         permissions:
           serviceAccountsByEmail:
-          - lemur-cpe@kohls-infra-pie-prd.iam.gserviceaccount.com
-          - terraform-devops@kohls-infra-pie-prd.iam.gserviceaccount.com
-          - postgres-cpe@kohls-infra-pie-prd.iam.gserviceaccount.com
+          - lemur-cpe@doms-infra-pie-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-infra-pie-prd.iam.gserviceaccount.com
+          - postgres-cpe@doms-infra-pie-prd.iam.gserviceaccount.com
           - 919911916074@cloudservices.gserviceaccount.com
           - 919911916074-compute@developer.gserviceaccount.com
           groupsByEmail:
-          - kt-casey@kohls.com
-          - IT-MiddlewareOffshore-L2@kohls.com
+          - kt-casey@doms.com
+          - IT-MiddlewareOffshore-L2@doms.com
 
       infra-nx-prd-puppet-c1-prv01:
         advertiseRoutes: true
@@ -383,8 +383,8 @@ vpcs:
           serviceAccountsByEmail:
           - 366884691605-compute@developer.gserviceaccount.com
           groupsByEmail:
-          - kt-casey@kohls.com
-          - IT-MiddlewareOffshore-L2@kohls.com
+          - kt-casey@doms.com
+          - IT-MiddlewareOffshore-L2@doms.com
 
       infra-nx-prd-puppet-e1-prv01:
         advertiseRoutes: true
@@ -397,8 +397,8 @@ vpcs:
           serviceAccountsByEmail:
           - 366884691605-compute@developer.gserviceaccount.com
           groupsByEmail:
-          - kt-casey@kohls.com
-          - IT-MiddlewareOffshore-L2@kohls.com
+          - kt-casey@doms.com
+          - IT-MiddlewareOffshore-L2@doms.com
 
       infra-nx-prd-monitoring-c1-prv02:
         advertiseRoutes: true
@@ -409,17 +409,17 @@ vpcs:
           status: PROVISIONED
         permissions:
           serviceAccountsByEmail:
-          - aiops-docker-mlops@kohls-infra-monitoring-prd.iam.gserviceaccount.com
-          - consul-paas@kohls-infra-monitoring-prd.iam.gserviceaccount.com
-          - dbquery-readonly-aiops@kohls-infra-monitoring-prd.iam.gserviceaccount.com
-          - govops-extract-splunk@kohls-infra-monitoring-prd.iam.gserviceaccount.com
-          - mongo-dba@kohls-infra-monitoring-prd.iam.gserviceaccount.com
-          - mysql-dba@kohls-infra-monitoring-prd.iam.gserviceaccount.com
-          - terraform-devops@kohls-infra-monitoring-prd.iam.gserviceaccount.com
+          - aiops-docker-mlops@doms-infra-monitoring-prd.iam.gserviceaccount.com
+          - consul-paas@doms-infra-monitoring-prd.iam.gserviceaccount.com
+          - dbquery-readonly-aiops@doms-infra-monitoring-prd.iam.gserviceaccount.com
+          - govops-extract-splunk@doms-infra-monitoring-prd.iam.gserviceaccount.com
+          - mongo-dba@doms-infra-monitoring-prd.iam.gserviceaccount.com
+          - mysql-dba@doms-infra-monitoring-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-infra-monitoring-prd.iam.gserviceaccount.com
           - 432140288211-compute@developer.gserviceaccount.com
           - 432140288211@cloudservices.gserviceaccount.com
           groupsByEmail:
-          - gcp-aiops-devops-admin@kohls.com
-          - gcp-aiops-devops-l2@kohls.com
-          - gcp-aiops-devops-l3@kohls.com
-          - gcp-aiops-devops-manager@kohls.com
+          - gcp-aiops-devops-admin@doms.com
+          - gcp-aiops-devops-l2@doms.com
+          - gcp-aiops-devops-l3@doms.com
+          - gcp-aiops-devops-manager@doms.com

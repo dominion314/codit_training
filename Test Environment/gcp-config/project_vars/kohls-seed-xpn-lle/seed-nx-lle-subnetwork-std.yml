@@ -11,13 +11,13 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-ocf-devops-admin@kohls.com
+          - gcp-ocf-devops-admin@doms.com
           serviceAccountsByEmail:
-          - ocr-nonprod-streaming@kohls-scf-lle.iam.gserviceaccount.com
-          - dataflow-runner@kohls-scf-lle.iam.gserviceaccount.com
+          - ocr-nonprod-streaming@doms-scf-lle.iam.gserviceaccount.com
+          - dataflow-runner@doms-scf-lle.iam.gserviceaccount.com
           - service-224156074435@dataflow-service-producer-prod.iam.gserviceaccount.com
           - service-224156074435@dataproc-accounts.iam.gserviceaccount.com
-          - terraform-devops@kohls-scf-lle.iam.gserviceaccount.com
+          - terraform-devops@doms-scf-lle.iam.gserviceaccount.com
           - 224156074435@cloudservices.gserviceaccount.com
       seed-nx-lle-scf-e1-prv01:
         region: us-east1
@@ -28,10 +28,10 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-ocf-devops-admin@kohls.com
+          - gcp-ocf-devops-admin@doms.com
           serviceAccountsByEmail:
-          - dataflow-runner@kohls-scf-lle.iam.gserviceaccount.com
-          - terraform-devops@kohls-scf-lle.iam.gserviceaccount.com
+          - dataflow-runner@doms-scf-lle.iam.gserviceaccount.com
+          - terraform-devops@doms-scf-lle.iam.gserviceaccount.com
           - 224156074435@cloudservices.gserviceaccount.com
       seed-nx-lle-scf-c2-prv01:
         region: us-central1
@@ -42,4 +42,4 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-ocf-devops-admin@kohls.com
+          - gcp-ocf-devops-admin@doms.com

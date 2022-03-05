@@ -1,4 +1,4 @@
-package kohls.gitops.kcc.gcp_project.iam.roles
+package doms.gitops.kcc.gcp_project.iam.roles
 default allow = false
 
 environment := replace(replace(replace(input.project.labels["environment-type"], "ops", "nonprd"), "hle", "nonprd"), "lle", "nonprd")

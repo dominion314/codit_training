@@ -5,7 +5,7 @@ from jinja2 import Environment, PackageLoader, FileSystemLoader
 import sys
 
 ##Open JSON file and save it as dump_data
-with open('kohls-merch-xpn-lle.json', 'r') as f:
+with open('doms-merch-xpn-lle.json', 'r') as f:
     data = json.load(f)
     dump_data = json.dumps(data, sort_keys=True)
 

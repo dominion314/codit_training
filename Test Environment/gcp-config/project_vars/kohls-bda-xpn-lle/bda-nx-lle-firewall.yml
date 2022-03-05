@@ -243,7 +243,7 @@ vpcs:
           - protocol: "tcp"
             ports:
             - "22"
-      kohls-onprem-users-dft-access:
+      doms-onprem-users-dft-access:
         priority: 900
         direction: INGRESS
         description:
@@ -274,7 +274,7 @@ vpcs:
             - "443"
             - "8080"
             - "8443"
-      kohls-onprem-users-kafka-access:
+      doms-onprem-users-kafka-access:
         description: SCTASK0640037
         direction: INGRESS
         disabled: false
@@ -308,7 +308,7 @@ vpcs:
           - kafka
           - fw-bd-kafka
           - fw-bd-kafka-lle
-      kohls-onprem-users-consul-vault-access:
+      doms-onprem-users-consul-vault-access:
         description: SCTASK1020957
         direction: INGRESS
         disabled: false
@@ -340,7 +340,7 @@ vpcs:
           - fw-consul
           - fw-vault
           - vault
-      kohls-onprem-users-rdp-access:
+      doms-onprem-users-rdp-access:
         description: SCTASK0565489
         direction: INGRESS
         disabled: false
@@ -896,7 +896,7 @@ vpcs:
           - fw-bd-ede-hle
           - fw-bd-tableau
           - fw-bd-tableau-lle
-      kohls-kos-lle-web-ingress:
+      doms-kos-lle-web-ingress:
         description: SCTASK0991126
         direction: INGRESS
         disabled: false
@@ -929,7 +929,7 @@ vpcs:
           targetTags:
           - fw-http
           - fw-https
-      kohls-kos-lle-cnc-snb-ede-ingress:
+      doms-kos-lle-cnc-snb-ede-ingress:
         description: SCTASK0918890,SCTASK0921690
         direction: INGRESS
         disabled: false

@@ -6,5 +6,5 @@ steps:
   args: ['-x', '/usr/local/bin/yml2pdf.sh', 'input.yml', 'input.pdf']
 artifacts:
   objects:
-    location: 'gs://kohls-iaas-lle-cloud-build-artifacts/test-buids/'
+    location: 'gs://doms-iaas-lle-cloud-build-artifacts/test-buids/'
     paths: ['input.pdf']

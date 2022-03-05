@@ -215,7 +215,7 @@ vpcs:
           targetTags:
             - fw-ssh
 
-      kohls-ddh-lle-to-ecom-ecmdm-lle:
+      doms-ddh-lle-to-ecom-ecmdm-lle:
         direction: INGRESS
         description: SNOW-16793
         disabled: false
@@ -245,7 +245,7 @@ vpcs:
             - fw-essh-hle
             - fw-enetdiagnostics-hle
 
-      kohls-ecom-xpn-lle-intra-subnet-access-tcp:
+      doms-ecom-xpn-lle-intra-subnet-access-tcp:
         direction: INGRESS
         description: SNOW-16793
         disabled: false
@@ -265,7 +265,7 @@ vpcs:
           targetTags:
             - fw-kafka
 
-      kohls-ecom-xpn-lle-to-ecom-ecmdm-lle-kafka:
+      doms-ecom-xpn-lle-to-ecom-ecmdm-lle-kafka:
         direction: INGRESS
         description: SNOW-16793
         disabled: false
@@ -282,7 +282,7 @@ vpcs:
           targetTags:
             - fw-kafka
 
-      kohls-kos-xpn-cicd-to-ecom-ecmdm-lle-mysql:
+      doms-kos-xpn-cicd-to-ecom-ecmdm-lle-mysql:
         direction: INGRESS
         description: SNOW-16793
         disabled: false
@@ -306,7 +306,7 @@ vpcs:
             - ecmdm-qa01-blue-trgr-vm
             - mysql
             - blue
-            - fw-kohls-cavisson-vm
+            - fw-doms-cavisson-vm
             - fw-mysql
             - fw-ecmdm-realtime
             - fw-http
@@ -315,7 +315,7 @@ vpcs:
             - fw-https
             - ecmdm-qa01
 
-      kohls-kos-xpn-cicd-central-pub-secure-ecom-ecmdm:
+      doms-kos-xpn-cicd-central-pub-secure-ecom-ecmdm:
         direction: INGRESS
         description: SNOW-16793
         disabled: false
@@ -650,7 +650,7 @@ vpcs:
           targetTags:
             - fw-db-kafka
 
-      kohls-secure-ecom-ecmdm-lle-central-ecom-ecmdm-lle:
+      doms-secure-ecom-ecmdm-lle-central-ecom-ecmdm-lle:
         direction: INGRESS
         description: SNOW-16793
         disabled: false
@@ -739,7 +739,7 @@ vpcs:
           targetTags:
             - fw-https
 
-      on-prem-atg-ing-to-kohls-ecom-ecmdm-lle-ssh:
+      on-prem-atg-ing-to-doms-ecom-ecmdm-lle-ssh:
         direction: INGRESS
         description: SNOW-16793
         disabled: false
@@ -967,7 +967,7 @@ vpcs:
           targetTags:
             - fw-ssh
 
-      onprem-poc-env-ing-to-kohls-ecom-ecmdm-lle-ssh:
+      onprem-poc-env-ing-to-doms-ecom-ecmdm-lle-ssh:
         direction: INGRESS
         description: SNOW-16793
         disabled: false
@@ -1183,7 +1183,7 @@ vpcs:
           targetTags:
             - fw-ssh
 
-      stores-preprod-ing-to-kohls-ecom-ecmdm-lle-ssh:
+      stores-preprod-ing-to-doms-ecom-ecmdm-lle-ssh:
         direction: INGRESS
         description: SNOW-16793
         disabled: false

@@ -18,13 +18,13 @@ Staff who want to create a new service project will need to do the following:
 
 Within the `project_vars` directory in the `gcp-config` repo, create a new folder with the appropriate service project name.  Once inside that folder, create a new file called `project.yml`
 
-Follow directions within the [`parameter_schema.md`](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Parameter_Schema.md) file.  After created your `project.yml` will look like this.
+Follow directions within the [`parameter_schema.md`](https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Parameter_Schema.md) file.  After created your `project.yml` will look like this.
 
 ```yaml
 ---
 billingDeptId: "00000"
 project:
-  name: kohls-demo-lob-lle
+  name: doms-demo-lob-lle
   managed: true
   folderId: "11111111111"
   billingAccount: "8675-309-jenny"
@@ -56,7 +56,7 @@ Follow directions within the `parameter_schema.md` file.  After created your `ia
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-demo-lob-devops-admin@kohls.com:
+    gcp-demo-lob-devops-admin@doms.com:
       roles:
         - compute.storageAdmin
         - iam.serviceAccountUser
@@ -64,7 +64,7 @@ iamPolicyMembers:
         - compute.instanceAdmin
         - compute.networkUser
         - container.admin
-    gcp-demo-lob-devops-l3@kohls.com:
+    gcp-demo-lob-devops-l3@doms.com:
       roles:
         - compute.storageAdmin
         - iam.serviceAccountUser
@@ -77,47 +77,47 @@ iamPolicyMembers:
 
 Eunomia will pull your new folder definition once the Eunomia seed configuration is updated with the relevant details.
 
-Navigate to the `gcp-config` repo, then to `eunomia_vars/kohls-cpe-kcc-prd-01/vars/projects.yml`
+Navigate to the `gcp-config` repo, then to `eunomia_vars/doms-cpe-kcc-prd-01/vars/projects.yml`
 
 Add your project folder to the list of managed projects.  The file will look like this.  Ensure you use proper indentation.
 
 ```yaml
 ---
 projects:
-- name: kohls-cpe-xpn-lle
+- name: doms-cpe-xpn-lle
   gitRef: master
-- name: kohls-cpe-xpn-prd
+- name: doms-cpe-xpn-prd
   gitRef: master
-- name: kohls-intra-transit-xpn-prd
+- name: doms-intra-transit-xpn-prd
   gitRef: master
-- name: kohls-multitenant-xpn-lle
+- name: doms-multitenant-xpn-lle
   gitRef: master
-- name: kohls-cpe-kcc-lle
+- name: doms-cpe-kcc-lle
   gitRef: master
-- name: kohls-cpe-cpa-lle
+- name: doms-cpe-cpa-lle
   gitRef: master
-- name: kohls-ocf-lle
+- name: doms-ocf-lle
   gitRef: master
-- name: kohls-ocf-stateful-lle
+- name: doms-ocf-stateful-lle
   gitRef: master
-- name: kohls-cpe-cne-lle
+- name: doms-cpe-cne-lle
   gitRef: master
 ```
 ### 4. Attach Host Project to the Service Project
 
-Service projects need to be associated to a host project for network resources.  Identify the appropriate project for your LOB/ENV named `kohls-{{LOB}}-xpn-{{ENV}}`.  Find the `project.yml` file for the host project and add/update your service project under the `projectSharing` key as a list.  An example of this will be so:
+Service projects need to be associated to a host project for network resources.  Identify the appropriate project for your LOB/ENV named `doms-{{LOB}}-xpn-{{ENV}}`.  Find the `project.yml` file for the host project and add/update your service project under the `projectSharing` key as a list.  An example of this will be so:
 
 ```yaml
 project:
-  name: kohls-demo-xpn-lle
+  name: doms-demo-xpn-lle
   managed: true
 ...
 projectSharing:
-  - kohls-demo-svc1-lle
-  - kohls-demo-svc2-lle
+  - doms-demo-svc1-lle
+  - doms-demo-svc2-lle
 ```
 
-With NetX, there has been a reduction in the number of host(xpn) projects. The [Netx_Host_Project_Mapping](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Netx_Host_Project_Mapping.md) in this folder will assist you in identifying the proper one for your team. You will need to know your Product Domain which can be found by visiting the [Kohl's Balanced Teams](https://sites.google.com/kohls.com/kt-way/how-we-work/balanced-teams) site.
+With NetX, there has been a reduction in the number of host(xpn) projects. The [Netx_Host_Project_Mapping](https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Netx_Host_Project_Mapping.md) in this folder will assist you in identifying the proper one for your team. You will need to know your Product Domain which can be found by visiting the [Kohl's Balanced Teams](https://sites.google.com/doms.com/kt-way/how-we-work/balanced-teams) site.
 
 ### 5. Add Subnet IAM
 
@@ -138,5 +138,5 @@ The resulting subnetwork object should look like this.
           bluecat-id: 111111
         permissions:
           groupsByEmail:
-          - gcp-demo-devops-admin@kohls.com
-          - gcp-demo-devops-l3@kohls.com
+          - gcp-demo-devops-admin@doms.com
+          - gcp-demo-devops-l3@doms.com

@@ -41,7 +41,7 @@ The cloud router is a regional construct.  With the VPC routing mode as GLOBAL t
 ---
 # ASNs between 4,200,000,000 - 4,294,967,294
 ha_vpn_to_global_transit_asn:
-  kohls-cpe-xpn-lle:
+  doms-cpe-xpn-lle:
     cpe-nx-lle-c1-gcp-rtr01: 4200000010
     cpe-nx-lle-e1-gcp-rtr01: 4200000011
 ```
@@ -52,11 +52,11 @@ Routers within a custom VPC should be set to DEFAULT.  This will automatically a
 
 ## Adding HA VPN to Transit
 
-"HAVPN to Transit" settings are exclusively to build connectivity to other GCP projects and VPCs without needing to route back on-prem.  The transit VPC is currently defined in [default variables](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/default_vars/default-vpn.yml)
+"HAVPN to Transit" settings are exclusively to build connectivity to other GCP projects and VPCs without needing to route back on-prem.  The transit VPC is currently defined in [default variables](https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/default_vars/default-vpn.yml)
 
 ```yaml
 transit_hub:
-  namespace: gcp-kohls-dev-cne-transit-lle
+  namespace: gcp-doms-dev-cne-transit-lle
   vpc: xpn-transit
   centralRouterName:  transit-hub-central1-router
   eastRouterName: transit-hub-east1-router

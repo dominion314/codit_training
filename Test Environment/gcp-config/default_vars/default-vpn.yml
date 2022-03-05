@@ -4,7 +4,7 @@ globalVPNSecretRef:
   secretObjectKey: sharedSecret
 
 transit_hub:
-  namespace: gcp-kohls-intra-transit-xpn-prd
+  namespace: gcp-doms-intra-transit-xpn-prd
   vpc: intra-xpn-transit
   centralRouterName: intra-xpn-transit-c1-gcp-rtr01
   eastRouterName: intra-xpn-transit-e1-gcp-rtr01

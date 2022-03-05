@@ -1,77 +1,77 @@
 ---
 storageBuckets:
-  kohls-bda-prd-prod-dp-qlik-finance:
+  doms-bda-prd-prod-dp-qlik-finance:
     permissions:
       serviceAccountsByEmail:
-        dp-qlik-finance@kohls-bda-prd.iam.gserviceaccount.com:
+        dp-qlik-finance@doms-bda-prd.iam.gserviceaccount.com:
           roles:
             - storage.objectAdmin
-  kohls-bda-prd-prod-dp-qlik-external:
+  doms-bda-prd-prod-dp-qlik-external:
     permissions:
       serviceAccountsByEmail:
-        dp-qlik-external@kohls-bda-prd.iam.gserviceaccount.com:
+        dp-qlik-external@doms-bda-prd.iam.gserviceaccount.com:
           roles:
             - storage.objectAdmin
-  kohls-bda-prd-prod-dp-customer:
+  doms-bda-prd-prod-dp-customer:
     permissions:
       serviceAccountsByEmail:
-        dp-bda-adhoc@kohls-bda-prd.iam.gserviceaccount.com:
+        dp-bda-adhoc@doms-bda-prd.iam.gserviceaccount.com:
           roles:
             - storage.objectAdmin
-  kohls-bda-prd-prod-kdx-marketing:
+  doms-bda-prd-prod-kdx-marketing:
     permissions:
       serviceAccountsByEmail:
-        dp-bda-adhoc@kohls-bda-prd.iam.gserviceaccount.com:
+        dp-bda-adhoc@doms-bda-prd.iam.gserviceaccount.com:
           roles:
             - storage.objectAdmin
-  kohls-bda-prd-prod-dp-marketing:
+  doms-bda-prd-prod-dp-marketing:
     permissions:
       serviceAccountsByEmail:
-        dp-bda-adhoc@kohls-bda-prd.iam.gserviceaccount.com:
+        dp-bda-adhoc@doms-bda-prd.iam.gserviceaccount.com:
           roles:
             - storage.objectAdmin
-  kohls-bda-prd-prod-dp-marketing-analytics:
+  doms-bda-prd-prod-dp-marketing-analytics:
     permissions:
       serviceAccountsByEmail:
-        dp-marketing@kohls-bda-prd.iam.gserviceaccount.com:
+        dp-marketing@doms-bda-prd.iam.gserviceaccount.com:
           roles:
             - storage.legacyBucketWriter
-        cr-zeppline@kohls-bda-prd.iam.gserviceaccount.com:
+        cr-zeppline@doms-bda-prd.iam.gserviceaccount.com:
           roles:
             - storage.legacyBucketWriter
-        kdx-svc@kohls-kdx-prd.iam.gserviceaccount.com:
+        kdx-svc@doms-kdx-prd.iam.gserviceaccount.com:
           roles:
             - storage.legacyBucketWriter
             - storage.legacyObjectReader
       groupsByEmail:
-        gcp-bda-devops-admin@kohls.com:
+        gcp-bda-devops-admin@doms.com:
           roles:
             - storage.legacyBucketOwner
-        gcp-mktg-credit-analytics@kohls.com:
+        gcp-mktg-credit-analytics@doms.com:
           roles:
             - storage.legacyBucketWriter
-        gcp-mkt-gcp-campaign-user@kohls.com:
+        gcp-mkt-gcp-campaign-user@doms.com:
           roles:
             - storage.legacyBucketWriter
-  kohls-bdamarketing-mft-prod-prod-bucket:
+  doms-bdamarketing-mft-prod-prod-bucket:
     permissions:
       serviceAccountsByEmail:
-        dp-bda-adhoc@kohls-bda-prd.iam.gserviceaccount.com:
+        dp-bda-adhoc@doms-bda-prd.iam.gserviceaccount.com:
           roles:
             - storage.objectAdmin
-  kohls-bdacustomer-mft-prod-prod-bucket:
+  doms-bdacustomer-mft-prod-prod-bucket:
     permissions:
       serviceAccountsByEmail:
-        dp-bda-adhoc@kohls-bda-prd.iam.gserviceaccount.com:
+        dp-bda-adhoc@doms-bda-prd.iam.gserviceaccount.com:
           roles:
             - storage.objectAdmin
-  kohls-bda-prd-prod-ext-coherentpath:
+  doms-bda-prd-prod-ext-coherentpath:
     permissions:
       serviceAccountsByEmail:
-        dp-marketing@kohls-bda-prd.iam.gserviceaccount.com:
+        dp-marketing@doms-bda-prd.iam.gserviceaccount.com:
           roles:
             - storage.objectAdmin
-        sa-kohls@coherentpath-accounts.iam.gserviceaccount.com:
+        sa-doms@coherentpath-accounts.iam.gserviceaccount.com:
           roles:
             - storage.legacyBucketReader
             - storage.legacyBucketWriter

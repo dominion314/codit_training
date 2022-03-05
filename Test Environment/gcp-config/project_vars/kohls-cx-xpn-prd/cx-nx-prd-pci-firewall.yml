@@ -222,7 +222,7 @@ vpcs:
         disabled: false
         priority: 890
         logging: false
-      gspann-b2b-ing-to-kohls-ecom-pnf-prd:
+      gspann-b2b-ing-to-doms-ecom-pnf-prd:
         rule:
           allow:
           - protocol: tcp
@@ -287,7 +287,7 @@ vpcs:
         disabled: false
         priority: 890
         logging: false
-      kohls-ecom-pe-prd-ing-to-ecom-xpn-prd-pnf-prd:
+      doms-ecom-pe-prd-ing-to-ecom-xpn-prd-pnf-prd:
         rule:
           allow:
           - protocol: tcp
@@ -304,7 +304,7 @@ vpcs:
         disabled: false
         priority: 890
         logging: false
-      kohls-kos-xpn-prd-ingress-pnf-prd-ha-proxy:
+      doms-kos-xpn-prd-ingress-pnf-prd-ha-proxy:
         rule:
           allow:
           - protocol: tcp
@@ -322,7 +322,7 @@ vpcs:
         disabled: false
         priority: 890
         logging: false
-      kohls-kos-xpn-prd-ingress-pnf-prd-tcp-01:
+      doms-kos-xpn-prd-ingress-pnf-prd-tcp-01:
         rule:
           allow:
           - protocol: tcp
@@ -339,7 +339,7 @@ vpcs:
         disabled: false
         priority: 890
         logging: false
-      kohls-kosxpn-prd-ing-kohls-pnf-prd-01:
+      doms-kosxpn-prd-ing-doms-pnf-prd-01:
         rule:
           allow:
           - protocol: tcp
@@ -355,7 +355,7 @@ vpcs:
         disabled: false
         priority: 890
         logging: false
-      kohls-openshift-prd-kohls-pnf-prd-https:
+      doms-openshift-prd-doms-pnf-prd-https:
         rule:
           allow:
           - protocol: tcp
@@ -404,7 +404,7 @@ vpcs:
         disabled: false
         priority: 890
         logging: false
-      openshift-prod-cdc-ing-kohls-ecom-xpn-pnf-prd:
+      openshift-prod-cdc-ing-doms-ecom-xpn-pnf-prd:
         rule:
           allow:
           - protocol: tcp
@@ -486,7 +486,7 @@ vpcs:
         disabled: false
         priority: 890
         logging: false
-      sps-application-ing-to-kohls-ecom-xpn-pnf-prd:
+      sps-application-ing-to-doms-ecom-xpn-pnf-prd:
         rule:
           allow:
           - protocol: tcp
@@ -585,16 +585,16 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: app-pnf@kohls-cx-pci-prd.iam.gserviceaccount.com
-          - external: zkui-pnf@kohls-cx-pci-prd.iam.gserviceaccount.com
-          - external: servicereg-pnf@kohls-cx-pci-prd.iam.gserviceaccount.com
-          - external: monitoring-tool-pe@kohls-cx-pci-prd.iam.gserviceaccount.com
-          - external: pnf-batch-pnf@kohls-cx-pci-prd.iam.gserviceaccount.com
-          - external: zookeeper-pnf@kohls-cx-pci-prd.iam.gserviceaccount.com
-          - external: pnf-kdp-pnf@kohls-cx-pci-prd.iam.gserviceaccount.com
-          - external: zkwd-pnf@kohls-cx-pci-prd.iam.gserviceaccount.com
-          - external: ingress-proxy-pnf@kohls-cx-pci-prd.iam.gserviceaccount.com
-          - external: app-pnf-batch@kohls-cx-pci-prd.iam.gserviceaccount.com
+          - external: app-pnf@doms-cx-pci-prd.iam.gserviceaccount.com
+          - external: zkui-pnf@doms-cx-pci-prd.iam.gserviceaccount.com
+          - external: servicereg-pnf@doms-cx-pci-prd.iam.gserviceaccount.com
+          - external: monitoring-tool-pe@doms-cx-pci-prd.iam.gserviceaccount.com
+          - external: pnf-batch-pnf@doms-cx-pci-prd.iam.gserviceaccount.com
+          - external: zookeeper-pnf@doms-cx-pci-prd.iam.gserviceaccount.com
+          - external: pnf-kdp-pnf@doms-cx-pci-prd.iam.gserviceaccount.com
+          - external: zkwd-pnf@doms-cx-pci-prd.iam.gserviceaccount.com
+          - external: ingress-proxy-pnf@doms-cx-pci-prd.iam.gserviceaccount.com
+          - external: app-pnf-batch@doms-cx-pci-prd.iam.gserviceaccount.com
           targetTags:
           sourceRanges:
           - 10.0.0.0/8

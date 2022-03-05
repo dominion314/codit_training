@@ -12,13 +12,13 @@ stages:
 
 include:
   - local: .gitlab-ci-helpers.yml
-  - project: 'kohls/infra/platform_enablement/cloud-config/cloud-resources'
+  - project: 'doms/infra/platform_enablement/cloud-config/cloud-resources'
     ref: main
     file: '.gitlab-ci-pylint.yml'
-  - project: 'kohls/infra/platform_enablement/cloud-config/cloud-resources'
+  - project: 'doms/infra/platform_enablement/cloud-config/cloud-resources'
     ref: main
     file: '.gitlab-ci-shelllint.yml'
-  - project: 'kohls/infra/platform_enablement/cloud-config/cloud-resources'
+  - project: 'doms/infra/platform_enablement/cloud-config/cloud-resources'
     ref: main
     file: '.gitlab-ci-yamllint.yml'
 
@@ -27,7 +27,7 @@ IP-Provisioning:
   extends:
     - .internal
     - .bluecat_req
-  image: registry.gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-config-ci-image/main
+  image: registry.gitlab.com/doms/infra/platform_enablement/cloud-config/cloud-config-ci-image/main
   needs: []
   rules:
   - if: $CI_PIPELINE_SOURCE == "merge_request_event"
@@ -44,7 +44,7 @@ IP-Deprovisioning:
   extends:
     - .internal
     - .bluecat_req
-  image: registry.gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-config-ci-image/main
+  image: registry.gitlab.com/doms/infra/platform_enablement/cloud-config/cloud-config-ci-image/main
   rules:
   - if: '$CI_COMMIT_BRANCH == "main"'
     changes:
@@ -56,7 +56,7 @@ IP-Deprovisioning:
 
 Generate-Manifest:
   stage: identify-changes
-  image: registry.gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-config-ci-image/main
+  image: registry.gitlab.com/doms/infra/platform_enablement/cloud-config/cloud-config-ci-image/main
   needs: []
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
@@ -78,7 +78,7 @@ Generate-Manifest:
 
 Build-Merged-Parameters:
   stage: build-params
-  image: registry.gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-config-ci-image/main
+  image: registry.gitlab.com/doms/infra/platform_enablement/cloud-config/cloud-config-ci-image/main
   needs: ['Generate-Manifest']
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
@@ -139,27 +139,27 @@ trigger_downstream_CI:
     MR_ID: "$CI_MERGE_REQUEST_IID"
     PROJECT_NAME: "${CI_PROJECT_NAME}"
   trigger:
-    project: 'kohls/infra/platform_enablement/cloud-config/cloud-resources'
+    project: 'doms/infra/platform_enablement/cloud-config/cloud-resources'
     branch: main
     strategy: depend
 
 eunomia_vars_check:
   needs: []
   stage: eunomia-project-check
-  image: registry.gitlab.com/kohls/infra/platform_enablement/cloud-config/eunomia-project-image/main:latest
+  image: registry.gitlab.com/doms/infra/platform_enablement/cloud-config/eunomia-project-image/main:latest
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
       changes:
-        - eunomia_vars/kohls-cpe-kcc-prd-01/vars/projects.yml
+        - eunomia_vars/doms-cpe-kcc-prd-01/vars/projects.yml
   script:
-    - python3 /app/project_check.py --eunomia_file=eunomia_vars/kohls-cpe-kcc-prd-01/vars/projects.yml --project_dir=project_vars
+    - python3 /app/project_check.py --eunomia_file=eunomia_vars/doms-cpe-kcc-prd-01/vars/projects.yml --project_dir=project_vars
 
 eunomia_webhook:
   # Need to disable before_script from running
   before_script: []
   needs: []
   stage: eunomia-webhook
-  image: registry.gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources/main:latest
+  image: registry.gitlab.com/doms/infra/platform_enablement/cloud-config/cloud-resources/main:latest
   rules:
     - if: '$CI_COMMIT_BRANCH == "main"'
       changes:
@@ -175,28 +175,28 @@ eunomia_webhook:
 
 #k8s_secrets:
 #  stage: k8s_secrets
-#  image: registry.gitlab.com/kohls/infra/platform_enablement/cloud-config/k8s-secrets-image/main:latest
+#  image: registry.gitlab.com/doms/infra/platform_enablement/cloud-config/k8s-secrets-image/main:latest
 #  tags:
 #    - internal
 #  rules:
 #    - if: '$CI_COMMIT_BRANCH == "main"'
 #      allow_failure: true
 #  variables:
-#    HTTPS_PROXY: "http://proxy.kohls.com:3128"
-#    HTTP_PROXY: "http://proxy.kohls.com:3128"
-#    https_proxy: "http://proxy.kohls.com:3128"
-#    http_proxy: "http://proxy.kohls.com:3128"
-#    #NO_PROXY: ".svc,.local,.internal,.internal.,.gcr.io,.googleapis.com,.kohls.com,100.64.0.0/8,10.0.0.0/8"
-#    #no_proxy: ".svc,.local,.internal,.internal.,.gcr.io,.googleapis.com,.kohls.com,100.64.0.0/8,10.0.0.0/8"
-#    VAULT_ADDR: "https://vault-us-central1-primary.kohls.com:8200"
+#    HTTPS_PROXY: "http://proxy.doms.com:3128"
+#    HTTP_PROXY: "http://proxy.doms.com:3128"
+#    https_proxy: "http://proxy.doms.com:3128"
+#    http_proxy: "http://proxy.doms.com:3128"
+#    #NO_PROXY: ".svc,.local,.internal,.internal.,.gcr.io,.googleapis.com,.doms.com,100.64.0.0/8,10.0.0.0/8"
+#    #no_proxy: ".svc,.local,.internal,.internal.,.gcr.io,.googleapis.com,.doms.com,100.64.0.0/8,10.0.0.0/8"
+#    VAULT_ADDR: "https://vault-us-central1-primary.doms.com:8200"
 #    VAULT_GCLOUD_SA_PATH: "kv-gitlab/${CI_PROJECT_PATH}/gcp-service-accounts"
 #    VAULT_BASE_KV_PATH: "${CI_PROJECT_PATH}/cluster"
-#    PROJECTS_VARS_PATH: "eunomia_vars/kohls-cpe-kcc-prd-01/vars/projects.yml"
+#    PROJECTS_VARS_PATH: "eunomia_vars/doms-cpe-kcc-prd-01/vars/projects.yml"
 #    GOOGLE_APPLICATION_CREDENTIALS: "/tmp/google_application_secret.json"
 #    CLOUDSDK_CONFIG: "/tmp/.config"
 #    KUBECONFIG: "/tmp/.kube/config"
-#    GKE_PROJECT: "kohls-cpe-kcc-prd"
-#    GKE_CLUSTER: "kohls-cpe-kcc-prd-02"
+#    GKE_PROJECT: "doms-cpe-kcc-prd"
+#    GKE_CLUSTER: "doms-cpe-kcc-prd-02"
 #    GKE_ZONE: "us-central1-c"
 #  script:
 #    # Set vault and gcloud credentials

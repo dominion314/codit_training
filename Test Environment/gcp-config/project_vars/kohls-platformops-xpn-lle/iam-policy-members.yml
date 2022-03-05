@@ -1,31 +1,31 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-xpaas-openshift-admin@kohls.com:
+    gcp-xpaas-openshift-admin@doms.com:
       roles:
       - compute.networkViewer
-    gcp-xpaas-openshift-l3@kohls.com:
+    gcp-xpaas-openshift-l3@doms.com:
       roles:
       - compute.networkViewer
-    gcp-xpaas-openshift-l2@kohls.com:
+    gcp-xpaas-openshift-l2@doms.com:
       roles:
       - compute.networkViewer
-    gcp-et-devops-admin@kohls.com:
+    gcp-et-devops-admin@doms.com:
       roles:
       - compute.networkViewer
-    gcp-infra-dataservices-qualityengineer-l3@kohls.com:
+    gcp-infra-dataservices-qualityengineer-l3@doms.com:
       roles:
       - compute.networkViewer
   serviceAccountsByEmail:
     320040948669@cloudservices.gserviceaccount.com:
       roles:
       - compute.networkUser
-    ocp-master-node-paas@kohls-platform-openshift-ops.iam.gserviceaccount.com:
+    ocp-master-node-paas@doms-platform-openshift-ops.iam.gserviceaccount.com:
       roles:
       - compute.networkViewer
-    ocp-master-node-paas-open@kohls-platform-openshift-ops.iam.gserviceaccount.com:
+    ocp-master-node-paas-open@doms-platform-openshift-ops.iam.gserviceaccount.com:
       roles:
       - compute.networkViewer
-    ocp-master-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com:
+    ocp-master-node-paas@doms-platform-openshift-lle.iam.gserviceaccount.com:
       roles:
       - compute.networkViewer

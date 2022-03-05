@@ -26,7 +26,7 @@ vpcs:
             - "443"
             - "8443"
             - "8080"
-      onprem-to-kohls-cpe-kcc-prd-01:
+      onprem-to-doms-cpe-kcc-prd-01:
         priority: 900
         direction: INGRESS
         description: GKE-MONITORING XPAAS-9157
@@ -47,7 +47,7 @@ vpcs:
             - "9090"
             - "9093"
             - "3000"
-      onprem-to-kohls-cpe-nx-prd:
+      onprem-to-doms-cpe-nx-prd:
         priority: 900
         direction: INGRESS
         description: SNOW-16330
@@ -56,7 +56,7 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "yum-repo@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com"
+          - external: "yum-repo@doms-cpe-image-mgmt-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           - "10.0.0.0/8"
@@ -69,7 +69,7 @@ vpcs:
             - "80"
             - "443"
             - "9100"
-      gcp-to-kohls-cpe-nx-prd-ssh:
+      gcp-to-doms-cpe-nx-prd-ssh:
         priority: 900
         direction: INGRESS
         description: SNOW-16297
@@ -78,7 +78,7 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "yum-repo@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com"
+          - external: "yum-repo@doms-cpe-image-mgmt-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           - "10.212.197.227/32"
@@ -98,7 +98,7 @@ vpcs:
           - protocol: "tcp"
             ports:
             - "22"
-      gcp-to-kohls-cpe-nx-prd-packer-job:
+      gcp-to-doms-cpe-nx-prd-packer-job:
         priority: 900
         direction: INGRESS
         description: SNOW-16297
@@ -107,7 +107,7 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "image-build@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com"
+          - external: "image-build@doms-cpe-image-mgmt-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           - "10.57.32.0/19"
@@ -192,7 +192,7 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "gitlab-runner@kohls-devexp-tools-prd.iam.gserviceaccount.com"
+          - external: "gitlab-runner@doms-devexp-tools-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           - "10.0.0.0/8"
@@ -202,7 +202,7 @@ vpcs:
           - protocol: "tcp"
           - protocol: "udp"
           - protocol: "icmp"
-      kohls-public-ranges-for-sandbox:
+      doms-public-ranges-for-sandbox:
         priority: 900
         direction: INGRESS
         description: Sandbox migration
@@ -211,7 +211,7 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "gitlab-runner@kohls-devexp-tools-prd.iam.gserviceaccount.com"
+          - external: "gitlab-runner@doms-devexp-tools-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           - "66.232.224.0/20"
@@ -254,7 +254,7 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "jenkins@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com"
+          - external: "jenkins@doms-cpe-image-mgmt-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           - "10.185.13.0/24"
@@ -277,7 +277,7 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "jenkins@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com"
+          - external: "jenkins@doms-cpe-image-mgmt-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           - "10.57.0.0/17"
@@ -305,7 +305,7 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "jenkins@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com"
+          - external: "jenkins@doms-cpe-image-mgmt-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           - "10.212.80.10/32"
@@ -334,12 +334,12 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "image-build@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com"
-          - external: "yum-repo@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com"
+          - external: "image-build@doms-cpe-image-mgmt-prd.iam.gserviceaccount.com"
+          - external: "yum-repo@doms-cpe-image-mgmt-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: "jenkins@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com"
+          - external: "jenkins@doms-cpe-image-mgmt-prd.iam.gserviceaccount.com"
           sourceTags:
           allow:
           - protocol: "tcp"
@@ -358,11 +358,11 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "jenkins@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com"
+          - external: "jenkins@doms-cpe-image-mgmt-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: "jenkins@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com"
+          - external: "jenkins@doms-cpe-image-mgmt-prd.iam.gserviceaccount.com"
           sourceTags:
           allow:
           - protocol: "tcp"

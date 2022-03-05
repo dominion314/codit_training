@@ -1,7 +1,7 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-securitytech-devops-admin@kohls.com:
+    gcp-securitytech-devops-admin@doms.com:
       roles:
       - compute.loadBalancerAdmin
       - cloudkms.admin
@@ -15,7 +15,7 @@ iamPolicyMembers:
       - monitoring.admin
       - storage.admin
       - viewer
-    gcp-securitypam-sd-l3@kohls.com:
+    gcp-securitypam-sd-l3@doms.com:
       roles:
       - compute.loadBalancerAdmin
       - cloudkms.admin
@@ -31,16 +31,16 @@ iamPolicyMembers:
       - storage.admin
       - viewer
   serviceAccountsByEmail:
-    consul-sec@kohls-sec-vault-prd.iam.gserviceaccount.com:
+    consul-sec@doms-sec-vault-prd.iam.gserviceaccount.com:
       roles:
       - compute.networkUser
       - compute.viewer
       - iam.serviceAccountUser
-    jenkins-patching-sec@kohls-sec-vault-prd.iam.gserviceaccount.com:
+    jenkins-patching-sec@doms-sec-vault-prd.iam.gserviceaccount.com:
       roles:
       - compute.networkViewer
       - iam.serviceAccountUser
-    terraform-vault-prd-sec@kohls-sec-vault-prd.iam.gserviceaccount.com:
+    terraform-vault-prd-sec@doms-sec-vault-prd.iam.gserviceaccount.com:
       roles:
       - cloudkms.admin
       - compute.loadBalancerAdmin
@@ -53,7 +53,7 @@ iamPolicyMembers:
       - logging.configWriter
       - logging.logWriter
       - storage.admin
-    vault-sec@kohls-sec-vault-prd.iam.gserviceaccount.com:
+    vault-sec@doms-sec-vault-prd.iam.gserviceaccount.com:
       roles:
       - cloudkms.admin
       - cloudkms.cryptoKeyEncrypterDecrypter
@@ -61,9 +61,9 @@ iamPolicyMembers:
       - compute.viewer
       - iam.serviceAccountKeyAdmin
       - iam.serviceAccountUser
-    vaultutility-sec@kohls-sec-vault-prd.iam.gserviceaccount.com:
+    vaultutility-sec@doms-sec-vault-prd.iam.gserviceaccount.com:
       roles:
       - compute.viewer
-    terraform-sec@kohls-sec-engineering-prd.iam.gserviceaccount.com:
+    terraform-sec@doms-sec-engineering-prd.iam.gserviceaccount.com:
       roles:
       - compute.instanceAdmin.v1

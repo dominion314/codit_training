@@ -1,15 +1,15 @@
 ---
 iamPolicyMembersV2:
   serviceAccountsByEmail:
-    # legacy-automation-dev-cpa@kohls-cpa-lle.iam.gserviceaccount.com:
+    # legacy-automation-dev-cpa@doms-cpa-lle.iam.gserviceaccount.com:
     # - role: CustomViewer486
     #   OrgId: 1035901152068
-    # vault-paas@kohls-vault-prd.iam.gserviceaccount.com:
+    # vault-paas@doms-vault-prd.iam.gserviceaccount.com:
     # - role: CustomRole430
     #   OrgId: 1035901152068
-    bq-gcp-quota-reader@kohls-iaas-lle.iam.gserviceaccount.com:
+    bq-gcp-quota-reader@doms-iaas-lle.iam.gserviceaccount.com:
     - role: CustomBigQueryUser
       OrgId: 1035901152068
-    efficiencies-ea@kohls-iaas-lle.iam.gserviceaccount.com:
+    efficiencies-ea@doms-iaas-lle.iam.gserviceaccount.com:
     - role: CustomBucketViewer
       OrgId: 1035901152068

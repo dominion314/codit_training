@@ -1,21 +1,21 @@
 ---
 iamPolicyMembers:
   usersByEmail:
-    mark.doll@kohls.com:
+    mark.doll@doms.com:
       roles:
       - viewer
-    hamilton.hoover@kohls.com:
+    hamilton.hoover@doms.com:
       roles:
       - editor
       - bigquery.jobUser
   groupsByEmail:
-    gcp-et-devops-l3@kohls.com:
+    gcp-et-devops-l3@doms.com:
       roles:
       - viewer
-    AWS_ManagedService@kohls.com:
+    AWS_ManagedService@doms.com:
       roles:
       - viewer
   serviceAccountsByEmail:
-    gitops-example-2@kohlsdev-cpa-inspec.iam.gserviceaccount.com:
+    gitops-example-2@domsdev-cpa-inspec.iam.gserviceaccount.com:
       roles:
       - viewer

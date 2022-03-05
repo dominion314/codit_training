@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90528"
 project:
-  name: kohls-infra-kdx-prd
+  name: doms-infra-kdx-prd
   managed: true
   deletionProtect: true
   folderId: "980929416788"

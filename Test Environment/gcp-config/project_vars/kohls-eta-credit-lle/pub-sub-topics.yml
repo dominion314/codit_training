@@ -1,6 +1,6 @@
 ---
 pubSubTopics:
-  kohls-eta-mft-lle-lle-topic:
+  doms-eta-mft-lle-lle-topic:
     deletionProtect: false
   stop-instance-event:
     deletionProtect: false

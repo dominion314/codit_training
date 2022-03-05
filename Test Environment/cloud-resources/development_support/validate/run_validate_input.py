@@ -4,7 +4,7 @@ Validation executor
 """
 __version__ = 0.1
 __author__ = "Pavel Leonovitch"
-__copyright__ = "Copyright 2020, Kohls"
+__copyright__ = "Copyright 2020, doms"
 
 import argparse
 import sys

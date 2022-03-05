@@ -1,29 +1,29 @@
 ---
 iamPolicyMembers:
   serviceAccountsByEmail:
-    terraform-devops@kohls-scf-prd.iam.gserviceaccount.com:
+    terraform-devops@doms-scf-prd.iam.gserviceaccount.com:
       roles:
-      - bigquery.admin     #kohls-ocf-prd
-      - cloudfunctions.admin    #kohls-ocf-prd
-      - cloudfunctions.developer   #kohls-ocf-prd
-      - cloudfunctions.viewer      #kohls-ocf-prd
-      - cloudscheduler.admin       #kohls-ocf-prd
-      - cloudscheduler.viewer     #kohls-ocf-prd
-      - compute.imageUser      #kohls-ocf-prd
+      - bigquery.admin     #doms-ocf-prd
+      - cloudfunctions.admin    #doms-ocf-prd
+      - cloudfunctions.developer   #doms-ocf-prd
+      - cloudfunctions.viewer      #doms-ocf-prd
+      - cloudscheduler.admin       #doms-ocf-prd
+      - cloudscheduler.viewer     #doms-ocf-prd
+      - compute.imageUser      #doms-ocf-prd
       - compute.instanceAdmin.v1
       - compute.loadBalancerAdmin
       - compute.networkUser
       - compute.storageAdmin
-      - dataproc.editor      #kohls-ocf-prd
+      - dataproc.editor      #doms-ocf-prd
       - iam.serviceAccountUser
-      - pubsub.admin     #kohls-ocf-prd
+      - pubsub.admin     #doms-ocf-prd
       - storage.admin
-    consul-paas@kohls-scf-prd.iam.gserviceaccount.com:
+    consul-paas@doms-scf-prd.iam.gserviceaccount.com:
       roles:
       - compute.networkUser
-      - compute.viewer   #kohls-ocf-prd
+      - compute.viewer   #doms-ocf-prd
       - iam.serviceAccountUser
-    ocr-prod-scheduling@kohls-scf-prd.iam.gserviceaccount.com:
+    ocr-prod-scheduling@doms-scf-prd.iam.gserviceaccount.com:
       roles:
       - compute.viewer
       - compute.instanceAdmin.v1
@@ -31,7 +31,7 @@ iamPolicyMembers:
       - iam.serviceAccountUser
       - storage.admin
       - storage.objectAdmin
-    ocr-prod-streaming@kohls-scf-prd.iam.gserviceaccount.com:
+    ocr-prod-streaming@doms-scf-prd.iam.gserviceaccount.com:
       roles:
       - compute.viewer
       - compute.instanceAdmin.v1
@@ -40,13 +40,13 @@ iamPolicyMembers:
       - storage.objectAdmin
       - dataproc.editor
       - dataproc.worker
-    oscr-nonprod@kohls-scf-lle.iam.gserviceaccount.com:
+    oscr-nonprod@doms-scf-lle.iam.gserviceaccount.com:
       roles:
       - storage.admin
       - storage.objectCreator
       - storage.objectViewer
       - iam.serviceAccountUser
-    scf-rdcwms@kohls-scf-prd.iam.gserviceaccount.com:
+    scf-rdcwms@doms-scf-prd.iam.gserviceaccount.com:
       roles:
       - pubsub.admin
       - pubsub.editor
@@ -55,17 +55,17 @@ iamPolicyMembers:
       - storage.objectCreator
       - storage.objectViewer
       - storage.objectAdmin
-    scf-sku-sync@kohls-scf-prd.iam.gserviceaccount.com:
+    scf-sku-sync@doms-scf-prd.iam.gserviceaccount.com:
       roles:
       - storage.admin
       - storage.objectCreator
       - storage.objectViewer
       - pubsub.editor
       - iam.serviceAccountUser
-    scf-scd-decon@kohls-scf-prd.iam.gserviceaccount.com:
+    scf-scd-decon@doms-scf-prd.iam.gserviceaccount.com:
       roles:
       - storage.admin
-    giv-spie-dataflow-ocf@kohls-ocf-prd.iam.gserviceaccount.com:
+    giv-spie-dataflow-ocf@doms-ocf-prd.iam.gserviceaccount.com:
       roles:
       - bigquery.dataEditor
       - bigquery.dataViewer
@@ -77,7 +77,7 @@ iamPolicyMembers:
       - datastore.owner
       - pubsub.editor
       - storage.objectViewer
-    giv-spie-dataflow@kohls-scf-prd.iam.gserviceaccount.com:
+    giv-spie-dataflow@doms-scf-prd.iam.gserviceaccount.com:
       roles:
       - bigquery.dataEditor
       - bigquery.dataViewer
@@ -91,17 +91,17 @@ iamPolicyMembers:
       - storage.objectViewer
       - compute.instanceAdmin.v1
   groupsByEmail:
-    gcp-ocf-devops-admin@kohls.com:
+    gcp-ocf-devops-admin@doms.com:
       roles:
-      - browser      #kohls-ocf-prd
-      - cloudfunctions.viewer    #kohls-ocf-prd
-      - cloudscheduler.viewer    #kohls-ocf-prd
-      #- compute.imageUser        # not allowed #kohls-ocf-prd
+      - browser      #doms-ocf-prd
+      - cloudfunctions.viewer    #doms-ocf-prd
+      - cloudscheduler.viewer    #doms-ocf-prd
+      #- compute.imageUser        # not allowed #doms-ocf-prd
       #- compute.instanceAdmin.v1  # not allowed
-      #- compute.networkUser      # not allowed #kohls-ocf-prd
+      #- compute.networkUser      # not allowed #doms-ocf-prd
       - compute.networkViewer
       #- compute.storageAdmin   # not allowed
-      #- dataflow.admin         # not allowed  #kohls-ocf-prd
+      #- dataflow.admin         # not allowed  #doms-ocf-prd
       - dataflow.viewer  #adding
       - iam.serviceAccountKeyAdmin
       - iam.serviceAccountTokenCreator
@@ -112,10 +112,10 @@ iamPolicyMembers:
       - logging.viewer
       - monitoring.admin
       - pubsub.viewer #adding as admin is not allowed
-      #- pubsub.admin     # not allowed   #kohls-ocf-prd
+      #- pubsub.admin     # not allowed   #doms-ocf-prd
       #- storage.admin   # not allowed
       - storage.objectViewer #adding
-    gcp-ocf-devops-manager@kohls.com:
+    gcp-ocf-devops-manager@doms.com:
       roles:
       - compute.networkViewer
       - compute.viewer
@@ -125,7 +125,7 @@ iamPolicyMembers:
       - logging.privateLogViewer
       - logging.viewer
       - monitoring.admin
-    gcp-ocf-sd-admin@kohls.com:   #kohls-ocf-prd
+    gcp-ocf-sd-admin@doms.com:   #doms-ocf-prd
       roles:
       - browser
       - logging.privateLogViewer
@@ -133,15 +133,15 @@ iamPolicyMembers:
       - monitoring.viewer
       #- storage.objectAdmin   #not allowed
       - storage.objectViewer #adding
-    gcp-ocf-sd-l2@kohls.com:
+    gcp-ocf-sd-l2@doms.com:
       roles:
       - bigquery.dataViewer
       - bigquery.jobUser
-      - bigquery.metadataViewer    #kohls-ocf-prd
-      - bigquery.user      #kohls-ocf-prd
+      - bigquery.metadataViewer    #doms-ocf-prd
+      - bigquery.user      #doms-ocf-prd
       - bigtable.reader
-      - bigtable.user   #kohls-ocf-prd
-      - bigtable.viewer   #kohls-ocf-prd
+      - bigtable.user   #doms-ocf-prd
+      - bigtable.viewer   #doms-ocf-prd
       - browser
       - cloudscheduler.viewer
       - compute.networkViewer
@@ -152,15 +152,15 @@ iamPolicyMembers:
       - monitoring.viewer
       - pubsub.viewer
       - storage.objectViewer
-    gcp-ocf-sd-l3@kohls.com:
+    gcp-ocf-sd-l3@doms.com:
       roles:
       - bigquery.dataViewer
       - bigquery.jobUser
-      - bigquery.metadataViewer   #kohls-ocf-prd
-      - bigquery.user       #kohls-ocf-prd
+      - bigquery.metadataViewer   #doms-ocf-prd
+      - bigquery.user       #doms-ocf-prd
       - bigtable.reader
-      - bigtable.user     #kohls-ocf-prd
-      - bigtable.viewer    #kohls-ocf-prd
+      - bigtable.user     #doms-ocf-prd
+      - bigtable.viewer    #doms-ocf-prd
       - browser
       - cloudscheduler.viewer
       - compute.networkViewer
@@ -170,16 +170,16 @@ iamPolicyMembers:
       - logging.viewer
       - logging.privateLogViewer
       - monitoring.editor
-      - monitoring.admin      #kohls-ocf-prd
-      - monitoring.viewer     #kohls-ocf-prd
+      - monitoring.admin      #doms-ocf-prd
+      - monitoring.viewer     #doms-ocf-prd
       - pubsub.viewer
       - storage.objectViewer
-    gcp-ocf-softwareengineer-admin@kohls.com:
+    gcp-ocf-softwareengineer-admin@doms.com:
       roles:
       - compute.networkViewer
       - compute.viewer
       - logging.viewer
-    gcp-ocf-softwareengineer-l3@kohls.com:
+    gcp-ocf-softwareengineer-l3@doms.com:
       roles:
       #- bigquery.dataEditor   #not allowed
       #- bigquery.dataOwner  #not allowed
@@ -201,7 +201,7 @@ iamPolicyMembers:
       - monitoring.viewer
       - pubsub.viewer
       - storage.objectViewer
-    gcp-ocf-softwareengineer-manager@kohls.com:   #kohls-ocf-stateful-prd
+    gcp-ocf-softwareengineer-manager@doms.com:   #doms-ocf-stateful-prd
       roles:
       - compute.networkViewer
       - compute.viewer

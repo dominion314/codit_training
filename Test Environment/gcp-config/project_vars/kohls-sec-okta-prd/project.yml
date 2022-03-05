@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90576"
 project:
-  name: kohls-sec-okta-prd
+  name: doms-sec-okta-prd
   managed: true
   folderId: "726913521927"
   billingAccount: "00C36A-CD0BDB-E543D0"

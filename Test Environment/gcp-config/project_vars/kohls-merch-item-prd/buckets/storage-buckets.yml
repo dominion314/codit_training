@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-sephora-bucket-prd:
+  doms-sephora-bucket-prd:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -9,21 +9,21 @@ storageBuckets:
       app-name: "item-creation"
     permissions:
       serviceAccountsByEmail:
-        kdx-svc@kohls-kdx-prd.iam.gserviceaccount.com:
+        kdx-svc@doms-kdx-prd.iam.gserviceaccount.com:
           roles:
           - storage.objectCreator
           - storage.objectViewer
-        item-apps@kohls-merch-item-prd.iam.gserviceaccount.com:
+        item-apps@doms-merch-item-prd.iam.gserviceaccount.com:
           roles:
           - storage.admin
       groupsByEmail:
-        gcp-merch-pdpl-softwareengineer-admin@kohls.com:
+        gcp-merch-pdpl-softwareengineer-admin@doms.com:
           roles:
           - storage.admin
-        gcp-merch-pdpl-softwareengineer-l3@kohls.com:
+        gcp-merch-pdpl-softwareengineer-l3@doms.com:
           roles:
           - storage.admin
-  kohls-item-production-integration:
+  doms-item-production-integration:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -32,17 +32,17 @@ storageBuckets:
       app-name: "klink"
     permissions:
       serviceAccountsByEmail:
-        mkt-marketplace-prd@kohls-vendor-portal-prd.iam.gserviceaccount.com:
+        mkt-marketplace-prd@doms-vendor-portal-prd.iam.gserviceaccount.com:
           roles:
           - storage.objectCreator
           - storage.objectViewer
-        item-apps@kohls-merch-item-prd.iam.gserviceaccount.com:
+        item-apps@doms-merch-item-prd.iam.gserviceaccount.com:
           roles:
           - storage.admin
       groupsByEmail:
-        gcp-merch-pdpl-softwareengineer-admin@kohls.com:
+        gcp-merch-pdpl-softwareengineer-admin@doms.com:
           roles:
           - storage.admin
-        gcp-merch-pdpl-softwareengineer-l3@kohls.com:
+        gcp-merch-pdpl-softwareengineer-l3@doms.com:
           roles:
           - storage.admin

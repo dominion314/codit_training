@@ -7,7 +7,7 @@ bigQueryDatasets:
     defaultTableExpirationMs: 0
     permissions:
       groupsByEmail:
-        gcp-eta-devops-admin@kohls.com:
+        gcp-eta-devops-admin@doms.com:
           roles:
           - bigquery.dataOwner
   finance_erp_ppm_reports:
@@ -17,10 +17,10 @@ bigQueryDatasets:
     defaultTableExpirationMs: 0
     permissions:
       groupsByEmail:
-        gcp-eta-devops-admin@kohls.com:
+        gcp-eta-devops-admin@doms.com:
           roles:
           - bigquery.dataOwner
-        gcp-eta-reporting-sd-l3@kohls.com:
+        gcp-eta-reporting-sd-l3@doms.com:
           roles:
           - bigquery.dataViewer
           - bigquery.user

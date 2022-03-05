@@ -1,12 +1,12 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-merch-sre-admin@kohls.com:
+    gcp-merch-sre-admin@doms.com:
       roles:
         - cloudfunctions.admin
         - cloudfunctions.developer
   serviceAccountsByEmail:
-    cloud-functions@kohls-merch-sre-lle.iam.gserviceaccount.com:
+    cloud-functions@doms-merch-sre-lle.iam.gserviceaccount.com:
       roles:
         - cloudfunctions.admin
         - cloudfunctions.serviceAgent

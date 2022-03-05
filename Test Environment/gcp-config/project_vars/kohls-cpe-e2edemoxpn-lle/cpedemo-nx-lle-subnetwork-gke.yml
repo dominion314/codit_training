@@ -23,5 +23,5 @@ vpcs:
             bluecat-id: 111111
         permissions:
           groupsByEmail:
-          - gcp-cpe-cne-devops-admin@kohls.com
-          - gcp-cpe-cne-devops-l3@kohls.com
+          - gcp-cpe-cne-devops-admin@doms.com
+          - gcp-cpe-cne-devops-l3@doms.com

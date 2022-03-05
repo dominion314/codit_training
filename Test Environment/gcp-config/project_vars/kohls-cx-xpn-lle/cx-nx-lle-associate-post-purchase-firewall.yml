@@ -452,7 +452,7 @@ vpcs:
         disabled: false
         priority: 901
         logging: false
-      cx-lle-to-kohls-cx-openshift-lle-egr-v39:
+      cx-lle-to-doms-cx-openshift-lle-egr-v39:
         rule:
           allow:
           - protocol: udp
@@ -506,7 +506,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kloud9-b2b2-ing-to-kohls-cx-lle:
+      kloud9-b2b2-ing-to-doms-cx-lle:
         rule:
           allow:
           - protocol: tcp
@@ -523,7 +523,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kloud9-b2b2-ing-to-kohls-cx-lle-01:
+      kloud9-b2b2-ing-to-doms-cx-lle-01:
         rule:
           allow:
           - protocol: tcp
@@ -553,7 +553,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-cx-lle-ing-devops-tools:
+      doms-cx-lle-ing-devops-tools:
         rule:
           allow:
           - protocol: tcp
@@ -571,7 +571,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-cx-mgmt-lle-ing-cx-lle-devops-tools:
+      doms-cx-mgmt-lle-ing-cx-lle-devops-tools:
         rule:
           allow:
           - protocol: tcp
@@ -591,7 +591,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-cx-openshift-lle-to-cx-lle-ing-v39:
+      doms-cx-openshift-lle-to-cx-lle-ing-v39:
         rule:
           allow:
           - protocol: udp
@@ -610,7 +610,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-cx-public-lle-ing-cx-lle-ingress-proxy:
+      doms-cx-public-lle-ing-cx-lle-ingress-proxy:
         rule:
           allow:
           - protocol: tcp
@@ -625,7 +625,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-on-prem-ext-to-cx-lle-01:
+      doms-on-prem-ext-to-cx-lle-01:
         rule:
           allow:
           - protocol: tcp
@@ -639,7 +639,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-onprem-devops-tools-to-ingress-cx-lle:
+      doms-onprem-devops-tools-to-ingress-cx-lle:
         rule:
           allow:
           - protocol: tcp
@@ -674,7 +674,7 @@ vpcs:
           targetTags:
           - egress-instance
           - cloud-admin
-          - kohls-vpn
+          - doms-vpn
           - cache-instance
           - mysql-instance
           - jenkins-mgmt

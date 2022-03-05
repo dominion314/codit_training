@@ -1,7 +1,7 @@
 ---
 billingDeptId: 90514
 project:
-  name: kohls-merch-xpn-prd
+  name: doms-merch-xpn-prd
   managed: true
   deletionProtect: true
   folderId: "217021366087"
@@ -21,6 +21,6 @@ serviceAPIs:
   networkmanagement.googleapis.com:
   storage-api.googleapis.com:
 projectSharing:
-- kohls-merch-pl-prd
-- kohls-merch-item-prd
-- kohls-merch-ps-prd
+- doms-merch-pl-prd
+- doms-merch-item-prd
+- doms-merch-ps-prd

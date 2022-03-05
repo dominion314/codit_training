@@ -1,6 +1,6 @@
 ---
 project:
-  name: kohls-bda-prd
+  name: doms-bda-prd
   managed: true
   folderId: "1064417150642" # merch-mkt-analytics
   billingAccount: 00C36A-CD0BDB-E543D0

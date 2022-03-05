@@ -1,6 +1,6 @@
 iamPolicyMembersV2:
   groupsByEmail:
-    GCP-DevOps-ECom@kohls.com:
+    GCP-DevOps-ECom@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - OrgId: 1035901152068
@@ -19,7 +19,7 @@ iamPolicyMembersV2:
     - role: storage.objectAdmin
     - role: storage.objectCreator
     - role: storage.objectViewer
-    gcp-ecom-pnf-devops-admin@kohls.com:
+    gcp-ecom-pnf-devops-admin@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - OrgId: 1035901152068
@@ -39,7 +39,7 @@ iamPolicyMembersV2:
     - role: monitoring.admin
     - role: pubsub.admin
     - role: storage.admin
-    gcp-ecom-pnf-devops-l2@kohls.com:
+    gcp-ecom-pnf-devops-l2@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - OrgId: 1035901152068
@@ -51,25 +51,7 @@ iamPolicyMembersV2:
     - role: logging.viewer
     - role: monitoring.viewer
     - role: storage.objectViewer
-    gcp-ecom-pnf-devops-l3@kohls.com:
-    - OrgId: 1035901152068
-      role: CustomViewer486
-    - OrgId: 1035901152068
-      role: lbadmin
-    - role: compute.imageUser
-    - role: compute.instanceAdmin.v1
-    - role: compute.networkUser
-    - role: compute.networkViewer
-    - role: compute.storageAdmin
-    - role: iam.serviceAccountTokenCreator
-    - role: iam.serviceAccountUser
-    - role: logging.admin
-    - role: logging.configWriter
-    - role: logging.privateLogViewer
-    - role: logging.viewer
-    - role: monitoring.admin
-    - role: storage.admin
-    gcp-ecom-pnf-devops-manager@kohls.com:
+    gcp-ecom-pnf-devops-l3@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - OrgId: 1035901152068
@@ -87,7 +69,25 @@ iamPolicyMembersV2:
     - role: logging.viewer
     - role: monitoring.admin
     - role: storage.admin
-    gcp-ecom-pnf-performanceengineer-admin@kohls.com:
+    gcp-ecom-pnf-devops-manager@doms.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - OrgId: 1035901152068
+      role: lbadmin
+    - role: compute.imageUser
+    - role: compute.instanceAdmin.v1
+    - role: compute.networkUser
+    - role: compute.networkViewer
+    - role: compute.storageAdmin
+    - role: iam.serviceAccountTokenCreator
+    - role: iam.serviceAccountUser
+    - role: logging.admin
+    - role: logging.configWriter
+    - role: logging.privateLogViewer
+    - role: logging.viewer
+    - role: monitoring.admin
+    - role: storage.admin
+    gcp-ecom-pnf-performanceengineer-admin@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: compute.imageUser
@@ -98,7 +98,7 @@ iamPolicyMembersV2:
     - role: monitoring.metricWriter
     - role: monitoring.viewer
     - role: storage.objectViewer
-    gcp-ecom-pnf-performanceengineer-l2@kohls.com:
+    gcp-ecom-pnf-performanceengineer-l2@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: compute.imageUser
@@ -109,7 +109,7 @@ iamPolicyMembersV2:
     - role: monitoring.metricWriter
     - role: monitoring.viewer
     - role: storage.objectViewer
-    gcp-ecom-pnf-performanceengineer-l3@kohls.com:
+    gcp-ecom-pnf-performanceengineer-l3@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: compute.imageUser
@@ -120,7 +120,7 @@ iamPolicyMembersV2:
     - role: monitoring.metricWriter
     - role: monitoring.viewer
     - role: storage.objectViewer
-    gcp-ecom-pnf-performanceengineer-manager@kohls.com:
+    gcp-ecom-pnf-performanceengineer-manager@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: compute.imageUser
@@ -131,7 +131,7 @@ iamPolicyMembersV2:
     - role: monitoring.metricWriter
     - role: monitoring.viewer
     - role: storage.objectViewer
-    gcp-ecom-pnf-productionengineer-admin@kohls.com:
+    gcp-ecom-pnf-productionengineer-admin@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - OrgId: 1035901152068
@@ -146,7 +146,7 @@ iamPolicyMembersV2:
     - role: monitoring.editor
     - role: monitoring.viewer
     - role: storage.objectViewer
-    gcp-ecom-pnf-productionengineer-l2@kohls.com:
+    gcp-ecom-pnf-productionengineer-l2@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: compute.imageUser
@@ -157,7 +157,7 @@ iamPolicyMembersV2:
     - role: logging.viewer
     - role: monitoring.viewer
     - role: storage.objectViewer
-    gcp-ecom-pnf-productionengineer-l3@kohls.com:
+    gcp-ecom-pnf-productionengineer-l3@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - OrgId: 1035901152068
@@ -170,7 +170,7 @@ iamPolicyMembersV2:
     - role: logging.viewer
     - role: monitoring.viewer
     - role: storage.objectViewer
-    gcp-ecom-pnf-productionengineer-manager@kohls.com:
+    gcp-ecom-pnf-productionengineer-manager@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: compute.networkViewer
@@ -180,50 +180,42 @@ iamPolicyMembersV2:
     - role: monitoring.viewer
     - role: storage.admin
     - role: storage.objectViewer
-    gcp-ecom-pnf-qualityengineer-admin@kohls.com:
+    gcp-ecom-pnf-qualityengineer-admin@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: compute.networkViewer
     - role: compute.viewer
     - role: logging.viewer
     - role: storage.objectViewer
-    gcp-ecom-pnf-qualityengineer-l2@kohls.com:
+    gcp-ecom-pnf-qualityengineer-l2@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: compute.networkViewer
     - role: compute.viewer
     - role: logging.viewer
     - role: storage.objectViewer
-    gcp-ecom-pnf-qualityengineer-l3@kohls.com:
+    gcp-ecom-pnf-qualityengineer-l3@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: compute.networkViewer
     - role: compute.viewer
     - role: logging.viewer
     - role: storage.objectViewer
-    gcp-ecom-pnf-qualityengineer-manager@kohls.com:
+    gcp-ecom-pnf-qualityengineer-manager@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: compute.networkViewer
     - role: compute.viewer
     - role: logging.viewer
     - role: storage.objectViewer
-    gcp-ecom-pnf-softwareengineer-admin@kohls.com:
+    gcp-ecom-pnf-softwareengineer-admin@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: compute.networkViewer
     - role: compute.viewer
     - role: logging.viewer
     - role: storage.objectViewer
-    gcp-ecom-pnf-softwareengineer-l2@kohls.com:
-    - OrgId: 1035901152068
-      role: CustomViewer486
-    - role: compute.networkViewer
-    - role: compute.viewer
-    - role: logging.viewer
-    - role: pubsub.editor
-    - role: storage.objectViewer
-    gcp-ecom-pnf-softwareengineer-l3@kohls.com:
+    gcp-ecom-pnf-softwareengineer-l2@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: compute.networkViewer
@@ -231,7 +223,15 @@ iamPolicyMembersV2:
     - role: logging.viewer
     - role: pubsub.editor
     - role: storage.objectViewer
-    gcp-ecom-pnf-softwareengineer-manager@kohls.com:
+    gcp-ecom-pnf-softwareengineer-l3@doms.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: logging.viewer
+    - role: pubsub.editor
+    - role: storage.objectViewer
+    gcp-ecom-pnf-softwareengineer-manager@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: compute.networkViewer
@@ -239,21 +239,21 @@ iamPolicyMembersV2:
     - role: logging.viewer
     - role: storage.objectViewer
   serviceAccountsByEmail:
-    activity-reporter@kohls-kos-cicd.iam.gserviceaccount.com:
+    activity-reporter@doms-kos-cicd.iam.gserviceaccount.com:
     - role: monitoring.metricWriter
     - role: monitoring.viewer
-    app-pnf-batch@kohls-cx-pci-lle.iam.gserviceaccount.com:
+    app-pnf-batch@doms-cx-pci-lle.iam.gserviceaccount.com:
     - role: logging.logWriter
     - role: pubsub.viewer
     - role: storage.objectViewer
-    app-pnf@kohls-cx-pci-lle.iam.gserviceaccount.com:
+    app-pnf@doms-cx-pci-lle.iam.gserviceaccount.com:
     - role: logging.logWriter
     - role: pubsub.editor
     - role: pubsub.publisher
     - role: pubsub.subscriber
     - role: pubsub.viewer
     - role: storage.objectViewer
-    consul-paas@kohls-cx-pci-lle.iam.gserviceaccount.com:
+    consul-paas@doms-cx-pci-lle.iam.gserviceaccount.com:
     - OrgId: 1035901152068
       role: CustomRole130
     - OrgId: 1035901152068
@@ -261,27 +261,27 @@ iamPolicyMembersV2:
     - OrgId: 1035901152068
       role: CustomRole703
     - role: compute.networkUser
-    ingress-proxy-pnf@kohls-cx-pci-lle.iam.gserviceaccount.com:
+    ingress-proxy-pnf@doms-cx-pci-lle.iam.gserviceaccount.com:
     - role: logging.logWriter
     - role: logging.viewer
     - role: storage.objectViewer
-    kos-reporting-noc@kohls-kos-lle.iam.gserviceaccount.com:
+    kos-reporting-noc@doms-kos-lle.iam.gserviceaccount.com:
     - role: compute.viewer
-    mongo-dba@kohls-cx-pci-lle.iam.gserviceaccount.com:
+    mongo-dba@doms-cx-pci-lle.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: iam.serviceAccountUser
-    mysql-dba@kohls-cx-pci-lle.iam.gserviceaccount.com:
+    mysql-dba@doms-cx-pci-lle.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: iam.serviceAccountUser
-    pnf-kdp-pnf@kohls-cx-pci-lle.iam.gserviceaccount.com:
+    pnf-kdp-pnf@doms-cx-pci-lle.iam.gserviceaccount.com:
     - role: pubsub.viewer
-    pubsub-pnf@kohls-cx-pci-lle.iam.gserviceaccount.com:
+    pubsub-pnf@doms-cx-pci-lle.iam.gserviceaccount.com:
     - role: logging.logWriter
     - role: pubsub.viewer
     - role: storage.objectViewer
-    servicereg-pnf@kohls-cx-pci-lle.iam.gserviceaccount.com:
+    servicereg-pnf@doms-cx-pci-lle.iam.gserviceaccount.com:
     - OrgId: 1035901152068
       role: CustomRole430
     - OrgId: 1035901152068
@@ -290,7 +290,7 @@ iamPolicyMembersV2:
     - role: logging.logWriter
     - role: storage.objectCreator
     - role: storage.objectViewer
-    terraform-devops@kohls-cx-pci-lle.iam.gserviceaccount.com:
+    terraform-devops@doms-cx-pci-lle.iam.gserviceaccount.com:
     - OrgId: 1035901152068
       role: lbadmin
     - role: compute.instanceAdmin.v1
@@ -299,7 +299,7 @@ iamPolicyMembersV2:
     - role: iam.serviceAccountUser
     - role: logging.admin
     - role: storage.admin
-    terraform-provisioning-pnf@kohls-cx-pci-lle.iam.gserviceaccount.com:
+    terraform-provisioning-pnf@doms-cx-pci-lle.iam.gserviceaccount.com:
     - OrgId: 1035901152068
       role: lbadmin
     - role: compute.imageUser
@@ -311,12 +311,12 @@ iamPolicyMembersV2:
     - role: pubsub.admin
     - role: pubsub.editor
     - role: storage.admin
-    zkui-pnf@kohls-cx-pci-lle.iam.gserviceaccount.com:
+    zkui-pnf@doms-cx-pci-lle.iam.gserviceaccount.com:
     - role: logging.logWriter
     - role: storage.objectViewer
-    zkwd-pnf@kohls-cx-pci-lle.iam.gserviceaccount.com:
+    zkwd-pnf@doms-cx-pci-lle.iam.gserviceaccount.com:
     - role: logging.logWriter
     - role: storage.objectViewer
-    zookeeper-pnf@kohls-cx-pci-lle.iam.gserviceaccount.com:
+    zookeeper-pnf@doms-cx-pci-lle.iam.gserviceaccount.com:
     - role: logging.logWriter
     - role: storage.objectViewer

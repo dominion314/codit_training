@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90565"
 project:
-  name: kohls-cx-poc-lle
+  name: doms-cx-poc-lle
   deletionProtect: true
   managed: true
   folderId: "124759181101"

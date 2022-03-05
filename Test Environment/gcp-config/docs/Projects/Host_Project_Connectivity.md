@@ -75,16 +75,16 @@ Update this file and ensure proper formatting is followed and that you do not mo
 # 4200000014: demo-nx-lle-c1-gcp-rtr01 <-- Update the comment here for easy, sequential searches for ASNs
 
 ha_vpn_to_global_transit_asn:
-  kohls-intra-transit-xpn-prd:
+  doms-intra-transit-xpn-prd:
     intra-xpn-transit-c1-gcp-rtr01: 4200000008
     intra-xpn-transit-e1-gcp-rtr01: 4200000009
-  kohls-cpe-xpn-lle:
+  doms-cpe-xpn-lle:
     cpe-nx-lle-c1-gcp-rtr01: 4200000010
     cpe-nx-lle-e1-gcp-rtr01: 4200000011
-  kohls-cpe-xpn-prd:
+  doms-cpe-xpn-prd:
     cpe-nx-prd-c1-gcp-rtr01: 4200000012
     cpe-nx-prd-e1-gcp-rtr01: 4200000013
-  kohls-demo-xpn-lle:                    #<-- Add your host project as a new key
+  doms-demo-xpn-lle:                    #<-- Add your host project as a new key
     demo-nx-lle-c1-gcp-rtr01: 4200000014 #<-- Add the router that you've created here with the appropriate assignment
 ```
 ## On-Prem Connectivity

@@ -1,7 +1,7 @@
 ---
 iamPolicyMembersV2:
   groupsByEmail:
-    gcp-cloudplatformengineering-devops-admin@kohls.com:
+    gcp-cloudplatformengineering-devops-admin@doms.com:
     - role: CustomRole881
       OrgId: 1035901152068
     - role: CustomViewer486

@@ -1,11 +1,11 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-eta-devops-admin@kohls.com:
+    gcp-eta-devops-admin@doms.com:
       roles:
       - iam.serviceAccountKeyAdmin
       - storage.admin
   serviceAccountsByEmail:
-    aodocs-lle@kohls-etcc-finops-aodocs-lle.iam.gserviceaccount.com:
+    aodocs-lle@doms-etcc-finops-aodocs-lle.iam.gserviceaccount.com:
       roles:
       - iam.serviceAccountUser

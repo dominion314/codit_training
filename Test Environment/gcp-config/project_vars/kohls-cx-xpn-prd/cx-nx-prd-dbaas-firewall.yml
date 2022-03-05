@@ -11,13 +11,13 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "mysql-dba@kohls-cce-dbaas-prd.iam.gserviceaccount.com"
+          - external: "mysql-dba@doms-cce-dbaas-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: "ocp-app-node-paas@kohls-cce-openshift-prd.iam.gserviceaccount.com"
-          - external: "ocp-pci-node-paas@kohls-cce-openshift-prd.iam.gserviceaccount.com"
-          - external: "ocp-pii-node-paas@kohls-cce-openshift-prd.iam.gserviceaccount.com"
+          - external: "ocp-app-node-paas@doms-cce-openshift-prd.iam.gserviceaccount.com"
+          - external: "ocp-pci-node-paas@doms-cce-openshift-prd.iam.gserviceaccount.com"
+          - external: "ocp-pii-node-paas@doms-cce-openshift-prd.iam.gserviceaccount.com"
           sourceTags:
           allow:
           - protocol: "tcp"
@@ -32,13 +32,13 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "pmm-dba@kohls-cce-dbaas-prd.iam.gserviceaccount.com"
+          - external: "pmm-dba@doms-cce-dbaas-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: "ocp-app-node-paas@kohls-cce-openshift-prd.iam.gserviceaccount.com"
-          - external: "ocp-pci-node-paas@kohls-cce-openshift-prd.iam.gserviceaccount.com"
-          - external: "ocp-pii-node-paas@kohls-cce-openshift-prd.iam.gserviceaccount.com"
+          - external: "ocp-app-node-paas@doms-cce-openshift-prd.iam.gserviceaccount.com"
+          - external: "ocp-pci-node-paas@doms-cce-openshift-prd.iam.gserviceaccount.com"
+          - external: "ocp-pii-node-paas@doms-cce-openshift-prd.iam.gserviceaccount.com"
           sourceTags:
           allow:
           - protocol: "tcp"
@@ -57,11 +57,11 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "pmm-dba@kohls-cce-dbaas-prd.iam.gserviceaccount.com"
+          - external: "pmm-dba@doms-cce-dbaas-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: "mysql-dba@kohls-cce-dbaas-prd.iam.gserviceaccount.com"
+          - external: "mysql-dba@doms-cce-dbaas-prd.iam.gserviceaccount.com"
           sourceTags:
           allow:
           - protocol: "tcp"
@@ -79,11 +79,11 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "mysql-dba@kohls-cce-dbaas-prd.iam.gserviceaccount.com"
+          - external: "mysql-dba@doms-cce-dbaas-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: "pmm-dba@kohls-cce-dbaas-prd.iam.gserviceaccount.com"
+          - external: "pmm-dba@doms-cce-dbaas-prd.iam.gserviceaccount.com"
           sourceTags:
           allow:
           - protocol: "tcp"
@@ -102,11 +102,11 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "mysql-dba@kohls-cce-dbaas-prd.iam.gserviceaccount.com"
+          - external: "mysql-dba@doms-cce-dbaas-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: "mysql-dba@kohls-cce-dbaas-prd.iam.gserviceaccount.com"
+          - external: "mysql-dba@doms-cce-dbaas-prd.iam.gserviceaccount.com"
           sourceTags:
           allow:
           - protocol: "tcp"

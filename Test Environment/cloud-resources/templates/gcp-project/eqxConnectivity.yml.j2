@@ -28,7 +28,7 @@
 {%-             set reg = "east" %}
 {%-             set zone = "zone2" %}
 {%-           endif %}
-apiVersion: cne.cpe.kohls.com/v1
+apiVersion: cne.cpe.doms.com/v1
 kind: EquinixInterconnect
 metadata:
   name: "{{ piName }}-eqx"
@@ -50,9 +50,9 @@ spec:
     apiVersion: compute.cnrm.cloud.google.com/v1beta1
 
   emailNotifications:
-    - kt-cne@kohls.com
+    - kt-cne@doms.com
 ---
-apiVersion: cne.cpe.kohls.com/v1
+apiVersion: cne.cpe.doms.com/v1
 kind: CiscoInterconnect
 metadata:
   name: "{{ piName }}-cisco"
@@ -75,7 +75,7 @@ spec:
   eqxInterconnectRef:
     name: "{{ piName }}-eqx"
     namespace: "gcp-{{ project.name }}"
-    apiVersion: cne.cpe.kohls.com/v1alpha1
+    apiVersion: cne.cpe.doms.com/v1alpha1
 
   gcpInterconnectRef:
     name: "{{ piName }}"

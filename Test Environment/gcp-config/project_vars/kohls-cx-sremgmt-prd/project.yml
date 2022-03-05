@@ -1,6 +1,6 @@
 ---
 project:
-  name: kohls-cx-sremgmt-prd
+  name: doms-cx-sremgmt-prd
   managed: true
   folderId: "259606834999"
   billingAccount: "00C36A-CD0BDB-E543D0"

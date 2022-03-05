@@ -1,4 +1,4 @@
-package kohls.gitops.kcc.gcp_project.firewall_ingress
+package doms.gitops.kcc.gcp_project.firewall_ingress
 
 default allow = true
 

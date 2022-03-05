@@ -1,7 +1,7 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-eta-devops-admin@kohls.com:
+    gcp-eta-devops-admin@doms.com:
       roles:
       - compute.imageUser
       - compute.instanceAdmin.v1
@@ -21,17 +21,17 @@ iamPolicyMembers:
       - storage.admin
       - storage.objectViewer
   serviceAccountsByEmail:
-    mysql-dba@kohls-etcc-uc-lle.iam.gserviceaccount.com:
+    mysql-dba@doms-etcc-uc-lle.iam.gserviceaccount.com:
       roles:
       - compute.instanceAdmin.v1
       - compute.networkUser
       - iam.serviceAccountUser
-    mongo-dba@kohls-etcc-uc-lle.iam.gserviceaccount.com:
+    mongo-dba@doms-etcc-uc-lle.iam.gserviceaccount.com:
       roles:
       - compute.instanceAdmin.v1
       - compute.networkUser
       - iam.serviceAccountUser
-    terraform-devops@kohls-etcc-uc-lle.iam.gserviceaccount.com:
+    terraform-devops@doms-etcc-uc-lle.iam.gserviceaccount.com:
       roles:
       - compute.instanceAdmin.v1
       - compute.networkUser

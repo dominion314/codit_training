@@ -11,13 +11,13 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "kafkaplatform-msg@kohls-platform-maas-prd.iam.gserviceaccount.com"
+          - external: "kafkaplatform-msg@doms-platform-maas-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: "ocp-app-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com"
-          - external: "ocp-pci-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com"
-          - external: "ocp-pii-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com"
+          - external: "ocp-app-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com"
+          - external: "ocp-pci-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com"
+          - external: "ocp-pii-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com"
           sourceTags:
           allow:
           - protocol: "tcp"
@@ -71,9 +71,9 @@ vpcs:
           - "35.222.75.254/32"
           - "35.193.122.122/32"
           targetServiceAccounts:
-          - external: "ocp-app-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com"
-          - external: "ocp-pci-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com"
-          - external: "ocp-pii-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com"
+          - external: "ocp-app-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com"
+          - external: "ocp-pci-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com"
+          - external: "ocp-pii-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
@@ -185,11 +185,11 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "kafkaplatform-msg@kohls-platform-maas-prd.iam.gserviceaccount.com"
+          - external: "kafkaplatform-msg@doms-platform-maas-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: "ocp-app-node-paas@kohls-platform-openshift-lle.iam.gserviceaccount.com"
+          - external: "ocp-app-node-paas@doms-platform-openshift-lle.iam.gserviceaccount.com"
           sourceTags:
           allow:
           - protocol: "tcp"
@@ -206,7 +206,7 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "kafkaplatform-msg@kohls-platform-maas-prd.iam.gserviceaccount.com"
+          - external: "kafkaplatform-msg@doms-platform-maas-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           - "10.185.13.0/24"
@@ -228,7 +228,7 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "kafkaplatform-msg@kohls-platform-maas-prd.iam.gserviceaccount.com"
+          - external: "kafkaplatform-msg@doms-platform-maas-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           - "10.187.36.0/23"

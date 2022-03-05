@@ -3,9 +3,9 @@
 The project resource parameter file is required due to other resources depending on the project name definition.  Due to this requirement, if other resources are being managed, but you do not want the project itself to be managed, you can set the project field managed to False.  If managed is True, the project will created if it doesn't already exist or will become managed if it already exists.
 
 The following project fields are **required**:
-* **name:** *Must follow kohls project naming standards*
+* **name:** *Must follow doms project naming standards*
 * **managed:** *Valid values are True or False.  False is used when project resource should not be managed*
-* **folderId:** *This [field](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Project_Jump_Start_Guide.md#netx-project-folder-id-lookup-table) must be defined so project will be created in proper organization folder*
+* **folderId:** *This [field](https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Project_Jump_Start_Guide.md#netx-project-folder-id-lookup-table) must be defined so project will be created in proper organization folder*
 * **billingAccount:** *The billing account id is "00C36A-CD0BDB-E543D0" for Kohl's Google account*
 * **labels**: *The list shown below are the labels that need to be defined for every project.  The values can also be defined using defaultLabels parameter resource as well*
 
@@ -41,7 +41,7 @@ Sample project.yml parameter file.
 ---
 billingDeptId: "90546"
 project:
-  name: kohls-cpe-sample-lle
+  name: doms-cpe-sample-lle
   managed: true
   folderId: "345254712059"
   billingAccount: "00C36A-CD0BDB-E543D0"
@@ -118,19 +118,19 @@ Sample iam-policy-members.yml file
 ---
 iamPolicyMembers:
   usersByEmail:
-    mark.doll@kohls.com:
+    mark.doll@doms.com:
       roles:
         - editor
         - viewer
-    hamilton.hoover@kohls.com:
+    hamilton.hoover@doms.com:
       roles:
         - owner
   groupsByEmail:
-    gcp-et-devops-l3@kohls.com:
+    gcp-et-devops-l3@doms.com:
       roles:
         - viewer
   serviceAccountsByEmail:
-    gitops-example-2@kohlsdev-cpa-inspec.iam.gserviceaccount.com:
+    gitops-example-2@domsdev-cpa-inspec.iam.gserviceaccount.com:
       roles:
         - viewer
 ```
@@ -150,7 +150,7 @@ Sample storage-buckets.yml file.
 ```yaml
 ---
 storageBuckets:
-  kohlsdev-cpa-inspec-test-bucket-01:
+  domsdev-cpa-inspec-test-bucket-01:
     location: US-EAST1
     versioningEnabled: false
     forceDestroy: true
@@ -178,7 +178,7 @@ storageBuckets:
         matchesStorageClass:
           - COLDLINE
           - ARCHIVE
-  kohlsdev-cpa-inspec-test-bucket-02:
+  domsdev-cpa-inspec-test-bucket-02:
     versioningEnabled: false
     deletionProtect: true
     bucketPolicyOnly: true
@@ -280,23 +280,23 @@ Sample storage-buckets-iam.yml file
 ```yaml
 ---
 storageBuckets:
-  kohlsdev-cpa-test01-lle-bucket-04:
+  domsdev-cpa-test01-lle-bucket-04:
     permissions:
       usersByEmail:
-        mark.doll@kohls.com:
+        mark.doll@doms.com:
           deletionProtect: true
           roles:
           - storage.admin
-        hamilton.hoover@kohls.com:
+        hamilton.hoover@doms.com:
           roles:
           - storage.legacyBucketOwner
           - storage.objectViewer
       groupsByEmail:
-        gcp-iaas-govops-l3@kohls.com:
+        gcp-iaas-govops-l3@doms.com:
           roles:
           - storage.objectViewer
       serviceAccountsByEmail:
-        marks-sa@kohlsdev-cpa-test01-lle.iam.gserviceaccount.com:
+        marks-sa@domsdev-cpa-test01-lle.iam.gserviceaccount.com:
           deletionProtect: false
           roles:
           - storage.legacyBucketOwner
@@ -328,13 +328,13 @@ Sample storage-buckets-acl.yml file
 ```yaml
 ---
 storageBuckets:
-  kohlsdev-cpa-inspec-test-bucket-01:
+  domsdev-cpa-inspec-test-bucket-01:
     acls:
       usersByEmail:
-        mark.doll@kohls.com: OWNER
-        hamilton.hoover@kohls.com: READER
+        mark.doll@doms.com: OWNER
+        hamilton.hoover@doms.com: READER
       groupsByEmail:
-        gcp-iaas-cpa-devops-l3@kohls.com: OWNER
+        gcp-iaas-cpa-devops-l3@doms.com: OWNER
       primitiveRoles:
         viewers: READER
         editors: OWNER
@@ -342,10 +342,10 @@ storageBuckets:
       builtinGroups:
         allUsers: READER
         allAuthenticatedUsers: READER
-  kohlsdev-cpa-inspec-test-bucket-02:
+  domsdev-cpa-inspec-test-bucket-02:
     acls:
       usersByEmail:
-        pavel.leonovitch@kohls.com: WRITER
+        pavel.leonovitch@doms.com: WRITER
 ```
 ### Storage Default Object ACL resource
 For a complete understanding of storage ACLs vs storage cloud IAM, please reference [Google Bucket Access Documentation](https://cloud.google.com/storage/docs/uniform-bucket-level-access)
@@ -375,13 +375,13 @@ Sample storage-default-object-acls.yml file
 ```yaml
 ---
 storageBuckets:
-  kohlsdev-cpa-inspec-test-bucket-01:
+  domsdev-cpa-inspec-test-bucket-01:
     default_object_acls:
       usersByEmail:
-        mark.doll@kohls.com: OWNER
-        hamilton.hoover@kohls.com: READER
+        mark.doll@doms.com: OWNER
+        hamilton.hoover@doms.com: READER
       groupsByEmail:
-        gcp-iaas-cpa-devops-l3@kohls.com: OWNER
+        gcp-iaas-cpa-devops-l3@doms.com: OWNER
       primitiveRoles:
         viewers: READER
         editors: OWNER
@@ -389,7 +389,7 @@ storageBuckets:
       builtinGroups:
         allUsers: READER
         allAuthenticatedUsers: READER
-  kohlsdev-cpa-inspec-test-bucket-02:
+  domsdev-cpa-inspec-test-bucket-02:
     default_object_acls:
       primitiveRoles:
         viewers: READER
@@ -418,21 +418,21 @@ pubSubTopics:
       app-name:
     permissions:                        # optional - permissions applied at topic level are optional
       usersByEmail:                     # optional -
-        mark.doll@kohls.com:
+        mark.doll@doms.com:
           roles:
             - pubsub.admin
-        hamilton.hoover@kohls.com:
+        hamilton.hoover@doms.com:
           roles:
             - pubsub.publisher
             - viewer
   gitops.test.topic.two:
     permissions:                        # optional -
       groupsByEmail:                    # optional -
-        gcp-et-devops-l3@kohls.com:
+        gcp-et-devops-l3@doms.com:
           roles:
             - pubsub.viewer
       serviceAccountsByEmail:           # optional
-        gitops-example-1@kohlsdev-cpa-inspec.iam.gserviceaccount.com:
+        gitops-example-1@domsdev-cpa-inspec.iam.gserviceaccount.com:
           roles:
             - pubsub.editor
 ```
@@ -508,16 +508,16 @@ bigQueryDataset:
     app-name: loyalty
   permissions:                                            # optional
     usersByEmail:                                         # optional - multiple roles per group can be defined
-      hamilton.hoover@kohls.com:
+      hamilton.hoover@doms.com:
         roles:
           - bigquery.user
           - editor
     groupsByEmail:                                        # optional - multiple roles per group can be defined
-      gcp-et-devops-l3@kohls.com:
+      gcp-et-devops-l3@doms.com:
         roles:
           - bigquery.dataViewer
     serviceAccountsByEmail:                               # optiona; - multiple roles per service account can be defined
-      gitops-example-1@kohlsdev-cpa-inspec.iam.gserviceaccount.com:
+      gitops-example-1@domsdev-cpa-inspec.iam.gserviceaccount.com:
         roles:
           - biqquery.metadataViewer
 ```
@@ -543,12 +543,12 @@ vpcs:
         deletionProtect: true
         permissions:
           usersByEmail:
-          - usr1@kohls.com
-          - usr2@kohls.com
+          - usr1@doms.com
+          - usr2@doms.com
           groupsByEmail:
-          - gcp-devops@kohls.com
+          - gcp-devops@doms.com
           serviceAccountsByEmail:
-          - gitops-example@kohlsdev-cpa-inspec.iam.gserviceaccount.com
+          - gitops-example@domsdev-cpa-inspec.iam.gserviceaccount.com
 ```
 
 For more information about IAM roles, please reference [Google IAM Policy Documentation](https://cloud.google.com/iam/docs/understanding-roles#compute-engine-roles)

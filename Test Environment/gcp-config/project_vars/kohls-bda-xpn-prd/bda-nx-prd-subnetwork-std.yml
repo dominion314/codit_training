@@ -27,13 +27,13 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-bda-devops-admin@kohls.com
+          - gcp-bda-devops-admin@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-bda-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-bda-prd.iam.gserviceaccount.com
           - service-899600061317@dataproc-accounts.iam.gserviceaccount.com
           - 899600061317-compute@developer.gserviceaccount.com
           - 899600061317@cloudservices.gserviceaccount.com
-          - pzpians-infra-ansible-bigdata@kohls-bda-prd.iam.gserviceaccount.com
+          - pzpians-infra-ansible-bigdata@doms-bda-prd.iam.gserviceaccount.com
 
       bda-nx-prd-ddh-bigdata-c1-sec01:
         advertiseRoutes: true
@@ -44,14 +44,14 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-bda-devops-admin@kohls.com
+          - gcp-bda-devops-admin@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-bda-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-bda-prd.iam.gserviceaccount.com
           - service-899600061317@dataproc-accounts.iam.gserviceaccount.com
           - 899600061317-compute@developer.gserviceaccount.com
           - 899600061317@cloudservices.gserviceaccount.com
-          - pzpians-infra-ansible-bigdata@kohls-bda-prd.iam.gserviceaccount.com
-          - dp-kafka-arch@kohls-bda-prd.iam.gserviceaccount.com
+          - pzpians-infra-ansible-bigdata@doms-bda-prd.iam.gserviceaccount.com
+          - dp-kafka-arch@doms-bda-prd.iam.gserviceaccount.com
 
       bda-nx-prd-ddh-bigdata-e1-pub01:
         advertiseRoutes: true
@@ -62,13 +62,13 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-bda-devops-admin@kohls.com
+          - gcp-bda-devops-admin@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-bda-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-bda-prd.iam.gserviceaccount.com
           - service-899600061317@dataproc-accounts.iam.gserviceaccount.com
           - 899600061317-compute@developer.gserviceaccount.com
           - 899600061317@cloudservices.gserviceaccount.com
-          - pzpians-infra-ansible-bigdata@kohls-bda-prd.iam.gserviceaccount.com
+          - pzpians-infra-ansible-bigdata@doms-bda-prd.iam.gserviceaccount.com
 
       bda-nx-prd-ddh-bigdata-e1-sec01:
         advertiseRoutes: true
@@ -79,13 +79,13 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-bda-devops-admin@kohls.com
+          - gcp-bda-devops-admin@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-bda-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-bda-prd.iam.gserviceaccount.com
           - service-899600061317@dataproc-accounts.iam.gserviceaccount.com
           - 899600061317-compute@developer.gserviceaccount.com
           - 899600061317@cloudservices.gserviceaccount.com
-          - pzpians-infra-ansible-bigdata@kohls-bda-prd.iam.gserviceaccount.com
+          - pzpians-infra-ansible-bigdata@doms-bda-prd.iam.gserviceaccount.com
 
       bda-nx-prd-micro-services-c1-pub01:
         advertiseRoutes: true
@@ -96,13 +96,13 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-bda-devops-admin@kohls.com
+          - gcp-bda-devops-admin@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-bda-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-bda-prd.iam.gserviceaccount.com
           - service-899600061317@dataproc-accounts.iam.gserviceaccount.com
           - 899600061317-compute@developer.gserviceaccount.com
           - 899600061317@cloudservices.gserviceaccount.com
-          - pzpians-infra-ansible-bigdata@kohls-bda-prd.iam.gserviceaccount.com
+          - pzpians-infra-ansible-bigdata@doms-bda-prd.iam.gserviceaccount.com
 
       bda-nx-prd-micro-services-c1-prv01:
         advertiseRoutes: true
@@ -114,15 +114,15 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-bda-devops-admin@kohls.com
-          - gcp-infra-windows-devops-l3@kohls.com
+          - gcp-bda-devops-admin@doms.com
+          - gcp-infra-windows-devops-l3@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-bda-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-bda-prd.iam.gserviceaccount.com
           - service-899600061317@dataproc-accounts.iam.gserviceaccount.com
           - 899600061317-compute@developer.gserviceaccount.com
           - 899600061317@cloudservices.gserviceaccount.com
-          - pzpians-infra-ansible-bigdata@kohls-bda-prd.iam.gserviceaccount.com
-          - terraform-win@kohls-bda-prd.iam.gserviceaccount.com
+          - pzpians-infra-ansible-bigdata@doms-bda-prd.iam.gserviceaccount.com
+          - terraform-win@doms-bda-prd.iam.gserviceaccount.com
 
       bda-nx-prd-micro-services-e1-pub01:
         advertiseRoutes: true
@@ -133,13 +133,13 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-bda-devops-admin@kohls.com
+          - gcp-bda-devops-admin@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-bda-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-bda-prd.iam.gserviceaccount.com
           - service-899600061317@dataproc-accounts.iam.gserviceaccount.com
           - 899600061317-compute@developer.gserviceaccount.com
           - 899600061317@cloudservices.gserviceaccount.com
-          - pzpians-infra-ansible-bigdata@kohls-bda-prd.iam.gserviceaccount.com
+          - pzpians-infra-ansible-bigdata@doms-bda-prd.iam.gserviceaccount.com
 
       bda-nx-prd-micro-services-e1-prv01:
         advertiseRoutes: true
@@ -151,15 +151,15 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-bda-devops-admin@kohls.com
-          - gcp-infra-windows-devops-l3@kohls.com
+          - gcp-bda-devops-admin@doms.com
+          - gcp-infra-windows-devops-l3@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-bda-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-bda-prd.iam.gserviceaccount.com
           - service-899600061317@dataproc-accounts.iam.gserviceaccount.com
           - 899600061317-compute@developer.gserviceaccount.com
           - 899600061317@cloudservices.gserviceaccount.com
-          - pzpians-infra-ansible-bigdata@kohls-bda-prd.iam.gserviceaccount.com
-          - terraform-win@kohls-bda-prd.iam.gserviceaccount.com
+          - pzpians-infra-ansible-bigdata@doms-bda-prd.iam.gserviceaccount.com
+          - terraform-win@doms-bda-prd.iam.gserviceaccount.com
 
       bda-nx-prd-mkt-c1-prv01:
         advertiseRoutes: true
@@ -170,17 +170,17 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-bda-devops-admin@kohls.com
-          - gcp-bda-softwareengineer-l3@kohls.com
-          - gcp-mktg-credit-analytics@kohls.com
+          - gcp-bda-devops-admin@doms.com
+          - gcp-bda-softwareengineer-l3@doms.com
+          - gcp-mktg-credit-analytics@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-bda-mkt-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-bda-mkt-prd.iam.gserviceaccount.com
           - 326126947838-compute@developer.gserviceaccount.com
-          - kos-servicereg@kohls-bda-mkt-prd.iam.gserviceaccount.com
-          - pzpians-infra-ansible-bigdata@kohls-bda-mkt-prd.iam.gserviceaccount.com
-          - pzpissv-infra-self-serv-bigdat@kohls-bda-mkt-prd.iam.gserviceaccount.com
-          - pzpiwrk-infra-workers-bigdata@kohls-bda-mkt-prd.iam.gserviceaccount.com
-          - consul-paas@kohls-bda-mkt-prd.iam.gserviceaccount.com
+          - kos-servicereg@doms-bda-mkt-prd.iam.gserviceaccount.com
+          - pzpians-infra-ansible-bigdata@doms-bda-mkt-prd.iam.gserviceaccount.com
+          - pzpissv-infra-self-serv-bigdat@doms-bda-mkt-prd.iam.gserviceaccount.com
+          - pzpiwrk-infra-workers-bigdata@doms-bda-mkt-prd.iam.gserviceaccount.com
+          - consul-paas@doms-bda-mkt-prd.iam.gserviceaccount.com
           - 326126947838@cloudservices.gserviceaccount.com
 
       bda-nx-prd-mkt-c1-pub01:
@@ -192,17 +192,17 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-bda-devops-admin@kohls.com
-          - gcp-bda-softwareengineer-l3@kohls.com
-          - gcp-mktg-credit-analytics@kohls.com
+          - gcp-bda-devops-admin@doms.com
+          - gcp-bda-softwareengineer-l3@doms.com
+          - gcp-mktg-credit-analytics@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-bda-mkt-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-bda-mkt-prd.iam.gserviceaccount.com
           - 326126947838-compute@developer.gserviceaccount.com
-          - kos-servicereg@kohls-bda-mkt-prd.iam.gserviceaccount.com
-          - pzpians-infra-ansible-bigdata@kohls-bda-mkt-prd.iam.gserviceaccount.com
-          - pzpissv-infra-self-serv-bigdat@kohls-bda-mkt-prd.iam.gserviceaccount.com
-          - pzpiwrk-infra-workers-bigdata@kohls-bda-mkt-prd.iam.gserviceaccount.com
-          - consul-paas@kohls-bda-mkt-prd.iam.gserviceaccount.com
+          - kos-servicereg@doms-bda-mkt-prd.iam.gserviceaccount.com
+          - pzpians-infra-ansible-bigdata@doms-bda-mkt-prd.iam.gserviceaccount.com
+          - pzpissv-infra-self-serv-bigdat@doms-bda-mkt-prd.iam.gserviceaccount.com
+          - pzpiwrk-infra-workers-bigdata@doms-bda-mkt-prd.iam.gserviceaccount.com
+          - consul-paas@doms-bda-mkt-prd.iam.gserviceaccount.com
           - 326126947838@cloudservices.gserviceaccount.com
 
       bda-nx-prd-mkt-e1-prv01:
@@ -214,17 +214,17 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-bda-devops-admin@kohls.com
-          - gcp-bda-softwareengineer-l3@kohls.com
-          - gcp-mktg-credit-analytics@kohls.com
+          - gcp-bda-devops-admin@doms.com
+          - gcp-bda-softwareengineer-l3@doms.com
+          - gcp-mktg-credit-analytics@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-bda-mkt-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-bda-mkt-prd.iam.gserviceaccount.com
           - 326126947838-compute@developer.gserviceaccount.com
-          - kos-servicereg@kohls-bda-mkt-prd.iam.gserviceaccount.com
-          - pzpians-infra-ansible-bigdata@kohls-bda-mkt-prd.iam.gserviceaccount.com
-          - pzpissv-infra-self-serv-bigdat@kohls-bda-mkt-prd.iam.gserviceaccount.com
-          - pzpiwrk-infra-workers-bigdata@kohls-bda-mkt-prd.iam.gserviceaccount.com
-          - consul-paas@kohls-bda-mkt-prd.iam.gserviceaccount.com
+          - kos-servicereg@doms-bda-mkt-prd.iam.gserviceaccount.com
+          - pzpians-infra-ansible-bigdata@doms-bda-mkt-prd.iam.gserviceaccount.com
+          - pzpissv-infra-self-serv-bigdat@doms-bda-mkt-prd.iam.gserviceaccount.com
+          - pzpiwrk-infra-workers-bigdata@doms-bda-mkt-prd.iam.gserviceaccount.com
+          - consul-paas@doms-bda-mkt-prd.iam.gserviceaccount.com
           - 326126947838@cloudservices.gserviceaccount.com
 
       bda-nx-prd-mkt-e1-pub01:
@@ -236,15 +236,15 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-bda-devops-admin@kohls.com
-          - gcp-bda-softwareengineer-l3@kohls.com
-          - gcp-mktg-credit-analytics@kohls.com
+          - gcp-bda-devops-admin@doms.com
+          - gcp-bda-softwareengineer-l3@doms.com
+          - gcp-mktg-credit-analytics@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-bda-mkt-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-bda-mkt-prd.iam.gserviceaccount.com
           - 326126947838-compute@developer.gserviceaccount.com
-          - kos-servicereg@kohls-bda-mkt-prd.iam.gserviceaccount.com
-          - pzpians-infra-ansible-bigdata@kohls-bda-mkt-prd.iam.gserviceaccount.com
-          - pzpissv-infra-self-serv-bigdat@kohls-bda-mkt-prd.iam.gserviceaccount.com
-          - pzpiwrk-infra-workers-bigdata@kohls-bda-mkt-prd.iam.gserviceaccount.com
-          - consul-paas@kohls-bda-mkt-prd.iam.gserviceaccount.com
+          - kos-servicereg@doms-bda-mkt-prd.iam.gserviceaccount.com
+          - pzpians-infra-ansible-bigdata@doms-bda-mkt-prd.iam.gserviceaccount.com
+          - pzpissv-infra-self-serv-bigdat@doms-bda-mkt-prd.iam.gserviceaccount.com
+          - pzpiwrk-infra-workers-bigdata@doms-bda-mkt-prd.iam.gserviceaccount.com
+          - consul-paas@doms-bda-mkt-prd.iam.gserviceaccount.com
           - 326126947838@cloudservices.gserviceaccount.com

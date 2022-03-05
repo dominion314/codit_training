@@ -1,7 +1,7 @@
 ---
 billingDeptId: 90505
 project:
-  name: kohls-ecom-xpn-prd
+  name: doms-ecom-xpn-prd
   managed: true
   deletionProtect: true
   folderId: 970875009337

@@ -1,13 +1,13 @@
 ---
 iamPolicyMembersV2:
   groupsByEmail:
-      gcp-mktg-credit-analytics@kohls.com:
+      gcp-mktg-credit-analytics@doms.com:
       - role: bigquery.jobUser
       - role: bigquery.user
   serviceAccountsByEmail:
-    cce-dse-mkt@kohls-bda-dse-lle.iam.gserviceaccount.com:
+    cce-dse-mkt@doms-bda-dse-lle.iam.gserviceaccount.com:
       - role: bigquery.jobUser
       - role: bigquery.dataViewer
-    cce-dse-mkt@kohls-bda-dse-prd.iam.gserviceaccount.com:
+    cce-dse-mkt@doms-bda-dse-prd.iam.gserviceaccount.com:
       - role: bigquery.jobUser
       - role: bigquery.dataViewer

@@ -277,7 +277,7 @@ vpcs:
             - aiops-ssh
             - aiops-mongo
 
-      kohls-onprem-jarvis-to-aiops-prd:
+      doms-onprem-jarvis-to-aiops-prd:
         direction: INGRESS
         description: SNOW-16518
         disabled: false
@@ -296,7 +296,7 @@ vpcs:
             - aiops-mysql
             - aiops-ssh
 
-      kohls-onprem-mysql-to-aiops-prd:
+      doms-onprem-mysql-to-aiops-prd:
         direction: INGRESS
         description: SNOW-16518
         disabled: false
@@ -313,7 +313,7 @@ vpcs:
           targetTags:
             - aiops-mysql
 
-      kohls-onprem-ssh-to-aiops-prd:
+      doms-onprem-ssh-to-aiops-prd:
         direction: INGRESS
         description: SNOW-16518
         disabled: false
@@ -330,7 +330,7 @@ vpcs:
           targetTags:
             - aiops-ssh
 
-      kohls-onprem-to-aiops-prd-rundeck:
+      doms-onprem-to-aiops-prd-rundeck:
         direction: INGRESS
         description: SNOW-16518
         disabled: false
@@ -348,7 +348,7 @@ vpcs:
           targetTags:
             - aiops-rundeck
 
-      kohls-onprem-ingress-splunkbase:
+      doms-onprem-ingress-splunkbase:
         direction: INGRESS
         description: SNOW-16518
         disabled: false
@@ -371,7 +371,7 @@ vpcs:
             - aiops-splunk-ssh
             - aiops-splunk-syslog
 
-      kohls-onprem-to-aiops-prd-mongo:
+      doms-onprem-to-aiops-prd-mongo:
         direction: INGRESS
         description: SNOW-16518
         disabled: false
@@ -518,7 +518,7 @@ vpcs:
           targetTags:
             - aiops-syslogng
 
-      kohls-onprem-ingress-infra-syslog:
+      doms-onprem-ingress-infra-syslog:
         direction: INGRESS
         description: SNOW-16518
         disabled: false
@@ -541,7 +541,7 @@ vpcs:
             - aiops-splunk-ssh
             - aiops-splunk-syslog
 
-      kohls-onprem-to-infra-monitoring-syslog:
+      doms-onprem-to-infra-monitoring-syslog:
         direction: INGRESS
         description: SNOW-16518
         disabled: false
@@ -570,7 +570,7 @@ vpcs:
           targetTags:
             - aiops-syslogng
 
-      kohls-onprem-to-infra-aiops-syslog:
+      doms-onprem-to-infra-aiops-syslog:
         direction: INGRESS
         description: SNOW-16518
         disabled: false
@@ -589,7 +589,7 @@ vpcs:
             - aiops-splunk-ssh
             - aiops-splunk-syslog
 
-      kohls-onprem-to-ingress-syslogng:
+      doms-onprem-to-ingress-syslogng:
         direction: INGRESS
         description: SNOW-16518
         disabled: false
@@ -1015,7 +1015,7 @@ vpcs:
               ports:
                 - "27020"
 
-      kohls-onprem-vpn-to-kdx-lle:
+      doms-onprem-vpn-to-kdx-lle:
         priority: 900
         direction: INGRESS
         description:
@@ -1326,7 +1326,7 @@ vpcs:
           - protocol: "tcp"
             ports:
             - "22"
-      flashtalking-ingress-kohls-sftp-server:
+      flashtalking-ingress-doms-sftp-server:
         priority: 900
         direction: INGRESS
         description:
@@ -1680,7 +1680,7 @@ vpcs:
           - protocol: "tcp"
             ports:
             - "22"
-      kohls-data-exchange-to-sens-production:
+      doms-data-exchange-to-sens-production:
         priority: 900
         direction: INGRESS
         description:
@@ -1709,7 +1709,7 @@ vpcs:
           - protocol: "tcp"
             ports:
             - "22"
-      kohls-onprem-vps-to-xpn-prod-kdx-srv-tcp-01:
+      doms-onprem-vps-to-xpn-prod-kdx-srv-tcp-01:
         priority: 900
         direction: INGRESS
         description:
@@ -1798,7 +1798,7 @@ vpcs:
           - protocol: "tcp"
             ports:
             - "22"
-      pega-ingress-production-kohls-data-exchange:
+      pega-ingress-production-doms-data-exchange:
         priority: 900
         direction: INGRESS
         description:
@@ -2158,7 +2158,7 @@ vpcs:
           - protocol: tcp
             ports:
             - "9999"
-      kohls-onprem-vpn-to-kdx-prd:
+      doms-onprem-vpn-to-kdx-prd:
         priority: 900
         direction: INGRESS
         description: SNOW-17155
@@ -2196,7 +2196,7 @@ vpcs:
             - "8600"
             - "9090"
             - "28080"
-      kohls-kdx-prd-mysql-access:
+      doms-kdx-prd-mysql-access:
         priority: 900
         direction: INGRESS
         description: SNOW-17211

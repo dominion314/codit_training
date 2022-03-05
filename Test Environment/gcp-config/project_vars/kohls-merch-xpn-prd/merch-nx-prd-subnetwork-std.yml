@@ -27,10 +27,10 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-merch-pdpl-softwareengineer-admin@kohls.com
-          - gcp-merch-devops-admin@kohls.com
+          - gcp-merch-pdpl-softwareengineer-admin@doms.com
+          - gcp-merch-devops-admin@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-merch-pl-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-merch-pl-prd.iam.gserviceaccount.com
 
       merch-nx-prd-planning-e1-prv01:
         advertiseRoutes: true
@@ -41,10 +41,10 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-merch-pdpl-softwareengineer-admin@kohls.com
-          - gcp-merch-devops-admin@kohls.com
+          - gcp-merch-pdpl-softwareengineer-admin@doms.com
+          - gcp-merch-devops-admin@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-merch-pl-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-merch-pl-prd.iam.gserviceaccount.com
 
       merch-nx-prd-item-c1-prv01:
         advertiseRoutes: true
@@ -55,8 +55,8 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-merch-pdpl-softwareengineer-admin@kohls.com
-          - gcp-merch-devops-admin@kohls.com
+          - gcp-merch-pdpl-softwareengineer-admin@doms.com
+          - gcp-merch-devops-admin@doms.com
 
       merch-nx-prd-item-e1-prv01:
         advertiseRoutes: true
@@ -67,8 +67,8 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-merch-pdpl-softwareengineer-admin@kohls.com
-          - gcp-merch-devops-admin@kohls.com
+          - gcp-merch-pdpl-softwareengineer-admin@doms.com
+          - gcp-merch-devops-admin@doms.com
 
       merch-nx-prd-ps-c1-prv01:
         advertiseRoutes: true
@@ -79,20 +79,20 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-merch-psin-softwareengineer-l3@kohls.com
-          - gcp-merch-psin-softwareengineer-admin@kohls.com
-          - gcp-merch-devops-admin@kohls.com
-          - gcp-merch-devops-l3@kohls.com
+          - gcp-merch-psin-softwareengineer-l3@doms.com
+          - gcp-merch-psin-softwareengineer-admin@doms.com
+          - gcp-merch-devops-admin@doms.com
+          - gcp-merch-devops-l3@doms.com
           serviceAccountsByEmail:
           - 476458742264@cloudservices.gserviceaccount.com
-          - helix-merch-prd@kohls-merch-ps-prd.iam.gserviceaccount.com
-          - merch-apps@kohls-merch-ps-prd.iam.gserviceaccount.com
-          - merch-automation-dps-rw@kohls-merch-ps-prd.iam.gserviceaccount.com
-          - merch-dps-ppe-rw@kohls-merch-ps-prd.iam.gserviceaccount.com
-          - merch-in-pcs-lle-rw@kohls-merch-in-lle.iam.gserviceaccount.com
-          - merch-ps-airflow-ce-prd@kohls-merch-ps-prd.iam.gserviceaccount.com
-          - merch-ps-sign-prd-rw@kohls-merch-ps-prd.iam.gserviceaccount.com
-          - terraform-devops@kohls-merch-ps-prd.iam.gserviceaccount.com
+          - helix-merch-prd@doms-merch-ps-prd.iam.gserviceaccount.com
+          - merch-apps@doms-merch-ps-prd.iam.gserviceaccount.com
+          - merch-automation-dps-rw@doms-merch-ps-prd.iam.gserviceaccount.com
+          - merch-dps-ppe-rw@doms-merch-ps-prd.iam.gserviceaccount.com
+          - merch-in-pcs-lle-rw@doms-merch-in-lle.iam.gserviceaccount.com
+          - merch-ps-airflow-ce-prd@doms-merch-ps-prd.iam.gserviceaccount.com
+          - merch-ps-sign-prd-rw@doms-merch-ps-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-merch-ps-prd.iam.gserviceaccount.com
           - service-476458742264@dataproc-accounts.iam.gserviceaccount.com
           - service-476458742264@dataflow-service-producer-prod.iam.gserviceaccount.com
 
@@ -105,20 +105,20 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-merch-psin-softwareengineer-l3@kohls.com
-          - gcp-merch-psin-softwareengineer-admin@kohls.com
-          - gcp-merch-devops-admin@kohls.com
-          - gcp-merch-devops-l3@kohls.com
+          - gcp-merch-psin-softwareengineer-l3@doms.com
+          - gcp-merch-psin-softwareengineer-admin@doms.com
+          - gcp-merch-devops-admin@doms.com
+          - gcp-merch-devops-l3@doms.com
           serviceAccountsByEmail:
-          - merch-apps@kohls-merch-ps-prd.iam.gserviceaccount.com
-          - merch-ps-airflow-ce-prd@kohls-merch-ps-prd.iam.gserviceaccount.com
-          - merch-dps-ppe-rw@kohls-merch-ps-prd.iam.gserviceaccount.com
-          - merch-automation-dps-rw@kohls-merch-ps-prd.iam.gserviceaccount.com
-          - merch-dps-ppe-rw@kohls-merch-ps-prd.iam.gserviceaccount.com
-          - merch-ps-airflow-ce-prd@kohls-merch-ps-prd.iam.gserviceaccount.com
-          - merch-ps-sign-prd-rw@kohls-merch-ps-prd.iam.gserviceaccount.com
-          - merch-in-pcs-lle-rw@kohls-merch-in-lle.iam.gserviceaccount.com
-          - terraform-devops@kohls-merch-ps-prd.iam.gserviceaccount.com
+          - merch-apps@doms-merch-ps-prd.iam.gserviceaccount.com
+          - merch-ps-airflow-ce-prd@doms-merch-ps-prd.iam.gserviceaccount.com
+          - merch-dps-ppe-rw@doms-merch-ps-prd.iam.gserviceaccount.com
+          - merch-automation-dps-rw@doms-merch-ps-prd.iam.gserviceaccount.com
+          - merch-dps-ppe-rw@doms-merch-ps-prd.iam.gserviceaccount.com
+          - merch-ps-airflow-ce-prd@doms-merch-ps-prd.iam.gserviceaccount.com
+          - merch-ps-sign-prd-rw@doms-merch-ps-prd.iam.gserviceaccount.com
+          - merch-in-pcs-lle-rw@doms-merch-in-lle.iam.gserviceaccount.com
+          - terraform-devops@doms-merch-ps-prd.iam.gserviceaccount.com
           - 476458742264@cloudservices.gserviceaccount.com
           - service-476458742264@dataproc-accounts.iam.gserviceaccount.com
           - service-476458742264@dataflow-service-producer-prod.iam.gserviceaccount.com
@@ -132,23 +132,23 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-merch-devops-admin@kohls.com
-          - gcp-merch-devops-l2@kohls.com
-          - gcp-merch-devops-l3@kohls.com
-          - gcp-merch-devops-manager@kohls.com
-          - gcp-merch-softwareengineer-admin@kohls.com
-          - gcp-merch-softwareengineer-l2@kohls.com
-          - gcp-merch-softwareengineer-manager@kohls.com
+          - gcp-merch-devops-admin@doms.com
+          - gcp-merch-devops-l2@doms.com
+          - gcp-merch-devops-l3@doms.com
+          - gcp-merch-devops-manager@doms.com
+          - gcp-merch-softwareengineer-admin@doms.com
+          - gcp-merch-softwareengineer-l2@doms.com
+          - gcp-merch-softwareengineer-manager@doms.com
           serviceAccountsByEmail:
           - 611501968259-compute@developer.gserviceaccount.com
           - 611501968259@cloudservices.gserviceaccount.com
-          - consul-paas@kohls-merch-in-prd.iam.gserviceaccount.com
-          - merch-in-ace-prd-rw@kohls-merch-in-prd.iam.gserviceaccount.com
-          - merch-in-airflow-ce-prd@kohls-merch-in-prd.iam.gserviceaccount.com
-          - merch-in-imk-prd-rw@kohls-merch-in-prd.iam.gserviceaccount.com
-          - merch-in-rms-prd-rw@kohls-merch-in-prd.iam.gserviceaccount.com
-          - merch-psin-bigquery-rw@kohls-merch-in-prd.iam.gserviceaccount.com
-          - terraform-devops@kohls-merch-in-prd.iam.gserviceaccount.com
+          - consul-paas@doms-merch-in-prd.iam.gserviceaccount.com
+          - merch-in-ace-prd-rw@doms-merch-in-prd.iam.gserviceaccount.com
+          - merch-in-airflow-ce-prd@doms-merch-in-prd.iam.gserviceaccount.com
+          - merch-in-imk-prd-rw@doms-merch-in-prd.iam.gserviceaccount.com
+          - merch-in-rms-prd-rw@doms-merch-in-prd.iam.gserviceaccount.com
+          - merch-psin-bigquery-rw@doms-merch-in-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-merch-in-prd.iam.gserviceaccount.com
 
       merch-nx-prd-in-e1-prv01:
         advertiseRoutes: true
@@ -159,17 +159,17 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-merch-devops-admin@kohls.com
-          - gcp-merch-devops-l2@kohls.com
-          - gcp-merch-devops-l3@kohls.com
-          - gcp-merch-devops-manager@kohls.com
-          - gcp-merch-softwareengineer-admin@kohls.com
-          - gcp-merch-softwareengineer-l2@kohls.com
-          - gcp-merch-softwareengineer-manager@kohls.com
+          - gcp-merch-devops-admin@doms.com
+          - gcp-merch-devops-l2@doms.com
+          - gcp-merch-devops-l3@doms.com
+          - gcp-merch-devops-manager@doms.com
+          - gcp-merch-softwareengineer-admin@doms.com
+          - gcp-merch-softwareengineer-l2@doms.com
+          - gcp-merch-softwareengineer-manager@doms.com
           serviceAccountsByEmail:
           - 611501968259-compute@developer.gserviceaccount.com
           - 611501968259@cloudservices.gserviceaccount.com
-          - consul-paas@kohls-merch-in-prd.iam.gserviceaccount.com
-          - merch-in-ace-prd-rw@kohls-merch-in-prd.iam.gserviceaccount.com
-          - merch-psin-bigquery-rw@kohls-merch-in-prd.iam.gserviceaccount.com
-          - terraform-devops@kohls-merch-in-prd.iam.gserviceaccount.com
+          - consul-paas@doms-merch-in-prd.iam.gserviceaccount.com
+          - merch-in-ace-prd-rw@doms-merch-in-prd.iam.gserviceaccount.com
+          - merch-psin-bigquery-rw@doms-merch-in-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-merch-in-prd.iam.gserviceaccount.com

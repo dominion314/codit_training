@@ -2,7 +2,7 @@
 vpcs:
   seed-nx-prd:
     firewallRules:
-      kohls-scf-prd-consul-ingress:
+      doms-scf-prd-consul-ingress:
         priority: 900
         direction: INGRESS
         description: SNOW-16250
@@ -22,7 +22,7 @@ vpcs:
           - protocol: "tcp"
             ports:
             - "8500"
-      kohls-scf-prd-consul-ssh:
+      doms-scf-prd-consul-ssh:
         priority: 900
         direction: INGRESS
         description: SNOW-16343
@@ -65,7 +65,7 @@ vpcs:
             - "7199"
             - "9042"
             - "9160"
-      kohls-ocf-jenkins-ingress:
+      doms-ocf-jenkins-ingress:
         priority: 900
         direction: INGRESS
         description: SNOW-16470
@@ -90,7 +90,7 @@ vpcs:
             - "8082"
             - "9042"
             - "9094"
-      kohls-platform-openshift-consul-ingress:
+      doms-platform-openshift-consul-ingress:
         priority: 900
         direction: INGRESS
         description: SNOW-16670,SNOW-17254
@@ -218,7 +218,7 @@ vpcs:
             - "443"
             - "7199"
             - "9160"
-      kohls-user-segments-seed-nx-prd-ingress:
+      doms-user-segments-seed-nx-prd-ingress:
         priority: 900
         direction: INGRESS
         description: SNOW-17108,SNOW17114

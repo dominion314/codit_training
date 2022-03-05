@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-etcc-finstrat-test-service-lle:
+  doms-etcc-finstrat-test-service-lle:
     location: US
     storageClass: STANDARD
     versioningEnabled: false

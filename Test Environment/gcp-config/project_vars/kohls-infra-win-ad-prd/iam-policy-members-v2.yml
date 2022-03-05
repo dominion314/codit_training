@@ -1,7 +1,7 @@
 ---
 iamPolicyMembersV2:
   groupsByEmail:
-    gcp-infra-windows-devops-l3@kohls.com:
+    gcp-infra-windows-devops-l3@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: compute.instanceAdmin.v1

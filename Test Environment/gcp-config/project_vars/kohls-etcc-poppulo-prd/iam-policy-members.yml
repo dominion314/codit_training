@@ -1,10 +1,10 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-eta-devops-admin@kohls.com:
+    gcp-eta-devops-admin@doms.com:
       roles:
       - iam.serviceAccountKeyAdmin
   serviceAccountsByEmail:
-    poppulo-prod@kohls-etcc-poppulo-prd.iam.gserviceaccount.com:
+    poppulo-prod@doms-etcc-poppulo-prd.iam.gserviceaccount.com:
       roles:
       - iam.serviceAccountUser

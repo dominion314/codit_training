@@ -1,14 +1,14 @@
 ---
 iamPolicyMembersV2:
   groupsByEmail:
-    gcp-eta-devops-admin@kohls.com:
+    gcp-eta-devops-admin@doms.com:
     - role: iam.serviceAccountKeyAdmin
     - role: iam.serviceAccountTokenCreator
     - role: iam.serviceAccountUser
     - role: storage.admin
     - role: storage.objectViewer
   serviceAccountsByEmail:
-    test-service-lle@kohls-etcc-finstrat-lle.iam.gserviceaccount.com:
+    test-service-lle@doms-etcc-finstrat-lle.iam.gserviceaccount.com:
     - role: storage.admin
     - role: storage.objectAdmin
     - role: iam.serviceAccountUser

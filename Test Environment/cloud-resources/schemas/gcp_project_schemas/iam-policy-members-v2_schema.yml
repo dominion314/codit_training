@@ -9,7 +9,7 @@ iamPolicyMembersV2:
       keysrules:
         type: 'string'
         #TODO: better tune
-        regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+        regex: '.*@doms\.com|.*@qa\.doms\.com|.*@dev\.doms\.com'
       valuesrules:
         type: 'list'
         schema:
@@ -45,7 +45,7 @@ iamPolicyMembersV2:
       keysrules:
         type: 'string'
         #TODO: better tune
-        regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+        regex: '.*@doms\.com|.*@qa\.doms\.com|.*@dev\.doms\.com'
       valuesrules:
         type: 'list'
         schema:

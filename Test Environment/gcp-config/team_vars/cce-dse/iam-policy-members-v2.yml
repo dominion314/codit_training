@@ -1,7 +1,7 @@
 ---
 iamPolicyMembersV2:
   groupsByEmail:
-    GCP-Data-Scientist-Enterprise@kohls.com:
+    GCP-Data-Scientist-Enterprise@doms.com:
     - role: CustomBigQueryUser
       OrgId: 1035901152068
     - role: CustomBucketViewer
@@ -12,7 +12,7 @@ iamPolicyMembersV2:
       OrgId: 1035901152068
     - role: CustomRole774
       OrgId: 1035901152068
-    gcp-bda-enterprisedatascience-softwareengineer-l3@kohls.com:
+    gcp-bda-enterprisedatascience-softwareengineer-l3@doms.com:
     - role: CustomBigQueryUser
       OrgId: 1035901152068
     - role: CustomBucketViewer

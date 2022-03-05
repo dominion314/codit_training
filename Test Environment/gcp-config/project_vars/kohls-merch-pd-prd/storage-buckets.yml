@@ -1,19 +1,19 @@
 ---
 storageBuckets:
-  kohls-merch-pd-prd-mongo:
+  doms-merch-pd-prd-mongo:
     storageClass: NEARLINE
     location: US
     bucketPolicyOnly: false
-  kohls-merch-pd-prd-mysql:
+  doms-merch-pd-prd-mysql:
     storageClass: NEARLINE
     location: US
     bucketPolicyOnly: false
-  kohls-merch-pd-prd-terraform-states:
+  doms-merch-pd-prd-terraform-states:
     storageClass: REGIONAL
     location: US-CENTRAL1
     versioningEnabled: true
     bucketPolicyOnly: false
-  kohls-merch-pd-prd-us-central1-primary-consul-backup:
+  doms-merch-pd-prd-us-central1-primary-consul-backup:
     storageClass: NEARLINE
     location: US-CENTRAL1
     lifecycleRule:
@@ -22,7 +22,7 @@ storageBuckets:
       condition:
         age: 14
     bucketPolicyOnly: false
-  kohls-merch-pd-prd-us-east1-primary-consul-backup:
+  doms-merch-pd-prd-us-east1-primary-consul-backup:
     storageClass: NEARLINE
     location: US-EAST1
     lifecycleRule:
@@ -31,7 +31,7 @@ storageBuckets:
       condition:
         age: 14
     bucketPolicyOnly: false
-  kohls-merch-sp-prd-transfer:
+  doms-merch-sp-prd-transfer:
     storageClass: STANDARD
     location: US-CENTRAL1
     lifecycleRule:

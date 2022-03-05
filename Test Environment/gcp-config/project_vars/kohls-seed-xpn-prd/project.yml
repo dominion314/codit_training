@@ -1,7 +1,7 @@
 ---
 billingDeptId: 90577
 project:
-  name: kohls-seed-xpn-prd
+  name: doms-seed-xpn-prd
   managed: true
   deletionProtect: true
   folderId: 970875009337
@@ -18,4 +18,4 @@ serviceAPIs:
   cloudasset.googleapis.com:
   firewallinsights.googleapis.com:
 projectSharing:
-- kohls-scf-prd
+- doms-scf-prd

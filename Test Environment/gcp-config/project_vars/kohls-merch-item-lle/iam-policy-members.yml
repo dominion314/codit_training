@@ -2,7 +2,7 @@
 iamPolicyMembers:
   # usersByEmail:
   groupsByEmail:
-    gcp-merch-devops-admin@kohls.com:
+    gcp-merch-devops-admin@doms.com:
       roles:
       - compute.networkViewer
       - iam.serviceAccountKeyAdmin
@@ -24,7 +24,7 @@ iamPolicyMembers:
       - datastore.owner
       - bigquery.admin
       - cloudfunctions.admin
-    gcp-merch-pdpl-softwareengineer-admin@kohls.com:
+    gcp-merch-pdpl-softwareengineer-admin@doms.com:
       roles:
       - compute.storageAdmin
       - pubsub.admin
@@ -37,7 +37,7 @@ iamPolicyMembers:
       - monitoring.admin
       - spanner.admin
       - cloudfunctions.admin
-    gcp-merch-pdpl-softwareengineer-l3@kohls.com:
+    gcp-merch-pdpl-softwareengineer-l3@doms.com:
       roles:
       - bigquery.dataViewer
       - bigquery.jobUser
@@ -47,7 +47,7 @@ iamPolicyMembers:
       - storage.objectViewer
       - cloudfunctions.admin
       - storage.admin
-    gcp-merch-pdpl-softwareengineer-l2@kohls.com:
+    gcp-merch-pdpl-softwareengineer-l2@doms.com:
       roles:
       - bigquery.dataViewer
       - bigquery.jobUser
@@ -56,12 +56,12 @@ iamPolicyMembers:
       - logging.viewer
       - storage.objectViewer
       - storage.admin
-    gcp-merch-sd-l3@kohls.com:
+    gcp-merch-sd-l3@doms.com:
       roles:
       - compute.viewer
       - logging.viewer
   serviceAccountsByEmail:
-    merch-apps@kohls-merch-item-lle.iam.gserviceaccount.com:
+    merch-apps@doms-merch-item-lle.iam.gserviceaccount.com:
       roles:
       - compute.instanceAdmin.v1
       - compute.storageAdmin
@@ -69,13 +69,13 @@ iamPolicyMembers:
       - storage.admin
       - pubsub.admin
       - bigquery.admin
-    pub-sub@kohls-merch-item-lle.iam.gserviceaccount.com:
+    pub-sub@doms-merch-item-lle.iam.gserviceaccount.com:
       roles:
       - pubsub.admin
-    storeage@kohls-merch-item-lle.iam.gserviceaccount.com:
+    storeage@doms-merch-item-lle.iam.gserviceaccount.com:
       roles:
       - storage.admin
       - storage.objectViewer
-    big-query@kohls-merch-item-lle.iam.gserviceaccount.com:
+    big-query@doms-merch-item-lle.iam.gserviceaccount.com:
       roles:
       - bigquery.admin

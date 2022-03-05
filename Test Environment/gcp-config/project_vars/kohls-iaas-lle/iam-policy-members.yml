@@ -1,26 +1,26 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    # gcp-iaas-cpa-devops-l3@kohls.com:
+    # gcp-iaas-cpa-devops-l3@doms.com:
     #   roles:
     #   - viewer
     #   - browser
     #   - cloudbuild.builds.editor
     #   - serviceusage.serviceUsageConsumer
     #   - storage.objectViewer
-    gcp-iaas-govops-admin@kohls.com:
+    gcp-iaas-govops-admin@doms.com:
       roles:
       - browser
       - bigquery.jobUser
       - bigquery.admin
       - storage.admin
-    gcp-iaas-govops-l3@kohls.com:
+    gcp-iaas-govops-l3@doms.com:
       roles:
       - browser
       - bigquery.jobUser
       - bigquery.admin
       - storage.admin
-    gcp-iaas-softwareengineer-l3@kohls.com:
+    gcp-iaas-softwareengineer-l3@doms.com:
       roles:
       - browser
       - bigquery.jobUser
@@ -28,12 +28,12 @@ iamPolicyMembers:
       - iam.serviceAccountKeyAdmin
       - storage.admin
   serviceAccountsByEmail:
-    # legacy-automation-dev-cpa@kohls-cpa-lle.iam.gserviceaccount.com:
+    # legacy-automation-dev-cpa@doms-cpa-lle.iam.gserviceaccount.com:
     #   roles:
     #   - cloudbuild.builds.editor
     #   - storage.objectViewer
     #   - viewer
-    # terraform-devops@kohls-iaas-lle.iam.gserviceaccount.com:
+    # terraform-devops@doms-iaas-lle.iam.gserviceaccount.com:
     #   roles:
     #   - cloudsql.admin
     #   - composer.admin
@@ -44,14 +44,14 @@ iamPolicyMembers:
     #   - editor
     #   - iam.serviceAccountUser
     #   - storage.admin
-    # terraform-iaas-project-creator@kohls-iaas-prd.iam.gserviceaccount.com:
+    # terraform-iaas-project-creator@doms-iaas-prd.iam.gserviceaccount.com:
     #   roles:
     #   - owner
-    # recommender-testing@kohls-iaas-lle.iam.gserviceaccount.com:
+    # recommender-testing@doms-iaas-lle.iam.gserviceaccount.com:
     #   roles:
     #   - automlrecommendations.admin
     #   - iam.securityReviewer
-    bigquerydataimport-iaas@kohls-iaas-lle.iam.gserviceaccount.com:
+    bigquerydataimport-iaas@doms-iaas-lle.iam.gserviceaccount.com:
       roles:
       - bigquery.user
     # Permissions required for OpenShift Cost Management Metrics Operator
@@ -61,19 +61,19 @@ iamPolicyMembers:
       roles:
       - bigquery.jobUser
       - bigquery.dataViewer
-    jenkins-iaas-govops@kohls-iaas-lle.iam.gserviceaccount.com:
+    jenkins-iaas-govops@doms-iaas-lle.iam.gserviceaccount.com:
       roles:
       - bigquery.user
       - storage.objectAdmin
-    openshift-billing-xpaas@kohls-iaas-lle.iam.gserviceaccount.com:
+    openshift-billing-xpaas@doms-iaas-lle.iam.gserviceaccount.com:
       roles:
       - browser
       - bigquery.jobUser
       - bigquery.admin
       - storage.admin
-    starlight-backup-cpe@kohls-iaas-lle.iam.gserviceaccount.com:
+    starlight-backup-cpe@doms-iaas-lle.iam.gserviceaccount.com:
       roles:
       - storage.admin
-    tableau-iaas-govops@kohls-iaas-lle.iam.gserviceaccount.com:
+    tableau-iaas-govops@doms-iaas-lle.iam.gserviceaccount.com:
       roles:
       - bigquery.user

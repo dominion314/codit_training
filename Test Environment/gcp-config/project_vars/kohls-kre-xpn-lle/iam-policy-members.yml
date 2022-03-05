@@ -1,10 +1,10 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-kre-systemsengineer-admin@kohls.com:
+    gcp-kre-systemsengineer-admin@doms.com:
       roles:
         - cloudfunctions.developer
   serviceAccountsByEmail:
-    kre-quotas@kohls-kre-xpn-lle.iam.gserviceaccount.com:
+    kre-quotas@doms-kre-xpn-lle.iam.gserviceaccount.com:
       roles:
         - servicemanagement.quotaAdmin

@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-densify-govops-dev-data:
+  doms-densify-govops-dev-data:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -13,7 +13,7 @@ storageBuckets:
     labels:
       app-name: govops
       environment-type: dev
-  kohls-govops-dev-aws-billing-data:
+  doms-govops-dev-aws-billing-data:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -26,7 +26,7 @@ storageBuckets:
     labels:
       app-name: govops
       environment-type: dev
-  kohls-govops-dev-budtrack-upload:
+  doms-govops-dev-budtrack-upload:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -39,7 +39,7 @@ storageBuckets:
     labels:
       app-name: govops
       environment-type: dev
-  kohls-govops-dev-data:
+  doms-govops-dev-data:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -52,7 +52,7 @@ storageBuckets:
     labels:
       app-name: govops
       environment-type: dev
-  kohls-govops-extract-dev-data:
+  doms-govops-extract-dev-data:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -65,7 +65,7 @@ storageBuckets:
     labels:
       app-name: govops
       environment-type: dev
-  kohls-govops-sec-extract-dev-data:
+  doms-govops-sec-extract-dev-data:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD

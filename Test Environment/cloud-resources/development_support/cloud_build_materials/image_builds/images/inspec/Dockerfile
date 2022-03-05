@@ -1,5 +1,5 @@
 FROM ruby:2.5
-MAINTAINER Pavel Leonovitch pavel.leonovitch@kohls.com
+MAINTAINER Pavel Leonovitch pavel.leonovitch@doms.com
 
 ARG TF_VERSION=0.11.8
 

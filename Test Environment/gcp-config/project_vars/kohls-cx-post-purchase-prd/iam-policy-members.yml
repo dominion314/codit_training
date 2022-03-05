@@ -1,7 +1,7 @@
 ---
 iamPolicyMembersV2:
   groupsByEmail:
-    gcp-cx-devops-admin@kohls.com:
+    gcp-cx-devops-admin@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: bigquery.jobUser
@@ -21,7 +21,7 @@ iamPolicyMembersV2:
     - role: monitoring.admin
     - role: storage.objectViewer
     - role: viewer
-    gcp-cx-devops-l3@kohls.com:
+    gcp-cx-devops-l3@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: bigquery.jobUser
@@ -33,7 +33,7 @@ iamPolicyMembersV2:
     - role: logging.privateLogViewer
     - role: logging.viewer
     - role: monitoring.admin
-    gcp-cx-innovation-softwareengineer-l3@kohls.com:
+    gcp-cx-innovation-softwareengineer-l3@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: cloudfunctions.developer
@@ -42,7 +42,7 @@ iamPolicyMembersV2:
     - role: compute.viewer
     - role: dialogflow.reader
     - role: logging.viewer
-    gcp-cx-softwareengineer-admin@kohls.com:
+    gcp-cx-softwareengineer-admin@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: bigquery.dataViewer
@@ -54,12 +54,12 @@ iamPolicyMembersV2:
     - role: monitoring.viewer
     - role: pubsub.viewer
     - role: storage.objectViewer
-    gcp-cx-softwareengineer-l2@kohls.com:
+    gcp-cx-softwareengineer-l2@doms.com:
     - role: firebase.developViewer
     - role: firebase.growthViewer
     - role: firebase.viewer
     - role: firebasecrashlytics.viewer
-    gcp-cx-softwareengineer-l3@kohls.com:
+    gcp-cx-softwareengineer-l3@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: bigquery.dataViewer
@@ -71,27 +71,27 @@ iamPolicyMembersV2:
     - role: firebase.growthViewer
     - role: firebasecrashlytics.viewer
     - role: logging.viewer
-    gcp-cx-softwareengineer-manager@kohls.com:
+    gcp-cx-softwareengineer-manager@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: compute.networkViewer
     - role: compute.viewer
     - role: logging.viewer
-    gcp-infra-dataservices-systemsengineer-l2@kohls.com:
-    - OrgId: 1035901152068
-      role: CustomViewer486
-    - role: compute.networkViewer
-    - role: compute.viewer
-    - role: iam.serviceAccountUser
-    - role: logging.viewer
-    gcp-infra-dataservices-systemsengineer-l3@kohls.com:
+    gcp-infra-dataservices-systemsengineer-l2@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: compute.networkViewer
     - role: compute.viewer
     - role: iam.serviceAccountUser
     - role: logging.viewer
-    gcp-stores-associate-experience-softwareengineer-l3@kohls.com:
+    gcp-infra-dataservices-systemsengineer-l3@doms.com:
+    - OrgId: 1035901152068
+      role: CustomViewer486
+    - role: compute.networkViewer
+    - role: compute.viewer
+    - role: iam.serviceAccountUser
+    - role: logging.viewer
+    gcp-stores-associate-experience-softwareengineer-l3@doms.com:
     - OrgId: 1035901152068
       role: CustomViewer486
     - role: bigquery.dataViewer
@@ -118,7 +118,7 @@ iamPolicyMembersV2:
     - role: pubsub.viewer
     - role: storage.objectViewer
     - role: iam.serviceAccountKeyAdmin
-    gcp-stores-operations-sd-l2@kohls.com:
+    gcp-stores-operations-sd-l2@doms.com:
     - OrgId: 1035901152068
       role: CustomBigQueryUser
     - OrgId: 1035901152068
@@ -147,7 +147,7 @@ iamPolicyMembersV2:
     - role: pubsub.viewer
     - role: storage.objectViewer
   serviceAccountsByEmail:
-    consul-cluster-create-temp@kohls-cx-post-purchase-prd.iam.gserviceaccount.com:
+    consul-cluster-create-temp@doms-cx-post-purchase-prd.iam.gserviceaccount.com:
     - role: compute.imageUser
     - role: compute.instanceAdmin.v1
     - role: compute.networkViewer
@@ -155,7 +155,7 @@ iamPolicyMembersV2:
     - role: iam.serviceAccountUser
     - role: logging.logWriter
     - role: storage.admin
-    consul-paas@kohls-cx-post-purchase-prd.iam.gserviceaccount.com:
+    consul-paas@doms-cx-post-purchase-prd.iam.gserviceaccount.com:
     - OrgId: 1035901152068
       role: CustomRole130
     - OrgId: 1035901152068
@@ -163,21 +163,21 @@ iamPolicyMembersV2:
     - role: compute.networkUser
     - role: compute.viewer
     - role: iam.serviceAccountUser
-    cta-store-hours-prd-cxdevo@kohls-cx-post-purchase-prd.iam.gserviceaccount.com:
+    cta-store-hours-prd-cxdevo@doms-cx-post-purchase-prd.iam.gserviceaccount.com:
     - role: bigquery.dataViewer
     - role: bigquery.jobUser
     - role: bigquery.metadataViewer
     - role: bigquery.user
-    gke-nginx-ingress-cx@kohls-cx-post-purchase-prd.iam.gserviceaccount.com:
+    gke-nginx-ingress-cx@doms-cx-post-purchase-prd.iam.gserviceaccount.com:
     - role: compute.viewer
-    harness-cx-dev@kohls-cx-post-purchase-prd.iam.gserviceaccount.com:
+    harness-cx-dev@doms-cx-post-purchase-prd.iam.gserviceaccount.com:
     - OrgId: 1035901152068
       role: CustomBucketViewer
     - role: compute.networkViewer
     - role: logging.viewer
     - role: monitoring.viewer
     - role: storage.objectAdmin
-    jenkins-master-prd-cxdev@kohls-cx-post-purchase-prd.iam.gserviceaccount.com:
+    jenkins-master-prd-cxdev@doms-cx-post-purchase-prd.iam.gserviceaccount.com:
     - OrgId: 1035901152068
       role: lbadmin
     - role: bigquery.admin
@@ -192,32 +192,32 @@ iamPolicyMembersV2:
     - role: logging.admin
     - role: pubsub.admin
     - role: storage.admin
-    mft-mdevop@kohls-cx-post-purchase-prd.iam.gserviceaccount.com:
+    mft-mdevop@doms-cx-post-purchase-prd.iam.gserviceaccount.com:
     - role: storage.admin
     - role: storage.objectAdmin
     - role: storage.objectCreator
     - role: storage.objectViewer
-    mongo-dba@kohls-cx-post-purchase-prd.iam.gserviceaccount.com:
+    mongo-dba@doms-cx-post-purchase-prd.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: iam.serviceAccountUser
-    mysql-dba@kohls-cx-post-purchase-prd.iam.gserviceaccount.com:
+    mysql-dba@doms-cx-post-purchase-prd.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: iam.serviceAccountUser
-    pmm-dba@kohls-cx-post-purchase-prd.iam.gserviceaccount.com:
+    pmm-dba@doms-cx-post-purchase-prd.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: iam.serviceAccountUser
-    prd-cx-admin@kohls-cx-post-purchase-prd.iam.gserviceaccount.com:
+    prd-cx-admin@doms-cx-post-purchase-prd.iam.gserviceaccount.com:
     - role: compute.imageUser
     - role: compute.instanceAdmin.v1
     - role: compute.storageAdmin
-    returnsplatform-mdevop@kohls-cx-post-purchase-prd.iam.gserviceaccount.com:
+    returnsplatform-mdevop@doms-cx-post-purchase-prd.iam.gserviceaccount.com:
     - role: storage.objectAdmin
-    rp-k-developers-cxdev@kohls-cx-post-purchase-prd.iam.gserviceaccount.com:
+    rp-k-developers-cxdev@doms-cx-post-purchase-prd.iam.gserviceaccount.com:
     - role: storage.objectAdmin
-    splunk-prd-cx-devops@kohls-cx-post-purchase-prd.iam.gserviceaccount.com:
+    splunk-prd-cx-devops@doms-cx-post-purchase-prd.iam.gserviceaccount.com:
     - role: logging.configWriter
     - role: logging.logWriter
     - role: logging.privateLogViewer
@@ -226,7 +226,7 @@ iamPolicyMembersV2:
     - role: monitoring.viewer
     - role: pubsub.subscriber
     - role: pubsub.viewer
-    terraform-paas@kohls-cx-post-purchase-prd.iam.gserviceaccount.com:
+    terraform-paas@doms-cx-post-purchase-prd.iam.gserviceaccount.com:
     - OrgId: 1035901152068
       role: lbadmin
     - role: compute.imageUser

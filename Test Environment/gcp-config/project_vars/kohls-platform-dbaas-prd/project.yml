@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90548"
 project:
-  name: kohls-platform-dbaas-prd
+  name: doms-platform-dbaas-prd
   deletionProtect: true
   managed: true
   folderId: "106220115873"

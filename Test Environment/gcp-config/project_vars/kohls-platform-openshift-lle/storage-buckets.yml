@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-platform-openshift-lle-oadp-gcpusc1-lle-xpaas:
+  doms-platform-openshift-lle-oadp-gcpusc1-lle-xpaas:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -13,7 +13,7 @@ storageBuckets:
     labels:
       app-name: oadp
       environment-type: lle
-  kohls-platform-openshift-lle-oadp-gcpuse1-lle-xpaas:
+  doms-platform-openshift-lle-oadp-gcpuse1-lle-xpaas:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -26,7 +26,7 @@ storageBuckets:
     labels:
       app-name: oadp
       environment-type: lle
-  kohls-platform-openshift-lle-thanos-gcpusc1-lle-xpaas:
+  doms-platform-openshift-lle-thanos-gcpusc1-lle-xpaas:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD

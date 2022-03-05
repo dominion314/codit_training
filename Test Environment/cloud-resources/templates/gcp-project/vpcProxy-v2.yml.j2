@@ -96,7 +96,7 @@ metadata:
 spec:
   resourceRef:
     kind: Project
-    external: project/kohlsqa-cpe2-xpn-lle
+    external: project/domsqa-cpe2-xpn-lle
   role: roles/compute.imageuser
   member: "serviceAccount:proxy-service@{{ project.name }}.iam.gserviceaccount.com"
 --- #}
@@ -280,7 +280,7 @@ spec:
   region: {{ gcpRegion }}
   disk:
     - sourceImageRef:
-        external: projects/kohls-xpn-project/global/images/k-rhel7-gcp-squid-metad-{{ version | replace(".","-") }}
+        external: projects/doms-xpn-project/global/images/k-rhel7-gcp-squid-metad-{{ version | replace(".","-") }}
       autoDelete: true
       boot: true
       deviceName: 'webproxy-v{{ version | replace(".","-") }}-{{ region }}-template'

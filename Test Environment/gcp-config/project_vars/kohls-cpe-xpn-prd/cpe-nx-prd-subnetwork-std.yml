@@ -28,11 +28,11 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-iaas-softwareengineer-l3@kohls.com
+          - gcp-iaas-softwareengineer-l3@doms.com
           serviceAccountsByEmail:
-          - image-build@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com
-          - terraform-devops@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com
-          - yum-repo@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com
+          - image-build@doms-cpe-image-mgmt-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-cpe-image-mgmt-prd.iam.gserviceaccount.com
+          - yum-repo@doms-cpe-image-mgmt-prd.iam.gserviceaccount.com
 
       cpe-nx-prd-cie-image-mgmt-subnet-e1-prv01:
         advertiseRoutes: true
@@ -44,11 +44,11 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-iaas-softwareengineer-l3@kohls.com
+          - gcp-iaas-softwareengineer-l3@doms.com
           serviceAccountsByEmail:
-          - image-build@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com
-          - terraform-devops@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com
-          - yum-repo@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com
+          - image-build@doms-cpe-image-mgmt-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-cpe-image-mgmt-prd.iam.gserviceaccount.com
+          - yum-repo@doms-cpe-image-mgmt-prd.iam.gserviceaccount.com
 
       cpe-nx-prd-devexp-tools-c1-prv01:
         advertiseRoutes: true
@@ -59,10 +59,10 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-cpe-developerexperience-softwareengineer-admin@kohls.com
+          - gcp-cpe-developerexperience-softwareengineer-admin@doms.com
           serviceAccountsByEmail:
-          - devexp-automation@kohls-devexp-tools-prd.iam.gserviceaccount.com
-          - gitlab-runner@kohls-devexp-tools-prd.iam.gserviceaccount.com
+          - devexp-automation@doms-devexp-tools-prd.iam.gserviceaccount.com
+          - gitlab-runner@doms-devexp-tools-prd.iam.gserviceaccount.com
           - 391966622341@cloudservices.gserviceaccount.com
 
       cpe-nx-prd-devexp-tools-e1-prv01:
@@ -74,10 +74,10 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-cpe-developerexperience-softwareengineer-admin@kohls.com
+          - gcp-cpe-developerexperience-softwareengineer-admin@doms.com
           serviceAccountsByEmail:
-          - devexp-automation@kohls-devexp-tools-prd.iam.gserviceaccount.com
-          - gitlab-runner@kohls-devexp-tools-prd.iam.gserviceaccount.com
+          - devexp-automation@doms-devexp-tools-prd.iam.gserviceaccount.com
+          - gitlab-runner@doms-devexp-tools-prd.iam.gserviceaccount.com
           - 391966622341@cloudservices.gserviceaccount.com
 
       cpe-nx-prd-devexp-tools-c1-sec01:
@@ -89,10 +89,10 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-cpe-developerexperience-softwareengineer-admin@kohls.com
+          - gcp-cpe-developerexperience-softwareengineer-admin@doms.com
           serviceAccountsByEmail:
-          - devexp-automation@kohls-devexp-tools-prd.iam.gserviceaccount.com
-          - gitlab-runner@kohls-devexp-tools-prd.iam.gserviceaccount.com
+          - devexp-automation@doms-devexp-tools-prd.iam.gserviceaccount.com
+          - gitlab-runner@doms-devexp-tools-prd.iam.gserviceaccount.com
           - 391966622341@cloudservices.gserviceaccount.com
 
       cpe-nx-prd-devexp-tools-e1-sec01:
@@ -104,10 +104,10 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-cpe-developerexperience-softwareengineer-admin@kohls.com
+          - gcp-cpe-developerexperience-softwareengineer-admin@doms.com
           serviceAccountsByEmail:
-          - devexp-automation@kohls-devexp-tools-prd.iam.gserviceaccount.com
-          - gitlab-runner@kohls-devexp-tools-prd.iam.gserviceaccount.com
+          - devexp-automation@doms-devexp-tools-prd.iam.gserviceaccount.com
+          - gitlab-runner@doms-devexp-tools-prd.iam.gserviceaccount.com
           - 391966622341@cloudservices.gserviceaccount.com
 
       cpe-nx-prd-sre-subnet-c1-prv01:

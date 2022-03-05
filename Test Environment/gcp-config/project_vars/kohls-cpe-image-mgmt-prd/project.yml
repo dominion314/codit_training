@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90586"
 project:
-  name: kohls-cpe-image-mgmt-prd
+  name: doms-cpe-image-mgmt-prd
   managed: true
   folderId: "980929416788"
   billingAccount: "00C36A-CD0BDB-E543D0"

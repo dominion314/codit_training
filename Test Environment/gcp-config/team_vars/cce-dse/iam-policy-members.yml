@@ -1,7 +1,7 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-bda-devops-admin@kohls.com:
+    gcp-bda-devops-admin@doms.com:
       roles:
       - compute.storageAdmin
       - compute.instanceAdmin.v1
@@ -28,7 +28,7 @@ iamPolicyMembers:
       - cloudbuild.builds.editor
       - iam.serviceAccountKeyAdmin
       - servicemanagement.quotaAdmin
-    gcp-bda-enterprisedatascience-softwareengineer-l3@kohls.com:
+    gcp-bda-enterprisedatascience-softwareengineer-l3@doms.com:
       roles:
       - bigquery.dataViewer
       - bigquery.user
@@ -41,7 +41,7 @@ iamPolicyMembers:
       - logging.viewer
       - monitoring.viewer
       - iam.serviceAccountUser
-    GCP-Data-Scientist-Enterprise@kohls.com:
+    GCP-Data-Scientist-Enterprise@doms.com:
       roles:
       - bigquery.dataViewer
       - bigquery.user

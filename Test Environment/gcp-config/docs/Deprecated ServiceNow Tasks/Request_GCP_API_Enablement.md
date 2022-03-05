@@ -1,18 +1,18 @@
 ## Request GCP API Enablement:
 
 # API Policies:
-Be aware that only certain APIs are allowed to be assigned to a project for each environment type. For a full list of allowed APIs per environment please click <a href="https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/service/apis.yml" target="_blank">here</a>.
+Be aware that only certain APIs are allowed to be assigned to a project for each environment type. For a full list of allowed APIs per environment please click <a href="https://gitlab.com/doms/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/service/apis.yml" target="_blank">here</a>.
 
 APIs are evaluated by OPA or Open Policy Agent at the “opa-check” job of the pipeline for a given merge request. If you add an API that is not allowed for an environment it will fail the data integrity check. As a result the configuration will not be allowed to be applied and must be removed and the merge request resubmitted.
 
-However as an alternative, exceptions can be made to an individual project to contain APIs that are not allowed otherwise. Adding a project and an API for that project under the section “allowedAPIsPerProject” to the yaml file <a href="https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/service/apis-per-project.yml" target="_blank">here</a> will allow that lone project to contain the API without causing a violation.
+However as an alternative, exceptions can be made to an individual project to contain APIs that are not allowed otherwise. Adding a project and an API for that project under the section “allowedAPIsPerProject” to the yaml file <a href="https://gitlab.com/doms/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/service/apis-per-project.yml" target="_blank">here</a> will allow that lone project to contain the API without causing a violation.
 
-For example, from production the project kohls-eta-hr-lle is allowed to use the API calendar-json.googleapis.com.
+For example, from production the project doms-eta-hr-lle is allowed to use the API calendar-json.googleapis.com.
 ```yaml
 ---
 service:
   allowedAPIsPerProject:
-    kohls-eta-hr-lle:
+    doms-eta-hr-lle:
     - calendar-json.googleapis.com
 ...
 ```
@@ -20,9 +20,9 @@ service:
 # File Location:
 APIs for each project are located in a yaml file under a “serviceAPIs'' section. This is usually located within either the project.yml file or otherwise within a separate serviceapi.yml, service-usage.yml, or a file of a similar name depending on the project.
 For example from production APIs are located at:
-gcp-config/project_vars/kohls-scf-lle/serviceapi.yml
+gcp-config/project_vars/doms-scf-lle/serviceapi.yml
 or
-gcp-config/project_vars/kohls-cpe-kcc-prd/project.yml
+gcp-config/project_vars/doms-cpe-kcc-prd/project.yml
 
 For more information on APIs from resources provided from Google [click here](https://cloud.google.com/apis/docs/overview).
 
@@ -40,7 +40,7 @@ Below is an example of how two service APIs are defined in production on line 16
 ---
 billingDeptId: 90585
 project:
-  name: kohls-bda-xpn-prd
+  name: doms-bda-xpn-prd
   managed: true
   deletionProtect: true
   folderId: 778811484176
@@ -64,7 +64,7 @@ From the example above the API logging.googleapis.com has been enabled for this 
 ---
 billingDeptId: 90585
 project:
-  name: kohls-bda-xpn-prd
+  name: doms-bda-xpn-prd
   managed: true
   deletionProtect: true
   folderId: 778811484176

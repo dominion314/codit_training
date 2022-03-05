@@ -1,6 +1,6 @@
 ---
 project:
-  name: kohls-cpe-e2edemo-lle
+  name: doms-cpe-e2edemo-lle
   deletionProtect: false
   managed: true
   folderId: "53524313723"

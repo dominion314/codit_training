@@ -1,7 +1,7 @@
 ---
 billingDeptId: 90528
 project:
-  name: kohls-infra-xpn-prd
+  name: doms-infra-xpn-prd
   managed: true
   deletionProtect: true
   folderId: 46233836581
@@ -21,7 +21,7 @@ serviceAPIs:
   networkmanagement.googleapis.com:
   networktopology.googleapis.com:
 projectSharing:
-  - kohls-infra-pie-prd
-  - kohls-infra-aiops-prd
-  - kohls-infra-monitoring-prd
-  - kohls-infra-kdx-prd
+  - doms-infra-pie-prd
+  - doms-infra-aiops-prd
+  - doms-infra-monitoring-prd
+  - doms-infra-kdx-prd

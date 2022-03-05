@@ -5,8 +5,8 @@ Either of these files, the gcloud asset export json or the config connector expo
 
 ## Prerequisites
 1. Install latest gcloud sdk.
-2. Download kcc-export service account key from Vault - https://vault-us-central1-primary.kohls.com:8200/ui/vault/secrets/kv-iaas/show/cloud-architect/kcc/prd.  Use KCC_EXPORT_JSON_KEY.
-3. Setup gcloud to use kcc-export@kohls-cpe-cpa-lle.iam.gserviceaccount.com service account key downloaded in Step 2 for authentication.
+2. Download kcc-export service account key from Vault - https://vault-us-central1-primary.doms.com:8200/ui/vault/secrets/kv-iaas/show/cloud-architect/kcc/prd.  Use KCC_EXPORT_JSON_KEY.
+3. Setup gcloud to use kcc-export@doms-cpe-cpa-lle.iam.gserviceaccount.com service account key downloaded in Step 2 for authentication.
 4. Install config-connector export application - https://cloud.google.com/config-connector/docs/how-to/import-export/overview#installing_config-connector.
 
 ## Export gcp configuration using gcloud asset export

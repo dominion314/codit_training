@@ -7,7 +7,7 @@ iamServiceAccounts:
 
 iamPolicyMembers:
   serviceAccountsByEmail:
-    ocp-installer-paas@kohls-paas-ops.iam.gserviceaccount.com:
+    ocp-installer-paas@doms-paas-ops.iam.gserviceaccount.com:
       # TODO: Update permissions based on recommendations from Google role recommender
       # Ref: https://docs.openshift.com/container-platform/4.4/installing/installing_gcp/installing-gcp-account.html#installation-gcp-permissions_installing-gcp-account
       roles:

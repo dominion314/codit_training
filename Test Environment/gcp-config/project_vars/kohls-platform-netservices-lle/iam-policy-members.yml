@@ -1,7 +1,7 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-infra-network-devops-L3@kohls.com:
+    gcp-infra-network-devops-L3@doms.com:
       roles:
       - compute.instanceAdmin.v1
       - compute.networkUser
@@ -11,7 +11,7 @@ iamPolicyMembers:
       - iam.serviceAccountKeyAdmin
       - iam.serviceAccountUser
       - storage.admin
-    gcp-cpe-CNE-DevOps-L3@kohls.com:
+    gcp-cpe-CNE-DevOps-L3@doms.com:
       roles:
       - compute.instanceAdmin.v1
       - compute.networkUser
@@ -21,7 +21,7 @@ iamPolicyMembers:
       - iam.serviceAccountKeyAdmin
       - iam.serviceAccountUser
       - storage.admin
-    gcp-cpe-CNE-DevOps-admin@kohls.com:
+    gcp-cpe-CNE-DevOps-admin@doms.com:
       roles:
       - compute.instanceAdmin.v1
       - compute.loadBalancerAdmin

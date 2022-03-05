@@ -41,7 +41,7 @@ if 'schema_report.txt' in args.report: # Then it is a Schema report file.
                         error_codes.append(["Cerberus-102",prev_line,line])
                     elif '^[0-9a-z-]+' in line:
                         error_codes.append(["Cerberus-104",prev_line,line])
-                    elif '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com' in line:
+                    elif '.*@doms\.com|.*@qa\.doms\.com|.*@dev\.doms\.com' in line:
                         error_codes.append(["Cerberus-106",prev_line,line])
                     elif '.*@.*\.gserviceaccount\.com' in line:
                         error_codes.append(["Cerberus-108",prev_line,line])
@@ -61,7 +61,7 @@ if 'schema_report.txt' in args.report: # Then it is a Schema report file.
                         error_codes.append(["Cerberus-122",prev_line,line])
                     elif '[-a-z0-9\._]+' in line:
                         error_codes.append(["Cerberus-124",prev_line,line])
-                    elif '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com|.*\.gserviceaccount\.com' in line:
+                    elif '.*@doms\.com|.*@qa\.doms\.com|.*@dev\.doms\.com|.*\.gserviceaccount\.com' in line:
                         error_codes.append(["Cerberus-126",prev_line,line])
                     elif '^(19|20|21)\d\d-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])' in line:
                         error_codes.append(["Cerberus-128",prev_line,line])

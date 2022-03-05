@@ -14,7 +14,7 @@ storageBuckets:
     location: US
     labels:
       app-name: "esign"
-  kohls-stores-dm-engineering-lle-bucket:
+  doms-stores-dm-engineering-lle-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD

@@ -1,47 +1,47 @@
 ---
 storageBuckets:
-  kohls-cce-dbaas-lle-mysql:
+  doms-cce-dbaas-lle-mysql:
     acls:
       usersByEmail:
-        mysql-dba@kohls-cce-dbaas-lle.iam.gserviceaccount.com: OWNER
+        mysql-dba@doms-cce-dbaas-lle.iam.gserviceaccount.com: OWNER
       groupsByEmail:
-        gcp-infra-dataservices-systemsengineer-l3@kohls.com: OWNER
-        gcp-infra-dataservices-systemsengineer-l2@kohls.com: OWNER
-        gcp-infra-dataservices-qualityengineer-l3@kohls.com: OWNER
-  kohls-cce-dbaas-lle-mongo:
+        gcp-infra-dataservices-systemsengineer-l3@doms.com: OWNER
+        gcp-infra-dataservices-systemsengineer-l2@doms.com: OWNER
+        gcp-infra-dataservices-qualityengineer-l3@doms.com: OWNER
+  doms-cce-dbaas-lle-mongo:
     acls:
       usersByEmail:
-        mongo-dba@kohls-cce-dbaas-lle.iam.gserviceaccount.com: OWNER
+        mongo-dba@doms-cce-dbaas-lle.iam.gserviceaccount.com: OWNER
       groupsByEmail:
-        gcp-infra-dataservices-systemsengineer-l3@kohls.com: OWNER
-        gcp-infra-dataservices-systemsengineer-l2@kohls.com: OWNER
-        gcp-infra-dataservices-qualityengineer-l3@kohls.com: OWNER
-  kohls-cce-dbaas-lle-pmm:
+        gcp-infra-dataservices-systemsengineer-l3@doms.com: OWNER
+        gcp-infra-dataservices-systemsengineer-l2@doms.com: OWNER
+        gcp-infra-dataservices-qualityengineer-l3@doms.com: OWNER
+  doms-cce-dbaas-lle-pmm:
     acls:
       usersByEmail:
-        pmm-dba@kohls-cce-dbaas-lle.iam.gserviceaccount.com: OWNER
+        pmm-dba@doms-cce-dbaas-lle.iam.gserviceaccount.com: OWNER
       groupsByEmail:
-        gcp-infra-dataservices-systemsengineer-l3@kohls.com: OWNER
-        gcp-infra-dataservices-systemsengineer-l2@kohls.com: OWNER
-        gcp-infra-dataservices-qualityengineer-l3@kohls.com: OWNER
-  kohls-cce-dbaas-lle-longterm:
+        gcp-infra-dataservices-systemsengineer-l3@doms.com: OWNER
+        gcp-infra-dataservices-systemsengineer-l2@doms.com: OWNER
+        gcp-infra-dataservices-qualityengineer-l3@doms.com: OWNER
+  doms-cce-dbaas-lle-longterm:
     acls:
       usersByEmail:
-        pmm-dba@kohls-cce-dbaas-lle.iam.gserviceaccount.com: OWNER
-        mysql-dba@kohls-cce-dbaas-lle.iam.gserviceaccount.com: OWNER
-        mongo-dba@kohls-cce-dbaas-lle.iam.gserviceaccount.com: OWNER
+        pmm-dba@doms-cce-dbaas-lle.iam.gserviceaccount.com: OWNER
+        mysql-dba@doms-cce-dbaas-lle.iam.gserviceaccount.com: OWNER
+        mongo-dba@doms-cce-dbaas-lle.iam.gserviceaccount.com: OWNER
       groupsByEmail:
-        gcp-infra-dataservices-systemsengineer-l3@kohls.com: OWNER
-        gcp-infra-dataservices-systemsengineer-l2@kohls.com: OWNER
-        gcp-infra-dataservices-qualityengineer-l3@kohls.com: OWNER
-  kohls-cce-dbaas-lle-terraform-states:
+        gcp-infra-dataservices-systemsengineer-l3@doms.com: OWNER
+        gcp-infra-dataservices-systemsengineer-l2@doms.com: OWNER
+        gcp-infra-dataservices-qualityengineer-l3@doms.com: OWNER
+  doms-cce-dbaas-lle-terraform-states:
     acls:
       usersByEmail:
-        pmm-dba@kohls-cce-dbaas-lle.iam.gserviceaccount.com: OWNER
-        mysql-dba@kohls-cce-dbaas-lle.iam.gserviceaccount.com: OWNER
-        mongo-dba@kohls-cce-dbaas-lle.iam.gserviceaccount.com: OWNER
-        platform-devops@kohls-cce-dbaas-lle.iam.gserviceaccount.com: OWNER
+        pmm-dba@doms-cce-dbaas-lle.iam.gserviceaccount.com: OWNER
+        mysql-dba@doms-cce-dbaas-lle.iam.gserviceaccount.com: OWNER
+        mongo-dba@doms-cce-dbaas-lle.iam.gserviceaccount.com: OWNER
+        platform-devops@doms-cce-dbaas-lle.iam.gserviceaccount.com: OWNER
       groupsByEmail:
-        gcp-infra-dataservices-systemsengineer-l3@kohls.com: OWNER
-        gcp-infra-dataservices-systemsengineer-l2@kohls.com: OWNER
-        gcp-infra-dataservices-qualityengineer-l3@kohls.com: OWNER
+        gcp-infra-dataservices-systemsengineer-l3@doms.com: OWNER
+        gcp-infra-dataservices-systemsengineer-l2@doms.com: OWNER
+        gcp-infra-dataservices-qualityengineer-l3@doms.com: OWNER

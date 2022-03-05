@@ -1,7 +1,7 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-kre-systemsengineer-admin@kohls.com:
+    gcp-kre-systemsengineer-admin@doms.com:
       roles:
       - bigquery.admin
       - compute.instanceAdmin.v1
@@ -15,7 +15,7 @@ iamPolicyMembers:
       - logging.viewer
       - monitoring.admin
       - storage.admin
-    gcp-kre-systemsengineer-l3@kohls.com:
+    gcp-kre-systemsengineer-l3@doms.com:
       roles:
       - bigquery.admin
       - container.developer

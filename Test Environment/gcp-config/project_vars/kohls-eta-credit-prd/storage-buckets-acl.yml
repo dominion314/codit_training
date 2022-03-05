@@ -1,67 +1,67 @@
 ---
 storageBuckets:
-  kohls-eta-credit-mft-prod-prod-bucket:
+  doms-eta-credit-mft-prod-prod-bucket:
     acls:
       usersByEmail:
         1043786447859-compute@developer.gserviceaccount.com: READER
-        mysql-dba@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        consul-paas@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        mongo-dba@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        credit-storage-eta@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        terraform-devops@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-  kohls-eta-credit-prd-mongo:
+        mysql-dba@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        consul-paas@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        mongo-dba@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        credit-storage-eta@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        terraform-devops@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+  doms-eta-credit-prd-mongo:
     acls:
       usersByEmail:
         1043786447859-compute@developer.gserviceaccount.com: READER
-        mysql-dba@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        mongo-dba@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        credit-storage-eta@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        terraform-devops@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        consul-paas@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-  kohls-eta-credit-prd-mysql:
+        mysql-dba@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        mongo-dba@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        credit-storage-eta@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        terraform-devops@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        consul-paas@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+  doms-eta-credit-prd-mysql:
     acls:
       usersByEmail:
         1043786447859-compute@developer.gserviceaccount.com: READER
-        mysql-dba@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        mongo-dba@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        credit-storage-eta@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        terraform-devops@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        consul-paas@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-  kohls-eta-credit-prd-terraform-states:
+        mysql-dba@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        mongo-dba@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        credit-storage-eta@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        terraform-devops@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        consul-paas@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+  doms-eta-credit-prd-terraform-states:
     acls:
       usersByEmail:
         1043786447859-compute@developer.gserviceaccount.com: READER
-        mysql-dba@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        consul-paas@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        mongo-dba@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        credit-storage-eta@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        terraform-devops@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-  kohls-eta-credit-prd-us-central1-primary-consul-backup:
+        mysql-dba@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        consul-paas@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        mongo-dba@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        credit-storage-eta@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        terraform-devops@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+  doms-eta-credit-prd-us-central1-primary-consul-backup:
     acls:
       usersByEmail:
         1043786447859-compute@developer.gserviceaccount.com: READER
-        mysql-dba@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        consul-paas@kohls-eta-credit-prd.iam.gserviceaccount.com: OWNER
-        mongo-dba@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        credit-storage-eta@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        terraform-devops@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-  kohls-eta-credit-prd-us-east1-primary-consul-backup:
+        mysql-dba@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        consul-paas@doms-eta-credit-prd.iam.gserviceaccount.com: OWNER
+        mongo-dba@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        credit-storage-eta@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        terraform-devops@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+  doms-eta-credit-prd-us-east1-primary-consul-backup:
     acls:
       usersByEmail:
         1043786447859-compute@developer.gserviceaccount.com: READER
-        mysql-dba@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        consul-paas@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        mongo-dba@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        credit-storage-eta@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        terraform-devops@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-  kohls-etacredit-mft-prod-prod-bucket:
+        mysql-dba@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        consul-paas@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        mongo-dba@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        credit-storage-eta@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        terraform-devops@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+  doms-etacredit-mft-prod-prod-bucket:
     acls:
       usersByEmail:
         1043786447859-compute@developer.gserviceaccount.com: READER
-        mysql-dba@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        consul-paas@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        mongo-dba@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        credit-storage-eta@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
-        terraform-devops@kohls-eta-credit-prd.iam.gserviceaccount.com: READER
+        mysql-dba@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        consul-paas@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        mongo-dba@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        credit-storage-eta@doms-eta-credit-prd.iam.gserviceaccount.com: READER
+        terraform-devops@doms-eta-credit-prd.iam.gserviceaccount.com: READER
       groupsByEmail:
-        gcp-cic-caas@kohls.com: READER
+        gcp-cic-caas@doms.com: READER

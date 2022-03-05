@@ -1,12 +1,12 @@
 ---
 storageBuckets:
-  kohls-cpe-e2edemo-lle-test-bucket-01:
+  doms-cpe-e2edemo-lle-test-bucket-01:
     versioningEnabled: false
     labels:
       versioning: "false"
       line-of-business: cpe
 
-  kohls-cpe-e2edemo-lle-test-bucket-02:
+  doms-cpe-e2edemo-lle-test-bucket-02:
     versioningEnabled: true
     labels:
       versioning: "true"

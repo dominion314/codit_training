@@ -54,8 +54,8 @@ vpcs:
             bluecat-id: 1491267
         permissions:
           groupsByEmail:
-          - gcp-demo-devops-admin@kohls.com
-          - gcp-demo-devops-l3@kohls.com
+          - gcp-demo-devops-admin@doms.com
+          - gcp-demo-devops-l3@doms.com
 ```
 
 ## 3. Cluster Service API Enablement
@@ -106,15 +106,15 @@ A `cluster.yml` file should be created in your service project folder.  This fil
 ```yaml
 ---
 clusters:
-- name: kohls-demo-lle-01
-  xpnProjectName: kohls-demo-lle
-  displayName: kohls-demo-lle-01
+- name: doms-demo-lle-01
+  xpnProjectName: doms-demo-lle
+  displayName: doms-demo-lle-01
   initialNodeCount: 1
   location: us-central1-c
   masterIpv4CidrBlock: 10.120.255.80/28  # Pulled from Subnetwork Object
-  network: projects/kohls-cpe-xpn-lle/global/networks/cpe-nx-lle #API path to VPC name
+  network: projects/doms-cpe-xpn-lle/global/networks/cpe-nx-lle #API path to VPC name
   externalNetwork: true
-  subnetwork: projects/kohls-cpe-xpn-lle/regions/us-central1/subnetworks/cpe-nx-lle-demo-c1-gke01 # API path to Subnetwork object name
+  subnetwork: projects/doms-cpe-xpn-lle/regions/us-central1/subnetworks/cpe-nx-lle-demo-c1-gke01 # API path to Subnetwork object name
   externalSubnetwork: true
   podSubnetwork: cpe-nx-lle-demo-c1-pod01  # name of secondary range for pods
   serviceSubnetwork: cpe-nx-lle-demo-c1-svc01 # name of secondary range for services
@@ -129,7 +129,7 @@ clusters:
   networkPolicyConfig:
     disabled: false
   nodePools:
-  - name: kohls-demo-lle-01-nodepool
+  - name: doms-demo-lle-01-nodepool
     machineType: n1-standard-1
     maxPodsPerNode: 16
     maxNodeCount: 7

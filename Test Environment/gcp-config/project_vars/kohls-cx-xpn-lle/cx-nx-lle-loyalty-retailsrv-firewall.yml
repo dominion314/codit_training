@@ -106,11 +106,11 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "kos-zookeeper@kohls-cx-shop-lle.iam.gserviceaccount.com"
+          - external: "kos-zookeeper@doms-cx-shop-lle.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: "kos-zookeeper@kohls-cx-shop-lle.iam.gserviceaccount.com"
+          - external: "kos-zookeeper@doms-cx-shop-lle.iam.gserviceaccount.com"
           allow:
           - protocol: "tcp"
             ports:
@@ -124,11 +124,11 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "consul-paas@kohls-cx-shop-lle.iam.gserviceaccount.com"
+          - external: "consul-paas@doms-cx-shop-lle.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: "consul-paas@kohls-cx-shop-lle.iam.gserviceaccount.com"
+          - external: "consul-paas@doms-cx-shop-lle.iam.gserviceaccount.com"
           allow:
           - protocol: "tcp"
             ports:

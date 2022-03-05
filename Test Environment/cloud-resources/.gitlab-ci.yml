@@ -14,7 +14,7 @@ networkIntegrity:
   rules:
     - if: '$CI_PIPELINE_SOURCE == "pipeline"'
       allow_failure: true
-  image: registry.gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-config-ci-image/main
+  image: registry.gitlab.com/doms/infra/platform_enablement/cloud-config/cloud-config-ci-image/main
   before_script:
     - 'curl --location --output artifacts.zip "https://gitlab.com/api/v4/projects/${UPSTREAM}/jobs/$UPSTREAMJOBID/artifacts?job_token=${CI_JOB_TOKEN}" -v'
     - unzip artifacts.zip
@@ -29,7 +29,7 @@ networkIntegrity:
 
 build_resources:
     stage: GitOps-Checks
-    image: registry.gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-config-ci-image/main
+    image: registry.gitlab.com/doms/infra/platform_enablement/cloud-config/cloud-config-ci-image/main
     rules:
         - if: '$CI_PIPELINE_SOURCE == "pipeline"'
           allow_failure: true
@@ -59,18 +59,18 @@ build_resources:
 
 opa-check:
     stage: GitOps-Checks
-    image: registry.gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-config-ci-image/main
-    #image: registry.gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-config-ci-image/prm-qaconfig:latest
+    image: registry.gitlab.com/doms/infra/platform_enablement/cloud-config/cloud-config-ci-image/main
+    #image: registry.gitlab.com/doms/infra/platform_enablement/cloud-config/cloud-config-ci-image/prm-qaconfig:latest
     rules:
         - if: '$CI_PIPELINE_SOURCE == "pipeline"'
     tags:
       - internal
     variables:
-      HTTPS_PROXY: "http://proxy.kohls.com:3128"
-      HTTP_PROXY: "http://proxy.kohls.com:3128"
-      https_proxy: "http://proxy.kohls.com:3128"
-      http_proxy: "http://proxy.kohls.com:3128"
-      VAULT_ADDR: "https://vault-us-central1-primary.kohls.com:8200"
+      HTTPS_PROXY: "http://proxy.doms.com:3128"
+      HTTP_PROXY: "http://proxy.doms.com:3128"
+      https_proxy: "http://proxy.doms.com:3128"
+      http_proxy: "http://proxy.doms.com:3128"
+      VAULT_ADDR: "https://vault-us-central1-primary.doms.com:8200"
     before_script:
         - export VAULT_TOKEN="$(vault write -field=token auth/jwt-GitLab/login role=gitlab-dynamic-v1 jwt=$CI_JOB_JWT)"
         - export AUTO_COMMENT_TOKEN="$(vault kv get -field=automated-comment kv-gitlab/${CI_PROJECT_PATH}/project-tokens)"
@@ -110,7 +110,7 @@ opa-check:
 
 cerberus-check:
     stage: GitOps-Checks
-    image: registry.gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-config-ci-image/main
+    image: registry.gitlab.com/doms/infra/platform_enablement/cloud-config/cloud-config-ci-image/main
     rules:
         - if: '$CI_PIPELINE_SOURCE == "pipeline"'
     tags:
@@ -118,11 +118,11 @@ cerberus-check:
     variables:
       GOLANG_YQ_VERSION: "4.6.2"
       HIERARCHY_VERSION: "0.1.1"
-      HTTPS_PROXY: "http://proxy.kohls.com:3128"
-      HTTP_PROXY: "http://proxy.kohls.com:3128"
-      https_proxy: "http://proxy.kohls.com:3128"
-      http_proxy: "http://proxy.kohls.com:3128"
-      VAULT_ADDR: "https://vault-us-central1-primary.kohls.com:8200"
+      HTTPS_PROXY: "http://proxy.doms.com:3128"
+      HTTP_PROXY: "http://proxy.doms.com:3128"
+      https_proxy: "http://proxy.doms.com:3128"
+      http_proxy: "http://proxy.doms.com:3128"
+      VAULT_ADDR: "https://vault-us-central1-primary.doms.com:8200"
     before_script:
         - export VAULT_TOKEN="$(vault write -field=token auth/jwt-GitLab/login role=gitlab-dynamic-v1 jwt=$CI_JOB_JWT)"
         - export AUTO_COMMENT_TOKEN="$(vault kv get -field=automated-comment kv-gitlab/${CI_PROJECT_PATH}/project-tokens)"
@@ -163,11 +163,11 @@ cerberus-check:
 #   extends:
 #     - .internal
 #   variables:
-#     HTTPS_PROXY: "http://proxy-gcp-central.kohls.com:8080"
-#     HTTP_PROXY: "http://proxy-gcp-central.kohls.com:8080"
-#     https_proxy: "http://proxy-gcp-central.kohls.com:8080"
-#     http_proxy: "http://proxy-gcp-central.kohls.com:8080"
-#     NO_PROXY: ".svc,.local,.internal,.internal.,.gcr.io,.googleapis.com,.kohls.com,100.64.0.0/8,10.0.0.0/8"
-#     no_proxy: ".svc,.local,.internal,.internal.,.gcr.io,.googleapis.com,.kohls.com,100.64.0.0/8,10.0.0.0/8"
+#     HTTPS_PROXY: "http://proxy-gcp-central.doms.com:8080"
+#     HTTP_PROXY: "http://proxy-gcp-central.doms.com:8080"
+#     https_proxy: "http://proxy-gcp-central.doms.com:8080"
+#     http_proxy: "http://proxy-gcp-central.doms.com:8080"
+#     NO_PROXY: ".svc,.local,.internal,.internal.,.gcr.io,.googleapis.com,.doms.com,100.64.0.0/8,10.0.0.0/8"
+#     no_proxy: ".svc,.local,.internal,.internal.,.gcr.io,.googleapis.com,.doms.com,100.64.0.0/8,10.0.0.0/8"
 #   script:
 #     - python3 /app/scripts/eunomia_webhook.py --eunomia_url="$EUNOMIA_URL" --git_ref="$CI_COMMIT_REF_NAME" --git_repo="$CI_PROJECT_URL"

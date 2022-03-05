@@ -7,10 +7,10 @@ bigQueryDatasets:
     defaultTableExpirationMs: 0 #Dataset expiration set to 'Never Expire'
     permissions:
       groupsByEmail:
-        gcp-ccom-aacs-productionengineer-admin@kohls.com:
+        gcp-ccom-aacs-productionengineer-admin@doms.com:
           roles:
             - bigquery.dataOwner
       serviceAccountsByEmail:
-        carrier-aacs@kohls-etcc-aacs-lle.iam.gserviceaccount.com:
+        carrier-aacs@doms-etcc-aacs-lle.iam.gserviceaccount.com:
           roles:
             - bigquery.dataEditor

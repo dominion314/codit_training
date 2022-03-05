@@ -1,7 +1,7 @@
 ---
 iamPolicyMembersV2:
   groupsByEmail:
-    gcp-cpe-developerexperience-softwareengineer-admin@kohls.com:
+    gcp-cpe-developerexperience-softwareengineer-admin@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: CustomRole271
@@ -18,6 +18,6 @@ iamPolicyMembersV2:
     - role: monitoring.editor
     - role: serviceusage.serviceUsageConsumer
 
-    gcp-infra-cpe-softwareengineer-admin@kohls.com:
+    gcp-infra-cpe-softwareengineer-admin@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068

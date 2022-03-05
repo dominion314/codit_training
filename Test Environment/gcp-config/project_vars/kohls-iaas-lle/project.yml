@@ -1,6 +1,6 @@
 ---
 project:
-  name: kohls-iaas-lle
+  name: doms-iaas-lle
   managed: true
   folderId: "557759831541"
   billingAccount: "00C36A-CD0BDB-E543D0"

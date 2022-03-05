@@ -1,10 +1,10 @@
 ---
 billingDeptId: 90522
 projectSharing:
-  - kohls-etcc-tax-prd
-  - kohls-eta-credit-prd
+  - doms-etcc-tax-prd
+  - doms-eta-credit-prd
 project:
-  name: kohls-eta-xpn-prd
+  name: doms-eta-xpn-prd
   managed: true
   deletionProtect: true
   folderId: "970875009337"

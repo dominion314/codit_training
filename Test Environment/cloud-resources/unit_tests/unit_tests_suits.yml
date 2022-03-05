@@ -6,12 +6,12 @@ unitTestSuits:
   cases: project,big_query,bucket,bucket_acl,iam_policy_members,pub_sub_subscriptions,pub_sub_topics,service_account
   gcpProject:
           # be careful not to have prefix longer than 12 characters
-    prefix: kohlsdev-ut-
+    prefix: domsdev-ut-
     homeFolderId: "703435421748"
     preserveOnFailure: "false"
   k8sCluster:
-    hostProject: kohls-cpe-cpa-lle
-    clusterName: kohls-cpe-cpa-lle-01
+    hostProject: doms-cpe-cpa-lle
+    clusterName: doms-cpe-cpa-lle-01
     zone: us-central1-a
     namespacePrefix: gcp-
 

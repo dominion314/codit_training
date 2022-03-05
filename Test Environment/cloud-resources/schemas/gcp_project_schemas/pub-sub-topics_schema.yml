@@ -25,7 +25,7 @@ pubSubTopics:
             required: false
             keysrules:
               type: 'string'
-              regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+              regex: '.*@doms\.com|.*@qa\.doms\.com|.*@dev\.doms\.com'
             valuesrules:
               type: 'dict'
               schema:
@@ -40,7 +40,7 @@ pubSubTopics:
             required: false
             keysrules:
               type: 'string'
-              regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+              regex: '.*@doms\.com|.*@qa\.doms\.com|.*@dev\.doms\.com'
             valuesrules:
               type: 'dict'
               schema:

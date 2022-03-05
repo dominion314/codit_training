@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-cce-dbaas-prd-mysql:
+  doms-cce-dbaas-prd-mysql:
     location: US
     versioningEnabled: false
     labels:
@@ -11,7 +11,7 @@ storageBuckets:
         type: Delete
       condition:
         age: 30
-  kohls-cce-dbaas-prd-mongo:
+  doms-cce-dbaas-prd-mongo:
     location: US
     versioningEnabled: false
     labels:
@@ -22,7 +22,7 @@ storageBuckets:
         type: Delete
       condition:
         age: 30
-  kohls-cce-dbaas-prd-pmm:
+  doms-cce-dbaas-prd-pmm:
     location: US
     versioningEnabled: false
     labels:
@@ -33,13 +33,13 @@ storageBuckets:
         type: Delete
       condition:
         age: 30
-  kohls-cce-dbaas-prd-longterm:
+  doms-cce-dbaas-prd-longterm:
     location: US
     versioningEnabled: false
     labels:
       technology: mysql
     storageClass: MULTI_REGIONAL
-  kohls-cce-dbaas-prd-terraform-states:
+  doms-cce-dbaas-prd-terraform-states:
     location: US
     versioningEnabled: false
     storageClass: MULTI_REGIONAL

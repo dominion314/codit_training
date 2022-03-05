@@ -1,17 +1,17 @@
 ---
 storageBuckets:
-  kohlsqa-kcc-upgrade-lle-test-bucket-01:
+  domsqa-kcc-upgrade-lle-test-bucket-01:
     default_object_acls:
       usersByEmail:
-        mark.doll@kohls.com: OWNER
-        hamilton.hoover@kohls.com: READER
+        mark.doll@doms.com: OWNER
+        hamilton.hoover@doms.com: READER
       groupsByEmail:
-        gcp-iaas-cpa-devops-l3@kohls.com: OWNER
+        gcp-iaas-cpa-devops-l3@doms.com: OWNER
       builtinGroups:
         allUsers: READER
         allAuthenticatedUsers: READER
 
-  kohlsqa-kcc-upgrade-lle-test-bucket-02:
+  domsqa-kcc-upgrade-lle-test-bucket-02:
     default_object_acls:
       usersByEmail:
-        mark.doll@kohls.com: READER
+        mark.doll@doms.com: READER

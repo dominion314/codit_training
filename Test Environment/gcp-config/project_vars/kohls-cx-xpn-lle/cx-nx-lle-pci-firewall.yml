@@ -58,7 +58,7 @@ vpcs:
             - "10.195.160.0/19"
           targetTags:
 
-      gspann-to-kohls-ecom-pnf-lle:
+      gspann-to-doms-ecom-pnf-lle:
         direction: INGRESS
         description: SNOW-16679
         disabled: false
@@ -295,7 +295,7 @@ vpcs:
             - fw-ssh
             - tonomi-pnf-dev
 
-      kohls-app-integration-servers-pnf-lle:
+      doms-app-integration-servers-pnf-lle:
         direction: INGRESS
         description: SNOW-16679
         disabled: false
@@ -379,7 +379,7 @@ vpcs:
             - pnf-qa
             - fw-https
 
-      kohls-ecom-xpn-lle-ingr-to-pnf-lle-tcp:
+      doms-ecom-xpn-lle-ingr-to-pnf-lle-tcp:
         direction: INGRESS
         description: SNOW-16679
         disabled: false
@@ -398,7 +398,7 @@ vpcs:
           targetTags:
             - fw-consul
 
-      kohls-ecom-xpn-lle-ingress-zookeeper:
+      doms-ecom-xpn-lle-ingress-zookeeper:
         direction: INGRESS
         description: SNOW-16679
         disabled: false
@@ -416,7 +416,7 @@ vpcs:
           targetTags:
             - fw-zookeeper
 
-      kohls-non-prod-omse-to-pnf-https:
+      doms-non-prod-omse-to-pnf-https:
         direction: INGRESS
         description: SNOW-16679
         disabled: false
@@ -629,7 +629,7 @@ vpcs:
           targetTags:
             - fw-https
 
-      kohls-onprem-users-dft-access-to-pnf-lle:
+      doms-onprem-users-dft-access-to-pnf-lle:
         direction: INGRESS
         description: SNOW-16679
         disabled: false
@@ -678,7 +678,7 @@ vpcs:
             - fw-vault
             - fw-https
 
-      kohls-store-preprod-to-pnf-lle-https:
+      doms-store-preprod-to-pnf-lle-https:
         direction: INGRESS
         description: SNOW-16679
         disabled: false

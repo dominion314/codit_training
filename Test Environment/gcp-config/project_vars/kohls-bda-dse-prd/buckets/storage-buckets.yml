@@ -1,13 +1,13 @@
 ---
 storageBuckets:
-  kohls-bda-dse-prd-cce-dse-rec:
+  doms-bda-dse-prd-cce-dse-rec:
     location: US
     versioningEnabled: false
     labels:
       business: dse
       sub-business: rec
     storageClass: MULTI_REGIONAL
-  kohls-bda-dse-prd-cce-dse-stg:
+  doms-bda-dse-prd-cce-dse-stg:
     location: US
     versioningEnabled: false
     labels:
@@ -19,7 +19,7 @@ storageBuckets:
           type: Delete
         condition:
           age: 14
-  kohls-bda-dse-prd-cce-dse-int:
+  doms-bda-dse-prd-cce-dse-int:
     location: US
     versioningEnabled: false
     labels:
@@ -31,42 +31,42 @@ storageBuckets:
           type: Delete
         condition:
           age: 60
-  kohls-bda-dse-prd-cce-dse-src:
+  doms-bda-dse-prd-cce-dse-src:
     location: US
     versioningEnabled: false
     labels:
       business: dse
       sub-business: src
     storageClass: MULTI_REGIONAL
-  kohls-bda-dse-prd-cce-dse-lot:
+  doms-bda-dse-prd-cce-dse-lot:
     location: US
     versioningEnabled: false
     labels:
       business: dse
       sub-business: lot
     storageClass: MULTI_REGIONAL
-  kohls-bda-dse-prd-cce-dse-cmn:
+  doms-bda-dse-prd-cce-dse-cmn:
     location: US
     versioningEnabled: false
     labels:
       business: dse
       sub-business: cmm
     storageClass: MULTI_REGIONAL
-  kohls-bda-dse-prd-cce-dse-mkt:
+  doms-bda-dse-prd-cce-dse-mkt:
     location: US
     versioningEnabled: false
     labels:
       business: dse
       sub-business: mkt
     storageClass: MULTI_REGIONAL
-  kohls-bda-dse-prd-cce-dse-ifo:
+  doms-bda-dse-prd-cce-dse-ifo:
     location: US
     versioningEnabled: false
     labels:
       business: dse
       sub-business: ifo
     storageClass: MULTI_REGIONAL
-  kohls-bda-dse-prd-dseprd-terraform-state:
+  doms-bda-dse-prd-dseprd-terraform-state:
     location: US
     versioningEnabled: false
     labels:

@@ -7,9 +7,9 @@ project:
     project-manager: kelly-neumann
     line-of-business: sec
     project-requestor: rich-holcombe
-  name: kohls-sec-cspm-prd
+  name: doms-sec-cspm-prd
   managed: true
   deletionProtect: true
   folderId: 726913521927
   billingAccount: 00C36A-CD0BDB-E543D0
-# For lookup table of line of business codes: https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Project_Jump_Start_Guide.md#netx-project-folder-id-lookup-table
+# For lookup table of line of business codes: https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Project_Jump_Start_Guide.md#netx-project-folder-id-lookup-table

@@ -1,7 +1,7 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-et-devops-admin@kohls.com:
+    gcp-et-devops-admin@doms.com:
       roles:
       - compute.instanceAdmin.v1
       - compute.networkUser
@@ -11,7 +11,7 @@ iamPolicyMembers:
       - logging.admin
       - monitoring.editor
       - storage.admin
-    gcp-et-devops-l3@kohls.com:
+    gcp-et-devops-l3@doms.com:
       roles:
       - compute.instanceAdmin.v1
       - compute.networkUser
@@ -20,34 +20,7 @@ iamPolicyMembers:
       - logging.admin
       - monitoring.editor
       - storage.admin
-    gcp-infra-dataservices-systemsengineer-l3@kohls.com:
-      roles:
-      - bigquery.admin
-      - cloudfunctions.admin
-      - cloudsql.admin
-      - compute.instanceAdmin.v1
-      - compute.networkUser
-      - compute.storageAdmin
-      - datamigration.admin
-      - iam.serviceAccountUser
-      - logging.admin
-      - monitoring.editor
-      - pubsub.editor
-      - redis.admin
-      - storage.admin
-    gcp-infra-dataservices-systemsengineer-l2@kohls.com:
-      roles:
-      - cloudsql.admin
-      - compute.instanceAdmin.v1
-      - compute.networkUser
-      - compute.storageAdmin
-      - datamigration.admin
-      - iam.serviceAccountUser
-      - logging.admin
-      - monitoring.editor
-      - redis.admin
-      - storage.admin
-    gcp-infra-dataservices-qualityengineer-l3@kohls.com:
+    gcp-infra-dataservices-systemsengineer-l3@doms.com:
       roles:
       - bigquery.admin
       - cloudfunctions.admin
@@ -62,7 +35,34 @@ iamPolicyMembers:
       - pubsub.editor
       - redis.admin
       - storage.admin
-    gcp-infra-dataservices-systemsengineer-admin@kohls.com:
+    gcp-infra-dataservices-systemsengineer-l2@doms.com:
+      roles:
+      - cloudsql.admin
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.storageAdmin
+      - datamigration.admin
+      - iam.serviceAccountUser
+      - logging.admin
+      - monitoring.editor
+      - redis.admin
+      - storage.admin
+    gcp-infra-dataservices-qualityengineer-l3@doms.com:
+      roles:
+      - bigquery.admin
+      - cloudfunctions.admin
+      - cloudsql.admin
+      - compute.instanceAdmin.v1
+      - compute.networkUser
+      - compute.storageAdmin
+      - datamigration.admin
+      - iam.serviceAccountUser
+      - logging.admin
+      - monitoring.editor
+      - pubsub.editor
+      - redis.admin
+      - storage.admin
+    gcp-infra-dataservices-systemsengineer-admin@doms.com:
       roles:
       - compute.instanceAdmin.v1
       - compute.networkUser
@@ -71,7 +71,7 @@ iamPolicyMembers:
       - iam.serviceAccountKeyAdmin
       - storage.admin
   serviceAccountsByEmail:
-    pmm-dba@kohls-platform-dbaas-ops.iam.gserviceaccount.com:
+    pmm-dba@doms-platform-dbaas-ops.iam.gserviceaccount.com:
       roles:
       - compute.instanceAdmin.v1
       - compute.networkUser
@@ -81,7 +81,7 @@ iamPolicyMembers:
       - iap.tunnelResourceAccessor
       - storage.objectAdmin
       - storage.hmacKeyAdmin
-    mysql-dba@kohls-platform-dbaas-ops.iam.gserviceaccount.com:
+    mysql-dba@doms-platform-dbaas-ops.iam.gserviceaccount.com:
       roles:
       - compute.instanceAdmin.v1
       - compute.networkUser
@@ -89,21 +89,21 @@ iamPolicyMembers:
       - iam.serviceAccountUser
       - iap.tunnelResourceAccessor
       - storage.objectAdmin
-    mongo-dba@kohls-platform-dbaas-ops.iam.gserviceaccount.com:
+    mongo-dba@doms-platform-dbaas-ops.iam.gserviceaccount.com:
       roles:
       - compute.instanceAdmin.v1
       - compute.networkUser
       - compute.storageAdmin
       - iam.serviceAccountUser
       - storage.objectAdmin
-    paas-consul@kohls-platform-dbaas-ops.iam.gserviceaccount.com:
+    paas-consul@doms-platform-dbaas-ops.iam.gserviceaccount.com:
       roles:
       - compute.instanceAdmin.v1
       - compute.networkUser
       - compute.storageAdmin
       - iam.serviceAccountUser
       - storage.objectAdmin
-    platform-devops@kohls-platform-dbaas-ops.iam.gserviceaccount.com:
+    platform-devops@doms-platform-dbaas-ops.iam.gserviceaccount.com:
       roles:
       - bigquery.admin
       - cloudsql.admin
@@ -121,6 +121,6 @@ iamPolicyMembers:
       - pubsub.editor
       - redis.admin
       - storage.admin
-    cloudsql-client@kohls-platform-dbaas-ops.iam.gserviceaccount.com:
+    cloudsql-client@doms-platform-dbaas-ops.iam.gserviceaccount.com:
       roles:
       - cloudsql.client

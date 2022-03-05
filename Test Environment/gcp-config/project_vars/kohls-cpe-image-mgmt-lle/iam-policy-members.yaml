@@ -1,7 +1,7 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-iaas-softwareengineer-l3@kohls.com:
+    gcp-iaas-softwareengineer-l3@doms.com:
       roles:
       - appengine.appAdmin
       - appengine.appCreator
@@ -29,10 +29,10 @@ iamPolicyMembers:
     576826117778-compute@developer.gserviceaccount.com:
       roles:
       - compute.networkUser
-    devexp-automation@kohls-devexp-tools-lle.iam.gserviceaccount.com:
+    devexp-automation@doms-devexp-tools-lle.iam.gserviceaccount.com:
       roles:
       - compute.imageUser
-    terraform-devops@kohls-cpe-image-mgmt-lle.iam.gserviceaccount.com:
+    terraform-devops@doms-cpe-image-mgmt-lle.iam.gserviceaccount.com:
       roles:
       - appengine.appCreator
       - appengine.deployer
@@ -42,24 +42,24 @@ iamPolicyMembers:
       - compute.storageAdmin
       - iam.serviceAccountUser
       - storage.admin
-    terraform-devops@kohls-cpe-image-mgmt-prd.iam.gserviceaccount.com:
+    terraform-devops@doms-cpe-image-mgmt-prd.iam.gserviceaccount.com:
       roles:
       - compute.imageUser
-    kohls-cpe-image-mgmt-lle@appspot.gserviceaccount.com:
+    doms-cpe-image-mgmt-lle@appspot.gserviceaccount.com:
       roles:
       - datastore.user
       - storage.objectAdmin
       - storage.admin
       - compute.imageUser
-    kohls-cpe-image-mgmt-prd@appspot.gserviceaccount.com:
+    doms-cpe-image-mgmt-prd@appspot.gserviceaccount.com:
       roles:
       - compute.imageUser
-    terraform-vault-lle-sec@kohls-sec-vault-lle.iam.gserviceaccount.com:
+    terraform-vault-lle-sec@doms-sec-vault-lle.iam.gserviceaccount.com:
       roles:
       - compute.imageUser
     308021948655@cloudservices.gserviceaccount.com:
       roles:
       - compute.imageUser
-    platform-devops@kohls-platform-dbaas-lle.iam.gserviceaccount.com:
+    platform-devops@doms-platform-dbaas-lle.iam.gserviceaccount.com:
       roles:
       - compute.imageUser

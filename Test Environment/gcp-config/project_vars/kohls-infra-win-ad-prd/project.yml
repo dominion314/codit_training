@@ -1,10 +1,10 @@
 ---
 billingDeptId: "90546" # The billing ID can be challenging to find, when in doubt ask your mananger. This will evetually be abstracted away.
 project:
-  name: kohls-infra-win-ad-prd # This vaule is the project name and ID, it must be unique. The format is kohls-domain-productgroup-productline-environment The productline is optional
+  name: doms-infra-win-ad-prd # This vaule is the project name and ID, it must be unique. The format is doms-domain-productgroup-productline-environment The productline is optional
   deletionProtect: true
   managed: true # this value allows KCC to manage the resource.
-  folderId: "980929416788" # The folder ID determines the placment in the GCP Organization higharchey. The folder IDs are in the docs here: https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Project_Jump_Start_Guide.md#netx-project-folder-id-lookup-table
+  folderId: "980929416788" # The folder ID determines the placment in the GCP Organization higharchey. The folder IDs are in the docs here: https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Project_Jump_Start_Guide.md#netx-project-folder-id-lookup-table
   billingAccount: "00C36A-CD0BDB-E543D0" # This is always the same and will be abstracted in the future
   labels: # Labels are part of the project metadata and are used for such things as billing, contact info, etc. Some are required.
     billing-dept-id: "90546" # Again the illusuve billing ID

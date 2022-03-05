@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-etcc-aacs-carrier-prd-bucket:
+  doms-etcc-aacs-carrier-prd-bucket:
     versioningEnabled: true
     deletionProtect: true
     storageClass: STANDARD

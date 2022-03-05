@@ -2,7 +2,7 @@
 iamPolicyMembers:
   # usersByEmail:
   groupsByEmail:
-    gcp-merch-devops-admin@kohls.com:
+    gcp-merch-devops-admin@doms.com:
       roles:
       - compute.networkViewer
       - iam.serviceAccountKeyAdmin
@@ -15,7 +15,7 @@ iamPolicyMembers:
       - monitoring.admin
       - storage.admin
       - cloudfunctions.admin
-    gcp-merch-pdpl-softwareengineer-admin@kohls.com:
+    gcp-merch-pdpl-softwareengineer-admin@doms.com:
       roles:
       - compute.storageAdmin
       - iam.serviceAccountUser
@@ -29,29 +29,29 @@ iamPolicyMembers:
       - compute.networkViewer
       - storage.admin
       - cloudfunctions.admin
-    gcp-merch-devops-l2@kohls.com:
+    gcp-merch-devops-l2@doms.com:
       roles:
       - bigquery.dataViewer
       - bigquery.jobUser
       - browser
-    gcp-merch-devops-l3@kohls.com:
+    gcp-merch-devops-l3@doms.com:
       roles:
       - bigquery.dataViewer
       - bigquery.jobUser
       - browser
-    gcp-merch-pdpl-softwareengineer-l3@kohls.com:
+    gcp-merch-pdpl-softwareengineer-l3@doms.com:
       roles:
       - bigquery.dataViewer
       - bigquery.jobUser
       - compute.networkViewer
       - compute.viewer
       - logging.viewer
-    gcp-merch-sd-l3@kohls.com:
+    gcp-merch-sd-l3@doms.com:
       roles:
       - compute.viewer
       - logging.viewer
   serviceAccountsByEmail:
-    kps-pl@kohls-merch-pl-lle.iam.gserviceaccount.com:
+    kps-pl@doms-merch-pl-lle.iam.gserviceaccount.com:
       roles:
       - bigquery.admin
       - storage.admin

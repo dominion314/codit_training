@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90522"
 project:
-  name: kohls-eta-credit-hle
+  name: doms-eta-credit-hle
   deletionProtect: true
   managed: true
   folderId: "859213288423"

@@ -1,6 +1,6 @@
 ---
 project:
-  name: kohlsqa-cpe-iamtest-lle
+  name: domsqa-cpe-iamtest-lle
   managed: true
   folderId: "749510905054"
   billingAccount: "00C36A-CD0BDB-E543D0"

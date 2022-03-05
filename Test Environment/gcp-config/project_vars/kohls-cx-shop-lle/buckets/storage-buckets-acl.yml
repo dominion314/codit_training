@@ -1,8 +1,8 @@
 ---
 storageBuckets:
-  kohls-cce-credit-prequal:
+  doms-cce-credit-prequal:
     acls:
       groupsByEmail:
-        gcp-cx-customercredit-devops-admin@kohls.com: OWNER
+        gcp-cx-customercredit-devops-admin@doms.com: OWNER
       serviceAccountsByEmail:
-        kohls-cce-credit-prequal@kohls-cx-shop-lle.iam.gserviceaccount.com: WRITER
+        doms-cce-credit-prequal@doms-cx-shop-lle.iam.gserviceaccount.com: WRITER

@@ -10,14 +10,14 @@ vpcs:
           bluecat-id: 1548548
         permissions:
           serviceAccountsByEmail:
-          - terraform-sec@kohls-sec-engineering-lle.iam.gserviceaccount.com
+          - terraform-sec@doms-sec-engineering-lle.iam.gserviceaccount.com
           - 938246310506-compute@developer.gserviceaccount.com
           - 938246310506@cloudservices.gserviceaccount.com
           groupsByEmail:
-          - gcp-securitymonitoring-devops-l3@kohls.com
-          - gcp-securityplanning-devops-admin@kohls.com
-          - gcp-securitytech-devops-admin@kohls.com
-          - gcp-securitytech-devops-manager@kohls.com
+          - gcp-securitymonitoring-devops-l3@doms.com
+          - gcp-securityplanning-devops-admin@doms.com
+          - gcp-securitytech-devops-admin@doms.com
+          - gcp-securitytech-devops-manager@doms.com
 
       sec-nx-lle-tenable-e1-prv01:
         advertiseRoutes: true
@@ -27,14 +27,14 @@ vpcs:
           bluecat-id: 1548554
         permissions:
           serviceAccountsByEmail:
-          - terraform-sec@kohls-sec-engineering-lle.iam.gserviceaccount.com
+          - terraform-sec@doms-sec-engineering-lle.iam.gserviceaccount.com
           - 938246310506-compute@developer.gserviceaccount.com
           - 938246310506@cloudservices.gserviceaccount.com
           groupsByEmail:
-          - gcp-securitymonitoring-devops-l3@kohls.com
-          - gcp-securityplanning-devops-admin@kohls.com
-          - gcp-securitytech-devops-admin@kohls.com
-          - gcp-securitytech-devops-manager@kohls.com
+          - gcp-securitymonitoring-devops-l3@doms.com
+          - gcp-securityplanning-devops-admin@doms.com
+          - gcp-securitytech-devops-admin@doms.com
+          - gcp-securitytech-devops-manager@doms.com
 
       sec-nx-lle-atomic-c1-prv01:
         advertiseRoutes: true
@@ -44,14 +44,14 @@ vpcs:
           bluecat-id: 1548549
         permissions:
           serviceAccountsByEmail:
-          - terraform-sec@kohls-sec-engineering-lle.iam.gserviceaccount.com
+          - terraform-sec@doms-sec-engineering-lle.iam.gserviceaccount.com
           - 938246310506-compute@developer.gserviceaccount.com
           - 938246310506@cloudservices.gserviceaccount.com
           groupsByEmail:
-          - gcp-securitymonitoring-devops-l3@kohls.com
-          - gcp-securityplanning-devops-admin@kohls.com
-          - gcp-securitytech-devops-admin@kohls.com
-          - gcp-securitytech-devops-manager@kohls.com
+          - gcp-securitymonitoring-devops-l3@doms.com
+          - gcp-securityplanning-devops-admin@doms.com
+          - gcp-securitytech-devops-admin@doms.com
+          - gcp-securitytech-devops-manager@doms.com
 
       sec-nx-lle-atomic-e1-prv01:
         advertiseRoutes: true
@@ -61,14 +61,14 @@ vpcs:
           bluecat-id: 1548555
         permissions:
           serviceAccountsByEmail:
-          - terraform-sec@kohls-sec-engineering-lle.iam.gserviceaccount.com
+          - terraform-sec@doms-sec-engineering-lle.iam.gserviceaccount.com
           - 938246310506-compute@developer.gserviceaccount.com
           - 938246310506@cloudservices.gserviceaccount.com
           groupsByEmail:
-          - gcp-securitymonitoring-devops-l3@kohls.com
-          - gcp-securityplanning-devops-admin@kohls.com
-          - gcp-securitytech-devops-admin@kohls.com
-          - gcp-securitytech-devops-manager@kohls.com
+          - gcp-securitymonitoring-devops-l3@doms.com
+          - gcp-securityplanning-devops-admin@doms.com
+          - gcp-securitytech-devops-admin@doms.com
+          - gcp-securitytech-devops-manager@doms.com
 
       sec-nx-lle-utilities-c1-prv01:
         advertiseRoutes: true
@@ -79,14 +79,14 @@ vpcs:
           bluecat-id: 1574419
         permissions:
           serviceAccountsByEmail:
-          - terraform-sec@kohls-sec-engineering-lle.iam.gserviceaccount.com
+          - terraform-sec@doms-sec-engineering-lle.iam.gserviceaccount.com
           - 938246310506-compute@developer.gserviceaccount.com
           - 938246310506@cloudservices.gserviceaccount.com
           groupsByEmail:
-          - gcp-securitymonitoring-devops-l3@kohls.com
-          - gcp-securityplanning-devops-admin@kohls.com
-          - gcp-securitytech-devops-admin@kohls.com
-          - gcp-securitytech-devops-manager@kohls.com
+          - gcp-securitymonitoring-devops-l3@doms.com
+          - gcp-securityplanning-devops-admin@doms.com
+          - gcp-securitytech-devops-admin@doms.com
+          - gcp-securitytech-devops-manager@doms.com
 
       sec-nx-lle-utilities-e1-prv01:
         advertiseRoutes: true
@@ -96,14 +96,14 @@ vpcs:
           bluecat-id: 1548556
         permissions:
           serviceAccountsByEmail:
-          - terraform-sec@kohls-sec-engineering-lle.iam.gserviceaccount.com
+          - terraform-sec@doms-sec-engineering-lle.iam.gserviceaccount.com
           - 938246310506-compute@developer.gserviceaccount.com
           - 938246310506@cloudservices.gserviceaccount.com
           groupsByEmail:
-          - gcp-securitymonitoring-devops-l3@kohls.com
-          - gcp-securityplanning-devops-admin@kohls.com
-          - gcp-securitytech-devops-admin@kohls.com
-          - gcp-securitytech-devops-manager@kohls.com
+          - gcp-securitymonitoring-devops-l3@doms.com
+          - gcp-securityplanning-devops-admin@doms.com
+          - gcp-securitytech-devops-admin@doms.com
+          - gcp-securitytech-devops-manager@doms.com
 
       sec-nx-lle-bastion-c1-prv01:
         advertiseRoutes: true
@@ -114,13 +114,13 @@ vpcs:
           status: PROVISIONED
         permissions:
           serviceAccountsByEmail:
-          - terraform-devops@kohls-sec-bastion-lle.iam.gserviceaccount.com
+          - terraform-devops@doms-sec-bastion-lle.iam.gserviceaccount.com
           - 721147040520@cloudservices.gserviceaccount.com
           - 721147040520-compute@developer.gserviceaccount.com
-          - okta-preview@kohls-sec-okta-lle.iam.gserviceaccount.com
+          - okta-preview@doms-sec-okta-lle.iam.gserviceaccount.com
           groupsByEmail:
-          - gcp-securitytech-devops-admin@kohls.com
-          - GCP-IAM-L3@kohls.com
+          - gcp-securitytech-devops-admin@doms.com
+          - GCP-IAM-L3@doms.com
 
       sec-nx-lle-bastion-e1-prv01:
         advertiseRoutes: true
@@ -131,13 +131,13 @@ vpcs:
           status: PROVISIONED
         permissions:
           serviceAccountsByEmail:
-          - terraform-devops@kohls-sec-bastion-lle.iam.gserviceaccount.com
+          - terraform-devops@doms-sec-bastion-lle.iam.gserviceaccount.com
           - 721147040520@cloudservices.gserviceaccount.com
           - 721147040520-compute@developer.gserviceaccount.com
-          - okta-preview@kohls-sec-okta-lle.iam.gserviceaccount.com
+          - okta-preview@doms-sec-okta-lle.iam.gserviceaccount.com
           groupsByEmail:
-          - gcp-securitytech-devops-admin@kohls.com
-          - GCP-IAM-L3@kohls.com
+          - gcp-securitytech-devops-admin@doms.com
+          - GCP-IAM-L3@doms.com
 
       sec-nx-lle-oasa-agent-c1-prv01:
         advertiseRoutes: true
@@ -149,11 +149,11 @@ vpcs:
         permissions:
           serviceAccountsByEmail:
           - 720509644135-compute@developer.gserviceaccount.com
-          - terraform-devops@kohls-sec-oasa-lle.iam.gserviceaccount.com
-          - okta-preview@kohls-sec-okta-lle.iam.gserviceaccount.com
+          - terraform-devops@doms-sec-oasa-lle.iam.gserviceaccount.com
+          - okta-preview@doms-sec-okta-lle.iam.gserviceaccount.com
           groupsByEmail:
-          - gcp-securitytech-devops-admin@kohls.com
-          - GCP-IAM-L3@kohls.com
+          - gcp-securitytech-devops-admin@doms.com
+          - GCP-IAM-L3@doms.com
 
       sec-nx-lle-vault-c1-prv01:
         advertiseRoutes: true
@@ -165,14 +165,14 @@ vpcs:
           status: PROVISIONED
         permissions:
           serviceAccountsByEmail:
-          - consul-sec@kohls-sec-vault-lle.iam.gserviceaccount.com
-          - terraform-sec@kohls-sec-engineering-lle.iam.gserviceaccount.com
-          - vault-sec@kohls-sec-vault-lle.iam.gserviceaccount.com
-          - terraform-vault-lle-sec@kohls-sec-vault-lle.iam.gserviceaccount.com
+          - consul-sec@doms-sec-vault-lle.iam.gserviceaccount.com
+          - terraform-sec@doms-sec-engineering-lle.iam.gserviceaccount.com
+          - vault-sec@doms-sec-vault-lle.iam.gserviceaccount.com
+          - terraform-vault-lle-sec@doms-sec-vault-lle.iam.gserviceaccount.com
           - 308021948655@cloudservices.gserviceaccount.com
           groupsByEmail:
-          - gcp-securitytech-devops-admin@kohls.com
-          - gcp-securitypam-sd-l3@kohls.com
+          - gcp-securitytech-devops-admin@doms.com
+          - gcp-securitypam-sd-l3@doms.com
 
       sec-nx-lle-vault-e1-prv01:
         advertiseRoutes: true
@@ -184,14 +184,14 @@ vpcs:
           status: PROVISIONED
         permissions:
           serviceAccountsByEmail:
-          - consul-sec@kohls-sec-vault-lle.iam.gserviceaccount.com
-          - terraform-sec@kohls-sec-engineering-lle.iam.gserviceaccount.com
-          - vault-sec@kohls-sec-vault-lle.iam.gserviceaccount.com
-          - terraform-vault-lle-sec@kohls-sec-vault-lle.iam.gserviceaccount.com
+          - consul-sec@doms-sec-vault-lle.iam.gserviceaccount.com
+          - terraform-sec@doms-sec-engineering-lle.iam.gserviceaccount.com
+          - vault-sec@doms-sec-vault-lle.iam.gserviceaccount.com
+          - terraform-vault-lle-sec@doms-sec-vault-lle.iam.gserviceaccount.com
           - 308021948655@cloudservices.gserviceaccount.com
           groupsByEmail:
-          - gcp-securitytech-devops-admin@kohls.com
-          - gcp-securitypam-sd-l3@kohls.com
+          - gcp-securitytech-devops-admin@doms.com
+          - gcp-securitypam-sd-l3@doms.com
 
       sec-nx-lle-okta-c1-prv01:
         advertiseRoutes: true
@@ -202,13 +202,13 @@ vpcs:
           status: PROVISIONED
         permissions:
           serviceAccountsByEmail:
-          - terraform-sec@kohls-sec-okta-lle.iam.gserviceaccount.com
-          - terraform-win@kohls-iaas-win-lle.iam.gserviceaccount.com
-          - okta-preview@kohls-sec-okta-lle.iam.gserviceaccount.com
+          - terraform-sec@doms-sec-okta-lle.iam.gserviceaccount.com
+          - terraform-win@doms-iaas-win-lle.iam.gserviceaccount.com
+          - okta-preview@doms-sec-okta-lle.iam.gserviceaccount.com
           groupsByEmail:
-          - gcp-securitypam-sd-l3@kohls.com
-          - gcp-iam-l3@kohls.com
-          - gcp-infra-windows-devops-l3@kohls.com
+          - gcp-securitypam-sd-l3@doms.com
+          - gcp-iam-l3@doms.com
+          - gcp-infra-windows-devops-l3@doms.com
 
       sec-nx-lle-okta-e1-prv01:
         advertiseRoutes: true
@@ -219,11 +219,11 @@ vpcs:
           status: PROVISIONED
         permissions:
           serviceAccountsByEmail:
-          - terraform-sec@kohls-sec-okta-lle.iam.gserviceaccount.com
-          - terraform-win@kohls-iaas-win-lle.iam.gserviceaccount.com
-          - okta-preview@kohls-sec-okta-lle.iam.gserviceaccount.com
+          - terraform-sec@doms-sec-okta-lle.iam.gserviceaccount.com
+          - terraform-win@doms-iaas-win-lle.iam.gserviceaccount.com
+          - okta-preview@doms-sec-okta-lle.iam.gserviceaccount.com
           groupsByEmail:
-          - gcp-securitypam-sd-l3@kohls.com
-          - gcp-iam-l3@kohls.com
-          - gcp-infra-windows-devops-l3@kohls.com
+          - gcp-securitypam-sd-l3@doms.com
+          - gcp-iam-l3@doms.com
+          - gcp-infra-windows-devops-l3@doms.com
 

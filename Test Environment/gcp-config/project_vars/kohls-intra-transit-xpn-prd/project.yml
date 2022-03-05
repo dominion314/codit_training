@@ -2,7 +2,7 @@
 billingDeptId: "90586"
 
 project:
-  name: kohls-intra-transit-xpn-prd
+  name: doms-intra-transit-xpn-prd
   managed: false
   folderId: "970875009337"
   billingAccount: "00C36A-CD0BDB-E543D0"

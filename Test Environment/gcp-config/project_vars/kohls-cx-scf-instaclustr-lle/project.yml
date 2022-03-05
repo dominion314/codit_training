@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90577"
 project:
-  name: kohls-cx-scf-instaclustr-lle
+  name: doms-cx-scf-instaclustr-lle
   managed: true
   folderId: "124759181101"
   billingAccount: "00C36A-CD0BDB-E543D0"

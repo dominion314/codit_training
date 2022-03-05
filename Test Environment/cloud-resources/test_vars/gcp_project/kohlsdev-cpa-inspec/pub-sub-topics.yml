@@ -6,20 +6,20 @@ pubSubTopics:
       app-name: amazon-returns
     permissions:                        # optional - permissions applied at topic level are optional
       usersByEmail:                     # optional -
-        mark.doll@kohls.com:
+        mark.doll@doms.com:
           roles:
           - pubsub.admin
-        hamilton.hoover@kohls.com:
+        hamilton.hoover@doms.com:
           roles:
           - pubsub.publisher
           - viewer
   gitops.test.topic.two:
     permissions:                        # optional -
       groupsByEmail:                    # optional -
-        gcp-et-devops-l3@kohls.com:
+        gcp-et-devops-l3@doms.com:
           roles:
           - pubsub.viewer
       serviceAccountsByEmail:           # optional
-        gitops-example-1@kohlsdev-cpa-inspec.iam.gserviceaccount.com:
+        gitops-example-1@domsdev-cpa-inspec.iam.gserviceaccount.com:
           roles:
           - pubsub.editor

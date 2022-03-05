@@ -1,55 +1,55 @@
 ---
 storageBuckets:
-  kohls-bda-prd-prod-dp-qlik:
+  doms-bda-prd-prod-dp-qlik:
     location: US
     versioningEnabled: false
     labels:
       versioning: "false"
       line-of-business: eda-bi
     storageClass: MULTI_REGIONAL
-  kohls-bda-prd-prod-dp-qlik-external:
+  doms-bda-prd-prod-dp-qlik-external:
     location: US
     versioningEnabled: false
     labels:
       versioning: "false"
       line-of-business: eda-bi
     storageClass: MULTI_REGIONAL
-  kohls-bda-prd-prod-dp-qlik-finance:
+  doms-bda-prd-prod-dp-qlik-finance:
     location: US
     versioningEnabled: false
     labels:
       versioning: "false"
       line-of-business: eda-bi
     storageClass: MULTI_REGIONAL
-  kohls-bda-prd-prod-dp-marketing:
+  doms-bda-prd-prod-dp-marketing:
       location: US
       versioningEnabled: false
       labels:
         versioning: "false"
         line-of-business: marketing
       storageClass: MULTI_REGIONAL
-  kohls-bda-prd-prod-ext-movableink:
+  doms-bda-prd-prod-ext-movableink:
       location: US
       versioningEnabled: false
       labels:
         versioning: "false"
         line-of-business: marketing
       storageClass: MULTI_REGIONAL
-  kohls-bda-prd-prod-dp-marketing-recommendations:
+  doms-bda-prd-prod-dp-marketing-recommendations:
       location: US
       versioningEnabled: false
       labels:
         versioning: "false"
         line-of-business: marketing
       storageClass: MULTI_REGIONAL
-  kohls-bda-prd-prod-dp-marketing-analytics:
+  doms-bda-prd-prod-dp-marketing-analytics:
       location: US
       versioningEnabled: false
       labels:
         versioning: "false"
         line-of-business: marketing
       storageClass: MULTI_REGIONAL
-  kohls-bda-prd-prod-ext-coherentpath:
+  doms-bda-prd-prod-ext-coherentpath:
     location: US
     versioningEnabled: false
     labels:

@@ -1,7 +1,7 @@
 ---
 iamPolicyMembers:
   serviceAccountsByEmail:
-    cpe-sample-sa1@kohls-cpe-sample-lle.iam.gserviceaccount.com:
+    cpe-sample-sa1@doms-cpe-sample-lle.iam.gserviceaccount.com:
       roles:
       - compute.instanceAdmin.v1
       - compute.loadBalancerAdmin
@@ -11,7 +11,7 @@ iamPolicyMembers:
       - monitoring.admin
       - pubsub.admin
       - storage.admin
-    cpe-sample-sa2@kohls-cpe-sample-lle.iam.gserviceaccount.com:
+    cpe-sample-sa2@doms-cpe-sample-lle.iam.gserviceaccount.com:
       roles:
       - compute.instanceAdmin.v1
       - compute.loadBalancerAdmin

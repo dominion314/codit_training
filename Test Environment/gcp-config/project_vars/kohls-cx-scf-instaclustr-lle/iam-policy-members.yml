@@ -1,7 +1,7 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-ocf-devops-admin@kohls.com:
+    gcp-ocf-devops-admin@doms.com:
       roles:
       - browser
       - compute.viewer
@@ -9,7 +9,7 @@ iamPolicyMembers:
       - iam.serviceAccountTokenCreator
       - iam.serviceAccountUser
       - storage.objectViewer
-    gcp-ocf-sd-l3@kohls.com:
+    gcp-ocf-sd-l3@doms.com:
       roles:
       - browser
       - compute.viewer
@@ -17,7 +17,7 @@ iamPolicyMembers:
       - iam.serviceAccountTokenCreator
       - iam.serviceAccountUser
       - storage.objectViewer
-    gcp-ocf-softwareengineer-l3@kohls.com:
+    gcp-ocf-softwareengineer-l3@doms.com:
       roles:
       - browser
       - compute.viewer

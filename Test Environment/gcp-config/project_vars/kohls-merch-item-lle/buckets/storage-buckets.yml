@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-sephora-bucket-lle:
+  doms-sephora-bucket-lle:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -9,21 +9,21 @@ storageBuckets:
       app-name: "item-creation"
     permissions:
       serviceAccountsByEmail:
-        svc-kdx@kohls-kdx-hle.iam.gserviceaccount.com:
+        svc-kdx@doms-kdx-hle.iam.gserviceaccount.com:
           roles:
           - storage.objectCreator
           - storage.objectViewer
-        kohls-merch-item-lle@appspot.gserviceaccount.com:
+        doms-merch-item-lle@appspot.gserviceaccount.com:
           roles:
           - storage.admin
       groupsByEmail:
-        gcp-merch-pdpl-softwareengineer-admin@kohls.com:
+        gcp-merch-pdpl-softwareengineer-admin@doms.com:
           roles:
           - storage.admin
-        gcp-merch-pdpl-softwareengineer-l3@kohls.com:
+        gcp-merch-pdpl-softwareengineer-l3@doms.com:
           roles:
           - storage.admin
-  kohls-item-lle-integration:
+  doms-item-lle-integration:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -32,21 +32,21 @@ storageBuckets:
       app-name: "klink"
     permissions:
       serviceAccountsByEmail:
-        mkt-marketplace-lle@kohls-vendor-portal-hle.iam.gserviceaccount.com:
+        mkt-marketplace-lle@doms-vendor-portal-hle.iam.gserviceaccount.com:
           roles:
           - storage.objectCreator
           - storage.objectViewer
-        kohls-merch-item-lle@appspot.gserviceaccount.com:
+        doms-merch-item-lle@appspot.gserviceaccount.com:
           roles:
           - storage.admin
       groupsByEmail:
-        gcp-merch-pdpl-softwareengineer-admin@kohls.com:
+        gcp-merch-pdpl-softwareengineer-admin@doms.com:
           roles:
           - storage.admin
-        gcp-merch-pdpl-softwareengineer-l3@kohls.com:
+        gcp-merch-pdpl-softwareengineer-l3@doms.com:
           roles:
           - storage.admin
-  kohls-item-staging-integration:
+  doms-item-staging-integration:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -55,17 +55,17 @@ storageBuckets:
       app-name: "klink"
     permissions:
       serviceAccountsByEmail:
-        mkt-marketplace-lle@kohls-vendor-portal-hle.iam.gserviceaccount.com:
+        mkt-marketplace-lle@doms-vendor-portal-hle.iam.gserviceaccount.com:
           roles:
           - storage.objectCreator
           - storage.objectViewer
-        kohls-merch-item-lle@appspot.gserviceaccount.com:
+        doms-merch-item-lle@appspot.gserviceaccount.com:
           roles:
           - storage.admin
       groupsByEmail:
-        gcp-merch-pdpl-softwareengineer-admin@kohls.com:
+        gcp-merch-pdpl-softwareengineer-admin@doms.com:
           roles:
           - storage.admin
-        gcp-merch-pdpl-softwareengineer-l3@kohls.com:
+        gcp-merch-pdpl-softwareengineer-l3@doms.com:
           roles:
           - storage.admin

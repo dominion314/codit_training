@@ -116,7 +116,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-cavisson
-      ccs-ingress-ecom-ecmdm-prd-kohls-reward:
+      ccs-ingress-ecom-ecmdm-prd-doms-reward:
         description: SNOW-16423
         direction: INGRESS
         disabled: false
@@ -751,7 +751,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-wrkr-vm
-      kohls-cavisson-prd-ing-to-ecom-ecmdm-prd:
+      doms-cavisson-prd-ing-to-ecom-ecmdm-prd:
         description: SCTASK0787218
         direction: INGRESS
         disabled: false
@@ -776,7 +776,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-cavisson
-      kohls-cavisson-prd-to-ecom-ecmdm-prd-https:
+      doms-cavisson-prd-to-ecom-ecmdm-prd-https:
         description: SCTASK0745477
         direction: INGRESS
         disabled: false
@@ -797,7 +797,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-https
-      kohls-cavisson-prd-to-ecom-ecmdm-prd-nd:
+      doms-cavisson-prd-to-ecom-ecmdm-prd-nd:
         description: SCTASK0745477
         direction: INGRESS
         disabled: false
@@ -818,7 +818,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-netdiagnostics
-      kohls-ecom-pe-prd-ing-to-ecom-ecmdm-prd:
+      doms-ecom-pe-prd-ing-to-ecom-ecmdm-prd:
         description: SCTASK0810540
         direction: INGRESS
         disabled: false
@@ -840,7 +840,7 @@ vpcs:
           targetTags:
             - tonomirunner
             - rundeck
-      kohls-kos-xpn-cicd-to-ecom-ecmdm-prd-ssh:
+      doms-kos-xpn-cicd-to-ecom-ecmdm-prd-ssh:
         description: SCTASK0745477
         direction: INGRESS
         disabled: false
@@ -860,7 +860,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-ssh
-      kohls-kos-xpn-prd-to-ecom-ecmdm-prd-http:
+      doms-kos-xpn-prd-to-ecom-ecmdm-prd-http:
         description: SCTASK0745477
         direction: INGRESS
         disabled: false
@@ -884,7 +884,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-http
-      kohls-kos-xpn-prd-to-ecom-ecmdm-prd-https:
+      doms-kos-xpn-prd-to-ecom-ecmdm-prd-https:
         description: SCTASK0745477
         direction: INGRESS
         disabled: false
@@ -908,7 +908,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-https
-      kohls-onpremises-ing-to-ecom-ecmdm-prd-ssh:
+      doms-onpremises-ing-to-ecom-ecmdm-prd-ssh:
         description: SCTASK0829566
         direction: INGRESS
         disabled: false

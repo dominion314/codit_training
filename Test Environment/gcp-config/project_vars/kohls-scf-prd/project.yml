@@ -1,6 +1,6 @@
 ---
 project:
-  name: kohls-scf-prd
+  name: doms-scf-prd
   managed: true
   deletionProtect: true
   folderId: "1038729868631"

@@ -37,5 +37,5 @@ steps:
 # Prepare artifacts
 artifacts:
    objects:
-      location: 'gs://kohls-iaas-lle-cloud-build-artifacts/test-buids/'
+      location: 'gs://doms-iaas-lle-cloud-build-artifacts/test-buids/'
       paths: ['./artifacts/*']

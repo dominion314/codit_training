@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-eta-credit-lle-us-central1-primary-consul-backup:
+  doms-eta-credit-lle-us-central1-primary-consul-backup:
     acls:
       usersByEmail:
-        consul-paas@kohls-eta-credit-lle.iam.gserviceaccount.com: OWNER
+        consul-paas@doms-eta-credit-lle.iam.gserviceaccount.com: OWNER

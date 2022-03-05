@@ -1,4 +1,4 @@
-package kohls.gitops.kcc.gcp_project.custom.iam.roles
+package doms.gitops.kcc.gcp_project.custom.iam.roles
 
 policy_data_custom_iam = { "allowedRoles": {
          "nonprd": {
@@ -206,7 +206,7 @@ policy_data_custom_iam = { "allowedRoles": {
 }
 
 policy_data_iam = { "allowedRolesPerProject": {
-         "kohls-cpe-e2edemo-lle": {
+         "doms-cpe-e2edemo-lle": {
             "roles": [
                {
                   "editor": {
@@ -244,7 +244,7 @@ input_bad_environment = {
     },
     "iamPolicyMembersV2": {
         "groupsByEmail": {
-            "group@kohls.com": [
+            "group@doms.com": [
                 {
                     "role": "gceSetInstanceMetaData"
                 },
@@ -265,7 +265,7 @@ input_role_is_not_listed = {
     },
     "iamPolicyMembersV2": {
         "groupsByEmail": {
-            "group@kohls.com": [
+            "group@doms.com": [
                 {
                     "role": "Jenkins_kos_CICD_Autoscale"
                 },
@@ -289,14 +289,14 @@ input_sa_allowed_group_not_allowed = {
     },
     "iamPolicyMembersV2": {
         "serviceAccountsByEmail": {
-            "sa@kohls.com": [
+            "sa@doms.com": [
                 {
                     "role": "StorageObjectReadWriteDelete"
                 }
             ]
         },
         "groupsByEmail": {
-            "group@kohls.com": [
+            "group@doms.com": [
                 {
                     "role": "adminOfUniverse"
                 }
@@ -315,14 +315,14 @@ input_sa_allowed_group_allowed = {
     },
     "iamPolicyMembersV2": {
         "serviceAccountsByEmail": {
-            "sa@kohls.com": [
+            "sa@doms.com": [
                 {
                     "role": "adminOfUniverse"
                 }
             ]
         },
         "groupsByEmail": {
-            "group@kohls.com": [
+            "group@doms.com": [
                 {
                     "role": "editor"
                 }
@@ -341,7 +341,7 @@ input_allowed_group = {
     },
     "iamPolicyMembersV2": {
         "groupsByEmail": {
-            "group@kohls.com": [
+            "group@doms.com": [
                 {
                     "role": "CustomBQsavedqueries"
                 }
@@ -358,7 +358,7 @@ input_allowed_sa = {
     },
     "iamPolicyMembersV2": {
         "serviceAccountsByEmail": {
-            "sa@kohls.com": [
+            "sa@doms.com": [
                 {
                     "role": "iaas_xpn_engineer"
                 }
@@ -375,12 +375,12 @@ input_allowed_sa_group = {
     },
     "iamPolicyMembersV2": {
         "serviceAccountsByEmail": {
-            "sa@kohls.com": [
+            "sa@doms.com": [
                 {
                     "role": "CustomComputeInstanceAdminv1"
                 }
             ],
-            "group@kohls.com": [
+            "group@doms.com": [
                 {
                     "role": "CustomCustomInstanceMove"
                 }
@@ -398,7 +398,7 @@ input_allowed_sbx_user = {
     },
     "iamPolicyMembersV2": {
         "usersByEmail": {
-            "user@kohls.com": [
+            "user@doms.com": [
                 {
                     "role": "CustomRole664" #Only allowed for sbx.
                 }
@@ -415,7 +415,7 @@ input_not_allowed_nonops_user = {
     },
     "iamPolicyMembersV2": {
         "usersByEmail": {
-            "user@kohls.com": [
+            "user@doms.com": [
                 {
                     "role": "CustomRole664"
                 }
@@ -430,13 +430,13 @@ input_allowed_per_projects = {
         "labels": {
             "environment-type": "nonprd"
         },
-        "name": "kohls-cpe-e2edemo-lle"
+        "name": "doms-cpe-e2edemo-lle"
     },
     "iamPolicyMembersV2": {
         "usersByEmail": {
-            "user@kohls.com": [
+            "user@doms.com": [
                 {
-                    "role": "editor" #Only allowed for kohls-cpe-e2edemo-lle
+                    "role": "editor" #Only allowed for doms-cpe-e2edemo-lle
                 }
             ]
         }
@@ -452,9 +452,9 @@ input_not_allowed_per_projects = {
     },
     "iamPolicyMembersV2": {
         "usersByEmail": {
-            "user@kohls.com": [
+            "user@doms.com": [
                 {
-                    "role": "editor" #Only allowed for kohls-cpe-e2edemo-lle
+                    "role": "editor" #Only allowed for doms-cpe-e2edemo-lle
                 }
             ]
         }

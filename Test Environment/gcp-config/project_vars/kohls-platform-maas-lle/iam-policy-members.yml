@@ -1,7 +1,7 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-et-devops-admin@kohls.com:
+    gcp-et-devops-admin@doms.com:
       roles:
       - compute.storageAdmin
       - iam.serviceAccountUser
@@ -9,14 +9,14 @@ iamPolicyMembers:
       - storage.admin
       - compute.instanceAdmin.v1
       - compute.networkUser
-    gcp-et-devops-l3@kohls.com:
+    gcp-et-devops-l3@doms.com:
       roles:
       - compute.storageAdmin
       - iam.serviceAccountUser
       - compute.instanceAdmin.v1
       - compute.networkUser
       - storage.admin
-    gcp-kre-systemsengineer-admin@kohls.com:
+    gcp-kre-systemsengineer-admin@doms.com:
       roles:
       - compute.storageAdmin
       - iam.serviceAccountUser
@@ -24,7 +24,7 @@ iamPolicyMembers:
       - compute.instanceAdmin.v1
       - compute.networkUser
   serviceAccountsByEmail:
-    kafkaplatform-msg@kohls-platform-maas-lle.iam.gserviceaccount.com:
+    kafkaplatform-msg@doms-platform-maas-lle.iam.gserviceaccount.com:
       roles:
       - compute.storageAdmin
       - iam.serviceAccountUser
@@ -33,7 +33,7 @@ iamPolicyMembers:
       - compute.instanceAdmin.v1
       - compute.networkUser
       - compute.networkViewer
-    terraform@kohls-platform-maas-lle.iam.gserviceaccount.com:
+    terraform@doms-platform-maas-lle.iam.gserviceaccount.com:
       roles:
       - compute.storageAdmin
       - iam.serviceAccountUser
@@ -42,7 +42,7 @@ iamPolicyMembers:
       - compute.instanceAdmin.v1
       - compute.networkUser
       - compute.networkViewer
-    platform-devops@kohls-platform-maas-lle.iam.gserviceaccount.com:
+    platform-devops@doms-platform-maas-lle.iam.gserviceaccount.com:
       roles:
       - compute.storageAdmin
       - iam.serviceAccountUser

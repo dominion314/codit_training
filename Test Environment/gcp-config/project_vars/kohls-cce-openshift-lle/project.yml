@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90565"
 project:
-  name: kohls-cce-openshift-lle
+  name: doms-cce-openshift-lle
   managed: true
   folderId: "124759181101"
   billingAccount: "00C36A-CD0BDB-E543D0"

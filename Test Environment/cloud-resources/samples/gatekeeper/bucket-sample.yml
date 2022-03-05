@@ -5,7 +5,7 @@ metadata:
   labels:
     label-one: "value-one"
   name: mark-bucket-sample
-  namespace: gcp-kohlsdev-cpa-inspec
+  namespace: gcp-domsdev-cpa-inspec
 spec:
   lifecycleRule:
   - action:

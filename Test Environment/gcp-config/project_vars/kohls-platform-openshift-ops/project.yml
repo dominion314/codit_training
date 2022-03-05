@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90586"
 project:
-  name: kohls-platform-openshift-ops
+  name: doms-platform-openshift-ops
   managed: true
   folderId: "1057338141298"
   billingAccount: "00C36A-CD0BDB-E543D0"

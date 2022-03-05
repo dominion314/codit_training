@@ -1,7 +1,7 @@
 ---
 iamPolicyMembers:
   groupsByEmail:
-    gcp-cpe-cne-devops-admin@kohls.com:
+    gcp-cpe-cne-devops-admin@doms.com:
       roles:
       - compute.storageAdmin
       - iam.serviceAccountUser
@@ -11,7 +11,7 @@ iamPolicyMembers:
       - container.admin
       - container.developer
       - compute.loadBalancerAdmin
-    gcp-cpe-cne-devops-l3@kohls.com:
+    gcp-cpe-cne-devops-l3@doms.com:
       roles:
       - compute.storageAdmin
       - iam.serviceAccountUser

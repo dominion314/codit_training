@@ -11,8 +11,8 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - GCP-DevOps-ECom@kohls.com
-          - gcp-bda-devops-admin@kohls.com
+          - GCP-DevOps-ECom@doms.com
+          - gcp-bda-devops-admin@doms.com
       cx-nx-lle-poc-c1-pub01:
         advertiseRoutes: true
         region: us-central1
@@ -22,8 +22,8 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - GCP-DevOps-ECom@kohls.com
-          - gcp-bda-devops-admin@kohls.com
+          - GCP-DevOps-ECom@doms.com
+          - gcp-bda-devops-admin@doms.com
       # Subnet for SHOP LLE
       cx-nx-lle-shop-c1-prv01:
         advertiseRoutes: true
@@ -35,9 +35,9 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - GCP-DevOps-ECom@kohls.com
+          - GCP-DevOps-ECom@doms.com
           serviceAccountsByEmail:
-          - terraform-devops-ecom@kohls-cx-shop-lle.iam.gserviceaccount.com
+          - terraform-devops-ecom@doms-cx-shop-lle.iam.gserviceaccount.com
           - 720664412239@cloudservices.gserviceaccount.com
       cx-nx-lle-shop-c1-pub01:
         advertiseRoutes: true
@@ -49,9 +49,9 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - GCP-DevOps-ECom@kohls.com
+          - GCP-DevOps-ECom@doms.com
           serviceAccountsByEmail:
-          - terraform-devops-ecom@kohls-cx-shop-lle.iam.gserviceaccount.com
+          - terraform-devops-ecom@doms-cx-shop-lle.iam.gserviceaccount.com
           - 720664412239@cloudservices.gserviceaccount.com
       cx-nx-lle-shop-c1-prv02:
         advertiseRoutes: true
@@ -63,9 +63,9 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - GCP-DevOps-ECom@kohls.com
+          - GCP-DevOps-ECom@doms.com
           serviceAccountsByEmail:
-          - terraform-devops-ecom@kohls-cx-shop-lle.iam.gserviceaccount.com
+          - terraform-devops-ecom@doms-cx-shop-lle.iam.gserviceaccount.com
           - 720664412239@cloudservices.gserviceaccount.com
       cx-nx-lle-shop-c1-pub02:
         advertiseRoutes: true
@@ -77,9 +77,9 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - GCP-DevOps-ECom@kohls.com
+          - GCP-DevOps-ECom@doms.com
           serviceAccountsByEmail:
-          - terraform-devops-ecom@kohls-cx-shop-lle.iam.gserviceaccount.com
+          - terraform-devops-ecom@doms-cx-shop-lle.iam.gserviceaccount.com
           - 720664412239@cloudservices.gserviceaccount.com
       cx-nx-lle-shop-e1-prv02:
         advertiseRoutes: true
@@ -90,9 +90,9 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - GCP-DevOps-ECom@kohls.com
+          - GCP-DevOps-ECom@doms.com
           serviceAccountsByEmail:
-          - terraform-devops-ecom@kohls-cx-shop-lle.iam.gserviceaccount.com
+          - terraform-devops-ecom@doms-cx-shop-lle.iam.gserviceaccount.com
           - 720664412239@cloudservices.gserviceaccount.com
       cx-nx-lle-shop-e1-pub02:
         advertiseRoutes: true
@@ -103,9 +103,9 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - GCP-DevOps-ECom@kohls.com
+          - GCP-DevOps-ECom@doms.com
           serviceAccountsByEmail:
-          - terraform-devops-ecom@kohls-cx-shop-lle.iam.gserviceaccount.com
+          - terraform-devops-ecom@doms-cx-shop-lle.iam.gserviceaccount.com
           - 720664412239@cloudservices.gserviceaccount.com
 
       # Subnet for SHOP PCI LLE
@@ -118,10 +118,10 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - GCP-DevOps-ECom@kohls.com
+          - GCP-DevOps-ECom@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-cx-pci-lle.iam.gserviceaccount.com
-          - terraform-provisioning-pnf@kohls-cx-pci-lle.iam.gserviceaccount.com
+          - terraform-devops@doms-cx-pci-lle.iam.gserviceaccount.com
+          - terraform-provisioning-pnf@doms-cx-pci-lle.iam.gserviceaccount.com
           - 914828095137@cloudservices.gserviceaccount.com
       cx-nx-lle-pci-c1-pub01:
         advertiseRoutes: true
@@ -132,10 +132,10 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - GCP-DevOps-ECom@kohls.com
+          - GCP-DevOps-ECom@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-cx-pci-lle.iam.gserviceaccount.com
-          - terraform-provisioning-pnf@kohls-cx-pci-lle.iam.gserviceaccount.com
+          - terraform-devops@doms-cx-pci-lle.iam.gserviceaccount.com
+          - terraform-provisioning-pnf@doms-cx-pci-lle.iam.gserviceaccount.com
           - 914828095137@cloudservices.gserviceaccount.com
       # Subnet for Loyalty-Retailservices LLE
       cx-nx-lle-loyalty-retailsrv-c1-prv01:
@@ -147,12 +147,12 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - GCP-DevOps-ECom@kohls.com
+          - GCP-DevOps-ECom@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-cx-loyalty-retailsrv-lle.iam.gserviceaccount.com
-          - terraform-devops@kohls-cx-rtl-lle.iam.gserviceaccount.com
+          - terraform-devops@doms-cx-loyalty-retailsrv-lle.iam.gserviceaccount.com
+          - terraform-devops@doms-cx-rtl-lle.iam.gserviceaccount.com
           - 647345806103@cloudservices.gserviceaccount.com
-          - terraform-provisioning-tvsc@kohls-cx-rtl-lle.iam.gserviceaccount.com
+          - terraform-provisioning-tvsc@doms-cx-rtl-lle.iam.gserviceaccount.com
           - 161654651294@cloudservices.gserviceaccount.com
       cx-nx-lle-loyalty-retailsrv-c1-pub01:
         advertiseRoutes: true
@@ -163,12 +163,12 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - GCP-DevOps-ECom@kohls.com
+          - GCP-DevOps-ECom@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-cx-loyalty-retailsrv-lle.iam.gserviceaccount.com
-          - terraform-devops@kohls-cx-rtl-lle.iam.gserviceaccount.com
+          - terraform-devops@doms-cx-loyalty-retailsrv-lle.iam.gserviceaccount.com
+          - terraform-devops@doms-cx-rtl-lle.iam.gserviceaccount.com
           - 647345806103@cloudservices.gserviceaccount.com
-          - terraform-provisioning-tvsc@kohls-cx-rtl-lle.iam.gserviceaccount.com
+          - terraform-provisioning-tvsc@doms-cx-rtl-lle.iam.gserviceaccount.com
           - 161654651294@cloudservices.gserviceaccount.com
       # private subnet for associate experience LLE
       cx-nx-lle-associate-c1-prv01:
@@ -181,18 +181,18 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - GCP-DevOps-ECom@kohls.com
-          - gcp-cx-devops-admin@kohls.com
-          - gcp-cx-softwareengineer-l3@kohls.com
-          - gcp-cx-softwareengineer-admin@kohls.com
-          - gcp-cx-softwareengineer-manager@kohls.com
-          - gcp-stores-associate-experience-softwareengineer-l3@kohls.com
+          - GCP-DevOps-ECom@doms.com
+          - gcp-cx-devops-admin@doms.com
+          - gcp-cx-softwareengineer-l3@doms.com
+          - gcp-cx-softwareengineer-admin@doms.com
+          - gcp-cx-softwareengineer-manager@doms.com
+          - gcp-stores-associate-experience-softwareengineer-l3@doms.com
           serviceAccountsByEmail:
           - 742724459254-compute@developer.gserviceaccount.com
           - 742724459254@cloudservices.gserviceaccount.com
-          - ppd-cxdev@kohls-cx-associate-lle.iam.gserviceaccount.com
-          - terraform-paas@kohls-cx-associate-lle.iam.gserviceaccount.com
-          - lle-cx-admin@kohls-cx-associate-lle.iam.gserviceaccount.com
+          - ppd-cxdev@doms-cx-associate-lle.iam.gserviceaccount.com
+          - terraform-paas@doms-cx-associate-lle.iam.gserviceaccount.com
+          - lle-cx-admin@doms-cx-associate-lle.iam.gserviceaccount.com
           - service-742724459254@dataflow-service-producer-prod.iam.gserviceaccount.com
       # public subnet for associate experience LLE
       cx-nx-lle-associate-c1-pub01:
@@ -204,15 +204,15 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - GCP-DevOps-ECom@kohls.com
-          - gcp-cx-devops-admin@kohls.com
-          - gcp-cx-softwareengineer-l3@kohls.com
-          - gcp-cx-softwareengineer-admin@kohls.com
-          - gcp-cx-softwareengineer-manager@kohls.com
-          - gcp-stores-associate-experience-softwareengineer-l3@kohls.com
+          - GCP-DevOps-ECom@doms.com
+          - gcp-cx-devops-admin@doms.com
+          - gcp-cx-softwareengineer-l3@doms.com
+          - gcp-cx-softwareengineer-admin@doms.com
+          - gcp-cx-softwareengineer-manager@doms.com
+          - gcp-stores-associate-experience-softwareengineer-l3@doms.com
           serviceAccountsByEmail:
-          - terraform-paas@kohls-cx-associate-lle.iam.gserviceaccount.com
-          - lle-cx-admin@kohls-cx-associate-lle.iam.gserviceaccount.com
+          - terraform-paas@doms-cx-associate-lle.iam.gserviceaccount.com
+          - lle-cx-admin@doms-cx-associate-lle.iam.gserviceaccount.com
       # private subnet for post purchase experience LLE
       cx-nx-lle-post-purchase-c1-prv01:
         advertiseRoutes: true
@@ -223,15 +223,15 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - GCP-DevOps-ECom@kohls.com
-          - gcp-cx-devops-admin@kohls.com
-          - gcp-cx-softwareengineer-l3@kohls.com
-          - gcp-cx-softwareengineer-admin@kohls.com
-          - gcp-cx-softwareengineer-manager@kohls.com
-          - gcp-stores-associate-experience-softwareengineer-l3@kohls.com
+          - GCP-DevOps-ECom@doms.com
+          - gcp-cx-devops-admin@doms.com
+          - gcp-cx-softwareengineer-l3@doms.com
+          - gcp-cx-softwareengineer-admin@doms.com
+          - gcp-cx-softwareengineer-manager@doms.com
+          - gcp-stores-associate-experience-softwareengineer-l3@doms.com
           serviceAccountsByEmail:
-          - terraform-paas@kohls-cx-post-purchase-lle.iam.gserviceaccount.com
-          - lle-cx-admin@kohls-cx-post-purchase-lle.iam.gserviceaccount.com
+          - terraform-paas@doms-cx-post-purchase-lle.iam.gserviceaccount.com
+          - lle-cx-admin@doms-cx-post-purchase-lle.iam.gserviceaccount.com
       # public subnet for post purchase experience LLE
       cx-nx-lle-post-purchase-c1-pub01:
         advertiseRoutes: true
@@ -242,15 +242,15 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - GCP-DevOps-ECom@kohls.com
-          - gcp-cx-devops-admin@kohls.com
-          - gcp-cx-softwareengineer-l3@kohls.com
-          - gcp-cx-softwareengineer-admin@kohls.com
-          - gcp-cx-softwareengineer-manager@kohls.com
-          - gcp-stores-associate-experience-softwareengineer-l3@kohls.com
+          - GCP-DevOps-ECom@doms.com
+          - gcp-cx-devops-admin@doms.com
+          - gcp-cx-softwareengineer-l3@doms.com
+          - gcp-cx-softwareengineer-admin@doms.com
+          - gcp-cx-softwareengineer-manager@doms.com
+          - gcp-stores-associate-experience-softwareengineer-l3@doms.com
           serviceAccountsByEmail:
-          - terraform-paas@kohls-cx-post-purchase-lle.iam.gserviceaccount.com
-          - lle-cx-admin@kohls-cx-post-purchase-lle.iam.gserviceaccount.com
+          - terraform-paas@doms-cx-post-purchase-lle.iam.gserviceaccount.com
+          - lle-cx-admin@doms-cx-post-purchase-lle.iam.gserviceaccount.com
       # public subnet for SRE LLE project
       cx-nx-lle-sre-c1-prv01:
         advertiseRoutes: true
@@ -261,16 +261,16 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - GCP-DevOps-ECom@kohls.com
-          - gcp-cx-devops-admin@kohls.com
-          - gcp-cx-softwareengineer-l3@kohls.com
-          - gcp-cx-softwareengineer-admin@kohls.com
-          - gcp-cx-softwareengineer-manager@kohls.com
-          - gcp-stores-associate-experience-softwareengineer-l3@kohls.com
-          - gcp-cce-sre-admin@kohls.com
+          - GCP-DevOps-ECom@doms.com
+          - gcp-cx-devops-admin@doms.com
+          - gcp-cx-softwareengineer-l3@doms.com
+          - gcp-cx-softwareengineer-admin@doms.com
+          - gcp-cx-softwareengineer-manager@doms.com
+          - gcp-stores-associate-experience-softwareengineer-l3@doms.com
+          - gcp-cce-sre-admin@doms.com
           serviceAccountsByEmail:
-          - terraform-provisioning-sre@kohls-cx-sre-lle.iam.gserviceaccount.com
-          - influxdb-sre@kohls-cx-sre-lle.iam.gserviceaccount.com
+          - terraform-provisioning-sre@doms-cx-sre-lle.iam.gserviceaccount.com
+          - influxdb-sre@doms-cx-sre-lle.iam.gserviceaccount.com
       # public subnet for SRE LLE project
       cx-nx-lle-sre-c1-pub01:
         advertiseRoutes: true
@@ -281,16 +281,16 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - GCP-DevOps-ECom@kohls.com
-          - gcp-cx-devops-admin@kohls.com
-          - gcp-cx-softwareengineer-l3@kohls.com
-          - gcp-cx-softwareengineer-admin@kohls.com
-          - gcp-cx-softwareengineer-manager@kohls.com
-          - gcp-stores-associate-experience-softwareengineer-l3@kohls.com
-          - gcp-cce-sre-admin@kohls.com
+          - GCP-DevOps-ECom@doms.com
+          - gcp-cx-devops-admin@doms.com
+          - gcp-cx-softwareengineer-l3@doms.com
+          - gcp-cx-softwareengineer-admin@doms.com
+          - gcp-cx-softwareengineer-manager@doms.com
+          - gcp-stores-associate-experience-softwareengineer-l3@doms.com
+          - gcp-cce-sre-admin@doms.com
           serviceAccountsByEmail:
-          - terraform-provisioning-sre@kohls-cx-sre-lle.iam.gserviceaccount.com
-          - influxdb-sre@kohls-cx-sre-lle.iam.gserviceaccount.com
+          - terraform-provisioning-sre@doms-cx-sre-lle.iam.gserviceaccount.com
+          - influxdb-sre@doms-cx-sre-lle.iam.gserviceaccount.com
       # Dedicated Subnet for BDA DSE
       cx-nx-lle-bda-dse-c1-prv01:
         advertiseRoutes: true
@@ -301,10 +301,10 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-bda-devops-admin@kohls.com
+          - gcp-bda-devops-admin@doms.com
           serviceAccountsByEmail:
-          - bda-devops@kohls-bda-dse-lle.iam.gserviceaccount.com
-          - bda-terraform@kohls-bda-dse-lle.iam.gserviceaccount.com
+          - bda-devops@doms-bda-dse-lle.iam.gserviceaccount.com
+          - bda-terraform@doms-bda-dse-lle.iam.gserviceaccount.com
           - 604987113172-compute@developer.gserviceaccount.com
           - service-604987113172@dataproc-accounts.iam.gserviceaccount.com
           - service-604987113172@dataflow-service-producer-prod.iam.gserviceaccount.com
@@ -317,10 +317,10 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-bda-devops-admin@kohls.com
+          - gcp-bda-devops-admin@doms.com
           serviceAccountsByEmail:
-          - bda-devops@kohls-bda-dse-lle.iam.gserviceaccount.com
-          - bda-terraform@kohls-bda-dse-lle.iam.gserviceaccount.com
+          - bda-devops@doms-bda-dse-lle.iam.gserviceaccount.com
+          - bda-terraform@doms-bda-dse-lle.iam.gserviceaccount.com
           - 604987113172-compute@developer.gserviceaccount.com
           - service-604987113172@dataproc-accounts.iam.gserviceaccount.com
           - service-604987113172@dataflow-service-producer-prod.iam.gserviceaccount.com
@@ -333,10 +333,10 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-bda-devops-admin@kohls.com
+          - gcp-bda-devops-admin@doms.com
           serviceAccountsByEmail:
-          - bda-devops@kohls-bda-dse-lle.iam.gserviceaccount.com
-          - bda-terraform@kohls-bda-dse-lle.iam.gserviceaccount.com
+          - bda-devops@doms-bda-dse-lle.iam.gserviceaccount.com
+          - bda-terraform@doms-bda-dse-lle.iam.gserviceaccount.com
           - 604987113172-compute@developer.gserviceaccount.com
           - service-604987113172@dataproc-accounts.iam.gserviceaccount.com
           - service-604987113172@dataflow-service-producer-prod.iam.gserviceaccount.com
@@ -349,10 +349,10 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-bda-devops-admin@kohls.com
+          - gcp-bda-devops-admin@doms.com
           serviceAccountsByEmail:
-          - bda-devops@kohls-bda-dse-lle.iam.gserviceaccount.com
-          - bda-terraform@kohls-bda-dse-lle.iam.gserviceaccount.com
+          - bda-devops@doms-bda-dse-lle.iam.gserviceaccount.com
+          - bda-terraform@doms-bda-dse-lle.iam.gserviceaccount.com
           - 604987113172-compute@developer.gserviceaccount.com
           - service-604987113172@dataproc-accounts.iam.gserviceaccount.com
           - service-604987113172@dataflow-service-producer-prod.iam.gserviceaccount.com
@@ -366,18 +366,18 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-xpaas-openshift-admin@kohls.com
-          - gcp-xpaas-openshift-l3@kohls.com
-          - gcp-xpaas-openshift-l2@kohls.com
+          - gcp-xpaas-openshift-admin@doms.com
+          - gcp-xpaas-openshift-l3@doms.com
+          - gcp-xpaas-openshift-l2@doms.com
           serviceAccountsByEmail:
-          - ocp-app-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com
-          - ocp-bootstrap-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com
-          - ocp-infra-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com
-          - ocp-installer-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com
-          - ocp-master-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com
-          - ocp-pci-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com
-          - ocp-pii-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com
-          - ocp-router-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com
+          - ocp-app-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com
+          - ocp-bootstrap-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com
+          - ocp-infra-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com
+          - ocp-installer-paas@doms-cce-openshift-lle.iam.gserviceaccount.com
+          - ocp-master-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com
+          - ocp-pci-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com
+          - ocp-pii-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com
+          - ocp-router-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com
       cx-nx-lle-openshift-e1-prv01:
         advertiseRoutes: true
         region: us-east1
@@ -388,18 +388,18 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-xpaas-openshift-admin@kohls.com
-          - gcp-xpaas-openshift-l3@kohls.com
-          - gcp-xpaas-openshift-l2@kohls.com
+          - gcp-xpaas-openshift-admin@doms.com
+          - gcp-xpaas-openshift-l3@doms.com
+          - gcp-xpaas-openshift-l2@doms.com
           serviceAccountsByEmail:
-          - ocp-app-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com
-          - ocp-bootstrap-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com
-          - ocp-infra-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com
-          - ocp-installer-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com
-          - ocp-master-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com
-          - ocp-pci-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com
-          - ocp-pii-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com
-          - ocp-router-node-paas@kohls-cce-openshift-lle.iam.gserviceaccount.com
+          - ocp-app-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com
+          - ocp-bootstrap-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com
+          - ocp-infra-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com
+          - ocp-installer-paas@doms-cce-openshift-lle.iam.gserviceaccount.com
+          - ocp-master-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com
+          - ocp-pci-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com
+          - ocp-pii-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com
+          - ocp-router-node-paas@doms-cce-openshift-lle.iam.gserviceaccount.com
       platform-nx-lle-dbaas-c1-prv01:
         advertiseRoutes: true
         region: us-central1
@@ -409,17 +409,17 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-et-devops-admin@kohls.com
-          - gcp-et-devops-l3@kohls.com
-          - gcp-infra-dataservices-systemsengineer-l3@kohls.com
-          - gcp-infra-dataservices-systemsengineer-admin@kohls.com
+          - gcp-et-devops-admin@doms.com
+          - gcp-et-devops-l3@doms.com
+          - gcp-infra-dataservices-systemsengineer-l3@doms.com
+          - gcp-infra-dataservices-systemsengineer-admin@doms.com
           # Add provisioning service account
           serviceAccountsByEmail:
           - 548075825585@cloudservices.gserviceaccount.com
-          - pmm-dba@kohls-cce-dbaas-lle.iam.gserviceaccount.com
-          - mysql-dba@kohls-cce-dbaas-lle.iam.gserviceaccount.com
-          - mongo-dba@kohls-cce-dbaas-lle.iam.gserviceaccount.com
-          - platform-devops@kohls-cce-dbaas-lle.iam.gserviceaccount.com
+          - pmm-dba@doms-cce-dbaas-lle.iam.gserviceaccount.com
+          - mysql-dba@doms-cce-dbaas-lle.iam.gserviceaccount.com
+          - mongo-dba@doms-cce-dbaas-lle.iam.gserviceaccount.com
+          - platform-devops@doms-cce-dbaas-lle.iam.gserviceaccount.com
 
       platform-nx-lle-dbaas-e1-prv01:
         advertiseRoutes: true
@@ -430,17 +430,17 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-et-devops-admin@kohls.com
-          - gcp-et-devops-l3@kohls.com
-          - gcp-infra-dataservices-systemsengineer-l3@kohls.com
-          - gcp-infra-dataservices-systemsengineer-admin@kohls.com
+          - gcp-et-devops-admin@doms.com
+          - gcp-et-devops-l3@doms.com
+          - gcp-infra-dataservices-systemsengineer-l3@doms.com
+          - gcp-infra-dataservices-systemsengineer-admin@doms.com
           # Add provisioning service account
           serviceAccountsByEmail:
           - 548075825585@cloudservices.gserviceaccount.com
-          - pmm-dba@kohls-cce-dbaas-lle.iam.gserviceaccount.com
-          - mysql-dba@kohls-cce-dbaas-lle.iam.gserviceaccount.com
-          - mongo-dba@kohls-cce-dbaas-lle.iam.gserviceaccount.com
-          - platform-devops@kohls-cce-dbaas-lle.iam.gserviceaccount.com
+          - pmm-dba@doms-cce-dbaas-lle.iam.gserviceaccount.com
+          - mysql-dba@doms-cce-dbaas-lle.iam.gserviceaccount.com
+          - mongo-dba@doms-cce-dbaas-lle.iam.gserviceaccount.com
+          - platform-devops@doms-cce-dbaas-lle.iam.gserviceaccount.com
 
       platform-nx-lle-dbaas-c1-prv02:
         advertiseRoutes: true
@@ -451,17 +451,17 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-et-devops-admin@kohls.com
-          - gcp-et-devops-l3@kohls.com
-          - gcp-infra-dataservices-systemsengineer-l3@kohls.com
-          - gcp-infra-dataservices-systemsengineer-admin@kohls.com
+          - gcp-et-devops-admin@doms.com
+          - gcp-et-devops-l3@doms.com
+          - gcp-infra-dataservices-systemsengineer-l3@doms.com
+          - gcp-infra-dataservices-systemsengineer-admin@doms.com
           # Add provisioning service account
           serviceAccountsByEmail:
           - 548075825585@cloudservices.gserviceaccount.com
-          - pmm-dba@kohls-cce-dbaas-lle.iam.gserviceaccount.com
-          - mysql-dba@kohls-cce-dbaas-lle.iam.gserviceaccount.com
-          - mongo-dba@kohls-cce-dbaas-lle.iam.gserviceaccount.com
-          - platform-devops@kohls-cce-dbaas-lle.iam.gserviceaccount.com
+          - pmm-dba@doms-cce-dbaas-lle.iam.gserviceaccount.com
+          - mysql-dba@doms-cce-dbaas-lle.iam.gserviceaccount.com
+          - mongo-dba@doms-cce-dbaas-lle.iam.gserviceaccount.com
+          - platform-devops@doms-cce-dbaas-lle.iam.gserviceaccount.com
 
       platform-nx-lle-dbaas-e1-prv02:
         advertiseRoutes: true
@@ -472,14 +472,14 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-et-devops-admin@kohls.com
-          - gcp-et-devops-l3@kohls.com
-          - gcp-infra-dataservices-systemsengineer-l3@kohls.com
-          - gcp-infra-dataservices-systemsengineer-admin@kohls.com
+          - gcp-et-devops-admin@doms.com
+          - gcp-et-devops-l3@doms.com
+          - gcp-infra-dataservices-systemsengineer-l3@doms.com
+          - gcp-infra-dataservices-systemsengineer-admin@doms.com
           # Add provisioning service account
           serviceAccountsByEmail:
           - 548075825585@cloudservices.gserviceaccount.com
-          - pmm-dba@kohls-cce-dbaas-lle.iam.gserviceaccount.com
-          - mysql-dba@kohls-cce-dbaas-lle.iam.gserviceaccount.com
-          - mongo-dba@kohls-cce-dbaas-lle.iam.gserviceaccount.com
-          - platform-devops@kohls-cce-dbaas-lle.iam.gserviceaccount.com
+          - pmm-dba@doms-cce-dbaas-lle.iam.gserviceaccount.com
+          - mysql-dba@doms-cce-dbaas-lle.iam.gserviceaccount.com
+          - mongo-dba@doms-cce-dbaas-lle.iam.gserviceaccount.com
+          - platform-devops@doms-cce-dbaas-lle.iam.gserviceaccount.com

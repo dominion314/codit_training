@@ -279,7 +279,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-ssh
-      gspann-b2b-to-kohls-ecom-xpn-ecmdm-lle:
+      gspann-b2b-to-doms-ecom-xpn-ecmdm-lle:
         description: SCTASK0961026,SCTASK0975033,SCTASK0988867,SCTASK0988868,SCTASK0988865
         direction: INGRESS
         disabled: false
@@ -314,7 +314,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-ssh
-      kohls-ddh-lle-to-ecom-ecmdm-lle:
+      doms-ddh-lle-to-ecom-ecmdm-lle:
         description: SCTASK0792842,SCTASK1001228
         direction: INGRESS
         disabled: false
@@ -348,7 +348,7 @@ vpcs:
             - fw-emysql-hle
             - fw-essh-hle
             - fw-enetdiagnostics-hle
-      kohls-ecom-ecom-ecmdm-lle-to-onprem-nas:
+      doms-ecom-ecom-ecmdm-lle-to-onprem-nas:
         description: SCTASK0755729
         direction: EGRESS
         disabled: false
@@ -368,7 +368,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-ssh
-      kohls-ecom-xpn-lle-intra-subnet-access-tcp:
+      doms-ecom-xpn-lle-intra-subnet-access-tcp:
         description: SCTASK0712608
         direction: INGRESS
         disabled: false
@@ -390,7 +390,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-kafka
-      kohls-ecom-xpn-lle-to-ecom-ecmdm-lle-01:
+      doms-ecom-xpn-lle-to-ecom-ecmdm-lle-01:
         description: SCTASK0676927
         direction: INGRESS
         disabled: false
@@ -411,7 +411,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-kafka
-      kohls-kos-xpn-cicd-01-to-ecom-ecmdm-lle-01:
+      doms-kos-xpn-cicd-01-to-ecom-ecmdm-lle-01:
         description: SCTASK0761017,SCTASK0787202
         direction: INGRESS
         disabled: false
@@ -440,7 +440,7 @@ vpcs:
             - ecmdm-qa01-blue-trgr-vm
             - mysql
             - blue
-            - fw-kohls-cavisson-vm
+            - fw-doms-cavisson-vm
             - fw-mysql
             - fw-ecmdm-realtime
             - fw-http
@@ -448,7 +448,7 @@ vpcs:
             - fw-wrkr-vm
             - fw-https
             - ecmdm-qa01
-      kohls-kos-xpn-cicd-central-pub-secure-ecom-ecmdm:
+      doms-kos-xpn-cicd-central-pub-secure-ecom-ecmdm:
         description: SCTASK0703942
         direction: INGRESS
         disabled: false
@@ -468,7 +468,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-db-kafka-zk
-      kohls-onprem-users-access-to-ecom-ecmdm-lle-01:
+      doms-onprem-users-access-to-ecom-ecmdm-lle-01:
         description: SCTASK0676927
         direction: INGRESS
         disabled: false
@@ -506,7 +506,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-consul
-      kohls-onprem-users-access-to-ecom-ecmdm-lle-02:
+      doms-onprem-users-access-to-ecom-ecmdm-lle-02:
         description: SCTASK0676927
         direction: INGRESS
         disabled: false
@@ -534,7 +534,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-haproxy
-      kohls-onprem-users-access-to-ecom-ecmdm-lle-03:
+      doms-onprem-users-access-to-ecom-ecmdm-lle-03:
         description: SCTASK0676927
         direction: INGRESS
         disabled: false
@@ -581,7 +581,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-http
-      kohls-onprem-users-access-to-ecom-ecmdm-lle-04:
+      doms-onprem-users-access-to-ecom-ecmdm-lle-04:
         description: SCTASK0676927
         direction: INGRESS
         disabled: false
@@ -630,7 +630,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-https
-      kohls-onprem-users-access-to-ecom-ecmdm-lle-05:
+      doms-onprem-users-access-to-ecom-ecmdm-lle-05:
         description: SCTASK0676927
         direction: INGRESS
         disabled: false
@@ -659,7 +659,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-ssh
-      kohls-onprem-users-access-to-ecom-ecmdm-lle-06:
+      doms-onprem-users-access-to-ecom-ecmdm-lle-06:
         description: SCTASK0676927
         direction: INGRESS
         disabled: false
@@ -695,7 +695,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-vault
-      kohls-onprem-users-access-to-ecom-ecmdm-lle-07:
+      doms-onprem-users-access-to-ecom-ecmdm-lle-07:
         description: SCTASK0676927
         direction: INGRESS
         disabled: false
@@ -730,7 +730,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-zookeeper
-      kohls-onprem-users-access-to-ecom-ecmdm-lle-08:
+      doms-onprem-users-access-to-ecom-ecmdm-lle-08:
         description: SCTASK0676927
         direction: INGRESS
         disabled: false
@@ -758,7 +758,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-zkui
-      kohls-onprem-users-access-to-ecom-ecmdm-lle-09:
+      doms-onprem-users-access-to-ecom-ecmdm-lle-09:
         description: SCTASK0676927
         direction: INGRESS
         disabled: false
@@ -936,7 +936,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-https
-      on-prem-atg-ing-to-kohls-ecom-ecmdm-lle-ssh:
+      on-prem-atg-ing-to-doms-ecom-ecmdm-lle-ssh:
         description: SCTASK0756441
         direction: INGRESS
         disabled: false
@@ -1225,7 +1225,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-ssh
-      onprem-poc-env-ing-to-kohls-ecom-ecmdm-lle-ssh:
+      onprem-poc-env-ing-to-doms-ecom-ecmdm-lle-ssh:
         description: SCTASK0756441
         direction: INGRESS
         disabled: false
@@ -1445,7 +1445,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
             - fw-ssh
-      stores-preprod-ing-to-kohls-ecom-ecmdm-lle-ssh:
+      stores-preprod-ing-to-doms-ecom-ecmdm-lle-ssh:
         description: SCTASK0756441
         direction: INGRESS
         disabled: false

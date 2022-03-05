@@ -1,7 +1,7 @@
 ---
 iamPolicyMembersV2:
   serviceAccountsByEmail:
-    consul-paas@kohls-eta-credit-prd.iam.gserviceaccount.com:
+    consul-paas@doms-eta-credit-prd.iam.gserviceaccount.com:
     - role: CustomRole130
       OrgId: 1035901152068
     - role: CustomRole150
@@ -9,27 +9,27 @@ iamPolicyMembersV2:
     - role: CustomRole703
       OrgId: 1035901152068
     - role: compute.networkUser
-    mongo-dba@kohls-eta-credit-prd.iam.gserviceaccount.com:
+    mongo-dba@doms-eta-credit-prd.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: iam.serviceAccountUser
-    mysql-dba@kohls-eta-credit-prd.iam.gserviceaccount.com:
+    mysql-dba@doms-eta-credit-prd.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: iam.serviceAccountUser
-    terraform-devops@kohls-eta-credit-prd.iam.gserviceaccount.com:
+    terraform-devops@doms-eta-credit-prd.iam.gserviceaccount.com:
     - role: compute.instanceAdmin.v1
     - role: compute.networkUser
     - role: compute.storageAdmin
     - role: iam.serviceAccountUser
     - role: storage.admin
-    credit-storage-eta@kohls-eta-credit-prd.iam.gserviceaccount.com:
+    credit-storage-eta@doms-eta-credit-prd.iam.gserviceaccount.com:
     - role: storage.admin
     - role: storage.objectAdmin
     - role: storage.objectCreator
     - role: storage.objectViewer
   groupsByEmail:
-    gcp-eta-devops-admin@kohls.com:
+    gcp-eta-devops-admin@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: compute.networkViewer
@@ -41,7 +41,7 @@ iamPolicyMembersV2:
     - role: logging.privateLogViewer
     - role: logging.viewer
     - role: monitoring.admin
-    gcp-eta-devops-l3@kohls.com:
+    gcp-eta-devops-l3@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068
     - role: compute.networkViewer
@@ -52,6 +52,6 @@ iamPolicyMembersV2:
     - role: logging.privateLogViewer
     - role: logging.viewer
     - role: monitoring.admin
-    gcp-marketing-sd-admin@kohls.com:
+    gcp-marketing-sd-admin@doms.com:
     - role: CustomViewer486
       OrgId: 1035901152068

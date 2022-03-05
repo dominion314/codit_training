@@ -11,9 +11,9 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-ecom-cmdm-productionengineer-admin@kohls.com
+          - gcp-ecom-cmdm-productionengineer-admin@doms.com
           serviceAccountsByEmail:
-          - terraform-provisioning-ecmdm@kohls-ecom-ecmdm-prd.iam.gserviceaccount.com
+          - terraform-provisioning-ecmdm@doms-ecom-ecmdm-prd.iam.gserviceaccount.com
           - 583169212333-compute@developer.gserviceaccount.com
           - 583169212333@cloudservices.gserviceaccount.com
       ecom-nx-prd-ecmdm-c1-sec01:
@@ -25,9 +25,9 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-ecom-cmdm-productionengineer-admin@kohls.com
+          - gcp-ecom-cmdm-productionengineer-admin@doms.com
           serviceAccountsByEmail:
-          - terraform-provisioning-ecmdm@kohls-ecom-ecmdm-prd.iam.gserviceaccount.com
+          - terraform-provisioning-ecmdm@doms-ecom-ecmdm-prd.iam.gserviceaccount.com
           - 583169212333-compute@developer.gserviceaccount.com
           - 583169212333@cloudservices.gserviceaccount.com
       ecom-nx-prd-ecmdm-c1-pub01:
@@ -39,9 +39,9 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-ecom-cmdm-productionengineer-admin@kohls.com
+          - gcp-ecom-cmdm-productionengineer-admin@doms.com
           serviceAccountsByEmail:
-          - terraform-provisioning-ecmdm@kohls-ecom-ecmdm-prd.iam.gserviceaccount.com
+          - terraform-provisioning-ecmdm@doms-ecom-ecmdm-prd.iam.gserviceaccount.com
           - 583169212333-compute@developer.gserviceaccount.com
           - 583169212333@cloudservices.gserviceaccount.com
       ecom-nx-prd-ecmdm-e1-prv01:
@@ -53,9 +53,9 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-ecom-cmdm-productionengineer-admin@kohls.com
+          - gcp-ecom-cmdm-productionengineer-admin@doms.com
           serviceAccountsByEmail:
-          - terraform-provisioning-ecmdm@kohls-ecom-ecmdm-prd.iam.gserviceaccount.com
+          - terraform-provisioning-ecmdm@doms-ecom-ecmdm-prd.iam.gserviceaccount.com
           - 583169212333-compute@developer.gserviceaccount.com
           - 583169212333@cloudservices.gserviceaccount.com
       ecom-nx-prd-ecmdm-e1-sec01:
@@ -67,9 +67,9 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-ecom-cmdm-productionengineer-admin@kohls.com
+          - gcp-ecom-cmdm-productionengineer-admin@doms.com
           serviceAccountsByEmail:
-          - terraform-provisioning-ecmdm@kohls-ecom-ecmdm-prd.iam.gserviceaccount.com
+          - terraform-provisioning-ecmdm@doms-ecom-ecmdm-prd.iam.gserviceaccount.com
           - 583169212333-compute@developer.gserviceaccount.com
           - 583169212333@cloudservices.gserviceaccount.com
       ecom-nx-prd-ecmdm-e1-pub01:
@@ -81,9 +81,9 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-ecom-cmdm-productionengineer-admin@kohls.com
+          - gcp-ecom-cmdm-productionengineer-admin@doms.com
           serviceAccountsByEmail:
-          - terraform-provisioning-ecmdm@kohls-ecom-ecmdm-prd.iam.gserviceaccount.com
+          - terraform-provisioning-ecmdm@doms-ecom-ecmdm-prd.iam.gserviceaccount.com
           - 583169212333-compute@developer.gserviceaccount.com
           - 583169212333@cloudservices.gserviceaccount.com
       ecom-nx-prd-sre-theia-c1-prv01:
@@ -95,9 +95,9 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-ecom-cmdm-productionengineer-admin@kohls.com
+          - gcp-ecom-cmdm-productionengineer-admin@doms.com
           serviceAccountsByEmail:
-          - terraform-provisioning-ecmdm@kohls-ecom-ecmdm-prd.iam.gserviceaccount.com
+          - terraform-provisioning-ecmdm@doms-ecom-ecmdm-prd.iam.gserviceaccount.com
           - 583169212333-compute@developer.gserviceaccount.com
           - 583169212333@cloudservices.gserviceaccount.com
       ecom-nx-prd-sre-theia-e1-prv01:
@@ -109,8 +109,8 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-ecom-cmdm-productionengineer-admin@kohls.com
+          - gcp-ecom-cmdm-productionengineer-admin@doms.com
           serviceAccountsByEmail:
-          - terraform-provisioning-ecmdm@kohls-ecom-ecmdm-prd.iam.gserviceaccount.com
+          - terraform-provisioning-ecmdm@doms-ecom-ecmdm-prd.iam.gserviceaccount.com
           - 583169212333-compute@developer.gserviceaccount.com
           - 583169212333@cloudservices.gserviceaccount.com

@@ -1,9 +1,9 @@
 ---
 billingDeptId: "90586"
 projectSharing:
-- kohls-cpe-e2edemo-lle
+- doms-cpe-e2edemo-lle
 project:
-  name: kohls-cpe-e2edemoxpn-lle
+  name: doms-cpe-e2edemoxpn-lle
   managed: true
   folderId: "778811484176"
   billingAccount: "00C36A-CD0BDB-E543D0"

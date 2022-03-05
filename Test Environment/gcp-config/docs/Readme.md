@@ -19,7 +19,7 @@ However if you DO have resources in a Google project, you can easily determine i
 
 If your GCE resources do not have `-nx-` within the name, a migration is likely needed.  A migration will involve moving or recreating your GCE resources to NetX.  To move these resources, it's ultimately up to the application owner on how they'd like to move these compute resources.  Some may want to lift and shift, others will create additional resources in tandem and shifting workloads over slowly.  If your host project remains the same, your service projects can simply be managed with GitOps and you can continue to use it as you have.
 
-> **NOTE: If your compute  resources are found in `kohls-xpn-project`, or a new host project is required, you will not be able to retain your existing service projects for GCE use.**
+> **NOTE: If your compute  resources are found in `doms-xpn-project`, or a new host project is required, you will not be able to retain your existing service projects for GCE use.**
 
 When evaluating your options to migrate, the infrastructure teams encourage all staff to consider onboarding to the Kohl's platform which uses both NetX and shared Openshift clusters.  These clusters abstract most infrastructure away from you, to allow you to focus on your codebase and deployments.  If you're unsure if these environments will suit your needs, open a conversation with Product Owners/Managers to determine the right approach.
 
@@ -45,9 +45,9 @@ Managing an existing service project (which is possible in some scenarios) and c
 
 The documentation for building project definitions in this repo refer to some of the following documents
 
-- [Projects/](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/tree/main/docs/Projects)
-- [Projects/Project_Jump_Start_Guide.md](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Project_Jump_Start_Guide.md)
-- [Projects/Service_Projects.md](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Service_Projects.md)
+- [Projects/](https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/tree/main/docs/Projects)
+- [Projects/Project_Jump_Start_Guide.md](https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Project_Jump_Start_Guide.md)
+- [Projects/Service_Projects.md](https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Service_Projects.md)
 
 ## Managing IAM Permissions and Service Accounts
 
@@ -55,21 +55,21 @@ If you already have IAM and service accounts set up in your existing projects, y
 
 To build your IAM policy sets and/or service accounts, refer to these details to help build your config file in the appropriate project folder
 
-- [Projects/Parameter_Schema.md](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Parameter_Schema.md)
+- [Projects/Parameter_Schema.md](https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Parameter_Schema.md)
 
 ## Planning and Managing Subnets for Compute
 
-When IAM has been set up and your [service project has been connected to the host project](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Service_Projects.md#4-attach-host-project-to-the-service-project), getting subnetworks shared to the project is now possible.
+When IAM has been set up and your [service project has been connected to the host project](https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Service_Projects.md#4-attach-host-project-to-the-service-project), getting subnetworks shared to the project is now possible.
 
 The process will require code to be deployed to your host project with permission information.  Here are some documents to help with this configuration.
 
-- [Network/IP_Address_Allocation](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Network/IP_Address_Allocation.md)
-- [Network/Adding_Subnetworks_To_Service_Projects.md](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Network/Adding_Subnetworks_To_Service_Projects.md)
-- [Network/VPC_Networks_Subnetworks.md](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Network/VPC_Networks_Subnetworks.md#subnetworks)
+- [Network/IP_Address_Allocation](https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Network/IP_Address_Allocation.md)
+- [Network/Adding_Subnetworks_To_Service_Projects.md](https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Network/Adding_Subnetworks_To_Service_Projects.md)
+- [Network/VPC_Networks_Subnetworks.md](https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Network/VPC_Networks_Subnetworks.md#subnetworks)
 
 ## Planning and Requesting Firewall Rules
 
 Once you have IAM, service accounts, and subnetworks available to your service project, firewall rules need to be considered to permit access into most GCE you create.  The following documents will help guide you through planning and request FW rules.
 
-- [Firewall/Planning_Firewall_Rules.md](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Firewall/Planning_Firewall_Rules.md)
-- [Firewall/VPC_Firewalls.md](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Firewall/VPC_Firewalls.md)
+- [Firewall/Planning_Firewall_Rules.md](https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Firewall/Planning_Firewall_Rules.md)
+- [Firewall/VPC_Firewalls.md](https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Firewall/VPC_Firewalls.md)

@@ -4,5 +4,5 @@ vpcs:
     vpcPeering:
 
       xpn-transit-to-demo2-vpc:
-        remoteProject: kohls-dev-cne-demo2-lle
+        remoteProject: doms-dev-cne-demo2-lle
         remoteVPC: demo2-vpc

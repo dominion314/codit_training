@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90548"
 project:
-  name: kohls-platform-xpn-prd
+  name: doms-platform-xpn-prd
   deletionProtect: true
   managed: true
   folderId: "970875009337"
@@ -31,7 +31,7 @@ serviceAPIs:
   firewallinsights.googleapis.com:
 
 projectSharing:
-- kohls-platform-dbaas-prd
-- kohls-platform-maas-prd
-- kohls-platform-netservices-prd
-- kohls-platform-openshift-prd
+- doms-platform-dbaas-prd
+- doms-platform-maas-prd
+- doms-platform-netservices-prd
+- doms-platform-openshift-prd

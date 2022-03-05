@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90528"
 project:
-  name: kohls-infra-vmo-prd
+  name: doms-infra-vmo-prd
   deletionProtect: true
   managed: true
   folderId: "980929416788"

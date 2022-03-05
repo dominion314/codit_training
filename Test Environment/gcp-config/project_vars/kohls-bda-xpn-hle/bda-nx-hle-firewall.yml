@@ -2,7 +2,7 @@
 vpcs:
   bda-nx-hle:
     firewallRules:
-      aient-access-ingress-kohls-bda-hle:
+      aient-access-ingress-doms-bda-hle:
         description: SCTASK0795207
         direction: INGRESS
         disabled: false
@@ -93,7 +93,7 @@ vpcs:
           - protocol: "udp"
             ports:
             - "1-65535"
-      kohls-onprem-proxy-to-ms-hle:
+      doms-onprem-proxy-to-ms-hle:
         description: SCTASK0650961
         direction: INGRESS
         disabled: false
@@ -113,7 +113,7 @@ vpcs:
           sourceTags:
           targetServiceAccounts:
           targetTags:
-      kohls-onprem-users-access-to-elb-ms-hle:
+      doms-onprem-users-access-to-elb-ms-hle:
         description: SCTASK0608900
         direction: INGRESS
         disabled: false
@@ -167,7 +167,7 @@ vpcs:
             - "8501"
             - "8088"
             - "18080"
-      kohls-onprem-users-kafka-access:
+      doms-onprem-users-kafka-access:
         description: SCTASK0640037
         direction: INGRESS
         disabled: false
@@ -201,7 +201,7 @@ vpcs:
           - kafka
           - fw-bd-kafka
           - fw-bd-kafka-hle
-      kohls-onprem-users-redis-access:
+      doms-onprem-users-redis-access:
         description: SCTASK0565489
         direction: INGRESS
         disabled: false
@@ -230,7 +230,7 @@ vpcs:
           targetServiceAccounts:
           targetTags:
           - fw-bd-redis-hle
-      kohls-onprem-users-consul-vault-access:
+      doms-onprem-users-consul-vault-access:
         description: SCTASK1020957
         direction: INGRESS
         disabled: false
@@ -456,7 +456,7 @@ vpcs:
           - protocol: "tcp"
             ports:
             - "22"
-      kohls-kos-xpn-cicd-to-ms-hle:
+      doms-kos-xpn-cicd-to-ms-hle:
         description: SCTASK0565489
         direction: INGRESS
         disabled: false
@@ -475,7 +475,7 @@ vpcs:
           sourceTags:
           targetServiceAccounts:
           targetTags:
-      kohls-kos-hle-ingress-to-ms-hle-http-https:
+      doms-kos-hle-ingress-to-ms-hle-http-https:
         description: SCTASK0991126
         direction: INGRESS
         disabled: false
@@ -503,7 +503,7 @@ vpcs:
           targetTags:
           - fw-http
           - fw-https
-      kohls-kos-lle-ingress-https:
+      doms-kos-lle-ingress-https:
         description: SCTASK0917403
         direction: INGRESS
         disabled: false

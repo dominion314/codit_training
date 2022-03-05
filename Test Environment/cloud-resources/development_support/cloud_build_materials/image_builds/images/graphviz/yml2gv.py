@@ -8,7 +8,7 @@ You can create actual graph using dot utility. For example:
     dot input.gv -Tpdf -o input.pdf
 """
 __author__ = "Pavel Leonovitch"
-__copyright__ = "Copyright 2019, Kohls"
+__copyright__ = "Copyright 2019, doms"
 
 import uuid
 import random

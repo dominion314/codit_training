@@ -1,8 +1,8 @@
 ---
 storageBuckets:
-  kohls-bda-ers-biz:
+  doms-bda-ers-biz:
     acls:
       groupsByEmail:
-        gcp-ers-gcp-labs-user@kohls.com: WRITER
-        gcp-ers-gcp-labs-superuser@kohls.com: WRITER
-        gcp-bda-devops-admin@kohls.com: OWNER
+        gcp-ers-gcp-labs-user@doms.com: WRITER
+        gcp-ers-gcp-labs-superuser@doms.com: WRITER
+        gcp-bda-devops-admin@doms.com: OWNER

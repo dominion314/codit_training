@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohlsdev-cpa-test01-lle-bucket-01:
+  domsdev-cpa-test01-lle-bucket-01:
     versioningEnabled: false
     labels:
       versioning: "false"
@@ -26,7 +26,7 @@ storageBuckets:
         - "SOMESTORAGECLASS"
         withState: SURE
 
-  kohlsdev-cpa-test01-lle-bucket-02:
+  domsdev-cpa-test01-lle-bucket-02:
     versioningEnabled: true
     labels:
       versioning: "true"

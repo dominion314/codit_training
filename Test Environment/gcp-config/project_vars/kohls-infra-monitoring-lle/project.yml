@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90528"
 project:
-  name: kohls-infra-monitoring-lle
+  name: doms-infra-monitoring-lle
   managed: true
   deletionProtect: true
   folderId: "345254712059"

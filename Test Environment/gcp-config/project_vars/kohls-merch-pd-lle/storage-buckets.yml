@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-merch-sp-mft-dev-lle-bucket:
+  doms-merch-sp-mft-dev-lle-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: STANDARD
@@ -15,17 +15,17 @@ storageBuckets:
           age: 7
     permissions:
       serviceAccountsByEmail:
-        sp-mockshop-intg-lle@kohls-merch-pd-lle.iam.gserviceaccount.com:
+        sp-mockshop-intg-lle@doms-merch-pd-lle.iam.gserviceaccount.com:
           roles:
             - storage.admin
-        sp-jarvis-intg-lle@kohls-merch-pd-lle.iam.gserviceaccount.com:
+        sp-jarvis-intg-lle@doms-merch-pd-lle.iam.gserviceaccount.com:
           roles:
             - storage.admin
       groupsByEmail:
-        gcp-merch-pdpl-softwareengineer-admin@kohls.com:
+        gcp-merch-pdpl-softwareengineer-admin@doms.com:
           roles:
             - storage.admin
-        gcp-merch-pdpl-softwareengineer-l3@kohls.com:
+        gcp-merch-pdpl-softwareengineer-l3@doms.com:
           roles:
             - storage.admin
   merch-pd-vendor-scorecard:
@@ -38,13 +38,13 @@ storageBuckets:
       app-name: "oneplm"
     permissions:
       serviceAccountsByEmail:
-        vendor-scorecard-pd@kohls-merch-pd-lle.iam.gserviceaccount.com:
+        vendor-scorecard-pd@doms-merch-pd-lle.iam.gserviceaccount.com:
           roles:
             - storage.admin
       groupsByEmail:
-        gcp-merch-pdpl-softwareengineer-admin@kohls.com:
+        gcp-merch-pdpl-softwareengineer-admin@doms.com:
           roles:
             - storage.admin
-        gcp-merch-pdpl-softwareengineer-l3@kohls.com:
+        gcp-merch-pdpl-softwareengineer-l3@doms.com:
           roles:
             - storage.admin

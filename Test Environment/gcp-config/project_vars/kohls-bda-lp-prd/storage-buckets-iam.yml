@@ -1,9 +1,9 @@
 ---
 storageBuckets:
-  kohls-bda-lp-biz:
+  doms-bda-lp-biz:
     permissions:
       serviceAccountsByEmail:
-        dp-lp-sa@kohls-bda-lp-prd.iam.gserviceaccount.com:
+        dp-lp-sa@doms-bda-lp-prd.iam.gserviceaccount.com:
           roles:
             - storage.objectAdmin
 

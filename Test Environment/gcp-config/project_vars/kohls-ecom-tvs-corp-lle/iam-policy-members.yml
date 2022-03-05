@@ -1,7 +1,7 @@
 #---
 #iamPolicyMembers:
 #  groupsByEmail:
-#    gcp-iaas-cpa-devop-admin@kohls.com:
+#    gcp-iaas-cpa-devop-admin@doms.com:
 #      roles:
 #      - compute.storageAdmin
 #      - iam.serviceAccountUser

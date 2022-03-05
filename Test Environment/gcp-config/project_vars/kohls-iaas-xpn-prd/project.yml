@@ -1,7 +1,7 @@
 ---
 billingDeptId: 90528
 project:
-  name: kohls-iaas-xpn-prd
+  name: doms-iaas-xpn-prd
   managed: true
   deletionProtect: true
   folderId: 970875009337

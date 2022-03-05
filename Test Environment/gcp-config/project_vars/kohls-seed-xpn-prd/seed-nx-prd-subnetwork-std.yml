@@ -11,14 +11,14 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-ocf-devops-admin@kohls.com
+          - gcp-ocf-devops-admin@doms.com
           serviceAccountsByEmail:
-          - ocr-prod-streaming@kohls-scf-prd.iam.gserviceaccount.com
-          - ocr-prod-scheduling@kohls-scf-prd.iam.gserviceaccount.com
-          - giv-spie-dataflow@kohls-scf-prd.iam.gserviceaccount.com
+          - ocr-prod-streaming@doms-scf-prd.iam.gserviceaccount.com
+          - ocr-prod-scheduling@doms-scf-prd.iam.gserviceaccount.com
+          - giv-spie-dataflow@doms-scf-prd.iam.gserviceaccount.com
           - service-451726404279@dataproc-accounts.iam.gserviceaccount.com
           - service-451726404279@dataflow-service-producer-prod.iam.gserviceaccount.com
-          - terraform-devops@kohls-scf-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-scf-prd.iam.gserviceaccount.com
           - 451726404279@cloudservices.gserviceaccount.com
       seed-nx-prd-scf-e1-prv01:
         region: us-east1
@@ -29,9 +29,9 @@ vpcs:
           status: PROVISIONED
         permissions:
           groupsByEmail:
-          - gcp-ocf-devops-admin@kohls.com
+          - gcp-ocf-devops-admin@doms.com
           serviceAccountsByEmail:
-          - terraform-devops@kohls-scf-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-scf-prd.iam.gserviceaccount.com
           - 451726404279@cloudservices.gserviceaccount.com
 
       seed-nx-prd-sre-theia-c1-prv01:

@@ -47,7 +47,7 @@ Some of the GCP resources requires naming with global scope. To accomodate this 
 
 | Attribute  | Description |
 | ------------- | ------------- |
-| project.name  |  GCP project id created at the run time. ( It consists of prefix defined in test suite definition **gcpProject.prefix** and unique, date/time bound suffix ) For example  **gcp-kohlsdev-ut-202005181009567621** |
+| project.name  |  GCP project id created at the run time. ( It consists of prefix defined in test suite definition **gcpProject.prefix** and unique, date/time bound suffix ) For example  **gcp-domsdev-ut-202005181009567621** |
 | project.folderId  |  matches value defined in **gcpProject.homeFolderId** from suite definition. For example **"703435421748"**|
 
 **Example of bucket unit test definition with global name support**

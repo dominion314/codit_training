@@ -110,4 +110,4 @@ The following are valid status entries and the resulting IP range provided by th
 
 > The BLUECAT_ALLOC_GCP keyphrase will allocate the following subnet ranges: Regular, Openshift, GKE, and GKE Master.  The region and nonprod/prod subnets are determined from vpc naming and from the region field of the resource consuming the subnet.
 
-> Note: The ## requires an appropriate CIDR prefix length.  If you are not familiar with CIDR prefixes, please refer to [this document](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Network/CIDR_Prefix_Table.md) for a table that will convert network sizing to the CIDR prefix.
+> Note: The ## requires an appropriate CIDR prefix length.  If you are not familiar with CIDR prefixes, please refer to [this document](https://gitlab.com/doms/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Network/CIDR_Prefix_Table.md) for a table that will convert network sizing to the CIDR prefix.

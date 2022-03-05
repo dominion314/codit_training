@@ -1,37 +1,37 @@
 ---
 storageBuckets:
-  kohls-etcc-exterro-prd-bucket-01:
+  doms-etcc-exterro-prd-bucket-01:
     permissions:
       usersByEmail:
-        mackenzie.peters@kohls.com:
+        mackenzie.peters@doms.com:
           roles:
           - storage.admin
           - storage.legacyBucketOwner
       groupsByEmail:
-        gcp-eta-devops-admin@kohls.com:
+        gcp-eta-devops-admin@doms.com:
           roles:
           - storage.objectViewer
       serviceAccountsByEmail:
-        exterro-prd@kohls-etcc-exterro-prd.iam.gserviceaccount.com:
+        exterro-prd@doms-etcc-exterro-prd.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketOwner
     location: US
     storageClass: MULTI_REGIONAL
     retentionPolicy:
         retentionPeriod: 7776000   # required - set for 90 days (do not use commas)
-  kohls-etcc-exterro-prd-bucket-02:
+  doms-etcc-exterro-prd-bucket-02:
     permissions:
       usersByEmail:
-        mackenzie.peters@kohls.com:
+        mackenzie.peters@doms.com:
           roles:
           - storage.admin
           - storage.legacyBucketOwner
       groupsByEmail:
-        gcp-eta-devops-admin@kohls.com:
+        gcp-eta-devops-admin@doms.com:
           roles:
           - storage.objectViewer
       serviceAccountsByEmail:
-        exterro-prd@kohls-etcc-exterro-prd.iam.gserviceaccount.com:
+        exterro-prd@doms-etcc-exterro-prd.iam.gserviceaccount.com:
           roles:
           - storage.legacyBucketOwner
     location: US

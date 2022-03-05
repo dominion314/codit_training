@@ -2,10 +2,10 @@
   tags:
     - internal
   variables:
-    HTTPS_PROXY: "http://proxy-gcp-central.kohls.com:8080"
-    HTTP_PROXY: "http://proxy-gcp-central.kohls.com:8080"
-    https_proxy: "http://proxy-gcp-central.kohls.com:8080"
-    http_proxy: "http://proxy-gcp-central.kohls.com:8080"
-    NO_PROXY: ".svc,.local,.internal,.internal.,.gcr.io,.googleapis.com,.kohls.com,100.64.0.0/8,10.0.0.0/8"
-    no_proxy: ".svc,.local,.internal,.internal.,.gcr.io,.googleapis.com,.kohls.com,100.64.0.0/8,10.0.0.0/8"
+    HTTPS_PROXY: "http://proxy-gcp-central.doms.com:8080"
+    HTTP_PROXY: "http://proxy-gcp-central.doms.com:8080"
+    https_proxy: "http://proxy-gcp-central.doms.com:8080"
+    http_proxy: "http://proxy-gcp-central.doms.com:8080"
+    NO_PROXY: ".svc,.local,.internal,.internal.,.gcr.io,.googleapis.com,.doms.com,100.64.0.0/8,10.0.0.0/8"
+    no_proxy: ".svc,.local,.internal,.internal.,.gcr.io,.googleapis.com,.doms.com,100.64.0.0/8,10.0.0.0/8"
 

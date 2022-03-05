@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohls-platform-dbaas-ops-mysql:
+  doms-platform-dbaas-ops-mysql:
     location: US
     versioningEnabled: false
     labels:
@@ -11,7 +11,7 @@ storageBuckets:
         type: Delete
       condition:
         age: 30
-  kohls-platform-dbaas-ops-mongo:
+  doms-platform-dbaas-ops-mongo:
     location: US
     versioningEnabled: false
     labels:
@@ -22,7 +22,7 @@ storageBuckets:
         type: Delete
       condition:
         age: 30
-  kohls-platform-dbaas-ops-pmm:
+  doms-platform-dbaas-ops-pmm:
     location: US
     versioningEnabled: false
     labels:
@@ -33,13 +33,13 @@ storageBuckets:
         type: Delete
       condition:
         age: 30
-  kohls-platform-dbaas-ops-longterm:
+  doms-platform-dbaas-ops-longterm:
     location: US
     versioningEnabled: false
     labels:
       technology: mysql
     storageClass: MULTI_REGIONAL
-  kohls-platform-dbaas-ops-terraform-states:
+  doms-platform-dbaas-ops-terraform-states:
     location: US
     versioningEnabled: false
     storageClass: MULTI_REGIONAL

@@ -1,16 +1,16 @@
 ---
 storageBuckets:
-  kohls-etcc-aacs-carrier-prd-bucket:
+  doms-etcc-aacs-carrier-prd-bucket:
     permissions:
       groupsByEmail:
-        gcp-ccom-aacs-productionengineer-admin@kohls.com:
+        gcp-ccom-aacs-productionengineer-admin@doms.com:
           roles:
           - storage.objectViewer
-        MKEOPS-ALL@kohls.com:
+        MKEOPS-ALL@doms.com:
           roles:
           - storage.objectViewer
       serviceAccountsByEmail:
-        carrier-aacs@kohls-etcc-aacs-prd.iam.gserviceaccount.com:
+        carrier-aacs@doms-etcc-aacs-prd.iam.gserviceaccount.com:
           deletionProtect: false
           roles:
           - storage.objectAdmin

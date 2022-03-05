@@ -1,6 +1,6 @@
 # Development and Testing Setup (Draft)
 
-Development and Testing of the K8s Config Connector is done with a combination of MiniKube (local Kubernetes cluster) with KCC configured within, and deployments should be targeted to dev.kohls.com.
+Development and Testing of the K8s Config Connector is done with a combination of MiniKube (local Kubernetes cluster) with KCC configured within, and deployments should be targeted to dev.doms.com.
 
 ## Software Requirements
 
@@ -65,10 +65,10 @@ You may also run into an issue where after starting minkube you'll get proxy err
 
 These IP ranges should be added to your environment variables `NO_PROXY` and `no_proxy`.  Comma seperate them and append to whatever else might be in that variable
 
-An example `no_proxy` configuration for Kohls would be as follows.
+An example `no_proxy` configuration for doms would be as follows.
 
 ```bash
-no_proxy=localhost,127.0.0.1,*.cp.ad.kohls.com,*.st.ad.kohls.com,*.googleapis.com,*.cnrm-system.svc,10.96.0.0/12,192.168.99.0/24,192.168.39.0/24,192.169.99.100
+no_proxy=localhost,127.0.0.1,*.cp.ad.doms.com,*.st.ad.doms.com,*.googleapis.com,*.cnrm-system.svc,10.96.0.0/12,192.168.99.0/24,192.168.39.0/24,192.169.99.100
 
 NO_PROXY=$no_proxy
 ```
@@ -149,8 +149,8 @@ Our templated resources are setup to follow the naming standard `gcp-${GCP_PROJE
 you can add the annotation `cnrm.cloud.google.com/project-id` to your namespace with the value being the
 real name of your GCP project. For example:
 ```
-kubectl create namespace gcp-kohls-fake-project-lle
-kubectl annotate namespace gcp-kohls-fake-project-lle cnrm.cloud.google.com/project-id=kohls-fake-project-lle
+kubectl create namespace gcp-doms-fake-project-lle
+kubectl annotate namespace gcp-doms-fake-project-lle cnrm.cloud.google.com/project-id=doms-fake-project-lle
 ```
 
 Once you have your namespaces setup, you will need to merge your different vars files for a given project.
@@ -158,7 +158,7 @@ You can either include the vars all in a single yaml file, or you can use yq to 
 in a project directory. For example:
 
 ```
-yq merge --allow-empty test_vars/gcp_project/kohls-dev-cne-demo2-lle/*.yml > test_vars/gcp_project/merged.yml
+yq merge --allow-empty test_vars/gcp_project/doms-dev-cne-demo2-lle/*.yml > test_vars/gcp_project/merged.yml
 ```
 
 This will provide you a yaml file with all of your merged variables. Once you have your variables, you
@@ -186,13 +186,13 @@ Sometimes when you are provisioning a resource, you need to reference an object 
 A good example of this is a network in an XPN project. For KCC to understand these references, you need to
 have both resources present in your Kubernetes cluster.
 
-For example, if you are provisioning a GKE cluster in the `kohls-paas-ops` project which has it's network
-created in the `kohls-paas-xpn-lle` project, you would need to have the following in your Kubernetes cluster:
+For example, if you are provisioning a GKE cluster in the `doms-paas-ops` project which has it's network
+created in the `doms-paas-xpn-lle` project, you would need to have the following in your Kubernetes cluster:
 
-In the namespace managing the `kohls-paas-ops` project:
+In the namespace managing the `doms-paas-ops` project:
 - The `ContainerCluster` resource defined with the network and subnetwork references
 
-In the namespace managing the `kohls-paas-xpn-lle` project:
+In the namespace managing the `doms-paas-xpn-lle` project:
 - The `ComputeNetwork` resource
 - The `ComputeSubnetwork` resource
 

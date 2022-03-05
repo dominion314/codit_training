@@ -5,7 +5,7 @@ pubSubTopics:
       app-name: "ocf-carrier-status-update"
     permissions:
       serviceAccountsByEmail:
-        carrierstatus-ocf@kohls-ocf-prd.iam.gserviceaccount.com:
+        carrierstatus-ocf@doms-ocf-prd.iam.gserviceaccount.com:
           roles:
             - pubsub.editor
 
@@ -15,7 +15,7 @@ pubSubTopics:
       app-name: "ocf-carrier-status-update"
     permissions:
       serviceAccountsByEmail:
-        carrierstatus-ocf@kohls-ocf-prd.iam.gserviceaccount.com:
+        carrierstatus-ocf@doms-ocf-prd.iam.gserviceaccount.com:
           roles:
             - pubsub.editor
 
@@ -25,7 +25,7 @@ pubSubTopics:
       app-name: "ocf-carrier-status-update"
     permissions:
       serviceAccountsByEmail:
-        carrierstatus-ocf@kohls-ocf-prd.iam.gserviceaccount.com:
+        carrierstatus-ocf@doms-ocf-prd.iam.gserviceaccount.com:
           roles:
             - pubsub.editor
 
@@ -35,7 +35,7 @@ pubSubTopics:
       app-name: "ocf-carrier-status-update"
     permissions:
       serviceAccountsByEmail:
-        carrierstatus-ocf@kohls-ocf-prd.iam.gserviceaccount.com:
+        carrierstatus-ocf@doms-ocf-prd.iam.gserviceaccount.com:
           roles:
             - pubsub.editor
 

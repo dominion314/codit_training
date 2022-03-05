@@ -1,9 +1,9 @@
 ---
 storageBuckets:
-  kohls-platform-openshift-ops-thanos-gcpusc1-ops-xpaas:
+  doms-platform-openshift-ops-thanos-gcpusc1-ops-xpaas:
     permissions:
       serviceAccountsByEmail:
-        thanos-store@kohls-platform-openshift-ops.iam.gserviceaccount.com:
+        thanos-store@doms-platform-openshift-ops.iam.gserviceaccount.com:
           deletionProtect: false
           roles:
           - storage.objectAdmin

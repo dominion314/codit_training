@@ -211,7 +211,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-ecom-pe-prd-ing-to-ecom-tvs-corp-prd:
+      doms-ecom-pe-prd-ing-to-ecom-tvs-corp-prd:
         rule:
           allow:
           - protocol: tcp
@@ -258,7 +258,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-kos-xpn-prd-ing-to-ecom-tvs-corp-prd:
+      doms-kos-xpn-prd-ing-to-ecom-tvs-corp-prd:
         rule:
           allow:
           - protocol: tcp
@@ -275,7 +275,7 @@ vpcs:
         disabled: false
         priority: 900
         logging: false
-      kohls-nutanix-vdi-ing-ecom-tvs-corp-prd-ssh:
+      doms-nutanix-vdi-ing-ecom-tvs-corp-prd-ssh:
         rule:
           allow:
           - protocol: tcp

@@ -1,6 +1,6 @@
 ---
 project:
-  name: kohls-bda-scripts-ops
+  name: doms-bda-scripts-ops
   deletionProtect: true
   managed: true
   folderId: "931070720587"

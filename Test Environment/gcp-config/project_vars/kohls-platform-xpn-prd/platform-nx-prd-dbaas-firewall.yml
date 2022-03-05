@@ -11,13 +11,13 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "mysql-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com"
+          - external: "mysql-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: "ocp-app-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com"
-          - external: "ocp-pci-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com"
-          - external: "ocp-pii-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com"
+          - external: "ocp-app-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com"
+          - external: "ocp-pci-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com"
+          - external: "ocp-pii-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com"
           sourceTags:
           allow:
           - protocol: "tcp"
@@ -32,13 +32,13 @@ vpcs:
         rule:
           destinationRanges:
           targetServiceAccounts:
-          - external: "pmm-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com"
+          - external: "pmm-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           sourceServiceAccounts:
-          - external: "ocp-app-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com"
-          - external: "ocp-pci-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com"
-          - external: "ocp-pii-node-paas@kohls-platform-openshift-prd.iam.gserviceaccount.com"
+          - external: "ocp-app-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com"
+          - external: "ocp-pci-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com"
+          - external: "ocp-pii-node-paas@doms-platform-openshift-prd.iam.gserviceaccount.com"
           sourceTags:
           allow:
           - protocol: "tcp"
@@ -237,7 +237,7 @@ vpcs:
           - "34.125.0.0/16" #us-west4
           - "35.219.128.0/18" #us-west4
           targetServiceAccounts:
-            - external: "mongo-dba@kohls-platform-dbaas-prd.iam.gserviceaccount.com"
+            - external: "mongo-dba@doms-platform-dbaas-prd.iam.gserviceaccount.com"
           targetTags:
           sourceRanges:
           sourceServiceAccounts:

@@ -1,6 +1,6 @@
 ---
 storageBuckets:
-  kohlsqa-cpe-testing03-lle-bucket:
+  domsqa-cpe-testing03-lle-bucket:
     versioningEnabled: false
     deletionProtect: true
     storageClass: MULTI_REGIONAL

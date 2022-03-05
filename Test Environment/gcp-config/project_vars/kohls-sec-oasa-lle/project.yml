@@ -1,7 +1,7 @@
 ---
 billingDeptId: "90576"
 project:
-  name: kohls-sec-oasa-lle
+  name: doms-sec-oasa-lle
   deleteProtect: true
   managed: true
   folderId: "882166644980"

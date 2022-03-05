@@ -1,7 +1,7 @@
 ---
 storageBuckets:
-  kohls-ecom-sre-lle-data-1:
+  doms-ecom-sre-lle-data-1:
     acls:
       serviceAccountsByEmail:
-        kohls-platform-openshift-lle@appspot.gserviceaccount.com: WRITER
+        doms-platform-openshift-lle@appspot.gserviceaccount.com: WRITER
 

@@ -2,7 +2,7 @@
 billingDeptId: "90586"
 
 project:
-  name: kohls-paas-ops
+  name: doms-paas-ops
   deletionProtect: true
   managed: false
   folderId: "979004260447"
