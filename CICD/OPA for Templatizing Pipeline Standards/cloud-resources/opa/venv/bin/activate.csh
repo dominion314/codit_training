@@ -10,7 +10,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV '/home/dominion314/Desktop/K_workspace/cloud-resources/opa/venv'
+setenv VIRTUAL_ENV '/home/dominion314/codit_training/CICD/OPA for Templatizing Pipeline Standards/cloud-resources/opa/venv'
 
 set _OLD_VIRTUAL_PATH="$PATH:q"
 setenv PATH "$VIRTUAL_ENV:q/bin:$PATH:q"

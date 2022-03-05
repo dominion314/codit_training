@@ -1,8 +1,0 @@
----
-pubSubTopics:
-  sherlock-push-prod:
-    deletionProtect: true
-    labels:
-      line-of-business: cpa
-      app-name: sherlock
-      env-type: prd

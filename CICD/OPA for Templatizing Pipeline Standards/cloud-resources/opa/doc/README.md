@@ -1,122 +1,39 @@
 # OPA based policy validation process
-## Objectives for developing in-repo policy based validation of Gitops configuration data
+
 ### Basic principles of Gitops eco-system:
 - Infrastructure state (resourcess, access, configuration etc) is expressed in code
 - Change in infrastructure state is Pull Request (PR) against config repository
 - When PR is approved the configuration is reflected against live platform to bring it to desired state
+
 ### Challenges
 - We must protect and assure data quality
 - We must make sure that the right people are changing content
 - We myst make sure that the right and required people are involved in PR approval process
 
-## Building blocks of OPA policy
-- context data 
-- policy constrains
-- OPA REGO policy logic
-
-Context data is content of config repository, Pull Request data etc.
-Policy constrains is definitions in configuration repository that defines policy controls.
-REGO file is OpenPolicy Agent declarative policy statement that "makes decision" to allow or not to allow during evaluation of context data and policy constrains at run time.
-
-More on OPA can be found here: http://www.open;olicyagent.org
-
-## In repo policy validation
-![Infra](pics/infra_diagram.png)
-
-### Set up of configuration repo
-- ```Jenkinsfile.opa``` is a file that must be present in configuration repo and it will refer to control repository that contains policy materials and local configuration file ```opa.yml```
 ```
-cat Jennkinsfile.opa
-#! /usr/bin/env groovy
-//Jenkinsfile to call linting tests
-
-//calls groovy script in githook-yaml-lint repo
-opaKCCGcpResources('https://github.kohls.com/EnterpriseDevOps/cpa-kcc-templates', 'opa', 'opa.yml')
-```
-
-- ```opa.yml``` allows to enable/disable policy validation and specify which project data are subject to validation
-```
-cat opa.yml
----
-enabled: true
-projectVarFolder: project_vars
-validateAllProjects: false # if set to to true, validateProjects is ignored and all projects are validated
-validateProjects:
-- kohlsdev-cpa-inspec
-- kohls-sec-xpn-lle
-```
-
-### Setup of control ( or policy )repository
-- ```opa``` folder contains policy materials
-```
-IS-C02S621DG8WP:opa tkmam6x$ ls -la
-total 8
-drwxr-xr-x   5 tkmam6x  869469075   160 Sep 10 09:52 .
-drwxr-xr-x  32 tkmam6x  869469075  1024 Sep 10 09:11 ..
-drwxr-xr-x   4 tkmam6x  869469075   128 Sep 10 09:11 data
--rw-r--r--   1 tkmam6x  869469075   518 Sep 10 09:11 policy_suite.yml
-drwxr-xr-x   6 tkmam6x  869469075   192 Sep 10 09:11 rego
-IS-C02S621DG8WP:opa tkmam6x$ tree
-.
-├── data
-│   ├── iam
-│   │   ├── iam-roles-per-project.yml
-│   │   ├── iam-roles.yml
-│   │   └── validation_manifest.json
-│   └── service
-│       ├── apis-per-project.yml
-│       ├── apis.yml
-│       └── validation_manifest.json
-├── policy_suite.yml
-└── rego
-    ├── iam-roles.rego
-    ├── iam-roles_test.rego
-    ├── service-apis.rego
-    └── service-apis_test.rego
-```
-- ```opa/policy_suite.yml``` contains definitions of individual policies
-```
-$ cat policy_suite.yml 
----
+cloud-resources/opa/policy_suite.yml contains definitions of individual policies listed here:
 policies:
-- name: "Users, Groups and Service Accounts are only given allowed roles"
-  active: true
-  policyDataFiles:
-  - data/iam/iam-roles.yml
-  - data/iam/iam-roles-per-project.yml
-  policyRegoFile: rego/iam-roles.rego
-  package: "kohls.gitops.kcc.gcp_project.iam.roles"
-- name: "Only allow whitelisted Service APIs"
-  active: true
-  policyDataFiles:
-  - data/service/apis.yml
-  - data/service/apis-per-project.yml
-  policyRegoFile: rego/service-apis.rego
-  package: "kohls.gitops.kcc.gcp_project.service.apis"
+# - name: "Cloud Connectivity"
+# - name: "Egress Firewall rule checks"
+# - name: "Ingress Firewall rule checks"
+# - name: "Limit interconnect bandwidth"
+# - name: "Only allow whitelisted Service APIs"
+# - name: "Users, Groups and Service Accounts are only given allowed roles"
+# - name: "Users, Groups and Service Accounts with Custom roles"
+# - name: "Validates Project Configuration"
+# - name: "Validates Big Query Datasets"
+# - name: "VPC checks"
 ```
 
-
-
-
-### Validation process
-![Validation workflow](pics/workflow.png)
-
-
-## Simulated run of opa valiation
-Opa validation is performed as in-repo organization linter job.
-It is possible to "deconstruct" Jenkins runtime environment into your workstation  and perform evaluation and validation without Jenkins and without doing pull requests, commits etc. Bellow are the simple steps you can follow:
-### Checkout prerequisite repos
-- Clone template repo
-```git clone https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources.git```
-- Clone config repo
-```git clone https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config.git```
-- Clone linter repo
-```git clone https://gitlab.com/kohls/sre/infra/githook-yaml-lint.git```
+### Repos you will use:
+cloud-resources
+gcp-config
+githook-yaml-lint
 
 ### Install and activate proper python environment
 ```
 virtualenv -p python3 venv
-source vevn/bin/activate
+source venv/bin/activate
 pip install -r githook-yaml-lint/resources/opa_validation/requirements.txt 
 ```
 
@@ -132,7 +49,7 @@ chmod 755 opa
 
 - Execute validation:
 ```
- python ../../githook-yaml-lint/resources/opa_validation/opa_linter.py  --opa_config=../../gcp-config/opa.yml --opa_binary=../../opa --opa_runner=../../githook-yaml-lint/resources/opa_validation/opa_run.py  --opa_suite_definition=./policy_suite.yml --log=./opa.log --report_file=./report.txt
+ python3 ../../githook-yaml-lint/resources/opa_validation/opa_linter.py  --opa_config=../../gcp-config/opa.yml --opa_binary=../../opa --opa_runner=../../githook-yaml-lint/resources/opa_validation/opa_run.py  --opa_suite_definition=./policy_suite.yml --log=./opa.log --report_file=./report.txt
 ```
 - Check results:
 ```

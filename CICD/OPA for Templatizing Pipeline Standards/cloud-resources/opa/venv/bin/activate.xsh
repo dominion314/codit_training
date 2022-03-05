@@ -28,7 +28,7 @@ def _deactivate(args):
 _deactivate(["nondestructive"])
 aliases["deactivate"] = _deactivate
 
-$VIRTUAL_ENV = r"/home/dominion314/Desktop/K_workspace/cloud-resources/opa/venv"
+$VIRTUAL_ENV = r"/home/dominion314/codit_training/CICD/OPA for Templatizing Pipeline Standards/cloud-resources/opa/venv"
 
 $_OLD_VIRTUAL_PATH = $PATH
 $PATH = $PATH[:]

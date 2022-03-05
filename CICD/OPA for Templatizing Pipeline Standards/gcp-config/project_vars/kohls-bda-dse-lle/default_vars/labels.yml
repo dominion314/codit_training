@@ -1,7 +1,0 @@
----
-defaultLabels:
-  billing-dept-id: "90565"
-  line-of-business: "dse"
-  lob: "dse"
-  environment-name: "nonprod"
-  environment-type: "nonprod"

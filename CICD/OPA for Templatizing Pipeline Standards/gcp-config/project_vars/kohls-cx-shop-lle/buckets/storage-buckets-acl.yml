@@ -1,8 +1,0 @@
----
-storageBuckets:
-  kohls-cce-credit-prequal:
-    acls:
-      groupsByEmail:
-        gcp-cx-customercredit-devops-admin@kohls.com: OWNER
-      serviceAccountsByEmail:
-        kohls-cce-credit-prequal@kohls-cx-shop-lle.iam.gserviceaccount.com: WRITER

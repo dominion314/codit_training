@@ -1,9 +1,0 @@
----
-iamPolicyMembersV2:
-  groupsByEmail:
-    gcp-bda-productionengineer-admin@kohls.com:
-      - role: oauthconfig.editor
-      - role: logging.configWriter
-      - role: serviceusage.serviceUsageConsumer
-      - role: CustomViewer486       # Custom Viewer
-        OrgId: 1035901152068

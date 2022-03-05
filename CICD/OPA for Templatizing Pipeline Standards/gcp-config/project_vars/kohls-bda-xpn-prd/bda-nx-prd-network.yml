@@ -1,5 +1,0 @@
----
-vpcs:
-  bda-nx-prd:
-    routingMode: GLOBAL
-    autoCreateSubnets: false

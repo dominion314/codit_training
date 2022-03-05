@@ -1,6 +1,0 @@
----
-iamPolicyMembersV2:
-  groupsByEmail:
-    gcp-bda-softwareengineer-l3@kohls.com:
-      - role: CustomViewer486
-        OrgId: 1035901152068

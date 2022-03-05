@@ -1,6 +1,0 @@
----
-storageBuckets:
-  kohls-infra-pie-lle-lemurapp-postgres-backup:
-    storageClass: MULTI_REGIONAL
-    location: US
-    bucketPolicyOnly: false

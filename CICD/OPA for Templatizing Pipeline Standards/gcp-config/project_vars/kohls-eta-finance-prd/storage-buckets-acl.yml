@@ -1,6 +1,0 @@
----
-storageBuckets:
-  kohls-eta-finance-prd-us-central1-primary-consul-backup:
-    acls:
-      usersByEmail:
-        consul-paas@kohls-eta-finance-prd.iam.gserviceaccount.com: OWNER

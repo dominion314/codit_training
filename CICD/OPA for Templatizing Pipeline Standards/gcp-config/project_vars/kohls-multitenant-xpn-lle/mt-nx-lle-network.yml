@@ -1,6 +1,0 @@
----
-vpcs:
-  mt-nx-lle:
-
-    routingMode: GLOBAL
-    autoCreateSubnets: false

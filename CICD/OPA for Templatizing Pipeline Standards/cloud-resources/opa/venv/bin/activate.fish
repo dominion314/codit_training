@@ -57,7 +57,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV '/home/dominion314/Desktop/K_workspace/cloud-resources/opa/venv'
+set -gx VIRTUAL_ENV '/home/dominion314/codit_training/CICD/OPA for Templatizing Pipeline Standards/cloud-resources/opa/venv'
 
 # https://github.com/fish-shell/fish-shell/issues/436 altered PATH handling
 if test (echo $FISH_VERSION | head -c 1) -lt 3

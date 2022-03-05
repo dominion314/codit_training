@@ -17,6 +17,7 @@ vpcs:
           - "10.1.43.26"
           - "10.7.33.1"
           - "10.7.33.2"
+          - "0.0.0.0/0"
           sourceServiceAccounts:
           sourceTags:
           allow:
@@ -49,7 +50,7 @@ vpcs:
             - "443"
             - "22"
             - "8080"
-      onprem-to-kohls-cpe-kcc-lle-01:
+      onprem-to-doms-cpe-kcc-lle-01:
         priority: 900
         direction: INGRESS
         description: GKE-MONITORING
@@ -152,70 +153,3 @@ vpcs:
           - protocol: "tcp"
             ports:
             - "8080"
-      ssh-access-devexp-tools-lle:
-        priority: 900
-        direction: INGRESS
-        description: To mirror existing ssh capability
-        disabled: false
-        logging: false
-        rule:
-          destinationRanges:
-          targetServiceAccounts:
-          targetTags:
-          - fw-allow-ssh
-          sourceRanges:
-          - "10.0.0.0/8"
-          - "172.26.0.0/15"
-          sourceServiceAccounts:
-          sourceTags:
-          allow:
-          - protocol: "tcp"
-            ports:
-            - "22"
-      eunomia-webhooks-cpe-nx-prd:
-        priority: 900
-        direction: INGRESS
-        description: SNOW-16761
-        disabled: false
-        logging: false
-        rule:
-          destinationRanges:
-          targetServiceAccounts:
-          - external: "83924457218-compute@developer.gserviceaccount.com"
-          targetTags:
-          sourceRanges:
-          - "10.185.13.0/24"
-          - "10.189.8.0/24"
-          sourceServiceAccounts:
-          sourceTags:
-          allow:
-          - protocol: "tcp"
-            ports:
-            - "80"
-            - "443"
-            - "8383"
-            - "8080"
-      image-access-for-jenkins-cpe-image-mgmt:
-        priority: 900
-        direction: INGRESS
-        description: SNOW-16893
-        disabled: false
-        logging: false
-        rule:
-          destinationRanges:
-          targetServiceAccounts:
-          - external: "576826117778-compute@developer.gserviceaccount.com"
-          targetTags:
-          sourceRanges:
-          - "10.185.3.128/25"
-          - "10.189.0.224/27"
-          sourceServiceAccounts:
-          sourceTags:
-          allow:
-          - protocol: "tcp"
-            ports:
-            - "80"
-            - "443"
-            - "22"
-            - "8080"
-            - "5985"

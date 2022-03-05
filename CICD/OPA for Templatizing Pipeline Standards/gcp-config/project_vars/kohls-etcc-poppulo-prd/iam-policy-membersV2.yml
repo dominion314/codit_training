@@ -1,6 +1,0 @@
----
-iamPolicyMembersV2:
-  groupsByEmail:
-    gcp-eta-devops-admin@kohls.com:
-    - role: CustomViewer486                             # Custom Viewer
-      OrgId: 1035901152068

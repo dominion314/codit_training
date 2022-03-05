@@ -1,8 +1,0 @@
----
-storageBuckets:
-  kohls-bda-dse-prd-cce-dse-cmn:
-    permissions:
-      serviceAccountsByEmail:
-        cce-dse-rec@kohls-bda-dse-lle.iam.gserviceaccount.com:
-          roles:
-            - storage.objectViewer

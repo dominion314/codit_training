@@ -22,9 +22,6 @@ PART 1: Introduction
 
     Lots of standardization, tooling, and vendor support from cloud providers for kubernetes.
 
-
-K8S Need To Knows
-
 ►  Basic Components
 
     Container - Are often represented as container images in Docker to establish software or application requirements for a pod. 
@@ -58,7 +55,6 @@ K8S Need To Knows
 
     Deployments manage the rollout of ReplicaSets and control the transition of new pods running different versions.
 
-  K8s Architecture 
 ►  Worker Nodes
 
     The worker node(s) host the Pods that are the components of the application workload. The control plane manages the worker nodes and the Pods in the cluster. This is the part of the cluster that actually executes the containers and applications on them.
