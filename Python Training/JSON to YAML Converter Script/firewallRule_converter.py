@@ -7,10 +7,8 @@ Created on May 2019
 
 """
 
-
 import json
 import yaml
-
 
 def parse_allowed_values(allowed):
     """This function controls the input of the allowed values."""
