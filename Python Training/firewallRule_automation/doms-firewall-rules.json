@@ -1,0 +1,80 @@
+[
+  {
+    "allowed": "['tcp:80,tcp:443', 'icmp']",
+    "direction": "INGRESS",
+    "disabled": false,
+    "name": "access-to-reddit",
+    "Networks": "os-management-linux-dev",
+    "priority": 900,
+    "sourceRanges": "172.26.0.0/15,10.90.100.0/23,10.9.65.12/32,10.4.64.164/32,10.9.65.11/32,10.4.64.163/32,10.64.100.0/23,10.4.64.166/32",
+    "targetTags": "nde-admin,cloud-mgmt",
+    "destinationRanges": "",
+    "sourceTags": "",
+    "denied": ""
+  },
+  {
+    "allowed": "['tcp:8300,tcp:8301,tcp:8302,tcp:8600']",
+    "direction": "EGRESS",
+    "disabled": false,
+    "name": "allow-egr-prod-access-tmp-01",
+    "Networks": "os-openshift-dev",
+    "priority": 900,
+    "sourceRanges": "",
+    "targetTags": "paas-prod",
+    "destinationRanges": "10.186.6.0/23,10.190.6.0/23",
+    "sourceTags": "",
+    "denied": ""
+  },
+  {
+    "allowed": "['tcp:8300,tcp:8301,tcp:8600']",
+    "direction": "EGRESS",
+    "disabled": false,
+    "name": "allow-egr-prod-access-tmp-02",
+    "Networks": "os-openshift-lle",
+    "priority": 900,
+    "sourceRanges": "",
+    "targetTags": "paas-prod,paas-prod-agent",
+    "destinationRanges": "10.186.6.0/23,10.190.6.0/23",
+    "sourceTags": "",
+    "denied": ""
+  },
+  {
+    "allowed": "['tcp:8300,tcp:8301,tcp:8302,tcp:8600']",
+    "direction": "INGRESS",
+    "disabled": false,
+    "name": "allow-ingr-prod-access-tmp-01",
+    "Networks": "os-gcp-qa",
+    "priority": 900,
+    "sourceRanges": "",
+    "targetTags": "paas-prod",
+    "destinationRanges": "",
+    "sourceTags": "paas-prod",
+    "denied": ""
+  },
+  {
+    "allowed": "['tcp:8300,tcp:8301,tcp:8600']",
+    "direction": "INGRESS",
+    "disabled": false,
+    "name": "allow-ingr-prod-access-tmp-02",
+    "Networks": "os-gcp-dev",
+    "priority": 900,
+    "sourceRanges": "",
+    "targetTags": "paas-prod,paas-prod-agent",
+    "destinationRanges": "",
+    "sourceTags": "paas-prod-agent",
+    "denied": ""
+  },
+  {
+    "allowed": "['icmp', 'tcp:22,tcp:27020']",
+    "direction": "EGRESS",
+    "disabled": false,
+    "name": "app-mongodb-egr-domsrepo-os-innovation-dev",
+    "Networks": "os-mondog-dev",
+    "priority": 990,
+    "sourceRanges": "",
+    "targetTags": "gke-cluster",
+    "destinationRanges": "10.186.187.128/25,10.190.102.0/25",
+    "sourceTags": "",
+    "denied": ""
+  }
+]
