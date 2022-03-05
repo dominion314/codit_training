@@ -51,7 +51,7 @@
 🔗 Links:
 - Git repo link: https://bit.ly/2JBVyIk
 
-🔥 Demo Project 🔥
+<!-- 🔥 Demo Project 🔥 ## Something up with the secrets portion of this. Since we cant view the GUI in a gcp vm through minikube, we will exclude this exercise. 
 ►  Deploying MongoDB and Mongo Express
 ►  MongoDB Pod
 ►  Secret
@@ -60,7 +60,7 @@
 ►  Mongo Express External Service
 
 🔗 Links:
-- Git repo link: https://bit.ly/3jY6lJp
+- Git repo link: https://bit.ly/3jY6lJp -->
 
 🔥  Organizing your components with K8s Namespaces 🔥
 ►  What is a Namespace?

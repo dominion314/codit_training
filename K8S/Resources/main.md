@@ -80,7 +80,7 @@ PART 1: Introduction
 
 
 
-PART 1a: Hands On Engineering - Basic Command Line
+PART 2: Hands On Engineering - Basic Command Line
 
 
 
@@ -213,7 +213,7 @@ PART 1a: Hands On Engineering - Basic Command Line
   
         
 
-PART 2: K8S Object Configuration
+PART 3: K8S Object Configuration
 
 
 
@@ -259,7 +259,7 @@ PART 2: K8S Object Configuration
 
 
 
-PART 2a: Hands On Engineering - Configure an nginx deployment and service
+PART 4: Hands On Engineering - Configure an nginx deployment and service
 
 Code you will use:
 
@@ -341,215 +341,233 @@ kubectl logs nginx-deployment-6d777db949-89t8p
 
 
 
-PART 2b: Hands On Engineering - Deploy MongoDB
+# Exluded due to secrets issue: Hands On Engineering - Deploy MongoDB
 
 
 
-Code you will use:
+# Code you will use:
 
 
 
-mongo-express.yaml
+# mongo-express.yaml
 
 
 
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: mongo-express
-  labels:
-    app: mongo-express
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: mongo-express
-  template:
-    metadata:
-      labels:
-        app: mongo-express
-    spec:
-      containers:
-      - name: mongo-express
-        image: mongo-express
-        ports:
-        - containerPort: 8081
-        env:
-        - name: ME_CONFIG_MONGODB_ADMINUSERNAME
-          valueFrom:
-            secretKeyRef:
-              name: mongodb-secret
-              key: mongo-root-username
-        - name: ME_CONFIG_MONGODB_ADMINPASSWORD
-          valueFrom: 
-            secretKeyRef:
-              name: mongodb-secret
-              key: mongo-root-password
-        - name: ME_CONFIG_MONGODB_SERVER
-          valueFrom: 
-            configMapKeyRef:
-              name: mongodb-configmap
-              key: database_url
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: mongo-express-service
-spec:
-  selector:
-    app: mongo-express
-  type: LoadBalancer  
-  ports:
-    - protocol: TCP
-      port: 8081
-      targetPort: 8081
-      nodePort: 30000
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: mongo-express
+#   labels:
+#     app: mongo-express
+# spec:
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       app: mongo-express
+#   template:
+#     metadata:
+#       labels:
+#         app: mongo-express
+#     spec:
+#       containers:
+#       - name: mongo-express
+#         image: mongo-express
+#         ports:
+#         - containerPort: 8081
+#         env:
+#         - name: ME_CONFIG_MONGODB_ADMINUSERNAME
+#           valueFrom:
+#             secretKeyRef:
+#               name: mongodb-secret
+#               key: mongo-root-username
+#         - name: ME_CONFIG_MONGODB_ADMINPASSWORD
+#           valueFrom: 
+#             secretKeyRef:
+#               name: mongodb-secret
+#               key: mongo-root-password
+#         - name: ME_CONFIG_MONGODB_SERVER
+#           valueFrom: 
+#             configMapKeyRef:
+#               name: mongodb-configmap
+#               key: database_url
+# ---
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: mongo-express-service
+# spec:
+#   selector:
+#     app: mongo-express
+#   type: LoadBalancer  
+#   ports:
+#     - protocol: TCP
+#       port: 8081
+#       targetPort: 8081
+#       nodePort: 30000
 
 
 
-mongo.yaml
+# mongo.yaml
 
 
 
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: mongodb-deployment
-  labels:
-    app: mongodb
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: mongodb
-  template:
-    metadata:
-      labels:
-        app: mongodb
-    spec:
-      containers:
-      - name: mongodb
-        image: mongo
-        ports:
-        - containerPort: 27017
-        env:
-        - name: MONGO_INITDB_ROOT_USERNAME
-          valueFrom:
-            secretKeyRef:
-              name: mongodb-secret
-              key: mongo-root-username
-        - name: MONGO_INITDB_ROOT_PASSWORD
-          valueFrom: 
-            secretKeyRef:
-              name: mongodb-secret
-              key: mongo-root-password
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: mongodb-service
-spec:
-  selector:
-    app: mongodb
-  ports:
-    - protocol: TCP
-      port: 27017
-      targetPort: 27017
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: mongodb-deployment
+#   labels:
+#     app: mongodb
+# spec:
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       app: mongodb
+#   template:
+#     metadata:
+#       labels:
+#         app: mongodb
+#     spec:
+#       containers:
+#       - name: mongodb
+#         image: mongo
+#         ports:
+#         - containerPort: 27017
+#         env:
+#         - name: MONGO_INITDB_ROOT_USERNAME
+#           valueFrom:
+#             secretKeyRef:
+#               name: mongodb-secret
+#               key: mongo-root-username
+#         - name: MONGO_INITDB_ROOT_PASSWORD
+#           valueFrom: 
+#             secretKeyRef:
+#               name: mongodb-secret
+#               key: mongo-root-password
+# ---
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: mongodb-service
+# spec:
+#   selector:
+#     app: mongodb
+#   ports:
+#     - protocol: TCP
+#       port: 27017
+#       targetPort: 27017
 
 
 
-mongo-secret.yaml
+# mongo-secret.yaml
 
 
 
-apiVersion: v1
-kind: Secret
-metadata:
-    name: mongodb-secret
-type: Opaque
-data:
-    mongo-root-username: dXNlcm5hbWU=
-    mongo-root-password: cGFzc3dvcmQ=
+# apiVersion: v1
+# kind: Secret
+# metadata:
+#     name: mongodb-secret
+# type: Opaque
+# data:
+#     mongo-root-username: dXNlcm5hbWU=
+#     mongo-root-password: cGFzc3dvcmQ=
 
 
 
-mongo-configmap.yaml
+# mongo-configmap.yaml
 
 
 
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: mongodb-configmap
-data:
-  database_url: mongodb-service
+# apiVersion: v1
+# kind: ConfigMap
+# metadata:
+#   name: mongodb-configmap
+# data:
+#   database_url: mongodb-service
 
 
 
-ingress.yaml
+# ingress.yaml
 
 
 
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: name
-  annotations:
-    kubernetes.io/ingress.class: "nginx"
-spec:
-  rules:
-    - host: app.com
-      http:
-        paths:
-          - path: /
-            backend:
-              serviceName: my-service
-              servicePort: 8080
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: name
+#   annotations:
+#     kubernetes.io/ingress.class: "nginx"
+# spec:
+#   rules:
+#     - host: app.com
+#       http:
+#         paths:
+#           - path: /
+#             backend:
+#               serviceName: my-service
+#               servicePort: 8080
 
 
 
-Commands you will use:
+# Commands you will use:
 
 
 
-kubectl apply -f mongo-secret.yaml
-kubectl apply -f mongo.yaml
-kubectl apply -f mongo-configmap.yaml 
-kubectl apply -f mongo-express.yaml
-kubectl get pod
-kubectl get pod --watch
-kubectl get pod -o wide
-kubectl get service
-kubectl get secret
-kubectl get all | grep mongodb
-kubectl describe pod mongodb-deployment-xxxxxx
-kubectl describe service mongodb-service
-kubectl logs mongo-express-xxxxxx
+# kubectl apply -f mongo-secret.yaml
+# kubectl apply -f mongo.yaml
+# kubectl apply -f mongo-configmap.yaml 
+# kubectl apply -f mongo-express.yaml
+# kubectl get pod
+# kubectl get pod --watch
+# kubectl get pod -o wide
+# kubectl get service
+# kubectl get secret
+# kubectl get all | grep mongodb
+# kubectl describe pod mongodb-deployment-xxxxxx
+# kubectl describe service mongodb-service
+# kubectl logs mongo-express-xxxxxx
 
-give a URL to external service in minikube
-minikube service mongo-express-service
+# give a URL to external service in minikube
+# minikube service mongo-express-service
 
-►  Deploying MongoDB and Mongo Express
-►  MongoDB Pod
-►  Secret
-►  MongoDB Internal Service
-►  Deployment Service and Config Map
-►  Mongo Express External Service
+# ►  Deploying MongoDB and Mongo Express
+# ►  MongoDB Pod
+# ►  Secret
+# ►  MongoDB Internal Service
+# ►  Deployment Service and Config Map
+# ►  Mongo Express External Service
+
+# 🔗 Links:
+# - Git repo link: https://bit.ly/3jY6lJp
+
+  Persisting Data in K8s with Volumes 
+►  The need for persistent storage & storage requirements
+►  Persistent Volume (PV)
+►  Local vs Remote Volume Types
+►  Who creates the PV and when?
+►  Persistent Volume Claim (PVC)
+►  Levels of volume abstractions
+►  ConfigMap and Secret as volume types
+►  Storage Class (SC)
 
 🔗 Links:
-- Git repo link: https://bit.ly/3jY6lJp
+- Git Repo: https://bit.ly/2Gv3eLi
 
-  Organizing your components with K8s Namespaces 
-►  What is a Namespace?
-►  4 Default Namespaces
-►  Create a Namespace
-►  Why to use Namespaces? 4 Use Cases
-►  Characteristics of Namespaces
-►  Create Components in Namespaces
-►  Change Active Namespace
+  K8s Services 
+►  What is a Service in K8s and when we need it?
+►  ClusterIP Services
+►  Service Communication
+►  Multi-Port Services
+►  Headless Services
+►  NodePort Services
+►  LoadBalancer Services
 
-🔗 Links:
-- Install Kubectx: https://github.com/ahmetb/kubectx#ins...
+
+
+
+
+
+
+ADVANCED TOPICS:
 
   K8s Ingress explained 
 ►  What is Ingress? External Service vs. Ingress
@@ -568,6 +586,19 @@ minikube service mongo-express-service
 - Ingress Controllers: https://bit.ly/32dfHe3
 - Ingress Controller Bare Metal: https://bit.ly/3kYdmLB
 
+
+  Organizing your components with K8s Namespaces 
+►  What is a Namespace?
+►  4 Default Namespaces
+►  Create a Namespace
+►  Why to use Namespaces? 4 Use Cases
+►  Characteristics of Namespaces
+►  Create Components in Namespaces
+►  Change Active Namespace
+
+🔗 Links:
+- Install Kubectx: https://github.com/ahmetb/kubectx#ins...
+
   Helm - Package Manager 
 ►  Package Manager and Helm Charts
 ►  Templating Engine
@@ -581,19 +612,6 @@ minikube service mongo-express-service
 - Helm charts GitHub Project: https://github.com/helm/charts
 - Install Helm: https://helm.sh/docs/intro/install/
 
-  Persisting Data in K8s with Volumes 
-►  The need for persistent storage & storage requirements
-►  Persistent Volume (PV)
-►  Local vs Remote Volume Types
-►  Who creates the PV and when?
-►  Persistent Volume Claim (PVC)
-►  Levels of volume abstractions
-►  ConfigMap and Secret as volume types
-►  Storage Class (SC)
-
-🔗 Links:
-- Git Repo: https://bit.ly/2Gv3eLi
-
   Deploying Stateful Apps with StatefulSet 
 ►  What is StatefulSet? Difference of stateless and stateful applications
 ►  Deployment of stateful and stateless apps
@@ -603,11 +621,3 @@ minikube service mongo-express-service
 ►  Pod state, Pod Identifier
 ►  2 Pod endpoints
 
-  K8s Services 
-►  What is a Service in K8s and when we need it?
-►  ClusterIP Services
-►  Service Communication
-►  Multi-Port Services
-►  Headless Services
-►  NodePort Services
-►  LoadBalancer Services

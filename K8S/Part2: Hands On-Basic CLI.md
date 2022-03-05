@@ -6,7 +6,7 @@
 |__) /~~\ .__/ | \__, .__/ 
                            
 
-PART 1a: Hands On Engineering - Basic Command Line
+PART 2: Hands On Engineering - Basic Command Line
 
 
 
