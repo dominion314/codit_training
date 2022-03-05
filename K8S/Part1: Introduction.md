@@ -5,7 +5,7 @@
 |__)  /\  /__` | /  ` /__` 
 |__) /~~\ .__/ | \__, .__/ 
                                                                             
-
+10min
 PART 1: Introduction
  
 ►  What is Kubernetes?
@@ -35,7 +35,7 @@ PART 1: Introduction
 
 ►  Services and Configmaps
 
-    Services are resources (IP, DNS, Routing, LoadBalancing) you create to make a single, constant point of entry. This point of entry is always available to a group of pods. Each service has an IP address and port that never changes while the service exists. Clients can open connections to that IP and port, and those connections are then routed to one of the pods backing that service. This way, clients of a service don’t need to know the location of individual pods providing the service, allowing those pods to be moved around the cluster at any time.
+    Services are resources (IP, DNS, Routing, LoadBalancing) you create to make a single, constant point of entry and this point of entry is always available to a group of pods. Each service has an IP address and port that never changes while the service exists. Clients can open connections to that IP and port, and those connections are then routed to one of the pods backing that service. This way, clients of a service don’t need to know the location of individual pods providing the service, allowing those pods to be moved around the cluster at any time.
 
     Configmaps are for separating configuration from deployment. Without configmaps you'd have to download and redeploy your containers every time you wanted to change the configuration. This K8s primitive is intended for defining the configuration of the apps deployed to Kubernetes. Briefly, your config is a dictionary of settings represented by key-value pairs. They are stored in YAML, and a K8s resource called ConfigMap is responsible for handling them.
 
