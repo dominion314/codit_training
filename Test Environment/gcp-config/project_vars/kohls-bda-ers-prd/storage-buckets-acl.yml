@@ -1,8 +1,0 @@
----
-storageBuckets:
-  doms-bda-ers-biz:
-    acls:
-      groupsByEmail:
-        gcp-ers-gcp-labs-user@doms.com: WRITER
-        gcp-ers-gcp-labs-superuser@doms.com: WRITER
-        gcp-bda-devops-admin@doms.com: OWNER

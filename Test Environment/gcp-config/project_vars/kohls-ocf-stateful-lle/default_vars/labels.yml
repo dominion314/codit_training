@@ -1,8 +1,0 @@
----
-defaultLabels:
-  billing-dept-id: "90569"
-  line-of-business: "ocf"
-  lob: "ocf"
-  environment-name: "nonprod"
-  environment-type: "nonprod"
-  technology: "storage"

@@ -1,7 +1,0 @@
----
-vpcs:
-  cx-nx-lle:
-    electiveFWrules:
-    - akamaiRules
-    - PMMRules
-    - mongoAtlasRules

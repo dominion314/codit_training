@@ -1,5 +1,0 @@
----
-vpcs:
-  infra-nx-lle:
-    routingMode: GLOBAL
-    autoCreateSubnets: false

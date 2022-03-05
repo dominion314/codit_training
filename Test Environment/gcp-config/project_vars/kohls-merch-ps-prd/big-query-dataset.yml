@@ -1,6 +1,0 @@
----
-bigQueryDatasets:
-  helix_data_pipeline:
-    friendlyName: helix_data_pipeline
-  merch_ps_dps_prd:
-    friendlyName: merch_ps_dps_prd

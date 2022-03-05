@@ -1,6 +1,0 @@
----
-storageBuckets:
-  doms-eta-credit-lle-us-central1-primary-consul-backup:
-    acls:
-      usersByEmail:
-        consul-paas@doms-eta-credit-lle.iam.gserviceaccount.com: OWNER

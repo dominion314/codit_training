@@ -1,5 +1,0 @@
----
-vpcs:
-  merch-nx-prd:
-    routingMode: GLOBAL
-    autoCreateSubnets: false

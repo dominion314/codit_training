@@ -1,9 +1,0 @@
----
-storageBuckets:
-  sec-wazuh-configs-prd:
-    permissions:
-      serviceAccountsByEmail:
-        invcomp-sec@doms-sec-engineering-prd.iam.gserviceaccount.com:
-          deletionProtect: false
-          roles:
-          - storage.admin

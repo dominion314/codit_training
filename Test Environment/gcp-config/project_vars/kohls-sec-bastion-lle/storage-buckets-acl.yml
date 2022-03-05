@@ -1,6 +1,0 @@
----
-storageBuckets:
-  okta-asa-reports-lle:
-    acls:
-      usersByEmail:
-        scaleft-sec@doms-infosec-lle.iam.gserviceaccount.com: WRITER

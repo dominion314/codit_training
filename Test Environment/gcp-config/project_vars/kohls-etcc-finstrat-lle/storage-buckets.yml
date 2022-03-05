@@ -1,7 +1,0 @@
----
-storageBuckets:
-  doms-etcc-finstrat-test-service-lle:
-    location: US
-    storageClass: STANDARD
-    versioningEnabled: false
-    deletionProtect: true

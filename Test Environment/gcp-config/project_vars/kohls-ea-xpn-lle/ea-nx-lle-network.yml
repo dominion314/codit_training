@@ -1,5 +1,0 @@
----
-vpcs:
-  ea-nx-lle:
-    routingMode: GLOBAL
-    autoCreateSubnets: false

@@ -1,9 +1,0 @@
----
-pubSubSubscriptions:
-  create-po-pub-prod-sub:
-    labels:
-      line-of-business: po
-    topicName: create-po-pub-prod
-    ackDeadlineSeconds: 10
-    messageRetentionDuration: 604800s
-    retainAckedMessages: false

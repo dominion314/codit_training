@@ -1,9 +1,0 @@
----
-storageBuckets:
-  doms-bda-lp-biz:
-    permissions:
-      serviceAccountsByEmail:
-        dp-lp-sa@doms-bda-lp-prd.iam.gserviceaccount.com:
-          roles:
-            - storage.objectAdmin
-

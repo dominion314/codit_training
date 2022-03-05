@@ -1,5 +1,0 @@
----
-vpcs:
-  eta-nx-prd:
-    routingMode: GLOBAL
-    autoCreateSubnets: false

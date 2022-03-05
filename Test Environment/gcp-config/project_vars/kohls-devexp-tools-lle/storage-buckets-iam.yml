@@ -1,9 +1,0 @@
----
-storageBuckets:
-  gitlab-ocp-cache-lle:
-    permissions:
-      serviceAccountsByEmail:
-        gitlab-ocp-cache@doms-devexp-tools-lle.iam.gserviceaccount.com:
-          deletionProtect: false
-          roles:
-          - storage.objectAdmin

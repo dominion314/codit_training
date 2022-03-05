@@ -1,5 +1,0 @@
----
-vpcs:
-  iaas-nx-prd:
-    routingMode: GLOBAL
-    autoCreateSubnets: false

@@ -1,7 +1,0 @@
----
-storageBuckets:
-  doms-ecom-sre-lle-data-1:
-    acls:
-      serviceAccountsByEmail:
-        doms-platform-openshift-lle@appspot.gserviceaccount.com: WRITER
-

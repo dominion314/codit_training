@@ -1,6 +1,0 @@
----
-vpcs:
-  cpedemo-nx-lle:
-
-    routingMode: GLOBAL
-    autoCreateSubnets: false
