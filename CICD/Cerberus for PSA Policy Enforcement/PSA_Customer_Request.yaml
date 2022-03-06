@@ -1,9 +1,9 @@
 ---
 #Request for PSA.
 vpcs:
-  devops-notpsa-prd: #Please fill out your team name.
-    routingMode: GLOBAL
+  devops-psa-prd: #Please fill out your team name.
+    routingMode: us-central1
     autoCreateSubnets: false
     psaNetwork:
-      devops-psa-prd-mongo-notpsa-01: #Please fill out your team name and application.
-        network: 10.124.0.0/20 #Please request your subnet here.
+      devops-psa-prd-doms-psa-01: #Please fill out your team name and application.
+        network: 10.124.0.0/25 #Please request your subnet here.

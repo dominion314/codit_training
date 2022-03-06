@@ -18,8 +18,12 @@ Equality:
 """
 1. String Example
 
-Read a string from a user and display a string made of the first 2 and last 2 characters f the original string, so if the user types 'snowflake', the expected result would be 'snke'.
-It prints the first 2 characters and combines it with the last 2 characters in the inputted string. Let us display a message saying, "Not enough characters, please enter a word greater than 2 characters."
+Read a string from a user and display a string made of the first 2 and 
+last 2 characters f the original string, so if the user types 
+'snowflake', the expected result would be 'snke'.
+It prints the first 2 characters and combines it with the last 2 
+characters in the inputted string. Let us display a message saying, 
+"Not enough characters, please enter a word greater than 2 characters."
 If the user types 1 letter or if the string is less than 2. 
 
 Example one:
