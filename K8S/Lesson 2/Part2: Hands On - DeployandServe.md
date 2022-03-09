@@ -6,7 +6,7 @@
 |__) /~~\ .__/ | \__, .__/ 
                            
 
-PART 4: Hands On Engineering - Configure an nginx deployment and service
+PART 2: Hands On Engineering - Configure an nginx deployment and service
 
 Code you will use:
 

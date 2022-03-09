@@ -210,10 +210,15 @@ PART 2: Hands On Engineering - Basic Command Line
     kubectl delete deployment nginx-test
         
         deployment.apps "nginx-test" deleted
-  
-        
 
-PART 3: K8S Object Configuration
+
+
+Lesson 2
+
+
+
+
+    PART 1: K8S Object Configuration
 
 
 
@@ -259,11 +264,11 @@ PART 3: K8S Object Configuration
 
 
 
-PART 4: Hands On Engineering - Configure an nginx deployment and service
+    PART 2: Hands On Engineering - Configure an nginx deployment and service
 
-Code you will use:
+    Code you will use:
 
-You will need to add these two yaml files to the directory in your cluster.
+    You will need to add these two yaml files to the directory in your cluster.
 
 
 
@@ -338,6 +343,139 @@ kubectl run test-nginx-service --image=busybox
 kubectl describe pod test-nginx-service
 kubectl edit pod test-nginx-service
 kubectl logs nginx-deployment-6d777db949-89t8p 
+
+
+
+Lesson 2
+
+
+    Part 1: Namespaces
+
+    ►  What is a Namespace?
+
+    Namespace provides an additional qualification to a resource name or one word it used for isolation. This is helpful when multiple teams are using the same cluster and there is a potential of name collision. It can be as a virtual wall between multiple clusters. There is no “right” way to do namespaces, there’s only something that works for you. Use namespaces to have strict separation between resources and for RBAC where needed. Use separate namespaces to keep apart services that should be prevented from sharing the same configmaps/secrets, or that should be isolated from other services (with network policies - this can be done within the same namespace but requires more work than with namespaces).
+
+    ►  4 Default Namespaces
+
+    Default - The default namespace for objects with no other namespace
+    Kube-node-lease - This namespace holds Lease objects associated with each node. Node leases allow the kubelet to send heartbeats so that the control plane can detect node failure.
+    kube-public - his namespace is created automatically and is readable by all users (including those not authenticated). This namespace is mostly reserved for cluster usage, in case that some resources should be visible and readable publicly throughout the whole cluster. The public aspect of this namespace is only a convention, not a requirement.
+    kube-system - The namespace for objects created by the Kubernetes system
+
+    ►  Create a Namespace
+
+apiVersion: v1
+kind: Namespce
+metadata
+    name: doms-namespace
+
+    ►  Why to use Namespaces? 4 Use Cases
+    ►  Characteristics of Namespaces
+    ►  Create Components in Namespaces
+
+apiVersion: v1
+kind: Service
+metadata:
+   name: elasticsearch
+   namespace: elk
+   labels:
+      component: elasticsearch
+spec:
+   type: LoadBalancer
+   selector:
+      component: elasticsearch
+   ports:
+   - name: http
+      port: 9200
+      protocol: TCP
+   - name: transport
+      port: 9300
+      protocol: TCP
+
+    ►  Change Active Namespace
+
+    kubectl create namespace doms-namespace
+    kubectl config current-context
+    kubectl config use-context doms-namespace 
+    kubectl describe namespace doms-namespace
+
+    🔗 Links:
+    - Install Kubectx: https://github.com/ahmetb/kubectx#ins...
+
+
+    Persisting Data in K8s with Volumes 
+    ►  The need for persistent storage & storage requirements
+    ►  Persistent Volume (PV)
+    ►  Local vs Remote Volume Types
+    ►  Who creates the PV and when?
+    ►  Persistent Volume Claim (PVC)
+    ►  Levels of volume abstractions
+    ►  ConfigMap and Secret as volume types
+    ►  Storage Class (SC)
+
+    🔗 Links:
+    - Git Repo: https://bit.ly/2Gv3eLi
+
+    K8s Services 
+    ►  What is a Service in K8s and when we need it?
+    ►  ClusterIP Services
+    ►  Service Communication
+    ►  Multi-Port Services
+    ►  Headless Services
+    ►  NodePort Services
+    ►  LoadBalancer Services
+
+
+
+
+    ADVANCED TOPICS:
+
+    K8s Ingress explained 
+    ►  What is Ingress? External Service vs. Ingress
+    ►  Example YAML Config Files for External Service and Ingress
+    ►  Internal Service Configuration for Ingress
+    ►  How to configure Ingress in your cluster?
+    ►  What is Ingress Controller?
+    ►  Environment on which your cluster is running (Cloud provider or bare metal)
+    ►  Demo: Configure Ingress in Minikube
+    ►  Ingress Default Backend
+    ►  Routing Use Cases
+    ►  Configuring TLS Certificate
+
+    🔗 Links:
+    - Git Repo: https://bit.ly/3mJHVFc
+    - Ingress Controllers: https://bit.ly/32dfHe3
+    - Ingress Controller Bare Metal: https://bit.ly/3kYdmLB
+
+
+
+
+  Helm - Package Manager 
+►  Package Manager and Helm Charts
+►  Templating Engine
+►  Use Cases for Helm
+►  Helm Chart Structure
+►  Values injection into template files
+►  Release Management / Tiller (Helm Version 2!)
+
+🔗 Links:
+- Helm hub: https://hub.helm.sh/
+- Helm charts GitHub Project: https://github.com/helm/charts
+- Install Helm: https://helm.sh/docs/intro/install/
+
+  Deploying Stateful Apps with StatefulSet 
+►  What is StatefulSet? Difference of stateless and stateful applications
+►  Deployment of stateful and stateless apps
+►  Deployment vs StatefulSet
+►  Pod Identity
+►  Scaling database applications: Master and Worker Pods
+►  Pod state, Pod Identifier
+►  2 Pod endpoints
+
+
+
+
+
 
 
 
@@ -538,86 +676,3 @@ kubectl logs nginx-deployment-6d777db949-89t8p
 
 # 🔗 Links:
 # - Git repo link: https://bit.ly/3jY6lJp
-
-  Persisting Data in K8s with Volumes 
-►  The need for persistent storage & storage requirements
-►  Persistent Volume (PV)
-►  Local vs Remote Volume Types
-►  Who creates the PV and when?
-►  Persistent Volume Claim (PVC)
-►  Levels of volume abstractions
-►  ConfigMap and Secret as volume types
-►  Storage Class (SC)
-
-🔗 Links:
-- Git Repo: https://bit.ly/2Gv3eLi
-
-  K8s Services 
-►  What is a Service in K8s and when we need it?
-►  ClusterIP Services
-►  Service Communication
-►  Multi-Port Services
-►  Headless Services
-►  NodePort Services
-►  LoadBalancer Services
-
-
-
-
-
-
-
-ADVANCED TOPICS:
-
-  K8s Ingress explained 
-►  What is Ingress? External Service vs. Ingress
-►  Example YAML Config Files for External Service and Ingress
-►  Internal Service Configuration for Ingress
-►  How to configure Ingress in your cluster?
-►  What is Ingress Controller?
-►  Environment on which your cluster is running (Cloud provider or bare metal)
-►  Demo: Configure Ingress in Minikube
-►  Ingress Default Backend
-►  Routing Use Cases
-►  Configuring TLS Certificate
-
-🔗 Links:
-- Git Repo: https://bit.ly/3mJHVFc
-- Ingress Controllers: https://bit.ly/32dfHe3
-- Ingress Controller Bare Metal: https://bit.ly/3kYdmLB
-
-
-  Organizing your components with K8s Namespaces 
-►  What is a Namespace?
-►  4 Default Namespaces
-►  Create a Namespace
-►  Why to use Namespaces? 4 Use Cases
-►  Characteristics of Namespaces
-►  Create Components in Namespaces
-►  Change Active Namespace
-
-🔗 Links:
-- Install Kubectx: https://github.com/ahmetb/kubectx#ins...
-
-  Helm - Package Manager 
-►  Package Manager and Helm Charts
-►  Templating Engine
-►  Use Cases for Helm
-►  Helm Chart Structure
-►  Values injection into template files
-►  Release Management / Tiller (Helm Version 2!)
-
-🔗 Links:
-- Helm hub: https://hub.helm.sh/
-- Helm charts GitHub Project: https://github.com/helm/charts
-- Install Helm: https://helm.sh/docs/intro/install/
-
-  Deploying Stateful Apps with StatefulSet 
-►  What is StatefulSet? Difference of stateless and stateful applications
-►  Deployment of stateful and stateless apps
-►  Deployment vs StatefulSet
-►  Pod Identity
-►  Scaling database applications: Master and Worker Pods
-►  Pod state, Pod Identifier
-►  2 Pod endpoints
-

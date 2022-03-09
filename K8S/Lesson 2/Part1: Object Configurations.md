@@ -6,7 +6,7 @@
 |__) /~~\ .__/ | \__, .__/ 
                            
 
-PART 3: K8S Object Configuration
+PART 1: K8S Object Configuration
 
 
 
