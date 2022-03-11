@@ -6,73 +6,51 @@
 |__) /~~\ .__/ | \__, .__/ 
                            
 
-PART 2: Hands On Engineering - Basic Command Line
+#PART 2: Hands On Engineering - Basic Command Line
 
 
 
-►  What is minikube?
+# What is minikube?
 
-    Minikube is a tool that lets you run Kubernetes locally, with a single node on a cluster.
+#     Minikube is a tool that lets you run Kubernetes locally, with a single node on a cluster.
 
-►  What is kubectl?
+# What is kubectl?
 
-    The Kubernetes command-line tool, kubectl, allows you to run commands against Kubernetes clusters.
+#     The Kubernetes command-line tool, kubectl, allows you to run commands against Kubernetes clusters.
 
-►  How do I install Minikube and Kubectl on GCP, AWS, Mac, or Linux?
+# How do I install Minikube and Kubectl on GCP, AWS, Mac, or Linux?
 
-    Create an instance for training in GCP/AWS or install directly to your laptop.
-    Ensure you have the correct firewall rule in place for access
-    Install docker on the VM or instance - https://tomroth.com.au/gcp-docker/
-    Install minikube - https://minikube.sigs.k8s.io/docs/start/
-        - Run the command "minikube start"
-    Install kubectl - https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
-        - Run the command "kubectl cluster-info" to verify
+#     Create an instance for training in GCP/AWS or install directly to your laptop.
+#     Ensure you have the correct firewall rule in place for access
+#     Install docker on the VM or instance - https://tomroth.com.au/gcp-docker/
+#     Install minikube - https://minikube.sigs.k8s.io/docs/start/
+#         - Run the command "minikube start"
+#     Install kubectl - https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
+#         - Run the command "kubectl cluster-info" to verify
 
-Commands and Output
+#Commands and Output
 
-►  Create a deployment (nginx server)
+#Create a deployment (nginx server)
 
     kubectl create deployment nginx-test --image=nginx
 
-        deployment.apps/nginx-test created
-
-►  Get
+#Get
 
     kubectl cluster-info
 
-        Kubernetes control plane is running at https://192.168.49.2:8443
-        CoreDNS is running at https://192.168.49.2:8443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
-
     kubectl get pods
-
-        NAME                          READY   STATUS    RESTARTS   AGE
-        nginx-test-84b478f9c5-b9zdv   1/1     Running   0          83s
 
     kubectl get nodes
 
-        NAME       STATUS   ROLES                  AGE    VERSION
-        minikube   Ready    control-plane,master   6h1m   v1.23.3
-
     kubectl get services
-
-        NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
-        kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   6h1m
 
     kubectl api-resources
 
-        This should print out info for many things such as shortname, API version, kind, etc.
-
     kubectl get deployment nginx-test
-
-        NAME         READY   UP-TO-DATE   AVAILABLE   AGE
-        nginx-test   1/1     1            1           2m3s
 
     kubectl get replicaset
 
-        NAME                    DESIRED   CURRENT   READY   AGE
-        nginx-test-84b478f9c5   1         1         1       4m33
-
-►  Describe/Logs
+#Describe/Logs
 
     kubectl describe deployment
 
@@ -126,13 +104,3 @@ Commands and Output
         2022/03/04 03:19:48 [notice] 1#1: start worker processes
         2022/03/04 03:19:48 [notice] 1#1: start worker process 31
         2022/03/04 03:19:48 [notice] 1#1: start worker process 32
-
-►  Delete
-
-    kubectl delete  pod nginx-test-84b478f9c5-b9zdv
-        
-        pod "nginx-test-84b478f9c5-b9zdv" deleted
-
-    kubectl delete deployment nginx-test
-        
-        deployment.apps "nginx-test" deleted
