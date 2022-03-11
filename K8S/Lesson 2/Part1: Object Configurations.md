@@ -12,18 +12,18 @@ PART 1: K8S Object Configuration
 
 ►  A Config File (YAML, labels, metadata, specification, status, ports, services, selectors)
 
-    YAML files are used to define individual objects and then inject them into the k8s API. Each of these object types (YAML files) has a piece of code responsible for managing its lifecycle and orchestrates the system as a whole. Objects are independent, meaning you don't have to define your service(ie network) and your deployment(nginx pod) at the same time. 
+    YAML files are used to define individual objects and then inject them into the K8S API. Yet Another Markp Language allows you to use anchors to reference values in other files which makes it easy to read. Each of these object types is written in YAML and has a piece of code responsible for orchestrating the system as a whole. Objects are independent, meaning you don't have to define your service(ie network) and your deployment(nginx pod) at the same time. 
     
-    They're completely separate objects that know nothing about each other, their only connection is that a service will try to find pods based on label selectors you define. The most comman YAML schema models are pod, replica set, deployment, service, and config map. 
+    They're completely separate objects that know nothing about each other, their only connection is that a service will try to find pods based on label selectors you define. The most common YAML models are pods, replica set, deployments, services, and the configmap. 
 
         This is the minimum requirements for all schemas:
 
             apiVersion:
             kind:
             metadata:
-            spec:
+                spec:
 
-        Schemas will differ by their spec:
+        Models in YAML will differ by their spec:
 
             apiVersion: v1
             kind: Pod
@@ -37,6 +37,20 @@ PART 1: K8S Object Configuration
                     - containerPort: 80
 
     Labels are a mechanism for one object to reference another object through a process of selection.
+
+    apiVersion: v1
+kind: Pod
+metadata:
+  name: label-demo
+  labels:
+    environment: production (Companies have different IT environments within a business. Typical environments might be something like Dev and Production. Dev(QA) may be for testing upcoming releases, updates, or for developing proof of concept. Production(prod) will run 
+    app: nginx
+spec:
+  containers:
+   -name: nginx
+    image: nginx:1.14.2
+    ports:
+    -containerPort: 80
 
     Metadata is data that helps uniquely identify the object, including a name string, UID, and optional namespace.
 
