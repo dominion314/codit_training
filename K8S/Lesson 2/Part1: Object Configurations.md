@@ -38,20 +38,6 @@ PART 1: K8S Object Configuration
 
     Labels are a mechanism for one object to reference another object through a process of selection.
 
-    apiVersion: v1
-kind: Pod
-metadata:
-  name: label-demo
-  labels:
-    environment: production (Companies have different IT environments within a business. Typical environments might be something like Dev and Production. Dev(QA) may be for testing upcoming releases, updates, or for developing proof of concept. Production(prod) will run 
-    app: nginx
-spec:
-  containers:
-   -name: nginx
-    image: nginx:1.14.2
-    ports:
-    -containerPort: 80
-
     Metadata is data that helps uniquely identify the object, including a name string, UID, and optional namespace.
 
     Specification is a complete description of the desired state, including configuration settings provided by the user, default values expanded by the system, and properties initialized or otherwise changed after creation by other ecosystem components (e.g., schedulers, auto-scalers), and is persisted in stable storage with the API object. If the specification is deleted, the object will be purged from the system.

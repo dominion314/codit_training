@@ -71,7 +71,7 @@ Linux-0
 Terraform-0
 
 
-Zain Medard 
+Zain Medard - some exp working with codit less than a year.
 
 Cl/CD- 0
 Kubernetes-2

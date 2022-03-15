@@ -79,9 +79,4 @@ spec:
 # kubectl scale --help
 # kubectl scale deployment nginx-deployment --replicas 4
 # kubectl scale deployment nginx-deployment --replicas 3
-# kubectl rollout history deployment nginx-deployment
-
-# kubectl run test-nginx-service --image=busybox
-# kubectl describe pod test-nginx-service
-# kubectl edit pod test-nginx-service
 # kubectl logs nginx-deployment-6d777db949-89t8p 
