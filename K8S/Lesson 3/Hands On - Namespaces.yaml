@@ -1,0 +1,50 @@
+#Hands on 1 - Create a Namespace
+kubectl create namespace <name>
+ 
+#Or you can do it as a deployment
+
+nano doms-test2.yaml
+
+  apiVersion: v1
+  kind: Namespce
+  metadata:
+      name: doms-test2
+
+kubectl apply -f namespaces.yaml
+
+#Hands on 2 - Changing Namespaces
+#Because namespaces are isolated, you may not see deployments in your current namespace because they're in another one.
+#Kubens is an installable Kubernetes tool that allows us to view our namespaces and then switch to the correct one. 
+
+Kubens 
+kubens <namespace>
+
+#Hands on 3 - Assign a Pod to Your Namespace
+ 
+nano doms-pod.yaml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: doms-pod
+  namespace: doms-test1
+  labels:
+    name: doms-pod
+spec:
+  containers:
+    name: doms-pod
+    image: nginx
+
+kubectl apply -f doms-pod.yaml 
+
+#If you look for your pod, you may not find it. 
+#You need to find the pod in the correct namespace. 
+ 
+#You can either switch to the correct one
+
+kubens <namespace>
+kubectl get pods
+
+#Or run the following ad-hoc command
+
+kubectl get pods --namespace=doms-test1
