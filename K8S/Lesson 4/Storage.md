@@ -93,3 +93,6 @@ allowVolumeExpansion: true
 mountOptions:
    debug
 volumeBindingMode: Immediate
+
+
+https://www.youtube.com/watch?v=ZxC6FwEc9WQ 530-11 min

@@ -3,14 +3,14 @@ kubectl create namespace <name>
  
 #Or you can do it as a deployment
 
-nano doms-test2.yaml
+nano <your-namespace>.yaml
 
   apiVersion: v1
   kind: Namespce
   metadata:
-      name: doms-test2
+      name: <your-name>
 
-kubectl apply -f namespaces.yaml
+kubectl apply -f <your-namespace>.yaml
 
 #Hands on 2 - Changing Namespaces
 #Because namespaces are isolated, you may not see deployments in your current namespace because they're in another one.
@@ -21,21 +21,21 @@ kubens <namespace>
 
 #Hands on 3 - Assign a Pod to Your Namespace
  
-nano doms-pod.yaml
+nano <your-pod>.yaml
 
 apiVersion: v1
 kind: Pod
 metadata:
-  name: doms-pod
-  namespace: doms-test1
+  name: <your-pod>
+  namespace: <your-namespace>
   labels:
-    name: doms-pod
+    name: <your-pod>
 spec:
   containers:
-    name: doms-pod
+    name: <your-pod>
     image: nginx
 
-kubectl apply -f doms-pod.yaml 
+kubectl apply -f <your-pod>.yaml 
 
 #If you look for your pod, you may not find it. 
 #You need to find the pod in the correct namespace. 
@@ -47,4 +47,4 @@ kubectl get pods
 
 #Or run the following ad-hoc command
 
-kubectl get pods --namespace=doms-test1
+kubectl get pods --namespace=<your-namespace>
