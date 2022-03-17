@@ -98,6 +98,7 @@ apt update
 apt install curl
 curl http://localhost
 
+'Hello from Kubernetes storage'
 
 #V. Cleanup
 
