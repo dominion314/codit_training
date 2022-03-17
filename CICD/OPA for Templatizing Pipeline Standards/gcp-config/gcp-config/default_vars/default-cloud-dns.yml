@@ -1,0 +1,8 @@
+---
+cloudDNSDefaults:
+  peeringTarget:
+    project: doms-xpn-project
+    vpc: vpn-transit
+    dnsName: '.'
+  dnsPolicy:
+    enableLogging: true

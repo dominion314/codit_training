@@ -1,0 +1,221 @@
+---
+vpcs:
+  cpe-nx-lle:
+
+    firewallRules:
+      ghwebhooks-01:
+        priority: 900
+        direction: INGRESS
+        description: SCTASK0991124
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          sourceRanges:
+          - "10.1.43.26"
+          - "10.7.33.1"
+          - "10.7.33.2"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "80"
+            - "443"
+            - "8443"
+            - "8080"
+      onprem-to-yumfiles-01:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16144
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          - external: "576826117778-compute@developer.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+          - "10.0.0.0/8"
+          - "172.26.0.0/15"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "80"
+            - "443"
+            - "22"
+            - "8080"
+      onprem-to-doms-cpe-kcc-lle-01:
+        priority: 900
+        direction: INGRESS
+        description: GKE-MONITORING
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          sourceRanges:
+          - "10.0.0.0/8"
+          - "172.26.0.0/15"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "9090"
+            - "9093"
+            - "3000"
+      onprem-to-cx-lle-01:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16207
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-allow-all
+          - fw-bd-azkaban-lle
+          - fw-bd-azkaban
+          - fw-dataproc
+          - fw-dadq
+          - fw-kafka
+          - fw-kafka-zk
+          - fw-airflow
+          - fw-mysql
+          - mysql
+          - rt-db-replication
+          - consul
+          - fw-consul
+          - vault
+          - fw-vault
+          - tonomirunner
+          - fw-zeppelin
+          sourceRanges:
+          - "172.26.0.0/15"
+          - "10.101.0.0/16"
+          - "10.109.0.0/16"
+          - "10.110.0.0/16"
+          - "10.90.80.0/24"
+          - "10.90.81.0/24"
+          - "10.90.100.0/23"
+          - "10.64.0.0/17"
+          - "10.57.0.0/17"
+          - "10.100.0.0/16"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "4040"
+            - "8000-8999"
+            - "7077"
+            - "6066"
+            - "10020"
+            - "10033"
+            - "18080"
+            - "18081"
+            - "19888"
+            - "22"
+            - "6443"
+            - "443"
+            - "80"
+            - "9092"
+            - "16379"
+            - "7891"
+            - "18443"
+            - "25"
+            - "3306"
+            - "6446"
+      webhook-posts-for-eunomia:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16417
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          sourceRanges:
+          - "10.126.128.0/17"
+          - "10.127.128.0/17"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "8080"
+      ssh-access-devexp-tools-lle:
+        priority: 900
+        direction: INGRESS
+        description: To mirror existing ssh capability
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          targetTags:
+          - fw-allow-ssh
+          sourceRanges:
+          - "10.0.0.0/8"
+          - "172.26.0.0/15"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "22"
+      eunomia-webhooks-cpe-nx-prd:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16761
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          - external: "83924457218-compute@developer.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+          - "10.185.13.0/24"
+          - "10.189.8.0/24"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "80"
+            - "443"
+            - "8383"
+            - "8080"
+      image-access-for-jenkins-cpe-image-mgmt:
+        priority: 900
+        direction: INGRESS
+        description: SNOW-16893
+        disabled: false
+        logging: false
+        rule:
+          destinationRanges:
+          targetServiceAccounts:
+          - external: "576826117778-compute@developer.gserviceaccount.com"
+          targetTags:
+          sourceRanges:
+          - "10.185.3.128/25"
+          - "10.189.0.224/27"
+          sourceServiceAccounts:
+          sourceTags:
+          allow:
+          - protocol: "tcp"
+            ports:
+            - "80"
+            - "443"
+            - "22"
+            - "8080"
+            - "5985"

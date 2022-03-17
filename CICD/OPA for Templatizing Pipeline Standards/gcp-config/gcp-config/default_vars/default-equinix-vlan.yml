@@ -1,0 +1,103 @@
+---
+# EQX VLANs attached to Routers
+# Central Range > 1000-1200
+# East Range    > 2000-2200
+
+interconnectVlans:
+  central:
+    zone1:
+      cpe-nx-lle-c1-pi-rtr01: 1002
+      cpe-nx-prd-c1-pi-rtr01: 1004
+      mt-nx-lle-c1-pi-rtr01: 1006
+      demo-vpc-c1-pi-rtr01: 1008
+      cpedemo-nx-lle-c1-pi-rtr01: 1009
+      platform-nx-lle-c1-pi-rtr01: 1010
+      sec-nx-prd-c1-pi-rtr01: 1013
+      cpa-nx-lle-c1-pi-rtr01: 1015
+      eta-nx-lle-c1-pi-rtr01: 1016
+      kre-nx-lle-c1-pi-rtr01: 1017
+      cx-nx-prd-c1-pi-rtr01: 1018
+      cx-nx-lle-c1-pi-rtr01: 1020
+      infra-nx-lle-c1-pi-rtr01: 1021
+      infra-nx-prd-c1-pi-rtr01: 1022
+      eta-nx-prd-c1-pi-rtr01: 1026
+      merch-nx-prd-c1-pi-rtr01: 1029
+      ea-nx-prd-c1-pi-rtr01: 1032
+      bda-nx-lle-c1-pi-rtr01: 1034
+      bda-nx-hle-c1-pi-rtr01: 1035
+      bda-nx-prd-c1-pi-rtr01: 1036
+      seed-nx-prd-c1-pi-rtr01: 1041
+      seed-nx-lle-c1-pi-rtr01: 1040
+      ecom-nx-hle-c1-pi-rtr01: 1042
+      ecom-nx-prd-c1-pi-rtr01: 1043
+      iaas-nx-lle-c1-pi-rtr01: 1045
+      iaas-nx-prd-c1-pi-rtr01: 1046
+      platform-nx-prd-c1-pi-rtr01: 1047
+      ecom-nx-lle-c1-pi-rtr01: 1048
+      platformops-nx-lle-c1-pi-rtr01: 1049
+    zone2:
+      cpe-nx-lle-c1-pi-rtr02: 1003
+      cpe-nx-prd-c1-pi-rtr02: 1005
+      demo-vpc-c1-pi-rtr02: 1007
+      sec-nx-lle-c1-pi-rtr01: 1011
+      platform-nx-prd-c1-pi-rtr02: 1012
+      sec-nx-prd-c1-pi-rtr02: 1014
+      cx-nx-prd-c1-pi-rtr02: 1019
+      infra-nx-prd-c1-pi-rtr02: 1023
+      eta-nx-prd-c1-pi-rtr02: 1027
+      merch-nx-lle-c1-pi-rtr01: 1028
+      merch-nx-prd-c1-pi-rtr02: 1030
+      ea-nx-lle-c1-pi-rtr01: 1031
+      ea-nx-prd-c1-pi-rtr02: 1033
+      bda-nx-prd-c1-pi-rtr02: 1037
+      seed-nx-prd-c1-pi-rtr02: 1039
+      ecom-nx-prd-c1-pi-rtr02: 1044
+  east:
+    zone1:
+      cpe-nx-lle-e1-pi-rtr01: 2006
+      cpe-nx-prd-e1-pi-rtr01: 2004
+      demo-vpc-e1-pi-rtr01: 2008
+      platform-nx-lle-e1-pi-rtr01: 2011
+      sec-nx-prd-e1-pi-rtr01: 2014
+      cpa-nx-lle-e1-pi-rtr01: 2016
+      eta-nx-lle-e1-pi-rtr01: 2017
+      kre-nx-lle-e1-pi-rtr01: 2018
+      cx-nx-prd-e1-pi-rtr01: 2019
+      cx-nx-lle-e1-pi-rtr01: 2021
+      infra-nx-prd-e1-pi-rtr01: 2023
+      eta-nx-prd-e1-pi-rtr01: 2027
+      merch-nx-lle-e1-pi-rtr01: 2029
+      merch-nx-prd-e1-pi-rtr01: 2030
+      ea-nx-prd-e1-pi-rtr01: 2033
+      bda-nx-lle-e1-pi-rtr01: 2035
+      bda-nx-prd-e1-pi-rtr01: 2037
+      seed-nx-prd-e1-pi-rtr01: 2042
+      ecom-nx-prd-e1-pi-rtr01: 2044
+      iaas-nx-lle-e1-pi-rtr01: 2046
+      iaas-nx-prd-e1-pi-rtr01: 2047
+      platform-nx-prd-e1-pi-rtr01: 2049
+      platformops-nx-lle-e1-pi-rtr01: 2050
+    zone2:
+      cpe-nx-lle-e1-pi-rtr02: 2003
+      cpe-nx-prd-e1-pi-rtr02: 2005
+      mt-nx-lle-e1-pi-rtr02: 2007
+      demo-vpc-e1-pi-rtr02: 2009
+      cpedemo-nx-lle-e1-pi-rtr01: 2010
+      sec-nx-lle-e1-pi-rtr01: 2012
+      platform-nx-prd-e1-pi-rtr02: 2013
+      sec-nx-prd-e1-pi-rtr02: 2015
+      cx-nx-prd-e1-pi-rtr02: 2020
+      infra-nx-lle-e1-pi-rtr01: 2022
+      infra-nx-prd-e1-pi-rtr02: 2024
+      eta-nx-prd-e1-pi-rtr02: 2028
+      merch-nx-prd-e1-pi-rtr02: 2031
+      ea-nx-lle-e1-pi-rtr01: 2032
+      ea-nx-prd-e1-pi-rtr02: 2034
+      bda-nx-hle-e1-pi-rtr01: 2036
+      bda-nx-prd-e1-pi-rtr02: 2038
+      ecom-nx-lle-e1-pi-rtr01: 2039
+      seed-nx-prd-e1-pi-rtr02: 2040
+      seed-nx-lle-e1-pi-rtr01: 2041
+      ecom-nx-hle-e1-pi-rtr01: 2043
+      ecom-nx-prd-e1-pi-rtr02: 2045
+      iaas-nx-prd-e1-pi-rtr02: 2048

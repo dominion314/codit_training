@@ -1,0 +1,614 @@
+---
+projects:
+- name: doms-bda-analytics-prd
+  gitRef: main
+- name: doms-bda-dse-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "20 0,8,16 * * *"
+- name: doms-bda-dse-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "25 0,8,16 * * *"
+- name: doms-bda-hle
+  gitRef: main
+- name: doms-bda-lle
+  gitRef: main
+- name: doms-bda-log-prd
+  gitRef: main
+- name: doms-bda-prd
+  gitRef: main
+- name: doms-bda-xpn-hle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "05 2,10,18 * * *"
+- name: doms-bda-xpn-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "20 2,10,18 * * *"
+- name: doms-bda-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "45 1,9,17 * * *"
+- name: doms-cce-openshift-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "40 3,11,19 * * *"
+- name: doms-cce-openshift-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "55 3,11,19 * * *"
+- name: doms-cpa-lle
+  gitRef: main
+- name: doms-cpa-xpn-lle
+  gitRef: main
+- name: doms-cpe-cne-lle
+  gitRef: main
+- name: doms-cpe-cpa-lle
+  gitRef: main
+- name: doms-cpe-e2edemo-lle
+  gitRef: main
+- name: doms-cpe-image-mgmt-lle
+  gitRef: main
+- name: doms-cpe-image-mgmt-prd
+  gitRef: main
+- name: doms-cpe-kcc-prd
+  gitRef: main
+- name: doms-cpe-sample-lle
+  gitRef: main
+- name: doms-cpe-sre-lle
+  gitRef: main
+- name: doms-cpe-sre-prd
+  gitRef: main
+- name: doms-cpe-xpn-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "00 2,10,18 * * *"
+- name: doms-cpe-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "20 3,11,19 * * *"
+- name: doms-credit-ia-lle
+  gitRef: main
+- name: doms-cx-associate-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "00 1,9,17 * * *"
+- name: doms-cx-associate-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "20 1,9,17 * * *"
+- name: doms-cx-loyalty-retailsrv-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "50 0,8,16 * * *"
+- name: doms-cx-rtl-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "45 0,8,16 * * *"
+- name: doms-cx-rtl-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "45 0,8,16 * * *"
+- name: doms-cx-pci-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "05 1,8,17 * * *"
+- name: doms-cx-pci-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "05 1,8,17 * * *"
+- name: doms-cx-poc-lle
+  gitRef: main
+- name: doms-cx-post-purchase-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "55 0,8,16 * * *"
+- name: doms-cx-post-purchase-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "50 1,9,17 * * *"
+- name: doms-cx-shop-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "10 1,9,17 * * *"
+- name: doms-cx-shop-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "10 1,9,17 * * *"
+- name: doms-cx-sremgmt-prd
+  gitRef: main
+- name: doms-cx-sre-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "15 1,9,17 * * *"
+- name: doms-cx-xpn-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "40 1,9,17 * * *"
+- name: doms-cx-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "55 1,9,17 * * *"
+- name: doms-devexp-tools-lle
+  gitRef: main
+- name: doms-devexp-tools-prd
+  gitRef: main
+- name: doms-devexp-tools-sbx
+  gitRef: main
+- name: doms-ea-xpn-lle
+  gitRef: main
+- name: doms-ea-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "35 4,12,20 * * *"
+- name: doms-ecom-xpn-hle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "05 3,11,19 * * *"
+- name: doms-ecom-xpn-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "35 2,10,18 * * *"
+- name: doms-ecom-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "30 4,12,20 * * *"
+- name: doms-eta-hr-lle
+  gitRef: main
+- name: doms-eta-hr-prd
+  gitRef: main
+- name: doms-eta-xpn-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "30 3,11,19 * * *"
+- name: doms-eta-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "05 4,12,20 * * *"
+- name: doms-etcc-exterro-lle
+  gitRef: main
+- name: doms-etcc-exterro-prd
+  gitRef: main
+- name: doms-etcc-finops-aodocs-lle
+  gitRef: main
+- name: doms-etcc-poppulo-prd
+  gitRef: main
+- name: doms-etcc-tax-lle
+  gitRef: main
+- name: doms-etcc-tax-prd
+  gitRef: main
+- name: doms-etcc-uc-lle
+  gitRef: main
+- name: doms-iaas-bqadmin-prd
+  gitRef: main
+- name: doms-iaas-lle
+  gitRef: main
+- name: doms-iaas-prd
+  gitRef: main
+- name: doms-iaas-xpn-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "45 4,12,20 * * *"
+- name: doms-iaas-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "40 4,12,20 * * *"
+- name: doms-infra-aiops-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "20 4,12,20 * * *"
+- name: doms-infra-aiops-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "50 4,12,20 * * *"
+- name: doms-infra-monitoring-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "25 4,12,20 * * *"
+- name: doms-infra-monitoring-prd
+  gitRef: main
+- name: doms-infra-xpn-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "45 3,11,19 * * *"
+- name: doms-infra-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "25 3,11,19 * * *"
+- name: doms-intra-transit-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "15 0,8,16 * * *"
+- name: doms-kre-xpn-lle
+  gitRef: main
+- name: doms-merch-in-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "10 0,8,16 * * *"
+- name: doms-merch-item-lle
+  gitRef: main
+- name: doms-merch-item-prd
+  gitRef: main
+- name: doms-merch-pl-lle
+  gitRef: main
+- name: doms-merch-pl-prd
+  gitRef: main
+- name: doms-merch-pd-lle
+  gitRef: main
+- name: doms-merch-pd-prd
+  gitRef: main
+- name: doms-merch-xpn-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "15 3,11,19 * * *"
+- name: doms-merch-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "00 4,12,20 * * *"
+- name: doms-multitenant-xpn-lle
+  gitRef: main
+- name: doms-ocf-adhoc-prd
+  gitRef: main
+- name: doms-ocf-ext-prd
+  gitRef: main
+- name: doms-ocf-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "40 0,8,16 * * *"
+- name: doms-ocf-prd
+  gitRef: main
+- name: doms-ocf-stateful-lle
+  gitRef: main
+- name: doms-paas-ops
+  gitRef: main
+- name: doms-platform-dbaas-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "40 2,10,18 * * *"
+- name: doms-platform-dbaas-ops
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "55 2,10,18 * * *"
+- name: doms-platform-dbaas-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "00 3,11,19 * * *"
+- name: doms-platform-maas-lle
+  gitRef: main
+- name: doms-platform-maas-ops
+  gitRef: main
+- name: doms-platform-maas-prd
+  gitRef: main
+- name: doms-platform-netservices-lle
+  gitRef: main
+- name: doms-platform-netservices-prd
+  gitRef: main
+- name: doms-platform-openshift-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "35 3,11,19 * * *"
+- name: doms-platform-openshift-ops
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "30 2,10,18 * * *"
+- name: doms-platform-openshift-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "50 3,11,19 * * *"
+- name: doms-platform-xpn-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "35 1,9,17 * * *"
+- name: doms-platform-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "25 1,9,17 * * *"
+- name: doms-rapidpaas-sbx
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "15 2,10,18 * * *"
+- name: doms-scf-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "30 1,9,17 * * *"
+- name: doms-scf-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "10 2,10,18 * * *"
+- name: doms-sec-engineering-lle
+  gitRef: main
+- name: doms-sec-engineering-prd
+  gitRef: main
+- name: doms-sec-oasa-lle
+  gitRef: main
+- name: doms-sec-vault-lle
+  gitRef: main
+- name: doms-sec-vault-prd
+  gitRef: main
+- name: doms-sec-xpn-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "25 2,10,18 * * *"
+- name: doms-sec-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "45 2,10,18 * * *"
+- name: doms-seed-xpn-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "10 4,12,20 * * *"
+- name: doms-seed-xpn-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "15 4,12,20 * * *"
+- name: doms-bda-mkt-lle
+  gitRef: main
+- name: doms-bda-ecom-prd
+  gitRef: main
+- name: doms-bda-hr-prd
+  gitRef: main
+- name: doms-bda-stores-prd
+  gitRef: main
+- name: doms-bda-finance-prd
+  gitRef: main
+- name: doms-bda-mkt-prd
+  gitRef: main
+- name: doms-bda-lp-prd
+  gitRef: main
+- name: doms-bda-credit-prd
+  gitRef: main
+- name: doms-bda-merch-prd
+  gitRef: main
+- name: doms-bda-pd-prd
+  gitRef: main
+- name: doms-bda-ers-prd
+  gitRef: main
+- name: doms-visionapi-prd
+  gitRef: main
+- name: doms-visionapi-sbx
+  gitRef: main
+- name: doms-eta-credit-prd
+  gitRef: main
+- name: doms-eta-credit-lle
+  gitRef: main
+- name: doms-merch-ps-lle
+  gitRef: main
+- name: doms-merch-ps-prd
+  gitRef: main
+- name: doms-cce-dbaas-lle
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "50 2,10,18 * * *"
+- name: doms-cce-dbaas-prd
+  gitRef: main
+  triggers:
+  - type: Webhook
+  - type: Change
+  - type: Periodic
+    cron: "10 3,11,19 * * *"
+- name: doms-cx-scf-instaclustr-lle
+  gitRef: main
+- name: doms-infra-kdx-lle
+  gitRef: main
+- name: doms-infra-kdx-prd
+  gitRef: main
+- name: doms-sec-okta-lle
+  gitRef: main
+- name: doms-infra-vmo-prd
+  gitRef: main
+- name: doms-etcc-finstrat-lle
+  gitRef: main
+- name: doms-cx-associate-new-lle
+  gitRef: main
+- name: doms-infra-win-ad-prd
+  gitRef: main
+- name: doms-sec-logging-prd
+  gitRef: main
+- name: doms-sec-cspm-prd
+  gitRef: main
+- name: doms-sec-bastion-lle
+  gitRef: main
+- name: doms-sec-bastion-prd
+  gitRef: main
+- name: doms-infosec-prd
+  gitRef: main
+- name: doms-eta-finance-lle
+  gitRef: main
+- name: doms-eta-finance-prd
+  gitRef: main
+- name: doms-etcc-payments-lle
+  gitRef: main
+- name: doms-etcc-creditops-lle
+  gitRef: main
+- name: doms-infra-pie-lle
+  gitRef: main
+- name: doms-infra-pie-prd
+  gitRef: main
+- name: doms-merch-in-prd
+  gitRef: main
+- name: doms-etcc-creditops-prd
+  gitRef: main
+- name: doms-sec-okta-prd
+  gitRef: main
+- name: doms-etcc-aacs-lle
+  gitRef: main
+- name: doms-etcc-aacs-prd
+  gitRef: main
+- name: doms-infra-cuds-prd
+  gitRef: main
+- name: doms-platformops-xpn-lle
+  gitRef: main
+- name: doms-etcc-ccproductivity-lle
+  gitRef: main

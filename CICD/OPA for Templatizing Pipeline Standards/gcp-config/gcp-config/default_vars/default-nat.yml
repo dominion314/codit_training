@@ -1,0 +1,16 @@
+---
+NAT_DEFAULTS:
+  minPortsPerVm: 64
+  tcpEstablishedIdleTimeoutSec: 1200
+  tcpTransitoryIdleTimeoutSec: 30
+  udpIdleTimeoutSec: 30
+  icmpIdleTimeoutSec: 30
+  filter: ERRORS_ONLY
+PROXY_NAT_DEFAULTS:
+  minPortsPerVm: 15000
+  tcpEstablishedIdleTimeoutSec: 300
+  tcpTransitoryIdleTimeoutSec: 30
+  udpIdleTimeoutSec: 30
+  icmpIdleTimeoutSec: 30
+  filter: ERRORS_ONLY
+  eimEnabled: false

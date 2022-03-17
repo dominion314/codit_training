@@ -1,0 +1,50 @@
+---
+vpcs:
+  cpesample-nx-lle: # vpc name
+    subnets:
+      # list of named subnets to be shared to service projects
+      cpesample-xpn-lle-c1-prv01: # first shared subnet
+        advertiseRoutes: false # advertise the route or not
+        region: us-central1 # region where the subnet resides
+        network: # actual network and parameters that makes up the named subnet above
+          ip: # auto generated
+          bluecat-id: # auto generated
+          status: # auto generated
+        permissions:
+          serviceAccountsByEmail:
+          - doms-infra-aiops-prd-mysql@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - doms-infra-aiops-prd-mongo@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - doms-infra-aiops-prd@appspot.gserviceaccount.com
+          - mysql-dba@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - mongo-dba@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - terraform-iaas-project-creator@doms-iaas-prd.iam.gserviceaccount.com
+          - consul-paas@doms-infra-aiops-prd.iam.gserviceaccount.com
+          groupsByEmail:
+          - gcp-aiops-devops-admin@doms.com
+          - gcp-aiops-devops-l2@doms.com
+          - gcp-aiops-devops-l3@doms.com
+          - gcp-aiops-devops-manager@doms.com
+
+      cpesample-xpn-lle-e1-prv01:
+        advertiseRoutes: false
+        region: us-east1
+        network:
+          ip: 10.189.3.64/26
+          bluecat-id: 1583817
+          status: PROVISIONED
+        permissions:
+          serviceAccountsByEmail:
+          - doms-infra-aiops-prd-mysql@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - doms-infra-aiops-prd-mongo@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - doms-infra-aiops-prd@appspot.gserviceaccount.com
+          - mysql-dba@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - mongo-dba@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - terraform-devops@doms-infra-aiops-prd.iam.gserviceaccount.com
+          - terraform-iaas-project-creator@doms-iaas-prd.iam.gserviceaccount.com
+          - consul-paas@doms-infra-aiops-prd.iam.gserviceaccount.com
+          groupsByEmail:
+          - gcp-aiops-devops-admin@doms.com
+          - gcp-aiops-devops-l2@doms.com
+          - gcp-aiops-devops-l3@doms.com
+          - gcp-aiops-devops-manager@doms.com

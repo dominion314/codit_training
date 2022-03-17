@@ -1,0 +1,24 @@
+---
+serviceAPIs:
+  # APIs & services
+  serviceusage.googleapis.com:
+  # Big Data APIs
+  bigquery.googleapis.com:
+  # Compute Engine APIs
+  compute.googleapis.com:
+  # Developer Tools APIs
+  cloudbuild.googleapis.com:
+  deploymentmanager.googleapis.com:
+  containerregistry.googleapis.com:
+  # Google Cloud APIs
+  cloudresourcemanager.googleapis.com:
+  # Storage APIs
+  storage-component.googleapis.com:
+  storage-api.googleapis.com:
+  storagetransfer.googleapis.com:
+  # Network
+  networktopology.googleapis.com:
+  # Other APIs
+  logging.googleapis.com:
+  cloudasset.googleapis.com:
+  stackdriver.googleapis.com:

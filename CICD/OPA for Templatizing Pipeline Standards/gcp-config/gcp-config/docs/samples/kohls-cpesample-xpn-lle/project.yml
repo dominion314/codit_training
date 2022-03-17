@@ -1,0 +1,16 @@
+---
+billingDeptId: enter billing dept id
+project:
+  name: doms-cpesample-xpn-lle #pre determined via LOB
+  managed: true #boolean - default true
+  deletionProtect: true #boolean - default true
+  folderId: pre populated
+  billingAccount: pre populated
+  labels:
+    billing-dept-id: enter billing dept id
+    project-manager: enter project manager
+    devops-lead: enter devops-lead
+    environment-type: enter prod OR lle
+    line-of-business: enter line of business
+    project-requestor: enter project requestor name
+serviceAPIs: #enter desire APIs to be activated

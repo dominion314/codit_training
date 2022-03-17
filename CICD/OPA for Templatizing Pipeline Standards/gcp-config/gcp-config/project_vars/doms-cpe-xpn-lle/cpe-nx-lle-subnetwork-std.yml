@@ -1,0 +1,191 @@
+---
+vpcs:
+  cpe-nx-lle:
+    subnets:
+      cpe-nx-lle-generic-subnet-c1-prv01:
+        advertiseRoutes: false
+        natRouter: cpe-nx-lle-c1-gcp-rtr01
+        region: us-central1
+        network:
+          ip: 10.187.1.0/28
+          bluecat-id: 1490514
+
+      cpe-nx-lle-generic-subnet-e1-prv01:
+        advertiseRoutes: false
+        natRouter: cpe-nx-lle-e1-gcp-rtr01
+        region: us-east1
+        network:
+          ip: 10.191.0.0/28
+          bluecat-id: 1490519
+
+      cpe-nx-lle-cie-image-mgmt-subnet-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.187.16.128/25
+          bluecat-id: 1585893
+          status: PROVISIONED
+        permissions:
+          groupsByEmail:
+          - gcp-iaas-softwareengineer-l3@doms.com
+          serviceAccountsByEmail:
+          - terraform-devops@doms-cpe-image-mgmt-lle.iam.gserviceaccount.com
+          - 576826117778-compute@developer.gserviceaccount.com
+
+      cpe-nx-lle-cie-image-mgmt-subnet-e1-prv01:
+        advertiseRoutes: true
+        natRouter: cpe-nx-lle-e1-gcp-rtr01
+        region: us-east1
+        network:
+          ip: 10.191.7.0/27
+          bluecat-id: 1585895
+          status: PROVISIONED
+        permissions:
+          groupsByEmail:
+          - gcp-iaas-softwareengineer-l3@doms.com
+          serviceAccountsByEmail:
+          - terraform-devops@doms-cpe-image-mgmt-lle.iam.gserviceaccount.com
+          - 576826117778-compute@developer.gserviceaccount.com
+
+      cpe-nx-lle-sample-c1-prv01:
+        advertiseRoutes: false
+        region: us-central1
+        network:
+          ip: 10.187.18.0/24
+          bluecat-id: 1586639
+          status: PROVISIONED
+
+
+      cpe-nx-lle-proxy-test-c1-prv01:
+        advertiseRoutes: false
+        natRouter: cpe-nx-lle-c1-gcp-rtr01
+        region: us-central1
+        network:
+          ip: 10.187.16.32/28
+          bluecat-id: 1588228
+          status: PROVISIONED
+        permissions:
+          groupsByEmail:
+          - gcp-cpe-cne-devops-l3@doms.com
+          - gcp-cpe-cne-devops-admin@doms.com
+          serviceAccountsByEmail:
+          - 612510086557-compute@developer.gserviceaccount.com
+          - 612510086557@cloudservices.gserviceaccount.com
+
+      cpe-nx-lle-sre-subnet-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.187.19.128/25
+          bluecat-id: 1589719
+          status: PROVISIONED
+
+      cpe-nx-lle-devexp-tools-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.187.20.128/26
+          bluecat-id: 1595968
+          status: PROVISIONED
+        permissions:
+          groupsByEmail:
+          - gcp-cpe-developerexperience-softwareengineer-admin@doms.com
+          serviceAccountsByEmail:
+          - devexp-automation@doms-devexp-tools-lle.iam.gserviceaccount.com
+          - devexp-automation@doms-devexp-tools-sbx.iam.gserviceaccount.com
+          - gitlab-runner@doms-devexp-tools-lle.iam.gserviceaccount.com
+          - gitlab-runner@doms-devexp-tools-sbx.iam.gserviceaccount.com
+          - 1082044040530@cloudservices.gserviceaccount.com
+
+      cpe-nx-lle-devexp-tools-e1-prv01:
+        advertiseRoutes: true
+        region: us-east1
+        network:
+          ip: 10.191.11.64/26
+          bluecat-id: 1595972
+          status: PROVISIONED
+        permissions:
+          groupsByEmail:
+          - gcp-cpe-developerexperience-softwareengineer-admin@doms.com
+          serviceAccountsByEmail:
+          - devexp-automation@doms-devexp-tools-lle.iam.gserviceaccount.com
+          - devexp-automation@doms-devexp-tools-sbx.iam.gserviceaccount.com
+          - gitlab-runner@doms-devexp-tools-lle.iam.gserviceaccount.com
+          - gitlab-runner@doms-devexp-tools-sbx.iam.gserviceaccount.com
+          - 1082044040530@cloudservices.gserviceaccount.com
+
+      cpe-nx-lle-devexp-tools-runnerpci-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.187.60.192/27
+          bluecat-id: 2873178
+          status: PROVISIONED
+        permissions:
+          groupsByEmail:
+          - gcp-cpe-developerexperience-softwareengineer-admin@doms.com
+          serviceAccountsByEmail:
+          - devexp-automation@doms-devexp-tools-lle.iam.gserviceaccount.com
+          - devexp-automation@doms-devexp-tools-sbx.iam.gserviceaccount.com
+          - gitlab-runner@doms-devexp-tools-lle.iam.gserviceaccount.com
+          - gitlab-runner@doms-devexp-tools-sbx.iam.gserviceaccount.com
+          - 1082044040530@cloudservices.gserviceaccount.com
+
+      cpe-nx-lle-devexp-tools-runnerpci-e1-prv01:
+        advertiseRoutes: true
+        region: us-east1
+        network:
+          ip: 10.191.27.224/27
+          bluecat-id: 2873180
+          status: PROVISIONED
+        permissions:
+          groupsByEmail:
+          - gcp-cpe-developerexperience-softwareengineer-admin@doms.com
+          serviceAccountsByEmail:
+          - devexp-automation@doms-devexp-tools-lle.iam.gserviceaccount.com
+          - devexp-automation@doms-devexp-tools-sbx.iam.gserviceaccount.com
+          - gitlab-runner@doms-devexp-tools-lle.iam.gserviceaccount.com
+          - gitlab-runner@doms-devexp-tools-sbx.iam.gserviceaccount.com
+          - 1082044040530@cloudservices.gserviceaccount.com
+
+      cpe-nx-lle-sre-theia-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.187.7.208/28
+          bluecat-id: 1599701
+          status: PROVISIONED
+
+      cpe-nx-lle-sre-theia-e1-prv01:
+        advertiseRoutes: true
+        region: us-east1
+        network:
+          ip: 10.191.11.32/28
+          bluecat-id: 1599703
+          status: PROVISIONED
+
+      cpe-nx-lle-test-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.187.7.192/28
+          bluecat-id: 1599687
+          status: PROVISIONED
+        permissions:
+          groupsByEmail:
+          - gcp-cloudplatformengineering-devops-admin@doms.com
+
+      cpe-nx-lle-gitopsdemo-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.187.33.0/28
+          bluecat-id: 1603866
+          status: PROVISIONED
+      cpe-nx-lle-cne-mirror-c1-prv01:
+        advertiseRoutes: true
+        region: us-central1
+        network:
+          ip: 10.187.34.192/28
+          bluecat-id: 1978186
+          status: PROVISIONED

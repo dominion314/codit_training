@@ -1,0 +1,44 @@
+---
+#ingress rules for platform projects; Migration of VM instances to Cloud based MySQL Instances
+electiveRules:
+  MySQLRules:
+    elec-mysql-fw-01:
+      priority: 900
+      direction: INGRESS
+      description: SNOW-16311 #Ingress to MySQL instances
+      disabled: false
+      logging: false
+      rule:
+        destinationRanges:
+        targetServiceAccounts:
+        targetTags:
+        - cloudsql-migrate-prd
+        sourceRanges:
+        - 10.124.16.0/20
+        - 10.124.40.0/21
+        sourceServiceAccounts:
+        sourceTags:
+        allow:
+        - protocol: tcp
+          ports:
+          - "3306"
+    elec-mysql-fw-02:
+      priority: 900
+      direction: INGRESS
+      description: SNOW-16311 #Ingress to MySQL instances
+      disabled: false
+      logging: false
+      rule:
+        destinationRanges:
+        targetServiceAccounts:
+        targetTags:
+        - cloudsql-migrate-lle
+        sourceRanges:
+        - 10.124.0.0/20
+        - 10.124.32.0/21
+        sourceServiceAccounts:
+        sourceTags:
+        allow:
+        - protocol: tcp
+          ports:
+          - "3306"

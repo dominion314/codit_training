@@ -26,13 +26,13 @@ nano <your-pod>.yaml
 apiVersion: v1
 kind: Pod
 metadata:
-  name: <your-pod>
-  namespace: <your-namespace>
+  name: doms-pod
+  namespace: doms-test1
   labels:
-    name: <your-pod>
+    name: doms-pod
 spec:
   containers:
-    name: <your-pod>
+    name: doms-pod
     image: nginx
 
 kubectl apply -f <your-pod>.yaml 
