@@ -1,0 +1,31 @@
+Answer the following:
+
+1. What is the shell communicating with?
+
+2. What two commands can I run to delete an empty directory?
+
+3. What command can I use to get the manual for a command?
+
+4. What command can I use to search for a file?
+
+Complete the following exercise:
+
+1. Create a file call test-<yourname>.txt using the touch command.
+
+2. Use the locate command to find the file path of your new file.
+
+3. Create a directory call dir-<yourname>.txt
+
+4. Move your test file to the new directory.
+
+5. Navigate to your new directory.
+
+6. Delete the test file.
+
+7. Move out of your new directory.
+
+8. Delete your new directory.
+
+9. Identify what directory you're currently in.
+
+10. Clear your screen.
