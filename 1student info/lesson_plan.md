@@ -23,5 +23,7 @@ Time:
 -Extra troubleshooting should take about 1 week. 
 
 
+-Indenpendent activity
+-Quiz
 
 

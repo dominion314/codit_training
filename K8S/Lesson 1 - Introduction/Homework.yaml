@@ -1,0 +1,30 @@
+Lesson 1 - Introduction
+
+
+Answer the following:
+
+What is Kubernetes?
+What problems does Kubernetes solve?
+Name the 4 basic components of a cluster
+Name the 5 components of the control plane
+What is a service?
+What is a configmap?
+What is a Persistent Volume?
+What is a replicaset?
+What is a deployment?
+What is the job of the scheduluer and where does it reside?
+What is the function of etcd?
+
+Identify the commands needed to complete the following:
+
+View cluster info
+
+Create a pod ad-hoc
+
+View existing pods 
+
+View existing nodes
+
+Describe a deployment
+
+View logs for a pod

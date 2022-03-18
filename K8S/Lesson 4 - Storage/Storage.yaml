@@ -1,4 +1,4 @@
-#I. Setup your node
+#I. Setup your node  - Done in Minikube()
 
 Identify your node and SSH to it
 
@@ -12,10 +12,10 @@ Create a directory,
     sudo sh -c "echo 'Hello from Kubernetes storage' > /mnt/data/index.html"
     cat /mnt/data/index.html
 
-
+su
     
 
-#II. Create a Persistent Volume
+#II. Create a Persistent Volume - Done on GCP VM(cloudshell)
 
 
 nano yourname-pv.yaml
@@ -23,7 +23,7 @@ nano yourname-pv.yaml
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: <yourname-storage>
+  name: yourname-storage
   labels:
     type: local
 spec:
@@ -39,7 +39,7 @@ kubectl apply -f yourname-pv.yaml
 kubectl get pv yourname-storage
 
 
-#III. Create a Persistent Volume Claim
+#III. Create a Persistent Volume Claim - Done on GCP VM(cloudshell)
 
 nano yourname-pv-claim.yaml
 
@@ -63,29 +63,29 @@ kubectl get pvc yourname-pv-claim
 
 
 
-#IV. Create a Pod and Attach the Claim
+#IV. Create a Pod and Attach the Claim - Done on GCP VM(cloudshell)
 
 
-nano doms-pod.yaml
+nano yourname-pod.yaml
 
 apiVersion: v1
 kind: Pod
 metadata:
-  name: yourname-pv-pod
+  name: keyuna-pv-pod
 spec:
   volumes:
-    - name: yourname-storage
+    - name: keyuna-storage
       persistentVolumeClaim:
-        claimName: yourname-pv-claim
+        claimName: keyuna-pv-claim
   containers:
-    - name: yourname-pv-container
+    - name: keyuna-pv-container
       image: nginx
       ports:
         - containerPort: 80
           name: "http-server"
       volumeMounts:
         - mountPath: "/usr/share/nginx/html"
-          name: yourname-storage
+          name: keyuna-storage
 
 
 cat yourname-pod.yaml
@@ -93,14 +93,14 @@ kubectl apply -f yourname-pod.yaml
 kubectl get pod yourname-pv-pod
 
 
-kubectl exec -it doms-pv-pod -- /bin/bash
+kubectl exec -it yourname-pv-pod -- /bin/bash #Need to SSH to Pod
 apt update
 apt install curl
 curl http://localhost
 
 'Hello from Kubernetes storage'
 
-#V. Cleanup
+#V. Cleanup Need to be in GCP
 
 
 kubectl delete pod yourname-pv-pod

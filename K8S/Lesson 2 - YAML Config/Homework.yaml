@@ -1,0 +1,49 @@
+Lesson 2 - Object Configuration
+
+Answer the following:
+
+What is an object? What is a resource? How are they different?
+
+What are the four main requirements for a deployment schema?
+
+What are labels?
+
+What is metadata?
+
+How are ports and services related?
+
+What is the Spec field used for in a deployment and what is its relations to 'Status'?
+
+
+Identify issues with the following deployment: (3 Issues)
+
+apiVersion: apps/
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: 
+        image: nginx:1.16
+        ports:
+        - containerPort: 
+
+
+Identify the commands needed to complete the following:
+
+View Services
+
+Apply a deployment to the cluster
+
+Increase the number of replicasets for a pod

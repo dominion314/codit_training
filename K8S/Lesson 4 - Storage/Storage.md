@@ -1,5 +1,5 @@
 Lesson Guide
-
+-Start Recording
 -General Overview of Volumes
 -Setup Node
 -Create PV
@@ -14,7 +14,7 @@ https://kubernetes.io/docs/concepts/storage/storage-classes/
 https://itnext.io/how-to-use-custom-storage-classes-in-kubernetes-edc568acfdfe
 https://kubernetes.io/docs/concepts/storage/persistent-volumes/
 https://phoenixnap.com/kb/kubernetes-persistent-volumes
-https://portworx.com/tutorial-kubernetes-persistent-volumes/
+https://portworx.com/tutorial-kubernetes-persistent-volumes/git
 
 Understand Volume Mode, Access Modes and Reclaim Policies for Volumes
 https://kubernetes.io/docs/concepts/storage/persistent-volumes/#volume-mode

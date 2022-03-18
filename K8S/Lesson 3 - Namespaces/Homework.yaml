@@ -1,0 +1,40 @@
+Lesson 3 - Namespaces
+
+What is a namespace and why do we use them?
+What are the 2 most popular environments developers deploy namespaces in?
+What is CNC?
+If I wanted to access a database from 'Namespace Prod' that resides in 'Namespace Test', what would my address look like?
+What are the 3 primary namespaces and what does each one do?
+What is kubens and does it come pre-installed in Kubernetes?
+
+
+Identify what the following 3 commands will accomplish. Write your description below it: 
+
+
+nano doms-namespace.yaml
+
+  apiVersion: v1
+  kind: Namespace
+  metadata:
+      name: doms-namespace
+
+kubectl apply -f doms-namespace.yaml
+
+What would be a reason that you 
+
+
+Identify issues with the following deployment. What corrections need to be made?: (2 issues)
+
+nano doms-pod.yam
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: doms-pod
+  namespace: doms-
+  labels:
+    name: doms-pod
+spec:
+  containers:
+    name: doms-pod
+    image: nginx
