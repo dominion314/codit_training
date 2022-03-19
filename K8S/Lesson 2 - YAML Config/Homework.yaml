@@ -47,3 +47,9 @@ View Services
 Apply a deployment to the cluster
 
 Increase the number of replicasets for a pod
+
+Commands you will use:
+
+kubectl get svc
+kubectl apply -f
+kubectl scale deployment <pod> --replicas

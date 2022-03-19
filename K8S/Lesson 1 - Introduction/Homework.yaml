@@ -28,3 +28,12 @@ View existing nodes
 Describe a deployment
 
 View logs for a pod
+
+Commands you will use:
+
+kubectl cluster-info
+kubectl create deployment
+kubectl get pods
+kubectl get nodes
+kubectl describe
+kubectl logs
