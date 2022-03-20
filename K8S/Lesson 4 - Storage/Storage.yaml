@@ -92,8 +92,9 @@ cat yourname-pod.yaml
 kubectl apply -f yourname-pod.yaml
 kubectl get pod yourname-pv-pod
 
+#SSH into Pod
 
-kubectl exec -it yourname-pv-pod -- /bin/bash #Need to SSH to Pod
+kubectl exec -it yourname-pv-pod -- /bin/bash 
 apt update
 apt install curl
 curl http://localhost

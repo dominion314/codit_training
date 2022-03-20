@@ -1,0 +1,21 @@
+Lesson 5 - PodtoPod Connectivity
+
+Answer the following:
+
+What are the 7 layers of the OSI model?
+At what layer of the OSI do we use IP addresses?
+At what layer of the OSI do we use MAC addresses?
+What command can you issue to get the names and IP addresses of your pods?
+If you need 50,000 IP addresses, what CIDR range would you choose?
+What is the wildcard mask for a /15 CIDR range?
+
+Identify the number of useable IP addresses in the following CIDR ranges:
+/24
+/22
+/8
+/27
+/12
+/16
+
+Hands on: Complete the lab on your own!
+

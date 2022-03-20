@@ -1,0 +1,179 @@
+#ToDo:
+
+Create a service of type ClusterIP
+Create a service of type Nodeport
+Create a service of type Loadbalancer
+Create three nginx deployments for each service.
+
+I. Create ClusterIP service type:
+
+nano cluster-service.yaml
+
+#ClusterIP Service
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx-clusterip
+spec:
+  selector:
+    app: nginx-clusterip
+  type: ClusterIP
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+
+kubectl apply -f cluster-service.yaml
+kubectl get svc
+
+
+
+II. Create NodePort Service type:
+
+#NodePort Service
+
+nano nodeport-service.yaml
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx-nodeport
+spec:
+  selector:
+    app: nginx-nodeport
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+
+kubectl apply -f nodeport-service.yaml
+kubectl get svc
+
+
+
+III. Create LoadBalancer service type:
+
+
+#LoadBalancer Service
+
+nano loadbalancer-service.yaml
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx-loadbalancer
+spec:
+  selector:
+    app: nginx-loadbalancer
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 80
+
+kubectl apply -f loadbalancer-service.yaml
+kubectl get svc
+
+
+IV. Create 3 pods for each service:
+
+#ClusterIP Pods
+
+nano clusterip-pods.yaml
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-clusterip
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-clusterip
+  template:
+    metadata:
+      labels:
+        app: nginx-clusterip
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+
+kubectl apply -f clusterip-pods.yaml
+kubectl get pods
+
+#NodePort Pods
+
+nano nodeport-pods.yaml
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-nodeport
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-nodeport
+  template:
+    metadata:
+      labels:
+        app: nginx-nodeport
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+
+kubectl apply -f nodeport-pods.yaml
+kubectl get pods
+
+#LoadBalancer Pods
+
+nano loadbalancer-pods.yaml
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-loadbalancer
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-loadbalancer
+  template:
+    metadata:
+      labels:
+        app: nginx-loadbalancer
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+
+kubectl apply -f loadbalancer-pods.yaml
+kubectl get pods
+
+V. Verify and Delete:
+
+kubectl get svc
+kubectl delete deployment --all
+kubectl delete pods --all
+kubectl delete svc --all
+
+

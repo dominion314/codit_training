@@ -1,0 +1,11 @@
+Lesson 5 - Service Types
+
+Answer the following:
+
+Why do we need service types for networking?
+What is the problem with NodePort?
+How is a LoadBalancer service different from NodePort?
+If I have multiple nodes needing to access the internet on the same port, but no cloud provider - what service can I use?
+What command can I use to see the IP addresses for all of my pods?
+
+Hands on: Complete the lab on your own!
