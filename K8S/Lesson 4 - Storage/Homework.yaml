@@ -1,0 +1,31 @@
+Lesson 4 - Storage
+
+Answer the following:
+
+Why do we need volumes?
+What is a persistent volume?
+What is a persistent volume claim?
+What are the three access modes and what do they allow?
+What are some examples of cloud storage?
+What are some examples of traditional storage?
+Where does a local volume store its data?
+
+Identify issues with the following persistent volume. What corrections need to be made?: (2 issues)
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: yourname-storage
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 2000Mi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: 
+
+#Complete the lab using the Storage.yaml
+
