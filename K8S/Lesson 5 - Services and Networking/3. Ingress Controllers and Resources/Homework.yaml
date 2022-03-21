@@ -1,0 +1,11 @@
+Lesson 5 - Ingress Controllers and Resources
+
+Answer the following:
+#Use this link if you can't find your answers in the handout: https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/
+What two protocols does Ingress provide external service to?
+What are the two services you would need run with your Ingress for ports other than 80 and 443?
+What is the name of the loadbalancer in GCP?
+What is an edge router?
+Name an Azure based ingress controller.
+
+Hands on: Complete the lab on your own!

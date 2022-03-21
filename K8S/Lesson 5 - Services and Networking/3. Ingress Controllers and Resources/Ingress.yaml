@@ -1,0 +1,65 @@
+I. Enable the Ingress controller:
+
+Enable the minikube add on
+view the pods
+
+minikube addons enable ingress
+kubectl get pods -n ingress-nginx
+
+II. Deploy Hello-World app:
+
+Create the web app deployment
+view the deployment
+describe the deployment
+view the pod
+expose the pod to port 8080
+Access the service
+
+
+kubectl create deployment web --image=gcr.io/google-samples/hello-app:1.0
+kubectl get deployment web
+kubectl describe deployment web
+kubectl get pods
+kubectl expose deployment web --type=NodePort --port=8080
+kubectl get service web
+minikube service web --url
+
+III. Create an Ingress:
+
+Deploy your ingress policy and apply it to the cluster
+Get your minikube IP
+Create a DNS entry in GCP at the file path /etc/host - <your IP address> hello-world.info
+Verify your Ingress controller is directing traffic
+
+nano ingress-policy.yaml
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: example-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  rules:
+    - host: hello-world.info
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: web
+                port:
+                  number: 8080
+
+kubectl apply -f ingress-policy.yaml
+kubectl get ingress
+minikube ip
+
+#In GCP navigate to the /etc/hosts file. 
+
+cd ..
+cd /etc/
+sudo nano hosts
+  <your minikube IP> hello-world.info
+curl hello-world.info
