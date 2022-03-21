@@ -1,0 +1,36 @@
+I. View and Modify the CoreDNS config file:
+
+View the CoreDNS config file
+
+kubectl get all -n kube-system
+kubectl edit cm coredns -n kube-system
+
+
+II. Create a new ConfigMap for CoreDNS:
+
+Create a new Configmap
+Apply new ConfigMap to the cluster
+Verify the customizations 
+Force CoreDNS to reload by restarting the pod
+Verify CoreDNS is running in the kube-system namespace
+Veify Kube-DNS is no longer present
+
+nano configmap-coredns.yaml
+
+apiVersion: v1
+kind: ConfigMap
+metadata:  
+  name: coredns-custom  
+  namespace: kube-system 
+data:
+  example.server: | # All custom server files must have a “.server” file extension. 
+    # Change example.com to the domain you wish to forward.
+    example.com {
+      # Change 8.8.8.8 (Google) to your DNS resolver.
+      forward . 8.8.8.8
+    }
+
+kubectl apply -f configmap-coredns.yaml
+kubectl get configmaps --namespace=kube-system coredns-custom -o yaml
+kubectl delete pod --namespace kube-system -l k8s-app=kube-dns
+kubectl get pods -n kube-system

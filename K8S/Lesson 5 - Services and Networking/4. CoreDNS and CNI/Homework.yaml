@@ -1,0 +1,10 @@
+Lesson 5 - CoreDNS
+
+Answer the following:
+What is CoreDNS?
+How is CoreDNS different from Kube-DNS? Why is it better?
+What namespace does DNS run from?
+What is CNI?
+List popular options for CNI in GCP.
+
+Hands on: Complete the lab on your own!

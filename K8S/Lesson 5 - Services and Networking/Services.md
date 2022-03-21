@@ -16,5 +16,10 @@ https://medium.com/swlh/kubernetes-ingress-controller-overview-81abbaca19ec
 https://kubernetes.io/docs/concepts/services-networking/ingress/#resource-backend
 
 -Know How to Configure and Use CoreDNS
+https://kubernetes.io/docs/tasks/administer-cluster/coredns/
+https://github.com/coredns/coredns
 
 -Choose an Appropriate Container Network Interface Plugin
+https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/
+https://github.com/containernetworking/cni
+https://medium.com/thermokline/how-to-choose-a-k8s-cni-plugin-771edf4842c0
