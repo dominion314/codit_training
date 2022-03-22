@@ -1,0 +1,71 @@
+I. Create a deployment of 6 nginx instances running version 1.19.5, open to http traffic on port 80. :
+The Deployment should also do a rolling update strategy, with a maxSurge of 25% and a maxUnavailable of 25%.:
+
+nano yourname-deployment.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+  labels:
+    app: nginx
+spec:
+  replicas: 6
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.19.5
+        ports:
+        - containerPort: 80
+
+Kubectl apply -f yourname-deployment.yaml
+kubectl describe deployment nginx
+
+
+II. Update the nginx image to 1.19.6 with a patch.yaml file. Change the maxSurge and maxUnavailable to 50%.:
+
+nano yourname-patch.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: nginx
+spec:
+   strategy:
+      rollingUpdate:
+         maxSurge: 50%
+         maxUnavailable: 50%
+   template:
+      spec:
+         containers:
+            - name: nginx
+              image: nginx:1.19.6
+              ports:
+                 - containerPort: 80
+
+kubectl patch deployment nginx --patch-file=yourname-patch.yaml
+kubectl describe deployment nginx
+
+III. Rollback your changes:
+
+kubectl rollout undo deployment/nginx
+kubectl describe deployment nginx
+
+Imerpative Command Method:
+# kubectl create deployment yourname-nginx --image=yourname-nginx:1.19.5 --replicas=6
+# kubectl describe deployment yourname-nginx (unless specified, will be listed as "UpdateStrategy")
+# kubectl patch deployment yourname-nginx -p "{\"spec\": {\"strategy\": {\"rollingUpdate\": { \"maxSurge\":\"50%\"}}}}" --record=true
+# kubectl patch deployment yourname-nginx -p "{\"spec\": {\"strategy\": {\"rollingUpdate\": { \"maxUnavailable\":\"50%\"}}}}" --record=true
+# kubectl set image deployment yourname-nginx yourname-nginx=yourname-nginx:1.19.6 --record=true
+# kubectl rollout undo deployment/yourname-nginx

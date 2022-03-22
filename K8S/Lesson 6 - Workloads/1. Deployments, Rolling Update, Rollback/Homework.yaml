@@ -1,0 +1,45 @@
+Lesson 6 - Workloads
+
+Answer the following:
+
+What is a workload?
+What is a deployment?
+Under what field do you set a rollout strategy?
+What is a rollback?
+What is an object?
+Describe maxSurge and maxUnavailable.
+
+Edit the following deployment with 6 replicas, a maxSurge of 25%, a maxUnavailable of 50%, running version 1.19.5:
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+  labels:
+    app: nginx
+spec:
+  replicas: 
+  strategy:
+    rollingUpdate:
+      maxSurge: 
+      maxUnavailable: 
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:
+        ports:
+        - containerPort: 80
+
+
+Additional Reading:
+
+https://kubernetes.io/docs/concepts/workloads/
+https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+https://thenewstack.io/kubernetes-deployments-work/

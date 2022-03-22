@@ -8,4 +8,8 @@ How is a LoadBalancer service different from NodePort?
 If I have multiple nodes needing to access the internet on the same port, but no cloud provider - what service can I use?
 What command can I use to see the IP addresses for all of my pods?
 
-Hands on: Complete the lab on your own!
+Addtional Reading:
+
+https://cloud.ibm.com/docs/containers?topic=containers-nodeport
+https://www.edureka.co/community/19351/clusterip-nodeport-loadbalancer-different-from-each-other
+https://stackoverflow.com/questions/41509439/whats-the-difference-between-clusterip-nodeport-and-loadbalancer-service-types

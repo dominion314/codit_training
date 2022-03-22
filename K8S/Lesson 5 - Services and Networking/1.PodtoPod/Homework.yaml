@@ -17,5 +17,9 @@ Identify the number of useable IP addresses in the following CIDR ranges:
 /12
 /16
 
-Hands on: Complete the lab on your own!
+Additional reading:
+
+https://kubernetes.io/docs/concepts/workloads/pods/#pod-networking
+https://medium.com/google-cloud/understanding-kubernetes-networking-pods-7117dd28727
+https://superuser.openstack.org/articles/review-of-pod-to-pod-communications-in-kubernetes/
 

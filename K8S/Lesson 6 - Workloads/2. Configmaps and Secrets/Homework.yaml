@@ -1,0 +1,14 @@
+Answer the following:
+
+What is a ConfigMap?
+What is a Secret?
+Where can you find both in GCP?
+What places can Secrets be stored?
+What is more secure, ConfigMaps or Secrets?
+
+
+Addtional Reading:
+
+https://kubernetes.io/docs/concepts/configuration/configmap/
+https://medium.com/google-cloud/kubernetes-configmaps-and-secrets-68d061f7ab5b
+https://opensource.com/article/19/6/introduction-kubernetes-secrets-and-configmaps

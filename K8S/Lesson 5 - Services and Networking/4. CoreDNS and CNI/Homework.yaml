@@ -7,4 +7,11 @@ What namespace does DNS run from?
 What is CNI?
 List popular options for CNI in GCP.
 
-Hands on: Complete the lab on your own!
+Addtional Reading:
+
+https://kubernetes.io/docs/tasks/administer-cluster/coredns/
+https://github.com/coredns/coredns
+
+https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/
+https://github.com/containernetworking/cni
+https://medium.com/thermokline/how-to-choose-a-k8s-cni-plugin-771edf4842c0

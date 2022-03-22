@@ -63,3 +63,10 @@ cd /etc/
 sudo nano hosts
   <your minikube IP> hello-world.info
 curl hello-world.info
+
+
+Additional Reading:
+
+https://kubernetes.io/docs/concepts/services-networking/ingress/
+https://medium.com/swlh/kubernetes-ingress-controller-overview-81abbaca19ec
+https://kubernetes.io/docs/concepts/services-networking/ingress/#resource-backend
