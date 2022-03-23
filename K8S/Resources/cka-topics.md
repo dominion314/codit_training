@@ -35,3 +35,10 @@ Understand ClusterIP, NodePort, LoadBalancer service types and endpoints
 Know how to use Ingress controllers and Ingress resources
 Know how to configure and use CoreDNS
 Choose an appropriate container network interface plugin
+
+https://peiruwang.medium.com/certified-kubernetes-administrator-cka-exam-experience-sharing-and-question-examples-d24eaa23bd7a
+
+
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+
+https://medium.com/@danielmittelman1/the-comprehensive-guide-to-passing-the-certified-kubernetes-administrator-cka-exam-ba7ef2cec27f

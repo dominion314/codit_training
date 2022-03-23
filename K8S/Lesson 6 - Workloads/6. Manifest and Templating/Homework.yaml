@@ -1,0 +1,16 @@
+Answer the following:
+
+What is a manifest?
+What is a template?
+What is Helm? List the pros and cons.
+What is Ksonnet? List the pros and cons.
+What is kustomize? What are the advantages of using it over Helm or Ksonnet?
+
+
+
+Additional Reading:
+
+https://spinnaker.io/docs/guides/user/kubernetes-v2/deploy-manifest/
+https://codefresh.io/docs/docs/deploy-to-kubernetes/kubernetes-templating/
+https://blog.stack-labs.com/code/kustomize-101/
+https://prefetch.net/blog/2019/10/16/the-beginners-guide-to-creating-kubernetes-manifests/

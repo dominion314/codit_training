@@ -1,0 +1,37 @@
+I. Create a new namespace called "rl-yourname-test-100mi":
+
+kubectl create ns rl-dom-test-100mi
+
+II. Create a meomory limit of 100mi for this namespace:
+
+#nano yourname-namespace.yaml
+
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: rl-yourname-test
+  namespace: rl-yourname-test-100mi
+spec:
+  limits:
+  - max:
+      memory: 100Mi
+    type: Container
+
+III. Create a pod with a memory reqeuest of 150mi, verify by getting the error message:
+
+#nano yourname-pod.yaml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rl-test
+  namespace: rl-yourname-test-100mi
+spec:
+  containers:
+  - name: rl-test
+    image: nginx
+    resources:
+      requests:
+        memory: 150Mi
+
+kubectl apply -f yourname-pod.yaml

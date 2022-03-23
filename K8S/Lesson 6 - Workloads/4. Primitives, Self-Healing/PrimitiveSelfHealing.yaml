@@ -1,0 +1,33 @@
+I. Demonstrate Self-Healing:
+
+Create a deployment of 4 nginx pods.
+Apply the deployment
+Delete one pod from the deployment
+Verify the fourth pod comes back online with a new name.
+
+nano yourname-selfhealing.yaml
+
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: nginx-deployment-sample
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+
+kubectl apply -f yourname-selfhealing.yaml
+kubectl get pods
+kubectl delete pod <yourpod>
+kubectl get pods

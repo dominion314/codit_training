@@ -1,0 +1,14 @@
+Answer the following:
+
+What are resource limits?
+Why do we configure resource limits for pods?
+What will happen if a pod requests too much memory or CPU?
+List the 4 memory and CPU fields.
+
+
+
+Additional Reading:
+
+https://kubernetes.io/docs/concepts/policy/resource-quotas/
+https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#how-pods-with-resource-limits-are-run
+https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/

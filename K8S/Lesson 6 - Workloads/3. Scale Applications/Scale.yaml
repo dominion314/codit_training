@@ -1,0 +1,61 @@
+I. Create a deployment of 3 pods running nginx:
+
+#nano yourname-deployment.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: nginx-deployment
+   labels:
+      app: nginx
+spec:
+   replicas: 3
+   selector:
+      matchLabels:
+         app: nginx
+   template:
+      metadata:
+         labels:
+            app: nginx
+      spec:
+         containers:
+            - name: nginx
+              image: nginx
+              ports:
+                 - containerPort: 80
+
+kubectl apply -f yourname-deployment.yaml
+kubectl get pods
+
+II. Increase this deployment by adding 2 additonal pods:
+
+nano 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: nginx-deployment
+   labels:
+      app: nginx
+spec:
+   replicas: 5
+   selector:
+      matchLabels:
+         app: nginx
+   template:
+      metadata:
+         labels:
+            app: nginx
+      spec:
+         containers:
+            - name: nginx
+              image: nginx
+              ports:
+                 - containerPort: 80
+
+kubectl apply -f yourname-deployment.yaml
+kubectl get pods
+
+III. Descrease this deployment by removing the two pods using imperative commands:
+
+kubectl scale --replicas=3 deployment nginx-deployment
+kubectl describe pods <yourpod>

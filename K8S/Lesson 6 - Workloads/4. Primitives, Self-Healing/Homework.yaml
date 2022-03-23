@@ -1,0 +1,14 @@
+Answer the falling:
+
+What are primitives?
+List the 3 different probes.
+List the pod phases.
+What are the 3 container states?
+What would you use a liveness probe for?
+
+
+Additional Reading:
+
+https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/
+https://kublr.com/blog/reliable-self-healing-kubernetes-explained/
+https://www.baeldung.com/spring-boot-kubernetes-self-healing-apps

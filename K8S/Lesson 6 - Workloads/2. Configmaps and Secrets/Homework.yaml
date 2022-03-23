@@ -5,10 +5,24 @@ What is a Secret?
 Where can you find both in GCP?
 What places can Secrets be stored?
 What is more secure, ConfigMaps or Secrets?
+If I change a configmap, what must I do to the pod for the change to take effect?
+What is the command to SSH to a docker pod?
 
+Generate a base64 hash for the following:
+
+apiVersion: v1
+kind: Secret
+metadata:
+  name: temp-secret
+type: Opaque
+data:
+  password.file: |
+    
 
 Addtional Reading:
 
+https://kubernetes.io/docs/concepts/configuration/secret/
 https://kubernetes.io/docs/concepts/configuration/configmap/
 https://medium.com/google-cloud/kubernetes-configmaps-and-secrets-68d061f7ab5b
 https://opensource.com/article/19/6/introduction-kubernetes-secrets-and-configmaps
+https://medium.com/scorelab/secrets-configmaps-and-environment-variable-73cfe2c82d0c
