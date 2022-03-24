@@ -1,0 +1,14 @@
+Answer the following:
+
+Why do we need monitoring in Kubernetes?
+What are some of the components that can be monitored in Kubernetes?
+List the 5 master components and also describe what each one does.
+List Node components and also describe what each one does.
+What are 3 built in monitoring features of Kubernetes?
+
+
+Additonal Reading:
+https://kubernetes.io/docs/tasks/debug-application-cluster/resource-usage-monitoring/
+https://techbeacon.com/enterprise-it/9-top-open-source-tools-monitoring-kubernetes
+https://sysdig.com/blog/monitoring-kubernetes/
+https://www.metricfire.com/blog/tips-for-monitoring-kubernetes-applications/
