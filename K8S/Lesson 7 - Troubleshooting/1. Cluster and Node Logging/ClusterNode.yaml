@@ -1,0 +1,42 @@
+I. Deploy 2 nginx pods:
+
+Deploy your Nginx pods
+Apply and Verify
+
+nano yourname-counter-pods.yaml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: counter
+spec:
+  containers:
+  - name: count
+    image: ubuntu
+    args: [/bin/bash, -c,
+            'i=0; while true; do echo "STDOUT: $i: $(date)"; my-error; i=$((i+1)); sleep 1; done']
+
+
+kubectl apply -f yourname-counter-pods.yaml
+kubectl get pods
+
+II. Differentiate between Standard Out and Standard Error Logs:
+
+Modify your pod
+Verify STDOUT and STDERR logs have been split between files.
+
+nano yourname-counter-pods.yaml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: counter-stdout-stderr
+spec:
+  containers:
+  - name: count
+    image: ubuntu
+    args: [/bin/bash, -c,
+            '(i=0; while true; do echo "STDOUT: $i: $(date)"; my-error; i=$((i+1)); sleep 1; done) 1>> STDOUT.file 2>> STDERR.file']
+
+kubectl exec -it counter-stdout-stderr -- tail STDOUT.file
+kubectl exec -it counter-stdout-stderr -- tail STDERR.file

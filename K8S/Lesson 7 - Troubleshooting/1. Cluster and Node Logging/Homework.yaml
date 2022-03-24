@@ -1,13 +1,15 @@
-Lesson Guide
+Answer the Following:
 
-Evaluate cluster and node logging
+What are logs mainly used for?
+What command can you run to view events?
+Describe STDOUT and STDERR.
+Describe Google Stack Driver.
+Describe FluentD.
+
+Additonal Reading:
+
 https://kubernetes.io/docs/concepts/cluster-administration/logging/
 https://kubernetes.io/blog/2015/06/cluster-level-logging-with-kubernetes/
 https://kubernetes.io/docs/tasks/debug-application-cluster/debug-cluster/
 https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 
-Understand how to monitor applications
-Manage container stdout & stderr logs
-Troubleshoot application failure
-Troubleshoot cluster component failure
-Troubleshoot networking
