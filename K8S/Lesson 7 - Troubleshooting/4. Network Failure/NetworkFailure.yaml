@@ -48,11 +48,16 @@ spec:
 kubectl apply -f yourname-pod.yaml
 kubectl get pods
 
-#my-svc.my-namespace.svc.cluster-domain.example
-#yourname-service.default.svc.cluster.local
+#To identify your services domain name
+#my-svc.my-namespace.svc.cluster-domain.example <--- Model
+#yourname-service.default.svc.cluster.local <--- Your name
 
 
 II. Test DNS resolution of the name by creating a pod that has nslookup:
+
+Create a pod running dns utils
+SSH into the new dns pod
+Run an nslookup against your service domain name
 
 nano yourname-dnspod.yaml
 
@@ -73,11 +78,15 @@ spec:
 
 kubectl apply -f yourname-dnspod.yaml
 kubectl get pods
+kubectl exec -it <your dns pod> sh
+nslookup <yourname-service.default.svc.cluster.local>
+
 
 III. Test Connectivity using Curl:
 
 Open a curl command line to test your REST endpoints
 Test connectivity of yourname-service.default.svc.cluster.local on HTTP
+Open a second cloud shell tab
 Check your service description
 Test curl on one of your endpoints
 Identify your pod name via the endpoint IP you just tested curl against
