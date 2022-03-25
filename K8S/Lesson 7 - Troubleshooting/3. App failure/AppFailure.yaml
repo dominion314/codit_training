@@ -1,0 +1,45 @@
+I. Deploy the faulty Pod:
+
+Deploy your pod
+Verify its creation
+
+nano yourname-faultypod.yaml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: yourname-pod
+spec:
+  containers:
+    - name: nginx-configmap
+      image: nginx:invalidversion
+
+
+II. Explore the reason for failure:
+
+Look at the logs of the pod
+Describe the pod
+
+kubectl logs <yourpod>
+kubectl describe pod <yourpod>
+
+III. Resolve the issue:
+
+Fix the manifest issue
+Apply the new deployment
+Verify your pod is ready and running
+
+nano yourname-faultypod.yaml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: doms-pod
+spec:
+  containers:
+    - name: nginx-configmap
+      image: nginx:1.14.2
+
+kubectl apply -f yourname-faultypod.yaml
+kubectl get pods
+kubectl describe <yourpod>

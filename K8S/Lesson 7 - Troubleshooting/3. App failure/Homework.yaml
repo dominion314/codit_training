@@ -1,0 +1,46 @@
+Fix the issues in the following service and deployment:
+
+Deploy these into your cluster and fix the issues using logs, events, and the describe command.
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: yourname-service
+spec:
+  selector:
+    app: nginx
+  ports:
+  - protocol: <>
+    port: 80
+    targetPort: 80
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yourname-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:invalidImage
+        ports:
+        - containerPort: 80
+
+Addtional Reading:
+
+https://akomljen.com/learn-how-to-troubleshoot-applications-running-on-kubernetes/
+https://symantec-enterprise-blogs.security.com/blogs/expert-perspectives/troubleshooting-applications-kubernetes
+https://kubernetes.io/docs/tasks/debug-application-cluster/debug-running-pod/
+https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application/

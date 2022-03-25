@@ -12,7 +12,14 @@ https://techbeacon.com/enterprise-it/9-top-open-source-tools-monitoring-kubernet
 https://sysdig.com/blog/monitoring-kubernetes/
 https://www.metricfire.com/blog/tips-for-monitoring-kubernetes-applications/
 
-Manage container stdout & stderr logs
 Troubleshoot application failure
-Troubleshoot cluster component failure
+https://akomljen.com/learn-how-to-troubleshoot-applications-running-on-kubernetes/
+https://symantec-enterprise-blogs.security.com/blogs/expert-perspectives/troubleshooting-applications-kubernetes
+https://kubernetes.io/docs/tasks/debug-application-cluster/debug-running-pod/
+https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application/
+
+
 Troubleshoot networking
+https://goteleport.com/blog/troubleshooting-kubernetes-networking/
+https://stackoverflow.com/questions/34601650/how-do-i-run-curl-command-from-within-a-kubernetes-pod
+https://kubernetes.io/docs/concepts/services-networking/service/

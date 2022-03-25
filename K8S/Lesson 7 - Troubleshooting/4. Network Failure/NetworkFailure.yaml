@@ -1,0 +1,109 @@
+I. Deploy the service and pod. Identify the DNS name of the service:
+
+nano yourname-service.yaml
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: yourname-service
+spec:
+  selector:
+    app: nginx
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+
+kubectl apply -f yourname-service.yaml
+kubectl get svc
+
+
+
+nano yourname-pod.yaml
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yourname-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.7.9
+        ports:
+        - containerPort: 80
+
+
+kubectl apply -f yourname-pod.yaml
+kubectl get pods
+
+#my-svc.my-namespace.svc.cluster-domain.example
+#yourname-service.default.svc.cluster.local
+
+
+II. Test DNS resolution of the name by creating a pod that has nslookup:
+
+nano yourname-dnspod.yaml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dnsutils
+  namespace: default
+spec:
+  containers:
+  - name: dnsutils
+    image: k8s.gcr.io/e2e-test-images/jessie-dnsutils:1.3
+    command:
+      - sleep
+      - "3600"
+    imagePullPolicy: IfNotPresent
+  restartPolicy: Always
+
+kubectl apply -f yourname-dnspod.yaml
+kubectl get pods
+
+III. Test Connectivity using Curl:
+
+Open a curl command line to test your REST endpoints
+Test connectivity of yourname-service.default.svc.cluster.local on HTTP
+Check your service description
+Test curl on one of your endpoints
+Identify your pod name via the endpoint IP you just tested curl against
+Use describe command and grep to ID ports listening on your pod
+Idenitfy the issue
+
+
+kubectl run curl --image=radial/busyboxplus:curl -i --tty
+curl yourname-service.default.svc.cluster.local
+
+kubectl get svc <yourname-service>
+curl <podIP from endpoint with port 8080>
+kubectl get pods -o wide
+kubectl describe po <podname> | grep -i "port:"
+
+
+IV. Resolve the failure:
+
+Edit your service so that the targetPort is 80 instead of 8080.
+Test connectivity
+
+nano yourname-service.yaml
+kubectl delete svc yourname-service
+kubectl apply -f yourname-service.yaml
+kubectl describe svc yourname-service
+
+
+
+
