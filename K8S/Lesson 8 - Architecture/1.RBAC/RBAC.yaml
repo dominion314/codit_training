@@ -1,0 +1,70 @@
+I.Create a namespace called yourname-ns-rbac:
+
+nano yourname-ns-rbac
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: yourname-ns-rbac
+
+kubectl apply -f yourname-ns-rbac.yaml
+kubens
+
+II.Create a service account called yourname-inspector for the rbac namespace:
+
+nano yourname-inspector.yaml
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: yourname-inspector
+  namespace: yourname-ns-rbac
+
+kubectl apply -f yourname-inspector.yaml
+kubectl get serviceaccount -n yourname-ns-rbac
+
+III.Create a role that has rules to 'get' and 'list' job objects:
+
+nano yourname-role.yaml
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: yourname-inspector
+  namespace: yourname-ns-rbac
+rules:
+  - apiGroups: ["batch"]
+    resources: ["jobs"]
+    verbs: ["get", "list"]
+
+kubectl apply -f yourname-role.yaml
+kubectl get role -n yourname-ns-rbac
+
+IV.Create a rolebinding that binds the service account 'yourname-inspector' to the role created in step 3:
+
+nano yourname-rolebind.yaml
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: permit-job-inspector
+  namespace: yourname-ns-rbac
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: yourname-inspector
+subjects:
+  - kind: ServiceAccount
+    name: yourname-inspector
+    namespace: yourname-ns-rbac
+
+
+kubectl apply -f yourname-rolebind.yaml
+kubectl get rolebinding -n yourname-ns-rbac
+kubectl describe rolebinding -n yourname-ns-rbac
+
+V.Prove the job-inspector service account can "get" job objects but not deployment objects:
+
+kubectl auth can-i get job -n doms-ns-rbac
+kubectl --as=system:serviceaccount:doms-inspector auth can-i get deployment -n doms-ns-rbac
+
