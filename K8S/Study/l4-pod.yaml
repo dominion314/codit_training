@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: l4-pv-pod
+spec:
+  volumes:
+    - name: l4-storage
+      persistentVolumeClaim:
+        claimName: l4-pv-claim
+  containers:
+    - name: l4-pv-container
+      image: nginx
+      ports:
+        - containerPort: 80
+          name: "http-server"
+      volumeMounts:
+        - mountPath: "/usr/share/nginx/html"
+          name: l4-storage
