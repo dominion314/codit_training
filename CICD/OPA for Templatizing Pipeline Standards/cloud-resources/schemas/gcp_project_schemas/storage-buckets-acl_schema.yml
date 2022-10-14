@@ -18,7 +18,7 @@ storageBuckets:
             keysrules:
               type: 'string'
               #TODO: better tune
-              regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com|.*\.gserviceaccount\.com'
+              regex: '.*@commonmerit\.com|.*@qa\.commonmerit\.com|.*@dev\.commonmerit\.com|.*\.gserviceaccount\.com'
             valuesrules:
               type: 'string'
               allowed: ['READER', 'WRITER', 'OWNER']
@@ -28,7 +28,7 @@ storageBuckets:
             keysrules:
               type: 'string'
               #TODO: better tune
-              regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+              regex: '.*@commonmerit\.com|.*@qa\.commonmerit\.com|.*@dev\.commonmerit\.com'
             valuesrules:
               type: 'string'
               allowed: ['READER', 'WRITER', 'OWNER']

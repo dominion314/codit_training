@@ -1,4 +1,4 @@
-package kohls.gitops.kcc.gcp_project.single.vpc
+package commonmerit.gitops.kcc.gcp_project.single.vpc
 
 default allow = false
 

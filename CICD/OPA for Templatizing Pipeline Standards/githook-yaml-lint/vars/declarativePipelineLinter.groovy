@@ -62,7 +62,7 @@ def runLinter() {
     writeFile file: 'declarative_requirements.txt', text: declarative_requirements
 
     wrap([$class: 'VaultBuildWrapper', vaultSecrets: vaultSecrets]) {
-        sh "pip3 install --user --proxy http://proxy.kohls.com:3128 -r declarative_requirements.txt"
+        sh "pip3 install --user --proxy http://proxy.commonmerit.com:3128 -r declarative_requirements.txt"
         def status_code = sh(script: "python3 declarative_pipeline_validation.py --work_directory=\$(pwd) " +
             "--username=${JENKINS_USERNAME} --password=${JENKINS_PASSWORD} --jenkins_url=${JENKINS_URL}", returnStatus: true)
 

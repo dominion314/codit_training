@@ -63,10 +63,10 @@ def run_inspec_validation(logger, inspec_profile):
 
     env = os.environ.copy()
     #todo: make this configurable
-    env['HTTP_PROXY'] = 'http://proxy-gcp-central.kohls.com:8080'
-    env['HTTPS_PROXY'] = 'http://proxy-gcp-central.kohls.com:8080'
-    env['http_proxy'] = 'http://proxy-gcp-central.kohls.com:8080'
-    env['https_proxy'] = 'http://proxy-gcp-central.kohls.com:8080'
+    env['HTTP_PROXY'] = 'http://proxy-gcp-central.commonmerit.com:8080'
+    env['HTTPS_PROXY'] = 'http://proxy-gcp-central.commonmerit.com:8080'
+    env['http_proxy'] = 'http://proxy-gcp-central.commonmerit.com:8080'
+    env['https_proxy'] = 'http://proxy-gcp-central.commonmerit.com:8080'
     try:
         result = safe_run(logger=logger, args=command_list, env=env, stdout=PIPE, stderr=PIPE)
         logger.info(result.stdout)

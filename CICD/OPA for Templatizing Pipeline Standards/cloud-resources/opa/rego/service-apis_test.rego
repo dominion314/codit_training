@@ -1,4 +1,4 @@
-package kohls.gitops.kcc.gcp_project.service.apis
+package commonmerit.gitops.kcc.gcp_project.service.apis
 
 # policy data
 policy_data = {

@@ -1,6 +1,6 @@
 2022-03-04 23:14:57,006  INFO: Loaded OPA validation config
-2022-03-04 23:14:57,006  INFO: Processing project data for kohls-cpe-xpn-lle
-2022-03-04 23:14:57,006  INFO: Processing input data for /home/dominion314/codit_training/CICD/OPA for Templatizing Pipeline Standards/gcp-config/project_vars/kohls-cpe-xpn-lle
+2022-03-04 23:14:57,006  INFO: Processing project data for commonmerit-cpe-xpn-lle
+2022-03-04 23:14:57,006  INFO: Processing input data for /home/dominion314/codit_training/CICD/OPA for Templatizing Pipeline Standards/gcp-config/project_vars/commonmerit-cpe-xpn-lle
 2022-03-04 23:14:57,089  INFO: Processing policy 'Limit interconnect bandwidth'
 2022-03-04 23:14:57,101  ERROR: Exited with code 1
 2022-03-04 23:14:57,101  INFO: Some of policy checks were not OK

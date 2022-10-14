@@ -22,26 +22,6 @@ buckets = s3.buckets.all()
 for bucket in buckets:
     print(bucket)
 
-# bucket = s3.Bucket(bucket_name)
-# bucket.meta.client.list_objects_v2(Bucket=bucket_name, Delimeter='/')
-
-
-
-# s3.llist_objects_v2()
-# s3.list_objects_v2()
-
-
-# client = boto3.client('s3', region_name=REGION_NAME)
-# response = client.list_objects_v2(Bucket=bucket_name)
-# last_object = sorted(response['Contents'], key=lambda item: item['LastModified'])[-1]
-
-
-# print(last_object)
-# print(last_object['LastModified'])
-# print(response)
-# sorted(response['Contents'])
-
-
 def get_last_modified_file(bucket_name):
     client = boto3.client('s3', region_name=REGION_NAME)
     response = client.list_objects_v2(Bucket=bucket_name)

@@ -1,4 +1,4 @@
-package kohls.gitops.kcc.gcp_project.project
+package commonmerit.gitops.kcc.gcp_project.project
 default allow = false
 
 environment := replace(replace(replace(input.project.labels["environment-type"], "ops", "nonprd"), "hle", "nonprd"), "lle", "nonprd")

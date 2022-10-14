@@ -1,23 +1,23 @@
 ---
-configRepo: https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config
+configRepo: https://gitlab.com/commonmerit/infra/platform_enablement/cloud-config/gcp-config
 configPath: project_vars
-configHttpProxy: proxy-gcp-central.kohls.com:8080
-configHttpsProxy: proxy-gcp-central.kohls.com:8080
+configHttpProxy: proxy-gcp-central.commonmerit.com:8080
+configHttpsProxy: proxy-gcp-central.commonmerit.com:8080
 configSecretRef: gitlab-config-project
 
-templateRepo: https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources.git
+templateRepo: https://gitlab.com/commonmerit/infra/platform_enablement/cloud-config/cloud-resources.git
 templatePath: templates/gcp-project
-templateHttpProxy: proxy-gcp-central.kohls.com:8080
-templateHttpsProxy: proxy-gcp-central.kohls.com:8080
+templateHttpProxy: proxy-gcp-central.commonmerit.com:8080
+templateHttpsProxy: proxy-gcp-central.commonmerit.com:8080
 templateSecretRef: gitlab-resources-project
 
-templateProcessorImage: us.gcr.io/kohls-cpe-kcc-prd/eunomia-jinja-ansible:v0.0.9
+templateProcessorImage: us.gcr.io/commonmerit-cpe-kcc-prd/eunomia-jinja-ansible:v0.0.9
 
 resourceHandlingMode: Apply
 resourceDeletionMode: Delete
 
 commonAccessNamespace:
-- kohls-intra-transit-xpn-prd
+- commonmerit-intra-transit-xpn-prd
 
 defaultTriggers:
 - type: Webhook
@@ -27,4 +27,4 @@ defaultTriggers:
 
 KCCServiceMode: namespaced
 KCCServiceAccount: cnrm-system-cpe
-KCCServiceProject: kohls-cpe-kcc-prd
+KCCServiceProject: commonmerit-cpe-kcc-prd

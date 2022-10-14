@@ -70,17 +70,17 @@ def call(def version) {
                     // allow tests to conntenct to HTTP endpoint within the Kohl's network.
                     //
                     // * 127.0.0.1     - IPv4 localhost
-                    // * 10.0.0.0/8    - all Kohls internal IP address space
+                    // * 10.0.0.0/8    - all commonmerit internal IP address space
                     // * 100.64.0.0/10 - CGN address space used for OpenShift Pods and Services
                     // * 172.16.0.0/12 - private IP address space used for GKE Pod and Services
                     // * ::            - IPv6 localhost
-                    // * *.kohls.com   - Include any internal Kohl's DNS names
+                    // * *.commonmerit.com   - Include any internal Kohl's DNS names
                     //
                     // See https://godoc.org/golang.org/x/net/http/httpproxy for info abot Go Lang
                     // NO_PROXY environment variable usage.
                     sh("""
                     unset no_proxy
-                    export NO_PROXY="127.0.0.1,10.0.0.0/8,100.64.0.0/10,172.16.0.0/12,::,*.kohls.com"
+                    export NO_PROXY="127.0.0.1,10.0.0.0/8,100.64.0.0/10,172.16.0.0/12,::,*.commonmerit.com"
                     export GOROOT=/opt/golang/"${version}"/go
                     export GOPATH=$HOME/go"${version}"
                     export PATH=$GOROOT/bin:$GOPATH/bin:"${PATH}"

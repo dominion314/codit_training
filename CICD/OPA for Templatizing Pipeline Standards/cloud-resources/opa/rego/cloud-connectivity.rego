@@ -1,4 +1,4 @@
-package kohls.gitops.kcc.gcp_project.cloud_connectivity
+package commonmerit.gitops.kcc.gcp_project.cloud_connectivity
 
 default allow = true
 

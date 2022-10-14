@@ -56,10 +56,10 @@ def call(String unitTestSuiteDefinitionFile, String unitTestName) {
         environment {
             SA_GKE_CLUSTER = credentials('kcc_ut_gke')
             GOOGLE_APPLICATION_CREDENTIALS = credentials('kcc_ut_inspec')
-            HTTP_PROXY="http://proxy.kohls.com:3128"
-            HTTPS_PROXY="http://proxy.kohls.com:3128"
-            http_proxy="http://proxy.kohls.com:3128"
-            https_proxy="http://proxy.kohls.com:3128"
+            HTTP_PROXY="http://proxy.commonmerit.com:3128"
+            HTTPS_PROXY="http://proxy.commonmerit.com:3128"
+            http_proxy="http://proxy.commonmerit.com:3128"
+            https_proxy="http://proxy.commonmerit.com:3128"
             KUBECONFIG="${HOME}/.kube/config"
 
         }
@@ -89,7 +89,7 @@ def call(String unitTestSuiteDefinitionFile, String unitTestName) {
 
                         // install python requirements
                         sh("""
-                          pip3 install -r requirements.txt --user --proxy=http://proxy-gcp-central.kohls.com:8080
+                          pip3 install -r requirements.txt --user --proxy=http://proxy-gcp-central.commonmerit.com:8080
                           """)
 
                         sh ("""

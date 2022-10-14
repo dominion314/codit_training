@@ -17,7 +17,7 @@ storageBuckets:
             required: false
             keysrules:
               type: 'string'
-              regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com|.*\.gserviceaccount\.com'
+              regex: '.*@commonmerit\.com|.*@qa\.commonmerit\.com|.*@dev\.commonmerit\.com|.*\.gserviceaccount\.com'
             valuesrules:
               type: 'string'
               allowed: ['READER', 'OWNER']
@@ -26,7 +26,7 @@ storageBuckets:
             type: 'dict'
             keysrules:
               type: 'string'
-              regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+              regex: '.*@commonmerit\.com|.*@qa\.commonmerit\.com|.*@dev\.commonmerit\.com'
             valuesrules:
               type: 'string'
               allowed: ['READER', 'OWNER']

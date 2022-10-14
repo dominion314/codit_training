@@ -163,7 +163,7 @@ def writeGitOpsFile(data: dict, vpc: str, destination: str = None) -> None:
         if vpc_data.get('subnetwork') is not None:
             for subnet_name, subnet_data in vpc_data.get('subnetwork').items():
                 new_name = subnet_name.replace(vpc_name + '-', 'convert-').\
-                    replace('kohls-', 'convert-')
+                    replace('commonmerit-', 'convert-')
                 subn_size = subnet_data['ipCidrRange'].rsplit('/', 1)[-1]
                 subn_region = subnet_data['region'].rsplit('/', 1)[-1]
 # Add logic for secondary Ranges

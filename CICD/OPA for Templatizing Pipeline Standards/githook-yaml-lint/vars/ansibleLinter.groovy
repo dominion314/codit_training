@@ -67,7 +67,7 @@ def call() {
                     dir('hooksRepo/') {
                         git branch: "master",
                             credentialsId: 'github-pzxpaas',
-                            url: 'https://github.kohls.com/xPaaS-Operations/githook-yaml-lint'
+                            url: 'https://github.commonmerit.com/xPaaS-Operations/githook-yaml-lint'
                     }
                 }
                 post {

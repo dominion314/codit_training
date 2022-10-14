@@ -42,7 +42,7 @@ bigQueryDatasets:
               required: true
               keysrules:
                 type: 'string'
-                regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+                regex: '.*@commonmerit\.com|.*@qa\.commonmerit\.com|.*@dev\.commonmerit\.com'
               valuesrules:
                 type: 'dict'
                 schema:
@@ -57,7 +57,7 @@ bigQueryDatasets:
               required: false
               keysrules:
                 type: 'string'
-                regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+                regex: '.*@commonmerit\.com|.*@qa\.commonmerit\.com|.*@dev\.commonmerit\.com'
               valuesrules:
                 type: 'dict'
                 schema:
@@ -88,7 +88,7 @@ bigQueryDatasets:
               required: false
               keysrules:
                 type: 'string'
-                regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+                regex: '.*@commonmerit\.com|.*@qa\.commonmerit\.com|.*@dev\.commonmerit\.com'
               valuesrules:
                 type: 'dict'
                 schema:
@@ -103,7 +103,7 @@ bigQueryDatasets:
               required: true
               keysrules:
                 type: 'string'
-                regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+                regex: '.*@commonmerit\.com|.*@qa\.commonmerit\.com|.*@dev\.commonmerit\.com'
               valuesrules:
                 type: 'dict'
                 schema:
@@ -134,7 +134,7 @@ bigQueryDatasets:
               required: false
               keysrules:
                 type: 'string'
-                regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+                regex: '.*@commonmerit\.com|.*@qa\.commonmerit\.com|.*@dev\.commonmerit\.com'
               valuesrules:
                 type: 'dict'
                 schema:
@@ -149,7 +149,7 @@ bigQueryDatasets:
               required: false
               keysrules:
                 type: 'string'
-                regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+                regex: '.*@commonmerit\.com|.*@qa\.commonmerit\.com|.*@dev\.commonmerit\.com'
               valuesrules:
                 type: 'dict'
                 schema:

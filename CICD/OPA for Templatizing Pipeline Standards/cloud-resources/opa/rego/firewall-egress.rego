@@ -1,4 +1,4 @@
-package kohls.gitops.kcc.gcp_project.firewall_egress.apis
+package commonmerit.gitops.kcc.gcp_project.firewall_egress.apis
 
 default allow = true
 

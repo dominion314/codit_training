@@ -1,7 +1,7 @@
 ---
 iam:
   allowedRolesPerProject:
-    kohls-infra-win-ad-prd:
+    commonmerit-infra-win-ad-prd:
       roles:
       - compute.instanceAdmin.v1:
           allowedForGroups: true
@@ -24,7 +24,7 @@ iam:
       - logging.admin:
           allowedForGroups: true
           allowedForServiceAccounts: true
-    kohls-devexp-tools-lle:
+    commonmerit-devexp-tools-lle:
       roles:
       - bigquery.admin:
           allowedForGroups: true
@@ -32,7 +32,7 @@ iam:
       - cloudtasks.admin:
           allowedForGroups: true
           allowedForServiceAccounts: true
-    kohls-devexp-tools-prd:
+    commonmerit-devexp-tools-prd:
       roles:
       - compute.imageUser:
           allowedForGroups: true
@@ -49,7 +49,7 @@ iam:
       - serviceusage.serviceUsageConsumer:
           allowedForGroups: true
           allowedForServiceAccounts: true
-    kohls-cce-dbaas-lle:
+    commonmerit-cce-dbaas-lle:
       roles:
       - CustomDynatraceExtensionMetricsRole:
           allowedForGroups: true
@@ -71,7 +71,7 @@ iam:
           allowedForGroups: false
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-cce-dbaas-prd:
+    commonmerit-cce-dbaas-prd:
       roles:
       - CustomDynatraceExtensionMetricsRole:
           allowedForGroups: true
@@ -129,7 +129,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-cce-openshift-lle:
+    commonmerit-cce-openshift-lle:
       roles:
       - compute.admin:
           allowedForGroups: false
@@ -159,7 +159,7 @@ iam:
           allowedForGroups: false
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-cce-openshift-prd:
+    commonmerit-cce-openshift-prd:
       roles:
       - bigquery.admin:
           allowedForGroups: true
@@ -233,7 +233,7 @@ iam:
           allowedForGroups: false
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-cpe-e2edemo-lle:
+    commonmerit-cpe-e2edemo-lle:
       roles:
       - editor:
           allowedForGroups: false
@@ -247,7 +247,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: true
-    kohls-cpe-image-mgmt-lle:
+    commonmerit-cpe-image-mgmt-lle:
       roles:
       - appengine.appAdmin:
           allowedForGroups: true
@@ -269,7 +269,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-cpe-image-mgmt-prd:
+    commonmerit-cpe-image-mgmt-prd:
       roles:
       - appengine.appAdmin:
           allowedForGroups: true
@@ -319,13 +319,13 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-cpe-kcc-lle:
+    commonmerit-cpe-kcc-lle:
       roles:
       - containerregistry.ServiceAgent:
           allowedForGroups: true
           allowedForServiceAccounts: false
           allowedForUsers: false
-    kohls-cpe-kcc-prd:
+    commonmerit-cpe-kcc-prd:
       roles:
       - container.admin:
           allowedForGroups: true
@@ -343,7 +343,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: false
           allowedForUsers: false
-    kohls-platform-dbaas-ops:
+    commonmerit-platform-dbaas-ops:
       roles:
       - CustomDynatraceExtensionMetricsRole:
           allowedForGroups: true
@@ -365,7 +365,7 @@ iam:
           allowedForGroups: false
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-platform-dbaas-lle:
+    commonmerit-platform-dbaas-lle:
       roles:
       - CustomDynatraceExtensionMetricsRole:
           allowedForGroups: true
@@ -387,7 +387,7 @@ iam:
           allowedForGroups: false
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-platform-dbaas-prd:
+    commonmerit-platform-dbaas-prd:
       roles:
       - CustomDynatraceExtensionMetricsRole:
           allowedForGroups: true
@@ -445,7 +445,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-platform-maas-prd:
+    commonmerit-platform-maas-prd:
       roles:
       - compute.networkUser:
           allowedForGroups: true
@@ -463,7 +463,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: false
           allowedForUsers: false
-    kohls-platform-netservices-prd:
+    commonmerit-platform-netservices-prd:
       roles:
       - storage.admin:
           allowedForGroups: true
@@ -489,7 +489,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: false
           allowedForUsers: false
-    kohls-bda-scripts-ops:
+    commonmerit-bda-scripts-ops:
       roles:
       - oauthconfig.editor:
           allowedForGroups: true
@@ -499,13 +499,13 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: false
           allowedForUsers: false
-    kohls-cpe-cne-lle:
+    commonmerit-cpe-cne-lle:
       roles:
       - networkmanagement.admin:
           allowedForGroups: true
           allowedForServiceAccounts: false
           allowedForUsers: false
-    kohls-cpe-xpn-lle:
+    commonmerit-cpe-xpn-lle:
       roles:
       - networkmanagement.admin:
           allowedForGroups: true
@@ -515,7 +515,7 @@ iam:
           allowedForGroups: false
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-paas-ops:
+    commonmerit-paas-ops:
       roles:
       - compute.securityAdmin:
           allowedForGroups: false
@@ -529,7 +529,7 @@ iam:
           allowedForGroups: false
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-platform-openshift-lle:
+    commonmerit-platform-openshift-lle:
       roles:
       - iam.securityAdmin:
           allowedForGroups: false
@@ -559,7 +559,7 @@ iam:
           allowedForGroups: false
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-platform-openshift-ops:
+    commonmerit-platform-openshift-ops:
       roles:
       - container.clusterAdmin:
           allowedForGroups: true
@@ -609,7 +609,7 @@ iam:
           allowedForGroups: false
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-platform-openshift-prd:
+    commonmerit-platform-openshift-prd:
       roles:
       - iam.securityAdmin:
           allowedForGroups: false
@@ -683,7 +683,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: false
           allowedForUsers: false
-    kohls-sec-engineering-prd:
+    commonmerit-sec-engineering-prd:
       roles:
       - compute.storageAdmin:
           allowedForGroups: true
@@ -709,13 +709,13 @@ iam:
           allowedForGroups: true
           alllowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-platform-netservices-lle:
+    commonmerit-platform-netservices-lle:
       roles:
       - servicenetworking.networksAdmin:
           allowedForGroups: true
           allowedForServiceAccounts: false
           allowedForUsers: false
-    kohls-rapidpaas-sbx:
+    commonmerit-rapidpaas-sbx:
       roles:
       - appengine.appAdmin:
           allowedForGroups: true
@@ -777,7 +777,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: true
-    kohls-cpe-sre-prd:
+    commonmerit-cpe-sre-prd:
       roles:
       - bigquery.admin:
           allowedForGroups: true
@@ -815,7 +815,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-scf-lle:
+    commonmerit-scf-lle:
       roles:
       - billing.projectManager:
           allowedForGroups: true
@@ -889,7 +889,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-scf-prd:
+    commonmerit-scf-prd:
       roles:
       - CustomDynatraceExtensionMetricsRole:
           allowedForGroups: false
@@ -943,7 +943,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: false
           allowedForUsers: false
-    kohls-cx-sremgmt-prd:
+    commonmerit-cx-sremgmt-prd:
       roles:
       - compute.imageUser:
           allowedForGroups: true
@@ -965,7 +965,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-sec-vault-lle:
+    commonmerit-sec-vault-lle:
       roles:
       - cloudasset.viewer:
           allowedForGroups: true
@@ -1015,7 +1015,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: false
           allowedForUsers: false
-    kohls-sec-vault-prd:
+    commonmerit-sec-vault-prd:
       roles:
       - privateca.admin:
           allowedForGroups: true
@@ -1065,7 +1065,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-merch-item-prd:
+    commonmerit-merch-item-prd:
       roles:
       - cloudfunctions.admin:
           allowedForGroups: true
@@ -1099,7 +1099,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-merch-pl-prd:
+    commonmerit-merch-pl-prd:
       roles:
       - cloudfunctions.admin:
           allowedForGroups: true
@@ -1133,7 +1133,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-bda-dse-lle:
+    commonmerit-bda-dse-lle:
       roles:
       - dataproc.worker:
           allowedForGroups: true
@@ -1143,7 +1143,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: false
           allowedForUsers: false
-    kohls-bda-dse-prd:
+    commonmerit-bda-dse-prd:
       roles:
       - compute.storageAdmin:
           allowedForGroups: true
@@ -1225,7 +1225,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: false
           allowedForUsers: false
-    kohls-iaas-lle:
+    commonmerit-iaas-lle:
       roles:
       - bigquery.user:
           allowedForGroups: false
@@ -1243,7 +1243,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: false
           allowedForUsers: false
-    kohls-iaas-prd:
+    commonmerit-iaas-prd:
       roles:
       - bigquery.user:
           allowedForGroups: false
@@ -1269,19 +1269,19 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: true
-    kohls-infra-aiops-lle:
+    commonmerit-infra-aiops-lle:
       roles:
       - viewer:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: true
-    kohls-devexp-tools-sbx:
+    commonmerit-devexp-tools-sbx:
       roles:
       - viewer:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-ocf-adhoc-prd:
+    commonmerit-ocf-adhoc-prd:
       roles:
         - bigquery.admin:
             allowedForGroups: true
@@ -1291,7 +1291,7 @@ iam:
             allowedForGroups: true
             allowedForServiceAccounts: true
             allowedForUsers: false
-    kohls-ocf-lle:
+    commonmerit-ocf-lle:
       roles:
       - CustomDynatraceExtensionMetricsRole:
           allowedForGroups: false
@@ -1357,7 +1357,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-ocf-prd:
+    commonmerit-ocf-prd:
       roles:
       - CustomDynatraceExtensionMetricsRole:
           allowedForGroups: false
@@ -1419,7 +1419,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: false
           allowedForUsers: false
-    kohls-merch-in-lle:
+    commonmerit-merch-in-lle:
       roles:
       - automl.editor:
           allowedForGroups: true
@@ -1473,7 +1473,7 @@ iam:
          allowedForGroups: true
          allowedForServiceAccounts: true
          allowedForUsers: false
-    kohls-merch-in-prd:
+    commonmerit-merch-in-prd:
       roles:
       - bigquery.admin:
          allowedForGroups: true
@@ -1519,7 +1519,7 @@ iam:
          allowedForGroups: true
          allowedForServiceAccounts: true
          allowedForUsers: false
-    kohls-bda-stores-prd:
+    commonmerit-bda-stores-prd:
       roles:
       - CustomViewer486:
           allowedForGroups: true
@@ -1541,7 +1541,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-bda-hr-prd:
+    commonmerit-bda-hr-prd:
       roles:
       - CustomViewer486:
           allowedForGroups: true
@@ -1559,7 +1559,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-infra-aiops-prd:
+    commonmerit-infra-aiops-prd:
       roles:
       - compute.loadBalancerAdmin:
           allowedForGroups: true
@@ -1577,13 +1577,13 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-infra-monitoring-prd:
+    commonmerit-infra-monitoring-prd:
       roles:
       - compute.loadBalancerAdmin:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-merch-pd-lle:
+    commonmerit-merch-pd-lle:
       roles:
       - datastore.owner:
           allowedForGroups: true
@@ -1597,7 +1597,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-merch-pd-prd:
+    commonmerit-merch-pd-prd:
       roles:
       - datastore.owner:
           allowedForGroups: true
@@ -1611,13 +1611,13 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-bda-lle:
+    commonmerit-bda-lle:
       roles:
       - oauthconfig.editor:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-bda-prd:
+    commonmerit-bda-prd:
       roles:
       - oauthconfig.editor:
           allowedForGroups: true
@@ -1635,7 +1635,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-cx-rtl-prd:
+    commonmerit-cx-rtl-prd:
       roles:
       - compute.imageUser:
           allowedForGroups: true
@@ -1657,7 +1657,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-cx-pci-prd:
+    commonmerit-cx-pci-prd:
       roles:
       - compute.imageUser:
           allowedForGroups: true
@@ -1695,7 +1695,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-cx-shop-prd:
+    commonmerit-cx-shop-prd:
       roles:
       - bigquery.admin:
           allowedForGroups: true
@@ -1769,7 +1769,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-infra-kdx-lle:
+    commonmerit-infra-kdx-lle:
       roles:
       - compute.loadBalancerAdmin:
           allowedForGroups: true
@@ -1791,7 +1791,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-infra-kdx-prd:
+    commonmerit-infra-kdx-prd:
       roles:
       - compute.loadBalancerAdmin:
           allowedForGroups: true
@@ -1817,23 +1817,23 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-bda-xpn-prd:
+    commonmerit-bda-xpn-prd:
       roles:
       - compute.networkUser:
           allowedForGroups: true
-    kohls-sec-engineering-lle:
+    commonmerit-sec-engineering-lle:
       roles:
       - oauthconfig.editor:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-infosec-prd:
+    commonmerit-infosec-prd:
       roles:
       - storage.hmacKeyAdmin:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-bda-analytics-prd:
+    commonmerit-bda-analytics-prd:
       roles:
       - bigquery.resourceViewer:
           allowedForGroups: true
@@ -1843,7 +1843,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-bda-credit-prd:
+    commonmerit-bda-credit-prd:
       roles:
       - bigquery.resourceViewer:
           allowedForGroups: true
@@ -1853,7 +1853,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-bda-ecom-prd:
+    commonmerit-bda-ecom-prd:
       roles:
       - bigquery.resourceViewer:
           allowedForGroups: true
@@ -1863,7 +1863,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-bda-ers-prd:
+    commonmerit-bda-ers-prd:
       roles:
       - bigquery.resourceViewer:
           allowedForGroups: true
@@ -1873,7 +1873,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-bda-finance-prd:
+    commonmerit-bda-finance-prd:
       roles:
       - bigquery.resourceViewer:
           allowedForGroups: true
@@ -1883,7 +1883,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-bda-log-prd:
+    commonmerit-bda-log-prd:
       roles:
       - bigquery.resourceViewer:
           allowedForGroups: true
@@ -1893,7 +1893,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-bda-lp-prd:
+    commonmerit-bda-lp-prd:
       roles:
       - bigquery.resourceViewer:
           allowedForGroups: true
@@ -1903,7 +1903,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-bda-merch-prd:
+    commonmerit-bda-merch-prd:
       roles:
       - bigquery.resourceViewer:
           allowedForGroups: true
@@ -1913,7 +1913,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-bda-pd-prd:
+    commonmerit-bda-pd-prd:
       roles:
       - bigquery.resourceViewer:
           allowedForGroups: true
@@ -1923,7 +1923,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-sec-okta-prd:
+    commonmerit-sec-okta-prd:
       roles:
       - compute.loadBalancerAdmin:
           allowedForGroups: true
@@ -1949,7 +1949,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-merch-sre-prd:
+    commonmerit-merch-sre-prd:
       roles:
       - cloudfunctions.developer:
           allowedForGroups: true
@@ -1959,7 +1959,7 @@ iam:
           allowedForGroups: true
           allowedForServiceAccounts: true
           allowedForUsers: false
-    kohls-iaas-xpn-prd :
+    commonmerit-iaas-xpn-prd :
       roles:
       - compute.instanceAdmin.v1:
           allowedForGroups: true

@@ -76,10 +76,10 @@ def call(String pythonVersion="2") {
                 // Use environment variables and command flag so it works
                 // regardless of pip version on slave
                 environment {
-                    http_proxy = 'http://proxy.kohls.com:3128'
-                    https_proxy = 'http://proxy.kohls.com:3128'
-                    HTTP_PROXY = 'http://proxy.kohls.com:3128'
-                    HTTPS_PROXY = 'http://proxy.kohls.com:3128'
+                    http_proxy = 'http://proxy.commonmerit.com:3128'
+                    https_proxy = 'http://proxy.commonmerit.com:3128'
+                    HTTP_PROXY = 'http://proxy.commonmerit.com:3128'
+                    HTTPS_PROXY = 'http://proxy.commonmerit.com:3128'
                 }
                 steps {
                     script {
@@ -87,7 +87,7 @@ def call(String pythonVersion="2") {
                       // if requirements are defined, then install
                       sh("""
                       if [ -f './requirements.txt' ]; then
-                          pip${PYTHON_VERSION} install -r ./requirements.txt --user --proxy=http://proxy.kohls.com:3128
+                          pip${PYTHON_VERSION} install -r ./requirements.txt --user --proxy=http://proxy.commonmerit.com:3128
                       fi
                       """)
                     }

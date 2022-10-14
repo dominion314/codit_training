@@ -55,7 +55,7 @@ def call() {
                     dir('hooksRepo/') {
                         git branch: "master",
                             credentialsId: 'github-nzbldqc',
-                            url: 'https://github.kohls.com/ReliabilityEngineering/githook-yaml-lint'
+                            url: 'https://github.commonmerit.com/ReliabilityEngineering/githook-yaml-lint'
                     }
                 }
                 post {

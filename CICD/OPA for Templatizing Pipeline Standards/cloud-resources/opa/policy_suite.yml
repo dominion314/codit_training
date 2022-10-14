@@ -6,28 +6,28 @@ policies:
 #   policyDataFiles:
 #   - data/routers/cloud-connectivity.yml
 #   policyRegoFile: rego/cloud-connectivity.rego
-#   package: "kohls.gitops.kcc.gcp_project.cloud_connectivity"
+#   package: "commonmerit.gitops.kcc.gcp_project.cloud_connectivity"
 # - name: "Egress Firewall rule checks"
 #   active: true
 #   enforce: true
 #   policyDataFiles:
 #   - data/empty.yml
 #   policyRegoFile: rego/firewall-egress.rego
-#   package: "kohls.gitops.kcc.gcp_project.firewall_egress.apis"
+#   package: "commonmerit.gitops.kcc.gcp_project.firewall_egress.apis"
 # - name: "Ingress Firewall rule checks"
 #   active: true
 #   enforce: true
 #   policyDataFiles:
 #   - data/firewall/ingress_rules.yml
 #   policyRegoFile: rego/firewall-ingress.rego
-#   package: "kohls.gitops.kcc.gcp_project.firewall_ingress"
+#   package: "commonmerit.gitops.kcc.gcp_project.firewall_ingress"
 - name: "Limit interconnect bandwidth"
   active: true
   enforce: true
   policyDataFiles:
   - data/interconnect/limit-bandwidth.yml
   policyRegoFile: rego/interconnect-bandwidth.rego
-  package: "kohls.gitops.kcc.gcp_project.limit_bandwidth.apis"
+  package: "commonmerit.gitops.kcc.gcp_project.limit_bandwidth.apis"
 # - name: "Only allow whitelisted Service APIs"
 #   active: true
 #   enforce: true
@@ -35,7 +35,7 @@ policies:
 #   - data/service/apis.yml
 #   - data/service/apis-per-project.yml
 #   policyRegoFile: rego/service-apis.rego
-#   package: "kohls.gitops.kcc.gcp_project.service.apis"
+#   package: "commonmerit.gitops.kcc.gcp_project.service.apis"
 # - name: "Users, Groups and Service Accounts are only given allowed roles"
 #   active: true
 #   enforce: true
@@ -43,7 +43,7 @@ policies:
 #   - data/iam/iam-roles.yml
 #   - data/iam/iam-roles-per-project.yml
 #   policyRegoFile: rego/iam-roles.rego
-#   package: "kohls.gitops.kcc.gcp_project.iam.roles"
+#   package: "commonmerit.gitops.kcc.gcp_project.iam.roles"
 # - name: "Users, Groups and Service Accounts with Custom roles"
 #   active: true
 #   enforce: true
@@ -52,25 +52,25 @@ policies:
 #   - data/iam/iam-roles-per-project.yml
 #   - data/iam/custom-iam-roles.yml
 #   policyRegoFile: rego/custom-iam-roles.rego
-#   package: "kohls.gitops.kcc.gcp_project.custom.iam.roles"
+#   package: "commonmerit.gitops.kcc.gcp_project.custom.iam.roles"
 # - name: "Validates Project Configuration"
 #   active: true
 #   enforce: true
 #   policyDataFiles:
 #   - data/project/project.yml
 #   policyRegoFile: rego/project.rego
-#   package: "kohls.gitops.kcc.gcp_project.project"
+#   package: "commonmerit.gitops.kcc.gcp_project.project"
 # - name: "Validates Big Query Datasets"
 #   active: true
 #   enforce: true
 #   policyDataFiles:
 #   - data/bigQueryDatasets/big-query-datasets.yml
 #   policyRegoFile: rego/big-query-datasets.rego
-#   package: "kohls.gitops.kcc.gcp_project.big.query.datasets"
+#   package: "commonmerit.gitops.kcc.gcp_project.big.query.datasets"
 # # - name: "VPC checks"
 # #   active: true
 # #   enforce: true
 # #   policyDataFiles:
 # #   - data/vpc/vpc.yml
 # #   policyRegoFile: rego/vpcs.rego
-# #   package: "kohls.gitops.kcc.gcp_project.single.vpc"
+# #   package: "commonmerit.gitops.kcc.gcp_project.single.vpc"

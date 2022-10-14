@@ -27,11 +27,11 @@ Config validation check
 =========
 
 
-configValidation() uses an Ansible role named [openshift-resources-jinja-processing](https://github.kohls.com/Ansible/openshift-resources-jinja-processing) to validate if the [ansible-role-openshift-provision](https://github.com/KohlsTechnology/ansible-role-openshift-provision) role (used e.g. during cluster deployment) can proceed successfully with a given config. It processes the config the way the [ansible-role-openshift-provision](https://github.com/KohlsTechnology/ansible-role-openshift-provision) does. Additionally it does Yaml linting for dumped config files, validating Prometheus rules, Alertmanager configs and running ProductionChangeCheck.
+configValidation() uses an Ansible role named [openshift-resources-jinja-processing](https://github.commonmerit.com/Ansible/openshift-resources-jinja-processing) to validate if the [ansible-role-openshift-provision](https://github.com/commonmeritTechnology/ansible-role-openshift-provision) role (used e.g. during cluster deployment) can proceed successfully with a given config. It processes the config the way the [ansible-role-openshift-provision](https://github.com/commonmeritTechnology/ansible-role-openshift-provision) does. Additionally it does Yaml linting for dumped config files, validating Prometheus rules, Alertmanager configs and running ProductionChangeCheck.
 
 Trigger file example
 ------------
-[Jenkinsfile.dumpCheck](https://github.kohls.com/xPaaS-Operations/openshift-cluster-config/blob/master/Jenkinsfile.dumpCheck)
+[Jenkinsfile.dumpCheck](https://github.commonmerit.com/xPaaS-Operations/openshift-cluster-config/blob/master/Jenkinsfile.dumpCheck)
 
 Requirements
 ------------
@@ -39,8 +39,8 @@ Requirements
 Following files must exist in a repo that is being checked:
 - validate-config.yml - a playbook that calls openshift-resources-jinja-processing role and defines all the variables that are validated i.e.
     - variables used in a process of templating the resources (including mock dynamic variables)
-    - [openshift_cluster](https://github.com/KohlsTechnology/ansible-role-openshift-provision/#openshift_clusters)
-    - [openshift_resource_path](https://github.com/KohlsTechnology/ansible-role-openshift-provision/#role-variables)
+    - [openshift_cluster](https://github.com/commonmeritTechnology/ansible-role-openshift-provision/#openshift_clusters)
+    - [openshift_resource_path](https://github.com/commonmeritTechnology/ansible-role-openshift-provision/#role-variables)
 - exclusions.txt - a one-line file containing a regex that describes names of clusters which this check should not be run against
 
 These files must be placed in [repo main direcotry]/tests/config-validation directory.
@@ -48,12 +48,12 @@ These files must be placed in [repo main direcotry]/tests/config-validation dire
 Dependencies
 ------------
 
-- [openshift-resources-jinja-processing](https://github.kohls.com/Ansible/openshift-resources-jinja-processing) Ansible role
+- [openshift-resources-jinja-processing](https://github.commonmerit.com/Ansible/openshift-resources-jinja-processing) Ansible role
 
-Example of use (from the [xPaaS-Operations/openshift-cluster-config](https://github.kohls.com/xPaaS-Operations/openshift-cluster-config) repo)
+Example of use (from the [xPaaS-Operations/openshift-cluster-config](https://github.commonmerit.com/xPaaS-Operations/openshift-cluster-config) repo)
 ------------
 
-[validate-config.yml playbook](https://github.kohls.com/xPaaS-Operations/openshift-cluster-config/blob/master/tests/config-validation/validate-config.yml)
+[validate-config.yml playbook](https://github.commonmerit.com/xPaaS-Operations/openshift-cluster-config/blob/master/tests/config-validation/validate-config.yml)
 
 Schema Validation
 =========

@@ -1,44 +1,44 @@
 ---
 OPA:
   OPA-5000: The API(s) ~item(s)~ violates our policies and cannot be added to your project. ~split~ View the list of allowed APIs
-        [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/service/apis.yml)
+        [here](https://gitlab.com/commonmerit/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/service/apis.yml)
         If you see your listed API, validate that it is spelled correctly within the change request. To fix this error remove the API from your project which is preferred
         if possible, or request an exception if the API is required for your use case.
-        For more information on OPA and for the steps required to have an exception added click [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/OPA.md).
+        For more information on OPA and for the steps required to have an exception added click [here](https://gitlab.com/commonmerit/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/OPA.md).
   OPA-6000: The user role(s) ~item(s)~ violates our policies and cannot be added to your project. ~split~ View the list of allowed user roles
-        [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/iam/iam-roles.yml)
+        [here](https://gitlab.com/commonmerit/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/iam/iam-roles.yml)
         If you see your listed role, validate that it is spelled correctly within the change request and is allowed for users. To fix this error remove the role from your
         project which is preferred if possible, or request an exception if the role is required for your use case.
-        For more information on OPA and for the steps required to have an exception added click [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/OPA.md).
+        For more information on OPA and for the steps required to have an exception added click [here](https://gitlab.com/commonmerit/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/OPA.md).
   OPA-6010: The group role(s) ~item(s)~ violates our policies and cannot be added to your project. ~split~ View the list of allowed group roles
-        [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/iam/iam-roles.yml)
+        [here](https://gitlab.com/commonmerit/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/iam/iam-roles.yml)
         If you see your listed role, validate that it is spelled correctly within the change request and is allowed for groups. To fix this error remove the role from
         your project which is preferred if possible, or request an exception if the role is required for your use case.
-        For more information on OPA and for the steps required to have an exception added click [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/OPA.md).
+        For more information on OPA and for the steps required to have an exception added click [here](https://gitlab.com/commonmerit/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/OPA.md).
   OPA-6020: The service account role(s) ~item(s)~ violates our policies and cannot be added to your project. ~split~ View the list of allowed service account roles
-        [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/iam/iam-roles.yml) If you see your listed role,
+        [here](https://gitlab.com/commonmerit/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/iam/iam-roles.yml) If you see your listed role,
         validate that it is spelled correctly within the change request and is allowed for service accounts. To fix this error remove the role from your project which is
         preferred if possible, or request an exception if the role is required for your use case.
-        For more information on OPA and for the steps required to have an exception added click [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/OPA.md).
+        For more information on OPA and for the steps required to have an exception added click [here](https://gitlab.com/commonmerit/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/OPA.md).
   OPA-7000: The custom user role(s) ~item(s)~ violates our policies and cannot be added to your project. ~split~ View the list of allowed custom user roles
-        [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/iam/custom-iam-roles.yml)
+        [here](https://gitlab.com/commonmerit/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/iam/custom-iam-roles.yml)
         If you see your listed role, validate that it is spelled correctly within the change request and is allowed for users. To fix this error remove the role from your
         project which is preferred if possible, or request an exception if the role is required for your use case.
-        For more information on OPA and for the steps required to have an exception added click [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/OPA.md).
+        For more information on OPA and for the steps required to have an exception added click [here](https://gitlab.com/commonmerit/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/OPA.md).
   OPA-7010: The custom group role(s) ~item(s)~ violates our policies and cannot be added to your project. ~split~ View the list of allowed custom group roles
-        [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/iam/custom-iam-roles.yml)
+        [here](https://gitlab.com/commonmerit/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/iam/custom-iam-roles.yml)
         If you see your listed role, validate that it is spelled correctly within the change request and is allowed for group. To fix this error remove the role from your
         project which is preferred if possible, or request an exception if the role is required for your use case.
-        For more information on OPA and for the steps required to have an exception added click [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/OPA.md).
+        For more information on OPA and for the steps required to have an exception added click [here](https://gitlab.com/commonmerit/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/OPA.md).
   OPA-7020: The custom service account role(s) ~item(s)~ violates our policies and cannot be added to your project. ~split~ View the list of allowed custom service account roles
-        [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/iam/custom-iam-roles.yml) If you see your listed role,
+        [here](https://gitlab.com/commonmerit/infra/platform_enablement/cloud-config/cloud-resources/-/blob/main/opa/data/iam/custom-iam-roles.yml) If you see your listed role,
         validate that it is spelled correctly within the change request and is allowed for service accounts. To fix this error remove the role from your project which is
         preferred if possible, or request an exception if the role is required for your use case.
-        For more information on OPA and for the steps required to have an exception added click [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/OPA.md).
+        For more information on OPA and for the steps required to have an exception added click [here](https://gitlab.com/commonmerit/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/OPA.md).
   OPA-8000: The environment type and FolderID for one of your project(s) is not allowed to be used together. ~split~ Please update your FolderID(s) from the following list under the
-        "NetX Project Folder ID Lookup Table" section [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Project_Jump_Start_Guide.md).
+        "NetX Project Folder ID Lookup Table" section [here](https://gitlab.com/commonmerit/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Project_Jump_Start_Guide.md).
   OPA-8010: Your project's FolderID is incorrect for the given product domain/environment type and is not allowed to be used together. ~split~ Please update your FolderID or product domain
-        from the following list under the "NetX Project Folder ID Lookup Table" section [here](https://gitlab.com/kohls/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Project_Jump_Start_Guide.md)
+        from the following list under the "NetX Project Folder ID Lookup Table" section [here](https://gitlab.com/commonmerit/infra/platform_enablement/cloud-config/gcp-config/-/blob/main/docs/Projects/Project_Jump_Start_Guide.md)
   OPA-8020: Your project's billing department ID, billingDeptId and or billing-dept-id must all match for a single project. ~split~ Go to your project.yml file and select only one id to use for these feilds.
   OPA-9000: Your project's big-query-dataset must include at least one bigquery.dataOwner role within each separate dataset. ~split~ Add the role and make sure the dataset is formated correctly.
 
@@ -47,8 +47,8 @@ Cerberus:
                 # regex: '[a-zA-Z0-9_]{5,1024}'
   Cerberus-104: String value can only contain numbers, lower case letters, and/or hyphens.
                 # regex: '^[0-9a-z-]+'
-  Cerberus-106: String value can only end with "@kohls.com", "@qa.kohls.com", or "@dev.kohls.com".
-                # regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com'
+  Cerberus-106: String value can only end with "@commonmerit.com", "@qa.commonmerit.com", or "@dev.commonmerit.com".
+                # regex: '.*@commonmerit\.com|.*@qa\.commonmerit\.com|.*@dev\.commonmerit\.com'
   Cerberus-108: String value can only end with ".gserviceaccount.com".
                 # regex: '.*@.*\.gserviceaccount\.com'
   Cerberus-110: String value must start with a lower case letter and can only contain numbers and/or lower case letters.
@@ -67,8 +67,8 @@ Cerberus:
                 # regex: '^[ 0-9a-zA-Z-\.\,]{1,256}$'
   Cerberus-124: String value can only contain numbers, lower case letters, periods, hyphens, and/or underscores.
                 # regex: '[-a-z0-9\._]+'
-  Cerberus-126: String value can only end with "@kohls.com", "@qa.kohls.com", "@dev.kohls.com", or ".gserviceaccount.com".
-                # regex: '.*@kohls\.com|.*@qa\.kohls\.com|.*@dev\.kohls\.com|.*\.gserviceaccount\.com'
+  Cerberus-126: String value can only end with "@commonmerit.com", "@qa.commonmerit.com", "@dev.commonmerit.com", or ".gserviceaccount.com".
+                # regex: '.*@commonmerit\.com|.*@qa\.commonmerit\.com|.*@dev\.commonmerit\.com|.*\.gserviceaccount\.com'
   Cerberus-128: Format is divided into three parts divided by hyphens. Must start with "19", "20", or "21", followed by two digits. Add a "-".
                 Then "0" and a digit (1 through 9) or "1" followed by "0", "1", or "2". Add a "-".
                 Finally "0" and a digit (1 through 9), or ("1" or "2") and a digit (1 through 9), or a "3" and ("0" or "1").

@@ -1,4 +1,4 @@
-package kohls.gitops.kcc.gcp_project.iam.roles
+package commonmerit.gitops.kcc.gcp_project.iam.roles
 
 # policy data
 policy_data_iam = {
@@ -185,7 +185,7 @@ policy_data_iam = {
          }
       },
         "allowedRolesPerProject": {
-         "kohls-platform-dbaas-ops": {
+         "commonmerit-platform-dbaas-ops": {
             "roles": [
                {
                   "cloudsql.client": {
@@ -229,7 +229,7 @@ input_bad_environment = {
     },
     "iamPolicyMembers": {
         "usersByEmail": {
-            "user@kohls.com": {"roles": [ "editor", "viewer"] }
+            "user@commonmerit.com": {"roles": [ "editor", "viewer"] }
         }
     }
 }
@@ -243,7 +243,7 @@ input_role_is_not_listed = {
     },
     "iamPolicyMembers": {
         "usersByEmail": {
-            "user@kohls.com": {"roles": [ "editor", "viewer", "admin"] }
+            "user@commonmerit.com": {"roles": [ "editor", "viewer", "admin"] }
         }
     }
 }
@@ -257,7 +257,7 @@ input_role_not_allowed_for_group_not_listed = {
     },
     "iamPolicyMembers": {
         "groupsByEmail": {
-            "group@kohls.com": {"roles": [ "adminOfUniverse" ] }
+            "group@commonmerit.com": {"roles": [ "adminOfUniverse" ] }
         }
     }
 }
@@ -272,10 +272,10 @@ input_user_allowed_group_not_allowed_not_listed = {
     },
     "iamPolicyMembers": {
         "usersByEmail": {
-            "user@kohls.com": {"roles": [ "adminOfUniverse" ] }
+            "user@commonmerit.com": {"roles": [ "adminOfUniverse" ] }
         },
         "groupsByEmail": {
-            "group@kohls.com": {"roles": [ "adminOfUniverse" ] }
+            "group@commonmerit.com": {"roles": [ "adminOfUniverse" ] }
         }
     }
 }
@@ -289,7 +289,7 @@ input_user_allowed_service_accounts_not_allowed_not_listed = {
     },
     "iamPolicyMembers": {
         "serviceAccountsByEmail": {
-            "serviceaccount@kohls.com": {"roles": [ "iam.serviceAccountOfUniverse" ] }
+            "serviceaccount@commonmerit.com": {"roles": [ "iam.serviceAccountOfUniverse" ] }
         }
     }
 }
@@ -304,7 +304,7 @@ input_allowed_allowedForGroups = {
     },
     "iamPolicyMembers": {
         "groupsByEmail": {
-            "group@kohls.com": {"roles": [ "bigquery.admin" ] } # Allowed for Groups
+            "group@commonmerit.com": {"roles": [ "bigquery.admin" ] } # Allowed for Groups
         }
     }
 }
@@ -317,7 +317,7 @@ input_not_allowed_allowedForGroups = {
     },
     "iamPolicyMembers": {
         "groupsByEmail": {
-            "group@kohls.com": {"roles": [ "bigquerydatatransfer.serviceAgent" ] } # Not Allowed for Groups
+            "group@commonmerit.com": {"roles": [ "bigquerydatatransfer.serviceAgent" ] } # Not Allowed for Groups
         }
     }
 }
@@ -330,7 +330,7 @@ input_allowed_allowedForServiceAccounts = {
     },
     "iamPolicyMembers": {
         "ServiceaccountsByEmail": {
-            "serviceaccount@kohls.com": {"roles": [ "bigquerydatatransfer.serviceAgent" ] } # Allowed for Service Accounts
+            "serviceaccount@commonmerit.com": {"roles": [ "bigquerydatatransfer.serviceAgent" ] } # Allowed for Service Accounts
         }
     }
 }
@@ -343,7 +343,7 @@ input_not_allowed_allowedForServiceAccounts = {
     },
     "iamPolicyMembers": {
         "serviceAccountsByEmail": {
-            "serviceaccount@kohls.com": {"roles": [ "iam.serviceAccountKeyAdmin" ] } # Not Allowed for Service Accounts
+            "serviceaccount@commonmerit.com": {"roles": [ "iam.serviceAccountKeyAdmin" ] } # Not Allowed for Service Accounts
         }
     }
 }
@@ -356,7 +356,7 @@ input_not_allowed_allowedForUsers = {
     },
     "iamPolicyMembers": {
         "usersByEmail": {
-            "user@kohls.com": {"roles": [ "bigquery.admin"] } # Not Allowed for Users
+            "user@commonmerit.com": {"roles": [ "bigquery.admin"] } # Not Allowed for Users
         }
     }
 }
@@ -373,7 +373,7 @@ input_not_allowed_prd_allowedForGroups = {
     },
     "iamPolicyMembers": {
         "groupsByEmail": {
-            "group@kohls.com": {"roles": [ "storage.admin" ] } # Not Allowed for Groups for prd, but is in lle.
+            "group@commonmerit.com": {"roles": [ "storage.admin" ] } # Not Allowed for Groups for prd, but is in lle.
         }
     }
 }
@@ -386,7 +386,7 @@ input_allowed_nonprd_allowedForGroups = {
     },
     "iamPolicyMembers": {
         "groupsByEmail": {
-            "group@kohls.com": {"roles": [ "storage.admin" ] } # Not Allowed for Groups for prd, but is in othere.
+            "group@commonmerit.com": {"roles": [ "storage.admin" ] } # Not Allowed for Groups for prd, but is in othere.
         }
     }
 }
@@ -400,7 +400,7 @@ input_not_allowed_prd_allowedForServiceAccounts = {
     },
     "iamPolicyMembers": {
         "serviceAccountsByEmail": {
-            "serviceaccount@kohls.com": {"roles": [ "compute.osLogin" ] } # Not Allowed for Service Accounts for prd, but is in others.
+            "serviceaccount@commonmerit.com": {"roles": [ "compute.osLogin" ] } # Not Allowed for Service Accounts for prd, but is in others.
         }
     }
 }
@@ -413,7 +413,7 @@ input_allowed_nonprd_allowedForServiceAccounts = {
     },
     "iamPolicyMembers": {
         "ServiceaccountsByEmail": {
-            "serviceaccount@kohls.com": {"roles": [ "compute.osLogin" ] } # Not Allowed for Service Accounts for prd, but is in others.
+            "serviceaccount@commonmerit.com": {"roles": [ "compute.osLogin" ] } # Not Allowed for Service Accounts for prd, but is in others.
         }
     }
 }
@@ -429,7 +429,7 @@ input_allowed_sbx_allowedForGroups = {
     },
     "iamPolicyMembers": {
         "groupsByEmail": {
-            "group@kohls.com": {"roles": [ "sourcerepo.serviceAgent" ] } # Allowed for Groups for sbx, but is in other.
+            "group@commonmerit.com": {"roles": [ "sourcerepo.serviceAgent" ] } # Allowed for Groups for sbx, but is in other.
         }
     }
 }
@@ -443,7 +443,7 @@ input_not_allowed_nonsbx_allowedForGroups = {
     },
     "iamPolicyMembers": {
         "groupsByEmail": {
-            "group@kohls.com": {"roles": [ "sourcerepo.serviceAgent" ] } # Allowed for Groups for sbx, but is not in other.
+            "group@commonmerit.com": {"roles": [ "sourcerepo.serviceAgent" ] } # Allowed for Groups for sbx, but is not in other.
         }
     }
 }
@@ -457,7 +457,7 @@ input_allowed_sbx_allowedForServiceAccounts = {
     },
     "iamPolicyMembers": {
         "serviceAccountsByEmail": {
-            "serviceaccount@kohls.com": {"roles": [ "iam.serviceAccountTokenCreator" ] } # Allowed for Service Accounts for sbx, but is not in other.
+            "serviceaccount@commonmerit.com": {"roles": [ "iam.serviceAccountTokenCreator" ] } # Allowed for Service Accounts for sbx, but is not in other.
         }
     }
 }
@@ -471,7 +471,7 @@ input_not_allowed_nonsbx_allowedForServiceAccounts = {
     },
     "iamPolicyMembers": {
         "serviceAccountsByEmail": {
-            "serviceaccount@kohls.com": {"roles": [ "iam.serviceAccountTokenCreator" ] } # Allowed for Service Accounts for sbx, but is not in other.
+            "serviceaccount@commonmerit.com": {"roles": [ "iam.serviceAccountTokenCreator" ] } # Allowed for Service Accounts for sbx, but is not in other.
         }
     }
 }
@@ -485,7 +485,7 @@ input_allowed_sbx_allowedForUsers = {
     },
     "iamPolicyMembers": {
         "usersByEmail": {
-            "user@kohls.com": {"roles": [ "compute.imageUser"] } # Allowed for Users for sbx, but is not in other.
+            "user@commonmerit.com": {"roles": [ "compute.imageUser"] } # Allowed for Users for sbx, but is not in other.
         }
     }
 }
@@ -499,7 +499,7 @@ input_not_allowed_nonsbx_allowedForUsers = {
     },
     "iamPolicyMembers": {
         "usersByEmail": {
-            "user@kohls.com": {"roles": [ "compute.imageUser"] } # Allowed for Users for sbx, but is not in other.
+            "user@commonmerit.com": {"roles": [ "compute.imageUser"] } # Allowed for Users for sbx, but is not in other.
         }
     }
 }
@@ -510,14 +510,14 @@ input_allowed_by_project = {
         "labels": {
             "environment-type": "nonprd"
             },
-        "name": "kohls-platform-dbaas-ops"
+        "name": "commonmerit-platform-dbaas-ops"
     },
     "iamPolicyMembers": {
         "serviceAccountsByEmail": {
-            "serviceaccount@kohls.com": {"roles": [ "iap.tunnelResourceAccessor", "storage.hmacKeyAdmin" ] }
+            "serviceaccount@commonmerit.com": {"roles": [ "iap.tunnelResourceAccessor", "storage.hmacKeyAdmin" ] }
         },
         "groupsByEmail": {
-            "group@kohls.com": {"roles": [ "cloudsql.client" ] }
+            "group@commonmerit.com": {"roles": [ "cloudsql.client" ] }
         }
     }
 }
@@ -531,10 +531,10 @@ input_not_allowed_by_project = {
     },
     "iamPolicyMembers": {
         "serviceAccountsByEmail": {
-            "serviceaccount@kohls.com": {"roles": [ "iap.tunnelResourceAccessor", "storage.hmacKeyAdmin" ] }
+            "serviceaccount@commonmerit.com": {"roles": [ "iap.tunnelResourceAccessor", "storage.hmacKeyAdmin" ] }
         },
         "groupsByEmail": {
-            "group@kohls.com": {"roles": [ "cloudsql.client" ] }
+            "group@commonmerit.com": {"roles": [ "cloudsql.client" ] }
         }
     }
 }

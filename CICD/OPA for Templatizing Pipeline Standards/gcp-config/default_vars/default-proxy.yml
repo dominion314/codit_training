@@ -13,16 +13,16 @@ globalProxy:
     - .api.addressy.com
     - .assets.adobedtm.com
     - .api.enterprise.apigee.com
-    - .kohls.login.apigee.com
+    - .commonmerit.login.apigee.com
     - .aquasec.com
     - .atomicorp.com
     - .auth0.com
     - .bazaarvoice.com
     - .bitly.com
     - .staging.brassring.com
-    - .demandservice-kohls-test.celectengine.com
-    - .kohls-demand.celectengine.com
-    - .kohls-test-in-store-demand.celectengine.com
+    - .demandservice-commonmerit-test.celectengine.com
+    - .commonmerit-demand.celectengine.com
+    - .commonmerit-test-in-store-demand.celectengine.com
     - .cisco.com
     - .clouddataprep.com
     - .www.cradlepointecm.com
@@ -41,20 +41,20 @@ globalProxy:
     - .google.com
     - .googleapis.com
     - .googleusercontent.com
-    - .achecker-kohls.goskope.com
-    - .addon-kohls.goskope.com
-    - .download-kohls.goskope.com
-    - .gateway-kohls.goskope.com
-    - .kohls.goskope.com
-    - .sfchecker-kohls.goskope.com
+    - .achecker-commonmerit.goskope.com
+    - .addon-commonmerit.goskope.com
+    - .download-commonmerit.goskope.com
+    - .gateway-commonmerit.goskope.com
+    - .commonmerit.goskope.com
+    - .sfchecker-commonmerit.goskope.com
     - .releases.hashicorp.com
     - .cran.mirrors.hoobly.com
     - .public-repo-1.hortonworks.com
     - .integration-api.inspectorio.com
     - .integration-staging.saas.inspectorio.com
-    - .kohls.com
-    - .kohlsecommerce.com
-    - .media.kohlsimg.com
+    - .commonmerit.com
+    - .commonmeritecommerce.com
+    - .media.commonmeritimg.com
     - .apis12.loyaltylab.com
     - .apis8.loyaltylab.com
     - .api.mastercard.com
@@ -62,13 +62,13 @@ globalProxy:
     - .cloud.mongodb.com
     - .downloads.mongodb.com
     - .deb.nodesource.com
-    - .api-kohls.nd.nudatasecurity.com
+    - .api-commonmerit.nd.nudatasecurity.com
     - .developer.download.nvidia.com
-    - .kohls.okta.com
-    - .kohls-vendor.okta.com
+    - .commonmerit.okta.com
+    - .commonmerit-vendor.okta.com
     - .nike.okta.com
     - .dev-946452.oktapreview.com
-    - .kohls.oktapreview.com
+    - .commonmerit.oktapreview.com
     - .api.omniture.com
     - .onerainc.com
     - .api.payfone.com
@@ -82,12 +82,12 @@ globalProxy:
     - .salesforce.com
     - .app.scaleft.com
     - .diag-submit.scaleft.com
-    - .kohls.service-now.com
-    - .kohlsdev.service-now.com
-    - .kohlsqa.service-now.com
+    - .commonmerit.service-now.com
+    - .commonmeritdev.service-now.com
+    - .commonmeritqa.service-now.com
     - .insights.shoppertrak.com
     - .stws.shoppertrak.com
-    - .kohls.skavaone.com
+    - .commonmerit.skavaone.com
     - .my.skyfence.com
     - .app.stackdriver.com
     - .repo.stackdriver.com
@@ -119,7 +119,7 @@ globalProxy:
     - .livestream.adobe.net
     - .akab-2k2orlzj4blw4qge-jhyf3xyj4gblfzc5.purge.akamaiapis.net
     - .akab-i5tt45h5fuai6pby-mkqgpojmuktxrrdm.purge.akamaiapis.net
-    - .kohls.brinqa.net
+    - .commonmerit.brinqa.net
     - .gcp.mongodb.net
     - .myshn.net
     - .product.api.nike.net
@@ -150,14 +150,14 @@ globalProxy:
     - .ok4static.oktacdn.com
     - .login.okta.com
     - .fonts.googleapis.com
-    - .alc-opc-subclass-service-stage-1.apps.lle.xpaas.kohls.com
+    - .alc-opc-subclass-service-stage-1.apps.lle.xpaas.commonmerit.com
     - .api.nuget.org
     - .icnow01-1.accertify.net
-    - .image-webstatus-dot-kohls-iaas-ops.appspot.com
+    - .image-webstatus-dot-commonmerit-iaas-ops.appspot.com
     - .k8s.io
     - .process.datadoghq.com
-    - .kohls-qa.identitynow.com
-    - .kohls-qa.api.identitynow.com
+    - .commonmerit-qa.identitynow.com
+    - .commonmerit-qa.api.identitynow.com
     - .ejke-dev2.fa.us2.oraclecloud.com
     - .ejke-dev1.fa.us2.oraclecloud.com
     - .ejke-test.fa.us2.oraclecloud.com
@@ -190,10 +190,10 @@ globalProxy:
     - .repository.jboss.org
     - .unpkg.com
     - .fonts.gstatic.com
-    - .kohlsnationalgiving.com
-    - .staging.kohlsnationalgiving.com
-    - .kohlsk8s.densify.com
-    - .author-kohls-assets-dev1.adobecqms.net
+    - .commonmeritnationalgiving.com
+    - .staging.commonmeritnationalgiving.com
+    - .commonmeritk8s.densify.com
+    - .author-commonmerit-assets-dev1.adobecqms.net
     - .api2.prismacloud.io
     - .oktapreview.com
     - .api.twilio.com
@@ -203,22 +203,22 @@ globalProxy:
     - .proxy.golang.org
     - .index.golang.org
     - .sum.golang.org
-    - .kds-ui-prod.apps-ext.gcpusc1-a.prd.xpaas.kohls.com
-    - .kds-ui-prod.apps.gcpusc1-a.prd.xpaas.kohls.com
-    - .jarvis-ui-uat.apps-ext.gcpusc1-a.lle.xpaas.kohls.com
-    - .kds-ui-uat.apps.gcpusc1-a.lle.xpaas.kohls.com
-    - .jarvis-ui-uat.apps.gcpusc1-a.lle.xpaas.kohls.com
-    - .latefee-ui-prod.apps-ext.gcpusc1-a.prd.xpaas.kohls.com
-    - .latefee-ui-prod.apps.gcpusc1-a.prd.xpaas.kohls.com
-    - .httpd-latency-test-xpaas-monitoring.apps-ext.gcpusc1-a.lle.cx.kohls.com
-    - .httpd-latency-test-xpaas-monitoring.apps-ext.gcpusc1-a.hle.cx.kohls.com
-    - .httpd-latency-test-xpaas-monitoring.apps-ext.gcpuse1-a.hle.cx.kohls.com
-    - .httpd-latency-test-xpaas-monitoring.apps-ext.gcpusc1-a.prd.cx.kohls.com
-    - .httpd-latency-test-xpaas-monitoring.apps-ext.gcpuse1-a.prd.cx.kohls.com
-    - .httpd-latency-test-xpaas-monitoring.apps-ext.gcpusc1-a.lle.xpaas.kohls.com
-    - .httpd-latency-test-xpaas-monitoring.apps-ext.gcpuse1-a.lle.xpaas.kohls.com
-    - .httpd-latency-test-xpaas-monitoring.apps-ext.gcpusc1-a.prd.xpaas.kohls.com
-    - .httpd-latency-test-xpaas-monitoring.apps-ext.gcpuse1-a.prd.xpaas.kohls.com
+    - .kds-ui-prod.apps-ext.gcpusc1-a.prd.xpaas.commonmerit.com
+    - .kds-ui-prod.apps.gcpusc1-a.prd.xpaas.commonmerit.com
+    - .jarvis-ui-uat.apps-ext.gcpusc1-a.lle.xpaas.commonmerit.com
+    - .kds-ui-uat.apps.gcpusc1-a.lle.xpaas.commonmerit.com
+    - .jarvis-ui-uat.apps.gcpusc1-a.lle.xpaas.commonmerit.com
+    - .latefee-ui-prod.apps-ext.gcpusc1-a.prd.xpaas.commonmerit.com
+    - .latefee-ui-prod.apps.gcpusc1-a.prd.xpaas.commonmerit.com
+    - .httpd-latency-test-xpaas-monitoring.apps-ext.gcpusc1-a.lle.cx.commonmerit.com
+    - .httpd-latency-test-xpaas-monitoring.apps-ext.gcpusc1-a.hle.cx.commonmerit.com
+    - .httpd-latency-test-xpaas-monitoring.apps-ext.gcpuse1-a.hle.cx.commonmerit.com
+    - .httpd-latency-test-xpaas-monitoring.apps-ext.gcpusc1-a.prd.cx.commonmerit.com
+    - .httpd-latency-test-xpaas-monitoring.apps-ext.gcpuse1-a.prd.cx.commonmerit.com
+    - .httpd-latency-test-xpaas-monitoring.apps-ext.gcpusc1-a.lle.xpaas.commonmerit.com
+    - .httpd-latency-test-xpaas-monitoring.apps-ext.gcpuse1-a.lle.xpaas.commonmerit.com
+    - .httpd-latency-test-xpaas-monitoring.apps-ext.gcpusc1-a.prd.xpaas.commonmerit.com
+    - .httpd-latency-test-xpaas-monitoring.apps-ext.gcpuse1-a.prd.xpaas.commonmerit.com
     - .api.sandbox.braintreegateway.com
     - .node-precompiled-binaries.grpc.io
     - .eval.contrastsecurity.com
@@ -231,8 +231,8 @@ globalProxy:
     - .login.microsoftonline.com
     - .api.twilio.com
     - .fedex-alerts.com
-    - .learn.oneplm.kohls.com
-    - .oneplm.kohls.com
+    - .learn.oneplm.commonmerit.com
+    - .oneplm.commonmerit.com
     - .accessmyvdi.com
     - .neverclick.net
     - .licenseservice.fortify.microfocus.com
@@ -263,12 +263,12 @@ globalProxy:
     - .s7sps1.scene7.com
     - .us-east1.cloud.twistlock.com
     - .api.ciscospark.com
-    - .location-service-ci.apps.lle.xpaas.kohls.com
-    - .location-service-stage-1.apps.lle.xpaas.kohls.com
-    - .location-service-stress-1.apps.lle.xpaas.kohls.com
-    - .location-service-uat-1.apps.lle.xpaas.kohls.com
-    - .location-service-preprod.apps.lle.xpaas.kohls.com
-    - .location-service-prod.apps.lle.xpaas.kohls.com
+    - .location-service-ci.apps.lle.xpaas.commonmerit.com
+    - .location-service-stage-1.apps.lle.xpaas.commonmerit.com
+    - .location-service-stress-1.apps.lle.xpaas.commonmerit.com
+    - .location-service-uat-1.apps.lle.xpaas.commonmerit.com
+    - .location-service-preprod.apps.lle.xpaas.commonmerit.com
+    - .location-service-prod.apps.lle.xpaas.commonmerit.com
     - .flashtalking-legacy-api-builder-reports-eu-west-1.s3.eu-west-1.amazonaws.com
     - .api.segment.io
     - .0e882adb.canary.tools
@@ -311,46 +311,46 @@ globalProxy:
     - .accesspoints-api-na.amazon.com
     - .api.bing.com
     - .get.helm.sh
-    - .kohlstechnology.compat.objectstorage.us-ashburn-1.oraclecloud.com
-    - .kohlstechnology.compat.objectstorage.us-phoenix-1.oraclecloud.com
+    - .commonmerittechnology.compat.objectstorage.us-ashburn-1.oraclecloud.com
+    - .commonmerittechnology.compat.objectstorage.us-phoenix-1.oraclecloud.com
     - .quay.io
-    - .creportal.lle-mcommerce.kohls.com
-    - .ejkedev2-kohlstechnology.integration.ocp.oraclecloud.com
-    - .ejkedev1-kohlstechnology.integration.ocp.oraclecloud.com
-    - .ejketest-kohlstechnology.integration.ocp.oraclecloud.com
-    - .ejke-kohlstechnology.integration.ocp.oraclecloud.com
+    - .creportal.lle-mcommerce.commonmerit.com
+    - .ejkedev2-commonmerittechnology.integration.ocp.oraclecloud.com
+    - .ejkedev1-commonmerittechnology.integration.ocp.oraclecloud.com
+    - .ejketest-commonmerittechnology.integration.ocp.oraclecloud.com
+    - .ejke-commonmerittechnology.integration.ocp.oraclecloud.com
     - .us-demo.mirakl.net
-    - .cx-stores-omni-customer-pref-api-prod.apps-ext.gcpuse1-a.prd.cx.kohls.com
-    - .cx-stores-omni-customer-pref-api-prod.apps-ext.gcpusc1-a.prd.cx.kohls.com
-    - .cx-stores-omni-customer-pref-api-relqa.apps-ext.gcpusc1-a.hle.cx.kohls.com
-    - .cx-stores-omni-customer-pref-api-perf.apps-ext.gcpusc1-a.hle.cx.kohls.com
-    - .cx-stores-omni-customer-pref-api-perf.apps-ext.gcpuse1-a.hle.cx.kohls.com
-    - .cx-stores-omni-customer-pref-api-prod.apps.gcpuse1-c.prd.cx.kohls.com
-    - .cx-stores-omni-customer-pref-api-prod.apps.gcpusc1-c.prd.cx.kohls.com
-    - .cx-stores-omni-customer-pref-api-relqa.apps.gcpusc1-c.hle.cx.kohls.com
-    - .cx-stores-omni-customer-pref-api-perf.apps.gcpusc1-c.hle.cx.kohls.com
-    - .cx-stores-omni-customer-pref-api-perf.apps.gcpuse1-c.hle.cx.kohls.com
+    - .cx-stores-omni-customer-pref-api-prod.apps-ext.gcpuse1-a.prd.cx.commonmerit.com
+    - .cx-stores-omni-customer-pref-api-prod.apps-ext.gcpusc1-a.prd.cx.commonmerit.com
+    - .cx-stores-omni-customer-pref-api-relqa.apps-ext.gcpusc1-a.hle.cx.commonmerit.com
+    - .cx-stores-omni-customer-pref-api-perf.apps-ext.gcpusc1-a.hle.cx.commonmerit.com
+    - .cx-stores-omni-customer-pref-api-perf.apps-ext.gcpuse1-a.hle.cx.commonmerit.com
+    - .cx-stores-omni-customer-pref-api-prod.apps.gcpuse1-c.prd.cx.commonmerit.com
+    - .cx-stores-omni-customer-pref-api-prod.apps.gcpusc1-c.prd.cx.commonmerit.com
+    - .cx-stores-omni-customer-pref-api-relqa.apps.gcpusc1-c.hle.cx.commonmerit.com
+    - .cx-stores-omni-customer-pref-api-perf.apps.gcpusc1-c.hle.cx.commonmerit.com
+    - .cx-stores-omni-customer-pref-api-perf.apps.gcpuse1-c.hle.cx.commonmerit.com
     - .registry.svc.ci.openshift.org
     - .packages.confluent.io
-    - .sre.kohls.com
-    - .preprod.sre.kohls.com
-    - .cre.lle-mcommerce.kohls.com
+    - .sre.commonmerit.com
+    - .preprod.sre.commonmerit.com
+    - .cre.lle-mcommerce.commonmerit.com
     - .openshift.org
     - .vco109-usca1.velocloud.net
     - .anaconda.org
     - .conda.anaconda.org
     - .repo.anaconda.com
     - .copy-dr-apis.dsco.io
-    - .kohlspreprod2-mkt-prod1.campaign.adobe.com
-    - .kohls-mkt-prod2.campaign.adobe.com
+    - .commonmeritpreprod2-mkt-prod1.campaign.adobe.com
+    - .commonmerit-mkt-prod2.campaign.adobe.com
     - .widely-inspired-buffalo.mandiantpurpleteam.com
-    - .kohls.login.apigee.com
+    - .commonmerit.login.apigee.com
     - .api.enterprise.apigee.com
-    - .kohlslle.login.apigee.com
+    - .commonmeritlle.login.apigee.com
     - .copy-dr-apis.dsco.io
     - .webexapis.com
-    - .kohlsus-dev.mirakl.net
-    - .kohlsus-prod.mirakl.net
+    - .commonmeritus-dev.mirakl.net
+    - .commonmeritus-prod.mirakl.net
     - .media-dev-eu-2.mirakl.net
     - .densify.com
     - .api.weather.gov
@@ -362,12 +362,12 @@ globalProxy:
     - .akab-d3cm5qdogwmkc6ht-eoqhw2yl72fue32h.luna.akamaiapis.net
     - .api.equinix.com
     - .sandboxapi.equinix.com
-    - .jarvis2-csl-prod.apps-ext.gcpusc1-a.prd.xpaas.kohls.com
-    - .jarvis-csl-v2-prod.apps.gcpusc1-c.prd.xpaas.kohls.com
+    - .jarvis2-csl-prod.apps-ext.gcpusc1-a.prd.xpaas.commonmerit.com
+    - .jarvis-csl-v2-prod.apps.gcpusc1-c.prd.xpaas.commonmerit.com
     - .plugins.nessus.org
     - .akamaiapis.net
-    - .jarvis2-csl-uat.apps-ext.gcpusc1-a.lle.xpaas.kohls.com
-    - .jarvis-csl-v2-uat.apps.gcpusc1-c.lle.xpaas.kohls.com
+    - .jarvis2-csl-uat.apps-ext.gcpusc1-a.lle.xpaas.commonmerit.com
+    - .jarvis-csl-v2-uat.apps.gcpusc1-c.lle.xpaas.commonmerit.com
     - .blq95654.live.dynatrace.com
     - .vqh56594.live.dynatrace.com
     - .media-prod-use-1.mirakl.net
@@ -377,9 +377,9 @@ globalProxy:
     - .sg-us-east-1-54-160-175-122-prod51-virginia.live.dynatrace.com
     - .sg-us-east-1-34-193-53-100-prod51-virginia.live.dynatrace.com
     - .sg-us-east-1-34-227-35-35-prod51-virginia.live.dynatrace.com
-    - .kohlsus-preprod.mirakl.net
+    - .commonmeritus-preprod.mirakl.net
     - .ca.dynatrace.com
-    - .kohlsus-preprod.mirakl.net
+    - .commonmeritus-preprod.mirakl.net
     - .puppetlabs.com
     - .puppet.com
     - .gitlab.com
@@ -396,7 +396,7 @@ globalProxy:
     - .ocsp.rootca1.amazontrust.com
     - .oso-rhc4tp-docker-registry.s3-us-west-2.amazonaws.com
     - .api.miro.com
-    - .splunkhec.kohls.com
+    - .splunkhec.commonmerit.com
     - .api.xforce.ibmcloud.com
     - .portal-digitalshadows.com
     - .investigate.api.umbrella.com
@@ -404,9 +404,9 @@ globalProxy:
     - .virustotal.com
     - .s-platform.api.opendns.com
     - .talosintelligence.com
-    - .kohls-ub.cloud.microstrategy.com
-    - .kohls-ub-qa.cloud.microstrategy.com
-    - .kohls-ub-tst.cloud.microstrategy.com
+    - .commonmerit-ub.cloud.microstrategy.com
+    - .commonmerit-ub-qa.cloud.microstrategy.com
+    - .commonmerit-ub-tst.cloud.microstrategy.com
     - .public-api.vibescm.com
     - .public-api.eu.vibes.com
     - .nla84574.snowflakecomputing.com
@@ -432,15 +432,15 @@ globalProxy:
     - .demo.docusign.net
     - .eberjey.com
     - .slack.com
-    - .kohls-khl1-prod1.pegacloud.net
-    - .kohls-khl1-stg1.pegacloud.net
-    - .kohls-khl1-dt1.pegacloud.net
+    - .commonmerit-khl1-prod1.pegacloud.net
+    - .commonmerit-khl1-stg1.pegacloud.net
+    - .commonmerit-khl1-dt1.pegacloud.net
     - .account.docusign.com
     - .docusign.net
     - .hzn24268.live.dynatrace.com
     - .sandbox.tagdelivery.com
-    - .kohls-sandbox.ms.tagdelivery.com
-    - .kohls.ms.tagdelivery.com
+    - .commonmerit-sandbox.ms.tagdelivery.com
+    - .commonmerit.ms.tagdelivery.com
     - .binaries.sonarsource.com
     - .sephora.com
     - .platform.checkmarx.net
@@ -479,14 +479,14 @@ globalProxy:
     - .api.pinterest.com
     - .cypress.io
     - .registry.yarnpkg.com
-    - .kohls--tst.custhelp.com
-    - .cs.kohls.com
+    - .commonmerit--tst.custhelp.com
+    - .cs.commonmerit.com
     - .fs.fdcsoa.com
     - .ws.firstdataclients.com
     - .factually-vocal-gobbler.prod.mandiantpurpleteam.com
-    - .accservice.kohls.com
+    - .accservice.commonmerit.com
     - .openshift.com
-    - .lq32513-kohls.snowflakecomputing.com
+    - .lq32513-commonmerit.snowflakecomputing.com
     - .sfc-prod2-ds1-11-customer-stage.s3.us-west-2.amazonaws.com
     - .sfc-prod2-ds1-11-customer-stage.s3.amazonaws.com
     - .extqa-api-developer.sephora.com
@@ -498,7 +498,7 @@ globalProxy:
     - .s3.dualstack.us-west-1.amazonaws.com
     - .s3.dualstack.us-west-2.amazonaws.com
   proxyDenyURL:
-    - .kohlsidentitynow.com
+    - .commonmeritidentitynow.com
     - cld-net.com
     - cloudmetric-analytics.com
     - faviconka.ru

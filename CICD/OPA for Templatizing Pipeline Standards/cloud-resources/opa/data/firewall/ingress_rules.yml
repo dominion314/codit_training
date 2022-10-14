@@ -21,8 +21,8 @@ exemptedPriorities:
     - ravpn-users-ingress-ghrgh-cluster: 850
     - ravpn-users-ingress-azkaban: 850
     - monitoring-internal3-ingress: 850
-    - deny-kohls-user-networks-to-prd: 950
-    - deny-kohls-user-networks-to-prd-east: 950
+    - deny-commonmerit-user-networks-to-prd: 950
+    - deny-commonmerit-user-networks-to-prd-east: 950
     - deny-ingr-to-cnc-acc-svcs-grn-prd: 990
     - deny-ingr-to-cnc-acc-svcs-grn-prd-east: 990
     - deny-ingr-to-cnc-acc-svc-blue-prd: 990
@@ -32,19 +32,19 @@ exemptedPriorities:
     - ecom-xpn-pnf-prd-ing-to-ecom-xpn-pnf-prd: 890
     - ecom-xpn-pnf-prd-ing-to-ecom-xpn-tonomi-prd: 890
     - ecom-xpn-tonomi-prd-ing-to-ecom-xpn-pnf-prd: 890
-    - gspann-b2b-ing-to-kohls-ecom-pnf-prd: 890
+    - gspann-b2b-ing-to-commonmerit-ecom-pnf-prd: 890
     - jump-servers-ingress-to-pnf-prd: 890
-    - kohls-ecom-pe-prd-ing-to-ecom-xpn-prd-pnf-prd: 890
-    - kohls-kos-xpn-prd-ingress-pnf-prd-ha-proxy: 890
-    - kohls-kos-xpn-prd-ingress-pnf-prd-ssh: 890
-    - kohls-kos-xpn-prd-ingress-pnf-prd-tcp-01: 890
-    - kohls-kosxpn-prd-ing-kohls-pnf-prd-01: 890
-    - kohls-openshift-prd-kohls-pnf-prd-https: 890
+    - commonmerit-ecom-pe-prd-ing-to-ecom-xpn-prd-pnf-prd: 890
+    - commonmerit-kos-xpn-prd-ingress-pnf-prd-ha-proxy: 890
+    - commonmerit-kos-xpn-prd-ingress-pnf-prd-ssh: 890
+    - commonmerit-kos-xpn-prd-ingress-pnf-prd-tcp-01: 890
+    - commonmerit-kosxpn-prd-ing-commonmerit-pnf-prd-01: 890
+    - commonmerit-openshift-prd-commonmerit-pnf-prd-https: 890
     - kos-prd-ingress-https-pnf-prd: 890
     - on-prem-subnets-ingress-pnf-prd-for-gdc-clustering: 890
-    - openshift-prod-cdc-ing-kohls-ecom-xpn-pnf-prd: 890
+    - openshift-prod-cdc-ing-commonmerit-ecom-xpn-pnf-prd: 890
     - same-subnet-access-ingress-to-pnf-prd: 890
-    - sps-application-ing-to-kohls-ecom-xpn-pnf-prd: 890
+    - sps-application-ing-to-commonmerit-ecom-xpn-pnf-prd: 890
     - oms-reauth-prd-in-cx-pci-pnf: 890
     - pnf-deny-all-ingress: 895
   sec-nx-prd:

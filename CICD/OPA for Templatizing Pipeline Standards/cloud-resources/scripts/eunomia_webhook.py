@@ -15,7 +15,7 @@ headers = {"Content-type": "application/json",
                 "Connection": "keep-alive",
                 "User-Agent": "GitHub-Hookshot/d88a271",
                 "X-GitHub-Delivery": "1a37afc2-97ee-11eb-9ffe-1b8ffb123724",
-                "X-GitHub-Enterprise-Host": "github.kohls.com",
+                "X-GitHub-Enterprise-Host": "github.commonmerit.com",
                 "X-GitHub-Enterprise-Version": "2.21.5",
                 "X-GitHub-Event": "push"}
 
