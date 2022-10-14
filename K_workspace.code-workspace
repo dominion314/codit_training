@@ -1,0 +1,40 @@
+{
+	"folders": [
+		{
+			"name": "K_workspace",
+			"path": "../Desktop/K_workspace"
+		},
+		{
+			"name": "TTGD",
+			"path": "../Desktop/TTGD"
+		},
+		{
+			"path": "../Fluent_Python_Scripts"
+		},
+		{
+			"path": "../MIT_Python_BC"
+		},
+		{
+			"path": "../AWS_Python_Training"
+		},
+		{
+			"path": "../cloud_automation"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../securityinnovation"
+		},
+		{
+			"path": "../argocd"
+		},
+		{
+			"path": "../Downloads/shielddev-gitops-shield-demo-8dce102054d3"
+		},
+		{
+			"path": "../S_Workspace"
+		}
+	],
+	"settings": {}
+}
